@@ -8,7 +8,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MsrQueryProps:
     """
     This metaclass represents the ability to specificy a query which yields

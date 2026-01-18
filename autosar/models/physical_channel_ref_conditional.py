@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PhysicalChannelRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -66,13 +66,12 @@ class PhysicalChannelRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PhysicalChannelRef(Ref):
-        dest: None | PhysicalChannelSubtypesEnum = field(
-            default=None,
+        dest: PhysicalChannelSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -9,7 +9,7 @@ from .schematic_map import SchematicMap
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SchematicMapsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "schematicMapsInFrame_RelStructure"

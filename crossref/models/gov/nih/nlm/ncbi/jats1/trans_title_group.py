@@ -9,7 +9,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransTitleGroup:
     """
     <div> <h3>Translated Title Group</h3> </div>.
@@ -19,13 +19,12 @@ class TransTitleGroup:
         name = "trans-title-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    trans_title: None | TransTitle = field(
-        default=None,
+    trans_title: TransTitle = field(
         metadata={
             "name": "trans-title",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     trans_subtitle: list[TransSubtitle] = field(
         default_factory=list,

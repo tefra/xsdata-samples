@@ -17,23 +17,21 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LandType(ExpansiveStructureType):
-    land_area_m2: None | NumberType = field(
-        default=None,
+    land_area_m2: NumberType = field(
         metadata={
             "name": "LandAreaM2",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
-        },
+        }
     )
-    soli_type: None | TextType = field(
-        default=None,
+    soli_type: TextType = field(
         metadata={
             "name": "SoliType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
-        },
+        }
     )

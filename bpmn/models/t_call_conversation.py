@@ -9,7 +9,7 @@ from .t_conversation_node import TConversationNode
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TCallConversation(TConversationNode):
     class Meta:
         name = "tCallConversation"

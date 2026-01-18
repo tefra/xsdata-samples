@@ -10,7 +10,7 @@ from travelport.models.vendor_location_1 import VendorLocation1
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleLocation:
     """
     The information for a rental car location.
@@ -19,14 +19,13 @@ class VehicleLocation:
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    vendor_location: None | VendorLocation1 = field(
-        default=None,
+    vendor_location: VendorLocation1 = field(
         metadata={
             "name": "VendorLocation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        },
+        }
     )
     distance: None | Distance1 = field(
         default=None,
@@ -44,11 +43,10 @@ class VehicleLocation:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    location_information: None | LocationInformation = field(
-        default=None,
+    location_information: LocationInformation = field(
         metadata={
             "name": "LocationInformation",
             "type": "Element",
             "required": True,
-        },
+        }
     )

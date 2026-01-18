@@ -8,45 +8,41 @@ from travelport.models.session_context import SessionContext
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirFareDisplayPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: None | AirFareDisplayPortTypeServiceInput.Header = field(
-        default=None,
+    header: AirFareDisplayPortTypeServiceInput.Header = field(
         metadata={
             "name": "Header",
             "type": "Element",
-        },
+        }
     )
-    body: None | AirFareDisplayPortTypeServiceInput.Body = field(
-        default=None,
+    body: AirFareDisplayPortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Header:
-        session_context: None | SessionContext = field(
-            default=None,
+        session_context: SessionContext = field(
             metadata={
                 "name": "SessionContext",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        air_fare_display_req: None | AirFareDisplayReq = field(
-            default=None,
+        air_fare_display_req: AirFareDisplayReq = field(
             metadata={
                 "name": "AirFareDisplayReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
-            },
+            }
         )

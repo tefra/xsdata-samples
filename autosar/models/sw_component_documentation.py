@@ -8,7 +8,7 @@ from .chapter import Chapter
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwComponentDocumentation:
     """
     This class specifies the ability to write dedicated documentation to a

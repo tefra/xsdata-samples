@@ -15,7 +15,7 @@ from .travel_specification_ref import TravelSpecificationRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelSpecificationsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "travelSpecifications_RelStructure"

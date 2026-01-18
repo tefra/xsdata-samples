@@ -9,7 +9,7 @@ from .mobility_journey_version_frame_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MobilityJourneyFrame(MobilityJourneyVersionFrameStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

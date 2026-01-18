@@ -13,7 +13,7 @@ from sabre.models.side_trip_type import SideTripType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExchangeOriginDestinationFlightType:
     """
     Attributes:
@@ -36,32 +36,29 @@ class ExchangeOriginDestinationFlightType:
         class_of_service: Class of service
     """
 
-    origin_location: None | RequestLocationType = field(
-        default=None,
+    origin_location: RequestLocationType = field(
         metadata={
             "name": "OriginLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    destination_location: None | RequestLocationType = field(
-        default=None,
+    destination_location: RequestLocationType = field(
         metadata={
             "name": "DestinationLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    airline: None | AirlineType = field(
-        default=None,
+    airline: AirlineType = field(
         metadata={
             "name": "Airline",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     side_trip: None | SideTripType = field(
         default=None,
@@ -96,14 +93,13 @@ class ExchangeOriginDestinationFlightType:
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
         },
     )
-    fare: None | ExchangeOriginDestinationFlightType.Fare = field(
-        default=None,
+    fare: ExchangeOriginDestinationFlightType.Fare = field(
         metadata={
             "name": "Fare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     plus_up: list[PlusUpType] = field(
         default_factory=list,
@@ -113,31 +109,28 @@ class ExchangeOriginDestinationFlightType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    number: None | int = field(
-        default=None,
+    number: int = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    departure_date_time: None | str = field(
-        default=None,
+    departure_date_time: str = field(
         metadata={
             "name": "DepartureDateTime",
             "type": "Attribute",
             "required": True,
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
-        },
+        }
     )
-    arrival_date_time: None | str = field(
-        default=None,
+    arrival_date_time: str = field(
         metadata={
             "name": "ArrivalDateTime",
             "type": "Attribute",
             "required": True,
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
-        },
+        }
     )
     marriage_status: None | str = field(
         default=None,
@@ -146,14 +139,13 @@ class ExchangeOriginDestinationFlightType:
             "type": "Attribute",
         },
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
             "pattern": r"[AKO]",
-        },
+        }
     )
     flown: bool = field(
         default=False,
@@ -162,17 +154,16 @@ class ExchangeOriginDestinationFlightType:
             "type": "Attribute",
         },
     )
-    class_of_service: None | str = field(
-        default=None,
+    class_of_service: str = field(
         metadata={
             "name": "ClassOfService",
             "type": "Attribute",
             "required": True,
             "pattern": r"[A-Z]{1,2}",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Fare(FareDetailsType):
         adjustment: (
             None | ExchangeOriginDestinationFlightType.Fare.Adjustment
@@ -185,7 +176,7 @@ class ExchangeOriginDestinationFlightType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Adjustment:
             """
             Attributes:
@@ -195,14 +186,13 @@ class ExchangeOriginDestinationFlightType:
                 group: Markup/Discount Group
             """
 
-            value: None | str = field(
-                default=None,
+            value: str = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)%?",
-                },
+                }
             )
             currency: None | str = field(
                 default=None,

@@ -9,7 +9,7 @@ from .verbatim_string import VerbatimString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TextValueSpecification:
     """
     The purpose of TextValueSpecification is to define the labels that

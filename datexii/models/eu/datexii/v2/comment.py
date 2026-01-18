@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Comment:
     """
     A free text comment with an optional date/time stamp that can be used
@@ -25,13 +25,12 @@ class Comment:
     :ivar comment_extension:
     """
 
-    comment: None | MultilingualString = field(
-        default=None,
+    comment: MultilingualString = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     comment_date_time: None | XmlDateTime = field(
         default=None,

@@ -7,7 +7,7 @@ from travelport.models.pnrdivide_info import PnrdivideInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChildProviderReservationInfo(PnrdivideInfo):
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"

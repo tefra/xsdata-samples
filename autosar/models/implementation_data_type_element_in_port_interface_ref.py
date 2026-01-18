@@ -14,7 +14,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ImplementationDataTypeElementInPortInterfaceRef:
     """
     This meta-class represents the ability to refer to the internal
@@ -114,18 +114,17 @@ class ImplementationDataTypeElementInPortInterfaceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RootDataPrototypeRef(Ref):
-        dest: None | AutosarDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: AutosarDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextImplementationDataElementRefs:
         context_implementation_data_element_ref: list[
             ImplementationDataTypeElementInPortInterfaceRef.ContextImplementationDataElementRefs.ContextImplementationDataElementRef
@@ -138,24 +137,22 @@ class ImplementationDataTypeElementInPortInterfaceRef:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ContextImplementationDataElementRef(Ref):
-            dest: None | ImplementationDataTypeElementSubtypesEnum = field(
-                default=None,
+            dest: ImplementationDataTypeElementSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetImplementationDataTypeElementRef(Ref):
-        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
-            default=None,
+        dest: ImplementationDataTypeElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

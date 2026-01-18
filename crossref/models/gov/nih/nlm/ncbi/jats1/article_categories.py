@@ -9,7 +9,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.series_title import SeriesTitle
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ArticleCategories:
     """
     <div> <h3>Article Grouping Data</h3> </div>.

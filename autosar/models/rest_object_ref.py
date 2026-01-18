@@ -19,7 +19,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RestObjectRef:
     """
     This meta-class represents the ability to define a REST property that
@@ -88,14 +88,13 @@ class RestObjectRef:
     class Meta:
         name = "REST-OBJECT-REF"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | RestObjectRef.ShortNameFragments = field(
         default=None,
@@ -192,7 +191,7 @@ class RestObjectRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -203,7 +202,7 @@ class RestObjectRef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -214,7 +213,7 @@ class RestObjectRef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ObjectRefs:
         object_ref: list[RestObjectRef.ObjectRefs.ObjectRef] = field(
             default_factory=list,
@@ -225,13 +224,12 @@ class RestObjectRef:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ObjectRef(Ref):
-            dest: None | RestElementDefSubtypesEnum = field(
-                default=None,
+            dest: RestElementDefSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

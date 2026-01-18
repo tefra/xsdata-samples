@@ -9,7 +9,7 @@ from .execution_order_constraint_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExecutionOrderConstraintTypeEnum:
     """
     This is used to describe the specific type of the
@@ -31,11 +31,10 @@ class ExecutionOrderConstraintTypeEnum:
     class Meta:
         name = "EXECUTION-ORDER-CONSTRAINT-TYPE-ENUM"
 
-    value: None | ExecutionOrderConstraintTypeEnumSimple = field(
-        default=None,
+    value: ExecutionOrderConstraintTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

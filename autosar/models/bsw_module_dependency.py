@@ -105,7 +105,7 @@ from .warning_indicator_requested_bit_needs import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswModuleDependency:
     """
     This class collects the dependencies of a BSW module or cluster on a
@@ -192,14 +192,13 @@ class BswModuleDependency:
     class Meta:
         name = "BSW-MODULE-DEPENDENCY"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | BswModuleDependency.ShortNameFragments = (
         field(
@@ -330,7 +329,7 @@ class BswModuleDependency:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -341,7 +340,7 @@ class BswModuleDependency:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -352,7 +351,7 @@ class BswModuleDependency:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetModuleRefs:
         bsw_module_description_ref_conditional: list[
             BswModuleDescriptionRefConditional
@@ -365,7 +364,7 @@ class BswModuleDependency:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredEntrys:
         bsw_module_entry_ref_conditional: list[
             BswModuleEntryRefConditional
@@ -378,7 +377,7 @@ class BswModuleDependency:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExpectedCallbacks:
         bsw_module_entry_ref_conditional: list[
             BswModuleEntryRefConditional
@@ -391,7 +390,7 @@ class BswModuleDependency:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceItems:
         bsw_mgr_needs: list[BswMgrNeeds] = field(
             default_factory=list,

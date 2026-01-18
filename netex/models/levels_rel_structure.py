@@ -10,7 +10,7 @@ from .level_ref import LevelRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LevelsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "levels_RelStructure"

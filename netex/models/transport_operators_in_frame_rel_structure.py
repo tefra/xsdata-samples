@@ -10,7 +10,7 @@ from .operator import Operator
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportOperatorsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transportOperatorsInFrame_RelStructure"

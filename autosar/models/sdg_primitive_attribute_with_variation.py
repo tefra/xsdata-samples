@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SdgPrimitiveAttributeWithVariation:
     """
     Describes a primitive numerical special data attribute with variation.
@@ -108,14 +108,13 @@ class SdgPrimitiveAttributeWithVariation:
     class Meta:
         name = "SDG-PRIMITIVE-ATTRIBUTE-WITH-VARIATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SdgPrimitiveAttributeWithVariation.ShortNameFragments
@@ -288,7 +287,7 @@ class SdgPrimitiveAttributeWithVariation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -299,7 +298,7 @@ class SdgPrimitiveAttributeWithVariation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -310,7 +309,7 @@ class SdgPrimitiveAttributeWithVariation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ValidBindingTimes:
         """
         :ivar valid_binding_time: List of valid binding times.

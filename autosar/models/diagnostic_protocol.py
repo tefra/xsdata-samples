@@ -28,7 +28,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticProtocol:
     """
     This meta-class represents the ability to define a diagnostic protocol.
@@ -110,14 +110,13 @@ class DiagnosticProtocol:
     class Meta:
         name = "DIAGNOSTIC-PROTOCOL"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DiagnosticProtocol.ShortNameFragments = field(
         default=None,
@@ -248,7 +247,7 @@ class DiagnosticProtocol:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -259,7 +258,7 @@ class DiagnosticProtocol:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -270,7 +269,7 @@ class DiagnosticProtocol:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticConnections:
         diagnostic_connection_ref_conditional: list[
             DiagnosticConnectionRefConditional
@@ -283,7 +282,7 @@ class DiagnosticProtocol:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceTables:
         diagnostic_service_table_ref_conditional: list[
             DiagnosticServiceTableRefConditional

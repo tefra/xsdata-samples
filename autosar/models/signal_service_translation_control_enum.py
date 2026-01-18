@@ -9,7 +9,7 @@ from .signal_service_translation_control_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SignalServiceTranslationControlEnum:
     """
     This enumeration allows to define how the service instance
@@ -31,11 +31,10 @@ class SignalServiceTranslationControlEnum:
     class Meta:
         name = "SIGNAL-SERVICE-TRANSLATION-CONTROL-ENUM"
 
-    value: None | SignalServiceTranslationControlEnumSimple = field(
-        default=None,
+    value: SignalServiceTranslationControlEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

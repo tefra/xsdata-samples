@@ -22,7 +22,7 @@ from .time_base_resource_subtypes_enum import TimeBaseResourceSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LogAndTraceInstantiation:
     """
     This meta-class defines the attributes for the Log&amp;Trace
@@ -97,14 +97,13 @@ class LogAndTraceInstantiation:
     class Meta:
         name = "LOG-AND-TRACE-INSTANTIATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | LogAndTraceInstantiation.ShortNameFragments
@@ -229,7 +228,7 @@ class LogAndTraceInstantiation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -240,7 +239,7 @@ class LogAndTraceInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -251,7 +250,7 @@ class LogAndTraceInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DltLogChannels:
         dlt_log_channel: list[DltLogChannel] = field(
             default_factory=list,
@@ -262,13 +261,12 @@ class LogAndTraceInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimeBaseResourceRef(Ref):
-        dest: None | TimeBaseResourceSubtypesEnum = field(
-            default=None,
+        dest: TimeBaseResourceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

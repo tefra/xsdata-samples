@@ -14,7 +14,7 @@ from travelport.models.rail_segment_list import RailSegmentList
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailExchangeQuoteRsp(BaseRsp1):
     """
     Returns the result of an availability search on host.

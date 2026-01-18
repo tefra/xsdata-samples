@@ -7,7 +7,7 @@ from .tcp_role_enum_simple import TcpRoleEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TcpRoleEnum:
     """
     This enumeration defines whether a TCP node has the tcp server role or
@@ -29,11 +29,10 @@ class TcpRoleEnum:
     class Meta:
         name = "TCP-ROLE-ENUM"
 
-    value: None | TcpRoleEnumSimple = field(
-        default=None,
+    value: TcpRoleEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

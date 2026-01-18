@@ -8,7 +8,7 @@ from tpdb.models.date import Date
 from tpdb.models.originalfilename import Originalfilename
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Metainformation:
     class Meta:
         name = "metainformation"

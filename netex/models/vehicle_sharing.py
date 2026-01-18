@@ -9,7 +9,7 @@ from .vehicle_sharing_mode_of_operation_value_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleSharing(VehicleSharingModeOfOperationValueStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

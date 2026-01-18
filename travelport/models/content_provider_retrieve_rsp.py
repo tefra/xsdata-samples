@@ -8,7 +8,7 @@ from travelport.models.content_provider import ContentProvider
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContentProviderRetrieveRsp(BaseRsp1):
     """
     Response with all available providers with their suppliers.

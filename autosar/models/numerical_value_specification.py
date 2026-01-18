@@ -9,7 +9,7 @@ from .numerical_value_variation_point import NumericalValueVariationPoint
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NumericalValueSpecification:
     """
     A numerical ValueSpecification which is intended to be assigned to a

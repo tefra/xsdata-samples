@@ -32,7 +32,7 @@ from .symbol_string import SymbolString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McDataInstance:
     """
     Describes the specific properties of one data instance in order to
@@ -174,14 +174,13 @@ class McDataInstance:
     class Meta:
         name = "MC-DATA-INSTANCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | McDataInstance.ShortNameFragments = field(
         default=None,
@@ -368,7 +367,7 @@ class McDataInstance:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -379,7 +378,7 @@ class McDataInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -390,18 +389,17 @@ class McDataInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlatMapEntryRef(Ref):
-        dest: None | FlatInstanceDescriptorSubtypesEnum = field(
-            default=None,
+        dest: FlatInstanceDescriptorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McDataAssignments:
         role_based_mc_data_assignment: list[RoleBasedMcDataAssignment] = field(
             default_factory=list,
@@ -412,7 +410,7 @@ class McDataInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SubElements:
         mc_data_instance: list[McDataInstance] = field(
             default_factory=list,

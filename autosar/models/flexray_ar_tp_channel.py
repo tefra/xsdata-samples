@@ -17,7 +17,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayArTpChannel:
     """
     A channel is a group of connections sharing several properties.
@@ -394,18 +394,17 @@ class FlexrayArTpChannel:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlowControlPduRef(Ref):
-        dest: None | NPduSubtypesEnum = field(
-            default=None,
+        dest: NPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NPduRefs:
         n_pdu_ref: list[FlexrayArTpChannel.NPduRefs.NPduRef] = field(
             default_factory=list,
@@ -416,18 +415,17 @@ class FlexrayArTpChannel:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NPduRef(Ref):
-            dest: None | NPduSubtypesEnum = field(
-                default=None,
+            dest: NPduSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduPools:
         n_pdu: list[NPdu] = field(
             default_factory=list,
@@ -438,7 +436,7 @@ class FlexrayArTpChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpConnections:
         flexray_ar_tp_connection: list[FlexrayArTpConnection] = field(
             default_factory=list,

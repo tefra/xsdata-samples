@@ -26,7 +26,7 @@ from .signal_service_translation_event_props import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SignalServiceTranslationProps:
     """
     This element allows to define the properties which are applicable for
@@ -100,14 +100,13 @@ class SignalServiceTranslationProps:
     class Meta:
         name = "SIGNAL-SERVICE-TRANSLATION-PROPS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SignalServiceTranslationProps.ShortNameFragments
@@ -239,7 +238,7 @@ class SignalServiceTranslationProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -250,7 +249,7 @@ class SignalServiceTranslationProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -261,7 +260,7 @@ class SignalServiceTranslationProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ControlConsumedEventGroupRefs:
         control_consumed_event_group_ref: list[
             SignalServiceTranslationProps.ControlConsumedEventGroupRefs.ControlConsumedEventGroupRef
@@ -274,18 +273,17 @@ class SignalServiceTranslationProps:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ControlConsumedEventGroupRef(Ref):
-            dest: None | ConsumedEventGroupSubtypesEnum = field(
-                default=None,
+            dest: ConsumedEventGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ControlPncRefs:
         control_pnc_ref: list[
             SignalServiceTranslationProps.ControlPncRefs.ControlPncRef
@@ -298,18 +296,17 @@ class SignalServiceTranslationProps:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ControlPncRef(Ref):
-            dest: None | PncMappingIdentSubtypesEnum = field(
-                default=None,
+            dest: PncMappingIdentSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ControlProvidedEventGroupRefs:
         control_provided_event_group_ref: list[
             SignalServiceTranslationProps.ControlProvidedEventGroupRefs.ControlProvidedEventGroupRef
@@ -322,18 +319,17 @@ class SignalServiceTranslationProps:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ControlProvidedEventGroupRef(Ref):
-            dest: None | EventHandlerSubtypesEnum = field(
-                default=None,
+            dest: EventHandlerSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SignalServiceTranslationEventPropss:
         signal_service_translation_event_props: list[
             SignalServiceTranslationEventProps

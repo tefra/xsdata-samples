@@ -9,7 +9,7 @@ from travelport.models.person_name_search import PersonNameSearch
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirPrePayReq(BaseReq1):
     """
     Flight Pass Request.
@@ -40,7 +40,7 @@ class AirPrePayReq(BaseReq1):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ListSearch:
         """
         Parameters
@@ -72,27 +72,25 @@ class AirPrePayReq(BaseReq1):
                 "max_occurs": 999,
             },
         )
-        start_from_result: None | int = field(
-            default=None,
+        start_from_result: int = field(
             metadata={
                 "name": "StartFromResult",
                 "type": "Attribute",
                 "required": True,
                 "min_inclusive": 1,
-            },
+            }
         )
-        max_results: None | int = field(
-            default=None,
+        max_results: int = field(
             metadata={
                 "name": "MaxResults",
                 "type": "Attribute",
                 "required": True,
                 "min_inclusive": 1,
                 "max_inclusive": 200,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PrePayRetrieve:
         """
         Parameters
@@ -103,15 +101,14 @@ class AirPrePayReq(BaseReq1):
             Pre pay id type,example 'FlightPass'
         """
 
-        id: None | str = field(
-            default=None,
+        id: str = field(
             metadata={
                 "name": "Id",
                 "type": "Attribute",
                 "required": True,
                 "min_length": 1,
                 "max_length": 36,
-            },
+            }
         )
         type_value: None | str = field(
             default=None,

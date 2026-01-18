@@ -27,7 +27,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticWriteMemoryByAddress:
     """
     This represents an instance of the "Write Memory by Address" diagnostic
@@ -103,14 +103,13 @@ class DiagnosticWriteMemoryByAddress:
     class Meta:
         name = "DIAGNOSTIC-WRITE-MEMORY-BY-ADDRESS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticWriteMemoryByAddress.ShortNameFragments
@@ -231,7 +230,7 @@ class DiagnosticWriteMemoryByAddress:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -242,7 +241,7 @@ class DiagnosticWriteMemoryByAddress:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -253,18 +252,17 @@ class DiagnosticWriteMemoryByAddress:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessPermissionRef(Ref):
-        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticAccessPermissionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MemoryRangeRefs:
         memory_range_ref: list[
             DiagnosticWriteMemoryByAddress.MemoryRangeRefs.MemoryRangeRef
@@ -277,24 +275,22 @@ class DiagnosticWriteMemoryByAddress:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MemoryRangeRef(Ref):
-            dest: None | DiagnosticMemoryIdentifierSubtypesEnum = field(
-                default=None,
+            dest: DiagnosticMemoryIdentifierSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class WriteClassRef(Ref):
-        dest: None | DiagnosticWriteMemoryByAddressClassSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticWriteMemoryByAddressClassSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

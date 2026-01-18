@@ -8,21 +8,20 @@ from travelport.models.low_fare_search_rsp import LowFareSearchRsp
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirLowFareSearchPortTypeServiceOutput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | AirLowFareSearchPortTypeServiceOutput.Body = field(
-        default=None,
+    body: AirLowFareSearchPortTypeServiceOutput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
         low_fare_search_rsp: None | LowFareSearchRsp = field(
             default=None,
@@ -40,21 +39,19 @@ class AirLowFareSearchPortTypeServiceOutput:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Fault:
-            faultcode: None | str = field(
-                default=None,
+            faultcode: str = field(
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                },
+                }
             )
-            faultstring: None | str = field(
-                default=None,
+            faultstring: str = field(
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                },
+                }
             )
             faultactor: None | str = field(
                 default=None,
@@ -73,7 +70,7 @@ class AirLowFareSearchPortTypeServiceOutput:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Detail:
                 error_info: None | ErrorInfo1 = field(
                     default=None,

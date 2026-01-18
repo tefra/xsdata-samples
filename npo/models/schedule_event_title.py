@@ -8,7 +8,7 @@ from npo.models.textual_type_enum import TextualTypeEnum
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduleEventTitle:
     class Meta:
         name = "scheduleEventTitle"
@@ -19,18 +19,16 @@ class ScheduleEventTitle:
             "required": True,
         },
     )
-    owner: None | OwnerTypeEnum = field(
-        default=None,
+    owner: OwnerTypeEnum = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    type_value: None | TextualTypeEnum = field(
-        default=None,
+    type_value: TextualTypeEnum = field(
         metadata={
             "name": "type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

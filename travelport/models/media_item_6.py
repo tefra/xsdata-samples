@@ -7,7 +7,7 @@ from travelport.models.type_response_image_size_6 import TypeResponseImageSize6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MediaItem6:
     """
     Photos and other media urls for the property referenced above.

@@ -6,22 +6,20 @@ from tpdb.models.lhs import Lhs
 from tpdb.models.rhs import Rhs
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Condition:
     class Meta:
         name = "condition"
 
-    lhs: None | Lhs = field(
-        default=None,
+    lhs: Lhs = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    rhs: None | Rhs = field(
-        default=None,
+    rhs: Rhs = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )

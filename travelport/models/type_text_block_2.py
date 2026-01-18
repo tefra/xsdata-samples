@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/terminal_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeTextBlock2:
     class Meta:
         name = "typeTextBlock"

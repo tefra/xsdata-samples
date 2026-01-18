@@ -10,7 +10,7 @@ from sdmx_ml.models.time_period_range_type import TimePeriodRangeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TimeRangeValueType:
     """
     TimeRangeValueType allows a time period value to be expressed as a
@@ -73,18 +73,18 @@ class TimeRangeValueType:
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class BeforePeriod(TimePeriodRangeType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class AfterPeriod(TimePeriodRangeType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class StartPeriod(TimePeriodRangeType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class EndPeriod(TimePeriodRangeType):
         pass

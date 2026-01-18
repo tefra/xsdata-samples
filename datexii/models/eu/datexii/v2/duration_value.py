@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DurationValue(DataValue):
     """
     A measured or calculated value of a period of time.
@@ -17,13 +17,12 @@ class DurationValue(DataValue):
     :ivar duration_value_extension:
     """
 
-    duration: None | float = field(
-        default=None,
+    duration: float = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     duration_value_extension: None | ExtensionType = field(
         default=None,

@@ -12,7 +12,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswModuleClientServerEntry:
     """
     This meta-class represents a single API entry into the BSW module or
@@ -56,14 +56,13 @@ class BswModuleClientServerEntry:
     class Meta:
         name = "BSW-MODULE-CLIENT-SERVER-ENTRY"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | BswModuleClientServerEntry.ShortNameFragments
@@ -125,7 +124,7 @@ class BswModuleClientServerEntry:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -136,13 +135,12 @@ class BswModuleClientServerEntry:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EncapsulatedEntryRef(Ref):
-        dest: None | BswModuleEntrySubtypesEnum = field(
-            default=None,
+        dest: BswModuleEntrySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

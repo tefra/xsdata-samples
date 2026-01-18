@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChargeBandByReference:
     """
     Using (a) prior defined charge band(s), identified by its reference.
@@ -19,14 +19,13 @@ class ChargeBandByReference:
     :ivar charge_band_by_reference_extension:
     """
 
-    charge_band_reference: None | ChargeBandVersionedReference = field(
-        default=None,
+    charge_band_reference: ChargeBandVersionedReference = field(
         metadata={
             "name": "chargeBandReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     charge_band_by_reference_extension: None | ExtensionType = field(
         default=None,

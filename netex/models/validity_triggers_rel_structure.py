@@ -9,7 +9,7 @@ from .entity_in_version_structure import ValidityTriggerVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidityTriggersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "validityTriggers_RelStructure"

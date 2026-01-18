@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FailureType:
     """
     <description xmlns="">A component that describes individual failures
@@ -38,14 +38,13 @@ class FailureType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
         },
     )
-    text: None | str = field(
-        default=None,
+    text: str = field(
         metadata={
             "name": "Text",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
             "required": True,
-        },
+        }
     )
     data_ref: None | DataRefType = field(
         default=None,

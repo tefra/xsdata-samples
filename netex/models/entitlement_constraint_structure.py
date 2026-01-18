@@ -21,7 +21,7 @@ from .user_profile_refs_rel_structure import UserProfileRefsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EntitlementConstraintStructure:
     period_constraint: None | SamePeriodEnumeration = field(
         default=None,

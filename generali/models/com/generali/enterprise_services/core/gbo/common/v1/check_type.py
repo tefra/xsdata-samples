@@ -15,7 +15,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.checks_
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CheckType(BaseIdentifiedComponentType):
     """
     The schema containing the declarations for the framework check object.

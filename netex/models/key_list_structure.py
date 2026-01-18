@@ -8,7 +8,7 @@ from .key_value_structure import KeyValueStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class KeyListStructure:
     key_value: Iterable[KeyValueStructure] = field(
         default_factory=list,

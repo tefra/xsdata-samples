@@ -9,7 +9,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organi
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NationalIdsType:
     national_id: list[NationalIdType] = field(
         default_factory=list,

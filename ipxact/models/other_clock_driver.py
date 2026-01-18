@@ -7,7 +7,7 @@ from ipxact.models.clock_driver_type import ClockDriverType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherClockDriver(ClockDriverType):
     """
     Describes a clock not directly associated with an input port.
@@ -24,13 +24,12 @@ class OtherClockDriver(ClockDriverType):
         name = "otherClockDriver"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    clock_name: None | str = field(
-        default=None,
+    clock_name: str = field(
         metadata={
             "name": "clockName",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     clock_source: None | str = field(
         default=None,

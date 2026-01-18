@@ -9,7 +9,7 @@ from travelport.models.field_group_1 import FieldGroup1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileModifyFieldRsp1(BaseRsp2):
     """
     Response reflecting changes made to the custom field or field group.

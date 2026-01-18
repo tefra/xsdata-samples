@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.vms_unit import VmsUnit
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsPublication(PayloadPublication):
     """
     A publication containing the current status and settings of one or more
@@ -18,14 +18,13 @@ class VmsPublication(PayloadPublication):
     message signs.
     """
 
-    header_information: None | HeaderInformation = field(
-        default=None,
+    header_information: HeaderInformation = field(
         metadata={
             "name": "headerInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     vms_unit: list[VmsUnit] = field(
         default_factory=list,

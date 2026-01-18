@@ -7,7 +7,7 @@ from travelport.models.criteria_type import CriteriaType
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SearchPriority:
     """
     Override the search order for hotel availability request.
@@ -26,7 +26,7 @@ class SearchPriority:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Criteria:
         """
         Parameters
@@ -38,21 +38,19 @@ class SearchPriority:
             Search type
         """
 
-        order: None | int = field(
-            default=None,
+        order: int = field(
             metadata={
                 "name": "Order",
                 "type": "Attribute",
                 "required": True,
                 "min_inclusive": 1,
                 "max_inclusive": 8,
-            },
+            }
         )
-        type_value: None | CriteriaType = field(
-            default=None,
+        type_value: CriteriaType = field(
             metadata={
                 "name": "Type",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

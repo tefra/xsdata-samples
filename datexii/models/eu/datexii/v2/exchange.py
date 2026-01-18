@@ -20,7 +20,7 @@ from datexii.models.eu.datexii.v2.target import Target
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Exchange:
     """
     Details associated with the management of the exchange between the
@@ -140,14 +140,13 @@ class Exchange:
             "max_length": 1024,
         },
     )
-    supplier_identification: None | InternationalIdentifier = field(
-        default=None,
+    supplier_identification: InternationalIdentifier = field(
         metadata={
             "name": "supplierIdentification",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     target: None | Target = field(
         default=None,

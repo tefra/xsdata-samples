@@ -13,7 +13,7 @@ from .sw_component_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PPortInCompositionInstanceRef:
     """
     :ivar context_component_ref:
@@ -69,24 +69,22 @@ class PPortInCompositionInstanceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextComponentRef(Ref):
-        dest: None | SwComponentPrototypeSubtypesEnum = field(
-            default=None,
+        dest: SwComponentPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetPPortRef(Ref):
-        dest: None | AbstractProvidedPortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: AbstractProvidedPortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

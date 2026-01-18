@@ -7,7 +7,7 @@ from travelport.models.travel_arranger import TravelArranger
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Affiliations:
     """
     Affiliations related for pre pay profiles.

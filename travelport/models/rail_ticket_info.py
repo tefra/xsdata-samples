@@ -10,7 +10,7 @@ from travelport.models.ticket_advisory import TicketAdvisory
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailTicketInfo:
     """
     Parameters
@@ -54,15 +54,14 @@ class RailTicketInfo:
             "max_occurs": 10,
         },
     )
-    number: None | str = field(
-        default=None,
+    number: str = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 19,
-        },
+        }
     )
     issue_location: None | str = field(
         default=None,

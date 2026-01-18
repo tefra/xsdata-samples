@@ -12,7 +12,7 @@ from .train_element_type_enumeration import TrainElementTypeEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrainComponentDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "TrainComponent_DerivedViewStructure"

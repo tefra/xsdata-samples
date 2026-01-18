@@ -10,7 +10,7 @@ from .taxi_stands_rel_structure import TaxiStandsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxiRankVersionStructure(StopPlaceVersionStructure):
     class Meta:
         name = "TaxiRank_VersionStructure"

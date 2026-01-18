@@ -9,7 +9,7 @@ from sdmx_ml.models.resolve_period_type import ResolvePeriodType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DateMapType(IdentifiableType):
     """
     :ivar source:
@@ -76,32 +76,29 @@ class DateMapType(IdentifiableType):
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class FrequencyDimension:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class MappedFrequencies:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class TargetFrequencyId:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )

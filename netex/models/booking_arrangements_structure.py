@@ -15,7 +15,7 @@ from .purchase_when_enumeration import PurchaseWhenEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingArrangementsStructure:
     booking_contact: None | ContactStructure = field(
         default=None,

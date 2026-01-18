@@ -18,7 +18,7 @@ from .sw_impl_policy_enum import SwImplPolicyEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswInternalTriggeringPoint:
     """
     Represents the activation point for one or more
@@ -85,14 +85,13 @@ class BswInternalTriggeringPoint:
     class Meta:
         name = "BSW-INTERNAL-TRIGGERING-POINT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | BswInternalTriggeringPoint.ShortNameFragments
@@ -191,7 +190,7 @@ class BswInternalTriggeringPoint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -202,7 +201,7 @@ class BswInternalTriggeringPoint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

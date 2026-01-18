@@ -19,7 +19,7 @@ from .type_of_validity_ref import TypeOfValidityRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypesOfFrameRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typesOfFrame_RelStructure"
@@ -46,7 +46,7 @@ class TypesOfFrameRelStructure(OneToManyRelationshipStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfFrameValueStructure(TypeOfEntityVersionStructure):
     class Meta:
         name = "TypeOfFrame_ValueStructure"
@@ -115,7 +115,7 @@ class TypeOfFrameValueStructure(TypeOfEntityVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfFrame(TypeOfFrameValueStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

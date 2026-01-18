@@ -9,7 +9,7 @@ from .type_of_point_ref import TypeOfPointRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfPointRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfPointRefs_RelStructure"

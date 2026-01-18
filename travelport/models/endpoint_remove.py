@@ -7,7 +7,7 @@ from travelport.models.type_editable_endpoint import TypeEditableEndpoint
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EndpointRemove(TypeEditableEndpoint):
     """
     Removes an endpoint from an action in a particular field or field

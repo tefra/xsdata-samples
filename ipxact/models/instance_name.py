@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InstanceName:
     """
     An instance name assigned to subcomponent instances and contained

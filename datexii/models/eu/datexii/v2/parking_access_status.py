@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.parking_fault_enum import ParkingFaultEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingAccessStatus:
     """
     The opening and fault status of one access.
@@ -24,14 +24,13 @@ class ParkingAccessStatus:
     :ivar parking_access_status_extension:
     """
 
-    access_reference: None | ParkingAccessReference = field(
-        default=None,
+    access_reference: ParkingAccessReference = field(
         metadata={
             "name": "accessReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     access_opening_status: None | OpeningStatusEnum = field(
         default=None,

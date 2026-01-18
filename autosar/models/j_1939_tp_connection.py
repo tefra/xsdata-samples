@@ -15,7 +15,7 @@ from .tp_connection_ident import TpConnectionIdent
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class J1939TpConnection:
     """
     A J1939TpConnection represents an internal path for the transmission or
@@ -228,29 +228,27 @@ class J1939TpConnection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataPduRef(Ref):
-        dest: None | NPduSubtypesEnum = field(
-            default=None,
+        dest: NPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DirectPduRef(Ref):
-        dest: None | NPduSubtypesEnum = field(
-            default=None,
+        dest: NPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlowControlPduRefs:
         flow_control_pdu_ref: list[
             J1939TpConnection.FlowControlPduRefs.FlowControlPduRef
@@ -264,18 +262,17 @@ class J1939TpConnection:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FlowControlPduRef(Ref):
-            dest: None | NPduSubtypesEnum = field(
-                default=None,
+            dest: NPduSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReceiverRefs:
         receiver_ref: list[J1939TpConnection.ReceiverRefs.ReceiverRef] = field(
             default_factory=list,
@@ -286,18 +283,17 @@ class J1939TpConnection:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ReceiverRef(Ref):
-            dest: None | J1939TpNodeSubtypesEnum = field(
-                default=None,
+            dest: J1939TpNodeSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpPgs:
         j_1939_tp_pg: list[J1939TpPg] = field(
             default_factory=list,
@@ -308,7 +304,7 @@ class J1939TpConnection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpSduRefs:
         tp_sdu_ref: list[J1939TpConnection.TpSduRefs.TpSduRef] = field(
             default_factory=list,
@@ -319,24 +315,22 @@ class J1939TpConnection:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TpSduRef(Ref):
-            dest: None | IPduSubtypesEnum = field(
-                default=None,
+            dest: IPduSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransmitterRef(Ref):
-        dest: None | J1939TpNodeSubtypesEnum = field(
-            default=None,
+        dest: J1939TpNodeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

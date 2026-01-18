@@ -10,7 +10,7 @@ from travelport.models.type_reservation_ticketed import TypeReservationTicketed
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProviderReservationSearchResult:
     """
     Container for reservations that match the search criteria.
@@ -81,21 +81,19 @@ class ProviderReservationSearchResult:
             "type": "Attribute",
         },
     )
-    ticketed: None | TypeReservationTicketed = field(
-        default=None,
+    ticketed: TypeReservationTicketed = field(
         metadata={
             "name": "Ticketed",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     provider_locator_code: None | str = field(
         default=None,

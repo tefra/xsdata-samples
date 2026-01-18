@@ -17,7 +17,7 @@ from travelport.models.type_structured_address_7 import TypeStructuredAddress7
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingTravelerInfo6:
     """
     Container that will allow modifying Universal record data that is not

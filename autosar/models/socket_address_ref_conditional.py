@@ -9,7 +9,7 @@ from .socket_address_subtypes_enum import SocketAddressSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SocketAddressRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -66,13 +66,12 @@ class SocketAddressRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SocketAddressRef(Ref):
-        dest: None | SocketAddressSubtypesEnum = field(
-            default=None,
+        dest: SocketAddressSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

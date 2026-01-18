@@ -10,7 +10,7 @@ from .driver_ref import DriverRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DatedCallVersionedChildStructure(CallVersionedChildStructure):
     class Meta:
         name = "DatedCall_VersionedChildStructure"

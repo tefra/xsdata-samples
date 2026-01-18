@@ -9,7 +9,7 @@ from .individual_passenger_info_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndividualPassengerInfo(IndividualPassengerInfoVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

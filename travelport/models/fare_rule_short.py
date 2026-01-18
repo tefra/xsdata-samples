@@ -7,7 +7,7 @@ from travelport.models.fare_rule_name_value import FareRuleNameValue
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareRuleShort:
     """
     Short Text Fare Rule.
@@ -25,13 +25,12 @@ class FareRuleShort:
             "max_occurs": 999,
         },
     )
-    category: None | int = field(
-        default=None,
+    category: int = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     table_number: None | str = field(
         default=None,

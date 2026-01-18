@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayTpPduPool:
     """
     FlexrayTpPduPool is a set of N-PDUs which are defined for FrTp sending
@@ -85,14 +85,13 @@ class FlexrayTpPduPool:
     class Meta:
         name = "FLEXRAY-TP-PDU-POOL"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | FlexrayTpPduPool.ShortNameFragments = field(
         default=None,
@@ -189,7 +188,7 @@ class FlexrayTpPduPool:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -200,7 +199,7 @@ class FlexrayTpPduPool:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -211,7 +210,7 @@ class FlexrayTpPduPool:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NPduRefs:
         n_pdu_ref: list[FlexrayTpPduPool.NPduRefs.NPduRef] = field(
             default_factory=list,
@@ -222,13 +221,12 @@ class FlexrayTpPduPool:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NPduRef(Ref):
-            dest: None | NPduSubtypesEnum = field(
-                default=None,
+            dest: NPduSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

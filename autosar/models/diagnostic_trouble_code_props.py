@@ -43,7 +43,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticTroubleCodeProps:
     """
     This element defines common Dtc properties that can be reused by
@@ -148,14 +148,13 @@ class DiagnosticTroubleCodeProps:
     class Meta:
         name = "DIAGNOSTIC-TROUBLE-CODE-PROPS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticTroubleCodeProps.ShortNameFragments
@@ -380,7 +379,7 @@ class DiagnosticTroubleCodeProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -391,7 +390,7 @@ class DiagnosticTroubleCodeProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -402,18 +401,17 @@ class DiagnosticTroubleCodeProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AgingRef(Ref):
-        dest: None | DiagnosticAgingSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticAgingSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExtendedDataRecords:
         diagnostic_extended_data_record_ref_conditional: list[
             DiagnosticExtendedDataRecordRefConditional
@@ -426,7 +424,7 @@ class DiagnosticTroubleCodeProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FreezeFrames:
         diagnostic_freeze_frame_ref_conditional: list[
             DiagnosticFreezeFrameRefConditional
@@ -439,29 +437,27 @@ class DiagnosticTroubleCodeProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FreezeFrameContentRef(Ref):
-        dest: None | DiagnosticDataIdentifierSetSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticDataIdentifierSetSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FreezeFrameContentWwhObdRef(Ref):
-        dest: None | DiagnosticDataIdentifierSetSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticDataIdentifierSetSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LegislatedFreezeFrameContentWwhObds:
         diagnostic_data_identifier_set_ref_conditional: list[
             DiagnosticDataIdentifierSetRefConditional
@@ -474,7 +470,7 @@ class DiagnosticTroubleCodeProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MemoryDestinationRefs:
         memory_destination_ref: list[
             DiagnosticTroubleCodeProps.MemoryDestinationRefs.MemoryDestinationRef
@@ -487,18 +483,17 @@ class DiagnosticTroubleCodeProps:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MemoryDestinationRef(Ref):
-            dest: None | DiagnosticMemoryDestinationSubtypesEnum = field(
-                default=None,
+            dest: DiagnosticMemoryDestinationSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SnapshotRecordContents:
         diagnostic_data_identifier_set_ref_conditional: list[
             DiagnosticDataIdentifierSetRefConditional

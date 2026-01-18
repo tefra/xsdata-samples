@@ -9,7 +9,7 @@ from .day_type_assignment import DayTypeAssignment
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DayTypeAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypeAssignmentsInFrame_RelStructure"

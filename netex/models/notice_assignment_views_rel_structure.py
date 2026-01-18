@@ -9,7 +9,7 @@ from .notice_assignment_view import NoticeAssignmentView
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NoticeAssignmentViewsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "noticeAssignmentViews_RelStructure"

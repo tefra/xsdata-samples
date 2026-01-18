@@ -14,7 +14,7 @@ from .sw_component_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RPortPrototypeInSoftwareClusterDesignInstanceRef:
     """
     :ivar context_root_sw_cluster_design_component_prototype_ref:
@@ -83,35 +83,32 @@ class RPortPrototypeInSoftwareClusterDesignInstanceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextRootSwClusterDesignComponentPrototypeRef(Ref):
-        dest: None | RootSwClusterDesignComponentPrototypeSubtypesEnum = field(
-            default=None,
+        dest: RootSwClusterDesignComponentPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextSwComponentPrototypeRef(Ref):
-        dest: None | SwComponentPrototypeSubtypesEnum = field(
-            default=None,
+        dest: SwComponentPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetRPortPrototypeRef(Ref):
-        dest: None | RPortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: RPortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

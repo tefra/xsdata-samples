@@ -7,7 +7,7 @@ from .t_interface import TInterface
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Interface(TInterface):
     class Meta:
         name = "interface"

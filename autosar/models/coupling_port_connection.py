@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CouplingPortConnection:
     """
     Connection between two CouplingPorts (firstPort and secondPort) or
@@ -111,18 +111,17 @@ class CouplingPortConnection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FirstPortRef(Ref):
-        dest: None | CouplingPortSubtypesEnum = field(
-            default=None,
+        dest: CouplingPortSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NodePorts:
         coupling_port_ref_conditional: list[CouplingPortRefConditional] = (
             field(
@@ -135,13 +134,12 @@ class CouplingPortConnection:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecondPortRef(Ref):
-        dest: None | CouplingPortSubtypesEnum = field(
-            default=None,
+        dest: CouplingPortSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

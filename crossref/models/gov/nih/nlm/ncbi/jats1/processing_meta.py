@@ -23,7 +23,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.restricted_by import RestrictedBy
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProcessingMeta:
     """
     <div> <h3>Processing Metadata Model</h3> </div>.

@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.period import Period
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OverallPeriod:
     """
     A continuous or discontinuous period of validity defined by overall
@@ -31,14 +31,13 @@ class OverallPeriod:
     :ivar overall_period_extension:
     """
 
-    overall_start_time: None | XmlDateTime = field(
-        default=None,
+    overall_start_time: XmlDateTime = field(
         metadata={
             "name": "overallStartTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     overall_end_time: None | XmlDateTime = field(
         default=None,

@@ -9,7 +9,7 @@ from .vehicle_sharing_parking_bay_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleSharingParkingBay(VehicleSharingParkingBayVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

@@ -10,7 +10,7 @@ from travelport.models.type_time_spec_1 import TypeTimeSpec1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SearchAirLeg:
     """
     Search version of AirLeg used to specify search criteria.

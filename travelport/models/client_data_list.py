@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientDataList:
     """
     A list of Name Value pairs that can be used to store data specific to a
@@ -27,23 +27,21 @@ class ClientDataList:
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        },
+        }
     )
-    value: None | str = field(
-        default=None,
+    value: str = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        },
+        }
     )

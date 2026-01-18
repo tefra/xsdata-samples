@@ -9,7 +9,7 @@ from .single_journey import SingleJourney
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SingleJourneysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "singleJourneys_RelStructure"

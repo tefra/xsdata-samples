@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PayloadPublication:
     """
     A payload publication of traffic related information or associated
@@ -50,23 +50,21 @@ class PayloadPublication:
             "max_length": 1024,
         },
     )
-    publication_time: None | XmlDateTime = field(
-        default=None,
+    publication_time: XmlDateTime = field(
         metadata={
             "name": "publicationTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    publication_creator: None | InternationalIdentifier = field(
-        default=None,
+    publication_creator: InternationalIdentifier = field(
         metadata={
             "name": "publicationCreator",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     payload_publication_extension: None | ExtensionType = field(
         default=None,
@@ -76,10 +74,9 @@ class PayloadPublication:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    lang: None | str = field(
-        default=None,
+    lang: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

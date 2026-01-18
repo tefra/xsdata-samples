@@ -7,7 +7,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NumberType:
     """
     <ns1:DictionaryEntryName
@@ -21,9 +21,8 @@ class NumberType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Integer</ns1:PrimitiveType>.
     """
 
-    value: None | int = field(
-        default=None,
+    value: int = field(
         metadata={
             "required": True,
-        },
+        }
     )

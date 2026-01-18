@@ -25,7 +25,7 @@ from .traceable_subtypes_enum import TraceableSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LatencyTimingConstraint:
     """
     This constraint type restricts the time duration between the occurrence
@@ -117,14 +117,13 @@ class LatencyTimingConstraint:
     class Meta:
         name = "LATENCY-TIMING-CONSTRAINT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | LatencyTimingConstraint.ShortNameFragments = (
         field(
@@ -273,7 +272,7 @@ class LatencyTimingConstraint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -284,7 +283,7 @@ class LatencyTimingConstraint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -295,7 +294,7 @@ class LatencyTimingConstraint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TraceRefs:
         trace_ref: list[LatencyTimingConstraint.TraceRefs.TraceRef] = field(
             default_factory=list,
@@ -306,35 +305,32 @@ class LatencyTimingConstraint:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TraceRef(Ref):
-            dest: None | TraceableSubtypesEnum = field(
-                default=None,
+            dest: TraceableSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingConditionRef(Ref):
-        dest: None | TimingConditionSubtypesEnum = field(
-            default=None,
+        dest: TimingConditionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ScopeRef(Ref):
-        dest: None | TimingDescriptionEventChainSubtypesEnum = field(
-            default=None,
+        dest: TimingDescriptionEventChainSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

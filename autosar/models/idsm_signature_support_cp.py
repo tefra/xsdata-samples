@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IdsmSignatureSupportCp:
     """
     This meta-class defines, for the Classic Platform, the cryptographic
@@ -75,24 +75,22 @@ class IdsmSignatureSupportCp:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AuthenticationRef(Ref):
-        dest: None | CryptoServicePrimitiveSubtypesEnum = field(
-            default=None,
+        dest: CryptoServicePrimitiveSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CryptoServiceKeyRef(Ref):
-        dest: None | CryptoServiceKeySubtypesEnum = field(
-            default=None,
+        dest: CryptoServiceKeySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

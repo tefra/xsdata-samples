@@ -9,27 +9,25 @@ from travelport.models.air_exchange_eligibility_req import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeEligibilityPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | AirExchangeEligibilityPortTypeServiceInput.Body = field(
-        default=None,
+    body: AirExchangeEligibilityPortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        air_exchange_eligibility_req: None | AirExchangeEligibilityReq = field(
-            default=None,
+        air_exchange_eligibility_req: AirExchangeEligibilityReq = field(
             metadata={
                 "name": "AirExchangeEligibilityReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
-            },
+            }
         )

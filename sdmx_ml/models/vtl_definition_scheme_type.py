@@ -7,7 +7,7 @@ from sdmx_ml.models.item_scheme_type import ItemSchemeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class VtlDefinitionSchemeType(ItemSchemeType):
     """
     VtlDefinitionSchemeType is an abstract extension of the ItemSchemeType
@@ -18,11 +18,10 @@ class VtlDefinitionSchemeType(ItemSchemeType):
         reference definition schemes using the same VTL version.
     """
 
-    vtl_version: None | str = field(
-        default=None,
+    vtl_version: str = field(
         metadata={
             "name": "vtlVersion",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from .item_label_pos_enum_simple import ItemLabelPosEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemLabelPosEnum:
     """
     This enumerator specifies, how the label of a labeled list shall be
@@ -29,11 +29,10 @@ class ItemLabelPosEnum:
     class Meta:
         name = "ITEM-LABEL-POS-ENUM"
 
-    value: None | ItemLabelPosEnumSimple = field(
-        default=None,
+    value: ItemLabelPosEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

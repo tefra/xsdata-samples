@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IncludedInBase1:
     """
     Shows the taxes and fees included in the base fare. (ACH only).

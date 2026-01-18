@@ -9,7 +9,7 @@ from .timing_pattern import TimingPattern
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimingPatternsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timingPatternsInFrame_RelStructure"

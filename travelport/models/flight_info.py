@@ -10,7 +10,7 @@ from travelport.models.type_result_message_1 import TypeResultMessage1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightInfo:
     """
     Parameters
@@ -56,31 +56,28 @@ class FlightInfo:
             "max_occurs": 999,
         },
     )
-    criteria_key: None | str = field(
-        default=None,
+    criteria_key: str = field(
         metadata={
             "name": "CriteriaKey",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
-    flight_number: None | str = field(
-        default=None,
+    flight_number: str = field(
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        },
+        }
     )
     origin: None | str = field(
         default=None,
@@ -100,13 +97,12 @@ class FlightInfo:
             "white_space": "collapse",
         },
     )
-    departure_date: None | XmlDate = field(
-        default=None,
+    departure_date: XmlDate = field(
         metadata={
             "name": "DepartureDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     class_of_service: None | str = field(
         default=None,

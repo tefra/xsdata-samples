@@ -25,7 +25,7 @@ from .type_of_mobility_service_ref import TypeOfMobilityServiceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MobilityServiceVersionStructure(EquipmentVersionStructure):
     class Meta:
         name = "MobilityService_VersionStructure"

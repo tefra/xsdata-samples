@@ -23,7 +23,7 @@ from .variable_data_prototype_in_composition_instance_ref import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataPrototypeGroup:
     """
     This meta-class represents the ability to define a collection of
@@ -96,14 +96,13 @@ class DataPrototypeGroup:
     class Meta:
         name = "DATA-PROTOTYPE-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DataPrototypeGroup.ShortNameFragments = field(
         default=None,
@@ -212,7 +211,7 @@ class DataPrototypeGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -223,7 +222,7 @@ class DataPrototypeGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -234,7 +233,7 @@ class DataPrototypeGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataPrototypeGroupIrefs:
         data_prototype_group_iref: list[
             InnerDataPrototypeGroupInCompositionInstanceRef
@@ -247,7 +246,7 @@ class DataPrototypeGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplicitDataAccessIrefs:
         implicit_data_access_iref: list[
             VariableDataPrototypeInCompositionInstanceRef

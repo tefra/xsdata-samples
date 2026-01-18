@@ -19,7 +19,7 @@ from datexii.models.eu.datexii.v2.transit_service_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransitInformation(NonRoadEventInformation):
     """
     The availability of transit services and information relating to their
@@ -67,23 +67,21 @@ class TransitInformation(NonRoadEventInformation):
             "max_length": 1024,
         },
     )
-    transit_service_information: None | TransitServiceInformationEnum = field(
-        default=None,
+    transit_service_information: TransitServiceInformationEnum = field(
         metadata={
             "name": "transitServiceInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    transit_service_type: None | TransitServiceTypeEnum = field(
-        default=None,
+    transit_service_type: TransitServiceTypeEnum = field(
         metadata={
             "name": "transitServiceType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     scheduled_departure_time: None | XmlDateTime = field(
         default=None,

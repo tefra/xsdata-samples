@@ -15,7 +15,7 @@ from travelport.models.type_distance import TypeDistance
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseAvailabilitySearchRsp(BaseSearchRsp1):
     """
     Availability Search response.

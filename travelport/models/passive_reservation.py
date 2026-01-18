@@ -13,7 +13,7 @@ from travelport.models.third_party_information_1 import ThirdPartyInformation1
 __NAMESPACE__ = "http://www.travelport.com/schema/passive_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassiveReservation(BaseReservation1):
     """
     The parent container for all passive booking data.
@@ -85,11 +85,10 @@ class PassiveReservation(BaseReservation1):
             "max_occurs": 999,
         },
     )
-    provider_reservation_info_ref: None | str = field(
-        default=None,
+    provider_reservation_info_ref: str = field(
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -16,7 +16,7 @@ from ipxact.models.view_links import ViewLinks
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExternalTypeDefinitions:
     """
     :ivar name: Unique name
@@ -37,12 +37,11 @@ class ExternalTypeDefinitions:
         name = "externalTypeDefinitions"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -64,13 +63,12 @@ class ExternalTypeDefinitions:
             "type": "Element",
         },
     )
-    type_definitions_ref: None | ConfigurableLibraryRefType = field(
-        default=None,
+    type_definitions_ref: ConfigurableLibraryRefType = field(
         metadata={
             "name": "typeDefinitionsRef",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     view_links: None | ViewLinks = field(
         default=None,

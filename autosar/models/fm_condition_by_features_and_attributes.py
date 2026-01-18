@@ -10,7 +10,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FmConditionByFeaturesAndAttributes:
     """
     A boolean expression that has the syntax of the AUTOSAR formula
@@ -73,24 +73,22 @@ class FmConditionByFeaturesAndAttributes:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AttributeRef(Ref):
-        dest: None | FmAttributeDefSubtypesEnum = field(
-            default=None,
+        dest: FmAttributeDefSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FeatureRef(Ref):
-        dest: None | FmFeatureSubtypesEnum = field(
-            default=None,
+        dest: FmFeatureSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

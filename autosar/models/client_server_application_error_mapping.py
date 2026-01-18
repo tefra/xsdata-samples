@@ -8,7 +8,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientServerApplicationErrorMapping:
     """
     This meta-class represents the ability to map ApplicationErrors onto
@@ -71,24 +71,22 @@ class ClientServerApplicationErrorMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FirstApplicationErrorRef(Ref):
-        dest: None | ApplicationErrorSubtypesEnum = field(
-            default=None,
+        dest: ApplicationErrorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecondApplicationErrorRef(Ref):
-        dest: None | ApplicationErrorSubtypesEnum = field(
-            default=None,
+        dest: ApplicationErrorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -7,7 +7,7 @@ from sdmx_ml.models.registration_request_type import RegistrationRequestType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SubmitRegistrationsRequestType:
     """
     SubmitRegistrationsRequestType defines the payload of a request message

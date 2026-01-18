@@ -8,7 +8,7 @@ from .access_facility_enumeration import AccessFacilityEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessFacilityList:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

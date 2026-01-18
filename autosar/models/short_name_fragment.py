@@ -8,7 +8,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShortNameFragment:
     """
     This class describes how the Referrable.shortName is composed of

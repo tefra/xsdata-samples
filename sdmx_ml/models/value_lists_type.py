@@ -7,7 +7,7 @@ from sdmx_ml.models.value_list_type import ValueListType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ValueListsType:
     """
     ValueListsType describes the structure of the value lists container.

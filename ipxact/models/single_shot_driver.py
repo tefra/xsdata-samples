@@ -11,7 +11,7 @@ from ipxact.models.unsigned_bit_vector_expression import (
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SingleShotDriver:
     """
     Describes a driven one-shot port.
@@ -27,32 +27,29 @@ class SingleShotDriver:
         name = "singleShotDriver"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    single_shot_offset: None | SingleShotDriver.SingleShotOffset = field(
-        default=None,
+    single_shot_offset: SingleShotDriver.SingleShotOffset = field(
         metadata={
             "name": "singleShotOffset",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    single_shot_value: None | UnsignedBitVectorExpression = field(
-        default=None,
+    single_shot_value: UnsignedBitVectorExpression = field(
         metadata={
             "name": "singleShotValue",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    single_shot_duration: None | SingleShotDriver.SingleShotDuration = field(
-        default=None,
+    single_shot_duration: SingleShotDriver.SingleShotDuration = field(
         metadata={
             "name": "singleShotDuration",
             "type": "Element",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SingleShotOffset(RealExpression):
         units: DelayValueUnitType = field(
             default=DelayValueUnitType.NS,
@@ -61,7 +58,7 @@ class SingleShotDriver:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SingleShotDuration(RealExpression):
         units: DelayValueUnitType = field(
             default=DelayValueUnitType.NS,

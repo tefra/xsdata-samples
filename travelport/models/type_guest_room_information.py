@@ -10,7 +10,7 @@ from travelport.models.type_guest_child_information import (
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeGuestRoomInformation:
     """
     Information about guest to book.
@@ -30,14 +30,13 @@ class TypeGuestRoomInformation:
     class Meta:
         name = "typeGuestRoomInformation"
 
-    adults: None | int = field(
-        default=None,
+    adults: int = field(
         metadata={
             "name": "Adults",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        },
+        }
     )
     booking_traveler_ref: list[BookingTravelerRef1] = field(
         default_factory=list,
@@ -58,7 +57,7 @@ class TypeGuestRoomInformation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Child(TypeGuestChildInformation):
         """
         Parameters

@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.service_facility_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceFacility(ParkingEquipmentOrServiceFacility):
     """
     One type of service facility that is available on the parking site or
@@ -34,14 +34,13 @@ class ServiceFacility(ParkingEquipmentOrServiceFacility):
     :ivar service_facility_extension:
     """
 
-    service_facility_type: None | ServiceFacilityTypeEnum = field(
-        default=None,
+    service_facility_type: ServiceFacilityTypeEnum = field(
         metadata={
             "name": "serviceFacilityType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     number_of_subitems: None | int = field(
         default=None,

@@ -23,7 +23,7 @@ from .vehicle_meeting_point_ref import VehicleMeetingPointRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelSpecificationSummaryEndpointStructure:
     topographic_place_view: None | TopographicPlaceView = field(
         default=None,

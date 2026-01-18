@@ -17,7 +17,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExpansiveStructureType(StructureType):
     number: None | NumberType = field(
         default=None,

@@ -14,7 +14,7 @@ from travelport.models.ticket_number_1 import TicketNumber1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeQuoteRsp(BaseRsp1):
     """
     Parameters

@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PlusUpType:
     """
     Attributes:
@@ -20,32 +20,29 @@ class PlusUpType:
         country_of_payment: Country of payment
     """
 
-    amount: None | Decimal = field(
-        default=None,
+    amount: Decimal = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
             "required": True,
             "fraction_digits": 3,
-        },
+        }
     )
-    origin_city: None | str = field(
-        default=None,
+    origin_city: str = field(
         metadata={
             "name": "OriginCity",
             "type": "Attribute",
             "required": True,
             "pattern": r"[a-zA-Z]{3}",
-        },
+        }
     )
-    destination_city: None | str = field(
-        default=None,
+    destination_city: str = field(
         metadata={
             "name": "DestinationCity",
             "type": "Attribute",
             "required": True,
             "pattern": r"[a-zA-Z]{3}",
-        },
+        }
     )
     fare_origin_city: None | str = field(
         default=None,

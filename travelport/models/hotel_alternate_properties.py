@@ -7,7 +7,7 @@ from travelport.models.hotel_property import HotelProperty
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelAlternateProperties:
     """
     Alternate Properties returned by some Vendors if the requested property

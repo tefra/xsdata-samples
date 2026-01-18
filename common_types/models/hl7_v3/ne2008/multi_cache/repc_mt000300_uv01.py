@@ -76,7 +76,7 @@ from .repc_mt000700_uv01 import RepcMt000700Uv01MaintainedEntity
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Author:
     class Meta:
         name = "REPC_MT000300UV01.Author"
@@ -229,7 +229,7 @@ class RepcMt000300Uv01Author:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Component:
     class Meta:
         name = "REPC_MT000300UV01.Component"
@@ -259,12 +259,11 @@ class RepcMt000300Uv01Component:
         },
     )
     concern: None | RepcMt000300Uv01Concern = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -273,13 +272,12 @@ class RepcMt000300Uv01Component:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipHasComponent = field(
-        default=None,
+    type_code: ActRelationshipHasComponent = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: None | ContextControl = field(
         default=None,
@@ -299,7 +297,7 @@ class RepcMt000300Uv01Component:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01DataEnterer:
     class Meta:
         name = "REPC_MT000300UV01.DataEnterer"
@@ -360,13 +358,12 @@ class RepcMt000300Uv01DataEnterer:
         },
     )
     assigned_person: None | CoctMt090102Uv02AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -392,7 +389,7 @@ class RepcMt000300Uv01DataEnterer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Informant:
     class Meta:
         name = "REPC_MT000300UV01.Informant"
@@ -520,7 +517,7 @@ class RepcMt000300Uv01Informant:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Organization:
     class Meta:
         name = "REPC_MT000300UV01.Organization"
@@ -584,13 +581,12 @@ class RepcMt000300Uv01Organization:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassOrganization = field(
-        default=None,
+    class_code: EntityClassOrganization = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -603,7 +599,7 @@ class RepcMt000300Uv01Organization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Performer:
     class Meta:
         name = "REPC_MT000300UV01.Performer"
@@ -714,13 +710,12 @@ class RepcMt000300Uv01Performer:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationPhysicalPerformer = field(
-        default=None,
+    type_code: ParticipationPhysicalPerformer = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
@@ -731,7 +726,7 @@ class RepcMt000300Uv01Performer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Place:
     class Meta:
         name = "REPC_MT000300UV01.Place"
@@ -781,13 +776,12 @@ class RepcMt000300Uv01Place:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassPlace = field(
-        default=None,
+    class_code: EntityClassPlace = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -800,7 +794,7 @@ class RepcMt000300Uv01Place:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Reason:
     class Meta:
         name = "REPC_MT000300UV01.Reason"
@@ -904,13 +898,12 @@ class RepcMt000300Uv01Reason:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipReason = field(
-        default=None,
+    type_code: ActRelationshipReason = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
@@ -929,7 +922,7 @@ class RepcMt000300Uv01Reason:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01RecordTarget:
     class Meta:
         name = "REPC_MT000300UV01.RecordTarget"
@@ -1000,7 +993,7 @@ class RepcMt000300Uv01RecordTarget:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Reference:
     class Meta:
         name = "REPC_MT000300UV01.Reference"
@@ -1151,7 +1144,7 @@ class RepcMt000300Uv01Reference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01ResponsibleParty:
     class Meta:
         name = "REPC_MT000300UV01.ResponsibleParty"
@@ -1181,13 +1174,12 @@ class RepcMt000300Uv01ResponsibleParty:
         },
     )
     assigned_person: None | CoctMt090102Uv02AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1207,7 +1199,7 @@ class RepcMt000300Uv01ResponsibleParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01ResponsibleParty2:
     class Meta:
         name = "REPC_MT000300UV01.ResponsibleParty2"
@@ -1237,13 +1229,12 @@ class RepcMt000300Uv01ResponsibleParty2:
         },
     )
     assigned_person: None | CoctMt090102Uv02AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1270,7 +1261,7 @@ class RepcMt000300Uv01ResponsibleParty2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Subject2:
     class Meta:
         name = "REPC_MT000300UV01.Subject2"
@@ -1391,7 +1382,7 @@ class RepcMt000300Uv01Subject2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Subject4:
     class Meta:
         name = "REPC_MT000300UV01.Subject4"
@@ -1549,7 +1540,7 @@ class RepcMt000300Uv01Subject4:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Verifier:
     class Meta:
         name = "REPC_MT000300UV01.Verifier"
@@ -1618,13 +1609,12 @@ class RepcMt000300Uv01Verifier:
         },
     )
     assigned_person: None | CoctMt090102Uv02AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1633,13 +1623,12 @@ class RepcMt000300Uv01Verifier:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationVerifier = field(
-        default=None,
+    type_code: ParticipationVerifier = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
@@ -1650,7 +1639,7 @@ class RepcMt000300Uv01Verifier:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Annotation:
     class Meta:
         name = "REPC_MT000300UV01.Annotation"
@@ -1679,22 +1668,20 @@ class RepcMt000300Uv01Annotation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: None | St = field(
-        default=None,
+    text: St = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     confidentiality_code: None | Ce = field(
         default=None,
@@ -1737,7 +1724,7 @@ class RepcMt000300Uv01Annotation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01ControlActEvent:
     class Meta:
         name = "REPC_MT000300UV01.ControlActEvent"
@@ -1773,31 +1760,28 @@ class RepcMt000300Uv01ControlActEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Cv = field(
-        default=None,
+    code: Cv = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    effective_time: None | TsExplicit = field(
-        default=None,
+    effective_time: TsExplicit = field(
         metadata={
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     reason_code: None | Cv = field(
         default=None,
@@ -1850,7 +1834,7 @@ class RepcMt000300Uv01ControlActEvent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01HealthCareFacility:
     class Meta:
         name = "REPC_MT000300UV01.HealthCareFacility"
@@ -1917,17 +1901,16 @@ class RepcMt000300Uv01HealthCareFacility:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassServiceDeliveryLocation = field(
-        default=None,
+    class_code: RoleClassServiceDeliveryLocation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Location:
     class Meta:
         name = "REPC_MT000300UV01.Location"
@@ -1957,13 +1940,12 @@ class RepcMt000300Uv01Location:
         },
     )
     health_care_facility: None | RepcMt000300Uv01HealthCareFacility = field(
-        default=None,
         metadata={
             "name": "healthCareFacility",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1972,13 +1954,12 @@ class RepcMt000300Uv01Location:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetLocation = field(
-        default=None,
+    type_code: ParticipationTargetLocation = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: None | ContextControl = field(
         default=None,
@@ -1989,7 +1970,7 @@ class RepcMt000300Uv01Location:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Subject3:
     class Meta:
         name = "REPC_MT000300UV01.Subject3"
@@ -2019,12 +2000,11 @@ class RepcMt000300Uv01Subject3:
         },
     )
     annotation: None | RepcMt000300Uv01Annotation = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2081,7 +2061,7 @@ class RepcMt000300Uv01Subject3:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Subject5:
     class Meta:
         name = "REPC_MT000300UV01.Subject5"
@@ -2111,13 +2091,12 @@ class RepcMt000300Uv01Subject5:
         },
     )
     control_act_event: None | RepcMt000300Uv01ControlActEvent = field(
-        default=None,
         metadata={
             "name": "controlActEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2174,7 +2153,7 @@ class RepcMt000300Uv01Subject5:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Concern:
     class Meta:
         name = "REPC_MT000300UV01.Concern"
@@ -2210,14 +2189,13 @@ class RepcMt000300Uv01Concern:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     effective_time: None | IvlTsExplicit = field(
         default=None,
@@ -2394,25 +2372,23 @@ class RepcMt000300Uv01Concern:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | ActMood = field(
-        default=None,
+    mood_code: ActMood = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01Links:
     class Meta:
         name = "REPC_MT000300UV01.Links"
@@ -2442,12 +2418,11 @@ class RepcMt000300Uv01Links:
         },
     )
     concern: None | RepcMt000300Uv01Concern = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2502,7 +2477,7 @@ class RepcMt000300Uv01Links:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01ReplacementOf:
     class Meta:
         name = "REPC_MT000300UV01.ReplacementOf"
@@ -2532,12 +2507,11 @@ class RepcMt000300Uv01ReplacementOf:
         },
     )
     concern: None | RepcMt000300Uv01Concern = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2592,7 +2566,7 @@ class RepcMt000300Uv01ReplacementOf:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000300Uv01SequelTo:
     class Meta:
         name = "REPC_MT000300UV01.SequelTo"
@@ -2622,12 +2596,11 @@ class RepcMt000300Uv01SequelTo:
         },
     )
     concern: None | RepcMt000300Uv01Concern = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2636,13 +2609,12 @@ class RepcMt000300Uv01SequelTo:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipSequel = field(
-        default=None,
+    type_code: ActRelationshipSequel = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,

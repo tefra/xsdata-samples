@@ -52,7 +52,7 @@ from .coct_mt240003_uv02 import CoctMt240003Uv02ServiceDeliveryLocation
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04ContentPackagedProduct:
     class Meta:
         name = "COCT_MT490000UV04.ContentPackagedProduct"
@@ -131,7 +131,7 @@ class CoctMt490000Uv04ContentPackagedProduct:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04Destination:
     class Meta:
         name = "COCT_MT490000UV04.Destination"
@@ -163,13 +163,12 @@ class CoctMt490000Uv04Destination:
     service_delivery_location: (
         None | CoctMt240003Uv02ServiceDeliveryLocation
     ) = field(
-        default=None,
         metadata={
             "name": "serviceDeliveryLocation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -189,7 +188,7 @@ class CoctMt490000Uv04Destination:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04Diagnosis:
     class Meta:
         name = "COCT_MT490000UV04.Diagnosis"
@@ -218,13 +217,12 @@ class CoctMt490000Uv04Diagnosis:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Ce = field(
-        default=None,
+    code: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     text: None | St = field(
         default=None,
@@ -233,13 +231,12 @@ class CoctMt490000Uv04Diagnosis:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | Ce = field(
-        default=None,
+    value: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -248,13 +245,12 @@ class CoctMt490000Uv04Diagnosis:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassObservation = field(
-        default=None,
+    class_code: ActClassObservation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -267,7 +263,7 @@ class CoctMt490000Uv04Diagnosis:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04Location:
     class Meta:
         name = "COCT_MT490000UV04.Location"
@@ -296,16 +292,13 @@ class CoctMt490000Uv04Location:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    service_delivery_location: (
-        None | CoctMt240003Uv02ServiceDeliveryLocation
-    ) = field(
-        default=None,
+    service_delivery_location: CoctMt240003Uv02ServiceDeliveryLocation = field(
         metadata={
             "name": "serviceDeliveryLocation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -314,17 +307,16 @@ class CoctMt490000Uv04Location:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetLocation = field(
-        default=None,
+    type_code: ParticipationTargetLocation = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04ManufacturedProductOrganization:
     class Meta:
         name = "COCT_MT490000UV04.ManufacturedProductOrganization"
@@ -353,13 +345,12 @@ class CoctMt490000Uv04ManufacturedProductOrganization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: None | OnExplicit = field(
-        default=None,
+    name: OnExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     telecom: None | TelExplicit = field(
         default=None,
@@ -375,13 +366,12 @@ class CoctMt490000Uv04ManufacturedProductOrganization:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassOrganization = field(
-        default=None,
+    class_code: EntityClassOrganization = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -394,7 +384,7 @@ class CoctMt490000Uv04ManufacturedProductOrganization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04Origin:
     class Meta:
         name = "COCT_MT490000UV04.Origin"
@@ -426,13 +416,12 @@ class CoctMt490000Uv04Origin:
     service_delivery_location: (
         None | CoctMt240003Uv02ServiceDeliveryLocation
     ) = field(
-        default=None,
         metadata={
             "name": "serviceDeliveryLocation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -452,7 +441,7 @@ class CoctMt490000Uv04Origin:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04ProviderPerson:
     class Meta:
         name = "COCT_MT490000UV04.ProviderPerson"
@@ -481,13 +470,12 @@ class CoctMt490000Uv04ProviderPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: None | PnExplicit = field(
-        default=None,
+    name: PnExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     telecom: None | TelExplicit = field(
         default=None,
@@ -530,7 +518,7 @@ class CoctMt490000Uv04ProviderPerson:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04WarrantorOrganization:
     class Meta:
         name = "COCT_MT490000UV04.WarrantorOrganization"
@@ -559,13 +547,12 @@ class CoctMt490000Uv04WarrantorOrganization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: None | OnExplicit = field(
-        default=None,
+    name: OnExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     telecom: None | TelExplicit = field(
         default=None,
@@ -581,13 +568,12 @@ class CoctMt490000Uv04WarrantorOrganization:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassOrganization = field(
-        default=None,
+    class_code: EntityClassOrganization = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -600,7 +586,7 @@ class CoctMt490000Uv04WarrantorOrganization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04HealthCareProvider:
     class Meta:
         name = "COCT_MT490000UV04.HealthCareProvider"
@@ -687,7 +673,7 @@ class CoctMt490000Uv04HealthCareProvider:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04PertinentInformation:
     class Meta:
         name = "COCT_MT490000UV04.PertinentInformation"
@@ -725,12 +711,11 @@ class CoctMt490000Uv04PertinentInformation:
         },
     )
     diagnosis: None | CoctMt490000Uv04Diagnosis = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -740,25 +725,23 @@ class CoctMt490000Uv04PertinentInformation:
         },
     )
     type_code: (
-        None
-        | ActRelationshipCostTracking
+        ActRelationshipCostTracking
         | ActRelationshipPosting
         | str
         | ActRelationshipHasSupport
         | ActRelationshipTemporallyPertains
         | ActRelationshipPertainsValue
     ) = field(
-        default=None,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04Warrantor:
     class Meta:
         name = "COCT_MT490000UV04.Warrantor"
@@ -787,14 +770,13 @@ class CoctMt490000Uv04Warrantor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: None | IvlTsExplicit = field(
-        default=None,
+    effective_time: IvlTsExplicit = field(
         metadata={
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     warranting_warrantor_organization: (
         None | CoctMt490000Uv04WarrantorOrganization
@@ -842,7 +824,7 @@ class CoctMt490000Uv04Warrantor:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04Consultant:
     class Meta:
         name = "COCT_MT490000UV04.Consultant"
@@ -872,13 +854,12 @@ class CoctMt490000Uv04Consultant:
         },
     )
     health_care_provider: None | CoctMt490000Uv04HealthCareProvider = field(
-        default=None,
         metadata={
             "name": "healthCareProvider",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -898,7 +879,7 @@ class CoctMt490000Uv04Consultant:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04ManufacturedMaterial:
     class Meta:
         name = "COCT_MT490000UV04.ManufacturedMaterial"
@@ -977,18 +958,17 @@ class CoctMt490000Uv04ManufacturedMaterial:
             "required": True,
         },
     )
-    determiner_code: None | str = field(
-        default=None,
+    determiner_code: str = field(
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04Referrer:
     class Meta:
         name = "COCT_MT490000UV04.Referrer"
@@ -1018,13 +998,12 @@ class CoctMt490000Uv04Referrer:
         },
     )
     health_care_provider: None | CoctMt490000Uv04HealthCareProvider = field(
-        default=None,
         metadata={
             "name": "healthCareProvider",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1044,7 +1023,7 @@ class CoctMt490000Uv04Referrer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04ManufacturedProduct:
     class Meta:
         name = "COCT_MT490000UV04.ManufacturedProduct"
@@ -1088,13 +1067,12 @@ class CoctMt490000Uv04ManufacturedProduct:
         },
     )
     manufactured_material: None | CoctMt490000Uv04ManufacturedMaterial = field(
-        default=None,
         metadata={
             "name": "manufacturedMaterial",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     manufacturer_manufactured_product_organization: (
         None | CoctMt490000Uv04ManufacturedProductOrganization
@@ -1114,17 +1092,16 @@ class CoctMt490000Uv04ManufacturedProduct:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassManufacturedProduct = field(
-        default=None,
+    class_code: RoleClassManufacturedProduct = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04Product:
     class Meta:
         name = "COCT_MT490000UV04.Product"
@@ -1153,14 +1130,13 @@ class CoctMt490000Uv04Product:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_product: None | CoctMt490000Uv04ManufacturedProduct = field(
-        default=None,
+    manufactured_product: CoctMt490000Uv04ManufacturedProduct = field(
         metadata={
             "name": "manufacturedProduct",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1180,7 +1156,7 @@ class CoctMt490000Uv04Product:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt490000Uv04BillableClinicalProduct:
     class Meta:
         name = "COCT_MT490000UV04.BillableClinicalProduct"
@@ -1216,30 +1192,27 @@ class CoctMt490000Uv04BillableClinicalProduct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Cs = field(
-        default=None,
+    code: Cs = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    effective_time: None | IvlTsExplicit = field(
-        default=None,
+    effective_time: IvlTsExplicit = field(
         metadata={
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    product: None | CoctMt490000Uv04Product = field(
-        default=None,
+    product: CoctMt490000Uv04Product = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     referrer: None | CoctMt490000Uv04Referrer = field(
         default=None,
@@ -1273,13 +1246,12 @@ class CoctMt490000Uv04BillableClinicalProduct:
             "nillable": True,
         },
     )
-    location: None | CoctMt490000Uv04Location = field(
-        default=None,
+    location: CoctMt490000Uv04Location = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     pertinent_information: list[CoctMt490000Uv04PertinentInformation] = field(
         default_factory=list,
@@ -1297,19 +1269,17 @@ class CoctMt490000Uv04BillableClinicalProduct:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassSupply = field(
-        default=None,
+    class_code: ActClassSupply = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | XActMoodIntentEvent = field(
-        default=None,
+    mood_code: XActMoodIntentEvent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

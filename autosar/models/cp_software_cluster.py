@@ -21,7 +21,7 @@ from .sw_component_prototype_assignment import SwComponentPrototypeAssignment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CpSoftwareCluster:
     """
     This meta class provides the ability to define a CP Software Cluster.
@@ -101,14 +101,13 @@ class CpSoftwareCluster:
     class Meta:
         name = "CP-SOFTWARE-CLUSTER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | CpSoftwareCluster.ShortNameFragments = field(
         default=None,
@@ -215,7 +214,7 @@ class CpSoftwareCluster:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -226,7 +225,7 @@ class CpSoftwareCluster:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -237,7 +236,7 @@ class CpSoftwareCluster:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwComponentAssignments:
         sw_component_prototype_assignment: list[
             SwComponentPrototypeAssignment
@@ -250,7 +249,7 @@ class CpSoftwareCluster:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwCompositions:
         composition_sw_component_type_ref_conditional: list[
             CompositionSwComponentTypeRefConditional

@@ -7,7 +7,7 @@ from travelport.models.transaction_type_3 import TransactionType3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Apiprovider3:
     """
     Parameters
@@ -43,15 +43,14 @@ class Apiprovider3:
             },
         )
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
     supplier_code: None | str = field(
         default=None,
@@ -71,7 +70,7 @@ class Apiprovider3:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AvailablePseudoCityCode:
         """
         Parameters

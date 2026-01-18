@@ -7,7 +7,7 @@ from .binding_time_enum_simple import BindingTimeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BindingTimeEnum:
     """
     This enumerator specifies the applicable binding times for the pre
@@ -29,11 +29,10 @@ class BindingTimeEnum:
     class Meta:
         name = "BINDING-TIME-ENUM"
 
-    value: None | BindingTimeEnumSimple = field(
-        default=None,
+    value: BindingTimeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

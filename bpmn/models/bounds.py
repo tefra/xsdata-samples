@@ -5,36 +5,32 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.omg.org/spec/DD/20100524/DC"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Bounds:
     class Meta:
         namespace = "http://www.omg.org/spec/DD/20100524/DC"
 
-    x: None | float = field(
-        default=None,
+    x: float = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    y: None | float = field(
-        default=None,
+    y: float = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    width: None | float = field(
-        default=None,
+    width: float = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    height: None | float = field(
-        default=None,
+    height: float = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

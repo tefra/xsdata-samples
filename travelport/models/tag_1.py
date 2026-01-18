@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Tag1:
     """
     A tag that belongs to the agency.
@@ -30,15 +30,14 @@ class Tag1:
         name = "Tag"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     label: None | str = field(
         default=None,
@@ -65,19 +64,17 @@ class Tag1:
             "type": "Attribute",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    agency_id: None | int = field(
-        default=None,
+    agency_id: int = field(
         metadata={
             "name": "AgencyID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

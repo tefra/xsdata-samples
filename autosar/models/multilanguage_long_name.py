@@ -7,7 +7,7 @@ from .l_long_name import LLongName
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MultilanguageLongName:
     """
     This meta-class represents the ability to specify a long name which

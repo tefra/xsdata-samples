@@ -9,7 +9,7 @@ from .transfer_version_structure import TransferVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SiteConnectionVersionStructure(TransferVersionStructure):
     class Meta:
         name = "SiteConnection_VersionStructure"

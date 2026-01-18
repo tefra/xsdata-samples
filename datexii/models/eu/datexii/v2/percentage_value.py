@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PercentageValue(DataValue):
     """
     A measured or calculated value expressed as a percentage.
@@ -17,13 +17,12 @@ class PercentageValue(DataValue):
     :ivar percentage_value_extension:
     """
 
-    percentage: None | float = field(
-        default=None,
+    percentage: float = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     percentage_value_extension: None | ExtensionType = field(
         default=None,

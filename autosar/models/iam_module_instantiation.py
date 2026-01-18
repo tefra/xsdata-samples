@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IamModuleInstantiation:
     """
     This meta-class represents the ability to define a definition of an IAM
@@ -89,14 +89,13 @@ class IamModuleInstantiation:
     class Meta:
         name = "IAM-MODULE-INSTANTIATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | IamModuleInstantiation.ShortNameFragments = (
         field(
@@ -203,7 +202,7 @@ class IamModuleInstantiation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -214,7 +213,7 @@ class IamModuleInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -225,7 +224,7 @@ class IamModuleInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GrantRefs:
         grant_ref: list[IamModuleInstantiation.GrantRefs.GrantRef] = field(
             default_factory=list,
@@ -236,13 +235,12 @@ class IamModuleInstantiation:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class GrantRef(Ref):
-            dest: None | GrantSubtypesEnum = field(
-                default=None,
+            dest: GrantSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

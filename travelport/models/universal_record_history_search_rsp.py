@@ -10,7 +10,7 @@ from travelport.models.universal_record_history_search_result import (
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordHistorySearchRsp(BaseRsp1):
     """
     Parameters

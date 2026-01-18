@@ -7,7 +7,7 @@ from .pdu_collection_trigger_enum_simple import PduCollectionTriggerEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PduCollectionTriggerEnum:
     """
     Defines whether a Pdu contributes to the triggering of the data
@@ -29,11 +29,10 @@ class PduCollectionTriggerEnum:
     class Meta:
         name = "PDU-COLLECTION-TRIGGER-ENUM"
 
-    value: None | PduCollectionTriggerEnumSimple = field(
-        default=None,
+    value: PduCollectionTriggerEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

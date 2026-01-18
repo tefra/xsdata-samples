@@ -10,7 +10,7 @@ from .passenger_stop_assignment_derived_view_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassengerStopAssignmentView(PassengerStopAssignmentDerivedViewStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

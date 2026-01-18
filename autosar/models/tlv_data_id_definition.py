@@ -20,7 +20,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TlvDataIdDefinition:
     """
     This meta-class represents the ability to define the tlvDataId.
@@ -112,46 +112,42 @@ class TlvDataIdDefinition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TlvArgumentRef(Ref):
-        dest: None | ArgumentDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ArgumentDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TlvImplementationDataTypeElementRef(Ref):
-        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
-            default=None,
+        dest: ImplementationDataTypeElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TlvRecordElementRef(Ref):
-        dest: None | ApplicationRecordElementSubtypesEnum = field(
-            default=None,
+        dest: ApplicationRecordElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TlvSubElementRef(Ref):
-        dest: None | CppImplementationDataTypeElementSubtypesEnum = field(
-            default=None,
+        dest: CppImplementationDataTypeElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

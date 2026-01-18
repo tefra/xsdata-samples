@@ -7,6 +7,6 @@ from .vehicle_journey_ref_structure import VehicleJourneyRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeadRunRefStructure(VehicleJourneyRefStructure):
     pass

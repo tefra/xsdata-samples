@@ -14,7 +14,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataPrototypeInClientServerInterfaceInstanceRef:
     """
     :ivar root_data_prototype_in_cs_ref:
@@ -83,37 +83,32 @@ class DataPrototypeInClientServerInterfaceInstanceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RootDataPrototypeInCsRef(Ref):
-        dest: None | AutosarDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: AutosarDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextDataPrototypeInCsRef(Ref):
-        dest: None | ApplicationCompositeElementDataPrototypeSubtypesEnum = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
-        )
-
-    @dataclass
-    class TargetDataPrototypeInCsRef(Ref):
-        dest: None | DataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
+        )
+
+    @dataclass(kw_only=True)
+    class TargetDataPrototypeInCsRef(Ref):
+        dest: DataPrototypeSubtypesEnum = field(
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            }
         )

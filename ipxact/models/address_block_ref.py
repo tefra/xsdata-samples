@@ -7,7 +7,7 @@ from ipxact.models.indices import Indices
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddressBlockRef:
     class Meta:
         name = "addressBlockRef"
@@ -19,11 +19,10 @@ class AddressBlockRef:
             "type": "Element",
         },
     )
-    address_block_ref: None | str = field(
-        default=None,
+    address_block_ref: str = field(
         metadata={
             "name": "addressBlockRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

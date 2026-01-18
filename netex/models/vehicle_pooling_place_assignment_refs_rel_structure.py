@@ -10,21 +10,20 @@ from .vehicle_pooling_place_assignment_ref import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehiclePoolingPlaceAssignmentRefsRelStructure(
     OneToManyRelationshipStructure
 ):
     class Meta:
         name = "VehiclePoolingPlaceAssignmentRefs_RelStructure"
 
-    vehicle_pooling_place_assignment_ref: (
-        None | VehiclePoolingPlaceAssignmentRef
-    ) = field(
-        default=None,
-        metadata={
-            "name": "VehiclePoolingPlaceAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
-        },
+    vehicle_pooling_place_assignment_ref: VehiclePoolingPlaceAssignmentRef = (
+        field(
+            metadata={
+                "name": "VehiclePoolingPlaceAssignmentRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "required": True,
+            }
+        )
     )

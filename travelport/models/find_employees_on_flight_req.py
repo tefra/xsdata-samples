@@ -8,7 +8,7 @@ from travelport.models.flight_criteria import FlightCriteria
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FindEmployeesOnFlightReq(BaseReq1):
     """
     Request to retrieve the number of employees in a flight.
@@ -32,11 +32,10 @@ class FindEmployeesOnFlightReq(BaseReq1):
             "max_occurs": 999,
         },
     )
-    account_id: None | int = field(
-        default=None,
+    account_id: int = field(
         metadata={
             "name": "AccountID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from .termination_behavior_enum_simple import TerminationBehaviorEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TerminationBehaviorEnum:
     """
     This enumeration provides options for controlling of how a Process
@@ -29,11 +29,10 @@ class TerminationBehaviorEnum:
     class Meta:
         name = "TERMINATION-BEHAVIOR-ENUM"
 
-    value: None | TerminationBehaviorEnumSimple = field(
-        default=None,
+    value: TerminationBehaviorEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

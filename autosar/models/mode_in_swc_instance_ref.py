@@ -15,7 +15,7 @@ from .sw_component_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModeInSwcInstanceRef:
     """
     Instance reference to be capable of referencing a ModeDeclaration at a
@@ -98,46 +98,42 @@ class ModeInSwcInstanceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextComponentRef(Ref):
-        dest: None | SwComponentPrototypeSubtypesEnum = field(
-            default=None,
+        dest: SwComponentPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextPortRef(Ref):
-        dest: None | PortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: PortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextModeDeclarationGroupPrototypeRef(Ref):
-        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetModeDeclarationRef(Ref):
-        dest: None | ModeDeclarationSubtypesEnum = field(
-            default=None,
+        dest: ModeDeclarationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

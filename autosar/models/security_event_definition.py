@@ -19,7 +19,7 @@ from .symbol_props import SymbolProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecurityEventDefinition:
     """
     This meta-class defines a security-related event as part of the
@@ -90,14 +90,13 @@ class SecurityEventDefinition:
     class Meta:
         name = "SECURITY-EVENT-DEFINITION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SecurityEventDefinition.ShortNameFragments = (
         field(
@@ -204,7 +203,7 @@ class SecurityEventDefinition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -215,7 +214,7 @@ class SecurityEventDefinition:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

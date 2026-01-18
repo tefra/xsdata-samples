@@ -21,7 +21,7 @@ from datexii.models.eu.datexii.v2.vms_message_pictogram_display_area_index_vms_p
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsMessage:
     """
     A message displayed on a VMS which may comprise one or more
@@ -138,14 +138,13 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    time_last_set: None | XmlDateTime = field(
-        default=None,
+    time_last_set: XmlDateTime = field(
         metadata={
             "name": "timeLastSet",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     requested_by: None | MultilingualString = field(
         default=None,

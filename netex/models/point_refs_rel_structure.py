@@ -24,7 +24,7 @@ from .wire_point_ref import WirePointRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "pointRefs_RelStructure"

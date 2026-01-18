@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricingExtensionType(BaseIdentifiedComponentType):
     code: None | str = field(
         default=None,

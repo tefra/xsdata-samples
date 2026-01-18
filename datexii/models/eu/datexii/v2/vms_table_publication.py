@@ -10,21 +10,20 @@ from datexii.models.eu.datexii.v2.vms_unit_table import VmsUnitTable
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsTablePublication(PayloadPublication):
     """
     A publication containing one or more VMS Unit Tables each comprising a
     set of records which hold details of VMS units.
     """
 
-    header_information: None | HeaderInformation = field(
-        default=None,
+    header_information: HeaderInformation = field(
         metadata={
             "name": "headerInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     vms_unit_table: list[VmsUnitTable] = field(
         default_factory=list,

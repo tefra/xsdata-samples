@@ -29,7 +29,7 @@ from .variable_access import VariableAccess
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QueuedReceiverComSpec:
     """
     Communication attributes specific to queued receiving.
@@ -274,7 +274,7 @@ class QueuedReceiverComSpec:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CompositeNetworkRepresentations:
         composite_network_representation: list[
             CompositeNetworkRepresentation
@@ -287,29 +287,27 @@ class QueuedReceiverComSpec:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataElementRef(Ref):
-        dest: None | AutosarDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: AutosarDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExternalReplacementRef(Ref):
-        dest: None | AutosarDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: AutosarDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransformationComSpecPropss:
         end_to_end_transformation_com_spec_props: list[
             EndToEndTransformationComSpecProps

@@ -9,7 +9,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.core_types
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SmsnumberType:
     """
     <description xmlns=""> <description>The definition for an SMS
@@ -22,12 +22,11 @@ class SmsnumberType:
     class Meta:
         name = "SMSNumberType"
 
-    full_number_text: None | TextType = field(
-        default=None,
+    full_number_text: TextType = field(
         metadata={
             "name": "FullNumberText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )

@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortInterfaceToDataTypeMapping:
     """
     This meta-class represents the ability to associate a PortInterface
@@ -95,14 +95,13 @@ class PortInterfaceToDataTypeMapping:
     class Meta:
         name = "PORT-INTERFACE-TO-DATA-TYPE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | PortInterfaceToDataTypeMapping.ShortNameFragments
@@ -213,7 +212,7 @@ class PortInterfaceToDataTypeMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -224,7 +223,7 @@ class PortInterfaceToDataTypeMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -235,7 +234,7 @@ class PortInterfaceToDataTypeMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataTypeMappingSetRefs:
         data_type_mapping_set_ref: list[
             PortInterfaceToDataTypeMapping.DataTypeMappingSetRefs.DataTypeMappingSetRef
@@ -248,24 +247,22 @@ class PortInterfaceToDataTypeMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DataTypeMappingSetRef(Ref):
-            dest: None | DataTypeMappingSetSubtypesEnum = field(
-                default=None,
+            dest: DataTypeMappingSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortInterfaceRef(Ref):
-        dest: None | PortInterfaceSubtypesEnum = field(
-            default=None,
+        dest: PortInterfaceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

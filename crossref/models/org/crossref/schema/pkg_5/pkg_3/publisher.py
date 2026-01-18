@@ -12,7 +12,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher_place import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Publisher:
     """
     A container for information about the publisher of the item being
@@ -23,12 +23,11 @@ class Publisher:
         name = "publisher"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    publisher_name: None | PublisherName = field(
-        default=None,
+    publisher_name: PublisherName = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     publisher_place: None | PublisherPlace = field(
         default=None,

@@ -8,7 +8,7 @@ from travelport.models.type_key_tagged_element_2 import TypeKeyTaggedElement2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FieldGroupData2(TypeKeyTaggedElement2):
     """
     Parameters
@@ -37,13 +37,12 @@ class FieldGroupData2(TypeKeyTaggedElement2):
             "max_occurs": 999,
         },
     )
-    field_group_id: None | str = field(
-        default=None,
+    field_group_id: str = field(
         metadata={
             "name": "FieldGroupID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     owner_id: None | int = field(
         default=None,

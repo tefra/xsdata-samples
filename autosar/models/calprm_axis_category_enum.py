@@ -7,7 +7,7 @@ from .calprm_axis_category_enum_simple import CalprmAxisCategoryEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CalprmAxisCategoryEnum:
     """
     This enum specifies the possible values of the category property within
@@ -29,11 +29,10 @@ class CalprmAxisCategoryEnum:
     class Meta:
         name = "CALPRM-AXIS-CATEGORY-ENUM"
 
-    value: None | CalprmAxisCategoryEnumSimple = field(
-        default=None,
+    value: CalprmAxisCategoryEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

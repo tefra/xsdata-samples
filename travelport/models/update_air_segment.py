@@ -7,7 +7,7 @@ from travelport.models.air_segment import AirSegment
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UpdateAirSegment:
     """
     Container for Air Segment to be updated.

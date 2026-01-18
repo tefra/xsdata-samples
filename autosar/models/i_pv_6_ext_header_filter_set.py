@@ -18,7 +18,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IPv6ExtHeaderFilterSet:
     """
     Set of IPv6 Extension Header Filters.
@@ -85,14 +85,13 @@ class IPv6ExtHeaderFilterSet:
     class Meta:
         name = "I-PV-6-EXT-HEADER-FILTER-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | IPv6ExtHeaderFilterSet.ShortNameFragments = (
         field(
@@ -193,7 +192,7 @@ class IPv6ExtHeaderFilterSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -204,7 +203,7 @@ class IPv6ExtHeaderFilterSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -215,7 +214,7 @@ class IPv6ExtHeaderFilterSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExtHeaderFilterLists:
         i_pv_6_ext_header_filter_list: list[IPv6ExtHeaderFilterList] = field(
             default_factory=list,

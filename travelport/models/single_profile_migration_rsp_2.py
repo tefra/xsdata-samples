@@ -8,7 +8,7 @@ from travelport.models.type_profile_type_6 import TypeProfileType6
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SingleProfileMigrationRsp2(BaseRsp5):
     """
     Response of migration process of a single Account or Traveler profile

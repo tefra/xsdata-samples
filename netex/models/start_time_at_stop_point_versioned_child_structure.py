@@ -12,7 +12,7 @@ from .scheduled_stop_point_ref import ScheduledStopPointRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StartTimeAtStopPointVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "StartTimeAtStopPoint_VersionedChildStructure"

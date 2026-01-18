@@ -10,23 +10,20 @@ from travelport.models.error_info_1 import ErrorInfo1
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: (
-        None | AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body
-    ) = field(
-        default=None,
+    body: AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
         air_merchandising_offer_availability_rsp: (
             None | AirMerchandisingOfferAvailabilityRsp
@@ -49,21 +46,19 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Fault:
-            faultcode: None | str = field(
-                default=None,
+            faultcode: str = field(
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                },
+                }
             )
-            faultstring: None | str = field(
-                default=None,
+            faultstring: str = field(
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                },
+                }
             )
             faultactor: None | str = field(
                 default=None,
@@ -83,7 +78,7 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Detail:
                 error_info: None | ErrorInfo1 = field(
                     default=None,

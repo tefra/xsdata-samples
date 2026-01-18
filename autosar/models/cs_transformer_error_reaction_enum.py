@@ -9,7 +9,7 @@ from .cs_transformer_error_reaction_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CsTransformerErrorReactionEnum:
     """
     Possible kinds of error reaction in case of a hard transformer error.
@@ -30,11 +30,10 @@ class CsTransformerErrorReactionEnum:
     class Meta:
         name = "CS-TRANSFORMER-ERROR-REACTION-ENUM"
 
-    value: None | CsTransformerErrorReactionEnumSimple = field(
-        default=None,
+    value: CsTransformerErrorReactionEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

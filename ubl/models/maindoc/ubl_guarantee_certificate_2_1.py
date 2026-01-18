@@ -36,7 +36,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GuaranteeCertificateType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -102,23 +102,21 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contract_folder_id: None | ContractFolderId = field(
-        default=None,
+    contract_folder_id: ContractFolderId = field(
         metadata={
             "name": "ContractFolderID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -144,14 +142,13 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    liability_amount: None | LiabilityAmount = field(
-        default=None,
+    liability_amount: LiabilityAmount = field(
         metadata={
             "name": "LiabilityAmount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     constitution_code: None | ConstitutionCode = field(
         default=None,
@@ -212,23 +209,21 @@ class GuaranteeCertificateType:
             "min_occurs": 1,
         },
     )
-    guarantor_party: None | GuarantorParty = field(
-        default=None,
+    guarantor_party: GuarantorParty = field(
         metadata={
             "name": "GuarantorParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    interested_party: None | InterestedParty = field(
-        default=None,
+    interested_party: InterestedParty = field(
         metadata={
             "name": "InterestedParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     beneficiary_party: None | BeneficiaryParty = field(
         default=None,
@@ -240,7 +235,7 @@ class GuaranteeCertificateType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GuaranteeCertificate(GuaranteeCertificateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:GuaranteeCertificate-2"

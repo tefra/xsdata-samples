@@ -26,7 +26,7 @@ from datexii.models.eu.datexii.v2.validity import Validity
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SituationRecord:
     """
     An identifiable versioned instance of a single record/element within a
@@ -86,14 +86,13 @@ class SituationRecord:
             "max_length": 1024,
         },
     )
-    situation_record_creation_time: None | XmlDateTime = field(
-        default=None,
+    situation_record_creation_time: XmlDateTime = field(
         metadata={
             "name": "situationRecordCreationTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     situation_record_observation_time: None | XmlDateTime = field(
         default=None,
@@ -103,14 +102,13 @@ class SituationRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    situation_record_version_time: None | XmlDateTime = field(
-        default=None,
+    situation_record_version_time: XmlDateTime = field(
         metadata={
             "name": "situationRecordVersionTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     situation_record_first_supplier_version_time: None | XmlDateTime = field(
         default=None,
@@ -128,14 +126,13 @@ class SituationRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    probability_of_occurrence: None | ProbabilityOfOccurrenceEnum = field(
-        default=None,
+    probability_of_occurrence: ProbabilityOfOccurrenceEnum = field(
         metadata={
             "name": "probabilityOfOccurrence",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     severity: None | SeverityEnum = field(
         default=None,
@@ -151,13 +148,12 @@ class SituationRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    validity: None | Validity = field(
-        default=None,
+    validity: Validity = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     impact: None | Impact = field(
         default=None,
@@ -197,14 +193,13 @@ class SituationRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    group_of_locations: None | GroupOfLocations = field(
-        default=None,
+    group_of_locations: GroupOfLocations = field(
         metadata={
             "name": "groupOfLocations",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     management: None | Management = field(
         default=None,
@@ -221,17 +216,15 @@ class SituationRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

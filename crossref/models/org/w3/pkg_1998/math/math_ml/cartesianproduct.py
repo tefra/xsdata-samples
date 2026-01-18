@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.w3.org/1998/Math/MathML"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Cartesianproduct:
     class Meta:
         name = "cartesianproduct"

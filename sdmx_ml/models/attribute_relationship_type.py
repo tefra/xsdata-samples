@@ -11,7 +11,7 @@ from sdmx_ml.models.optional_local_dimension_reference_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AttributeRelationshipType:
     """
     AttributeRelationshipType defines the structure for stating the
@@ -57,10 +57,10 @@ class AttributeRelationshipType:
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Dataflow(EmptyType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Observation(EmptyType):
         pass

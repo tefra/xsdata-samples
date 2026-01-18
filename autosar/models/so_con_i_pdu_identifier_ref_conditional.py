@@ -11,7 +11,7 @@ from .so_con_i_pdu_identifier_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoConIPduIdentifierRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -68,13 +68,12 @@ class SoConIPduIdentifierRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SoConIPduIdentifierRef(Ref):
-        dest: None | SoConIPduIdentifierSubtypesEnum = field(
-            default=None,
+        dest: SoConIPduIdentifierSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

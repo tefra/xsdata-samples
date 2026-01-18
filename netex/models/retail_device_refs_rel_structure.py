@@ -9,7 +9,7 @@ from .retail_device_ref import RetailDeviceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RetailDeviceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "retailDeviceRefs_RelStructure"

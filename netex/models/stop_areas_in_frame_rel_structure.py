@@ -9,7 +9,7 @@ from .stop_area import StopArea
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StopAreasInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "stopAreasInFrame_RelStructure"

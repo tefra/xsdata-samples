@@ -8,7 +8,7 @@ from travelport.models.profile_child_summary_2 import ProfileChildSummary2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileChildSearchRsp2(BaseRsp5):
     """
     Response to allow a user to retrieve the immediate children of a given
@@ -37,13 +37,12 @@ class ProfileChildSearchRsp2(BaseRsp5):
             "max_occurs": 999,
         },
     )
-    more_results: None | bool = field(
-        default=None,
+    more_results: bool = field(
         metadata={
             "name": "MoreResults",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     number_of_children: None | int = field(
         default=None,

@@ -7,7 +7,7 @@ from travelport.models.type_profile_level_2 import TypeProfileLevel2
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeProfileRef2:
     """
     ProfileEntityID and ProfileLevel together identity a profile entity.
@@ -16,19 +16,17 @@ class TypeProfileRef2:
     class Meta:
         name = "typeProfileRef"
 
-    profile_entity_id: None | str = field(
-        default=None,
+    profile_entity_id: str = field(
         metadata={
             "name": "ProfileEntityID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_level: None | TypeProfileLevel2 = field(
-        default=None,
+    profile_level: TypeProfileLevel2 = field(
         metadata={
             "name": "ProfileLevel",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -9,7 +9,7 @@ from travelport.models.terminal_command import TerminalCommand
 __NAMESPACE__ = "http://www.travelport.com/schema/terminal_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TerminalReq(BaseReq4):
     """
     Use this request to send a terminal command to a host.
@@ -25,20 +25,18 @@ class TerminalReq(BaseReq4):
     class Meta:
         namespace = "http://www.travelport.com/schema/terminal_v33_0"
 
-    host_token: None | HostToken3 = field(
-        default=None,
+    host_token: HostToken3 = field(
         metadata={
             "name": "HostToken",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "required": True,
-        },
+        }
     )
-    terminal_command: None | TerminalCommand = field(
-        default=None,
+    terminal_command: TerminalCommand = field(
         metadata={
             "name": "TerminalCommand",
             "type": "Element",
             "required": True,
-        },
+        }
     )

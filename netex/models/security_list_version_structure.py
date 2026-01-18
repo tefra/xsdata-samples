@@ -20,7 +20,7 @@ from .type_of_security_list_ref import TypeOfSecurityListRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecurityListVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "SecurityList_VersionStructure"

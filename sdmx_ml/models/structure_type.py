@@ -9,7 +9,7 @@ from sdmx_ml.models.structures_type import StructuresType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class StructureType:
     """
     StructureType defines the contents of a structure message.
@@ -18,14 +18,13 @@ class StructureType:
     service with only information in the footer.
     """
 
-    header: None | StructureHeaderType = field(
-        default=None,
+    header: StructureHeaderType = field(
         metadata={
             "name": "Header",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
             "required": True,
-        },
+        }
     )
     structures: None | StructuresType = field(
         default=None,

@@ -21,7 +21,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ieee1722TpEthernetFrame:
     """
     Ieee1722Tp Ethernet Frame.
@@ -98,14 +98,13 @@ class Ieee1722TpEthernetFrame:
     class Meta:
         name = "IEEE-1722-TP-ETHERNET-FRAME"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | Ieee1722TpEthernetFrame.ShortNameFragments = (
         field(
@@ -246,7 +245,7 @@ class Ieee1722TpEthernetFrame:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -257,7 +256,7 @@ class Ieee1722TpEthernetFrame:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -268,7 +267,7 @@ class Ieee1722TpEthernetFrame:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduToFrameMappings:
         pdu_to_frame_mapping: list[PduToFrameMapping] = field(
             default_factory=list,

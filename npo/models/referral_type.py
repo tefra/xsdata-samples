@@ -7,7 +7,7 @@ from npo.models.link_type_enum import LinkTypeEnum
 __NAMESPACE__ = "urn:vpro:pages:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferralType:
     class Meta:
         name = "referralType"

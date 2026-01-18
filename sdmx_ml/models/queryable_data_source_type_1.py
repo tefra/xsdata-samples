@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class QueryableDataSourceType1:
     """
     QueryableDataSourceType describes a data source which is accepts an
@@ -28,14 +28,13 @@ class QueryableDataSourceType1:
     class Meta:
         name = "QueryableDataSourceType"
 
-    data_url: None | str = field(
-        default=None,
+    data_url: str = field(
         metadata={
             "name": "DataURL",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
             "required": True,
-        },
+        }
     )
     wsdlurl: None | str = field(
         default=None,
@@ -53,19 +52,17 @@ class QueryableDataSourceType1:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    is_restdatasource: None | bool = field(
-        default=None,
+    is_restdatasource: bool = field(
         metadata={
             "name": "isRESTDatasource",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    is_web_service_datasource: None | bool = field(
-        default=None,
+    is_web_service_datasource: bool = field(
         metadata={
             "name": "isWebServiceDatasource",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

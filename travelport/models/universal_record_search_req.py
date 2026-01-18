@@ -25,7 +25,7 @@ from travelport.models.vehicle_reservation_criteria import (
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordSearchReq(BaseReq1):
     """
     Request to retrieve a summary information for reservations under a

@@ -7,7 +7,7 @@ from .list_enum_simple import ListEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListEnum:
     """
     This meta-class represents the notation of the various types of lists.
@@ -28,11 +28,10 @@ class ListEnum:
     class Meta:
         name = "LIST-ENUM"
 
-    value: None | ListEnumSimple = field(
-        default=None,
+    value: ListEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -11,7 +11,7 @@ from .type_of_notice_ref import TypeOfNoticeRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NoticeVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Notice_VersionStructure"

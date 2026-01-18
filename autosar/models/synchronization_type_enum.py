@@ -7,7 +7,7 @@ from .synchronization_type_enum_simple import SynchronizationTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SynchronizationTypeEnum:
     """
     This is used to describe the type of the synchronization timing
@@ -29,11 +29,10 @@ class SynchronizationTypeEnum:
     class Meta:
         name = "SYNCHRONIZATION-TYPE-ENUM"
 
-    value: None | SynchronizationTypeEnumSimple = field(
-        default=None,
+    value: SynchronizationTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

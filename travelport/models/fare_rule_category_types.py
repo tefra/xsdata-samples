@@ -8,7 +8,7 @@ from travelport.models.variable_category_type import VariableCategoryType
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareRuleCategoryTypes:
     """
     Parameters
@@ -39,11 +39,10 @@ class FareRuleCategoryTypes:
             "max_occurs": 99,
         },
     )
-    value: None | str = field(
-        default=None,
+    value: str = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -10,7 +10,7 @@ from travelport.models.type_element_status_1 import TypeElementStatus1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightDetails:
     """
     Specific details within a flight segment.
@@ -87,33 +87,30 @@ class FlightDetails:
             "max_occurs": 999,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    origin: None | str = field(
-        default=None,
+    origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    destination: None | str = field(
-        default=None,
+    destination: str = field(
         metadata={
             "name": "Destination",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
     departure_time: None | str = field(
         default=None,

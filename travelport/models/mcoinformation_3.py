@@ -7,7 +7,7 @@ from travelport.models.passenger_info_3 import PassengerInfo3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mcoinformation3:
     """
     Parameters

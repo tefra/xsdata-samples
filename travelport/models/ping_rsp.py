@@ -8,7 +8,7 @@ from travelport.models.payload import Payload
 __NAMESPACE__ = "http://www.travelport.com/schema/system_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PingRsp(BaseRsp3):
     """
     Response to the PingReq.

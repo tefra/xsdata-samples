@@ -14,7 +14,7 @@ from travelport.models.universal_modify_cmd import UniversalModifyCmd
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordModifyReq(BaseReq1):
     """
     Update the universal record.
@@ -44,13 +44,12 @@ class UniversalRecordModifyReq(BaseReq1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    record_identifier: None | RecordIdentifier = field(
-        default=None,
+    record_identifier: RecordIdentifier = field(
         metadata={
             "name": "RecordIdentifier",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     universal_modify_cmd: list[UniversalModifyCmd] = field(
         default_factory=list,
@@ -83,13 +82,12 @@ class UniversalRecordModifyReq(BaseReq1):
             "type": "Attribute",
         },
     )
-    version: None | int = field(
-        default=None,
+    version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     override_mct: bool = field(
         default=False,

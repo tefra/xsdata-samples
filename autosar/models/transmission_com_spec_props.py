@@ -8,7 +8,7 @@ from .transmission_mode_definition_enum import TransmissionModeDefinitionEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransmissionComSpecProps:
     """
     This meta-class defines a set of transmission attributes which the

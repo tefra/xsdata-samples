@@ -7,7 +7,7 @@ from .rpt_preparation_enum_simple import RptPreparationEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RptPreparationEnum:
     """
     Determines the RP preparation level for access to
@@ -29,11 +29,10 @@ class RptPreparationEnum:
     class Meta:
         name = "RPT-PREPARATION-ENUM"
 
-    value: None | RptPreparationEnumSimple = field(
-        default=None,
+    value: RptPreparationEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

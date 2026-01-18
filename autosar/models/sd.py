@@ -7,7 +7,7 @@ from .space_value import SpaceValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Sd:
     """
     This class represents a primitive element in a special data group.

@@ -11,7 +11,7 @@ from travelport.models.form_of_payment_ref_1 import FormOfPaymentRef1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IssuanceModifiers:
     """
     General modifiers supported for EMD Issuance.Supported providers are

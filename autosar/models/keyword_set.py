@@ -22,7 +22,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class KeywordSet:
     """
     This meta--class represents the ability to collect a set of predefined
@@ -99,14 +99,13 @@ class KeywordSet:
     class Meta:
         name = "KEYWORD-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | KeywordSet.ShortNameFragments = field(
         default=None,
@@ -219,7 +218,7 @@ class KeywordSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -230,7 +229,7 @@ class KeywordSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -241,7 +240,7 @@ class KeywordSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -270,7 +269,7 @@ class KeywordSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Keywords:
         keyword: list[Keyword] = field(
             default_factory=list,

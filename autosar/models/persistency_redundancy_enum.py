@@ -7,7 +7,7 @@ from .persistency_redundancy_enum_simple import PersistencyRedundancyEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersistencyRedundancyEnum:
     """
     This meta-class provides a way to specify in which way redundancy shall
@@ -29,11 +29,10 @@ class PersistencyRedundancyEnum:
     class Meta:
         name = "PERSISTENCY-REDUNDANCY-ENUM"
 
-    value: None | PersistencyRedundancyEnumSimple = field(
-        default=None,
+    value: PersistencyRedundancyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -8,7 +8,7 @@ from .extension_elements import ExtensionElements
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TBaseElement:
     class Meta:
         name = "tBaseElement"

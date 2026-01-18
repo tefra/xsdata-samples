@@ -13,7 +13,7 @@ from .strict_containment_aggregation_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SchematicMapMembersRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "schematicMapMembers_RelStructure"

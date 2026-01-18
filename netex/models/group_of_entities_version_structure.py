@@ -11,7 +11,7 @@ from .purpose_of_grouping_ref import PurposeOfGroupingRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "GroupOfEntities_VersionStructure"

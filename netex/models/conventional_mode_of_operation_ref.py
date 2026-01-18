@@ -9,7 +9,7 @@ from .conventional_mode_of_operation_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConventionalModeOfOperationRef(ConventionalModeOfOperationRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

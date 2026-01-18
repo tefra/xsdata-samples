@@ -9,7 +9,7 @@ from sdmx_ml.models.submit_structure_response_type_2 import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SubmitStructureResponse(SubmitStructureResponseType2):
     """
     SubmitStructureResponse is returned by the registry when a structure

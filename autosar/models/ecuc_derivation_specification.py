@@ -9,7 +9,7 @@ from .ecuc_query import EcucQuery
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucDerivationSpecification:
     """
     Allows to define configuration items that are calculated based on the
@@ -77,7 +77,7 @@ class EcucDerivationSpecification:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucQuerys:
         ecuc_query: list[EcucQuery] = field(
             default_factory=list,

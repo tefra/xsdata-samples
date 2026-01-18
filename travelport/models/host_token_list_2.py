@@ -7,7 +7,7 @@ from travelport.models.host_token_1 import HostToken1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HostTokenList2:
     """
     The shared object list of Host Tokens.

@@ -5,22 +5,20 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.omg.org/spec/DD/20100524/DC"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Point:
     class Meta:
         namespace = "http://www.omg.org/spec/DD/20100524/DC"
 
-    x: None | float = field(
-        default=None,
+    x: float = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    y: None | float = field(
-        default=None,
+    y: float = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

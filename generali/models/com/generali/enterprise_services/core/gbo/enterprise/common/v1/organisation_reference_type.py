@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganisationReferenceType(BaseIdentifiedComponentType):
     sender: None | OrganisationReferenceTypeSender = field(
         default=None,

@@ -7,7 +7,7 @@ from .response_structure import ResponseStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractResponse(ResponseStructure):
     class Meta:
         namespace = "http://www.siri.org.uk/siri"

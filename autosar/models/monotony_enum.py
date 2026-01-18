@@ -7,7 +7,7 @@ from .monotony_enum_simple import MonotonyEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MonotonyEnum:
     """
     This enumerator denotes the values for specification of monotony for
@@ -29,11 +29,10 @@ class MonotonyEnum:
     class Meta:
         name = "MONOTONY-ENUM"
 
-    value: None | MonotonyEnumSimple = field(
-        default=None,
+    value: MonotonyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

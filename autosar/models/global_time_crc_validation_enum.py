@@ -9,7 +9,7 @@ from .global_time_crc_validation_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GlobalTimeCrcValidationEnum:
     """
     This enumeration provides values for the evaluation of the CRC.
@@ -30,11 +30,10 @@ class GlobalTimeCrcValidationEnum:
     class Meta:
         name = "GLOBAL-TIME-CRC-VALIDATION-ENUM"
 
-    value: None | GlobalTimeCrcValidationEnumSimple = field(
-        default=None,
+    value: GlobalTimeCrcValidationEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

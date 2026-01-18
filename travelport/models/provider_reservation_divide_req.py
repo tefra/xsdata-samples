@@ -10,7 +10,7 @@ from travelport.models.provider_reservation_divide_req_create_child_universal_re
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProviderReservationDivideReq(BaseReq1):
     """
     Request to split a PNR containing atleast 1 air reservation .
@@ -42,53 +42,46 @@ class ProviderReservationDivideReq(BaseReq1):
             "max_occurs": 999,
         },
     )
-    universal_record_locator_code: None | str = field(
-        default=None,
+    universal_record_locator_code: str = field(
         metadata={
             "name": "UniversalRecordLocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
-    provider_locator_code: None | str = field(
-        default=None,
+    provider_locator_code: str = field(
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        },
+        }
     )
-    create_child_universal_record: (
-        None | ProviderReservationDivideReqCreateChildUniversalRecord
-    ) = field(
-        default=None,
+    create_child_universal_record: ProviderReservationDivideReqCreateChildUniversalRecord = field(
         metadata={
             "name": "CreateChildUniversalRecord",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BookingTravelerRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

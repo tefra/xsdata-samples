@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NmPduRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -64,13 +64,12 @@ class NmPduRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NmPduRef(Ref):
-        dest: None | NmPduSubtypesEnum = field(
-            default=None,
+        dest: NmPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

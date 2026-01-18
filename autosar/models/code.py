@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Code:
     """
     A generic code descriptor.
@@ -91,14 +91,13 @@ class Code:
     class Meta:
         name = "CODE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | Code.ShortNameFragments = field(
         default=None,
@@ -195,7 +194,7 @@ class Code:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -206,7 +205,7 @@ class Code:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -217,7 +216,7 @@ class Code:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArtifactDescriptors:
         autosar_engineering_object: list[AutosarEngineeringObject] = field(
             default_factory=list,
@@ -228,7 +227,7 @@ class Code:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CallbackHeaderRefs:
         callback_header_ref: list[
             Code.CallbackHeaderRefs.CallbackHeaderRef
@@ -241,13 +240,12 @@ class Code:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CallbackHeaderRef(Ref):
-            dest: None | ServiceNeedsSubtypesEnum = field(
-                default=None,
+            dest: ServiceNeedsSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

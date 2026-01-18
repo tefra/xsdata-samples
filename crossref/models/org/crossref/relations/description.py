@@ -22,7 +22,7 @@ from crossref.models.org.crossref.relations.xref_faces import (
 __NAMESPACE__ = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Description:
     """
     A narrative description of the relationship target item.

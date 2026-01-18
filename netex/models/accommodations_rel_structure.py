@@ -10,7 +10,7 @@ from .containment_aggregation_structure import ContainmentAggregationStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccommodationsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accommodations_RelStructure"

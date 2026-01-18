@@ -42,7 +42,7 @@ from ..core.voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt110000Uv04AccountHolderLanguage:
     class Meta:
         name = "COCT_MT110000UV04.AccountHolderLanguage"
@@ -71,32 +71,29 @@ class CoctMt110000Uv04AccountHolderLanguage:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: None | Cs = field(
-        default=None,
+    language_code: Cs = field(
         metadata={
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    mode_code: None | Cs = field(
-        default=None,
+    mode_code: Cs = field(
         metadata={
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    preference_ind: None | Bl = field(
-        default=None,
+    preference_ind: Bl = field(
         metadata={
             "name": "preferenceInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -107,7 +104,7 @@ class CoctMt110000Uv04AccountHolderLanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt110000Uv04AccountHolderOrganization:
     class Meta:
         name = "COCT_MT110000UV04.AccountHolderOrganization"
@@ -164,13 +161,12 @@ class CoctMt110000Uv04AccountHolderOrganization:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassOrganization = field(
-        default=None,
+    class_code: EntityClassOrganization = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -183,7 +179,7 @@ class CoctMt110000Uv04AccountHolderOrganization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt110000Uv04RelationshipRole:
     class Meta:
         name = "COCT_MT110000UV04.RelationshipRole"
@@ -227,25 +223,23 @@ class CoctMt110000Uv04RelationshipRole:
         },
     )
     class_code: (
-        None
-        | RoleClassMutualRelationship
+        RoleClassMutualRelationship
         | RoleClassPassive
         | str
         | RoleClassOntological
         | RoleClassPartitive
         | RoleClassRootValue
     ) = field(
-        default=None,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt110000Uv04AccountHolderPerson:
     class Meta:
         name = "COCT_MT110000UV04.AccountHolderPerson"
@@ -296,13 +290,12 @@ class CoctMt110000Uv04AccountHolderPerson:
         },
     )
     as_relationship_role: None | CoctMt110000Uv04RelationshipRole = field(
-        default=None,
         metadata={
             "name": "asRelationshipRole",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     account_holder_language: list[CoctMt110000Uv04AccountHolderLanguage] = (
         field(
@@ -342,7 +335,7 @@ class CoctMt110000Uv04AccountHolderPerson:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt110000Uv04AccountHolder:
     class Meta:
         name = "COCT_MT110000UV04.AccountHolder"
@@ -449,7 +442,7 @@ class CoctMt110000Uv04AccountHolder:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt110000Uv04Holder:
     class Meta:
         name = "COCT_MT110000UV04.Holder"
@@ -486,13 +479,12 @@ class CoctMt110000Uv04Holder:
         },
     )
     account_holder: None | CoctMt110000Uv04AccountHolder = field(
-        default=None,
         metadata={
             "name": "accountHolder",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -512,7 +504,7 @@ class CoctMt110000Uv04Holder:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt110000Uv04Account:
     class Meta:
         name = "COCT_MT110000UV04.Account"
@@ -541,13 +533,12 @@ class CoctMt110000Uv04Account:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     code: None | Cs = field(
         default=None,

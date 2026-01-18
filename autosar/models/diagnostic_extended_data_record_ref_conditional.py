@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticExtendedDataRecordRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -69,13 +69,12 @@ class DiagnosticExtendedDataRecordRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticExtendedDataRecordRef(Ref):
-        dest: None | DiagnosticExtendedDataRecordSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticExtendedDataRecordSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

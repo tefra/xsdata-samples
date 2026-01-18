@@ -7,6 +7,6 @@ from .type_of_value_ref_structure import TypeOfValueRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AcceptedDriverPermitRefStructure(TypeOfValueRefStructure):
     pass

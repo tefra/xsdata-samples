@@ -7,7 +7,7 @@ from ipxact.models.access_restriction_type import AccessRestrictionType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessRestrictionsType:
     """
     :ivar access_restriction: Access mode.

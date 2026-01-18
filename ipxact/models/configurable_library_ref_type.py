@@ -7,7 +7,7 @@ from ipxact.models.configurable_element_values import ConfigurableElementValues
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConfigurableLibraryRefType:
     """
     Base IP-XACT document reference type for configurable top-level
@@ -28,33 +28,29 @@ class ConfigurableLibraryRefType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor: None | str = field(
-        default=None,
+    vendor: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    library: None | str = field(
-        default=None,
+    library: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,

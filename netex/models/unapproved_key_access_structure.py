@@ -7,7 +7,7 @@ from .error_code_structure import ErrorCodeStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UnapprovedKeyAccessStructure(ErrorCodeStructure):
     key: None | str = field(
         default=None,

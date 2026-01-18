@@ -9,7 +9,7 @@ from .route_ref import RouteRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RouteRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "routeRefs_RelStructure"

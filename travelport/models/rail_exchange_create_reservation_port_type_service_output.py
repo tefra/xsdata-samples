@@ -8,23 +8,20 @@ from travelport.models.rail_exchange_rsp import RailExchangeRsp
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailExchangeCreateReservationPortTypeServiceOutput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | RailExchangeCreateReservationPortTypeServiceOutput.Body = (
-        field(
-            default=None,
-            metadata={
-                "name": "Body",
-                "type": "Element",
-            },
-        )
+    body: RailExchangeCreateReservationPortTypeServiceOutput.Body = field(
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
         rail_exchange_rsp: None | RailExchangeRsp = field(
             default=None,
@@ -45,21 +42,19 @@ class RailExchangeCreateReservationPortTypeServiceOutput:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Fault:
-            faultcode: None | str = field(
-                default=None,
+            faultcode: str = field(
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                },
+                }
             )
-            faultstring: None | str = field(
-                default=None,
+            faultstring: str = field(
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                },
+                }
             )
             faultactor: None | str = field(
                 default=None,
@@ -79,7 +74,7 @@ class RailExchangeCreateReservationPortTypeServiceOutput:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Detail:
                 error_info: None | ErrorInfo1 = field(
                     default=None,

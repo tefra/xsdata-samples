@@ -8,7 +8,7 @@ from travelport.models.type_key_tagged_element_1 import TypeKeyTaggedElement1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FieldGroupData1(TypeKeyTaggedElement1):
     """
     Parameters
@@ -36,13 +36,12 @@ class FieldGroupData1(TypeKeyTaggedElement1):
             "type": "Element",
         },
     )
-    field_group_id: None | str = field(
-        default=None,
+    field_group_id: str = field(
         metadata={
             "name": "FieldGroupID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     owner_id: None | int = field(
         default=None,

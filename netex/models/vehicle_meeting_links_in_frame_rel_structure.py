@@ -9,7 +9,7 @@ from .vehicle_meeting_link import VehicleMeetingLink
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleMeetingLinksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicleMeetingLinksInFrame_RelStructure"

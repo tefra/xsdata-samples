@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightArrivalInformation:
     """
     The flight arrival information (airline code and flight number) for the
@@ -24,14 +24,13 @@ class FlightArrivalInformation:
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
     flight_number: None | str = field(
         default=None,

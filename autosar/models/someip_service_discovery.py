@@ -10,7 +10,7 @@ from .secure_com_props_subtypes_enum import SecureComPropsSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipServiceDiscovery:
     """
     This meta-class represents a specialization of the generic service
@@ -98,29 +98,27 @@ class SomeipServiceDiscovery:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MulticastSdIpAddressRef(Ref):
-        dest: None | NetworkEndpointSubtypesEnum = field(
-            default=None,
+        dest: NetworkEndpointSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MulticastSecureComPropsRef(Ref):
-        dest: None | SecureComPropsSubtypesEnum = field(
-            default=None,
+        dest: SecureComPropsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnicastSecureComPropsRefs:
         unicast_secure_com_props_ref: list[
             SomeipServiceDiscovery.UnicastSecureComPropsRefs.UnicastSecureComPropsRef
@@ -133,13 +131,12 @@ class SomeipServiceDiscovery:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UnicastSecureComPropsRef(Ref):
-            dest: None | SecureComPropsSubtypesEnum = field(
-                default=None,
+            dest: SecureComPropsSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

@@ -10,7 +10,7 @@ from .whitelist_ref import WhitelistRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecurityListsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "securityLists_RelStructure"

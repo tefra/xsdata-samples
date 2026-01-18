@@ -7,7 +7,7 @@ from npo.models.lang_value import LangValue
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TagType:
     class Meta:
         name = "tagType"

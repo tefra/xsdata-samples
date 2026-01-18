@@ -9,7 +9,7 @@ from .group_of_operators import GroupOfOperators
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupsOfOperatorsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "groupsOfOperatorsInFrame_RelStructure"

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxDetail3:
     """
     The tax idetail nformation for a fare quote tax.
@@ -15,13 +15,12 @@ class TaxDetail3:
         name = "TaxDetail"
         namespace = "http://www.travelport.com/schema/common_v33_0"
 
-    amount: None | str = field(
-        default=None,
+    amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     origin_airport: None | str = field(
         default=None,

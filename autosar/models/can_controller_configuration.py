@@ -11,7 +11,7 @@ from .integer import Integer
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanControllerConfiguration:
     """
     This element is used for the specification of the exact CAN Bit Timing

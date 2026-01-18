@@ -7,7 +7,7 @@ from crossref.models.xlink.type_type import TypeType
 __NAMESPACE__ = "http://www.w3.org/1999/xlink"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResourceType:
     class Meta:
         name = "resourceType"

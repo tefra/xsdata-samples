@@ -7,7 +7,7 @@ from crossref.models.xlink.type_type import TypeType
 __NAMESPACE__ = "http://www.w3.org/1999/xlink"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Extended:
     """
     Intended for use as the type of user-declared elements to make them

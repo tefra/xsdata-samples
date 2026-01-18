@@ -18,7 +18,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InterpolationRoutineMappingSet:
     """
     This meta-class specifies a set of interpolation routine mappings.
@@ -84,14 +84,13 @@ class InterpolationRoutineMappingSet:
     class Meta:
         name = "INTERPOLATION-ROUTINE-MAPPING-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | InterpolationRoutineMappingSet.ShortNameFragments
@@ -192,7 +191,7 @@ class InterpolationRoutineMappingSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -203,7 +202,7 @@ class InterpolationRoutineMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -214,7 +213,7 @@ class InterpolationRoutineMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InterpolationRoutineMappings:
         interpolation_routine_mapping: list[InterpolationRoutineMapping] = (
             field(

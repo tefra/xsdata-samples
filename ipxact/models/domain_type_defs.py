@@ -7,7 +7,7 @@ from ipxact.models.domain_type_def import DomainTypeDef
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DomainTypeDefs:
     """
     The group of domain type definitions.

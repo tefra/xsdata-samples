@@ -7,7 +7,7 @@ from npo.models.result_type import ResultType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SearchResultType(ResultType):
     class Meta:
         name = "searchResultType"

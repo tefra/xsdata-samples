@@ -10,28 +10,26 @@ from .vehicle_mode import VehicleMode
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceLinkVersionStructure(LinkVersionStructure):
     class Meta:
         name = "ServiceLink_VersionStructure"
 
-    from_point_ref: None | ScheduledStopPointRefStructure = field(
-        default=None,
+    from_point_ref: ScheduledStopPointRefStructure = field(
         metadata={
             "name": "FromPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    to_point_ref: None | ScheduledStopPointRefStructure = field(
-        default=None,
+    to_point_ref: ScheduledStopPointRefStructure = field(
         metadata={
             "name": "ToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     vehicle_mode: None | VehicleMode = field(
         default=None,

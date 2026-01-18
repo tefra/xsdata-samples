@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.payment_card_types_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UsedPaymentCard:
     """
     The used payment card for this parking vehicle.
@@ -30,14 +30,13 @@ class UsedPaymentCard:
     :ivar used_payment_card_extension:
     """
 
-    payment_card: None | PaymentCardTypesEnum = field(
-        default=None,
+    payment_card: PaymentCardTypesEnum = field(
         metadata={
             "name": "paymentCard",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     other_payment_card: None | str = field(
         default=None,

@@ -9,20 +9,19 @@ from datexii.models.eu.datexii.v2.point import Point
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointDestination(Destination):
     """
     The specification of the destination of a defined route or itinerary
     which is a point.
     """
 
-    point: None | Point = field(
-        default=None,
+    point: Point = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     point_destination_extension: None | ExtensionType = field(
         default=None,

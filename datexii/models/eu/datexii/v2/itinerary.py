@@ -9,7 +9,7 @@ from datexii.models.eu.datexii.v2.group_of_locations import GroupOfLocations
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Itinerary(GroupOfLocations):
     """
     Multiple (i.e. more than one) physically separate locations arranged as

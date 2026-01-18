@@ -10,20 +10,19 @@ from travelport.models.point_of_sale_1 import PointOfSale1
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseHotelDetailsReq(BaseReq1):
     """
     Base request for all hotel details search request..
     """
 
-    hotel_property: None | HotelProperty = field(
-        default=None,
+    hotel_property: HotelProperty = field(
         metadata={
             "name": "HotelProperty",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        },
+        }
     )
     hotel_details_modifiers: None | HotelDetailsModifiers = field(
         default=None,

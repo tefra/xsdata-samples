@@ -11,7 +11,7 @@ from .variable_data_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvalidationPolicy:
     """
     Specifies whether the component can actively invalidate a particular
@@ -72,13 +72,12 @@ class InvalidationPolicy:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataElementRef(Ref):
-        dest: None | VariableDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: VariableDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

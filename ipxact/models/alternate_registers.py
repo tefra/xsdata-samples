@@ -16,7 +16,7 @@ from ipxact.models.volatile import Volatile
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlternateRegisters:
     """
     Alternate definitions for the current register.
@@ -38,7 +38,7 @@ class AlternateRegisters:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AlternateRegister:
         """
         :ivar name: Unique name
@@ -60,12 +60,11 @@ class AlternateRegisters:
         :ivar id:
         """
 
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         display_name: None | DisplayName = field(
             default=None,
@@ -153,7 +152,7 @@ class AlternateRegisters:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AccessHandles:
             access_handle: list[SimpleAccessHandle] = field(
                 default_factory=list,

@@ -12,7 +12,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.core_types
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GlobalPositionAddressType:
     """
     :ivar latitude:
@@ -25,30 +25,27 @@ class GlobalPositionAddressType:
         (the geoid) that defines the nominal sea level.
     """
 
-    latitude: None | NumericType = field(
-        default=None,
+    latitude: NumericType = field(
         metadata={
             "name": "Latitude",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )
-    longitude: None | NumericType = field(
-        default=None,
+    longitude: NumericType = field(
         metadata={
             "name": "Longitude",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )
-    wgscode: None | Idtype = field(
-        default=None,
+    wgscode: Idtype = field(
         metadata={
             "name": "WGSCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )

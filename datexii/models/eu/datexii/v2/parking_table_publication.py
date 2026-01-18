@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.parking_table import ParkingTable
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingTablePublication:
     """
     A publication defining one or more tables that have entries of parking

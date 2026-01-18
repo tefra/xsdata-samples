@@ -11,7 +11,7 @@ from .vehicle_access_credentials_assignment import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleAccessCredentialAssignmentsRelStructure(
     ContainmentAggregationStructure
 ):

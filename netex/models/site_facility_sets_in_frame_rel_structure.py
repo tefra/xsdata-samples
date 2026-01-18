@@ -9,7 +9,7 @@ from .site_facility_set import SiteFacilitySet
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SiteFacilitySetsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "siteFacilitySetsInFrame_RelStructure"

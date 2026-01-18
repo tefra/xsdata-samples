@@ -12,7 +12,7 @@ from travelport.models.hotel_upsell_qualify_search_criteria import (
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelUpsellSearchCriteria:
     """
     Search criteria for HotelUpsell.
@@ -30,13 +30,12 @@ class HotelUpsellSearchCriteria:
             "type": "Element",
         },
     )
-    hotel_upsell_qualify_search_criteria: (
-        None | HotelUpsellQualifySearchCriteria
-    ) = field(
-        default=None,
-        metadata={
-            "name": "HotelUpsellQualifySearchCriteria",
-            "type": "Element",
-            "required": True,
-        },
+    hotel_upsell_qualify_search_criteria: HotelUpsellQualifySearchCriteria = (
+        field(
+            metadata={
+                "name": "HotelUpsellQualifySearchCriteria",
+                "type": "Element",
+                "required": True,
+            }
+        )
     )

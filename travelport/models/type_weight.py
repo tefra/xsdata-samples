@@ -7,7 +7,7 @@ from travelport.models.type_unit_weight import TypeUnitWeight
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeWeight:
     class Meta:
         name = "typeWeight"

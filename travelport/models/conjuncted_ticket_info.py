@@ -9,7 +9,7 @@ from travelport.models.type_ticket_status import TypeTicketStatus
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConjunctedTicketInfo:
     """
     Parameters
@@ -26,13 +26,12 @@ class ConjunctedTicketInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    number: None | str = field(
-        default=None,
+    number: str = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     iatanumber: None | str = field(
         default=None,
@@ -65,11 +64,10 @@ class ConjunctedTicketInfo:
             "length": 2,
         },
     )
-    status: None | TypeTicketStatus = field(
-        default=None,
+    status: TypeTicketStatus = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

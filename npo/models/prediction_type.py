@@ -9,7 +9,7 @@ from npo.models.prediction_state_enum import PredictionStateEnum
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PredictionType:
     class Meta:
         name = "predictionType"

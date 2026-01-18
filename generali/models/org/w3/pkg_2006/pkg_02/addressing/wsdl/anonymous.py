@@ -9,16 +9,15 @@ from generali.models.org.w3.pkg_2006.pkg_02.addressing.wsdl.anonymous_type impor
 __NAMESPACE__ = "http://www.w3.org/2006/02/addressing/wsdl"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Anonymous:
     class Meta:
         namespace = "http://www.w3.org/2006/02/addressing/wsdl"
 
-    value: None | AnonymousType = field(
-        default=None,
+    value: AnonymousType = field(
         metadata={
             "required": True,
-        },
+        }
     )
     other_attributes: dict[str, str] = field(
         default_factory=dict,

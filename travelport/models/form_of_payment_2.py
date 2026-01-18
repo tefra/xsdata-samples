@@ -9,7 +9,7 @@ from travelport.models.type_form_of_payment_type_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FormOfPayment2(TypeFormOfPaymentType1):
     class Meta:
         name = "FormOfPayment"

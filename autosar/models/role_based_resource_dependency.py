@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoleBasedResourceDependency:
     """
     This class specifies a dependency between CpSoftwareClusterResources.
@@ -66,13 +66,12 @@ class RoleBasedResourceDependency:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResourceRef(Ref):
-        dest: None | CpSoftwareClusterResourceSubtypesEnum = field(
-            default=None,
+        dest: CpSoftwareClusterResourceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

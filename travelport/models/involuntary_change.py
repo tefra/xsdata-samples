@@ -7,7 +7,7 @@ from travelport.models.ticket_endorsement import TicketEndorsement
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoluntaryChange:
     """
     Specify the Ticket Endorsement value.
@@ -16,11 +16,10 @@ class InvoluntaryChange:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    ticket_endorsement: None | TicketEndorsement = field(
-        default=None,
+    ticket_endorsement: TicketEndorsement = field(
         metadata={
             "name": "TicketEndorsement",
             "type": "Element",
             "required": True,
-        },
+        }
     )

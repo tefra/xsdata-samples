@@ -12,7 +12,7 @@ from travelport.models.type_masked_2 import TypeMasked2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FixedField:
     """
     Specify existing fixed fields that belong to the default template.
@@ -92,13 +92,12 @@ class FixedField:
             "max_occurs": 999,
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     label: None | str = field(
         default=None,
@@ -163,23 +162,21 @@ class FixedField:
             "type": "Attribute",
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
-    data_type: None | TypeFixedFieldDataFormat = field(
-        default=None,
+    data_type: TypeFixedFieldDataFormat = field(
         metadata={
             "name": "DataType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     component: None | str = field(
         default=None,
@@ -212,13 +209,12 @@ class FixedField:
             "type": "Attribute",
         },
     )
-    searchable: None | bool = field(
-        default=None,
+    searchable: bool = field(
         metadata={
             "name": "Searchable",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     inheritable: bool = field(
         default=False,

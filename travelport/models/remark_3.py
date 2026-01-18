@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Remark3:
     """
     A textual remark container to hold any printable text. (max 512 chars).

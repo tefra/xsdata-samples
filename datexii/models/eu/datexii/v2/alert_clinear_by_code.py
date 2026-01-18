@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlertCLinearByCode(AlertCLinear):
     """
     A linear section along a road defined by reference to a linear section
@@ -22,23 +22,21 @@ class AlertCLinearByCode(AlertCLinear):
     :ivar alert_clinear_by_code_extension:
     """
 
-    alert_cdirection: None | AlertCDirection = field(
-        default=None,
+    alert_cdirection: AlertCDirection = field(
         metadata={
             "name": "alertCDirection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    location_code_for_linear_location: None | AlertCLocation = field(
-        default=None,
+    location_code_for_linear_location: AlertCLocation = field(
         metadata={
             "name": "locationCodeForLinearLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     alert_clinear_by_code_extension: None | ExtensionType = field(
         default=None,

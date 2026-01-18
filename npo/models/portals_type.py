@@ -7,7 +7,7 @@ from npo.models.organization_type import OrganizationType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortalsType:
     class Meta:
         name = "portalsType"

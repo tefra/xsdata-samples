@@ -9,7 +9,7 @@ from .security_event_reporting_mode_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecurityEventReportingModeEnum:
     """
     :ivar value:
@@ -28,11 +28,10 @@ class SecurityEventReportingModeEnum:
     class Meta:
         name = "SECURITY-EVENT-REPORTING-MODE-ENUM"
 
-    value: None | SecurityEventReportingModeEnumSimple = field(
-        default=None,
+    value: SecurityEventReportingModeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

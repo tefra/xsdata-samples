@@ -9,7 +9,7 @@ from .udp_checksum_calculation_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UdpChecksumCalculationEnum:
     """
     This enumeration defines the UDP checksum calculation.
@@ -30,11 +30,10 @@ class UdpChecksumCalculationEnum:
     class Meta:
         name = "UDP-CHECKSUM-CALCULATION-ENUM"
 
-    value: None | UdpChecksumCalculationEnumSimple = field(
-        default=None,
+    value: UdpChecksumCalculationEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -579,59 +579,59 @@
                       "content": [
                         {
                           "content": [
-                            "Titel",
-                            " : Test Titel  "
+                            "Titel"
                           ]
                         },
+                        " : Test Titel  ",
                         {},
                         {
                           "content": [
-                            "Bearbeiter",
-                            " : Test Bearbeiter  "
+                            "Bearbeiter"
                           ]
                         },
+                        " : Test Bearbeiter  ",
                         {},
                         {
                           "content": [
-                            "Abt./OE",
-                            " : Test Abteilung  "
+                            "Abt./OE"
                           ]
                         },
+                        " : Test Abteilung  ",
                         {},
                         {
                           "content": [
-                            "Telefon",
-                            " : Test Telefon  "
+                            "Telefon"
                           ]
                         },
+                        " : Test Telefon  ",
                         {},
                         {
                           "content": [
-                            "E-Mail:",
-                            "  some.body@example.com  "
+                            "E-Mail:"
                           ]
                         },
+                        "  some.body@example.com  ",
                         {},
                         {
                           "content": [
-                            "Erstausgabe:",
-                            "  09.03.2020  "
+                            "Erstausgabe:"
                           ]
                         },
+                        "  09.03.2020  ",
                         {},
                         {
                           "content": [
-                            "Datum \u00c4nderungsstand",
-                            " : 09.03.2020  "
+                            "Datum \u00c4nderungsstand"
                           ]
                         },
+                        " : 09.03.2020  ",
                         {},
                         {
                           "content": [
-                            "\u00c4nderungsstand",
-                            " : V1.0  "
+                            "\u00c4nderungsstand"
                           ]
-                        }
+                        },
+                        " : V1.0  "
                       ]
                     },
                     "div": null

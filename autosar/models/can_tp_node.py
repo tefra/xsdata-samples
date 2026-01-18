@@ -24,7 +24,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanTpNode:
     """
     TP Node (Sender or Receiver) provides the TP Address and the connection
@@ -113,14 +113,13 @@ class CanTpNode:
     class Meta:
         name = "CAN-TP-NODE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | CanTpNode.ShortNameFragments = field(
         default=None,
@@ -257,7 +256,7 @@ class CanTpNode:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -268,7 +267,7 @@ class CanTpNode:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -279,24 +278,22 @@ class CanTpNode:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConnectorRef(Ref):
-        dest: None | CommunicationConnectorSubtypesEnum = field(
-            default=None,
+        dest: CommunicationConnectorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpAddressRef(Ref):
-        dest: None | CanTpAddressSubtypesEnum = field(
-            default=None,
+        dest: CanTpAddressSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

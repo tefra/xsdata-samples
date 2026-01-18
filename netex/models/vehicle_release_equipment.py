@@ -9,7 +9,7 @@ from .vehicle_release_equipment_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleReleaseEquipment(VehicleReleaseEquipmentVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

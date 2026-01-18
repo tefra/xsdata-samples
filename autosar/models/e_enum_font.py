@@ -7,7 +7,7 @@ from .e_enum_font_simple import EEnumFontSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EEnumFont:
     """
     This specifies the possible kind of fonts to be used for emphasis.
@@ -28,11 +28,10 @@ class EEnumFont:
     class Meta:
         name = "E-ENUM-FONT"
 
-    value: None | EEnumFontSimple = field(
-        default=None,
+    value: EEnumFontSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

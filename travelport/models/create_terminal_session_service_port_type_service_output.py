@@ -10,23 +10,20 @@ from travelport.models.error_info_4 import ErrorInfo4
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreateTerminalSessionServicePortTypeServiceOutput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | CreateTerminalSessionServicePortTypeServiceOutput.Body = (
-        field(
-            default=None,
-            metadata={
-                "name": "Body",
-                "type": "Element",
-            },
-        )
+    body: CreateTerminalSessionServicePortTypeServiceOutput.Body = field(
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
         create_terminal_session_rsp: None | CreateTerminalSessionRsp = field(
             default=None,
@@ -46,21 +43,19 @@ class CreateTerminalSessionServicePortTypeServiceOutput:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Fault:
-            faultcode: None | str = field(
-                default=None,
+            faultcode: str = field(
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                },
+                }
             )
-            faultstring: None | str = field(
-                default=None,
+            faultstring: str = field(
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                },
+                }
             )
             faultactor: None | str = field(
                 default=None,
@@ -80,7 +75,7 @@ class CreateTerminalSessionServicePortTypeServiceOutput:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Detail:
                 error_info: None | ErrorInfo4 = field(
                     default=None,

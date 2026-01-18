@@ -34,7 +34,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class PriorInformationNoticeType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -108,14 +108,13 @@ class PriorInformationNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -157,14 +156,13 @@ class PriorInformationNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contracting_party: None | ContractingParty = field(
-        default=None,
+    contracting_party: ContractingParty = field(
         metadata={
             "name": "ContractingParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     originator_customer_party: tuple[OriginatorCustomerParty, ...] = field(
         default_factory=tuple,
@@ -216,7 +214,7 @@ class PriorInformationNoticeType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class PriorInformationNotice(PriorInformationNoticeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2"

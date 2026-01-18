@@ -9,7 +9,7 @@ from .type_of_equipment_ref import TypeOfEquipmentRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleEquipmentProfileMemberVersionStructure(VersionedChildStructure):
     class Meta:
         name = "VehicleEquipmentProfileMember_VersionStructure"

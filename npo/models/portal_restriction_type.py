@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDateTime
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortalRestrictionType:
     class Meta:
         name = "portalRestrictionType"

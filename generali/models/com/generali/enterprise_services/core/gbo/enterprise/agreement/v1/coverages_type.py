@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoveragesType:
     coverage: list[CoverageType] = field(
         default_factory=list,

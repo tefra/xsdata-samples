@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreditCardAuth5:
     """
     The result of a Credit Auth Request.
@@ -67,13 +67,12 @@ class CreditCardAuth5:
             "max_length": 128,
         },
     )
-    amount: None | str = field(
-        default=None,
+    amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     auth_code: None | str = field(
         default=None,
@@ -82,13 +81,12 @@ class CreditCardAuth5:
             "type": "Attribute",
         },
     )
-    auth_result_code: None | str = field(
-        default=None,
+    auth_result_code: str = field(
         metadata={
             "name": "AuthResultCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     avsresult_code: None | str = field(
         default=None,

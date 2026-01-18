@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EvaluatedVariantSet:
     """
     This meta class represents the ability to express if a set of
@@ -112,14 +112,13 @@ class EvaluatedVariantSet:
     class Meta:
         name = "EVALUATED-VARIANT-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EvaluatedVariantSet.ShortNameFragments = (
         field(
@@ -238,7 +237,7 @@ class EvaluatedVariantSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -249,7 +248,7 @@ class EvaluatedVariantSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -260,7 +259,7 @@ class EvaluatedVariantSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EvaluatedElementRefs:
         evaluated_element_ref: list[
             EvaluatedVariantSet.EvaluatedElementRefs.EvaluatedElementRef
@@ -273,18 +272,17 @@ class EvaluatedVariantSet:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EvaluatedElementRef(Ref):
-            dest: None | CollectableElementSubtypesEnum = field(
-                default=None,
+            dest: CollectableElementSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EvaluatedVariantRefs:
         evaluated_variant_ref: list[
             EvaluatedVariantSet.EvaluatedVariantRefs.EvaluatedVariantRef
@@ -297,13 +295,12 @@ class EvaluatedVariantSet:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EvaluatedVariantRef(Ref):
-            dest: None | PredefinedVariantSubtypesEnum = field(
-                default=None,
+            dest: PredefinedVariantSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

@@ -10,7 +10,7 @@ from travelport.models.type_element_status_1 import TypeElementStatus1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EmdsummaryInfo:
     """
     Container for EMD summary information.
@@ -54,13 +54,12 @@ class EmdsummaryInfo:
             "max_occurs": 999,
         },
     )
-    emdtraveler_info: None | EmdtravelerInfo = field(
-        default=None,
+    emdtraveler_info: EmdtravelerInfo = field(
         metadata={
             "name": "EMDTravelerInfo",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     payment: None | Payment1 = field(
         default=None,

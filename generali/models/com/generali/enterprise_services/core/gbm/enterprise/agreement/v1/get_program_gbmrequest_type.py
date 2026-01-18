@@ -17,7 +17,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GetProgramGbmrequestType(BaseGbmtype):
     """
     <description xmlns="">The definition of the message used to retrieve an
@@ -40,12 +40,11 @@ class GetProgramGbmrequestType(BaseGbmtype):
             "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1",
         },
     )
-    program_gbo: None | BaseGbotype = field(
-        default=None,
+    program_gbo: BaseGbotype = field(
         metadata={
             "name": "ProgramGBO",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )

@@ -6,23 +6,21 @@ from tpdb.models.name import Name
 from tpdb.models.type_declaration import TypeDeclaration
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FuncDeclaration:
     class Meta:
         name = "funcDeclaration"
 
-    name: None | Name = field(
-        default=None,
+    name: Name = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    type_declaration: None | TypeDeclaration = field(
-        default=None,
+    type_declaration: TypeDeclaration = field(
         metadata={
             "name": "typeDeclaration",
             "type": "Element",
             "required": True,
-        },
+        }
     )

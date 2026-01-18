@@ -7,7 +7,7 @@ from sdmx_ml.models.date_pattern_map_base_type import DatePatternMapBaseType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DatePatternMapType(DatePatternMapBaseType):
     """
     :ivar source_pattern: Describes the source date using conventions
@@ -16,18 +16,16 @@ class DatePatternMapType(DatePatternMapBaseType):
         to the pattern.
     """
 
-    source_pattern: None | str = field(
-        default=None,
+    source_pattern: str = field(
         metadata={
             "name": "sourcePattern",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    locale: None | str = field(
-        default=None,
+    locale: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -8,7 +8,7 @@ from travelport.models.service_fee_info_1 import ServiceFeeInfo1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgencyServiceFeeCreateReq(BaseReq1):
     """
     Creates an Agency Service Fee to be charged through BSP or Airline
@@ -39,31 +39,28 @@ class AgencyServiceFeeCreateReq(BaseReq1):
             "max_occurs": 999,
         },
     )
-    universal_record_locator_code: None | str = field(
-        default=None,
+    universal_record_locator_code: str = field(
         metadata={
             "name": "UniversalRecordLocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
-    provider_locator_code: None | str = field(
-        default=None,
+    provider_locator_code: str = field(
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

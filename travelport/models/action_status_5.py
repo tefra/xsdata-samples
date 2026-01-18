@@ -9,7 +9,7 @@ from travelport.models.type_element_status_6 import TypeElementStatus6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ActionStatus5:
     """
     Status of the action that will happen or has happened to the air
@@ -67,13 +67,12 @@ class ActionStatus5:
             "type": "Element",
         },
     )
-    type_value: None | ActionStatusType5 = field(
-        default=None,
+    type_value: ActionStatusType5 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     ticket_date: None | str = field(
         default=None,

@@ -9,7 +9,7 @@ from travelport.models.type_integer_restriction_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WholeNumberRestriction1(TypeIntegerRestriction1):
     """
     Restrictions on profile data for fields with a data type of string.

@@ -8,21 +8,20 @@ from travelport.models.reference_data_search_rsp import ReferenceDataSearchRsp
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceDataLookupPortTypeServiceOutput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | ReferenceDataLookupPortTypeServiceOutput.Body = field(
-        default=None,
+    body: ReferenceDataLookupPortTypeServiceOutput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
         reference_data_search_rsp: None | ReferenceDataSearchRsp = field(
             default=None,
@@ -42,21 +41,19 @@ class ReferenceDataLookupPortTypeServiceOutput:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Fault:
-            faultcode: None | str = field(
-                default=None,
+            faultcode: str = field(
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                },
+                }
             )
-            faultstring: None | str = field(
-                default=None,
+            faultstring: str = field(
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                },
+                }
             )
             faultactor: None | str = field(
                 default=None,
@@ -76,7 +73,7 @@ class ReferenceDataLookupPortTypeServiceOutput:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Detail:
                 error_info: None | ErrorInfo1 = field(
                     default=None,

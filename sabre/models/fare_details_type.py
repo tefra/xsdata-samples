@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareDetailsType:
     """
     You don't need to specify all of these attributes for a given flight.
@@ -28,16 +28,14 @@ class FareDetailsType:
         program_id:
     """
 
-    component_no: None | int = field(
-        default=None,
+    component_no: int = field(
         metadata={
             "name": "ComponentNo",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    basis_code: None | str = field(
-        default=None,
+    basis_code: str = field(
         metadata={
             "name": "BasisCode",
             "type": "Attribute",
@@ -45,7 +43,7 @@ class FareDetailsType:
             "min_length": 1,
             "max_length": 15,
             "pattern": r"[A-Z0-9]+(/[A-Z0-9]+)?",
-        },
+        }
     )
     amount: None | Decimal = field(
         default=None,

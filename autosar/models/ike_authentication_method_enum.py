@@ -9,7 +9,7 @@ from .ike_authentication_method_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IkeAuthenticationMethodEnum:
     """
     This enumeration describes the supported IKE authentication methods.
@@ -30,11 +30,10 @@ class IkeAuthenticationMethodEnum:
     class Meta:
         name = "IKE-AUTHENTICATION-METHOD-ENUM"
 
-    value: None | IkeAuthenticationMethodEnumSimple = field(
-        default=None,
+    value: IkeAuthenticationMethodEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

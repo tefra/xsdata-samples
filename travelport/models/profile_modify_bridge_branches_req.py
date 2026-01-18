@@ -8,7 +8,7 @@ from travelport.models.bridge_branch_cmd import BridgeBranchCmd
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileModifyBridgeBranchesReq(BaseReq5):
     """
     Request to add or delete an Agent's Bridge Branch Assignments.

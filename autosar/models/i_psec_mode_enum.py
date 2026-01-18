@@ -7,7 +7,7 @@ from .i_psec_mode_enum_simple import IPsecModeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IPsecModeEnum:
     """
     This enumeration describes the supported IPSec modes.
@@ -28,11 +28,10 @@ class IPsecModeEnum:
     class Meta:
         name = "I-PSEC-MODE-ENUM"
 
-    value: None | IPsecModeEnumSimple = field(
-        default=None,
+    value: IPsecModeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

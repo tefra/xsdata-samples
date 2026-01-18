@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DependencyOnArtifact:
     """
     Dependency on the existence of another artifact, e.g. a library.
@@ -85,14 +85,13 @@ class DependencyOnArtifact:
     class Meta:
         name = "DEPENDENCY-ON-ARTIFACT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DependencyOnArtifact.ShortNameFragments = (
         field(
@@ -199,7 +198,7 @@ class DependencyOnArtifact:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -210,7 +209,7 @@ class DependencyOnArtifact:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -221,7 +220,7 @@ class DependencyOnArtifact:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Usages:
         """
         :ivar usage: Specification for which process step(s) this

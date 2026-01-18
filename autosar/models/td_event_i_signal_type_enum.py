@@ -7,7 +7,7 @@ from .td_event_i_signal_type_enum_simple import TdEventISignalTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventISignalTypeEnum:
     """
     This is used to describe the specific event type of a TDEventISignal.
@@ -28,11 +28,10 @@ class TdEventISignalTypeEnum:
     class Meta:
         name = "TD-EVENT-I-SIGNAL-TYPE-ENUM"
 
-    value: None | TdEventISignalTypeEnumSimple = field(
-        default=None,
+    value: TdEventISignalTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

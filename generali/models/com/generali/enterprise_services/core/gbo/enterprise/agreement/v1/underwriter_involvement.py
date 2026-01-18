@@ -14,14 +14,13 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UnderwriterInvolvement(ContactInvolvement):
-    underwriter_role: None | UnderwriterRoleType = field(
-        default=None,
+    underwriter_role: UnderwriterRoleType = field(
         metadata={
             "name": "UnderwriterRole",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )

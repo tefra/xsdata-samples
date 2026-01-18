@@ -14,23 +14,21 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MaintenanceType:
-    year: None | NumberType = field(
-        default=None,
+    year: NumberType = field(
         metadata={
             "name": "Year",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    type_value: None | MaintenanceTypeEnum = field(
-        default=None,
+    type_value: MaintenanceTypeEnum = field(
         metadata={
             "name": "Type",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )

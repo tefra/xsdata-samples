@@ -13,7 +13,7 @@ from travelport.models.type_account_type_profile_info_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelerGroupInfo1(TypeAccountTypeProfileInfo1):
     """
     Traveler group specific profile information.
@@ -66,15 +66,14 @@ class TravelerGroupInfo1(TypeAccountTypeProfileInfo1):
             "type": "Element",
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     local_language_name: None | str = field(
         default=None,

@@ -25,7 +25,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BuildActionManifest:
     """
     This meta-class represents the ability to specify a manifest for
@@ -118,14 +118,13 @@ class BuildActionManifest:
     class Meta:
         name = "BUILD-ACTION-MANIFEST"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | BuildActionManifest.ShortNameFragments = (
         field(
@@ -276,7 +275,7 @@ class BuildActionManifest:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -287,7 +286,7 @@ class BuildActionManifest:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -298,7 +297,7 @@ class BuildActionManifest:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -327,7 +326,7 @@ class BuildActionManifest:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StartActionRefs:
         start_action_ref: list[
             BuildActionManifest.StartActionRefs.StartActionRef
@@ -340,18 +339,17 @@ class BuildActionManifest:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class StartActionRef(Ref):
-            dest: None | BuildActionSubtypesEnum = field(
-                default=None,
+            dest: BuildActionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TearDownActionRefs:
         tear_down_action_ref: list[
             BuildActionManifest.TearDownActionRefs.TearDownActionRef
@@ -364,18 +362,17 @@ class BuildActionManifest:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TearDownActionRef(Ref):
-            dest: None | BuildActionSubtypesEnum = field(
-                default=None,
+            dest: BuildActionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BuildActions:
         build_action: list[BuildAction] = field(
             default_factory=list,
@@ -386,7 +383,7 @@ class BuildActionManifest:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BuildActionEnvironments:
         build_action_environment: list[BuildActionEnvironment] = field(
             default_factory=list,
@@ -397,7 +394,7 @@ class BuildActionManifest:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DynamicActionRefs:
         dynamic_action_ref: list[
             BuildActionManifest.DynamicActionRefs.DynamicActionRef
@@ -410,13 +407,12 @@ class BuildActionManifest:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DynamicActionRef(Ref):
-            dest: None | BuildActionSubtypesEnum = field(
-                default=None,
+            dest: BuildActionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

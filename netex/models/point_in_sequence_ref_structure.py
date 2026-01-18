@@ -9,6 +9,6 @@ from .ordered_version_of_object_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointInSequenceRefStructure(OrderedVersionOfObjectRefStructure):
     pass

@@ -7,7 +7,7 @@ from .ip_address_keep_enum_simple import IpAddressKeepEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IpAddressKeepEnum:
     """
     Defines the behavior after a dynamic IP address has been assigned.
@@ -28,11 +28,10 @@ class IpAddressKeepEnum:
     class Meta:
         name = "IP-ADDRESS-KEEP-ENUM"
 
-    value: None | IpAddressKeepEnumSimple = field(
-        default=None,
+    value: IpAddressKeepEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

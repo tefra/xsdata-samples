@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.speed_management_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpeedManagement(NetworkManagement):
     """
     Speed management action that is instigated by the network/road

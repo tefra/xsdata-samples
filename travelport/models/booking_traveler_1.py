@@ -25,7 +25,7 @@ from travelport.models.type_structured_address_1 import TypeStructuredAddress1
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingTraveler1:
     """
     A traveler and all their accompanying data.
@@ -83,13 +83,12 @@ class BookingTraveler1:
         name = "BookingTraveler"
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
-    booking_traveler_name: None | BookingTravelerName1 = field(
-        default=None,
+    booking_traveler_name: BookingTravelerName1 = field(
         metadata={
             "name": "BookingTravelerName",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     delivery_info: list[DeliveryInfo1] = field(
         default_factory=list,

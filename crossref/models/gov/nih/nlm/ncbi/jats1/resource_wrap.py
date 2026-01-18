@@ -8,7 +8,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.resource_name import ResourceName
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResourceWrap:
     """
     <div> <h3>Resource Wrap</h3> </div>.
@@ -18,13 +18,12 @@ class ResourceWrap:
         name = "resource-wrap"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    resource_name: None | ResourceName = field(
-        default=None,
+    resource_name: ResourceName = field(
         metadata={
             "name": "resource-name",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     resource_id: list[ResourceId] = field(
         default_factory=list,

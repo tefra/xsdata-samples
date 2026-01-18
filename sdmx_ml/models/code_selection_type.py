@@ -7,7 +7,7 @@ from sdmx_ml.models.member_value_type import MemberValueType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CodeSelectionType:
     """
     CodeSelectionType defines the structure for code selection to be used

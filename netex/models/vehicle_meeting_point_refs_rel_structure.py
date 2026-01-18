@@ -8,17 +8,16 @@ from .vehicle_meeting_point_ref import VehicleMeetingPointRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleMeetingPointRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "vehicleMeetingPointRefs_RelStructure"
 
-    vehicle_meeting_point_ref: None | VehicleMeetingPointRef = field(
-        default=None,
+    vehicle_meeting_point_ref: VehicleMeetingPointRef = field(
         metadata={
             "name": "VehicleMeetingPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

@@ -9,7 +9,7 @@ from travelport.models.type_adjustment_type import TypeAdjustmentType
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ManualFareAdjustment:
     """
     Parameters
@@ -36,29 +36,26 @@ class ManualFareAdjustment:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    applied_on: None | TypeAdjustmentTarget = field(
-        default=None,
+    applied_on: TypeAdjustmentTarget = field(
         metadata={
             "name": "AppliedOn",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    adjustment_type: None | TypeAdjustmentType = field(
-        default=None,
+    adjustment_type: TypeAdjustmentType = field(
         metadata={
             "name": "AdjustmentType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    value: None | Decimal = field(
-        default=None,
+    value: Decimal = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     passenger_ref: None | str = field(
         default=None,

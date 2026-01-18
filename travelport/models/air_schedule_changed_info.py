@@ -7,7 +7,7 @@ from travelport.models.air_pricing_solution import AirPricingSolution
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirScheduleChangedInfo:
     """
     Returned when the requested schedule does not match the host system
@@ -18,11 +18,10 @@ class AirScheduleChangedInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_pricing_solution: None | AirPricingSolution = field(
-        default=None,
+    air_pricing_solution: AirPricingSolution = field(
         metadata={
             "name": "AirPricingSolution",
             "type": "Element",
             "required": True,
-        },
+        }
     )

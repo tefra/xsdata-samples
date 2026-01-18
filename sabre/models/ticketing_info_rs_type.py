@@ -9,7 +9,7 @@ from sabre.models.valid_interline_type import ValidInterlineType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TicketingInfoRsType:
     """
     Extends TicketingInfoType to provide an eTicketNumber.
@@ -65,13 +65,12 @@ class TicketingInfoRsType:
             "type": "Attribute",
         },
     )
-    ticket_type: None | TicketType = field(
-        default=None,
+    ticket_type: TicketType = field(
         metadata={
             "name": "TicketType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     valid_interline: ValidInterlineType = field(
         default=ValidInterlineType.UNKNOWN,

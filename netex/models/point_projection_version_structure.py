@@ -10,7 +10,7 @@ from .projection_version_structure import ProjectionVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointProjectionVersionStructure(ProjectionVersionStructure):
     class Meta:
         name = "PointProjection_VersionStructure"

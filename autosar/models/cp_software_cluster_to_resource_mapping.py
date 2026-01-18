@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CpSoftwareClusterToResourceMapping:
     """
     This meta class maps a service resource to CP Software Clusters.
@@ -93,14 +93,13 @@ class CpSoftwareClusterToResourceMapping:
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-TO-RESOURCE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | CpSoftwareClusterToResourceMapping.ShortNameFragments
@@ -221,7 +220,7 @@ class CpSoftwareClusterToResourceMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -232,7 +231,7 @@ class CpSoftwareClusterToResourceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -243,18 +242,17 @@ class CpSoftwareClusterToResourceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProviderRef(Ref):
-        dest: None | CpSoftwareClusterSubtypesEnum = field(
-            default=None,
+        dest: CpSoftwareClusterSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequesterRefs:
         requester_ref: list[
             CpSoftwareClusterToResourceMapping.RequesterRefs.RequesterRef
@@ -267,24 +265,22 @@ class CpSoftwareClusterToResourceMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RequesterRef(Ref):
-            dest: None | CpSoftwareClusterSubtypesEnum = field(
-                default=None,
+            dest: CpSoftwareClusterSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceResourceRef(Ref):
-        dest: None | CpSoftwareClusterServiceResourceSubtypesEnum = field(
-            default=None,
+        dest: CpSoftwareClusterServiceResourceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

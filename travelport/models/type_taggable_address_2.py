@@ -9,7 +9,7 @@ from travelport.models.type_contact_purpose_2 import TypeContactPurpose2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeTaggableAddress2(TypeAddress2):
     """
     Base type of an address that is taggable.

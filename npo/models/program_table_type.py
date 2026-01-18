@@ -7,7 +7,7 @@ from npo.models.program import Program
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProgramTableType:
     class Meta:
         name = "programTableType"

@@ -10,7 +10,7 @@ from .type_of_fare_contract_entry_ref import TypeOfFareContractEntryRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypesOfFareContractEntryRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfFareContractEntry_RelStructure"

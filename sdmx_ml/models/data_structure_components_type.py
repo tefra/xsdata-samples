@@ -13,7 +13,7 @@ from sdmx_ml.models.measure_list import MeasureList
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataStructureComponentsType(DataStructureComponentsBaseType):
     """
     DataStructureComponentsType describes the structure of the grouping to
@@ -23,14 +23,13 @@ class DataStructureComponentsType(DataStructureComponentsBaseType):
     At a minimum at least one dimension must be defined.
     """
 
-    dimension_list: None | DimensionList = field(
-        default=None,
+    dimension_list: DimensionList = field(
         metadata={
             "name": "DimensionList",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
     group: tuple[Group, ...] = field(
         default_factory=tuple,

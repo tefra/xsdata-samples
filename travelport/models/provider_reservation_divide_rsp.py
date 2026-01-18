@@ -13,28 +13,22 @@ from travelport.models.parent_provider_reservation_info import (
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProviderReservationDivideRsp(BaseRsp1):
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
-    parent_provider_reservation_info: None | ParentProviderReservationInfo = (
-        field(
-            default=None,
-            metadata={
-                "name": "ParentProviderReservationInfo",
-                "type": "Element",
-                "required": True,
-            },
-        )
+    parent_provider_reservation_info: ParentProviderReservationInfo = field(
+        metadata={
+            "name": "ParentProviderReservationInfo",
+            "type": "Element",
+            "required": True,
+        }
     )
-    child_provider_reservation_info: None | ChildProviderReservationInfo = (
-        field(
-            default=None,
-            metadata={
-                "name": "ChildProviderReservationInfo",
-                "type": "Element",
-                "required": True,
-            },
-        )
+    child_provider_reservation_info: ChildProviderReservationInfo = field(
+        metadata={
+            "name": "ChildProviderReservationInfo",
+            "type": "Element",
+            "required": True,
+        }
     )

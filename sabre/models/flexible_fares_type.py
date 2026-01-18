@@ -10,7 +10,7 @@ from sabre.models.passenger_type_quantity_type import PassengerTypeQuantityType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexibleFaresType:
     """
     Attributes:
@@ -29,7 +29,7 @@ class FlexibleFaresType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FareParameters:
         """
         Attributes:
@@ -212,144 +212,132 @@ class FlexibleFaresType:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExcludeRestricted:
-            ind: None | bool = field(
-                default=None,
+            ind: bool = field(
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ResTicketing:
-            ind: None | bool = field(
-                default=None,
+            ind: bool = field(
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MinMaxStay:
-            ind: None | bool = field(
-                default=None,
+            ind: bool = field(
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RefundPenalty:
-            ind: None | bool = field(
-                default=None,
+            ind: bool = field(
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PublicFare:
-            ind: None | bool = field(
-                default=None,
+            ind: bool = field(
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PrivateFare:
-            ind: None | bool = field(
-                default=None,
+            ind: bool = field(
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Cabin:
-            type_value: None | CabinType = field(
-                default=None,
+            type_value: CabinType = field(
                 metadata={
                     "name": "Type",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PassengerType:
             """
             Attributes:
                 code: Specify traveler type code.
             """
 
-            code: None | str = field(
-                default=None,
+            code: str = field(
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
                     "required": True,
                     "min_length": 1,
                     "max_length": 8,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NegotiatedFaresOnly:
-            ind: None | bool = field(
-                default=None,
+            ind: bool = field(
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Xofares:
-            ind: None | bool = field(
-                default=None,
+            ind: bool = field(
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CorporateId:
-            code: None | str = field(
-                default=None,
+            code: str = field(
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[A-Za-z]{3}[0-9]{2}",
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AccountCode:
-            code: None | str = field(
-                default=None,
+            code: str = field(
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
                     "required": True,
                     "min_length": 1,
                     "max_length": 20,
-                },
+                }
             )

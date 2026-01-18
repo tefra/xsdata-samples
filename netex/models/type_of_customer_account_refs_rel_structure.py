@@ -9,7 +9,7 @@ from .type_of_customer_account_ref import TypeOfCustomerAccountRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfCustomerAccountRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfCustomerAccountRefs_RelStructure"

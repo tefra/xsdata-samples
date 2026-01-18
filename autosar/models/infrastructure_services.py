@@ -9,7 +9,7 @@ from .time_synchronization import TimeSynchronization
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InfrastructureServices:
     """
     Defines the network infrastructure services provided or consumed.

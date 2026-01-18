@@ -7,7 +7,7 @@ from travelport.models.type_sub_key_3 import TypeSubKey3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeKeyword3:
     """
     A complexType for keyword information.
@@ -36,14 +36,13 @@ class TypeKeyword3:
             "max_occurs": 99,
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        },
+        }
     )
     number: None | object = field(
         default=None,

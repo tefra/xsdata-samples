@@ -7,7 +7,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OffsetDistance:
     """
     The non negative offset distance from the ALERT-C referenced point to
@@ -21,14 +21,13 @@ class OffsetDistance:
     :ivar offset_distance_extension:
     """
 
-    offset_distance: None | int = field(
-        default=None,
+    offset_distance: int = field(
         metadata={
             "name": "offsetDistance",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     offset_distance_extension: None | ExtensionType = field(
         default=None,

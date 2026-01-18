@@ -9,7 +9,7 @@ from .vehicle_entrance_ref import VehicleEntranceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleEntrancesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicleEntrances_RelStructure"
@@ -20,6 +20,5 @@ class VehicleEntrancesRelStructure(ContainmentAggregationStructure):
             "name": "VehicleEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         },
     )

@@ -8,7 +8,7 @@ from travelport.models.value_details import ValueDetails
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VariableCategoryType:
     """
     Parameters
@@ -39,11 +39,10 @@ class VariableCategoryType:
             "max_occurs": 99,
         },
     )
-    value: None | str = field(
-        default=None,
+    value: str = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

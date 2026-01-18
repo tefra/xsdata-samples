@@ -7,7 +7,7 @@ from .dtc_format_type_enum_simple import DtcFormatTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DtcFormatTypeEnum:
     """
     This enumeration specifies the DTC format.
@@ -28,11 +28,10 @@ class DtcFormatTypeEnum:
     class Meta:
         name = "DTC-FORMAT-TYPE-ENUM"
 
-    value: None | DtcFormatTypeEnumSimple = field(
-        default=None,
+    value: DtcFormatTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

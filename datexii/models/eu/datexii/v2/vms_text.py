@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.vms_text_line_index_vms_text_line import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsText:
     """
     A page of text (comprising one or more ordered lines) that are

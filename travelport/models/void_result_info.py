@@ -9,7 +9,7 @@ from travelport.models.void_result_info_document_type import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VoidResultInfo:
     """
     List of Successful Or Failed void document results.

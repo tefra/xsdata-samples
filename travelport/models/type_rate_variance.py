@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeRateVariance:
     """
     Parameters
@@ -24,27 +24,24 @@ class TypeRateVariance:
     class Meta:
         name = "typeRateVariance"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    value: None | Decimal = field(
-        default=None,
+    value: Decimal = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    apply: None | str = field(
-        default=None,
+    apply: str = field(
         metadata={
             "name": "Apply",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

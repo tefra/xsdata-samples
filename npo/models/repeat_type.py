@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepeatType:
     class Meta:
         name = "repeatType"
@@ -16,11 +16,10 @@ class RepeatType:
             "required": True,
         },
     )
-    is_rerun: None | bool = field(
-        default=None,
+    is_rerun: bool = field(
         metadata={
             "name": "isRerun",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

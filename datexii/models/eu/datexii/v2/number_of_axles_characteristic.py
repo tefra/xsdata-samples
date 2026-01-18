@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NumberOfAxlesCharacteristic:
     """
     Number of axles characteristic of a vehicle.
@@ -22,23 +22,21 @@ class NumberOfAxlesCharacteristic:
     :ivar number_of_axles_characteristic_extension:
     """
 
-    comparison_operator: None | ComparisonOperatorEnum = field(
-        default=None,
+    comparison_operator: ComparisonOperatorEnum = field(
         metadata={
             "name": "comparisonOperator",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    number_of_axles: None | int = field(
-        default=None,
+    number_of_axles: int = field(
         metadata={
             "name": "numberOfAxles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     number_of_axles_characteristic_extension: None | ExtensionType = field(
         default=None,

@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TargetIPduRef:
     """
     Target destination of the referencing mapping.
@@ -64,13 +64,12 @@ class TargetIPduRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetIPduRefInner(Ref):
-        dest: None | PduTriggeringSubtypesEnum = field(
-            default=None,
+        dest: PduTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

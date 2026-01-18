@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.road import Road
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Junction:
     """
     Junction (on a highway), can also be an interchange or if applicable
@@ -37,14 +37,13 @@ class Junction:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    junction_name: None | MultilingualString = field(
-        default=None,
+    junction_name: MultilingualString = field(
         metadata={
             "name": "junctionName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     junction_number: None | str = field(
         default=None,

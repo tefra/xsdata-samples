@@ -8,7 +8,7 @@ from sdmx_ml.models.registration_type import RegistrationType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RegistrationRequestType:
     """
     RegistrationRequestType describes the structure of a single
@@ -23,19 +23,17 @@ class RegistrationRequestType:
         addition, a modification, or a deletion of a registration.
     """
 
-    registration: None | RegistrationType = field(
-        default=None,
+    registration: RegistrationType = field(
         metadata={
             "name": "Registration",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )
-    action: None | ActionType = field(
-        default=None,
+    action: ActionType = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

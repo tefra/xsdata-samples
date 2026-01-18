@@ -9,7 +9,7 @@ from .sign_equipment_version_structure import SignEquipmentVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneralSignStructure(SignEquipmentVersionStructure):
     content: None | MultilingualString = field(
         default=None,

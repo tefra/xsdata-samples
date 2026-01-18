@@ -9,7 +9,7 @@ from .wheelchair_vehicle_equipment_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WheelchairVehicleEquipment(WheelchairVehicleEquipmentVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

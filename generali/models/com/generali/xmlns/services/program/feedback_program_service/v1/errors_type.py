@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ErrorsType:
     error_item: list[ErrorElementType] = field(
         default_factory=list,

@@ -9,7 +9,7 @@ from .diagnostic_clear_event_allowed_behavior_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticClearEventAllowedBehaviorEnum:
     """
     This enumeration defines the possible behavior for clear event allowed.
@@ -30,11 +30,10 @@ class DiagnosticClearEventAllowedBehaviorEnum:
     class Meta:
         name = "DIAGNOSTIC-CLEAR-EVENT-ALLOWED-BEHAVIOR-ENUM"
 
-    value: None | DiagnosticClearEventAllowedBehaviorEnumSimple = field(
-        default=None,
+    value: DiagnosticClearEventAllowedBehaviorEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

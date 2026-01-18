@@ -10,49 +10,41 @@ from travelport.models.universal_record_history_search_req import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordHistorySearchPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: None | UniversalRecordHistorySearchPortTypeServiceInput.Header = (
-        field(
-            default=None,
-            metadata={
-                "name": "Header",
-                "type": "Element",
-            },
-        )
+    header: UniversalRecordHistorySearchPortTypeServiceInput.Header = field(
+        metadata={
+            "name": "Header",
+            "type": "Element",
+        }
     )
-    body: None | UniversalRecordHistorySearchPortTypeServiceInput.Body = field(
-        default=None,
+    body: UniversalRecordHistorySearchPortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Header:
-        supported_versions: None | SupportedVersions = field(
-            default=None,
+        supported_versions: SupportedVersions = field(
             metadata={
                 "name": "SupportedVersions",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        universal_record_history_search_req: (
-            None | UniversalRecordHistorySearchReq
-        ) = field(
-            default=None,
+        universal_record_history_search_req: UniversalRecordHistorySearchReq = field(
             metadata={
                 "name": "UniversalRecordHistorySearchReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+            }
         )

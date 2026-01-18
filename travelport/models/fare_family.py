@@ -7,7 +7,7 @@ from travelport.models.flight_spec import FlightSpec
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareFamily:
     """
     It is a branded Fare for a carrier and given fare basis code.
@@ -34,33 +34,30 @@ class FareFamily:
             "type": "Element",
         },
     )
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
-    label: None | str = field(
-        default=None,
+    label: str = field(
         metadata={
             "name": "Label",
             "type": "Attribute",
             "required": True,
             "min_length": 0,
             "max_length": 32,
-        },
+        }
     )
-    fare_basis: None | str = field(
-        default=None,
+    fare_basis: str = field(
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
             "required": True,
             "max_length": 20,
-        },
+        }
     )
     key: None | str = field(
         default=None,
@@ -69,11 +66,10 @@ class FareFamily:
             "type": "Attribute",
         },
     )
-    version: None | int = field(
-        default=None,
+    version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

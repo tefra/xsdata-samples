@@ -14,7 +14,7 @@ from datexii.models.eu.datexii.v2.vehicle_characteristics import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MeasurementSpecificCharacteristics:
     """
     Characteristics which are specific to an individual measurement type
@@ -70,16 +70,13 @@ class MeasurementSpecificCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    specific_measurement_value_type: None | MeasuredOrDerivedDataTypeEnum = (
-        field(
-            default=None,
-            metadata={
-                "name": "specificMeasurementValueType",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
-            },
-        )
+    specific_measurement_value_type: MeasuredOrDerivedDataTypeEnum = field(
+        metadata={
+            "name": "specificMeasurementValueType",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
+        }
     )
     specific_vehicle_characteristics: None | VehicleCharacteristics = field(
         default=None,

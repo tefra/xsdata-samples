@@ -10,21 +10,20 @@ from .vehicle_sharing_place_assignment_ref import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleSharingPlaceAssignmentRefsRelStructure(
     OneToManyRelationshipStructure
 ):
     class Meta:
         name = "VehicleSharingPlaceAssignmentRefs_RelStructure"
 
-    vehicle_sharing_place_assignment_ref: (
-        None | VehicleSharingPlaceAssignmentRef
-    ) = field(
-        default=None,
-        metadata={
-            "name": "VehicleSharingPlaceAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
-        },
+    vehicle_sharing_place_assignment_ref: VehicleSharingPlaceAssignmentRef = (
+        field(
+            metadata={
+                "name": "VehicleSharingPlaceAssignmentRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "required": True,
+            }
+        )
     )

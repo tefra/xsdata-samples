@@ -7,7 +7,7 @@ from .l_overview_paragraph import LOverviewParagraph
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MultiLanguageOverviewParagraph:
     """
     This is the content of a multilingual paragraph in an overview item.

@@ -11,7 +11,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationEntry:
     """
     Schedule table entry for application messages.
@@ -87,13 +87,12 @@ class ApplicationEntry:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FrameTriggeringRef(Ref):
-        dest: None | LinFrameTriggeringSubtypesEnum = field(
-            default=None,
+        dest: LinFrameTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

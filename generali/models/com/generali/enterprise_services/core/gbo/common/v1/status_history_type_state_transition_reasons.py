@@ -9,7 +9,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StatusHistoryTypeStateTransitionReasons:
     """
     :ivar reason_code: <description xmlns="">The code describing why the

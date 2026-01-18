@@ -9,7 +9,7 @@ from travelport.models.type_fare_break import TypeFareBreak
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirSegmentPricingModifiers:
     """
     Specifies modifiers that a particular segment should be priced in.
@@ -124,7 +124,7 @@ class AirSegmentPricingModifiers:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PermittedBookingCodes:
         booking_code: list[BookingCode] = field(
             default_factory=list,

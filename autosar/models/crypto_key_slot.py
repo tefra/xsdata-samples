@@ -27,7 +27,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CryptoKeySlot:
     """
     This meta-class represents the ability to define a concrete key to be
@@ -120,14 +120,13 @@ class CryptoKeySlot:
     class Meta:
         name = "CRYPTO-KEY-SLOT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | CryptoKeySlot.ShortNameFragments = field(
         default=None,
@@ -268,7 +267,7 @@ class CryptoKeySlot:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -279,7 +278,7 @@ class CryptoKeySlot:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -290,7 +289,7 @@ class CryptoKeySlot:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class KeySlotContentAllowedUsages:
         crypto_key_slot_content_allowed_usage: list[
             CryptoKeySlotContentAllowedUsage

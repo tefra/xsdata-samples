@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModifyTag2:
     """
     Parameters
@@ -27,13 +27,12 @@ class ModifyTag2:
         name = "ModifyTag"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     name: None | str = field(
         default=None,

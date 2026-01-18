@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.tpeg_point_location import TpegPointLocation
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TpegSimplePoint(TpegPointLocation):
     """
     A point on the road network which is not bounded by any other points on
@@ -24,24 +24,20 @@ class TpegSimplePoint(TpegPointLocation):
     :ivar tpeg_simple_point_extension:
     """
 
-    tpeg_simple_point_location_type: (
-        None | TpegLoc01SimplePointLocationSubtypeEnum
-    ) = field(
-        default=None,
+    tpeg_simple_point_location_type: TpegLoc01SimplePointLocationSubtypeEnum = field(
         metadata={
             "name": "tpegSimplePointLocationType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    point: None | TpegPoint = field(
-        default=None,
+    point: TpegPoint = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     tpeg_simple_point_extension: None | ExtensionType = field(
         default=None,

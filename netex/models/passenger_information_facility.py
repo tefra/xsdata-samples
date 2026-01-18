@@ -9,14 +9,13 @@ from .passenger_information_facility_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassengerInformationFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: None | PassengerInformationFacilityEnumeration = field(
-        default=None,
+    value: PassengerInformationFacilityEnumeration = field(
         metadata={
             "required": True,
-        },
+        }
     )

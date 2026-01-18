@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.tpeg_point_descriptor import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TpegJunctionPointDescriptor(TpegPointDescriptor):
     """
     A descriptor for describing a point at a junction on a road network.
@@ -24,16 +24,13 @@ class TpegJunctionPointDescriptor(TpegPointDescriptor):
     :ivar tpeg_junction_point_descriptor_extension:
     """
 
-    tpeg_junction_point_descriptor_type: (
-        None | TpegLoc03JunctionPointDescriptorSubtypeEnum
-    ) = field(
-        default=None,
+    tpeg_junction_point_descriptor_type: TpegLoc03JunctionPointDescriptorSubtypeEnum = field(
         metadata={
             "name": "tpegJunctionPointDescriptorType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     tpeg_junction_point_descriptor_extension: None | ExtensionType = field(
         default=None,

@@ -22,7 +22,7 @@ from sabre.models.validating_carrier_info_type import ValidatingCarrierInfoType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirItineraryPricingInfoType:
     """
     Pricing Information for an Air Itinerary.
@@ -255,7 +255,7 @@ class AirItineraryPricingInfoType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PtcFareBreakdowns:
         ptc_fare_breakdown: list[PtcfareBreakdownType] = field(
             default_factory=list,
@@ -268,7 +268,7 @@ class AirItineraryPricingInfoType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FareInfos:
         """
         Attributes:
@@ -288,7 +288,7 @@ class AirItineraryPricingInfoType:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareInfo:
             """
             Attributes:
@@ -314,8 +314,7 @@ class AirItineraryPricingInfoType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            fare_reference: None | str = field(
-                default=None,
+            fare_reference: str = field(
                 metadata={
                     "name": "FareReference",
                     "type": "Element",
@@ -323,7 +322,7 @@ class AirItineraryPricingInfoType:
                     "required": True,
                     "min_length": 1,
                     "max_length": 8,
-                },
+                }
             )
             rule_info: None | RuleInfoType = field(
                 default=None,
@@ -383,7 +382,7 @@ class AirItineraryPricingInfoType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TpaExtensions:
                 seats_remaining: (
                     None
@@ -439,7 +438,7 @@ class AirItineraryPricingInfoType:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class SeatsRemaining:
                     number: None | int = field(
                         default=None,
@@ -456,7 +455,7 @@ class AirItineraryPricingInfoType:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class Cabin:
                     cabin: str = field(
                         default="Economy",
@@ -466,7 +465,7 @@ class AirItineraryPricingInfoType:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FareNote:
                     fare_type_name: None | str = field(
                         default=None,
@@ -490,7 +489,7 @@ class AirItineraryPricingInfoType:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class Meal:
                     code: None | str = field(
                         default=None,
@@ -500,7 +499,7 @@ class AirItineraryPricingInfoType:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class Rule:
                     type_value: None | str = field(
                         default=None,
@@ -517,7 +516,7 @@ class AirItineraryPricingInfoType:
                         },
                     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpaExtensions:
         """
         Attributes:
@@ -630,7 +629,7 @@ class AirItineraryPricingInfoType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DivideInParty:
             indicator: None | bool = field(
                 default=None,
@@ -640,7 +639,7 @@ class AirItineraryPricingInfoType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PromoOffer:
             """
             Attributes:
@@ -674,7 +673,7 @@ class AirItineraryPricingInfoType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareNote:
             """
             Attributes:
@@ -709,7 +708,7 @@ class AirItineraryPricingInfoType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PromoRedemption:
             promo_id: None | str = field(
                 default=None,
@@ -733,7 +732,7 @@ class AirItineraryPricingInfoType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Rule:
             """
             Attributes:
@@ -757,7 +756,7 @@ class AirItineraryPricingInfoType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MultipleTravelerGroups:
             group_number: None | int = field(
                 default=None,
@@ -774,7 +773,7 @@ class AirItineraryPricingInfoType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AncillaryFeeGroups:
             """
             Attributes:
@@ -800,7 +799,7 @@ class AirItineraryPricingInfoType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class AncillaryFeeGroup:
                 """
                 Attributes:
@@ -818,21 +817,19 @@ class AirItineraryPricingInfoType:
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                     },
                 )
-                code: None | object = field(
-                    default=None,
+                code: object = field(
                     metadata={
                         "name": "Code",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
-                name: None | object = field(
-                    default=None,
+                name: object = field(
                     metadata={
                         "name": "Name",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
                 message: None | object = field(
                     default=None,
@@ -842,7 +839,7 @@ class AirItineraryPricingInfoType:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Legs:
             leg: list[AirItineraryPricingInfoType.TpaExtensions.Legs.Leg] = (
                 field(
@@ -856,7 +853,7 @@ class AirItineraryPricingInfoType:
                 )
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Leg:
                 """
                 Attributes:
@@ -942,7 +939,7 @@ class AirItineraryPricingInfoType:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class Segment:
                     """
                     Attributes:

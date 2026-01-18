@@ -13,7 +13,7 @@ from .someip_sd_client_event_group_timing_config_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipRequiredEventGroup:
     """
     The meta-class represents the ability to configure ServiceInstance
@@ -45,14 +45,13 @@ class SomeipRequiredEventGroup:
     class Meta:
         name = "SOMEIP-REQUIRED-EVENT-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SomeipRequiredEventGroup.ShortNameFragments
@@ -98,7 +97,7 @@ class SomeipRequiredEventGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -109,24 +108,22 @@ class SomeipRequiredEventGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventGroupRef(Ref):
-        dest: None | SomeipEventGroupSubtypesEnum = field(
-            default=None,
+        dest: SomeipEventGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SdClientEventGroupTimingConfigRef(Ref):
-        dest: None | SomeipSdClientEventGroupTimingConfigSubtypesEnum = field(
-            default=None,
+        dest: SomeipSdClientEventGroupTimingConfigSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

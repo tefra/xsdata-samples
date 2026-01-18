@@ -7,7 +7,7 @@ from sdmx_ml.models.registration_status_type import RegistrationStatusType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SubmitRegistrationsResponseType:
     """
     SubmitRegistrationsResponseType describes the structure of a

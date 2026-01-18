@@ -10,7 +10,7 @@ from .display_assignment_ref import DisplayAssignmentRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DisplayAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "displayAssignments_RelStructure"

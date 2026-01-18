@@ -7,7 +7,7 @@ from .show_resource_page_enum_simple import ShowResourcePageEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShowResourcePageEnum:
     """
     This enumerator specifies if the page numer of the reference target
@@ -29,11 +29,10 @@ class ShowResourcePageEnum:
     class Meta:
         name = "SHOW-RESOURCE-PAGE-ENUM"
 
-    value: None | ShowResourcePageEnumSimple = field(
-        default=None,
+    value: ShowResourcePageEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

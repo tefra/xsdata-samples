@@ -35,7 +35,7 @@ from .udp_checksum_calculation_enum import UdpChecksumCalculationEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SocketAddress:
     """
     This meta-class represents a socket address towards the rest of the
@@ -149,14 +149,13 @@ class SocketAddress:
     class Meta:
         name = "SOCKET-ADDRESS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SocketAddress.ShortNameFragments = field(
         default=None,
@@ -363,7 +362,7 @@ class SocketAddress:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -374,7 +373,7 @@ class SocketAddress:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -385,40 +384,37 @@ class SocketAddress:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AllowedIPv6ExtHeadersRef(Ref):
-        dest: None | IPv6ExtHeaderFilterListSubtypesEnum = field(
-            default=None,
+        dest: IPv6ExtHeaderFilterListSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AllowedTcpOptionsRef(Ref):
-        dest: None | TcpOptionFilterListSubtypesEnum = field(
-            default=None,
+        dest: TcpOptionFilterListSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConnectorRef(Ref):
-        dest: None | EthernetCommunicationConnectorSubtypesEnum = field(
-            default=None,
+        dest: EthernetCommunicationConnectorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MulticastConnectorRefs:
         multicast_connector_ref: list[
             SocketAddress.MulticastConnectorRefs.MulticastConnectorRef
@@ -431,18 +427,17 @@ class SocketAddress:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MulticastConnectorRef(Ref):
-            dest: None | EthernetCommunicationConnectorSubtypesEnum = field(
-                default=None,
+            dest: EthernetCommunicationConnectorSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StaticSocketConnections:
         static_socket_connection: list[StaticSocketConnection] = field(
             default_factory=list,

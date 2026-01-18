@@ -7,7 +7,7 @@ from travelport.models.type_back_office import TypeBackOffice
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BackOfficeHandOff:
     """
     Allows an agency to select the back office documents and also route to
@@ -28,13 +28,12 @@ class BackOfficeHandOff:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    type_value: None | TypeBackOffice = field(
-        default=None,
+    type_value: TypeBackOffice = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     location: None | str = field(
         default=None,

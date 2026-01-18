@@ -10,19 +10,18 @@ from .zone_ref_structure import ZoneRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ZoneProjectionVersionStructure(ProjectionVersionStructure):
     class Meta:
         name = "ZoneProjection_VersionStructure"
 
-    projected_zone_ref: None | ZoneRefStructure = field(
-        default=None,
+    projected_zone_ref: ZoneRefStructure = field(
         metadata={
             "name": "ProjectedZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     project_to_zone_ref: None | ZoneRefStructure = field(
         default=None,

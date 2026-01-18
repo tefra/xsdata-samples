@@ -10,7 +10,7 @@ from .requestor_ref import RequestorRef
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestStructure(AuthenticatedRequestStructure):
     address: None | str = field(
         default=None,
@@ -20,14 +20,13 @@ class RequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    requestor_ref: None | RequestorRef = field(
-        default=None,
+    requestor_ref: RequestorRef = field(
         metadata={
             "name": "RequestorRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        },
+        }
     )
     message_identifier: None | MessageQualifierStructure = field(
         default=None,

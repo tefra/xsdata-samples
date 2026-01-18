@@ -17,7 +17,7 @@ from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinearWithinLinearElement:
     """
     A linear section along a linear element where the linear element is
@@ -80,32 +80,29 @@ class LinearWithinLinearElement:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    linear_element: None | LinearElement = field(
-        default=None,
+    linear_element: LinearElement = field(
         metadata={
             "name": "linearElement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    from_point: None | DistanceAlongLinearElement = field(
-        default=None,
+    from_point: DistanceAlongLinearElement = field(
         metadata={
             "name": "fromPoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    to_point: None | DistanceAlongLinearElement = field(
-        default=None,
+    to_point: DistanceAlongLinearElement = field(
         metadata={
             "name": "toPoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     linear_within_linear_element_extension: None | ExtensionType = field(
         default=None,

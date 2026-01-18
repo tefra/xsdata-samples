@@ -9,7 +9,7 @@ from .group_of_link_sequences_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupOfLinkSequences(GroupOfLinkSequencesVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

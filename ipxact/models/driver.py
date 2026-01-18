@@ -7,7 +7,7 @@ from ipxact.models.driver_type import DriverType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Driver(DriverType):
     """
     Wire port driver element.

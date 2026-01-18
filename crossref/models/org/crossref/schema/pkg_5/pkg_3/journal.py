@@ -15,7 +15,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.journal_metadata import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Journal:
     """
     Container for all information about a single journal and the volumes,
@@ -31,12 +31,11 @@ class Journal:
         name = "journal"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    journal_metadata: None | JournalMetadata = field(
-        default=None,
+    journal_metadata: JournalMetadata = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     journal_issue: None | JournalIssue = field(
         default=None,

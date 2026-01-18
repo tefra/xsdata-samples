@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeNativeSearchModifier:
     """
     Parameters
@@ -24,13 +24,12 @@ class TypeNativeSearchModifier:
             "required": True,
         },
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )

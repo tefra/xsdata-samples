@@ -7,7 +7,7 @@ from .restricted_manoeuvre_ref_structure import RestrictedManoeuvreRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RestrictedManoeuvreRef(RestrictedManoeuvreRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

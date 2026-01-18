@@ -8,7 +8,7 @@ from .time_sync_server_configuration import TimeSyncServerConfiguration
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSynchronization:
     """
     Defines the servers / clients in a time synchronised network.

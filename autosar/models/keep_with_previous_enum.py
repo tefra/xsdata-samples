@@ -7,7 +7,7 @@ from .keep_with_previous_enum_simple import KeepWithPreviousEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class KeepWithPreviousEnum:
     """
     This enumerator specifies a page break policy by controlling blocks
@@ -29,11 +29,10 @@ class KeepWithPreviousEnum:
     class Meta:
         name = "KEEP-WITH-PREVIOUS-ENUM"
 
-    value: None | KeepWithPreviousEnumSimple = field(
-        default=None,
+    value: KeepWithPreviousEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

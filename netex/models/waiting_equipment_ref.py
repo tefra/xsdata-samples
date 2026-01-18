@@ -7,7 +7,7 @@ from .waiting_equipment_ref_structure import WaitingEquipmentRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WaitingEquipmentRef(WaitingEquipmentRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

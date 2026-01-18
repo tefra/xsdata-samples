@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IdsCommonElementRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -66,13 +66,12 @@ class IdsCommonElementRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IdsCommonElementRef(Ref):
-        dest: None | IdsCommonElementSubtypesEnum = field(
-            default=None,
+        dest: IdsCommonElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

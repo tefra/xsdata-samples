@@ -7,7 +7,7 @@ from .show_resource_number_enum_simple import ShowResourceNumberEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShowResourceNumberEnum:
     """
     This enumerator specifies if the number (e.g. chapter number) of the
@@ -29,11 +29,10 @@ class ShowResourceNumberEnum:
     class Meta:
         name = "SHOW-RESOURCE-NUMBER-ENUM"
 
-    value: None | ShowResourceNumberEnumSimple = field(
-        default=None,
+    value: ShowResourceNumberEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

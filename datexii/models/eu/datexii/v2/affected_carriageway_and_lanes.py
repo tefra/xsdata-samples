@@ -9,7 +9,7 @@ from datexii.models.eu.datexii.v2.lane_enum import LaneEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AffectedCarriagewayAndLanes:
     """
     Supplementary positional information which details carriageway and lane
@@ -30,13 +30,12 @@ class AffectedCarriagewayAndLanes:
     :ivar affected_carriageway_and_lanes_extension:
     """
 
-    carriageway: None | CarriagewayEnum = field(
-        default=None,
+    carriageway: CarriagewayEnum = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     lane: list[LaneEnum] = field(
         default_factory=list,

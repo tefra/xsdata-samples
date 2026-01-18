@@ -10,7 +10,7 @@ from travelport.models.type_profile_type_3 import TypeProfileType3
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileHistory1:
     """
     The profile history.
@@ -53,29 +53,26 @@ class ProfileHistory1:
             "type": "Element",
         },
     )
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_type: None | TypeProfileType3 = field(
-        default=None,
+    profile_type: TypeProfileType3 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_name: None | object = field(
-        default=None,
+    profile_name: object = field(
         metadata={
             "name": "ProfileName",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     created_by_agent_id: None | int = field(
         default=None,

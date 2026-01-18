@@ -14,7 +14,7 @@ from .vehicle_sharing_ref import VehicleSharingRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingEntranceForVehiclesVersionStructure(SiteEntranceVersionStructure):
     class Meta:
         name = "ParkingEntranceForVehicles__VersionStructure"

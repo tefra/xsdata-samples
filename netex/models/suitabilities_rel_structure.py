@@ -11,7 +11,7 @@ from .suitability import Suitability
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SuitabilitiesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "suitabilities_RelStructure"

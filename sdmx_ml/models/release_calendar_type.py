@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ReleaseCalendarType:
     """
     ReleaseCalendarType describes information about the timing of releases
@@ -21,30 +21,27 @@ class ReleaseCalendarType:
         data may be deemed late.
     """
 
-    periodicity: None | str = field(
-        default=None,
+    periodicity: str = field(
         metadata={
             "name": "Periodicity",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
-    offset: None | str = field(
-        default=None,
+    offset: str = field(
         metadata={
             "name": "Offset",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
-    tolerance: None | str = field(
-        default=None,
+    tolerance: str = field(
         metadata={
             "name": "Tolerance",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )

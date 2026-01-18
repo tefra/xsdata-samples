@@ -12,7 +12,7 @@ from travelport.models.type_passenger_type_1 import TypePassengerType1
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailPricingInfo:
     """
     Per traveler type pricing breakdown.
@@ -111,13 +111,12 @@ class RailPricingInfo:
             "max_occurs": 999,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     exchange_amount: None | str = field(
         default=None,

@@ -7,7 +7,7 @@ from travelport.models.base_req_4 import BaseReq4
 __NAMESPACE__ = "http://www.travelport.com/schema/terminal_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreateTerminalSessionReq(BaseReq4):
     """
     Use this request to create a new session If you do not explicitly close

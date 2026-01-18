@@ -7,7 +7,7 @@ from travelport.models.base_hotel_search_rsp import BaseHotelSearchRsp
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelSearchAvailabilityRsp(BaseHotelSearchRsp):
     """
     Hotel availablity search response.

@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContactInvolvement(ContactInvolvementContactInvolvement):
     contact_involvement_type: None | ContactInvolvementEnum = field(
         default=None,

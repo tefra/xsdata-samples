@@ -16,7 +16,7 @@ from datexii.models.eu.datexii.v2.vms_supplementary_panel_characteristics import
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsPictogramDisplayCharacteristics:
     """
     Characteristics specific to the pictogram display area(s) on the VMS

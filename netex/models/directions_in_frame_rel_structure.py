@@ -9,7 +9,7 @@ from .direction import Direction
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DirectionsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "directionsInFrame_RelStructure"

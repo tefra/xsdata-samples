@@ -21,7 +21,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FloatsGroup:
     """
     <div> <h3>Floats Group</h3> </div>.

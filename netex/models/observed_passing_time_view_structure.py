@@ -12,7 +12,7 @@ from .passing_time_view_structure import PassingTimeViewStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ObservedPassingTimeViewStructure(PassingTimeViewStructure):
     class Meta:
         name = "ObservedPassingTime_ViewStructure"
@@ -90,56 +90,50 @@ class ObservedPassingTimeViewStructure(PassingTimeViewStructure):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ActualArrivalTime:
-        value: None | XmlTime = field(
-            default=None,
+        value: XmlTime = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArrivalDayOffset:
-        value: None | int = field(
-            default=None,
+        value: int = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ActualDepartureTime:
-        value: None | XmlTime = field(
-            default=None,
+        value: XmlTime = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DepartureDayOffset:
-        value: None | int = field(
-            default=None,
+        value: int = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ActualNonstopPassingTime:
-        value: None | XmlTime = field(
-            default=None,
+        value: XmlTime = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PassingTimeDayOffset:
-        value: None | int = field(
-            default=None,
+        value: int = field(
             metadata={
                 "required": True,
-            },
+            }
         )

@@ -9,7 +9,7 @@ from .distribution_channel_ref_structure_element import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DistributionChannelRef(DistributionChannelRefStructureElement):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

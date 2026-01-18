@@ -8,7 +8,7 @@ from sdmx_ml.models.member_selection_type import MemberSelectionType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataAttributeValueSetType(MemberSelectionType):
     """
     MetadataAttributeValueSetType defines the structure for providing

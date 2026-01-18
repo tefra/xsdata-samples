@@ -9,7 +9,7 @@ from .vehicle_position_alignment import VehiclePositionAlignment
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehiclePositionAlignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehiclePositionAlignments_RelStructure"

@@ -12,7 +12,7 @@ from generali.models.com.generali.enterprise_services.core.gbs.enterprise.organi
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgreementInterfaceNotifyAgreementOutputBody:
     class Meta:
         global_type = False

@@ -14,7 +14,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortDefinedArgumentBlueprint:
     """
     This class describes a Blueprint of a PortDefinedArgument which needs
@@ -82,13 +82,12 @@ class PortDefinedArgumentBlueprint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ValueTypeRef(Ref):
-        dest: None | ImplementationDataTypeSubtypesEnum = field(
-            default=None,
+        dest: ImplementationDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

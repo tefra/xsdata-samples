@@ -9,7 +9,7 @@ from travelport.models.payment_1 import Payment1
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailRefundRsp(BaseRsp1):
     """
     Returns rail cancel information.

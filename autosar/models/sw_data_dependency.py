@@ -8,7 +8,7 @@ from .sw_data_dependency_args import SwDataDependencyArgs
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwDataDependency:
     """
     This element describes the interdependencies of data objects, e.g.

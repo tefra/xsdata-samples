@@ -7,14 +7,13 @@ from .assistance_facility_enumeration import AssistanceFacilityEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AssistanceFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: None | AssistanceFacilityEnumeration = field(
-        default=None,
+    value: AssistanceFacilityEnumeration = field(
         metadata={
             "required": True,
-        },
+        }
     )

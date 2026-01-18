@@ -9,7 +9,7 @@ from .diagnostic_occurrence_counter_processing_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticOccurrenceCounterProcessingEnum:
     """
     The occurrence counter triggering types.
@@ -30,11 +30,10 @@ class DiagnosticOccurrenceCounterProcessingEnum:
     class Meta:
         name = "DIAGNOSTIC-OCCURRENCE-COUNTER-PROCESSING-ENUM"
 
-    value: None | DiagnosticOccurrenceCounterProcessingEnumSimple = field(
-        default=None,
+    value: DiagnosticOccurrenceCounterProcessingEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

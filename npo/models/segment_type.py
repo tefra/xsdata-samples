@@ -11,7 +11,7 @@ from npo.models.segment_type_enum import SegmentTypeEnum
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SegmentType(BaseMediaType):
     class Meta:
         name = "segmentType"
@@ -24,16 +24,14 @@ class SegmentType(BaseMediaType):
             "namespace": "urn:vpro:media:2009",
         },
     )
-    start: None | XmlDuration = field(
-        default=None,
+    start: XmlDuration = field(
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "required": True,
-        },
+        }
     )
-    mid_ref: None | str = field(
-        default=None,
+    mid_ref: str = field(
         metadata={
             "name": "midRef",
             "type": "Attribute",
@@ -41,21 +39,19 @@ class SegmentType(BaseMediaType):
             "min_length": 4,
             "max_length": 255,
             "pattern": r"[ \.a-zA-Z0-9_-]+",
-        },
+        }
     )
-    urn_ref: None | str = field(
-        default=None,
+    urn_ref: str = field(
         metadata={
             "name": "urnRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    type_value: None | SegmentTypeEnum = field(
-        default=None,
+    type_value: SegmentTypeEnum = field(
         metadata={
             "name": "type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from .t_error import TError
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Error(TError):
     class Meta:
         name = "error"

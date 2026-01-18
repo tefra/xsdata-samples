@@ -24,7 +24,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucModuleConfigurationValues:
     """
     Head of the configuration of one Module.
@@ -130,14 +130,13 @@ class EcucModuleConfigurationValues:
     class Meta:
         name = "ECUC-MODULE-CONFIGURATION-VALUES"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | EcucModuleConfigurationValues.ShortNameFragments
@@ -278,7 +277,7 @@ class EcucModuleConfigurationValues:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -289,7 +288,7 @@ class EcucModuleConfigurationValues:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -300,29 +299,27 @@ class EcucModuleConfigurationValues:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DefinitionRef(Ref):
-        dest: None | EcucModuleDefSubtypesEnum = field(
-            default=None,
+        dest: EcucModuleDefSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModuleDescriptionRef(Ref):
-        dest: None | BswImplementationSubtypesEnum = field(
-            default=None,
+        dest: BswImplementationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Containers:
         ecuc_container_value: list[EcucContainerValue] = field(
             default_factory=list,

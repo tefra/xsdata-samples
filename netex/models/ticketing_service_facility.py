@@ -9,14 +9,13 @@ from .ticketing_service_facility_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TicketingServiceFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: None | TicketingServiceFacilityEnumeration = field(
-        default=None,
+    value: TicketingServiceFacilityEnumeration = field(
         metadata={
             "required": True,
-        },
+        }
     )

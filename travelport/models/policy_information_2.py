@@ -7,7 +7,7 @@ from travelport.models.type_segment_policy import TypeSegmentPolicy
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PolicyInformation2:
     """
     Policy information associated with SavedTrip.
@@ -58,11 +58,10 @@ class PolicyInformation2:
             "max_occurs": 999,
         },
     )
-    booking_traveler_ref: None | str = field(
-        default=None,
+    booking_traveler_ref: str = field(
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -8,7 +8,7 @@ from travelport.models.override_pcc_3 import OverridePcc3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseReq3(BaseCoreReq3):
     class Meta:
         name = "BaseReq"

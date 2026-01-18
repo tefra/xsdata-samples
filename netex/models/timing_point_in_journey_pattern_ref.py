@@ -9,7 +9,7 @@ from .timing_point_in_journey_pattern_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimingPointInJourneyPatternRef(TimingPointInJourneyPatternRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

@@ -7,7 +7,7 @@ from .http_accept_encoding_enum import HttpAcceptEncodingEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HttpAcceptEncoding:
     """
     This meta-class represents the ability to specify the accept-encoding

@@ -7,17 +7,16 @@ from tpdb.models.type_mod import Type
 from tpdb.models.var import Var
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LhsFunapp:
     class Meta:
         global_type = False
 
-    name: None | Name = field(
-        default=None,
+    name: Name = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     arg: list[LhsFunappArg] = field(
         default_factory=list,
@@ -27,7 +26,7 @@ class LhsFunapp:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LhsLambda:
     """
     :ivar var:
@@ -49,13 +48,12 @@ class LhsLambda:
             "max_occurs": 2,
         },
     )
-    type_value: None | Type = field(
-        default=None,
+    type_value: Type = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     funapp: None | LhsFunapp = field(
         default=None,
@@ -78,7 +76,7 @@ class LhsLambda:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LhsApplication:
     """
     :ivar funapp:
@@ -130,7 +128,7 @@ class LhsApplication:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LhsFunappArg:
     """
     :ivar funapp:

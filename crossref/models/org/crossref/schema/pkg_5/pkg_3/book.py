@@ -21,7 +21,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.content_item import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Book:
     """
     Container for all information about a single book.
@@ -55,10 +55,9 @@ class Book:
             "type": "Element",
         },
     )
-    book_type: None | BookBookType = field(
-        default=None,
+    book_type: BookBookType = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

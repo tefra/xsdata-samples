@@ -8,7 +8,7 @@ from npo.models.color_type import ColorType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VideoAttributesType:
     class Meta:
         name = "videoAttributesType"

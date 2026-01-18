@@ -25,7 +25,7 @@ from travelport.models.type_passenger_type_1 import TypePassengerType1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirFareDisplayReq(BaseReq1):
     """
     Request to display a tariff for based on origin, destination, and other
@@ -168,35 +168,32 @@ class AirFareDisplayReq(BaseReq1):
             "type": "Element",
         },
     )
-    origin: None | str = field(
-        default=None,
+    origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    destination: None | str = field(
-        default=None,
+    destination: str = field(
         metadata={
             "name": "Destination",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
     include_mile_route_information: None | TypeMileOrRouteBasedFare = field(
         default=None,

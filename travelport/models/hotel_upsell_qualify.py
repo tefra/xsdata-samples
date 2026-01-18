@@ -8,7 +8,7 @@ from travelport.models.type_element_status_1 import TypeElementStatus1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelUpsellQualify:
     """
     Qualify data of Hotel against which Hotel property details search is
@@ -50,14 +50,13 @@ class HotelUpsellQualify:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    hotel_chain_code: None | str = field(
-        default=None,
+    hotel_chain_code: str = field(
         metadata={
             "name": "HotelChainCode",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
     hotel_code: None | str = field(
         default=None,
@@ -83,23 +82,21 @@ class HotelUpsellQualify:
             "type": "Attribute",
         },
     )
-    effective_date: None | str = field(
-        default=None,
+    effective_date: str = field(
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        },
+        }
     )
-    expiration_date: None | str = field(
-        default=None,
+    expiration_date: str = field(
         metadata={
             "name": "ExpirationDate",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        },
+        }
     )
     key: None | str = field(
         default=None,

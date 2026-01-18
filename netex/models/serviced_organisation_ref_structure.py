@@ -7,6 +7,6 @@ from .other_organisation_ref_structure import OtherOrganisationRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServicedOrganisationRefStructure(OtherOrganisationRefStructure):
     pass

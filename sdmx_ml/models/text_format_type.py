@@ -11,7 +11,7 @@ from sdmx_ml.models.sentinel_value_type import SentinelValueType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TextFormatType:
     """
     TextFormatType defines the information for describing a full range of

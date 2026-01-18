@@ -8,7 +8,7 @@ from travelport.models.file_finishing_info_1 import FileFinishingInfo1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordCancelReq(BaseReq1):
     """
     Request to Cancel an Universal Record.
@@ -32,21 +32,19 @@ class UniversalRecordCancelReq(BaseReq1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    universal_record_locator_code: None | str = field(
-        default=None,
+    universal_record_locator_code: str = field(
         metadata={
             "name": "UniversalRecordLocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
-    version: None | int = field(
-        default=None,
+    version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

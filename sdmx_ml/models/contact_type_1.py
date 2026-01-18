@@ -9,7 +9,7 @@ from sdmx_ml.models.text_type import TextType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ContactType1:
     """
     ContactType describes the structure of a contact's details.
@@ -100,47 +100,42 @@ class ContactType1:
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Telephone:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Fax:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class X400:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Uri:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Email:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
-            },
+            }
         )

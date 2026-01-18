@@ -7,7 +7,7 @@ from .discovery_technology_enum_simple import DiscoveryTechnologyEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiscoveryTechnologyEnum:
     """
     Discovery technology information.
@@ -28,11 +28,10 @@ class DiscoveryTechnologyEnum:
     class Meta:
         name = "DISCOVERY-TECHNOLOGY-ENUM"
 
-    value: None | DiscoveryTechnologyEnumSimple = field(
-        default=None,
+    value: DiscoveryTechnologyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

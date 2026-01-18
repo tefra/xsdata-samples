@@ -9,7 +9,7 @@ from sdmx_ml.models.user_defined_operator_scheme_base_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UserDefinedOperatorSchemeType(UserDefinedOperatorSchemeBaseType):
     """
     UserDefinedOperatorSchemeType defines a collection of user defined

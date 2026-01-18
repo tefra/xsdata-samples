@@ -19,7 +19,7 @@ from .via_type_enumeration import ViaTypeEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ViaVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "Via_VersionedChildStructure"

@@ -7,7 +7,7 @@ from travelport.models.base_hotel_search_req import BaseHotelSearchReq
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelSearchAvailabilityReq(BaseHotelSearchReq):
     """
     Request to search for hotel availability.

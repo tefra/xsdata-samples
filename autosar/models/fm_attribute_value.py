@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FmAttributeValue:
     """
     This defines a value for the attribute that is referred to in the role
@@ -65,13 +65,12 @@ class FmAttributeValue:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DefinitionRef(Ref):
-        dest: None | FmAttributeDefSubtypesEnum = field(
-            default=None,
+        dest: FmAttributeDefSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

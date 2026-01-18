@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TpegPointLocation:
     """
     A single point on the road network defined by a TPEG-Loc structure and
@@ -18,14 +18,13 @@ class TpegPointLocation:
     :ivar tpeg_point_location_extension:
     """
 
-    tpeg_direction: None | DirectionEnum = field(
-        default=None,
+    tpeg_direction: DirectionEnum = field(
         metadata={
             "name": "tpegDirection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     tpeg_point_location_extension: None | ExtensionType = field(
         default=None,

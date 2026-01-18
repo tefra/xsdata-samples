@@ -10,7 +10,7 @@ from .swc_to_swc_operation_arguments_direction_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwcToSwcOperationArguments:
     """
     The SwcToSwcOperationArguments describes the information (client server
@@ -76,7 +76,7 @@ class SwcToSwcOperationArguments:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OperationIrefs:
         operation_iref: list[OperationInSystemInstanceRef] = field(
             default_factory=list,

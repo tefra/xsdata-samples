@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.obstruction import Obstruction
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnvironmentalObstruction(Obstruction):
     """
     An obstruction on the road resulting from an environmental cause.
@@ -29,16 +29,13 @@ class EnvironmentalObstruction(Obstruction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    environmental_obstruction_type: None | EnvironmentalObstructionTypeEnum = (
-        field(
-            default=None,
-            metadata={
-                "name": "environmentalObstructionType",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
-            },
-        )
+    environmental_obstruction_type: EnvironmentalObstructionTypeEnum = field(
+        metadata={
+            "name": "environmentalObstructionType",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
+        }
     )
     environmental_obstruction_extension: None | ExtensionType = field(
         default=None,

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class NotificationUrltype:
     """
     NotificationURLType describes the structure of an http or email

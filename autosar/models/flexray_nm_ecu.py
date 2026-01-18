@@ -7,7 +7,7 @@ from .boolean import Boolean
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayNmEcu:
     """
     FlexRay specific attributes.

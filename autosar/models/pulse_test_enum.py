@@ -7,7 +7,7 @@ from .pulse_test_enum_simple import PulseTestEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PulseTestEnum:
     """
     This element indicates to the connected Actuator Software component
@@ -30,11 +30,10 @@ class PulseTestEnum:
     class Meta:
         name = "PULSE-TEST-ENUM"
 
-    value: None | PulseTestEnumSimple = field(
-        default=None,
+    value: PulseTestEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -10,7 +10,7 @@ from npo.models.pages_search_type import PagesSearchType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PageRelationFacetListType(AbstractFacetType):
     class Meta:
         name = "pageRelationFacetListType"

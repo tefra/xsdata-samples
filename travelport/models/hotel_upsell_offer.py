@@ -8,7 +8,7 @@ from travelport.models.type_element_status_1 import TypeElementStatus1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelUpsellOffer:
     """
     Offer data of Hotel which is used to send a Hotel Upsell request and
@@ -42,13 +42,12 @@ class HotelUpsellOffer:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    rate_plan_type: None | str = field(
-        default=None,
+    rate_plan_type: str = field(
         metadata={
             "name": "RatePlanType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     key: None | str = field(
         default=None,

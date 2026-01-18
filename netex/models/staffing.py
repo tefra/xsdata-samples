@@ -7,14 +7,13 @@ from .staffing_enumeration import StaffingEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Staffing:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: None | StaffingEnumeration = field(
-        default=None,
+    value: StaffingEnumeration = field(
         metadata={
             "required": True,
-        },
+        }
     )

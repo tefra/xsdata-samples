@@ -12,7 +12,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.charact
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CharacteristicType(BaseSimpleComponentType):
     """
     <description xmlns="">A characteristic, a name and value.
@@ -21,12 +21,11 @@ class CharacteristicType(BaseSimpleComponentType):
     GBytes".</description>.
     """
 
-    values: None | CharacteristicTypeValues = field(
-        default=None,
+    values: CharacteristicTypeValues = field(
         metadata={
             "name": "Values",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )

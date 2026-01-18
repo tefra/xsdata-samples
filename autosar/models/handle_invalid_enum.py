@@ -7,7 +7,7 @@ from .handle_invalid_enum_simple import HandleInvalidEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HandleInvalidEnum:
     """
     Strategies of handling the reception of invalidValue.
@@ -28,11 +28,10 @@ class HandleInvalidEnum:
     class Meta:
         name = "HANDLE-INVALID-ENUM"
 
-    value: None | HandleInvalidEnumSimple = field(
-        default=None,
+    value: HandleInvalidEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

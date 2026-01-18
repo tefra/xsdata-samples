@@ -7,7 +7,7 @@ from travelport.models.booking_traveler_1 import BookingTraveler1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UpdateTraveler:
     """
     Container for Travelers or its contents to be updated.

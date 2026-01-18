@@ -10,7 +10,7 @@ from .service_alteration_enumeration import ServiceAlterationEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NormalDatedVehicleJourneyVersionStructure(
     DatedVehicleJourneyVersionStructure
 ):

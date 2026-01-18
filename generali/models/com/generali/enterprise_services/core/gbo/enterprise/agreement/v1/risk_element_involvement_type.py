@@ -29,16 +29,15 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RiskElementInvolvementType(RiskInvolvement):
-    insured_risk_element: None | RiskElementRoleType = field(
-        default=None,
+    insured_risk_element: RiskElementRoleType = field(
         metadata={
             "name": "InsuredRiskElement",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     validity: None | TimePeriodType = field(
         default=None,

@@ -12,7 +12,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.year import Year
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateT:
     class Meta:
         name = "date_t"
@@ -31,13 +31,12 @@ class DateT:
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    year: None | Year = field(
-        default=None,
+    year: Year = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
             "required": True,
-        },
+        }
     )
     media_type: DateTMediaType = field(
         default=DateTMediaType.PRINT,

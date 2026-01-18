@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.operation_status_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingEquipmentOrServiceFacilityStatus:
     """
     The number of E&amp;S can be overridden here (for example during

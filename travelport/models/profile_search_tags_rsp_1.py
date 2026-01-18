@@ -8,7 +8,7 @@ from travelport.models.tag_1 import Tag1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileSearchTagsRsp1(BaseRsp2):
     """
     Response with all the tags for the agency.

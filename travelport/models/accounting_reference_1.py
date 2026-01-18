@@ -7,7 +7,7 @@ from travelport.models.type_key_element_1 import TypeKeyElement1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccountingReference1(TypeKeyElement1):
     """
     Used by the Traveler's employer for budgeting, internal billing or
@@ -50,25 +50,23 @@ class AccountingReference1(TypeKeyElement1):
             "type": "Element",
         },
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
-    value: None | str = field(
-        default=None,
+    value: str = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        },
+        }
     )
     account_id: None | int = field(
         default=None,

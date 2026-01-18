@@ -10,7 +10,7 @@ from sdmx_ml.models.transition_type import TransitionType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ProcessStepType(ProcessStepBaseType):
     """
     ProcessStepType describes the structure of a process step.

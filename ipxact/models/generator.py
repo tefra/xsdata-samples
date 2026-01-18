@@ -7,7 +7,7 @@ from ipxact.models.generator_type import GeneratorType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Generator(GeneratorType):
     """
     Specifies a set of generators.

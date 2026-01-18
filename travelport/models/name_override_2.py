@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NameOverride2:
     """
     To be used if the name is different from booking travelers in the PNR.
@@ -22,23 +22,21 @@ class NameOverride2:
         name = "NameOverride"
         namespace = "http://www.travelport.com/schema/common_v32_0"
 
-    first: None | str = field(
-        default=None,
+    first: str = field(
         metadata={
             "name": "First",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 256,
-        },
+        }
     )
-    last: None | str = field(
-        default=None,
+    last: str = field(
         metadata={
             "name": "Last",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 256,
-        },
+        }
     )

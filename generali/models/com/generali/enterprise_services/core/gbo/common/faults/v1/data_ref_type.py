@@ -7,7 +7,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataRefType:
     """
     <description xmlns="">A reference to the specific field or component
@@ -20,14 +20,13 @@ class DataRefType:
         referenced by the Path Name.</description>
     """
 
-    path_name_text: None | str = field(
-        default=None,
+    path_name_text: str = field(
         metadata={
             "name": "PathNameText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
             "required": True,
-        },
+        }
     )
     path_value_text: None | str = field(
         default=None,

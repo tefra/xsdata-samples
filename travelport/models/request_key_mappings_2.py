@@ -7,7 +7,7 @@ from travelport.models.key_mapping_2 import KeyMapping2
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestKeyMappings2:
     """
     All the elements for which mapping key sent in the request is different

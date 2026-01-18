@@ -9,28 +9,26 @@ from .transition_enumeration import TransitionEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessSummaryVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "AccessSummary_VersionedChildStructure"
 
-    access_feature_type: None | AccessFeatureEnumeration = field(
-        default=None,
+    access_feature_type: AccessFeatureEnumeration = field(
         metadata={
             "name": "AccessFeatureType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    count: None | int = field(
-        default=None,
+    count: int = field(
         metadata={
             "name": "Count",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     transition: None | TransitionEnumeration = field(
         default=None,

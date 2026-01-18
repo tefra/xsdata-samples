@@ -12,7 +12,7 @@ from .type_of_transfer_ref import TypeOfTransferRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransferRestrictionVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "TransferRestriction_VersionStructure"
@@ -33,14 +33,13 @@ class TransferRestrictionVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    restriction_type: None | TransferConstraintTypeEnumeration = field(
-        default=None,
+    restriction_type: TransferConstraintTypeEnumeration = field(
         metadata={
             "name": "RestrictionType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     from_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,

@@ -9,7 +9,7 @@ from .log_trace_default_log_level_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LogTraceDefaultLogLevelEnum:
     """
     This enum defines available log&amp;trace log levels that may be used
@@ -31,11 +31,10 @@ class LogTraceDefaultLogLevelEnum:
     class Meta:
         name = "LOG-TRACE-DEFAULT-LOG-LEVEL-ENUM"
 
-    value: None | LogTraceDefaultLogLevelEnumSimple = field(
-        default=None,
+    value: LogTraceDefaultLogLevelEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

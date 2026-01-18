@@ -35,7 +35,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CatalogueDeletionType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -77,14 +77,13 @@ class CatalogueDeletionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     uuid: None | Uuid = field(
         default=None,
@@ -102,14 +101,13 @@ class CatalogueDeletionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -167,14 +165,13 @@ class CatalogueDeletionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    deleted_catalogue_reference: None | DeletedCatalogueReference = field(
-        default=None,
+    deleted_catalogue_reference: DeletedCatalogueReference = field(
         metadata={
             "name": "DeletedCatalogueReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     referenced_contract: tuple[ReferencedContract, ...] = field(
         default_factory=tuple,
@@ -192,23 +189,21 @@ class CatalogueDeletionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receiver_party: None | ReceiverParty = field(
-        default=None,
+    receiver_party: ReceiverParty = field(
         metadata={
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    provider_party: None | ProviderParty = field(
-        default=None,
+    provider_party: ProviderParty = field(
         metadata={
             "name": "ProviderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     seller_supplier_party: None | SellerSupplierParty = field(
         default=None,
@@ -228,7 +223,7 @@ class CatalogueDeletionType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CatalogueDeletion(CatalogueDeletionType):
     class Meta:
         namespace = (

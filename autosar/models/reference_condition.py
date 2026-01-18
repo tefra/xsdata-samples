@@ -10,7 +10,7 @@ from .reference_tailoring_subtypes_enum import ReferenceTailoringSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceCondition:
     """
     The ReferenceCondition evaluates to true, if the referenced reference
@@ -91,13 +91,12 @@ class ReferenceCondition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReferenceRef(Ref):
-        dest: None | ReferenceTailoringSubtypesEnum = field(
-            default=None,
+        dest: ReferenceTailoringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

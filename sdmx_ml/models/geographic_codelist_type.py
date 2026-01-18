@@ -9,7 +9,7 @@ from sdmx_ml.models.geo_codelist_type_type import GeoCodelistTypeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GeographicCodelistType(GeoCodelistType):
     """
     GeographicCodelistType defines the sturcture of a geographic codelist.

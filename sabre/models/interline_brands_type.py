@@ -7,7 +7,7 @@ from sabre.models.brand_type import BrandType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InterlineBrandsType:
     """
     Attributes:

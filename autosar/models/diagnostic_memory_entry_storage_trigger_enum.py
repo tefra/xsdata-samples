@@ -9,7 +9,7 @@ from .diagnostic_memory_entry_storage_trigger_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticMemoryEntryStorageTriggerEnum:
     """
     Trigger types to allocate an event memory entry.
@@ -30,11 +30,10 @@ class DiagnosticMemoryEntryStorageTriggerEnum:
     class Meta:
         name = "DIAGNOSTIC-MEMORY-ENTRY-STORAGE-TRIGGER-ENUM"
 
-    value: None | DiagnosticMemoryEntryStorageTriggerEnumSimple = field(
-        default=None,
+    value: DiagnosticMemoryEntryStorageTriggerEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

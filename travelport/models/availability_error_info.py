@@ -8,7 +8,7 @@ from travelport.models.type_error_info_1 import TypeErrorInfo1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityErrorInfo(TypeErrorInfo1):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

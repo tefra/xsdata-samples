@@ -13,7 +13,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModeRequestTypeMap:
     """
     Specifies a mapping between a ModeDeclarationGroup and an
@@ -76,24 +76,22 @@ class ModeRequestTypeMap:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplementationDataTypeRef(Ref):
-        dest: None | AbstractImplementationDataTypeSubtypesEnum = field(
-            default=None,
+        dest: AbstractImplementationDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeGroupRef(Ref):
-        dest: None | ModeDeclarationGroupSubtypesEnum = field(
-            default=None,
+        dest: ModeDeclarationGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

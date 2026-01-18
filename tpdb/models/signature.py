@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from tpdb.models.funcsym import Funcsym
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Signature:
     class Meta:
         name = "signature"

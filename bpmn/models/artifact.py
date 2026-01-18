@@ -7,7 +7,7 @@ from .t_artifact import TArtifact
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Artifact(TArtifact):
     class Meta:
         name = "artifact"

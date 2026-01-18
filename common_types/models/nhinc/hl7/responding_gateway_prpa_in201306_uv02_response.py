@@ -8,32 +8,30 @@ from ..common.nhinc_common import NhinTargetCommunityType
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CommunityPrpaIn201306Uv02ResponseType:
     class Meta:
         name = "Community_PRPA_IN201306UV02ResponseType"
 
-    prpa_in201306_uv02: None | PrpaIn201306Uv02 = field(
-        default=None,
+    prpa_in201306_uv02: PrpaIn201306Uv02 = field(
         metadata={
             "name": "PRPA_IN201306UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    nhin_target_community: None | NhinTargetCommunityType = field(
-        default=None,
+    nhin_target_community: NhinTargetCommunityType = field(
         metadata={
             "name": "nhinTargetCommunity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RespondingGatewayPrpaIn201306Uv02ResponseType:
     class Meta:
         name = "RespondingGateway_PRPA_IN201306UV02ResponseType"
@@ -49,7 +47,7 @@ class RespondingGatewayPrpaIn201306Uv02ResponseType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RespondingGatewayPrpaIn201306Uv02Response(
     RespondingGatewayPrpaIn201306Uv02ResponseType
 ):

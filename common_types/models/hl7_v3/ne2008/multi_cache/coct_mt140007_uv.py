@@ -17,7 +17,7 @@ from ..core.voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt140007UvDevice:
     class Meta:
         name = "COCT_MT140007UV.Device"
@@ -83,13 +83,12 @@ class CoctMt140007UvDevice:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassDevice = field(
-        default=None,
+    class_code: EntityClassDevice = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,

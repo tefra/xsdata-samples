@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucQueryExpression:
     """
     Defines a query expression to the ECUC Description and output the
@@ -76,24 +76,22 @@ class EcucQueryExpression:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConfigElementDefGlobalRef(Ref):
-        dest: None | EcucDefinitionElementSubtypesEnum = field(
-            default=None,
+        dest: EcucDefinitionElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConfigElementDefLocalRef(Ref):
-        dest: None | EcucDefinitionElementSubtypesEnum = field(
-            default=None,
+        dest: EcucDefinitionElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

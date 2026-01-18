@@ -12,20 +12,19 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.subdivi
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CountryGbotype:
     class Meta:
         name = "CountryGBOType"
 
-    isocode2: None | str = field(
-        default=None,
+    isocode2: str = field(
         metadata={
             "name": "ISOCode2",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
             "pattern": r"[A-Z][A-Z]",
-        },
+        }
     )
     isocode3: None | str = field(
         default=None,

@@ -9,7 +9,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organi
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExtendedRecordTypePartyLocalIds:
     class Meta:
         global_type = False

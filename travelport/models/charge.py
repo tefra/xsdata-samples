@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Charge:
     """
     Charge information associated to Special Equipment.
@@ -24,27 +24,24 @@ class Charge:
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    amount: None | str = field(
-        default=None,
+    amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    rate_period: None | str = field(
-        default=None,
+    rate_period: str = field(
         metadata={
             "name": "RatePeriod",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    included_in_est_total_ind: None | bool = field(
-        default=None,
+    included_in_est_total_ind: bool = field(
         metadata={
             "name": "IncludedInEstTotalInd",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

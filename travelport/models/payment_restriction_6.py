@@ -8,7 +8,7 @@ from travelport.models.card_restriction_6 import CardRestriction6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentRestriction6:
     class Meta:
         name = "PaymentRestriction"
@@ -23,11 +23,10 @@ class PaymentRestriction6:
             "max_occurs": 999,
         },
     )
-    address_restriction: None | AddressRestriction6 = field(
-        default=None,
+    address_restriction: AddressRestriction6 = field(
         metadata={
             "name": "AddressRestriction",
             "type": "Element",
             "required": True,
-        },
+        }
     )

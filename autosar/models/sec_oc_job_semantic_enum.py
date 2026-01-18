@@ -7,7 +7,7 @@ from .sec_oc_job_semantic_enum_simple import SecOcJobSemanticEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecOcJobSemanticEnum:
     """
     List of cryptographic routines supported by SecOC.
@@ -28,11 +28,10 @@ class SecOcJobSemanticEnum:
     class Meta:
         name = "SEC-OC-JOB-SEMANTIC-ENUM"
 
-    value: None | SecOcJobSemanticEnumSimple = field(
-        default=None,
+    value: SecOcJobSemanticEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -10,7 +10,7 @@ from travelport.models.hotel_rate_detail import HotelRateDetail
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseHotelDetailsRsp(BaseRsp1):
     """
     Base response for all hotel details search response.
@@ -24,14 +24,13 @@ class BaseHotelDetailsRsp(BaseRsp1):
         request
     """
 
-    hotel_property: None | HotelProperty = field(
-        default=None,
+    hotel_property: HotelProperty = field(
         metadata={
             "name": "HotelProperty",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        },
+        }
     )
     hotel_detail_item: list[HotelDetailItem] = field(
         default_factory=list,

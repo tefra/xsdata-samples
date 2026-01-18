@@ -15,7 +15,7 @@ from .transformation_technology_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UserDefinedTransformationISignalPropsConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -99,7 +99,7 @@ class UserDefinedTransformationISignalPropsConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataPrototypeTransformationPropss:
         data_prototype_transformation_props: list[
             DataPrototypeTransformationProps
@@ -112,13 +112,12 @@ class UserDefinedTransformationISignalPropsConditional:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransformerRef(Ref):
-        dest: None | TransformationTechnologySubtypesEnum = field(
-            default=None,
+        dest: TransformationTechnologySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -21,7 +21,7 @@ from .ucm_module_instantiation_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UcmDescription:
     """
     This meta-class represents the ability to define an identifier for a
@@ -88,14 +88,13 @@ class UcmDescription:
     class Meta:
         name = "UCM-DESCRIPTION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | UcmDescription.ShortNameFragments = field(
         default=None,
@@ -194,7 +193,7 @@ class UcmDescription:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -205,7 +204,7 @@ class UcmDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -216,13 +215,12 @@ class UcmDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UcmModuleInstantiationRef(Ref):
-        dest: None | UcmModuleInstantiationSubtypesEnum = field(
-            default=None,
+        dest: UcmModuleInstantiationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

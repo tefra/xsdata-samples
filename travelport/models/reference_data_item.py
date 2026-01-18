@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceDataItem:
     """
     Parameters
@@ -34,15 +34,14 @@ class ReferenceDataItem:
             "max_occurs": 999,
         },
     )
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     name: None | str = field(
         default=None,
@@ -62,16 +61,15 @@ class ReferenceDataItem:
             "max_length": 255,
         },
     )
-    deprecated: None | bool = field(
-        default=None,
+    deprecated: bool = field(
         metadata={
             "name": "Deprecated",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AdditionalInfo:
         """
         Parameters

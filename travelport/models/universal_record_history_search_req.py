@@ -10,7 +10,7 @@ from travelport.models.universal_record_history_search_modifiers import (
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordHistorySearchReq(BaseReq1):
     """
     Search the history of a Universal Record.
@@ -34,13 +34,12 @@ class UniversalRecordHistorySearchReq(BaseReq1):
             "type": "Element",
         },
     )
-    universal_record_locator_code: None | str = field(
-        default=None,
+    universal_record_locator_code: str = field(
         metadata={
             "name": "UniversalRecordLocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )

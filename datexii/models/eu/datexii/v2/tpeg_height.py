@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.tpeg_loc04_height_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TpegHeight:
     """
     Height information which provides additional discrimination for the
@@ -29,14 +29,13 @@ class TpegHeight:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    height_type: None | TpegLoc04HeightTypeEnum = field(
-        default=None,
+    height_type: TpegLoc04HeightTypeEnum = field(
         metadata={
             "name": "heightType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     tpeg_height_extension: None | ExtensionType = field(
         default=None,

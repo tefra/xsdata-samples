@@ -8,7 +8,7 @@ from .type_of_info_link_enumeration import TypeOfInfoLinkEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InfoLinkStructure:
     value: str = field(
         default="",

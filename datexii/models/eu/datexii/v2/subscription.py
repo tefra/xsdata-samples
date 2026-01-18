@@ -17,7 +17,7 @@ from datexii.models.eu.datexii.v2.update_method_enum import UpdateMethodEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Subscription:
     """
     This item contains all information relating to a customer subscription.
@@ -57,32 +57,29 @@ class Subscription:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    operating_mode: None | OperatingModeEnum = field(
-        default=None,
+    operating_mode: OperatingModeEnum = field(
         metadata={
             "name": "operatingMode",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    subscription_start_time: None | XmlDateTime = field(
-        default=None,
+    subscription_start_time: XmlDateTime = field(
         metadata={
             "name": "subscriptionStartTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    subscription_state: None | SubscriptionStateEnum = field(
-        default=None,
+    subscription_state: SubscriptionStateEnum = field(
         metadata={
             "name": "subscriptionState",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     subscription_stop_time: None | XmlDateTime = field(
         default=None,
@@ -92,14 +89,13 @@ class Subscription:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    update_method: None | UpdateMethodEnum = field(
-        default=None,
+    update_method: UpdateMethodEnum = field(
         metadata={
             "name": "updateMethod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     target: list[Target] = field(
         default_factory=list,

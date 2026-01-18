@@ -44,7 +44,7 @@ from .user_task import UserTask
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TSubChoreography(TChoreographyActivity):
     class Meta:
         name = "tSubChoreography"
@@ -333,14 +333,14 @@ class TSubChoreography(TChoreographyActivity):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubChoreography(TSubChoreography):
     class Meta:
         name = "subChoreography"
         namespace = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TSubProcess(TActivity):
     class Meta:
         name = "tSubProcess"
@@ -644,14 +644,14 @@ class TSubProcess(TActivity):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubProcess(TSubProcess):
     class Meta:
         name = "subProcess"
         namespace = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TAdHocSubProcess(TSubProcess):
     class Meta:
         name = "tAdHocSubProcess"
@@ -679,7 +679,7 @@ class TAdHocSubProcess(TSubProcess):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TTransaction(TSubProcess):
     class Meta:
         name = "tTransaction"
@@ -692,14 +692,14 @@ class TTransaction(TSubProcess):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdHocSubProcess(TAdHocSubProcess):
     class Meta:
         name = "adHocSubProcess"
         namespace = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Transaction(TTransaction):
     class Meta:
         name = "transaction"

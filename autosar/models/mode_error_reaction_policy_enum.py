@@ -9,7 +9,7 @@ from .mode_error_reaction_policy_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModeErrorReactionPolicyEnum:
     """
     This represents the ability to specify the reaction on a mode error.
@@ -30,11 +30,10 @@ class ModeErrorReactionPolicyEnum:
     class Meta:
         name = "MODE-ERROR-REACTION-POLICY-ENUM"
 
-    value: None | ModeErrorReactionPolicyEnumSimple = field(
-        default=None,
+    value: ModeErrorReactionPolicyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

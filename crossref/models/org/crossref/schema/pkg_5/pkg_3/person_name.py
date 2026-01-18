@@ -28,7 +28,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.surname import Surname
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersonName:
     """
     The name of a person (as opposed to an organization) that contributed
@@ -45,12 +45,11 @@ class PersonName:
             "type": "Element",
         },
     )
-    surname: None | Surname = field(
-        default=None,
+    surname: Surname = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     suffix: None | Suffix = field(
         default=None,
@@ -78,19 +77,17 @@ class PersonName:
             "type": "Element",
         },
     )
-    sequence: None | PersonNameSequence = field(
-        default=None,
+    sequence: PersonNameSequence = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    contributor_role: None | PersonNameContributorRole = field(
-        default=None,
+    contributor_role: PersonNameContributorRole = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     name_style: None | PersonNameNameStyle = field(
         default=None,

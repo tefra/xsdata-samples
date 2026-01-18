@@ -11,7 +11,7 @@ from .series_presentation_enumeration import SeriesPresentationEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FarePointInPatternVersionedChildStructure(
     PointInJourneyPatternVersionedChildStructure
 ):

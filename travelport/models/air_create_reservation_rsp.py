@@ -12,7 +12,7 @@ from travelport.models.universal_record import UniversalRecord
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirCreateReservationRsp(BaseRsp1):
     """
     Parameters

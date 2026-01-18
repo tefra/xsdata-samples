@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FaultTypeFailures:
     """
     :ivar failure: <description xmlns="">A component that describes

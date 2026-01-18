@@ -9,7 +9,7 @@ from .journey_run_time_versioned_child_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyRunTime(JourneyRunTimeVersionedChildStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

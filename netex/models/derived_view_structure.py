@@ -7,7 +7,7 @@ from .branding_ref import BrandingRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DerivedViewStructure:
     branding_ref: None | BrandingRef = field(
         default=None,

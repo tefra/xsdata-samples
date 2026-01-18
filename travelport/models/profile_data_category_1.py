@@ -9,7 +9,7 @@ from travelport.models.type_profile_data_category_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileDataCategory1:
     """
     The category of data that controls what data will be returned in the
@@ -20,9 +20,8 @@ class ProfileDataCategory1:
         name = "ProfileDataCategory"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    value: None | TypeProfileDataCategory1 = field(
-        default=None,
+    value: TypeProfileDataCategory1 = field(
         metadata={
             "required": True,
-        },
+        }
     )

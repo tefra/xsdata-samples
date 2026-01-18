@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeValue:
     """
     This primitive type is taken for expressing time values.
@@ -29,11 +29,10 @@ class TimeValue:
     class Meta:
         name = "TIME-VALUE"
 
-    value: None | float = field(
-        default=None,
+    value: float = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

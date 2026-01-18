@@ -10,7 +10,7 @@ from .uic_product_characteristic_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UicProductCharacteristicList:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

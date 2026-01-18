@@ -36,7 +36,7 @@ from ..core.voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030202Uv01Place:
     class Meta:
         name = "COCT_MT030202UV01.Place"
@@ -110,13 +110,12 @@ class CoctMt030202Uv01Place:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassPlace = field(
-        default=None,
+    class_code: EntityClassPlace = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -129,7 +128,7 @@ class CoctMt030202Uv01Place:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030202Uv01Birthplace:
     class Meta:
         name = "COCT_MT030202UV01.Birthplace"
@@ -159,12 +158,11 @@ class CoctMt030202Uv01Birthplace:
         },
     )
     birthplace: None | CoctMt030202Uv01Place = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -201,7 +199,7 @@ class CoctMt030202Uv01Birthplace:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030202Uv01Person:
     class Meta:
         name = "COCT_MT030202UV01.Person"

@@ -11,33 +11,30 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PremiumAllocationType:
-    country_code: None | str = field(
-        default=None,
+    country_code: str = field(
         metadata={
             "name": "CountryCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
             "pattern": r"[A-Z][A-Z]",
-        },
+        }
     )
-    beginning_of_year: None | AmountType = field(
-        default=None,
+    beginning_of_year: AmountType = field(
         metadata={
             "name": "BeginningOfYear",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
-        },
+        }
     )
-    beginning_of_year_local_share: None | AmountType = field(
-        default=None,
+    beginning_of_year_local_share: AmountType = field(
         metadata={
             "name": "BeginningOfYearLocalShare",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
-        },
+        }
     )

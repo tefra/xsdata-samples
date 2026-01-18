@@ -24,7 +24,7 @@ from .synchronized_time_base_provider_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeBaseProviderToPersistencyMapping:
     """
     This meta-class represents the ability to define a mapping between a
@@ -95,14 +95,13 @@ class TimeBaseProviderToPersistencyMapping:
     class Meta:
         name = "TIME-BASE-PROVIDER-TO-PERSISTENCY-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | TimeBaseProviderToPersistencyMapping.ShortNameFragments
@@ -216,7 +215,7 @@ class TimeBaseProviderToPersistencyMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -227,7 +226,7 @@ class TimeBaseProviderToPersistencyMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -238,24 +237,22 @@ class TimeBaseProviderToPersistencyMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PersistencyDeploymentElementRef(Ref):
-        dest: None | PersistencyDeploymentElementSubtypesEnum = field(
-            default=None,
+        dest: PersistencyDeploymentElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimeBaseProviderRef(Ref):
-        dest: None | SynchronizedTimeBaseProviderSubtypesEnum = field(
-            default=None,
+        dest: SynchronizedTimeBaseProviderSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -7,7 +7,7 @@ from .lin_checksum_type_simple import LinChecksumTypeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinChecksumType:
     """
     Use of classic or enhanced checksum is managed by the master node and
@@ -29,11 +29,10 @@ class LinChecksumType:
     class Meta:
         name = "LIN-CHECKSUM-TYPE"
 
-    value: None | LinChecksumTypeSimple = field(
-        default=None,
+    value: LinChecksumTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

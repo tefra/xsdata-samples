@@ -16,7 +16,7 @@ from datexii.models.eu.datexii.v2.person_category_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupOfPeopleInvolved:
     """
     Group of people involved in the event having common characteristics

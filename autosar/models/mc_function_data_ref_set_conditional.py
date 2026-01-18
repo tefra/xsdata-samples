@@ -12,7 +12,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McFunctionDataRefSetConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -84,7 +84,7 @@ class McFunctionDataRefSetConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlatMapEntryRefs:
         flat_map_entry_ref: list[
             McFunctionDataRefSetConditional.FlatMapEntryRefs.FlatMapEntryRef
@@ -97,18 +97,17 @@ class McFunctionDataRefSetConditional:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FlatMapEntryRef(Ref):
-            dest: None | FlatInstanceDescriptorSubtypesEnum = field(
-                default=None,
+            dest: FlatInstanceDescriptorSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McDataInstanceRefs:
         mc_data_instance_ref: list[
             McFunctionDataRefSetConditional.McDataInstanceRefs.McDataInstanceRef
@@ -121,13 +120,12 @@ class McFunctionDataRefSetConditional:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class McDataInstanceRef(Ref):
-            dest: None | McDataInstanceSubtypesEnum = field(
-                default=None,
+            dest: McDataInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

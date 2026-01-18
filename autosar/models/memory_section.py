@@ -24,7 +24,7 @@ from .sw_addr_method_subtypes_enum import SwAddrMethodSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MemorySection:
     """
     Provides a description of an abstract memory section used in the
@@ -157,14 +157,13 @@ class MemorySection:
     class Meta:
         name = "MEMORY-SECTION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | MemorySection.ShortNameFragments = field(
         default=None,
@@ -317,7 +316,7 @@ class MemorySection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -328,7 +327,7 @@ class MemorySection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -339,7 +338,7 @@ class MemorySection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExecutableEntityRefs:
         executable_entity_ref: list[
             MemorySection.ExecutableEntityRefs.ExecutableEntityRef
@@ -352,18 +351,17 @@ class MemorySection:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExecutableEntityRef(Ref):
-            dest: None | ExecutableEntitySubtypesEnum = field(
-                default=None,
+            dest: ExecutableEntitySubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Options:
         """
         :ivar option: This attribute introduces the ability to specify
@@ -390,24 +388,22 @@ class MemorySection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PrefixRef(Ref):
-        dest: None | SectionNamePrefixSubtypesEnum = field(
-            default=None,
+        dest: SectionNamePrefixSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwAddrmethodRef(Ref):
-        dest: None | SwAddrMethodSubtypesEnum = field(
-            default=None,
+        dest: SwAddrMethodSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

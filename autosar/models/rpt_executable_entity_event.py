@@ -26,7 +26,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RptExecutableEntityEvent:
     """
     This describes an ExecutableEntity event instance which can be
@@ -110,14 +110,13 @@ class RptExecutableEntityEvent:
     class Meta:
         name = "RPT-EXECUTABLE-ENTITY-EVENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | RptExecutableEntityEvent.ShortNameFragments
@@ -274,7 +273,7 @@ class RptExecutableEntityEvent:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -285,7 +284,7 @@ class RptExecutableEntityEvent:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -296,7 +295,7 @@ class RptExecutableEntityEvent:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExecutionContextRefs:
         execution_context_ref: list[
             RptExecutableEntityEvent.ExecutionContextRefs.ExecutionContextRef
@@ -309,18 +308,17 @@ class RptExecutableEntityEvent:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExecutionContextRef(Ref):
-            dest: None | RptExecutionContextSubtypesEnum = field(
-                default=None,
+            dest: RptExecutionContextSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McDataAssignments:
         role_based_mc_data_assignment: list[RoleBasedMcDataAssignment] = field(
             default_factory=list,
@@ -331,7 +329,7 @@ class RptExecutableEntityEvent:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RptServicePointPostRefs:
         rpt_service_point_post_ref: list[
             RptExecutableEntityEvent.RptServicePointPostRefs.RptServicePointPostRef
@@ -344,18 +342,17 @@ class RptExecutableEntityEvent:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RptServicePointPostRef(Ref):
-            dest: None | RptServicePointSubtypesEnum = field(
-                default=None,
+            dest: RptServicePointSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RptServicePointPreRefs:
         rpt_service_point_pre_ref: list[
             RptExecutableEntityEvent.RptServicePointPreRefs.RptServicePointPreRef
@@ -368,13 +365,12 @@ class RptExecutableEntityEvent:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RptServicePointPreRef(Ref):
-            dest: None | RptServicePointSubtypesEnum = field(
-                default=None,
+            dest: RptServicePointSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

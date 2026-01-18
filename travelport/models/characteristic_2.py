@@ -7,7 +7,7 @@ from travelport.models.type_coach_class_type import TypeCoachClassType
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Characteristic2:
     """
     Defines coach characteristics such as accommodation class, smoking

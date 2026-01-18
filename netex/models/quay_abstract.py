@@ -7,7 +7,7 @@ from .site_version_structure import SiteVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuayAbstract(SiteVersionStructure):
     class Meta:
         name = "Quay_"

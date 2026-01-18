@@ -9,7 +9,7 @@ from .tp_connection_ident import TpConnectionIdent
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthTpConnection:
     """
     A connection identifies which PduTriggerings shall be handled using the
@@ -66,7 +66,7 @@ class EthTpConnection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpSduRefs:
         tp_sdu_ref: list[EthTpConnection.TpSduRefs.TpSduRef] = field(
             default_factory=list,
@@ -77,13 +77,12 @@ class EthTpConnection:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TpSduRef(Ref):
-            dest: None | PduTriggeringSubtypesEnum = field(
-                default=None,
+            dest: PduTriggeringSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

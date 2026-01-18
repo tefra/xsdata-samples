@@ -9,7 +9,7 @@ from travelport.models.rail_pricing_info import RailPricingInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeRailPricingSolution:
     """
     Common RailPricingSolution container.
@@ -91,13 +91,12 @@ class TypeRailPricingSolution:
             "max_occurs": 999,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     offer_id: None | int = field(
         default=None,
@@ -176,25 +175,23 @@ class TypeRailPricingSolution:
             "type": "Attribute",
         },
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
-    supplier_code: None | str = field(
-        default=None,
+    supplier_code: str = field(
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        },
+        }
     )
     host_token_ref: None | str = field(
         default=None,

@@ -9,7 +9,7 @@ from .diagnostic_event_displacement_strategy_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEventDisplacementStrategyEnum:
     """
     Defines the displacement strategy.
@@ -30,11 +30,10 @@ class DiagnosticEventDisplacementStrategyEnum:
     class Meta:
         name = "DIAGNOSTIC-EVENT-DISPLACEMENT-STRATEGY-ENUM"
 
-    value: None | DiagnosticEventDisplacementStrategyEnumSimple = field(
-        default=None,
+    value: DiagnosticEventDisplacementStrategyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

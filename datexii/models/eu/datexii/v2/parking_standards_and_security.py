@@ -22,7 +22,7 @@ from datexii.models.eu.datexii.v2.parking_supervision_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingStandardsAndSecurity:
     """
     Security measures and standards or standard-like categorization for a

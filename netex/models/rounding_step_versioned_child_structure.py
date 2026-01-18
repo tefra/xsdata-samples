@@ -9,7 +9,7 @@ from .rounding_step_ref import RoundingStepRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoundingStepVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "RoundingStep_VersionedChildStructure"
@@ -22,21 +22,19 @@ class RoundingStepVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    round_if_greater_than: None | Decimal = field(
-        default=None,
+    round_if_greater_than: Decimal = field(
         metadata={
             "name": "RoundIfGreaterThan",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    round_to: None | Decimal = field(
-        default=None,
+    round_to: Decimal = field(
         metadata={
             "name": "RoundTo",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

@@ -10,7 +10,7 @@ from ipxact.models.is_reset_level import IsResetLevel
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QualifierType:
     """
     :ivar is_address: If this element is present, the port contains
@@ -167,18 +167,17 @@ class QualifierType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IsReset:
         """
         :ivar value:
         :ivar level: Assertion level
         """
 
-        value: None | bool = field(
-            default=None,
+        value: bool = field(
             metadata={
                 "required": True,
-            },
+            }
         )
         level: None | IsResetLevel = field(
             default=None,
@@ -187,18 +186,17 @@ class QualifierType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IsClockEn:
         """
         :ivar value:
         :ivar level: Assertion level
         """
 
-        value: None | bool = field(
-            default=None,
+        value: bool = field(
             metadata={
                 "required": True,
-            },
+            }
         )
         level: None | IsClockEnLevel = field(
             default=None,
@@ -207,7 +205,7 @@ class QualifierType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IsPowerEn:
         """
         :ivar value:
@@ -215,11 +213,10 @@ class QualifierType:
         :ivar power_domain_ref: PowerDomain references
         """
 
-        value: None | bool = field(
-            default=None,
+        value: bool = field(
             metadata={
                 "required": True,
-            },
+            }
         )
         level: None | IsPowerEnLevel = field(
             default=None,
@@ -235,7 +232,7 @@ class QualifierType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IsFlowControl:
         """
         :ivar value:
@@ -243,11 +240,10 @@ class QualifierType:
         :ivar user: User flow type information
         """
 
-        value: None | bool = field(
-            default=None,
+        value: bool = field(
             metadata={
                 "required": True,
-            },
+            }
         )
         flow_type: None | IsFlowControlFlowType = field(
             default=None,
@@ -263,18 +259,17 @@ class QualifierType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IsUser:
         """
         :ivar value:
         :ivar user: User behaviour
         """
 
-        value: None | bool = field(
-            default=None,
+        value: bool = field(
             metadata={
                 "required": True,
-            },
+            }
         )
         user: None | str = field(
             default=None,

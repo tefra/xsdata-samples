@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailSpecificSeatAssignment:
     """
     Request object used to request a specific coach and seat number or a
@@ -31,43 +31,38 @@ class RailSpecificSeatAssignment:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
-    coach_label: None | str = field(
-        default=None,
+    coach_label: str = field(
         metadata={
             "name": "CoachLabel",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    place_label: None | str = field(
-        default=None,
+    place_label: str = field(
         metadata={
             "name": "PlaceLabel",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    assignment: None | str = field(
-        default=None,
+    assignment: str = field(
         metadata={
             "name": "Assignment",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    rail_segment_ref: None | str = field(
-        default=None,
+    rail_segment_ref: str = field(
         metadata={
             "name": "RailSegmentRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    booking_traveler_ref: None | str = field(
-        default=None,
+    booking_traveler_ref: str = field(
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

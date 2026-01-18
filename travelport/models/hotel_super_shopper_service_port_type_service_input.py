@@ -7,27 +7,25 @@ from travelport.models.hotel_super_shopper_req import HotelSuperShopperReq
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelSuperShopperServicePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | HotelSuperShopperServicePortTypeServiceInput.Body = field(
-        default=None,
+    body: HotelSuperShopperServicePortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        hotel_super_shopper_req: None | HotelSuperShopperReq = field(
-            default=None,
+        hotel_super_shopper_req: HotelSuperShopperReq = field(
             metadata={
                 "name": "HotelSuperShopperReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            },
+            }
         )

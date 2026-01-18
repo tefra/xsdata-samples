@@ -8,7 +8,7 @@ from sdmx_ml.models.vtl_definition_scheme_type import VtlDefinitionSchemeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class NamePersonalisationSchemeType(VtlDefinitionSchemeType):
     """
     NamePersonalisationSchemeType defines a set of personalisations of VTL

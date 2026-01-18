@@ -9,7 +9,7 @@ from .multilingual_string import MultilingualString
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerEligibilityVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "CustomerEligibility_VersionedChildStructure"

@@ -8,7 +8,7 @@ from travelport.models.queue_agent_record import QueueAgentRecord
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GdsQueueAgentListRsp(BaseRsp1):
     """
     Use this request to list items stuck on the Queue.

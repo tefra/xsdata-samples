@@ -12,7 +12,7 @@ from .producer_response_structure import ProducerResponseStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceDeliveryStructure(ProducerResponseStructure):
     status: None | bool = field(
         default=None,
@@ -54,7 +54,7 @@ class ServiceDeliveryStructure(ProducerResponseStructure):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ErrorCondition:
         capability_not_supported_error_or_other_error: (
             None | CapabilityNotSupportedError | OtherError

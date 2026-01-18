@@ -7,7 +7,7 @@ from sdmx_ml.models.date_map_type import DateMapType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class EpochMapBaseType(DateMapType):
     """
     EpochMapBaseType defines the base refinement of the EpochMapType.

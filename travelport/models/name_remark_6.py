@@ -10,7 +10,7 @@ from travelport.models.type_element_status_7 import TypeElementStatus7
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NameRemark6:
     """
     Text that support Name Remarks.
@@ -39,13 +39,12 @@ class NameRemark6:
         name = "NameRemark"
         namespace = "http://www.travelport.com/schema/common_v38_0"
 
-    remark_data: None | str = field(
-        default=None,
+    remark_data: str = field(
         metadata={
             "name": "RemarkData",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     provider_reservation_info_ref: list[ProviderReservationInfoRef7] = field(
         default_factory=list,

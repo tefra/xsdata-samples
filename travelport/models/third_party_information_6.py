@@ -8,7 +8,7 @@ from travelport.models.type_general_reference_6 import TypeGeneralReference6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ThirdPartyInformation6:
     """
     Third party supplier locator information.

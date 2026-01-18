@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ComKeyToCryptoKeySlotMapping:
     """
     This meta-class maps the CryptoServiceKey defined in the COM deployment
@@ -89,14 +89,13 @@ class ComKeyToCryptoKeySlotMapping:
     class Meta:
         name = "COM-KEY-TO-CRYPTO-KEY-SLOT-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ComKeyToCryptoKeySlotMapping.ShortNameFragments
@@ -205,7 +204,7 @@ class ComKeyToCryptoKeySlotMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -216,7 +215,7 @@ class ComKeyToCryptoKeySlotMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -227,24 +226,22 @@ class ComKeyToCryptoKeySlotMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CryptoServiceKeyRef(Ref):
-        dest: None | CryptoServiceKeySubtypesEnum = field(
-            default=None,
+        dest: CryptoServiceKeySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class KeySlotRef(Ref):
-        dest: None | CryptoKeySlotSubtypesEnum = field(
-            default=None,
+        dest: CryptoKeySlotSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

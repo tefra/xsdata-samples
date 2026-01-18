@@ -8,7 +8,7 @@ from travelport.models.air_upsell_qualify import AirUpsellQualify
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirUpsellSearchResult:
     """
     Air upsell search criteria result having matching offer and qualifies.
@@ -26,11 +26,10 @@ class AirUpsellSearchResult:
             "max_occurs": 999,
         },
     )
-    air_upsell_offer: None | AirUpsellOffer = field(
-        default=None,
+    air_upsell_offer: AirUpsellOffer = field(
         metadata={
             "name": "AirUpsellOffer",
             "type": "Element",
             "required": True,
-        },
+        }
     )

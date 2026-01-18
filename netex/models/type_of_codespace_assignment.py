@@ -9,7 +9,7 @@ from .type_of_codespace_assignment_value_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfCodespaceAssignment(TypeOfCodespaceAssignmentValueStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

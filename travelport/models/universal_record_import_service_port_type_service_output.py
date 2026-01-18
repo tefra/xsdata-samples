@@ -10,23 +10,20 @@ from travelport.models.universal_record_import_rsp import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordImportServicePortTypeServiceOutput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | UniversalRecordImportServicePortTypeServiceOutput.Body = (
-        field(
-            default=None,
-            metadata={
-                "name": "Body",
-                "type": "Element",
-            },
-        )
+    body: UniversalRecordImportServicePortTypeServiceOutput.Body = field(
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
         universal_record_import_rsp: None | UniversalRecordImportRsp = field(
             default=None,
@@ -46,21 +43,19 @@ class UniversalRecordImportServicePortTypeServiceOutput:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Fault:
-            faultcode: None | str = field(
-                default=None,
+            faultcode: str = field(
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                },
+                }
             )
-            faultstring: None | str = field(
-                default=None,
+            faultstring: str = field(
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                },
+                }
             )
             faultactor: None | str = field(
                 default=None,
@@ -80,7 +75,7 @@ class UniversalRecordImportServicePortTypeServiceOutput:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Detail:
                 error_info: None | ErrorInfo1 = field(
                     default=None,

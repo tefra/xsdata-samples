@@ -24,7 +24,7 @@ from .vehicle_journey_ref_structure import VehicleJourneyRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyPartVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "JourneyPart_VersionStructure"
@@ -103,14 +103,13 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_time: None | XmlTime = field(
-        default=None,
+    start_time: XmlTime = field(
         metadata={
             "name": "StartTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     start_time_day_offset: None | int = field(
         default=None,
@@ -120,14 +119,13 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_time: None | XmlTime = field(
-        default=None,
+    end_time: XmlTime = field(
         metadata={
             "name": "EndTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     end_time_day_offset: None | int = field(
         default=None,

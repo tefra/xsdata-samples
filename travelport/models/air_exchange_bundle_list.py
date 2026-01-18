@@ -7,7 +7,7 @@ from travelport.models.air_exchange_bundle import AirExchangeBundle
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeBundleList:
     """
     The shared object list of AirsegmentData.

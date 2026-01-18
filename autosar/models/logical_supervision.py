@@ -23,7 +23,7 @@ from .supervision_checkpoint_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LogicalSupervision:
     """
     Defines a LogicalSupervision graph consisting of transitions, initial-
@@ -92,14 +92,13 @@ class LogicalSupervision:
     class Meta:
         name = "LOGICAL-SUPERVISION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | LogicalSupervision.ShortNameFragments = field(
         default=None,
@@ -208,7 +207,7 @@ class LogicalSupervision:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -219,7 +218,7 @@ class LogicalSupervision:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -230,7 +229,7 @@ class LogicalSupervision:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InitialCheckpointRefs:
         initial_checkpoint_ref: list[
             LogicalSupervision.InitialCheckpointRefs.InitialCheckpointRef
@@ -243,18 +242,17 @@ class LogicalSupervision:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class InitialCheckpointRef(Ref):
-            dest: None | SupervisionCheckpointSubtypesEnum = field(
-                default=None,
+            dest: SupervisionCheckpointSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FinalCheckpointRefs:
         final_checkpoint_ref: list[
             LogicalSupervision.FinalCheckpointRefs.FinalCheckpointRef
@@ -267,18 +265,17 @@ class LogicalSupervision:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FinalCheckpointRef(Ref):
-            dest: None | SupervisionCheckpointSubtypesEnum = field(
-                default=None,
+            dest: SupervisionCheckpointSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransitionRefs:
         transition_ref: list[
             LogicalSupervision.TransitionRefs.TransitionRef
@@ -291,13 +288,12 @@ class LogicalSupervision:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TransitionRef(Ref):
-            dest: None | CheckpointTransitionSubtypesEnum = field(
-                default=None,
+            dest: CheckpointTransitionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

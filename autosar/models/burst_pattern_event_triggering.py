@@ -25,7 +25,7 @@ from .traceable_subtypes_enum import TraceableSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BurstPatternEventTriggering:
     """
     A BurstPatternEventTriggering describes the maximum number of
@@ -118,14 +118,13 @@ class BurstPatternEventTriggering:
     class Meta:
         name = "BURST-PATTERN-EVENT-TRIGGERING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | BurstPatternEventTriggering.ShortNameFragments
@@ -290,7 +289,7 @@ class BurstPatternEventTriggering:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -301,7 +300,7 @@ class BurstPatternEventTriggering:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -312,7 +311,7 @@ class BurstPatternEventTriggering:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TraceRefs:
         trace_ref: list[BurstPatternEventTriggering.TraceRefs.TraceRef] = (
             field(
@@ -325,35 +324,32 @@ class BurstPatternEventTriggering:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TraceRef(Ref):
-            dest: None | TraceableSubtypesEnum = field(
-                default=None,
+            dest: TraceableSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingConditionRef(Ref):
-        dest: None | TimingConditionSubtypesEnum = field(
-            default=None,
+        dest: TimingConditionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventRef(Ref):
-        dest: None | TimingDescriptionEventSubtypesEnum = field(
-            default=None,
+        dest: TimingDescriptionEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

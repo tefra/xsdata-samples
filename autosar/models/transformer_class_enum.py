@@ -7,7 +7,7 @@ from .transformer_class_enum_simple import TransformerClassEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransformerClassEnum:
     """
     Specifies the transformer class of a transformer.
@@ -28,11 +28,10 @@ class TransformerClassEnum:
     class Meta:
         name = "TRANSFORMER-CLASS-ENUM"
 
-    value: None | TransformerClassEnumSimple = field(
-        default=None,
+    value: TransformerClassEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

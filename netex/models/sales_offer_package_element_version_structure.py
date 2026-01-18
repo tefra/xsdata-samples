@@ -24,7 +24,7 @@ from .usage_discount_right_ref import UsageDiscountRightRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SalesOfferPackageElementVersionStructure(
     PriceableObjectVersionStructure
 ):

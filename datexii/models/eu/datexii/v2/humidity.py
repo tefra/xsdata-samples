@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.percentage_value import PercentageValue
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Humidity:
     """
     Details of atmospheric humidity.
@@ -21,14 +21,13 @@ class Humidity:
     :ivar humidity_extension:
     """
 
-    relative_humidity: None | PercentageValue = field(
-        default=None,
+    relative_humidity: PercentageValue = field(
         metadata={
             "name": "relativeHumidity",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     humidity_extension: None | ExtensionType = field(
         default=None,

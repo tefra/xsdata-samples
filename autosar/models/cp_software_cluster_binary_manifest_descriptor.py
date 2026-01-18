@@ -26,7 +26,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CpSoftwareClusterBinaryManifestDescriptor:
     """
     This meta-class has the ability to act as a hub for all information
@@ -115,14 +115,13 @@ class CpSoftwareClusterBinaryManifestDescriptor:
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-BINARY-MANIFEST-DESCRIPTOR"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | CpSoftwareClusterBinaryManifestDescriptor.ShortNameFragments
@@ -273,7 +272,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -284,7 +283,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -295,18 +294,17 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CpSoftwareClusterRef(Ref):
-        dest: None | CpSoftwareClusterSubtypesEnum = field(
-            default=None,
+        dest: CpSoftwareClusterSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MetaDataFields:
         binary_manifest_meta_data_field: list[BinaryManifestMetaDataField] = (
             field(
@@ -319,7 +317,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvideResources:
         binary_manifest_provide_resource: list[
             BinaryManifestProvideResource
@@ -332,7 +330,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequireResources:
         binary_manifest_require_resource: list[
             BinaryManifestRequireResource
@@ -345,7 +343,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResourceDefinitions:
         binary_manifest_resource_definition: list[
             BinaryManifestResourceDefinition

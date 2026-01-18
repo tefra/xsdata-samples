@@ -9,7 +9,7 @@ from travelport.models.type_fare_guarantee import TypeFareGuarantee
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareGuaranteeInfo:
     """
     The information related to fare guarantee details.
@@ -32,11 +32,10 @@ class FareGuaranteeInfo:
             "type": "Attribute",
         },
     )
-    guarantee_type: None | TypeFareGuarantee = field(
-        default=None,
+    guarantee_type: TypeFareGuarantee = field(
         metadata={
             "name": "GuaranteeType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

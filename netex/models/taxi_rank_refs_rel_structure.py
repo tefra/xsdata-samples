@@ -8,17 +8,16 @@ from .taxi_stand_ref import TaxiStandRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxiRankRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "taxiRankRefs_RelStructure"
 
-    taxi_stand_ref: None | TaxiStandRef = field(
-        default=None,
+    taxi_stand_ref: TaxiStandRef = field(
         metadata={
             "name": "TaxiStandRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

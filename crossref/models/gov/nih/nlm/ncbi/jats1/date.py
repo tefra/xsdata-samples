@@ -11,7 +11,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.year import Year
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Date:
     """
     <div> <h3>Date</h3> </div>.
@@ -39,12 +39,11 @@ class Date:
             "type": "Element",
         },
     )
-    year: None | Year = field(
-        default=None,
+    year: Year = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     era: None | Era = field(
         default=None,

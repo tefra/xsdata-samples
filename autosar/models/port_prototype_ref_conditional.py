@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortPrototypeRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -66,13 +66,12 @@ class PortPrototypeRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortPrototypeRef(Ref):
-        dest: None | PortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: PortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

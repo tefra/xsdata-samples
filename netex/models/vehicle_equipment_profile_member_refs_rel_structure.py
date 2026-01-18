@@ -11,7 +11,7 @@ from .vehicle_equipment_profile_member_ref import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleEquipmentProfileMemberRefsRelStructure(
     OneToManyRelationshipStructure
 ):

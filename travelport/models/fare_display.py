@@ -26,7 +26,7 @@ from travelport.models.type_mile_or_route_based_fare import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareDisplay:
     """
     Fare/Tariff Display.
@@ -77,13 +77,12 @@ class FareDisplay:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    fare_display_rule: None | FareDisplayRule = field(
-        default=None,
+    fare_display_rule: FareDisplayRule = field(
         metadata={
             "name": "FareDisplayRule",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     fare_pricing: list[FarePricing] = field(
         default_factory=list,
@@ -162,30 +161,27 @@ class FareDisplay:
             "max_occurs": 99,
         },
     )
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
-    fare_basis: None | str = field(
-        default=None,
+    fare_basis: str = field(
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    amount: None | str = field(
-        default=None,
+    amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     trip_type: None | TypeFareTripType = field(
         default=None,

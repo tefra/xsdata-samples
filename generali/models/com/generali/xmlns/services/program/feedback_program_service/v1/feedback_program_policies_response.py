@@ -7,7 +7,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FeedbackProgramPoliciesResponse:
     """
     :ivar response_code:
@@ -19,13 +19,12 @@ class FeedbackProgramPoliciesResponse:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    response_code: None | str = field(
-        default=None,
+    response_code: str = field(
         metadata={
             "name": "ResponseCode",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     response_text: None | str = field(
         default=None,

@@ -9,7 +9,7 @@ from .ecuc_configuration_variant_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucConfigurationVariantEnum:
     """
     Specifies the possible Configuration Variants used for AUTOSAR BSW
@@ -31,11 +31,10 @@ class EcucConfigurationVariantEnum:
     class Meta:
         name = "ECUC-CONFIGURATION-VARIANT-ENUM"
 
-    value: None | EcucConfigurationVariantEnumSimple = field(
-        default=None,
+    value: EcucConfigurationVariantEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

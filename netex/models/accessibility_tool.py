@@ -7,14 +7,13 @@ from .accessibility_tool_enumeration import AccessibilityToolEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessibilityTool:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: None | AccessibilityToolEnumeration = field(
-        default=None,
+    value: AccessibilityToolEnumeration = field(
         metadata={
             "required": True,
-        },
+        }
     )

@@ -9,7 +9,7 @@ from travelport.models.type_rail_create_reservation_rsp import (
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailCreateReservationRsp(TypeRailCreateReservationRsp):
     """
     Returns rail reservation information with ticketing info etc..

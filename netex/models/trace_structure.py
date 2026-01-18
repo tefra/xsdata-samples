@@ -10,7 +10,7 @@ from .version_of_object_ref_structure import VersionOfObjectRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TraceStructure:
     object_ref: None | VersionOfObjectRefStructure = field(
         default=None,
@@ -20,14 +20,13 @@ class TraceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    changed_at: None | XmlDateTime = field(
-        default=None,
+    changed_at: XmlDateTime = field(
         metadata={
             "name": "ChangedAt",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     changed_by: None | str = field(
         default=None,

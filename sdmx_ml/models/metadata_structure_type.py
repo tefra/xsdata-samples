@@ -8,7 +8,7 @@ from sdmx_ml.models.structure_type_abstract import StructureTypeAbstract
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataStructureType(StructureTypeAbstract):
     """
     MetadataStructureType is used to describe a metadata structure

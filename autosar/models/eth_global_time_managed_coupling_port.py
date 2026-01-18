@@ -10,7 +10,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthGlobalTimeManagedCouplingPort:
     """
     Specifies a CouplingPort which is managed by an Ethernet Global Time
@@ -103,13 +103,12 @@ class EthGlobalTimeManagedCouplingPort:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CouplingPortRef(Ref):
-        dest: None | CouplingPortSubtypesEnum = field(
-            default=None,
+        dest: CouplingPortSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

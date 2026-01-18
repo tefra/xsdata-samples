@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneralPurposeConnection:
     """
     This meta-class allows to describe the relationship between several
@@ -87,14 +87,13 @@ class GeneralPurposeConnection:
     class Meta:
         name = "GENERAL-PURPOSE-CONNECTION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | GeneralPurposeConnection.ShortNameFragments
@@ -195,7 +194,7 @@ class GeneralPurposeConnection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -206,7 +205,7 @@ class GeneralPurposeConnection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -217,7 +216,7 @@ class GeneralPurposeConnection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduTriggeringRefs:
         pdu_triggering_ref: list[
             GeneralPurposeConnection.PduTriggeringRefs.PduTriggeringRef
@@ -230,13 +229,12 @@ class GeneralPurposeConnection:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PduTriggeringRef(Ref):
-            dest: None | PduTriggeringSubtypesEnum = field(
-                default=None,
+            dest: PduTriggeringSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

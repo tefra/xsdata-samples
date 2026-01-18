@@ -11,7 +11,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NmCoordinator:
     """
     A NM coordinator is an ECU, which is connected to at least two busses,
@@ -115,7 +115,7 @@ class NmCoordinator:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NmNodeRefs:
         nm_node_ref: list[NmCoordinator.NmNodeRefs.NmNodeRef] = field(
             default_factory=list,
@@ -126,13 +126,12 @@ class NmCoordinator:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NmNodeRef(Ref):
-            dest: None | NmNodeSubtypesEnum = field(
-                default=None,
+            dest: NmNodeSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

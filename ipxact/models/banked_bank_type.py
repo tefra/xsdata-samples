@@ -18,7 +18,7 @@ from ipxact.models.volatile import Volatile
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BankedBankType:
     """
     Banks nested inside a bank do not specify address.
@@ -48,13 +48,12 @@ class BankedBankType:
     class Meta:
         name = "bankedBankType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -147,13 +146,12 @@ class BankedBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bank_alignment: None | BankAlignmentType = field(
-        default=None,
+    bank_alignment: BankAlignmentType = field(
         metadata={
             "name": "bankAlignment",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,
@@ -163,7 +161,7 @@ class BankedBankType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessHandles:
         access_handle: list[SimpleAccessHandle] = field(
             default_factory=list,
@@ -175,7 +173,7 @@ class BankedBankType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BankDefinitionRef:
         value: str = field(
             default="",
@@ -183,16 +181,15 @@ class BankedBankType:
                 "required": True,
             },
         )
-        type_definitions: None | str = field(
-            default=None,
+        type_definitions: str = field(
             metadata={
                 "name": "typeDefinitions",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Bank:
         vendor_extensions: None | VendorExtensions = field(
             default=None,

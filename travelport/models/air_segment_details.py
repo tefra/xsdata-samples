@@ -10,7 +10,7 @@ from travelport.models.passenger_details_ref import PassengerDetailsRef
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirSegmentDetails:
     """
     An Air marketable travel segment.
@@ -72,68 +72,61 @@ class AirSegmentDetails:
             "type": "Element",
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
-    origin: None | str = field(
-        default=None,
+    origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    destination: None | str = field(
-        default=None,
+    destination: str = field(
         metadata={
             "name": "Destination",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    departure_time: None | XmlDateTime = field(
-        default=None,
+    departure_time: XmlDateTime = field(
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    arrival_time: None | XmlDateTime = field(
-        default=None,
+    arrival_time: XmlDateTime = field(
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     equipment: None | str = field(
         default=None,
@@ -167,12 +160,11 @@ class AirSegmentDetails:
             "length": 2,
         },
     )
-    flight_number: None | str = field(
-        default=None,
+    flight_number: str = field(
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        },
+        }
     )

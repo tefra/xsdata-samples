@@ -12,7 +12,7 @@ from .url import Url
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Std:
     """
     This represents a reference to external standards.
@@ -47,14 +47,13 @@ class Std:
     class Meta:
         name = "STD"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | Std.ShortNameFragments = field(
         default=None,
@@ -128,7 +127,7 @@ class Std:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,

@@ -10,7 +10,7 @@ from npo.models.textual_type_enum import TextualTypeEnum
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TitleSearchType:
     class Meta:
         name = "titleSearchType"

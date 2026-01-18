@@ -7,18 +7,17 @@ from npo.models.gtaa_status_type import GtaaStatusType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TopicType:
     class Meta:
         name = "topicType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "required": True,
-        },
+        }
     )
     scope_note: list[str] = field(
         default_factory=list,

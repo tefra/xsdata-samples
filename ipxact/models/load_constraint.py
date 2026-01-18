@@ -10,7 +10,7 @@ from ipxact.models.unsigned_positive_int_expression import (
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LoadConstraint:
     """
     Defines a constraint indicating the type of load on an output port.
@@ -24,13 +24,12 @@ class LoadConstraint:
         name = "loadConstraint"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    cell_specification: None | CellSpecification = field(
-        default=None,
+    cell_specification: CellSpecification = field(
         metadata={
             "name": "cellSpecification",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     count: None | UnsignedPositiveIntExpression = field(
         default=None,

@@ -7,7 +7,7 @@ from .exchanging_ref_structure import ExchangingRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExchangingRef(ExchangingRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

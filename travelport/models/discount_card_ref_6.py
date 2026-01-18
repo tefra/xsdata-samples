@@ -5,17 +5,16 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiscountCardRef6:
     class Meta:
         name = "DiscountCardRef"
         namespace = "http://www.travelport.com/schema/common_v38_0"
 
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

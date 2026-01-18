@@ -8,7 +8,7 @@ from .revision_label_string import RevisionLabelString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AutosarEngineeringObject:
     """
     This denotes an engineering object being part of the process.
@@ -93,7 +93,7 @@ class AutosarEngineeringObject:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RevisionLabels:
         """
         :ivar revision_label: This is a revision label denoting a

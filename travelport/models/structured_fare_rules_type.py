@@ -7,7 +7,7 @@ from travelport.models.fare_rule_category_types import FareRuleCategoryTypes
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StructuredFareRulesType:
     """
     Parameters

@@ -28,7 +28,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UserDefinedServiceInstanceToMachineMapping:
     """
     This meta-class allows to map UserDefinedServiceInstances to a
@@ -109,14 +109,13 @@ class UserDefinedServiceInstanceToMachineMapping:
     class Meta:
         name = "USER-DEFINED-SERVICE-INSTANCE-TO-MACHINE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | UserDefinedServiceInstanceToMachineMapping.ShortNameFragments
@@ -263,7 +262,7 @@ class UserDefinedServiceInstanceToMachineMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -274,7 +273,7 @@ class UserDefinedServiceInstanceToMachineMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -285,18 +284,17 @@ class UserDefinedServiceInstanceToMachineMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommunicationConnectorRef(Ref):
-        dest: None | CommunicationConnectorSubtypesEnum = field(
-            default=None,
+        dest: CommunicationConnectorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecOcComPropsForMulticastRefs:
         sec_oc_com_props_for_multicast_ref: list[
             UserDefinedServiceInstanceToMachineMapping.SecOcComPropsForMulticastRefs.SecOcComPropsForMulticastRef
@@ -309,18 +307,17 @@ class UserDefinedServiceInstanceToMachineMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SecOcComPropsForMulticastRef(Ref):
-            dest: None | SecOcSecureComPropsSubtypesEnum = field(
-                default=None,
+            dest: SecOcSecureComPropsSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecureComPropsForTcpRefs:
         secure_com_props_for_tcp_ref: list[
             UserDefinedServiceInstanceToMachineMapping.SecureComPropsForTcpRefs.SecureComPropsForTcpRef
@@ -333,18 +330,17 @@ class UserDefinedServiceInstanceToMachineMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SecureComPropsForTcpRef(Ref):
-            dest: None | SecureComPropsSubtypesEnum = field(
-                default=None,
+            dest: SecureComPropsSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecureComPropsForUdpRefs:
         secure_com_props_for_udp_ref: list[
             UserDefinedServiceInstanceToMachineMapping.SecureComPropsForUdpRefs.SecureComPropsForUdpRef
@@ -357,18 +353,17 @@ class UserDefinedServiceInstanceToMachineMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SecureComPropsForUdpRef(Ref):
-            dest: None | SecureComPropsSubtypesEnum = field(
-                default=None,
+            dest: SecureComPropsSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInstanceRefs:
         service_instance_ref: list[
             UserDefinedServiceInstanceToMachineMapping.ServiceInstanceRefs.ServiceInstanceRef
@@ -381,13 +376,12 @@ class UserDefinedServiceInstanceToMachineMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ServiceInstanceRef(Ref):
-            dest: None | AdaptivePlatformServiceInstanceSubtypesEnum = field(
-                default=None,
+            dest: AdaptivePlatformServiceInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

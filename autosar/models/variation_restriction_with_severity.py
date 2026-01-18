@@ -9,7 +9,7 @@ from .severity_enum import SeverityEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VariationRestrictionWithSeverity:
     """
     Defines constraints on the usage of variation and on the valid binding
@@ -77,7 +77,7 @@ class VariationRestrictionWithSeverity:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ValidBindingTimes:
         """
         :ivar valid_binding_time: List of valid binding times.

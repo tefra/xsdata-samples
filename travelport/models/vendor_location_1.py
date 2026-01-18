@@ -7,7 +7,7 @@ from travelport.models.type_vendor_location_1 import TypeVendorLocation1
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VendorLocation1(TypeVendorLocation1):
     """
     Location definition specific to a Vendor in a specific provider (e.g.

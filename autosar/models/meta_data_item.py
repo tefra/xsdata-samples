@@ -8,7 +8,7 @@ from .text_value_specification import TextValueSpecification
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MetaDataItem:
     """
     This meta-class represents a single meta-data item.

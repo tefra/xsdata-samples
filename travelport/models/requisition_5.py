@@ -8,7 +8,7 @@ from travelport.models.requisition_type_5 import RequisitionType5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Requisition5:
     """
     Requisition Form of Payment.

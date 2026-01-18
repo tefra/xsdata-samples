@@ -14,7 +14,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BusDefinition:
     """
     Defines the structural information associated with a bus type,
@@ -59,33 +59,29 @@ class BusDefinition:
         name = "busDefinition"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    vendor: None | str = field(
-        default=None,
+    vendor: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    library: None | str = field(
-        default=None,
+    library: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     display_name: None | str = field(
         default=None,
@@ -107,13 +103,12 @@ class BusDefinition:
             "type": "Element",
         },
     )
-    direct_connection: None | bool = field(
-        default=None,
+    direct_connection: bool = field(
         metadata={
             "name": "directConnection",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     broadcast: None | bool = field(
         default=None,
@@ -121,13 +116,12 @@ class BusDefinition:
             "type": "Element",
         },
     )
-    is_addressable: None | bool = field(
-        default=None,
+    is_addressable: bool = field(
         metadata={
             "name": "isAddressable",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     extends: None | LibraryRefType = field(
         default=None,
@@ -189,7 +183,7 @@ class BusDefinition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SystemGroupNames:
         """
         :ivar system_group_name: Indicates the name of a system group
@@ -207,7 +201,7 @@ class BusDefinition:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SystemGroupName:
             value: str = field(
                 default="",

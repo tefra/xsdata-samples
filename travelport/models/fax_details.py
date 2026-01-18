@@ -9,7 +9,7 @@ from travelport.models.term_conditions import TermConditions
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FaxDetails:
     """
     The Fax Details Information.
@@ -36,14 +36,13 @@ class FaxDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    phone_number: None | PhoneNumber1 = field(
-        default=None,
+    phone_number: PhoneNumber1 = field(
         metadata={
             "name": "PhoneNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        },
+        }
     )
     term_conditions: None | TermConditions = field(
         default=None,

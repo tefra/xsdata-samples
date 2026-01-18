@@ -7,7 +7,7 @@ from ipxact.models.type_parameters import TypeParameters
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransTypeDef:
     """
     Definition of a single transactional type defintion.
@@ -64,7 +64,7 @@ class TransTypeDef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeName:
         """
         :ivar value:
@@ -86,7 +86,7 @@ class TransTypeDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeDefinition:
         value: str = field(
             default="",
@@ -102,7 +102,7 @@ class TransTypeDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ViewRef:
         value: str = field(
             default="",

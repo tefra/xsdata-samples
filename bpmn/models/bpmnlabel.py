@@ -8,7 +8,7 @@ from .label import Label
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/DI"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Bpmnlabel(Label):
     class Meta:
         name = "BPMNLabel"

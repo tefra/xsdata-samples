@@ -13,7 +13,7 @@ from travelport.models.type_fare_rule_type import TypeFareRuleType
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirFareRulesReq(BaseReq1):
     """
     Request to display the full text fare rules.
@@ -101,7 +101,7 @@ class AirFareRulesReq(BaseReq1):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FareRulesFilterCategory:
         """
         Parameters
@@ -130,7 +130,7 @@ class AirFareRulesReq(BaseReq1):
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AirReservationSelector:
         """
         Parameters
@@ -149,13 +149,12 @@ class AirFareRulesReq(BaseReq1):
                 "max_occurs": 999,
             },
         )
-        air_reservation_locator_code: None | str = field(
-            default=None,
+        air_reservation_locator_code: str = field(
             metadata={
                 "name": "AirReservationLocatorCode",
                 "type": "Attribute",
                 "required": True,
                 "min_length": 5,
                 "max_length": 8,
-            },
+            }
         )

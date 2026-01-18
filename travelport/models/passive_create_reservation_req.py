@@ -16,7 +16,7 @@ from travelport.models.third_party_information_1 import ThirdPartyInformation1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassiveCreateReservationReq(BaseCreateReservationReq1):
     """
     Request to create a passive reservation.

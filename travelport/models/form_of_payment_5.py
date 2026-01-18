@@ -25,7 +25,7 @@ from travelport.models.united_nations_5 import UnitedNations5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FormOfPayment5:
     """
     A Form of Payment used to purchase all or part of a booking.
@@ -215,14 +215,13 @@ class FormOfPayment5:
             "type": "Attribute",
         },
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
             "max_length": 25,
-        },
+        }
     )
     fulfillment_type: None | str = field(
         default=None,

@@ -10,7 +10,7 @@ from travelport.models.payment_ref_7 import PaymentRef7
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingTravelerRef6:
     """
     Reference Element for Booking Traveler and Loyalty cards.

@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDateTime
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ReferencePeriodType:
     """
     Specifies the inclusive start and end times.
@@ -18,19 +18,17 @@ class ReferencePeriodType:
         date for the reference period.
     """
 
-    start_time: None | XmlDateTime = field(
-        default=None,
+    start_time: XmlDateTime = field(
         metadata={
             "name": "startTime",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    end_time: None | XmlDateTime = field(
-        default=None,
+    end_time: XmlDateTime = field(
         metadata={
             "name": "endTime",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

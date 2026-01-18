@@ -7,7 +7,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Idtype:
     """
     <ns1:UniqueID

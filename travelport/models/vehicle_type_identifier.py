@@ -11,7 +11,7 @@ from travelport.models.type_vehicle_transmission import TypeVehicleTransmission
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleTypeIdentifier:
     """
     Used to update Vehicle segment details of existing Vehicle Booking.
@@ -38,13 +38,12 @@ class VehicleTypeIdentifier:
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    air_conditioning: None | bool = field(
-        default=None,
+    air_conditioning: bool = field(
         metadata={
             "name": "AirConditioning",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     transmission_type: None | TypeVehicleTransmission = field(
         default=None,

@@ -9,7 +9,7 @@ from .coupling_port_rate_policy_action_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CouplingPortRatePolicyActionEnum:
     """
     Defines the action to be performed when a rate policy is violated.
@@ -30,11 +30,10 @@ class CouplingPortRatePolicyActionEnum:
     class Meta:
         name = "COUPLING-PORT-RATE-POLICY-ACTION-ENUM"
 
-    value: None | CouplingPortRatePolicyActionEnumSimple = field(
-        default=None,
+    value: CouplingPortRatePolicyActionEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -11,7 +11,7 @@ from .someip_method_deployment_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipMethodProps:
     """
     This meta-class allows to set configuration options for a method in the
@@ -69,13 +69,12 @@ class SomeipMethodProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MethodRef(Ref):
-        dest: None | SomeipMethodDeploymentSubtypesEnum = field(
-            default=None,
+        dest: SomeipMethodDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

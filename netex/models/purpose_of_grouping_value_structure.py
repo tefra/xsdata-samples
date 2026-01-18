@@ -52,7 +52,7 @@ from .types_of_frame_rel_structure import TypeOfFrame
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "PurposeOfGrouping_ValueStructure"

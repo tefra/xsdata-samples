@@ -12,7 +12,7 @@ from .reached_floor_announcement_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
     class Meta:
         name = "LiftEquipment_VersionStructure"

@@ -9,7 +9,7 @@ from .destination_display_variant_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DestinationDisplayVariantRef(DestinationDisplayVariantRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

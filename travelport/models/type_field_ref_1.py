@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeFieldRef1:
     """
     Base type of a reference to a field or field group.
@@ -19,11 +19,10 @@ class TypeFieldRef1:
     class Meta:
         name = "typeFieldRef"
 
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

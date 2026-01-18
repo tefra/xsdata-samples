@@ -7,7 +7,7 @@ from .nil_reason_enumeration_value import NilReasonEnumerationValue
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AssociationRoleType:
     any_element: None | object = field(
         default=None,

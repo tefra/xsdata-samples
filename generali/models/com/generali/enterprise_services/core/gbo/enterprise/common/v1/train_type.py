@@ -20,7 +20,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrainType(VehicleType):
     number_of_carriages: None | NumberType = field(
         default=None,

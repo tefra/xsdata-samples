@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from tpdb.models.type_mod import Type
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeDeclaration:
     class Meta:
         name = "typeDeclaration"

@@ -17,16 +17,15 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProducerInvolvementType(OrganisationInvolvementType):
-    organisation_role: None | InsurerRoleType = field(
-        default=None,
+    organisation_role: InsurerRoleType = field(
         metadata={
             "name": "OrganisationRole",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     producer_agreement_identifier: None | Idtype = field(
         default=None,
@@ -36,13 +35,12 @@ class ProducerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    producing_country: None | str = field(
-        default=None,
+    producing_country: str = field(
         metadata={
             "name": "ProducingCountry",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
             "pattern": r"[A-Z][A-Z]",
-        },
+        }
     )

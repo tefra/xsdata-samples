@@ -9,7 +9,7 @@ from travelport.models.person_name import PersonName
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RelatedTraveler:
     """
     Detailed related Traveler information for pre pay profiles.
@@ -70,7 +70,7 @@ class RelatedTraveler:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CreditsUsed:
         used_credit: None | Decimal = field(
             default=None,

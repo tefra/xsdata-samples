@@ -7,7 +7,7 @@ from travelport.models.loyalty_card_details import LoyaltyCardDetails
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassengerDetails:
     """
     Details of passenger.
@@ -34,23 +34,21 @@ class PassengerDetails:
             "max_occurs": 9,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
             "min_length": 3,
             "max_length": 5,
-        },
+        }
     )
     age: None | int = field(
         default=None,

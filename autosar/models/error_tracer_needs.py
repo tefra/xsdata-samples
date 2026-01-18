@@ -19,7 +19,7 @@ from .transient_fault import TransientFault
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ErrorTracerNeeds:
     """
     Specifies the need to report failures to the error tracer.
@@ -84,14 +84,13 @@ class ErrorTracerNeeds:
     class Meta:
         name = "ERROR-TRACER-NEEDS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ErrorTracerNeeds.ShortNameFragments = field(
         default=None,
@@ -180,7 +179,7 @@ class ErrorTracerNeeds:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -191,7 +190,7 @@ class ErrorTracerNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -202,7 +201,7 @@ class ErrorTracerNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TracedFailures:
         development_error: list[DevelopmentError] = field(
             default_factory=list,

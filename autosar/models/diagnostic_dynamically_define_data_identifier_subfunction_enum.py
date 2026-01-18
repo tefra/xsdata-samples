@@ -9,7 +9,7 @@ from .diagnostic_dynamically_define_data_identifier_subfunction_enum_simple impo
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnum:
     """
     This meta-class contains a list of possible subfunctions for the UDS
@@ -31,13 +31,12 @@ class DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnum:
     class Meta:
         name = "DIAGNOSTIC-DYNAMICALLY-DEFINE-DATA-IDENTIFIER-SUBFUNCTION-ENUM"
 
-    value: (
-        None | DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnumSimple
-    ) = field(
-        default=None,
-        metadata={
-            "required": True,
-        },
+    value: DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnumSimple = (
+        field(
+            metadata={
+                "required": True,
+            }
+        )
     )
     s: None | str = field(
         default=None,

@@ -15,25 +15,23 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.sictype
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClassificationType:
-    code: None | CodeType = field(
-        default=None,
+    code: CodeType = field(
         metadata={
             "name": "Code",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )
-    type_value: None | SictypeEnum = field(
-        default=None,
+    type_value: SictypeEnum = field(
         metadata={
             "name": "Type",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )
     description: None | TextType = field(
         default=None,

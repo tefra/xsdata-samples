@@ -9,29 +9,25 @@ from travelport.models.profile_modify_bridge_branches_req import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileModifyBridgeBranchesPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | ProfileModifyBridgeBranchesPortTypeServiceInput.Body = field(
-        default=None,
+    body: ProfileModifyBridgeBranchesPortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        profile_modify_bridge_branches_req: (
-            None | ProfileModifyBridgeBranchesReq
-        ) = field(
-            default=None,
+        profile_modify_bridge_branches_req: ProfileModifyBridgeBranchesReq = field(
             metadata={
                 "name": "ProfileModifyBridgeBranchesReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-            },
+            }
         )

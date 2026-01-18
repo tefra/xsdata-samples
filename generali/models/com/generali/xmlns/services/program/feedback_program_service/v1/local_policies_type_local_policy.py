@@ -22,7 +22,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocalPoliciesTypeLocalPolicy:
     """
     :ivar local_policy_id: Reference(s) used in the local system to
@@ -78,14 +78,13 @@ class LocalPoliciesTypeLocalPolicy:
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
         },
     )
-    status: None | Status = field(
-        default=None,
+    status: Status = field(
         metadata={
             "name": "Status",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
             "required": True,
-        },
+        }
     )
     party_ids: None | LocalPoliciesTypeLocalPolicyPartyIds = field(
         default=None,

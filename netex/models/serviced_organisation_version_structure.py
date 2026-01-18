@@ -13,7 +13,7 @@ from .serviced_organisation_type_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServicedOrganisationVersionStructure(OtherOrganisationVersionStructure):
     class Meta:
         name = "ServicedOrganisation_VersionStructure"

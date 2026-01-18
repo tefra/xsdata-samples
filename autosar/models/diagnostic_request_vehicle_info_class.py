@@ -24,7 +24,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticRequestVehicleInfoClass:
     """
     This meta-class represents the ability to define common properties for
@@ -94,14 +94,13 @@ class DiagnosticRequestVehicleInfoClass:
     class Meta:
         name = "DIAGNOSTIC-REQUEST-VEHICLE-INFO-CLASS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticRequestVehicleInfoClass.ShortNameFragments
@@ -212,7 +211,7 @@ class DiagnosticRequestVehicleInfoClass:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -223,7 +222,7 @@ class DiagnosticRequestVehicleInfoClass:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -234,13 +233,12 @@ class DiagnosticRequestVehicleInfoClass:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessPermissionRef(Ref):
-        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticAccessPermissionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

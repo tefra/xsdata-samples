@@ -7,7 +7,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FilterReference:
     """
     Details of a supplier's filter in a data exchange context.
@@ -37,15 +37,14 @@ class FilterReference:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    key_filter_reference: None | str = field(
-        default=None,
+    key_filter_reference: str = field(
         metadata={
             "name": "keyFilterReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
     filter_reference_extension: None | ExtensionType = field(
         default=None,

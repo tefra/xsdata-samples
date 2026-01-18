@@ -9,7 +9,7 @@ from .event_acceptance_status_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EventAcceptanceStatusEnum:
     """
     This enumerator specifies the initial status for enable or disable of
@@ -31,11 +31,10 @@ class EventAcceptanceStatusEnum:
     class Meta:
         name = "EVENT-ACCEPTANCE-STATUS-ENUM"
 
-    value: None | EventAcceptanceStatusEnumSimple = field(
-        default=None,
+    value: EventAcceptanceStatusEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

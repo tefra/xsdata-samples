@@ -20,7 +20,7 @@ from .coct_mt150002_uv01 import CoctMt150002Uv01Organization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090102Uv02Person:
     class Meta:
         name = "COCT_MT090102UV02.Person"
@@ -84,7 +84,7 @@ class CoctMt090102Uv02Person:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090102Uv02AssignedPerson:
     class Meta:
         name = "COCT_MT090102UV02.AssignedPerson"
@@ -160,11 +160,10 @@ class CoctMt090102Uv02AssignedPerson:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassAssignedEntity = field(
-        default=None,
+    class_code: RoleClassAssignedEntity = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

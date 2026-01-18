@@ -29,7 +29,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoughEstimateOfExecutionTime:
     """
     Provides a description of a rough estimate on the ExecutionTime.
@@ -112,14 +112,13 @@ class RoughEstimateOfExecutionTime:
     class Meta:
         name = "ROUGH-ESTIMATE-OF-EXECUTION-TIME"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | RoughEstimateOfExecutionTime.ShortNameFragments
@@ -290,7 +289,7 @@ class RoughEstimateOfExecutionTime:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -301,7 +300,7 @@ class RoughEstimateOfExecutionTime:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -312,40 +311,37 @@ class RoughEstimateOfExecutionTime:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExclusiveAreaRef(Ref):
-        dest: None | ExclusiveAreaSubtypesEnum = field(
-            default=None,
+        dest: ExclusiveAreaSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExecutableEntityRef(Ref):
-        dest: None | ExecutableEntitySubtypesEnum = field(
-            default=None,
+        dest: ExecutableEntitySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwElementRef(Ref):
-        dest: None | HwElementSubtypesEnum = field(
-            default=None,
+        dest: HwElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IncludedLibraryRefs:
         included_library_ref: list[
             RoughEstimateOfExecutionTime.IncludedLibraryRefs.IncludedLibraryRef
@@ -358,18 +354,17 @@ class RoughEstimateOfExecutionTime:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class IncludedLibraryRef(Ref):
-            dest: None | DependencyOnArtifactSubtypesEnum = field(
-                default=None,
+            dest: DependencyOnArtifactSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MemorySectionLocations:
         memory_section_location: list[MemorySectionLocation] = field(
             default_factory=list,

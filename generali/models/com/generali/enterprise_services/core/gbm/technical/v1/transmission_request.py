@@ -9,7 +9,7 @@ from generali.models.com.generali.enterprise_services.core.gbm.technical.v1.tran
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbm/technical/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransmissionRequest(TransmissionRequestType):
     """
     <description xmlns="">The definition of the request message that

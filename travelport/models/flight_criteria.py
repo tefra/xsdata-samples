@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightCriteria:
     """
     Search criterion for UniversalRecordPolicyDataReq.
@@ -36,48 +36,43 @@ class FlightCriteria:
             "required": True,
         },
     )
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
-    flight_number: None | str = field(
-        default=None,
+    flight_number: str = field(
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    departure_date: None | XmlDate = field(
-        default=None,
+    departure_date: XmlDate = field(
         metadata={
             "name": "DepartureDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    origin: None | str = field(
-        default=None,
+    origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    destination: None | str = field(
-        default=None,
+    destination: str = field(
         metadata={
             "name": "Destination",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )

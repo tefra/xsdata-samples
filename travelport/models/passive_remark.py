@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/passive_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassiveRemark:
     """
     Parameters
@@ -33,11 +33,10 @@ class PassiveRemark:
             "type": "Element",
         },
     )
-    passive_segment_ref: None | str = field(
-        default=None,
+    passive_segment_ref: str = field(
         metadata={
             "name": "PassiveSegmentRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

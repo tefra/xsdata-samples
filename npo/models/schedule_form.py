@@ -7,7 +7,7 @@ from npo.models.schedule_form_type import ScheduleFormType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduleForm(ScheduleFormType):
     class Meta:
         name = "scheduleForm"

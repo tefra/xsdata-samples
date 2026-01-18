@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateRangeType:
     """
     Attributes:

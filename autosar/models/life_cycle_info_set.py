@@ -24,7 +24,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LifeCycleInfoSet:
     """
     This meta class represents the ability to attach a life cycle
@@ -110,14 +110,13 @@ class LifeCycleInfoSet:
     class Meta:
         name = "LIFE-CYCLE-INFO-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | LifeCycleInfoSet.ShortNameFragments = field(
         default=None,
@@ -248,7 +247,7 @@ class LifeCycleInfoSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -259,7 +258,7 @@ class LifeCycleInfoSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -270,18 +269,17 @@ class LifeCycleInfoSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DefaultLcStateRef(Ref):
-        dest: None | LifeCycleStateSubtypesEnum = field(
-            default=None,
+        dest: LifeCycleStateSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LifeCycleInfos:
         life_cycle_info: list[LifeCycleInfo] = field(
             default_factory=list,
@@ -292,13 +290,12 @@ class LifeCycleInfoSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UsedLifeCycleStateDefinitionGroupRef(Ref):
-        dest: None | LifeCycleStateDefinitionGroupSubtypesEnum = field(
-            default=None,
+        dest: LifeCycleStateDefinitionGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

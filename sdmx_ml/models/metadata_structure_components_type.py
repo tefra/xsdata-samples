@@ -10,7 +10,7 @@ from sdmx_ml.models.metadata_structure_components_base_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataStructureComponentsType(MetadataStructureComponentsBaseType):
     """
     MetadataStructureComponentsType describes the structure of the grouping
@@ -18,12 +18,11 @@ class MetadataStructureComponentsType(MetadataStructureComponentsBaseType):
     definition.
     """
 
-    metadata_attribute_list: None | MetadataAttributeList = field(
-        default=None,
+    metadata_attribute_list: MetadataAttributeList = field(
         metadata={
             "name": "MetadataAttributeList",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )

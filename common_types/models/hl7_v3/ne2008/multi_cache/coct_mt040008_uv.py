@@ -19,7 +19,7 @@ from .coct_mt150007_uv import CoctMt150007UvOrganization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt040008UvResponsible:
     class Meta:
         name = "COCT_MT040008UV.Responsible"

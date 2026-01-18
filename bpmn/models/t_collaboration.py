@@ -23,7 +23,7 @@ from .text_annotation import TextAnnotation
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TCollaboration(TRootElement):
     class Meta:
         name = "tCollaboration"

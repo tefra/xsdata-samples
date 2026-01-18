@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceInterfaceMappingSet:
     """
     This meta-class represents the ability to aggregate a collection of
@@ -92,14 +92,13 @@ class ServiceInterfaceMappingSet:
     class Meta:
         name = "SERVICE-INTERFACE-MAPPING-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ServiceInterfaceMappingSet.ShortNameFragments
@@ -210,7 +209,7 @@ class ServiceInterfaceMappingSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -221,7 +220,7 @@ class ServiceInterfaceMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -232,7 +231,7 @@ class ServiceInterfaceMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ElementMappings:
         service_interface_event_mapping: list[ServiceInterfaceEventMapping] = (
             field(
@@ -265,7 +264,7 @@ class ServiceInterfaceMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InterfaceMappings:
         service_interface_mapping: list[ServiceInterfaceMapping] = field(
             default_factory=list,

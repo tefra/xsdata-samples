@@ -10,7 +10,7 @@ from .sw_systemconst_subtypes_enum import SwSystemconstSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeValueValueVariationPoint:
     """
     This class represents the ability to express a formula for a numerical
@@ -116,24 +116,22 @@ class TimeValueValueVariationPoint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SyscStringRef(Ref):
-        dest: None | SwSystemconstSubtypesEnum = field(
-            default=None,
+        dest: SwSystemconstSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SyscRef(Ref):
-        dest: None | SwSystemconstSubtypesEnum = field(
-            default=None,
+        dest: SwSystemconstSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

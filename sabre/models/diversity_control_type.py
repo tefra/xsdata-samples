@@ -8,7 +8,7 @@ from sabre.models.outbound_or_inbound import OutboundOrInbound
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiversityControlType:
     """
     These parameters control how IntellSell should select itineraries based
@@ -16,26 +16,24 @@ class DiversityControlType:
     guarantee a diverse response.
     """
 
-    low_fare_bucket: None | DiversityControlType.LowFareBucket = field(
-        default=None,
+    low_fare_bucket: DiversityControlType.LowFareBucket = field(
         metadata={
             "name": "LowFareBucket",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    dimensions: None | DiversityControlType.Dimensions = field(
-        default=None,
+    dimensions: DiversityControlType.Dimensions = field(
         metadata={
             "name": "Dimensions",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LowFareBucket:
         options: None | str = field(
             default=None,
@@ -54,7 +52,7 @@ class DiversityControlType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Dimensions:
         travel_time: None | DiversityControlType.Dimensions.TravelTime = field(
             default=None,
@@ -120,20 +118,19 @@ class DiversityControlType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TravelTime:
-            weight: None | int = field(
-                default=None,
+            weight: int = field(
                 metadata={
                     "name": "Weight",
                     "type": "Attribute",
                     "required": True,
                     "min_inclusive": 1,
                     "max_inclusive": 10,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Carrier:
             default: None | DiversityControlType.Dimensions.Carrier.Default = (
                 field(
@@ -155,15 +152,14 @@ class DiversityControlType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            weight: None | int = field(
-                default=None,
+            weight: int = field(
                 metadata={
                     "name": "Weight",
                     "type": "Attribute",
                     "required": True,
                     "min_inclusive": 1,
                     "max_inclusive": 10,
-                },
+                }
             )
             online_indicator: bool = field(
                 default=False,
@@ -173,40 +169,37 @@ class DiversityControlType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Default:
-                options: None | str = field(
-                    default=None,
+                options: str = field(
                     metadata={
                         "name": "Options",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%",
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Override:
-                code: None | str = field(
-                    default=None,
+                code: str = field(
                     metadata={
                         "name": "Code",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9A-Z]{2,3}",
-                    },
+                    }
                 )
-                options: None | str = field(
-                    default=None,
+                options: str = field(
                     metadata={
                         "name": "Options",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%",
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class OperatingDuplicate:
             preferred_carrier: list[
                 DiversityControlType.Dimensions.OperatingDuplicate.PreferredCarrier
@@ -218,40 +211,37 @@ class DiversityControlType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            weight: None | int = field(
-                default=None,
+            weight: int = field(
                 metadata={
                     "name": "Weight",
                     "type": "Attribute",
                     "required": True,
                     "min_inclusive": 1,
                     "max_inclusive": 10,
-                },
+                }
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class PreferredCarrier:
-                code: None | str = field(
-                    default=None,
+                code: str = field(
                     metadata={
                         "name": "Code",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9A-Z]{2,3}",
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class InboundOutboundPairing:
-            weight: None | int = field(
-                default=None,
+            weight: int = field(
                 metadata={
                     "name": "Weight",
                     "type": "Attribute",
                     "required": True,
                     "min_inclusive": 1,
                     "max_inclusive": 10,
-                },
+                }
             )
             duplicates: int = field(
                 default=1,
@@ -261,7 +251,7 @@ class DiversityControlType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TimeOfDay:
             """
             Attributes:
@@ -280,18 +270,17 @@ class DiversityControlType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            weight: None | int = field(
-                default=None,
+            weight: int = field(
                 metadata={
                     "name": "Weight",
                     "type": "Attribute",
                     "required": True,
                     "min_inclusive": 1,
                     "max_inclusive": 10,
-                },
+                }
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Distribution:
                 range: list[
                     DiversityControlType.Dimensions.TimeOfDay.Distribution.Range
@@ -326,7 +315,7 @@ class DiversityControlType:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class Range:
                     """
                     Either all Range elements shall contain attribute
@@ -335,23 +324,21 @@ class DiversityControlType:
                     Ranges shall not overlap.
                     """
 
-                    begin: None | str = field(
-                        default=None,
+                    begin: str = field(
                         metadata={
                             "name": "Begin",
                             "type": "Attribute",
                             "required": True,
                             "pattern": r"([0-1]?[0-9]|2[0-3]):[0-5][0-9]",
-                        },
+                        }
                     )
-                    end: None | str = field(
-                        default=None,
+                    end: str = field(
                         metadata={
                             "name": "End",
                             "type": "Attribute",
                             "required": True,
                             "pattern": r"([0-1]?[0-9]|2[0-3]):[0-5][0-9]",
-                        },
+                        }
                     )
                     options: None | str = field(
                         default=None,
@@ -362,15 +349,14 @@ class DiversityControlType:
                         },
                     )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class StopsNumber:
-            weight: None | int = field(
-                default=None,
+            weight: int = field(
                 metadata={
                     "name": "Weight",
                     "type": "Attribute",
                     "required": True,
                     "min_inclusive": 1,
                     "max_inclusive": 10,
-                },
+                }
             )

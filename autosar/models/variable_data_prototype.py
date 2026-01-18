@@ -38,7 +38,7 @@ from .text_value_specification import TextValueSpecification
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VariableDataPrototype:
     """
     @RESTRICT_TO_STANDARD:CP:AP!
@@ -118,14 +118,13 @@ class VariableDataPrototype:
     class Meta:
         name = "VARIABLE-DATA-PROTOTYPE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | VariableDataPrototype.ShortNameFragments = (
         field(
@@ -240,7 +239,7 @@ class VariableDataPrototype:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -251,7 +250,7 @@ class VariableDataPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -262,18 +261,17 @@ class VariableDataPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeTref(Ref):
-        dest: None | AutosarDataTypeSubtypesEnum = field(
-            default=None,
+        dest: AutosarDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InitValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification

@@ -7,7 +7,7 @@ from travelport.models.base_req_1 import BaseReq1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeEligibilityReq(BaseReq1):
     """
     Request to determine if the fares in an itinerary are exchangeable.
@@ -24,15 +24,12 @@ class AirExchangeEligibilityReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    provider_reservation_info: (
-        None | AirExchangeEligibilityReq.ProviderReservationInfo
-    ) = field(
-        default=None,
+    provider_reservation_info: AirExchangeEligibilityReq.ProviderReservationInfo = field(
         metadata={
             "name": "ProviderReservationInfo",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     type_value: None | str = field(
         default=None,
@@ -42,7 +39,7 @@ class AirExchangeEligibilityReq(BaseReq1):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProviderReservationInfo:
         """
         Parameters
@@ -53,24 +50,22 @@ class AirExchangeEligibilityReq(BaseReq1):
             Represents Carrier Code for ACH PNR Retrieve.
         """
 
-        provider_code: None | str = field(
-            default=None,
+        provider_code: str = field(
             metadata={
                 "name": "ProviderCode",
                 "type": "Attribute",
                 "required": True,
                 "min_length": 2,
                 "max_length": 5,
-            },
+            }
         )
-        provider_locator_code: None | str = field(
-            default=None,
+        provider_locator_code: str = field(
             metadata={
                 "name": "ProviderLocatorCode",
                 "type": "Attribute",
                 "required": True,
                 "max_length": 15,
-            },
+            }
         )
         supplier_code: None | str = field(
             default=None,

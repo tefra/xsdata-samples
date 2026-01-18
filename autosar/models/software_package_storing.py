@@ -9,7 +9,7 @@ from .software_package_subtypes_enum import SoftwarePackageSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoftwarePackageStoring:
     """
     This meta-class provides the ability to specify whether and where the
@@ -67,7 +67,7 @@ class SoftwarePackageStoring:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransferRefs:
         transfer_ref: list[SoftwarePackageStoring.TransferRefs.TransferRef] = (
             field(
@@ -80,13 +80,12 @@ class SoftwarePackageStoring:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TransferRef(Ref):
-            dest: None | SoftwarePackageSubtypesEnum = field(
-                default=None,
+            dest: SoftwarePackageSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

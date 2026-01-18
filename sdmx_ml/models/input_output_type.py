@@ -7,7 +7,7 @@ from sdmx_ml.models.annotable_type import AnnotableType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class InputOutputType(AnnotableType):
     """
     InputOutputType describes the structure of an input or output to a
@@ -23,15 +23,14 @@ class InputOutputType(AnnotableType):
         for the input or output within the process.
     """
 
-    object_reference: None | str = field(
-        default=None,
+    object_reference: str = field(
         metadata={
             "name": "ObjectReference",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r".+\)(\.[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*)?",
-        },
+        }
     )
     local_id: None | str = field(
         default=None,

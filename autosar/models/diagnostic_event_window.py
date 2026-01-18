@@ -8,7 +8,7 @@ from .diagnostic_event_window_time_enum import DiagnosticEventWindowTimeEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEventWindow:
     """
     This represents the ability to define the characteristics of the

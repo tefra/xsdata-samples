@@ -7,7 +7,7 @@ from .handle_timeout_enum_simple import HandleTimeoutEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HandleTimeoutEnum:
     """
     Strategies of handling a reception timeout violation.
@@ -28,11 +28,10 @@ class HandleTimeoutEnum:
     class Meta:
         name = "HANDLE-TIMEOUT-ENUM"
 
-    value: None | HandleTimeoutEnumSimple = field(
-        default=None,
+    value: HandleTimeoutEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

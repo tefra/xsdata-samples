@@ -10,12 +10,11 @@ from .submode_ref_structure import SubmodeRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModeRefStructure(SubmodeRefStructure):
-    mode: None | AllVehicleModesOfTransportEnumeration = field(
-        default=None,
+    mode: AllVehicleModesOfTransportEnumeration = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

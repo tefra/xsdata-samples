@@ -49,7 +49,7 @@ from .vehicles_in_frame_rel_structure import VehiclesInFrameRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InfrastructureVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "Infrastructure_VersionFrameStructure"

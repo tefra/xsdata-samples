@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareFamilyCriteria:
     """
     It is a branded Fare for a carrier and given fare basis code.
@@ -14,14 +14,13 @@ class FareFamilyCriteria:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
     label: None | str = field(
         default=None,

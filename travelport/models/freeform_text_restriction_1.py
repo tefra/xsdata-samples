@@ -7,7 +7,7 @@ from travelport.models.type_string_restriction_1 import TypeStringRestriction1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FreeformTextRestriction1(TypeStringRestriction1):
     """
     Restrictions on profile data for fields with a data type of string.

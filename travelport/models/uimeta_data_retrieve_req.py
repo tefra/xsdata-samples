@@ -7,7 +7,7 @@ from travelport.models.base_req_2 import BaseReq2
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UimetaDataRetrieveReq(BaseReq2):
     """
     Service for Request to retrieve the settings by user in Profile
@@ -25,11 +25,10 @@ class UimetaDataRetrieveReq(BaseReq2):
         name = "UIMetaDataRetrieveReq"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Element",
             "required": True,
-        },
+        }
     )

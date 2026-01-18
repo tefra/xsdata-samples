@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeActionReference:
     """
     Reference to an Action by ID.
@@ -21,19 +21,17 @@ class TypeActionReference:
     class Meta:
         name = "typeActionReference"
 
-    id: None | int = field(
-        default=None,
+    id: int = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_action_code: None | str = field(
-        default=None,
+    profile_action_code: str = field(
         metadata={
             "name": "ProfileActionCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

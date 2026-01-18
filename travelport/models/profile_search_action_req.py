@@ -7,7 +7,7 @@ from travelport.models.base_req_5 import BaseReq5
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileSearchActionReq(BaseReq5):
     """
     Get summary of all Action(s) available in the system.
@@ -21,13 +21,12 @@ class ProfileSearchActionReq(BaseReq5):
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    consuming_system: None | str = field(
-        default=None,
+    consuming_system: str = field(
         metadata={
             "name": "ConsumingSystem",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )

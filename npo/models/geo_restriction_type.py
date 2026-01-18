@@ -10,7 +10,7 @@ from npo.models.platform_type_enum import PlatformTypeEnum
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeoRestrictionType:
     class Meta:
         name = "geoRestrictionType"

@@ -7,7 +7,7 @@ from ipxact.models.enumerated_value_type import EnumeratedValueType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnumeratedValues:
     """
     Enumerates specific values that can be assigned to the bit field.
@@ -41,7 +41,7 @@ class EnumeratedValues:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EnumerationDefinitionRef:
         value: str = field(
             default="",
@@ -49,11 +49,10 @@ class EnumeratedValues:
                 "required": True,
             },
         )
-        type_definitions: None | str = field(
-            default=None,
+        type_definitions: str = field(
             metadata={
                 "name": "typeDefinitions",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

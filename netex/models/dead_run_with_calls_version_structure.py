@@ -8,7 +8,7 @@ from .dead_run_version_structure import DeadRunVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeadRunWithCallsVersionStructure(DeadRunVersionStructure):
     class Meta:
         name = "DeadRunWithCalls_VersionStructure"

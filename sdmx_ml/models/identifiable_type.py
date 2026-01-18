@@ -8,7 +8,7 @@ from sdmx_ml.models.link import Link
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class IdentifiableType(AnnotableType):
     """
     IdentifiableType is an abstract base type for all identifiable objects.

@@ -7,7 +7,7 @@ from sdmx_ml.models.structure_map_type import StructureMapType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class StructureMapsType:
     """
     StructureMapsType describes the structure of the structure maps

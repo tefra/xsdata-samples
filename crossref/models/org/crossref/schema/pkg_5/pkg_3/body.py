@@ -31,7 +31,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.standard import Standard
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Body:
     """
     Container for the main body of a DOI record submission.

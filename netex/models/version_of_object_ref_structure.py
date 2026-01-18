@@ -9,7 +9,7 @@ from .modification_enumeration import ModificationEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VersionOfObjectRefStructure:
     value: str = field(
         default="",
@@ -48,12 +48,11 @@ class VersionOfObjectRefStructure:
             "type": "Attribute",
         },
     )
-    ref: None | str = field(
-        default=None,
+    ref: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     version_ref: None | str = field(
         default=None,

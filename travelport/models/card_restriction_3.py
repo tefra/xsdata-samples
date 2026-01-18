@@ -7,7 +7,7 @@ from travelport.models.required_field_3 import RequiredField3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CardRestriction3:
     """
     Parameters
@@ -32,21 +32,19 @@ class CardRestriction3:
             "max_occurs": 999,
         },
     )
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 2,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

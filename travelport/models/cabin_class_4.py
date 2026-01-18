@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CabinClass4:
     """
     Requests cabin class (First, Business and Economy, etc.) as supported
@@ -16,11 +16,10 @@ class CabinClass4:
         name = "CabinClass"
         namespace = "http://www.travelport.com/schema/common_v37_0"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

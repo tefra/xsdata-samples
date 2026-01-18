@@ -10,45 +10,41 @@ from travelport.models.session_context import SessionContext
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeTicketingPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: None | AirExchangeTicketingPortTypeServiceInput.Header = field(
-        default=None,
+    header: AirExchangeTicketingPortTypeServiceInput.Header = field(
         metadata={
             "name": "Header",
             "type": "Element",
-        },
+        }
     )
-    body: None | AirExchangeTicketingPortTypeServiceInput.Body = field(
-        default=None,
+    body: AirExchangeTicketingPortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Header:
-        session_context: None | SessionContext = field(
-            default=None,
+        session_context: SessionContext = field(
             metadata={
                 "name": "SessionContext",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        air_exchange_ticketing_req: None | AirExchangeTicketingReq = field(
-            default=None,
+        air_exchange_ticketing_req: AirExchangeTicketingReq = field(
             metadata={
                 "name": "AirExchangeTicketingReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
-            },
+            }
         )

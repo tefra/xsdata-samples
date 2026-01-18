@@ -11,7 +11,7 @@ from travelport.models.type_vehicle_transmission import TypeVehicleTransmission
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleModifier:
     """
     Parameters

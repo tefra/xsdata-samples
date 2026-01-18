@@ -8,7 +8,7 @@ from .rpt_preparation_enum import RptPreparationEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RptImplPolicy:
     """
     Describes the code preparation for rapid prototyping at data accesses.

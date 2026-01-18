@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Float:
     """
     An instance of Float is an element from the set of real numbers.
@@ -26,11 +26,10 @@ class Float:
     class Meta:
         name = "FLOAT"
 
-    value: None | float = field(
-        default=None,
+    value: float = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

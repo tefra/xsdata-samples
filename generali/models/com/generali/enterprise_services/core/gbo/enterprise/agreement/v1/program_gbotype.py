@@ -62,7 +62,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProgramGbotype(AgreementType):
     class Meta:
         name = "ProgramGBOType"
@@ -107,32 +107,29 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    year_sequence_number: None | int = field(
-        default=None,
+    year_sequence_number: int = field(
         metadata={
             "name": "YearSequenceNumber",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    producer: None | ProducerInvolvementType = field(
-        default=None,
+    producer: ProducerInvolvementType = field(
         metadata={
             "name": "Producer",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    cancellation_days_notice: None | NumberType = field(
-        default=None,
+    cancellation_days_notice: NumberType = field(
         metadata={
             "name": "CancellationDaysNotice",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     risks: None | ProgramGbotypeRisks = field(
         default=None,
@@ -142,14 +139,13 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    covers: None | ProgramGbotypeCovers = field(
-        default=None,
+    covers: ProgramGbotypeCovers = field(
         metadata={
             "name": "Covers",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     deductibles: None | DeductiblesType = field(
         default=None,

@@ -18,7 +18,7 @@ from datexii.models.eu.datexii.v2.parking_type_of_group import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupOfParkingSpaces1(ParkingSpaceBasics):
     """
     A group of parking spaces.
@@ -61,23 +61,21 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
     class Meta:
         name = "GroupOfParkingSpaces"
 
-    parking_number_of_spaces: None | int = field(
-        default=None,
+    parking_number_of_spaces: int = field(
         metadata={
             "name": "parkingNumberOfSpaces",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    parking_type_of_group: None | ParkingTypeOfGroup = field(
-        default=None,
+    parking_type_of_group: ParkingTypeOfGroup = field(
         metadata={
             "name": "parkingTypeOfGroup",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     identical_to_group: list[str] = field(
         default_factory=list,

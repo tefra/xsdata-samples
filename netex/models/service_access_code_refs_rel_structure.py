@@ -8,17 +8,16 @@ from .service_access_code_ref import ServiceAccessCodeRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceAccessCodeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "serviceAccessCodeRefs_RelStructure"
 
-    service_access_code_ref: None | ServiceAccessCodeRef = field(
-        default=None,
+    service_access_code_ref: ServiceAccessCodeRef = field(
         metadata={
             "name": "ServiceAccessCodeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

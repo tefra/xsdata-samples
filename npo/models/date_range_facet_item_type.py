@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDateTime
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateRangeFacetItemType:
     class Meta:
         name = "dateRangeFacetItemType"

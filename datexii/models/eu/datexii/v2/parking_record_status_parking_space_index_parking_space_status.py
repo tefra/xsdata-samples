@@ -9,25 +9,23 @@ from datexii.models.eu.datexii.v2.parking_space_status import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus:
     class Meta:
         name = "_ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus"
 
-    parking_space_status: None | ParkingSpaceStatus = field(
-        default=None,
+    parking_space_status: ParkingSpaceStatus = field(
         metadata={
             "name": "parkingSpaceStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    parking_space_index: None | int = field(
-        default=None,
+    parking_space_index: int = field(
         metadata={
             "name": "parkingSpaceIndex",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

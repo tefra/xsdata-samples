@@ -12,7 +12,7 @@ from travelport.models.type_search_phone_1 import TypeSearchPhone1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeSearchContact1:
     """
     Defines the Contact attributes allowed in searching.

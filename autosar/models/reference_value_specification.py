@@ -10,7 +10,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceValueSpecification:
     """
     Specifies a reference to a data prototype to be used as an initial
@@ -79,13 +79,12 @@ class ReferenceValueSpecification:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReferenceValueRef(Ref):
-        dest: None | DataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: DataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

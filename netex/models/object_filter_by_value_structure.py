@@ -628,7 +628,7 @@ from .zone_ref import ZoneRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ObjectFilterByValueStructure:
     layer_ref: None | LayerRef = field(
         default=None,
@@ -657,7 +657,7 @@ class ObjectFilterByValueStructure:
         )
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ObjectReferences:
         choice: Iterable[
             TripLegRef

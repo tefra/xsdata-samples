@@ -42,19 +42,18 @@ from .type_of_service_ref import TypeOfServiceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LineVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Line_VersionStructure"
 
-    name: None | MultilingualString = field(
-        default=None,
+    name: MultilingualString = field(
         metadata={
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     short_name: None | MultilingualString = field(
         default=None,

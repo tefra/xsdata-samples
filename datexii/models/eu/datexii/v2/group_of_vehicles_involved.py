@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.vehicle_status_enum import VehicleStatusEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupOfVehiclesInvolved:
     """
     Group of the vehicles involved having common characteristics and/or

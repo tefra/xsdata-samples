@@ -10,7 +10,7 @@ from .segment_position import SegmentPosition
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StaticPart:
     """
     Some parts/signals of the I-PDU may be the same regardless of the
@@ -81,7 +81,7 @@ class StaticPart:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SegmentPositions:
         segment_position: list[SegmentPosition] = field(
             default_factory=list,
@@ -92,13 +92,12 @@ class StaticPart:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IPduRef(Ref):
-        dest: None | ISignalIPduSubtypesEnum = field(
-            default=None,
+        dest: ISignalIPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -7,7 +7,7 @@ from travelport.models.type_tax_info_1 import TypeTaxInfo1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxInfo(TypeTaxInfo1):
     """
     The tax information for a.

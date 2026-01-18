@@ -8,7 +8,7 @@ from sdmx_ml.models.code_selection_type import CodeSelectionType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CodelistExtensionType:
     """
     CodelistExtensionType defines the structure of a codelist to be
@@ -25,15 +25,14 @@ class CodelistExtensionType:
         codelist.
     """
 
-    codelist: None | str = field(
-        default=None,
+    codelist: str = field(
         metadata={
             "name": "Codelist",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r".+\.codelist\.Codelist=.+",
-        },
+        }
     )
     inclusive_code_selection_or_exclusive_code_selection: (
         None
@@ -68,10 +67,10 @@ class CodelistExtensionType:
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class InclusiveCodeSelection(CodeSelectionType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class ExclusiveCodeSelection(CodeSelectionType):
         pass

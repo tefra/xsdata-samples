@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ISignalTriggeringRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -66,13 +66,12 @@ class ISignalTriggeringRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalTriggeringRef(Ref):
-        dest: None | ISignalTriggeringSubtypesEnum = field(
-            default=None,
+        dest: ISignalTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

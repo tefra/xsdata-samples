@@ -8,7 +8,7 @@ from .documentation import Documentation
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TExtension:
     class Meta:
         name = "tExtension"

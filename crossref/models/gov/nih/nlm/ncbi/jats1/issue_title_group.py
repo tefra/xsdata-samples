@@ -12,7 +12,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IssueTitleGroup:
     """
     <div> <h3>Issue Title Group</h3> </div>.
@@ -22,13 +22,12 @@ class IssueTitleGroup:
         name = "issue-title-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    issue_title: None | IssueTitle = field(
-        default=None,
+    issue_title: IssueTitle = field(
         metadata={
             "name": "issue-title",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     issue_subtitle: list[IssueSubtitle] = field(
         default_factory=list,

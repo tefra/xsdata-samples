@@ -7,7 +7,7 @@ from .t_global_user_task import TGlobalUserTask
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GlobalUserTask(TGlobalUserTask):
     class Meta:
         name = "globalUserTask"

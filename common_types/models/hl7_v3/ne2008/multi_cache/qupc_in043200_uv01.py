@@ -63,7 +63,7 @@ from .repc_mt004000_uv01 import RepcMt004000Uv01CareProvisionEvent
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
     class Meta:
         name = "QUPC_IN043200UV01.MFMI_MT700712UV01.Subject5"
@@ -93,13 +93,12 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
         },
     )
     care_provision_event: None | RepcMt004000Uv01CareProvisionEvent = field(
-        default=None,
         metadata={
             "name": "careProvisionEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -148,7 +147,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
     class Meta:
         name = "QUPC_IN043200UV01.MFMI_MT700712UV01.RegistrationEvent"
@@ -184,14 +183,13 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     effective_time: None | IvlTsExplicit = field(
         default=None,
@@ -210,12 +208,11 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
         },
     )
     custodian: None | MfmiMt700712Uv01Custodian = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     in_fulfillment_of: list[MfmiMt700712Uv01InFulfillmentOf] = field(
         default_factory=list,
@@ -243,13 +240,12 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "nillable": True,
         },
     )
-    subject2: None | QupcIn043200Uv01MfmiMt700712Uv01Subject5 = field(
-        default=None,
+    subject2: QupcIn043200Uv01MfmiMt700712Uv01Subject5 = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -278,7 +274,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
     class Meta:
         name = "QUPC_IN043200UV01.MFMI_MT700712UV01.Subject1"
@@ -310,13 +306,12 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
     registration_event: (
         None | QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent
     ) = field(
-        default=None,
         metadata={
             "name": "registrationEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -365,7 +360,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
     class Meta:
         name = "QUPC_IN043200UV01.MFMI_MT700712UV01.ControlActProcess"
@@ -499,14 +494,13 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    query_ack: None | MfmiMt700712Uv01QueryAck = field(
-        default=None,
+    query_ack: MfmiMt700712Uv01QueryAck = field(
         metadata={
             "name": "queryAck",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     parameter_list: None | QupcMt040300Uv01ParameterList = field(
         default=None,
@@ -524,25 +518,23 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassControlAct = field(
-        default=None,
+    class_code: ActClassControlAct = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | XActMoodIntentEvent = field(
-        default=None,
+    mood_code: XActMoodIntentEvent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcIn043200Uv01McciMt000300Uv01Message:
     class Meta:
         name = "QUPC_IN043200UV01.MCCI_MT000300UV01.Message"
@@ -571,22 +563,20 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    creation_time: None | TsExplicit = field(
-        default=None,
+    creation_time: TsExplicit = field(
         metadata={
             "name": "creationTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     security_text: None | St = field(
         default=None,
@@ -604,14 +594,13 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    interaction_id: None | Ii = field(
-        default=None,
+    interaction_id: Ii = field(
         metadata={
             "name": "interactionId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     profile_id: list[Ii] = field(
         default_factory=list,
@@ -621,32 +610,29 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    processing_code: None | Cs = field(
-        default=None,
+    processing_code: Cs = field(
         metadata={
             "name": "processingCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    processing_mode_code: None | Cs = field(
-        default=None,
+    processing_mode_code: Cs = field(
         metadata={
             "name": "processingModeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    accept_ack_code: None | Cs = field(
-        default=None,
+    accept_ack_code: Cs = field(
         metadata={
             "name": "acceptAckCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     attachment_text: list[EdExplicit] = field(
         default_factory=list,
@@ -673,13 +659,12 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "nillable": True,
         },
     )
-    sender: None | McciMt000300Uv01Sender = field(
-        default=None,
+    sender: McciMt000300Uv01Sender = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     attention_line: list[McciMt000300Uv01AttentionLine] = field(
         default_factory=list,
@@ -698,16 +683,15 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "nillable": True,
         },
     )
-    control_act_process: (
-        None | QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess
-    ) = field(
-        default=None,
-        metadata={
-            "name": "controlActProcess",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
+    control_act_process: QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess = (
+        field(
+            metadata={
+                "name": "controlActProcess",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "required": True,
+            }
+        )
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -718,7 +702,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcIn043200Uv01(QupcIn043200Uv01McciMt000300Uv01Message):
     class Meta:
         name = "QUPC_IN043200UV01"

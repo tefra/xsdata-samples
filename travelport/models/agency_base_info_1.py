@@ -7,7 +7,7 @@ from travelport.models.phone_1 import Phone1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgencyBaseInfo1:
     """
     Information relating to Agency.

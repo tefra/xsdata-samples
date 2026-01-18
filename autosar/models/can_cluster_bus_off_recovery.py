@@ -8,7 +8,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanClusterBusOffRecovery:
     """
     This element contains the attributes that are used to configure the CAN

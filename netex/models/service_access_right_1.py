@@ -9,7 +9,7 @@ from .service_access_right_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceAccessRight1(ServiceAccessRightVersionStructure):
     class Meta:
         name = "ServiceAccessRight"

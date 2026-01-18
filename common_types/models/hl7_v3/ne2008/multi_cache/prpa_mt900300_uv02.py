@@ -18,7 +18,7 @@ from ..core.voc import NullFlavor
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt900300Uv02CareEventId:
     class Meta:
         name = "PRPA_MT900300UV02.CareEventID"
@@ -72,7 +72,7 @@ class PrpaMt900300Uv02CareEventId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt900300Uv02EncounterStatus:
     class Meta:
         name = "PRPA_MT900300UV02.EncounterStatus"
@@ -126,7 +126,7 @@ class PrpaMt900300Uv02EncounterStatus:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt900300Uv02EncounterTimeframe:
     class Meta:
         name = "PRPA_MT900300UV02.EncounterTimeframe"
@@ -155,13 +155,12 @@ class PrpaMt900300Uv02EncounterTimeframe:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | IvlTsExplicit = field(
-        default=None,
+    value: IvlTsExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     semantics_text: None | St = field(
         default=None,
@@ -180,7 +179,7 @@ class PrpaMt900300Uv02EncounterTimeframe:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt900300Uv02PatientId:
     class Meta:
         name = "PRPA_MT900300UV02.PatientId"
@@ -234,7 +233,7 @@ class PrpaMt900300Uv02PatientId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt900300Uv02ResponsibleOrganization:
     class Meta:
         name = "PRPA_MT900300UV02.ResponsibleOrganization"
@@ -288,7 +287,7 @@ class PrpaMt900300Uv02ResponsibleOrganization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt900300Uv02SortControl:
     class Meta:
         name = "PRPA_MT900300UV02.SortControl"
@@ -350,7 +349,7 @@ class PrpaMt900300Uv02SortControl:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt900300Uv02TypeOfEncounter:
     class Meta:
         name = "PRPA_MT900300UV02.TypeOfEncounter"
@@ -379,13 +378,12 @@ class PrpaMt900300Uv02TypeOfEncounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | Cd = field(
-        default=None,
+    value: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     semantics_text: None | St = field(
         default=None,
@@ -404,7 +402,7 @@ class PrpaMt900300Uv02TypeOfEncounter:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt900300Uv02QueryByParameterPayload:
     class Meta:
         name = "PRPA_MT900300UV02.QueryByParameterPayload"
@@ -441,14 +439,13 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     modify_code: None | Cs = field(
         default=None,
@@ -525,14 +522,13 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "nillable": True,
         },
     )
-    patient_id: None | PrpaMt900300Uv02PatientId = field(
-        default=None,
+    patient_id: PrpaMt900300Uv02PatientId = field(
         metadata={
             "name": "patientId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     responsible_organization: (
         None | PrpaMt900300Uv02ResponsibleOrganization

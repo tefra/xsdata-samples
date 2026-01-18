@@ -12,7 +12,7 @@ from .vehicle_type_preference_ref import VehicleTypePreferenceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleTypePreferenceVersionedChildStructure(
     JourneyTimingVersionedChildStructure
 ):

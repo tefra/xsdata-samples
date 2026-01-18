@@ -10,7 +10,7 @@ from .subscription_qualifier_structure import SubscriptionQualifierStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TerminateSubscriptionRequestBodyStructure:
     subscriber_ref: None | ParticipantRefStructure = field(
         default=None,

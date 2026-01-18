@@ -12,7 +12,7 @@ from .mapping_scope_enum import MappingScopeEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ComponentSeparation:
     """
     Constraint that forces the two referenced SW components (called A and B
@@ -100,7 +100,7 @@ class ComponentSeparation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SeparatedComponentIrefs:
         separated_component_iref: list[ComponentInSystemInstanceRef] = field(
             default_factory=list,

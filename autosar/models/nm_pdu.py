@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NmPdu:
     """
     Network Management Pdu.
@@ -111,14 +111,13 @@ class NmPdu:
     class Meta:
         name = "NM-PDU"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | NmPdu.ShortNameFragments = field(
         default=None,
@@ -263,7 +262,7 @@ class NmPdu:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -274,7 +273,7 @@ class NmPdu:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -285,7 +284,7 @@ class NmPdu:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalToIPduMappings:
         i_signal_to_i_pdu_mapping: list[ISignalToIPduMapping] = field(
             default_factory=list,

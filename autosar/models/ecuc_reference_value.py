@@ -16,7 +16,7 @@ from .referrable_subtypes_enum import ReferrableSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucReferenceValue:
     """
     Used to represent a configuration value that has a parameter definition
@@ -106,18 +106,17 @@ class EcucReferenceValue:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DefinitionRef(Ref):
-        dest: None | EcucAbstractReferenceDefSubtypesEnum = field(
-            default=None,
+        dest: EcucAbstractReferenceDefSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -128,13 +127,12 @@ class EcucReferenceValue:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ValueRef(Ref):
-        dest: None | ReferrableSubtypesEnum = field(
-            default=None,
+        dest: ReferrableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

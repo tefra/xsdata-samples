@@ -9,19 +9,18 @@ from datexii.models.eu.datexii.v2.weather_data import WeatherData
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HumidityInformation(WeatherData):
     """
     Measurements of atmospheric humidity.
     """
 
-    humidity: None | Humidity = field(
-        default=None,
+    humidity: Humidity = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     humidity_information_extension: None | ExtensionType = field(
         default=None,

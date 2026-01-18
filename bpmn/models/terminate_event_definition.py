@@ -7,7 +7,7 @@ from .t_terminate_event_definition import TTerminateEventDefinition
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TerminateEventDefinition(TTerminateEventDefinition):
     class Meta:
         name = "terminateEventDefinition"

@@ -11,7 +11,7 @@ from travelport.models.type_time_spec_1 import TypeTimeSpec1
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SearchRailLeg:
     """
     Holds Origin, Destination, and Departure times for a Rail Leg to search

@@ -10,7 +10,7 @@ from .time_interval_ref import TimeIntervalRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeIntervalsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timeIntervals_RelStructure"

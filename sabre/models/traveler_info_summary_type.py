@@ -13,7 +13,7 @@ from sabre.models.traveler_information_type import TravelerInformationType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelerInfoSummaryType:
     """
     Specifies passenger numbers and types.

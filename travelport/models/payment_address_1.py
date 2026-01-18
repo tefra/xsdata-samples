@@ -7,7 +7,7 @@ from travelport.models.address_line_1 import AddressLine1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentAddress1:
     """
     Payment Details Address.

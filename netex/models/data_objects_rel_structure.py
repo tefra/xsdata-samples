@@ -23,7 +23,7 @@ from .vehicle_schedule_frame import VehicleScheduleFrame
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataObjectsRelStructure:
     class Meta:
         name = "dataObjects_RelStructure"

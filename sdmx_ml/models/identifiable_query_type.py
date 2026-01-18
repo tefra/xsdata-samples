@@ -7,7 +7,7 @@ from sdmx_ml.models.wild_card_value_type import WildCardValueType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class IdentifiableQueryType:
     """
     IdentifiableQueryType describes the structure of a query for an

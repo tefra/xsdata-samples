@@ -9,7 +9,7 @@ from .vehicle_service import VehicleService
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleServicesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicleServicesInFrame_RelStructure"

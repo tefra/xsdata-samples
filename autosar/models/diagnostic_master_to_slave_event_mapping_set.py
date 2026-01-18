@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticMasterToSlaveEventMappingSet:
     """
     This meta-class provides the ability to gather a collection of
@@ -88,14 +88,13 @@ class DiagnosticMasterToSlaveEventMappingSet:
     class Meta:
         name = "DIAGNOSTIC-MASTER-TO-SLAVE-EVENT-MAPPING-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticMasterToSlaveEventMappingSet.ShortNameFragments
@@ -199,7 +198,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -210,7 +209,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -221,7 +220,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MasterToSlaveEventMappings:
         diagnostic_master_to_slave_event_mapping: list[
             DiagnosticMasterToSlaveEventMapping

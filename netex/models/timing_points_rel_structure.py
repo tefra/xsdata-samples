@@ -12,7 +12,7 @@ from .timing_point import TimingPoint
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimingPointsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timingPoints_RelStructure"

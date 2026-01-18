@@ -9,7 +9,7 @@ from .td_event_service_instance_method_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventServiceInstanceMethodTypeEnum:
     """
     This is used to describe the specific event type of a
@@ -31,11 +31,10 @@ class TdEventServiceInstanceMethodTypeEnum:
     class Meta:
         name = "TD-EVENT-SERVICE-INSTANCE-METHOD-TYPE-ENUM"
 
-    value: None | TdEventServiceInstanceMethodTypeEnumSimple = field(
-        default=None,
+    value: TdEventServiceInstanceMethodTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

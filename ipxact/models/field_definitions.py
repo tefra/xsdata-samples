@@ -37,7 +37,7 @@ from ipxact.models.write_value_constraint import WriteValueConstraint
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FieldDefinitions:
     class Meta:
         name = "fieldDefinitions"
@@ -52,7 +52,7 @@ class FieldDefinitions:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FieldDefinition:
         """
         :ivar name: Unique name
@@ -72,12 +72,11 @@ class FieldDefinitions:
         :ivar id:
         """
 
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         display_name: None | DisplayName = field(
             default=None,
@@ -106,13 +105,12 @@ class FieldDefinitions:
                 "type": "Element",
             },
         )
-        bit_width: None | UnsignedPositiveIntExpression = field(
-            default=None,
+        bit_width: UnsignedPositiveIntExpression = field(
             metadata={
                 "name": "bitWidth",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         volatile: None | bool = field(
             default=None,
@@ -157,7 +155,7 @@ class FieldDefinitions:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Resets:
             """
             :ivar reset: BitField reset value
@@ -171,7 +169,7 @@ class FieldDefinitions:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FieldAccessPolicies(FieldAccessPropertiesType):
             field_access_policy: list[
                 FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy
@@ -184,7 +182,7 @@ class FieldDefinitions:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FieldAccessPolicy:
                 """
                 :ivar mode_ref:
@@ -302,7 +300,7 @@ class FieldDefinitions:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class Broadcasts:
                     broadcast_to: list[
                         FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo
@@ -315,7 +313,7 @@ class FieldDefinitions:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class BroadcastTo:
                         address_space_ref: (
                             None
@@ -381,13 +379,12 @@ class FieldDefinitions:
                                 },
                             )
                         )
-                        field_ref: None | FieldRef = field(
-                            default=None,
+                        field_ref: FieldRef = field(
                             metadata={
                                 "name": "fieldRef",
                                 "type": "Element",
                                 "required": True,
-                            },
+                            }
                         )
                         id: None | str = field(
                             default=None,
@@ -397,29 +394,27 @@ class FieldDefinitions:
                             },
                         )
 
-                        @dataclass
+                        @dataclass(kw_only=True)
                         class AddressSpaceRef:
-                            address_space_ref: None | str = field(
-                                default=None,
+                            address_space_ref: str = field(
                                 metadata={
                                     "name": "addressSpaceRef",
                                     "type": "Attribute",
                                     "required": True,
-                                },
+                                }
                             )
 
-                        @dataclass
+                        @dataclass(kw_only=True)
                         class MemoryMapRef:
-                            memory_map_ref: None | str = field(
-                                default=None,
+                            memory_map_ref: str = field(
                                 metadata={
                                     "name": "memoryMapRef",
                                     "type": "Attribute",
                                     "required": True,
-                                },
+                                }
                             )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class Testable:
                     """
                     :ivar value:
@@ -436,11 +431,10 @@ class FieldDefinitions:
                         from the field.
                     """
 
-                    value: None | bool = field(
-                        default=None,
+                    value: bool = field(
                         metadata={
                             "required": True,
-                        },
+                        }
                     )
                     test_constraint: TestableTestConstraint = field(
                         default=TestableTestConstraint.UNCONSTRAINED,

@@ -19,7 +19,7 @@ from ..core.voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030203Uv02LanguageCommunication:
     class Meta:
         name = "COCT_MT030203UV02.LanguageCommunication"
@@ -89,7 +89,7 @@ class CoctMt030203Uv02LanguageCommunication:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030203Uv02Person:
     class Meta:
         name = "COCT_MT030203UV02.Person"

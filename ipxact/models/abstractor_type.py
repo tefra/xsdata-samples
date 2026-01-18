@@ -20,7 +20,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractorType:
     """
     Abstractor-specific extension to abstractorType.
@@ -60,37 +60,33 @@ class AbstractorType:
     class Meta:
         name = "abstractorType"
 
-    vendor: None | str = field(
-        default=None,
+    vendor: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
-    library: None | str = field(
-        default=None,
+    library: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | str = field(
         default=None,
@@ -115,32 +111,29 @@ class AbstractorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    abstractor_mode: None | AbstractorType.AbstractorMode = field(
-        default=None,
+    abstractor_mode: AbstractorType.AbstractorMode = field(
         metadata={
             "name": "abstractorMode",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
-    bus_type: None | LibraryRefType = field(
-        default=None,
+    bus_type: LibraryRefType = field(
         metadata={
             "name": "busType",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
-    abstractor_interfaces: None | AbstractorType.AbstractorInterfaces = field(
-        default=None,
+    abstractor_interfaces: AbstractorType.AbstractorInterfaces = field(
         metadata={
             "name": "abstractorInterfaces",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     model: None | AbstractorModelType = field(
         default=None,
@@ -202,7 +195,7 @@ class AbstractorType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AbstractorMode:
         """
         :ivar value:
@@ -210,11 +203,10 @@ class AbstractorType:
             system
         """
 
-        value: None | AbstractorModeType = field(
-            default=None,
+        value: AbstractorModeType = field(
             metadata={
                 "required": True,
-            },
+            }
         )
         group: None | str = field(
             default=None,
@@ -223,7 +215,7 @@ class AbstractorType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AbstractorInterfaces:
         """
         :ivar abstractor_interface: An abstractor must have exactly 2

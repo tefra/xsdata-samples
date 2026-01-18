@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataTransformationRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -66,13 +66,12 @@ class DataTransformationRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataTransformationRef(Ref):
-        dest: None | DataTransformationSubtypesEnum = field(
-            default=None,
+        dest: DataTransformationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -10,7 +10,7 @@ from travelport.models.vehicle_upsell_rule import VehicleUpsellRule
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UpsellAdminRsp(BaseRsp1):
     """
     Response to add/delete/update of offer/qualify.

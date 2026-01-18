@@ -8,7 +8,7 @@ from travelport.models.type_key_tagged_element_1 import TypeKeyTaggedElement1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeContact1(TypeKeyTaggedElement1):
     """
     Base type for a Contact.
@@ -41,13 +41,12 @@ class TypeContact1(TypeKeyTaggedElement1):
     class Meta:
         name = "typeContact"
 
-    type_value: None | TypeContactType1 = field(
-        default=None,
+    type_value: TypeContactType1 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     given_name: None | str = field(
         default=None,

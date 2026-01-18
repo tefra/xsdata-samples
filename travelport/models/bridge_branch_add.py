@@ -7,7 +7,7 @@ from travelport.models.type_bridge_branch_cmd import TypeBridgeBranchCmd
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BridgeBranchAdd(TypeBridgeBranchCmd):
     """
     Command to add a bridge branch assoication of an agent.

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/cruise_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CruiseFees:
     """
     Cruise Fees amount.
@@ -21,13 +21,12 @@ class CruiseFees:
     class Meta:
         namespace = "http://www.travelport.com/schema/cruise_v52_0"
 
-    amount: None | str = field(
-        default=None,
+    amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     description: None | str = field(
         default=None,

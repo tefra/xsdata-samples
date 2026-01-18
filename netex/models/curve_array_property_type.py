@@ -8,7 +8,7 @@ from .line_string import LineString
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CurveArrayPropertyType:
     line_string: Iterable[LineString] = field(
         default_factory=list,

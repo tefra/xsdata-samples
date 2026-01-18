@@ -13,7 +13,7 @@ from .unknown_subscription_error import UnknownSubscriptionError
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
     status: None | Status = field(
         default=None,
@@ -32,7 +32,7 @@ class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ErrorCondition:
         unknown_subscription_error_or_other_error: (
             None | UnknownSubscriptionError | OtherError

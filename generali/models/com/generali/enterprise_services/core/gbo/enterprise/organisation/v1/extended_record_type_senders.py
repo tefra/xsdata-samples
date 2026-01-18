@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExtendedRecordTypeSenders:
     class Meta:
         global_type = False

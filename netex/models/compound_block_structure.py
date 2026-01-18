@@ -15,7 +15,7 @@ from .vehicle_type_ref import VehicleTypeRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompoundBlockStructure(DataManagedObjectStructure):
     name: None | MultilingualString = field(
         default=None,

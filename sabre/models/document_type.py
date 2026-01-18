@@ -15,7 +15,7 @@ from sabre.models.document_type_share_synch_ind import (
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DocumentType:
     """
     Provides information on a specific documents.

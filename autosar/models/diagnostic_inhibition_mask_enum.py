@@ -9,7 +9,7 @@ from .diagnostic_inhibition_mask_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticInhibitionMaskEnum:
     """
     This meta-class represents the ability to define different kinds of
@@ -31,11 +31,10 @@ class DiagnosticInhibitionMaskEnum:
     class Meta:
         name = "DIAGNOSTIC-INHIBITION-MASK-ENUM"
 
-    value: None | DiagnosticInhibitionMaskEnumSimple = field(
-        default=None,
+    value: DiagnosticInhibitionMaskEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

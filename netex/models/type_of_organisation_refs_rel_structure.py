@@ -9,7 +9,7 @@ from .type_of_organisation_ref import TypeOfOrganisationRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfOrganisationRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfOrganisationRefs_RelStructure"

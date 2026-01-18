@@ -10,7 +10,7 @@ from travelport.models.mir_report_retrieve_req_report_format import (
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MirReportRetrieveReq(BaseReq1):
     """
     Retrieve a report.
@@ -26,14 +26,13 @@ class MirReportRetrieveReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    locator_code: None | str = field(
-        default=None,
+    locator_code: str = field(
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
             "required": True,
             "max_length": 8,
-        },
+        }
     )
     report_format: None | MirReportRetrieveReqReportFormat = field(
         default=None,

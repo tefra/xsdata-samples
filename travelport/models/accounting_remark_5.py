@@ -7,7 +7,7 @@ from travelport.models.type_element_status_6 import TypeElementStatus6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccountingRemark5:
     """
     An accounting remark container to hold any printable text.
@@ -44,13 +44,12 @@ class AccountingRemark5:
         name = "AccountingRemark"
         namespace = "http://www.travelport.com/schema/common_v34_0"
 
-    remark_data: None | str = field(
-        default=None,
+    remark_data: str = field(
         metadata={
             "name": "RemarkData",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     booking_traveler_ref: list[str] = field(
         default_factory=list,

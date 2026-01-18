@@ -7,25 +7,23 @@ from datexii.models.eu.datexii.v2.parking_space_1 import ParkingSpace1
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupOfParkingSpacesParkingSpaceIndexParkingSpace:
     class Meta:
         name = "_GroupOfParkingSpacesParkingSpaceIndexParkingSpace"
 
-    parking_space: None | ParkingSpace1 = field(
-        default=None,
+    parking_space: ParkingSpace1 = field(
         metadata={
             "name": "parkingSpace",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    parking_space_index: None | int = field(
-        default=None,
+    parking_space_index: int = field(
         metadata={
             "name": "parkingSpaceIndex",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

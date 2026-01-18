@@ -13,7 +13,7 @@ from .residential_qualification_ref import ResidentialQualificationRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResidentialQualificationEligibilityVersionedChildStructure(
     CustomerEligibilityVersionedChildStructure
 ):

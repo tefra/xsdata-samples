@@ -7,7 +7,7 @@ from .udp_collection_trigger_enum_simple import UdpCollectionTriggerEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UdpCollectionTriggerEnum:
     """
     Defines whether the ServiceInterface element (event or method)
@@ -30,11 +30,10 @@ class UdpCollectionTriggerEnum:
     class Meta:
         name = "UDP-COLLECTION-TRIGGER-ENUM"
 
-    value: None | UdpCollectionTriggerEnumSimple = field(
-        default=None,
+    value: UdpCollectionTriggerEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

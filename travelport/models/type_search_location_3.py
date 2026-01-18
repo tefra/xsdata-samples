@@ -12,7 +12,7 @@ from travelport.models.rail_location_3 import RailLocation3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeSearchLocation3:
     class Meta:
         name = "typeSearchLocation"

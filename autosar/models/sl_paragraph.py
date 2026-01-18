@@ -20,7 +20,7 @@ from .xref_target import XrefTarget
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SlParagraph:
     """
     This is the text for a paragraph in one particular language.
@@ -144,21 +144,20 @@ class SlParagraph:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TraceRef(Ref):
-        dest: None | TraceableSubtypesEnum = field(
-            default=None,
+        dest: TraceableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(Supscript):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(Supscript):
         pass

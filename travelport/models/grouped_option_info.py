@@ -7,7 +7,7 @@ from travelport.models.grouped_option import GroupedOption
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupedOptionInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

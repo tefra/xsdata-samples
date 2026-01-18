@@ -8,45 +8,41 @@ from travelport.models.supported_versions import SupportedVersions
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelCancelServicePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: None | HotelCancelServicePortTypeServiceInput.Header = field(
-        default=None,
+    header: HotelCancelServicePortTypeServiceInput.Header = field(
         metadata={
             "name": "Header",
             "type": "Element",
-        },
+        }
     )
-    body: None | HotelCancelServicePortTypeServiceInput.Body = field(
-        default=None,
+    body: HotelCancelServicePortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Header:
-        supported_versions: None | SupportedVersions = field(
-            default=None,
+        supported_versions: SupportedVersions = field(
             metadata={
                 "name": "SupportedVersions",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        hotel_cancel_req: None | HotelCancelReq = field(
-            default=None,
+        hotel_cancel_req: HotelCancelReq = field(
             metadata={
                 "name": "HotelCancelReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+            }
         )

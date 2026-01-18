@@ -7,7 +7,7 @@ from npo.models.page_sort_type import PageSortType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PageSortListType:
     class Meta:
         name = "pageSortListType"

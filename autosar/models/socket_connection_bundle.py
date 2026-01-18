@@ -16,7 +16,7 @@ from .udp_checksum_calculation_enum import UdpChecksumCalculationEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SocketConnectionBundle:
     """
     This elements groups SocketConnections, i.e. specifies socket
@@ -68,14 +68,13 @@ class SocketConnectionBundle:
     class Meta:
         name = "SOCKET-CONNECTION-BUNDLE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SocketConnectionBundle.ShortNameFragments = (
         field(
@@ -169,7 +168,7 @@ class SocketConnectionBundle:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -180,7 +179,7 @@ class SocketConnectionBundle:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BundledConnections:
         socket_connection: list[SocketConnection] = field(
             default_factory=list,
@@ -191,7 +190,7 @@ class SocketConnectionBundle:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Pdus:
         socket_connection_ipdu_identifier: list[
             SocketConnectionIpduIdentifier
@@ -204,13 +203,12 @@ class SocketConnectionBundle:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServerPortRef(Ref):
-        dest: None | SocketAddressSubtypesEnum = field(
-            default=None,
+        dest: SocketAddressSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

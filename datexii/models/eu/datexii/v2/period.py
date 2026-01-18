@@ -14,7 +14,7 @@ from datexii.models.eu.datexii.v2.time_period_of_day import TimePeriodOfDay
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Period:
     """
     A continuous time period or a set of discontinuous time periods defined

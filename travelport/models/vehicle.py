@@ -13,7 +13,7 @@ from travelport.models.vehicle_rate import VehicleRate
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Vehicle:
     """
     Information related to single vehicle.
@@ -101,47 +101,42 @@ class Vehicle:
             "type": "Element",
         },
     )
-    vendor_code: None | str = field(
-        default=None,
+    vendor_code: str = field(
         metadata={
             "name": "VendorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        },
+        }
     )
-    air_conditioning: None | bool = field(
-        default=None,
+    air_conditioning: bool = field(
         metadata={
             "name": "AirConditioning",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    transmission_type: None | TypeVehicleTransmission = field(
-        default=None,
+    transmission_type: TypeVehicleTransmission = field(
         metadata={
             "name": "TransmissionType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    vehicle_class: None | TypeVehicleClass = field(
-        default=None,
+    vehicle_class: TypeVehicleClass = field(
         metadata={
             "name": "VehicleClass",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    category: None | TypeVehicleCategory = field(
-        default=None,
+    category: TypeVehicleCategory = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     description: None | str = field(
         default=None,

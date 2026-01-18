@@ -8,7 +8,7 @@ from travelport.models.template_modify_cmd import TemplateModifyCmd
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileModifyTemplateReq(BaseReq5):
     """
     Request to modify template.
@@ -34,20 +34,18 @@ class ProfileModifyTemplateReq(BaseReq5):
             "max_occurs": 999,
         },
     )
-    id: None | int = field(
-        default=None,
+    id: int = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | int = field(
-        default=None,
+    version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        },
+        }
     )

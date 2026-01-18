@@ -25,7 +25,7 @@ from .time_synchronization_kind_enum import TimeSynchronizationKindEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SynchronizedTimeBaseProviderInterface:
     """
     This meta-class provides the ability to define a PortInterface for the
@@ -117,14 +117,13 @@ class SynchronizedTimeBaseProviderInterface:
     class Meta:
         name = "SYNCHRONIZED-TIME-BASE-PROVIDER-INTERFACE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SynchronizedTimeBaseProviderInterface.ShortNameFragments
@@ -269,7 +268,7 @@ class SynchronizedTimeBaseProviderInterface:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -280,7 +279,7 @@ class SynchronizedTimeBaseProviderInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -291,7 +290,7 @@ class SynchronizedTimeBaseProviderInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -320,7 +319,7 @@ class SynchronizedTimeBaseProviderInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Namespaces:
         symbol_props: list[SymbolProps] = field(
             default_factory=list,

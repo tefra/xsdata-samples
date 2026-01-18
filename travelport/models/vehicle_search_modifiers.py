@@ -22,7 +22,7 @@ from travelport.models.vendor import Vendor
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleSearchModifiers:
     """
     Controls and switches for the Vehicle Search request.
@@ -234,7 +234,7 @@ class VehicleSearchModifiers:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PermittedVendors:
         """
         Parameters
@@ -253,7 +253,7 @@ class VehicleSearchModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProhibitedVendors:
         vendor: list[Vendor] = field(
             default_factory=list,

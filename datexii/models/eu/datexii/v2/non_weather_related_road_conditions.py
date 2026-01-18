@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.road_conditions import RoadConditions
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NonWeatherRelatedRoadConditions(RoadConditions):
     """
     Road surface conditions that are not related to the weather but which

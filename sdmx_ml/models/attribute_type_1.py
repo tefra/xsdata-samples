@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AttributeType1(AnnotableType):
     """
     AttributeType defines the structure for a reported metadata attribute.
@@ -65,17 +65,16 @@ class AttributeType1(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/metadata/generic",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
             "pattern": r"[A-Za-z0-9_@$\-]+",
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Attribute1(AttributeType1):
     """
     Att elements hold the reported values for a given metadata attribute.

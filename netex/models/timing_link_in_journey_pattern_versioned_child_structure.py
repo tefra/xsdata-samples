@@ -11,21 +11,20 @@ from .timing_link_ref import TimingLinkRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimingLinkInJourneyPatternVersionedChildStructure(
     LinkInLinkSequenceVersionedChildStructure
 ):
     class Meta:
         name = "TimingLinkInJourneyPattern_VersionedChildStructure"
 
-    timing_link_ref: None | TimingLinkRef = field(
-        default=None,
+    timing_link_ref: TimingLinkRef = field(
         metadata={
             "name": "TimingLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     run_times: None | JourneyRunTimesRelStructure = field(
         default=None,

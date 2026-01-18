@@ -27,7 +27,7 @@ from .tls_secure_com_props_subtypes_enum import TlsSecureComPropsSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TlsIamRemoteSubject:
     """
     This meta-class defines the proxy information about the remote node in
@@ -102,14 +102,13 @@ class TlsIamRemoteSubject:
     class Meta:
         name = "TLS-IAM-REMOTE-SUBJECT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TlsIamRemoteSubject.ShortNameFragments = (
         field(
@@ -246,7 +245,7 @@ class TlsIamRemoteSubject:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -257,7 +256,7 @@ class TlsIamRemoteSubject:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -268,7 +267,7 @@ class TlsIamRemoteSubject:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AcceptedCryptoCipherSuiteWithPskRefs:
         accepted_crypto_cipher_suite_with_psk_ref: list[
             TlsIamRemoteSubject.AcceptedCryptoCipherSuiteWithPskRefs.AcceptedCryptoCipherSuiteWithPskRef
@@ -281,18 +280,17 @@ class TlsIamRemoteSubject:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AcceptedCryptoCipherSuiteWithPskRef(Ref):
-            dest: None | TlsCryptoCipherSuiteSubtypesEnum = field(
-                default=None,
+            dest: TlsCryptoCipherSuiteSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AcceptedRemoteCertificateRefs:
         accepted_remote_certificate_ref: list[
             TlsIamRemoteSubject.AcceptedRemoteCertificateRefs.AcceptedRemoteCertificateRef
@@ -305,18 +303,17 @@ class TlsIamRemoteSubject:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AcceptedRemoteCertificateRef(Ref):
-            dest: None | CryptoServiceCertificateSubtypesEnum = field(
-                default=None,
+            dest: CryptoServiceCertificateSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IamRelevantTlsSecureComPropsRefs:
         iam_relevant_tls_secure_com_props_ref: list[
             TlsIamRemoteSubject.IamRelevantTlsSecureComPropsRefs.IamRelevantTlsSecureComPropsRef
@@ -329,13 +326,12 @@ class TlsIamRemoteSubject:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class IamRelevantTlsSecureComPropsRef(Ref):
-            dest: None | TlsSecureComPropsSubtypesEnum = field(
-                default=None,
+            dest: TlsSecureComPropsSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

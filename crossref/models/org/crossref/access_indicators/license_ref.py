@@ -11,7 +11,7 @@ from crossref.models.org.crossref.access_indicators.license_ref_applies_to impor
 __NAMESPACE__ = "http://www.crossref.org/AccessIndicators.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LicenseRef:
     class Meta:
         name = "license_ref"

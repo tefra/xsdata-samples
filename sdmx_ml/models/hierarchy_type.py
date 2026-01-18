@@ -9,7 +9,7 @@ from sdmx_ml.models.level_type import LevelType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class HierarchyType(HierarchyBaseType):
     """
     HierarchyType describes the structure of a hierarchical codelist.
@@ -51,11 +51,10 @@ class HierarchyType(HierarchyBaseType):
             "min_occurs": 1,
         },
     )
-    has_formal_levels: None | bool = field(
-        default=None,
+    has_formal_levels: bool = field(
         metadata={
             "name": "hasFormalLevels",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OptionalServiceModifier:
     """
     Optional service modifiers.
@@ -33,15 +33,14 @@ class OptionalServiceModifier:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     secondary_type: None | str = field(
         default=None,
@@ -52,37 +51,33 @@ class OptionalServiceModifier:
             "max_length": 128,
         },
     )
-    supplier_code: None | str = field(
-        default=None,
+    supplier_code: str = field(
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        },
+        }
     )
-    service_sub_code: None | str = field(
-        default=None,
+    service_sub_code: str = field(
         metadata={
             "name": "ServiceSubCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    travel_date: None | XmlDate = field(
-        default=None,
+    travel_date: XmlDate = field(
         metadata={
             "name": "TravelDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "name": "Description",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

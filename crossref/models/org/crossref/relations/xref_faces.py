@@ -6,7 +6,7 @@ from typing import ForwardRef
 __NAMESPACE__ = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XrefFaces:
     class Meta:
         name = "xrefFaces"
@@ -78,77 +78,77 @@ class XrefFaces:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class B(XrefFaces):
     class Meta:
         name = "b"
         namespace = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Em(XrefFaces):
     class Meta:
         name = "em"
         namespace = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Font(XrefFaces):
     class Meta:
         name = "font"
         namespace = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class I(XrefFaces):
     class Meta:
         name = "i"
         namespace = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ovl(XrefFaces):
     class Meta:
         name = "ovl"
         namespace = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Scp(XrefFaces):
     class Meta:
         name = "scp"
         namespace = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Strong(XrefFaces):
     class Meta:
         name = "strong"
         namespace = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Sub(XrefFaces):
     class Meta:
         name = "sub"
         namespace = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Sup(XrefFaces):
     class Meta:
         name = "sup"
         namespace = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Tt(XrefFaces):
     class Meta:
         name = "tt"
         namespace = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class U(XrefFaces):
     class Meta:
         name = "u"

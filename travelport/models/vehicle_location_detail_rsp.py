@@ -10,18 +10,17 @@ from travelport.models.vendor_info import VendorInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleLocationDetailRsp(BaseRsp1):
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    vendor_info: None | VendorInfo = field(
-        default=None,
+    vendor_info: VendorInfo = field(
         metadata={
             "name": "VendorInfo",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     location_info: list[LocationInfo] = field(
         default_factory=list,

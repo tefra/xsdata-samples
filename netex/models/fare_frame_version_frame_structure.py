@@ -100,7 +100,7 @@ from .validable_elements_in_frame_rel_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "FareFrame_VersionFrameStructure"

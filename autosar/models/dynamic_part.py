@@ -9,7 +9,7 @@ from .segment_position import SegmentPosition
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DynamicPart:
     """
     Dynamic part of a multiplexed I-Pdu.
@@ -82,7 +82,7 @@ class DynamicPart:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SegmentPositions:
         segment_position: list[SegmentPosition] = field(
             default_factory=list,
@@ -93,7 +93,7 @@ class DynamicPart:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DynamicPartAlternatives:
         dynamic_part_alternative: list[DynamicPartAlternative] = field(
             default_factory=list,

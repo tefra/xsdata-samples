@@ -7,7 +7,7 @@ from .diagnostic_audience_enum_simple import DiagnosticAudienceEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticAudienceEnum:
     """
     The possible values of the intended audience for a diagnostic object.
@@ -28,11 +28,10 @@ class DiagnosticAudienceEnum:
     class Meta:
         name = "DIAGNOSTIC-AUDIENCE-ENUM"
 
-    value: None | DiagnosticAudienceEnumSimple = field(
-        default=None,
+    value: DiagnosticAudienceEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

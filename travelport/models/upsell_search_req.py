@@ -17,7 +17,7 @@ from travelport.models.vehicle_upsell_search_criteria import (
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UpsellSearchReq(BaseReq1):
     """
     Request to retrieve all upsell qualify/offers based on search criteria
@@ -48,11 +48,10 @@ class UpsellSearchReq(BaseReq1):
             "type": "Element",
         },
     )
-    upsell_search_modifier: None | UpsellSearchModifier = field(
-        default=None,
+    upsell_search_modifier: UpsellSearchModifier = field(
         metadata={
             "name": "UpsellSearchModifier",
             "type": "Element",
             "required": True,
-        },
+        }
     )

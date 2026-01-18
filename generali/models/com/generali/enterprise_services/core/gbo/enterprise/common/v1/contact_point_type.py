@@ -20,7 +20,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContactPointType(BaseSimpleComponentType):
     """
     <description xmlns="">A type defining a contact point.

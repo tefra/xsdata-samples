@@ -9,7 +9,7 @@ from travelport.models.hotel_rate_detail import HotelRateDetail
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelUpsellDetailsReq(BaseReq1):
     """
     Upsell Request to retrieve the details of a hotel property.
@@ -25,13 +25,12 @@ class HotelUpsellDetailsReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
-    hotel_property: None | HotelProperty = field(
-        default=None,
+    hotel_property: HotelProperty = field(
         metadata={
             "name": "HotelProperty",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     hotel_rate_detail: None | HotelRateDetail = field(
         default=None,

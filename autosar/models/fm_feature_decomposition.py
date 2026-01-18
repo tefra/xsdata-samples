@@ -10,7 +10,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FmFeatureDecomposition:
     """
     A FMFeatureDecomposition describes dependencies between a list of
@@ -93,7 +93,7 @@ class FmFeatureDecomposition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FeatureRefs:
         feature_ref: list[FmFeatureDecomposition.FeatureRefs.FeatureRef] = (
             field(
@@ -106,13 +106,12 @@ class FmFeatureDecomposition:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FeatureRef(Ref):
-            dest: None | FmFeatureSubtypesEnum = field(
-                default=None,
+            dest: FmFeatureSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

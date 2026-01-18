@@ -7,7 +7,7 @@ from .t_collaboration import TCollaboration
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TGlobalConversation(TCollaboration):
     class Meta:
         name = "tGlobalConversation"

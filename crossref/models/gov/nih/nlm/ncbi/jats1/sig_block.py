@@ -31,7 +31,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.sig import Sig
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SigBlock:
     """
     <div> <h3>Signature Block</h3> </div>.

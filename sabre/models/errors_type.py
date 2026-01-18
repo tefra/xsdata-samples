@@ -7,7 +7,7 @@ from sabre.models.error_type import ErrorType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ErrorsType:
     """
     A collection of errors that occurred during the processing of a

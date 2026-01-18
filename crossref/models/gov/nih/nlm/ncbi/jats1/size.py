@@ -7,7 +7,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Size:
     """
     <div> <h3>Size</h3> </div>.
@@ -30,12 +30,11 @@ class Size:
             "type": "Attribute",
         },
     )
-    units: None | str = field(
-        default=None,
+    units: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     base: None | str = field(
         default=None,

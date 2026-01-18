@@ -12,7 +12,7 @@ from crossref.models.xlink.type_type import TypeType
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PubId:
     """
     <div> <h3>Publication Identifier For a Cited Publication</h3> </div>.

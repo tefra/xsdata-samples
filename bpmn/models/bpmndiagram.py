@@ -9,19 +9,18 @@ from .diagram import Diagram
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/DI"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Bpmndiagram(Diagram):
     class Meta:
         name = "BPMNDiagram"
         namespace = "http://www.omg.org/spec/BPMN/20100524/DI"
 
-    bpmnplane: None | Bpmnplane = field(
-        default=None,
+    bpmnplane: Bpmnplane = field(
         metadata={
             "name": "BPMNPlane",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     bpmnlabel_style: list[BpmnlabelStyle] = field(
         default_factory=list,

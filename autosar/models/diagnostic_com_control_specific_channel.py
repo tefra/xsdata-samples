@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticComControlSpecificChannel:
     """
     This represents the ability to add further attributes to the definition
@@ -71,13 +71,12 @@ class DiagnosticComControlSpecificChannel:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SpecificChannelRef(Ref):
-        dest: None | CommunicationClusterSubtypesEnum = field(
-            default=None,
+        dest: CommunicationClusterSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

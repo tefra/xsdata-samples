@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ISignalTriggering:
     """
     A ISignalTriggering allows an assignment of ISignals to physical
@@ -97,14 +97,13 @@ class ISignalTriggering:
     class Meta:
         name = "I-SIGNAL-TRIGGERING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ISignalTriggering.ShortNameFragments = field(
         default=None,
@@ -217,7 +216,7 @@ class ISignalTriggering:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -228,7 +227,7 @@ class ISignalTriggering:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -239,18 +238,17 @@ class ISignalTriggering:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalGroupRef(Ref):
-        dest: None | ISignalGroupSubtypesEnum = field(
-            default=None,
+        dest: ISignalGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalPortRefs:
         i_signal_port_ref: list[
             ISignalTriggering.ISignalPortRefs.ISignalPortRef
@@ -263,24 +261,22 @@ class ISignalTriggering:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ISignalPortRef(Ref):
-            dest: None | ISignalPortSubtypesEnum = field(
-                default=None,
+            dest: ISignalPortSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalRef(Ref):
-        dest: None | ISignalSubtypesEnum = field(
-            default=None,
+        dest: ISignalSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

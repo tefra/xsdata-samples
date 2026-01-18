@@ -7,7 +7,7 @@ from .area import Area
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Map:
     """
     Image maps enable authors to specify regions of an image or object and

@@ -30,7 +30,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class InstructionForReturnsType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -72,14 +72,13 @@ class InstructionForReturnsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     copy_indicator: None | CopyIndicator = field(
         default=None,
@@ -97,14 +96,13 @@ class InstructionForReturnsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -138,23 +136,21 @@ class InstructionForReturnsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: None | SellerSupplierParty = field(
-        default=None,
+    seller_supplier_party: SellerSupplierParty = field(
         metadata={
             "name": "SellerSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    retailer_customer_party: None | RetailerCustomerParty = field(
-        default=None,
+    retailer_customer_party: RetailerCustomerParty = field(
         metadata={
             "name": "RetailerCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     manufacturer_party: None | ManufacturerParty = field(
         default=None,
@@ -185,7 +181,7 @@ class InstructionForReturnsType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class InstructionForReturns(InstructionForReturnsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:InstructionForReturns-2"

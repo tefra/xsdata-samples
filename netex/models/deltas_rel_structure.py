@@ -8,7 +8,7 @@ from .delta import Delta
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeltasRelStructure:
     class Meta:
         name = "deltas_RelStructure"

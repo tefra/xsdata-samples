@@ -7,7 +7,7 @@ from travelport.models.base_req_3 import BaseReq3
 __NAMESPACE__ = "http://www.travelport.com/schema/system_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SystemInfoReq(BaseReq3):
     """
     Requests system information.

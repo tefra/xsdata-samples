@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OwnershipChange3:
     """
     Element to change the ownership of the PNR in the UR.
@@ -22,11 +22,10 @@ class OwnershipChange3:
         name = "OwnershipChange"
         namespace = "http://www.travelport.com/schema/common_v33_0"
 
-    owning_pcc: None | str = field(
-        default=None,
+    owning_pcc: str = field(
         metadata={
             "name": "OwningPCC",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

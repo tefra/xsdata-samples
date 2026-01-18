@@ -7,7 +7,7 @@ from .v_2_x_support_enum_simple import V2XSupportEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class V2XSupportEnum:
     """
     :ivar value:
@@ -26,11 +26,10 @@ class V2XSupportEnum:
     class Meta:
         name = "V-2-X-SUPPORT-ENUM"
 
-    value: None | V2XSupportEnumSimple = field(
-        default=None,
+    value: V2XSupportEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -8,7 +8,7 @@ from sdmx_ml.models.item_scheme_type import ItemSchemeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class VtlMappingSchemeType(ItemSchemeType):
     """
     VtlMappingSchemeType defines a set of mappings between SDMX and VTL.

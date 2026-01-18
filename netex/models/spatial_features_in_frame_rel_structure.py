@@ -10,7 +10,7 @@ from .simple_feature import SimpleFeature
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpatialFeaturesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "spatialFeaturesInFrame_RelStructure"

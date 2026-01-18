@@ -12,7 +12,7 @@ from sdmx_ml.models.metadata_attribute_usage_base_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataAttributeUsageType(MetadataAttributeUsageBaseType):
     """
     MetadataAttributeUsageType defines the structure of how a metadata
@@ -31,22 +31,20 @@ class MetadataAttributeUsageType(MetadataAttributeUsageBaseType):
         components of the data structure.
     """
 
-    metadata_attribute_reference: None | str = field(
-        default=None,
+    metadata_attribute_reference: str = field(
         metadata={
             "name": "MetadataAttributeReference",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r"[A-Za-z][A-Za-z0-9_\-]*",
-        },
+        }
     )
-    attribute_relationship: None | AttributeRelationshipType = field(
-        default=None,
+    attribute_relationship: AttributeRelationshipType = field(
         metadata={
             "name": "AttributeRelationship",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )

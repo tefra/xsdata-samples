@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "urn:vpro:pages:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RelationType2:
     class Meta:
         name = "relationType"
@@ -23,18 +23,16 @@ class RelationType2:
             "type": "Attribute",
         },
     )
-    broadcaster: None | str = field(
-        default=None,
+    broadcaster: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

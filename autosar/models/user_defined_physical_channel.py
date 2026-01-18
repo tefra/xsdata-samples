@@ -28,7 +28,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UserDefinedPhysicalChannel:
     """
     This element allows the modeling of arbitrary Physical Channels.
@@ -106,14 +106,13 @@ class UserDefinedPhysicalChannel:
     class Meta:
         name = "USER-DEFINED-PHYSICAL-CHANNEL"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | UserDefinedPhysicalChannel.ShortNameFragments
@@ -250,7 +249,7 @@ class UserDefinedPhysicalChannel:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -261,7 +260,7 @@ class UserDefinedPhysicalChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -272,7 +271,7 @@ class UserDefinedPhysicalChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommConnectors:
         communication_connector_ref_conditional: list[
             CommunicationConnectorRefConditional
@@ -285,7 +284,7 @@ class UserDefinedPhysicalChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FrameTriggerings:
         can_frame_triggering: list[CanFrameTriggering] = field(
             default_factory=list,
@@ -320,7 +319,7 @@ class UserDefinedPhysicalChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalTriggerings:
         i_signal_triggering: list[ISignalTriggering] = field(
             default_factory=list,
@@ -331,7 +330,7 @@ class UserDefinedPhysicalChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ManagedPhysicalChannelRefs:
         managed_physical_channel_ref: list[
             UserDefinedPhysicalChannel.ManagedPhysicalChannelRefs.ManagedPhysicalChannelRef
@@ -344,18 +343,17 @@ class UserDefinedPhysicalChannel:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ManagedPhysicalChannelRef(Ref):
-            dest: None | PhysicalChannelSubtypesEnum = field(
-                default=None,
+            dest: PhysicalChannelSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduTriggerings:
         pdu_triggering: list[PduTriggering] = field(
             default_factory=list,

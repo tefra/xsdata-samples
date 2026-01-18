@@ -7,7 +7,7 @@ from sabre.models.response_location_type import ResponseLocationType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirportInformationType(ResponseLocationType):
     """
     Code and optional string to describe a location point.

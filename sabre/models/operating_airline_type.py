@@ -7,7 +7,7 @@ from sabre.models.company_name_type import CompanyNameType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OperatingAirlineType(CompanyNameType):
     """
     This is an extension of CompanyNameType to include a FlightNumber.

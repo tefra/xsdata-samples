@@ -9,14 +9,13 @@ from .all_vehicle_modes_of_transport_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AllVehicleModes:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: None | AllVehicleModesOfTransportEnumeration = field(
-        default=None,
+    value: AllVehicleModesOfTransportEnumeration = field(
         metadata={
             "required": True,
-        },
+        }
     )

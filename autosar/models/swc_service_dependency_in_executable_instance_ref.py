@@ -16,7 +16,7 @@ from .swc_service_dependency_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwcServiceDependencyInExecutableInstanceRef:
     """
     :ivar context_root_component_ref:
@@ -85,35 +85,32 @@ class SwcServiceDependencyInExecutableInstanceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextRootComponentRef(Ref):
-        dest: None | RootSwComponentPrototypeSubtypesEnum = field(
-            default=None,
+        dest: RootSwComponentPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextComponentRef(Ref):
-        dest: None | SwComponentPrototypeSubtypesEnum = field(
-            default=None,
+        dest: SwComponentPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetSwcServiceDependencyRef(Ref):
-        dest: None | SwcServiceDependencySubtypesEnum = field(
-            default=None,
+        dest: SwcServiceDependencySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

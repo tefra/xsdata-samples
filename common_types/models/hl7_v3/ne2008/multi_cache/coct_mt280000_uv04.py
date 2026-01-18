@@ -15,7 +15,7 @@ from ..core.voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt280000Uv04CrossReference:
     class Meta:
         name = "COCT_MT280000UV04.CrossReference"
@@ -59,13 +59,12 @@ class CoctMt280000Uv04CrossReference:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,

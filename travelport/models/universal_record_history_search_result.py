@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordHistorySearchResult:
     """
     Container for Universal Record history result.
@@ -55,29 +55,26 @@ class UniversalRecordHistorySearchResult:
             "type": "Attribute",
         },
     )
-    modified_date: None | str = field(
-        default=None,
+    modified_date: str = field(
         metadata={
             "name": "ModifiedDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    element_type: None | str = field(
-        default=None,
+    element_type: str = field(
         metadata={
             "name": "ElementType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    action: None | str = field(
-        default=None,
+    action: str = field(
         metadata={
             "name": "Action",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     transaction_id: None | str = field(
         default=None,

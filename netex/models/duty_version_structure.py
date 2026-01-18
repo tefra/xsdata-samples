@@ -12,7 +12,7 @@ from .timetable_frame_ref import TimetableFrameRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DutyVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Duty_VersionStructure"

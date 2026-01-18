@@ -14,7 +14,7 @@ from .sw_component_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InnerRunnableEntityGroupInCompositionInstanceRef:
     """
     This meta-class represents the ability to define an InstanceRef to a
@@ -86,24 +86,22 @@ class InnerRunnableEntityGroupInCompositionInstanceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextSwComponentPrototypeRef(Ref):
-        dest: None | SwComponentPrototypeSubtypesEnum = field(
-            default=None,
+        dest: SwComponentPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetRunnableEntityGroupRef(Ref):
-        dest: None | RunnableEntityGroupSubtypesEnum = field(
-            default=None,
+        dest: RunnableEntityGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

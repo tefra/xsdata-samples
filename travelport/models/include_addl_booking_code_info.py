@@ -7,7 +7,7 @@ from travelport.models.type_carrier_code import TypeCarrierCode
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IncludeAddlBookingCodeInfo:
     """
     Used to include primary or secondary carrier's booking code details.
@@ -24,13 +24,12 @@ class IncludeAddlBookingCodeInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    type_value: None | TypeCarrierCode = field(
-        default=None,
+    type_value: TypeCarrierCode = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     secondary_carrier: None | str = field(
         default=None,

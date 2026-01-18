@@ -11,40 +11,36 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Risk:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    global_risk_id: None | str = field(
-        default=None,
+    global_risk_id: str = field(
         metadata={
             "name": "GlobalRiskID",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    local_risk_id: None | str = field(
-        default=None,
+    local_risk_id: str = field(
         metadata={
             "name": "LocalRiskID",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    reinsurance_agreement: None | str = field(
-        default=None,
+    reinsurance_agreement: str = field(
         metadata={
             "name": "ReinsuranceAgreement",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    locations: None | Locations = field(
-        default=None,
+    locations: Locations = field(
         metadata={
             "name": "Locations",
             "type": "Element",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from .positive_integer import PositiveInteger
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipServiceVersion:
     """
     This meta-class represents the ability to describe a version of a

@@ -13,7 +13,7 @@ from .ar_variable_in_implementation_data_instance_ref import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ImplementationDataTypeSubElementRef:
     """
     This meta-class represents the specialization of SubElementMapping with

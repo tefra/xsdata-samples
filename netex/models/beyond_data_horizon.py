@@ -9,7 +9,7 @@ from .beyond_data_horizon_error_structure import (
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BeyondDataHorizon(BeyondDataHorizonErrorStructure):
     class Meta:
         namespace = "http://www.siri.org.uk/siri"

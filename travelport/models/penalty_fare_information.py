@@ -7,7 +7,7 @@ from travelport.models.type_fare_penalty import TypeFarePenalty
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PenaltyFareInformation:
     """
     Parameters
@@ -28,11 +28,10 @@ class PenaltyFareInformation:
             "type": "Element",
         },
     )
-    prohibit_penalty_fares: None | bool = field(
-        default=None,
+    prohibit_penalty_fares: bool = field(
         metadata={
             "name": "ProhibitPenaltyFares",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from .flexray_nm_schedule_variant_simple import FlexrayNmScheduleVariantSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayNmScheduleVariant:
     """
     FrNm schedule variant according to FrNm SWS.
@@ -28,11 +28,10 @@ class FlexrayNmScheduleVariant:
     class Meta:
         name = "FLEXRAY-NM-SCHEDULE-VARIANT"
 
-    value: None | FlexrayNmScheduleVariantSimple = field(
-        default=None,
+    value: FlexrayNmScheduleVariantSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

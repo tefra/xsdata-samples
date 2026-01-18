@@ -8,7 +8,7 @@ from sdmx_ml.models.value_list_base_type import ValueListBaseType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ValueListType(ValueListBaseType):
     """
     ValueListType defines the structure of value list.

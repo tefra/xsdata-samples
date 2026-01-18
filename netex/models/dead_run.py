@@ -9,7 +9,7 @@ from .dead_run_with_calls_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeadRun(DeadRunWithCallsVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

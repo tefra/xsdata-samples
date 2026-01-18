@@ -8,7 +8,7 @@ from .verbatim_string import VerbatimString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BuildActionInvocator:
     """
     This meta-class represents the ability to specify the invocation of a
@@ -70,7 +70,7 @@ class BuildActionInvocator:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sdgs:
         sdg: list[Sdg] = field(
             default_factory=list,

@@ -7,7 +7,7 @@ from sdmx_ml.models.reporting_taxonomy_map_type import ReportingTaxonomyMapType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ReportingTaxonomyMapsType:
     """
     ReportingTaxonomyMapsType describes the structure of the reporting

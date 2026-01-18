@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BrandId:
     """
     Brand ids for Merchandising details.
@@ -15,11 +15,10 @@ class BrandId:
         name = "BrandID"
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "Id",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -11,7 +11,7 @@ from .vehicle_journey_run_time import VehicleJourneyRunTime
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleJourneyRunTimesRelStructure(
     StrictContainmentAggregationStructure
 ):

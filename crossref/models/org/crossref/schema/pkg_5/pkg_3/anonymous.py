@@ -21,7 +21,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.anonymous_sequence import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Anonymous:
     class Meta:
         name = "anonymous"
@@ -33,19 +33,17 @@ class Anonymous:
             "type": "Element",
         },
     )
-    sequence: None | AnonymousSequence = field(
-        default=None,
+    sequence: AnonymousSequence = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    contributor_role: None | AnonymousContributorRole = field(
-        default=None,
+    contributor_role: AnonymousContributorRole = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     name_style: None | AnonymousNameStyle = field(
         default=None,

@@ -25,7 +25,7 @@ from .variable_data_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswDebugInfo:
     """
     Collects the information on the data provided to the AUTOSAR debug
@@ -97,14 +97,13 @@ class BswDebugInfo:
     class Meta:
         name = "BSW-DEBUG-INFO"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | BswDebugInfo.ShortNameFragments = field(
         default=None,
@@ -221,7 +220,7 @@ class BswDebugInfo:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -232,7 +231,7 @@ class BswDebugInfo:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -243,7 +242,7 @@ class BswDebugInfo:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LocalDebugDatas:
         implementation_data_type_element: list[
             ImplementationDataTypeElement
@@ -256,7 +255,7 @@ class BswDebugInfo:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ParameterAccessedForDebugRefs:
         parameter_accessed_for_debug_ref: list[
             BswDebugInfo.ParameterAccessedForDebugRefs.ParameterAccessedForDebugRef
@@ -269,18 +268,17 @@ class BswDebugInfo:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ParameterAccessedForDebugRef(Ref):
-            dest: None | ParameterDataPrototypeSubtypesEnum = field(
-                default=None,
+            dest: ParameterDataPrototypeSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VariableAccessedForDebugRefs:
         variable_accessed_for_debug_ref: list[
             BswDebugInfo.VariableAccessedForDebugRefs.VariableAccessedForDebugRef
@@ -293,13 +291,12 @@ class BswDebugInfo:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class VariableAccessedForDebugRef(Ref):
-            dest: None | VariableDataPrototypeSubtypesEnum = field(
-                default=None,
+            dest: VariableDataPrototypeSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

@@ -14,29 +14,27 @@ from datexii.models.eu.datexii.v2.openlr_rectangle import OpenlrRectangle
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenlrGridLocationReference(OpenlrAreaLocationReference):
     """
     the openLR method of areadefinition by providing repeating rectangles.
     """
 
-    openlr_rectangle: None | OpenlrRectangle = field(
-        default=None,
+    openlr_rectangle: OpenlrRectangle = field(
         metadata={
             "name": "openlrRectangle",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    openlr_grid_attributes: None | OpenlrGridAttributes = field(
-        default=None,
+    openlr_grid_attributes: OpenlrGridAttributes = field(
         metadata={
             "name": "openlrGridAttributes",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     openlr_grid_location_reference_extension: None | ExtensionType = field(
         default=None,

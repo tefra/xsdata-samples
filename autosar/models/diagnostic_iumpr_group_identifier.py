@@ -8,7 +8,7 @@ from .nmtoken_string import NmtokenString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticIumprGroupIdentifier:
     """
     This meta-class provides the ability to the define the group identifier

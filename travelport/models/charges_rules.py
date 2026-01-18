@@ -7,7 +7,7 @@ from travelport.models.penalty_2 import Penalty2
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChargesRules:
     """
     Fare Reference associated with the BookingRules.
@@ -33,7 +33,7 @@ class ChargesRules:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VoluntaryChanges:
         penalty: None | Penalty2 = field(
             default=None,
@@ -50,7 +50,7 @@ class ChargesRules:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VoluntaryRefunds:
         penalty: None | Penalty2 = field(
             default=None,

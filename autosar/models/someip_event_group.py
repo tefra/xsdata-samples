@@ -21,7 +21,7 @@ from .someip_event_deployment_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipEventGroup:
     """
     Grouping of events and notification events inside a ServiceInterface in
@@ -89,14 +89,13 @@ class SomeipEventGroup:
     class Meta:
         name = "SOMEIP-EVENT-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SomeipEventGroup.ShortNameFragments = field(
         default=None,
@@ -193,7 +192,7 @@ class SomeipEventGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -204,7 +203,7 @@ class SomeipEventGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -215,7 +214,7 @@ class SomeipEventGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventRefs:
         event_ref: list[SomeipEventGroup.EventRefs.EventRef] = field(
             default_factory=list,
@@ -226,13 +225,12 @@ class SomeipEventGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EventRef(Ref):
-            dest: None | SomeipEventDeploymentSubtypesEnum = field(
-                default=None,
+            dest: SomeipEventDeploymentSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

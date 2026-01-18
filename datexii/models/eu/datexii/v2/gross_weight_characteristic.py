@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GrossWeightCharacteristic:
     """
     Gross weight characteristic of a vehicle.
@@ -22,23 +22,21 @@ class GrossWeightCharacteristic:
     :ivar gross_weight_characteristic_extension:
     """
 
-    comparison_operator: None | ComparisonOperatorEnum = field(
-        default=None,
+    comparison_operator: ComparisonOperatorEnum = field(
         metadata={
             "name": "comparisonOperator",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    gross_vehicle_weight: None | float = field(
-        default=None,
+    gross_vehicle_weight: float = field(
         metadata={
             "name": "grossVehicleWeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     gross_weight_characteristic_extension: None | ExtensionType = field(
         default=None,

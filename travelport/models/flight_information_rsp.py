@@ -8,7 +8,7 @@ from travelport.models.flight_info import FlightInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightInformationRsp(BaseRsp1):
     """
     Parameters

@@ -10,7 +10,7 @@ from travelport.models.type_remark_with_traveler_ref_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeAssociatedRemark1(TypeRemarkWithTravelerRef1):
     """
     A textual remark container to hold Associated itinerary remarks.

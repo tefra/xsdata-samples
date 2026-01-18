@@ -9,7 +9,7 @@ from travelport.models.locator_code_1 import LocatorCode1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreditCardAuthReq(BaseReq1):
     """
     Performs a credit card authorization to validate a credit card for use
@@ -36,12 +36,11 @@ class CreditCardAuthReq(BaseReq1):
             "max_occurs": 999,
         },
     )
-    plating_carrier: None | str = field(
-        default=None,
+    plating_carrier: str = field(
         metadata={
             "name": "PlatingCarrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )

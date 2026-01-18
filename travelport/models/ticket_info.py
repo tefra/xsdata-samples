@@ -12,7 +12,7 @@ from travelport.models.type_ticket_status import TypeTicketStatus
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TicketInfo:
     """
     Parameters
@@ -38,14 +38,13 @@ class TicketInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    name: None | Name1 = field(
-        default=None,
+    name: Name1 = field(
         metadata={
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        },
+        }
     )
     conjuncted_ticket_info: list[ConjunctedTicketInfo] = field(
         default_factory=list,
@@ -63,13 +62,12 @@ class TicketInfo:
             "max_occurs": 999,
         },
     )
-    number: None | str = field(
-        default=None,
+    number: str = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     iatanumber: None | str = field(
         default=None,
@@ -102,13 +100,12 @@ class TicketInfo:
             "length": 2,
         },
     )
-    status: None | TypeTicketStatus = field(
-        default=None,
+    status: TypeTicketStatus = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     bulk_ticket: None | bool = field(
         default=None,
@@ -117,13 +114,12 @@ class TicketInfo:
             "type": "Attribute",
         },
     )
-    booking_traveler_ref: None | str = field(
-        default=None,
+    booking_traveler_ref: str = field(
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     air_pricing_info_ref: None | str = field(
         default=None,

@@ -8,7 +8,7 @@ from travelport.models.name_override_3 import NameOverride3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReservationName3:
     """
     Container to represent reservation name as appears in GDS booking.

@@ -9,7 +9,7 @@ from travelport.models.city_or_airport_5 import CityOrAirport5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeLocation5:
     class Meta:
         name = "typeLocation"

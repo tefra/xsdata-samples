@@ -9,7 +9,7 @@ from travelport.models.delete_hotel_segment import DeleteHotelSegment
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingHotelSegmentReq(BookingBaseReq):
     """
     Used for Hotel Segment Sell and modification.

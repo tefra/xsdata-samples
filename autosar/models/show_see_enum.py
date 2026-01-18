@@ -7,7 +7,7 @@ from .show_see_enum_simple import ShowSeeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShowSeeEnum:
     """
     This enumerator specifies if the word "see" shall be rendered before
@@ -29,11 +29,10 @@ class ShowSeeEnum:
     class Meta:
         name = "SHOW-SEE-ENUM"
 
-    value: None | ShowSeeEnumSimple = field(
-        default=None,
+    value: ShowSeeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

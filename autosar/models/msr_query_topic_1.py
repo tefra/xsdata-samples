@@ -10,7 +10,7 @@ from .msr_query_result_topic_1 import MsrQueryResultTopic1
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MsrQueryTopic1:
     """
     This meta-class represents the ability to specify a query which yields

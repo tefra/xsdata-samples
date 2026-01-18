@@ -8,7 +8,7 @@ from sdmx_ml.models.name import Name
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class PartyType:
     """
     PartyType defines the information which is sent about various parties
@@ -36,11 +36,10 @@ class PartyType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
             "pattern": r"[A-Za-z0-9_@$\-]+",
-        },
+        }
     )

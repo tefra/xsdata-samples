@@ -7,7 +7,7 @@ from .numerical_value_variation_point import NumericalValueVariationPoint
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Sdf:
     """
     This class represents a numerical value in a special data group which

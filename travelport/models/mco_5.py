@@ -17,7 +17,7 @@ from travelport.models.stock_control_5 import StockControl5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mco5(Mcoinformation5):
     """
     Parameters
@@ -150,13 +150,12 @@ class Mco5(Mcoinformation5):
             "type": "Attribute",
         },
     )
-    mcoissued: None | bool = field(
-        default=None,
+    mcoissued: bool = field(
         metadata={
             "name": "MCOIssued",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mcoissue_date: None | XmlDateTime = field(
         default=None,

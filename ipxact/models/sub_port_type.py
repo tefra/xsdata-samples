@@ -18,7 +18,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubPortType:
     """
     A port description, giving a name and an access type for high level
@@ -43,15 +43,14 @@ class SubPortType:
     class Meta:
         name = "subPortType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
             "white_space": "collapse",
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -128,7 +127,7 @@ class SubPortType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortStructuredType:
     """
     :ivar struct:
@@ -181,14 +180,13 @@ class PortStructuredType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    struct_port_type_defs: None | StructPortTypeDefs = field(
-        default=None,
+    struct_port_type_defs: StructPortTypeDefs = field(
         metadata={
             "name": "structPortTypeDefs",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     packed: bool = field(
         default=True,
@@ -197,7 +195,7 @@ class PortStructuredType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SubPorts:
         sub_port: list[SubPortType] = field(
             default_factory=list,
@@ -209,7 +207,7 @@ class PortStructuredType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Struct:
         """
         :ivar direction: The direction of a wire style port. The basic
@@ -227,7 +225,7 @@ class PortStructuredType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnionType:
         """
         :ivar direction: The direction of a wire style port. The basic
@@ -245,7 +243,7 @@ class PortStructuredType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Interface:
         phantom: None | bool = field(
             default=None,

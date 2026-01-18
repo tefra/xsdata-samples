@@ -14,7 +14,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AliasNameAssignment:
     """
     This meta-class represents the ability to associate an alternative name
@@ -107,24 +107,22 @@ class AliasNameAssignment:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IdentifiableRef(Ref):
-        dest: None | IdentifiableSubtypesEnum = field(
-            default=None,
+        dest: IdentifiableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlatInstanceRef(Ref):
-        dest: None | FlatInstanceDescriptorSubtypesEnum = field(
-            default=None,
+        dest: FlatInstanceDescriptorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

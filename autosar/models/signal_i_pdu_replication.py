@@ -10,7 +10,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SignalIPduReplication:
     """
     PduReplication is a form of redundancy where the data content of one
@@ -81,7 +81,7 @@ class SignalIPduReplication:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReplicaPdusRefs:
         replica_pdus_ref: list[
             SignalIPduReplication.ReplicaPdusRefs.ReplicaPdusRef
@@ -95,13 +95,12 @@ class SignalIPduReplication:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ReplicaPdusRef(Ref):
-            dest: None | ISignalIPduSubtypesEnum = field(
-                default=None,
+            dest: ISignalIPduSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

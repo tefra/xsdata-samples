@@ -9,7 +9,7 @@ from .diagnostic_event_clear_allowed_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEventClearAllowedEnum:
     """
     Denotes whether clearing of events is allowed.
@@ -30,11 +30,10 @@ class DiagnosticEventClearAllowedEnum:
     class Meta:
         name = "DIAGNOSTIC-EVENT-CLEAR-ALLOWED-ENUM"
 
-    value: None | DiagnosticEventClearAllowedEnumSimple = field(
-        default=None,
+    value: DiagnosticEventClearAllowedEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

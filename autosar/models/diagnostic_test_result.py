@@ -27,7 +27,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticTestResult:
     """
     This meta-class represents the ability to define diagnostic test
@@ -104,14 +104,13 @@ class DiagnosticTestResult:
     class Meta:
         name = "DIAGNOSTIC-TEST-RESULT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DiagnosticTestResult.ShortNameFragments = (
         field(
@@ -246,7 +245,7 @@ class DiagnosticTestResult:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -257,7 +256,7 @@ class DiagnosticTestResult:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -268,7 +267,7 @@ class DiagnosticTestResult:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticEvents:
         diagnostic_event_ref_conditional: list[
             DiagnosticEventRefConditional
@@ -281,24 +280,22 @@ class DiagnosticTestResult:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventRef(Ref):
-        dest: None | DiagnosticEventSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MonitoredIdentifierRef(Ref):
-        dest: None | DiagnosticMeasurementIdentifierSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticMeasurementIdentifierSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

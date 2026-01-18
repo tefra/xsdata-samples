@@ -7,7 +7,7 @@ from .taxi_parking_area_ref_structure import TaxiParkingAreaRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxiParkingAreaRef(TaxiParkingAreaRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

@@ -56,7 +56,7 @@ from .mcai_mt900001_uv01 import McaiMt900001Uv01DetectedIssueEvent
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01ActDefinition:
     class Meta:
         name = "MFMI_MT700701UV01.ActDefinition"
@@ -93,13 +93,12 @@ class MfmiMt700701Uv01ActDefinition:
             "min_occurs": 1,
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     text: None | EdExplicit = field(
         default=None,
@@ -115,13 +114,12 @@ class MfmiMt700701Uv01ActDefinition:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -134,7 +132,7 @@ class MfmiMt700701Uv01ActDefinition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01Author1:
     class Meta:
         name = "MFMI_MT700701UV01.Author1"
@@ -171,13 +169,12 @@ class MfmiMt700701Uv01Author1:
         },
     )
     assigned_entity: None | CoctMt090003Uv01AssignedEntity = field(
-        default=None,
         metadata={
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -197,7 +194,7 @@ class MfmiMt700701Uv01Author1:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01Author2:
     class Meta:
         name = "MFMI_MT700701UV01.Author2"
@@ -250,13 +247,12 @@ class MfmiMt700701Uv01Author2:
         },
     )
     assigned_entity: None | CoctMt090003Uv01AssignedEntity = field(
-        default=None,
         metadata={
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -283,7 +279,7 @@ class MfmiMt700701Uv01Author2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01AuthorOrPerformer:
     class Meta:
         name = "MFMI_MT700701UV01.AuthorOrPerformer"
@@ -376,13 +372,12 @@ class MfmiMt700701Uv01AuthorOrPerformer:
             "type": "Attribute",
         },
     )
-    type_code: None | XParticipationAuthorPerformer = field(
-        default=None,
+    type_code: XParticipationAuthorPerformer = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AP,
@@ -393,7 +388,7 @@ class MfmiMt700701Uv01AuthorOrPerformer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01Custodian:
     class Meta:
         name = "MFMI_MT700701UV01.Custodian"
@@ -423,13 +418,12 @@ class MfmiMt700701Uv01Custodian:
         },
     )
     assigned_entity: None | CoctMt090003Uv01AssignedEntity = field(
-        default=None,
         metadata={
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -456,7 +450,7 @@ class MfmiMt700701Uv01Custodian:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01DataEnterer:
     class Meta:
         name = "MFMI_MT700701UV01.DataEnterer"
@@ -501,13 +495,12 @@ class MfmiMt700701Uv01DataEnterer:
         },
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -534,7 +527,7 @@ class MfmiMt700701Uv01DataEnterer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01InformationRecipient:
     class Meta:
         name = "MFMI_MT700701UV01.InformationRecipient"
@@ -571,13 +564,12 @@ class MfmiMt700701Uv01InformationRecipient:
         },
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -586,13 +578,12 @@ class MfmiMt700701Uv01InformationRecipient:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationInformationRecipient = field(
-        default=None,
+    type_code: ParticipationInformationRecipient = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AP,
@@ -603,7 +594,7 @@ class MfmiMt700701Uv01InformationRecipient:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01Overseer:
     class Meta:
         name = "MFMI_MT700701UV01.Overseer"
@@ -672,13 +663,12 @@ class MfmiMt700701Uv01Overseer:
         },
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -687,13 +677,12 @@ class MfmiMt700701Uv01Overseer:
             "type": "Attribute",
         },
     )
-    type_code: None | XParticipationVrfRespSprfWit = field(
-        default=None,
+    type_code: XParticipationVrfRespSprfWit = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AP,
@@ -704,7 +693,7 @@ class MfmiMt700701Uv01Overseer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01PriorRegisteredAct:
     class Meta:
         name = "MFMI_MT700701UV01.PriorRegisteredAct"
@@ -748,25 +737,23 @@ class MfmiMt700701Uv01PriorRegisteredAct:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | ActMoodCompletionTrack = field(
-        default=None,
+    mood_code: ActMoodCompletionTrack = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01PriorRegisteredRole:
     class Meta:
         name = "MFMI_MT700701UV01.PriorRegisteredRole"
@@ -811,25 +798,23 @@ class MfmiMt700701Uv01PriorRegisteredRole:
         },
     )
     class_code: (
-        None
-        | RoleClassMutualRelationship
+        RoleClassMutualRelationship
         | RoleClassPassive
         | str
         | RoleClassOntological
         | RoleClassPartitive
         | RoleClassRootValue
     ) = field(
-        default=None,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01Reason:
     class Meta:
         name = "MFMI_MT700701UV01.Reason"
@@ -859,13 +844,12 @@ class MfmiMt700701Uv01Reason:
         },
     )
     detected_issue_event: None | McaiMt900001Uv01DetectedIssueEvent = field(
-        default=None,
         metadata={
             "name": "detectedIssueEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -874,13 +858,12 @@ class MfmiMt700701Uv01Reason:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipReason = field(
-        default=None,
+    type_code: ActRelationshipReason = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_conduction_ind: None | str = field(
         default=None,
@@ -892,7 +875,7 @@ class MfmiMt700701Uv01Reason:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01Definition:
     class Meta:
         name = "MFMI_MT700701UV01.Definition"
@@ -922,13 +905,12 @@ class MfmiMt700701Uv01Definition:
         },
     )
     act_definition: None | MfmiMt700701Uv01ActDefinition = field(
-        default=None,
         metadata={
             "name": "actDefinition",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -969,7 +951,7 @@ class MfmiMt700701Uv01Definition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01RegistrationRequest:
     class Meta:
         name = "MFMI_MT700701UV01.RegistrationRequest"
@@ -1040,7 +1022,7 @@ class MfmiMt700701Uv01RegistrationRequest:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01Subject3:
     class Meta:
         name = "MFMI_MT700701UV01.Subject3"
@@ -1070,13 +1052,12 @@ class MfmiMt700701Uv01Subject3:
         },
     )
     prior_registered_role: None | MfmiMt700701Uv01PriorRegisteredRole = field(
-        default=None,
         metadata={
             "name": "priorRegisteredRole",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1085,17 +1066,16 @@ class MfmiMt700701Uv01Subject3:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetSubject = field(
-        default=None,
+    type_code: ParticipationTargetSubject = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01Subject4:
     class Meta:
         name = "MFMI_MT700701UV01.Subject4"
@@ -1125,13 +1105,12 @@ class MfmiMt700701Uv01Subject4:
         },
     )
     prior_registered_act: None | MfmiMt700701Uv01PriorRegisteredAct = field(
-        default=None,
         metadata={
             "name": "priorRegisteredAct",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1180,7 +1159,7 @@ class MfmiMt700701Uv01Subject4:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01InFulfillmentOf:
     class Meta:
         name = "MFMI_MT700701UV01.InFulfillmentOf"
@@ -1210,13 +1189,12 @@ class MfmiMt700701Uv01InFulfillmentOf:
         },
     )
     registration_request: None | MfmiMt700701Uv01RegistrationRequest = field(
-        default=None,
         metadata={
             "name": "registrationRequest",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1225,17 +1203,16 @@ class MfmiMt700701Uv01InFulfillmentOf:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipFulfills = field(
-        default=None,
+    type_code: ActRelationshipFulfills = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01PriorRegistration:
     class Meta:
         name = "MFMI_MT700701UV01.PriorRegistration"
@@ -1322,7 +1299,7 @@ class MfmiMt700701Uv01PriorRegistration:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MfmiMt700701Uv01ReplacementOf:
     class Meta:
         name = "MFMI_MT700701UV01.ReplacementOf"
@@ -1352,13 +1329,12 @@ class MfmiMt700701Uv01ReplacementOf:
         },
     )
     prior_registration: None | MfmiMt700701Uv01PriorRegistration = field(
-        default=None,
         metadata={
             "name": "priorRegistration",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,

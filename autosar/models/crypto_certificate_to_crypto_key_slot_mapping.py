@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CryptoCertificateToCryptoKeySlotMapping:
     """
     This meta-class represents the ability to define a mapping between a
@@ -70,18 +70,17 @@ class CryptoCertificateToCryptoKeySlotMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CryptoCertificateRef(Ref):
-        dest: None | CryptoCertificateSubtypesEnum = field(
-            default=None,
+        dest: CryptoCertificateSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CryptoKeySlotRefs:
         crypto_key_slot_ref: list[
             CryptoCertificateToCryptoKeySlotMapping.CryptoKeySlotRefs.CryptoKeySlotRef
@@ -95,13 +94,12 @@ class CryptoCertificateToCryptoKeySlotMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CryptoKeySlotRef(Ref):
-            dest: None | CryptoKeySlotSubtypesEnum = field(
-                default=None,
+            dest: CryptoKeySlotSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

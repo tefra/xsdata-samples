@@ -14,7 +14,7 @@ from .startup_config_subtypes_enum import StartupConfigSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StateDependentStartupConfig:
     """
     This meta-class defines the startup configuration for the process
@@ -111,7 +111,7 @@ class StateDependentStartupConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExecutionDependencys:
         execution_dependency: list[ExecutionDependency] = field(
             default_factory=list,
@@ -122,7 +122,7 @@ class StateDependentStartupConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FunctionGroupStateIrefs:
         function_group_state_iref: list[
             FunctionGroupStateInFunctionGroupSetInstanceRef
@@ -135,24 +135,22 @@ class StateDependentStartupConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResourceGroupRef(Ref):
-        dest: None | ResourceGroupSubtypesEnum = field(
-            default=None,
+        dest: ResourceGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StartupConfigRef(Ref):
-        dest: None | StartupConfigSubtypesEnum = field(
-            default=None,
+        dest: StartupConfigSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

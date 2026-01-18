@@ -8,7 +8,7 @@ from .fare_class_enumeration import FareClassEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareClasses:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

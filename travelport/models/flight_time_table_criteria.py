@@ -8,7 +8,7 @@ from travelport.models.specific_time_table import SpecificTimeTable
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightTimeTableCriteria:
     """
     Flight Time Table Search Criteria.

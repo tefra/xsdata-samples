@@ -12,7 +12,7 @@ from .point_of_interest_classification_hierarchy_members_rel_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointOfInterestClassificationHierarchyVersionStructure(
     GroupOfEntitiesVersionStructure
 ):

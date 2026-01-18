@@ -9,7 +9,7 @@ from .point_of_interest_component_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointOfInterestComponent(PointOfInterestComponentVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

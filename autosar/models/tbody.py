@@ -8,7 +8,7 @@ from .valign_enum_simple import ValignEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Tbody:
     """
     This meta-class represents a part within a table group.

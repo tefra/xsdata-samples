@@ -11,7 +11,7 @@ from .variable_data_prototype_in_system_instance_ref import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EndToEndProtectionVariablePrototype:
     """
     It is possible to protect the data exchanged between software
@@ -102,7 +102,7 @@ class EndToEndProtectionVariablePrototype:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReceiverIrefs:
         receiver_iref: list[VariableDataPrototypeInSystemInstanceRef] = field(
             default_factory=list,

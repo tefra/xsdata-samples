@@ -7,7 +7,7 @@ from ipxact.models.index import Index
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndicesType:
     class Meta:
         name = "indicesType"

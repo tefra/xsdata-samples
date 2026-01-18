@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelDateTimeType:
     """
     Date and time of trip, that allows specifying a time window before and
@@ -75,7 +75,7 @@ class TravelDateTimeType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DepartureDates:
         """
         Attributes:
@@ -129,18 +129,17 @@ class TravelDateTimeType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class LengthOfStay:
-            days: None | int = field(
-                default=None,
+            days: int = field(
                 metadata={
                     "name": "Days",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class LengthOfStayRange:
             """
             Attributes:
@@ -148,54 +147,49 @@ class TravelDateTimeType:
                 max_days: (inclusive)
             """
 
-            min_days: None | int = field(
-                default=None,
+            min_days: int = field(
                 metadata={
                     "name": "MinDays",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
-            max_days: None | int = field(
-                default=None,
+            max_days: int = field(
                 metadata={
                     "name": "MaxDays",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Day:
-            date: None | str = field(
-                default=None,
+            date: str = field(
                 metadata={
                     "name": "Date",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DaysRange:
-            from_date: None | str = field(
-                default=None,
+            from_date: str = field(
                 metadata={
                     "name": "FromDate",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
-                },
+                }
             )
-            to_date: None | str = field(
-                default=None,
+            to_date: str = field(
                 metadata={
                     "name": "ToDate",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
-                },
+                }
             )
             week_days: None | str = field(
                 default=None,
@@ -206,7 +200,7 @@ class TravelDateTimeType:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArrivalDates:
         day: list[TravelDateTimeType.ArrivalDates.Day] = field(
             default_factory=list,
@@ -225,37 +219,34 @@ class TravelDateTimeType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Day:
-            date: None | str = field(
-                default=None,
+            date: str = field(
                 metadata={
                     "name": "Date",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DaysRange:
-            from_date: None | str = field(
-                default=None,
+            from_date: str = field(
                 metadata={
                     "name": "FromDate",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
-                },
+                }
             )
-            to_date: None | str = field(
-                default=None,
+            to_date: str = field(
                 metadata={
                     "name": "ToDate",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
-                },
+                }
             )
             week_days: None | str = field(
                 default=None,

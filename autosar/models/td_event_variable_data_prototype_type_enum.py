@@ -9,7 +9,7 @@ from .td_event_variable_data_prototype_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventVariableDataPrototypeTypeEnum:
     """
     This is used to describe the specific event type of a
@@ -31,11 +31,10 @@ class TdEventVariableDataPrototypeTypeEnum:
     class Meta:
         name = "TD-EVENT-VARIABLE-DATA-PROTOTYPE-TYPE-ENUM"
 
-    value: None | TdEventVariableDataPrototypeTypeEnumSimple = field(
-        default=None,
+    value: TdEventVariableDataPrototypeTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

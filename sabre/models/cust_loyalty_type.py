@@ -17,7 +17,7 @@ from sabre.models.cust_loyalty_type_single_vendor_ind import (
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustLoyaltyType:
     """
     Program rewarding frequent use by accumulating credits for services

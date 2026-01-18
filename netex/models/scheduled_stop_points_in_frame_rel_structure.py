@@ -9,7 +9,7 @@ from .scheduled_stop_point import ScheduledStopPoint
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduledStopPointsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "scheduledStopPointsInFrame_RelStructure"

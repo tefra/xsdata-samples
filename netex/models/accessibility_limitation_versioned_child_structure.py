@@ -18,19 +18,18 @@ from .wheelchair_access import WheelchairAccess
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "AccessibilityLimitation_VersionedChildStructure"
 
-    wheelchair_access: None | WheelchairAccess = field(
-        default=None,
+    wheelchair_access: WheelchairAccess = field(
         metadata={
             "name": "WheelchairAccess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     step_free_access: None | StepFreeAccess = field(
         default=None,

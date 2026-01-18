@@ -13,7 +13,7 @@ from travelport.models.type_profile_info_2 import TypeProfileInfo2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgencyInfo6(TypeProfileInfo2):
     """
     Information relating to Agency.
@@ -100,15 +100,14 @@ class AgencyInfo6(TypeProfileInfo2):
             "max_occurs": 999,
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     iata_number: None | str = field(
         default=None,
@@ -119,15 +118,14 @@ class AgencyInfo6(TypeProfileInfo2):
             "max_length": 8,
         },
     )
-    agency_code: None | str = field(
-        default=None,
+    agency_code: str = field(
         metadata={
             "name": "AgencyCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        },
+        }
     )
     uses_template: bool = field(
         default=False,

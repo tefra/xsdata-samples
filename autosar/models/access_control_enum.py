@@ -7,7 +7,7 @@ from .access_control_enum_simple import AccessControlEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessControlEnum:
     """
     This enumeration describes the options for the definition of access
@@ -29,11 +29,10 @@ class AccessControlEnum:
     class Meta:
         name = "ACCESS-CONTROL-ENUM"
 
-    value: None | AccessControlEnumSimple = field(
-        default=None,
+    value: AccessControlEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -20,7 +20,7 @@ from .coct_mt150000_uv02 import CoctMt150000Uv02Organization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt040200Uv01ResponsibleParty:
     class Meta:
         name = "COCT_MT040200UV01.ResponsibleParty"
@@ -136,11 +136,10 @@ class CoctMt040200Uv01ResponsibleParty:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassAgent = field(
-        default=None,
+    class_code: RoleClassAgent = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -9,7 +9,7 @@ from travelport.models.type_custom_field_or_group_type import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeleteOverrideDefinition:
     """
     Delete existing override Definition.
@@ -24,13 +24,12 @@ class DeleteOverrideDefinition:
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    template_field_id: None | str = field(
-        default=None,
+    template_field_id: str = field(
         metadata={
             "name": "TemplateFieldID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     template_field_type: None | TypeCustomFieldOrGroupType = field(
         default=None,

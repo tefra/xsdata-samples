@@ -8,7 +8,7 @@ from travelport.models.type_tckey_element import TypeTckeyElement
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypePhone1(TypeTckeyElement):
     """
     Profile Phone Number.
@@ -35,13 +35,12 @@ class TypePhone1(TypeTckeyElement):
     class Meta:
         name = "typePhone"
 
-    type_value: None | TypePhoneType1 = field(
-        default=None,
+    type_value: TypePhoneType1 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     country: None | str = field(
         default=None,
@@ -59,14 +58,13 @@ class TypePhone1(TypeTckeyElement):
             "max_length": 5,
         },
     )
-    local_number: None | str = field(
-        default=None,
+    local_number: str = field(
         metadata={
             "name": "LocalNumber",
             "type": "Attribute",
             "required": True,
             "max_length": 50,
-        },
+        }
     )
     extension: None | str = field(
         default=None,

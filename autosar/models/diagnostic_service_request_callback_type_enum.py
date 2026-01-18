@@ -9,7 +9,7 @@ from .diagnostic_service_request_callback_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticServiceRequestCallbackTypeEnum:
     """
     This represents the ability to define whether a Service Request
@@ -31,11 +31,10 @@ class DiagnosticServiceRequestCallbackTypeEnum:
     class Meta:
         name = "DIAGNOSTIC-SERVICE-REQUEST-CALLBACK-TYPE-ENUM"
 
-    value: None | DiagnosticServiceRequestCallbackTypeEnumSimple = field(
-        default=None,
+    value: DiagnosticServiceRequestCallbackTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

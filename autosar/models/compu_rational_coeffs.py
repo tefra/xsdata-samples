@@ -7,7 +7,7 @@ from .compu_nominator_denominator import CompuNominatorDenominator
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompuRationalCoeffs:
     """
     This meta-class represents the ability to express a rational function

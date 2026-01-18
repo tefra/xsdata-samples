@@ -10,7 +10,7 @@ from tpdb.models.lhs_funapp import (
 from tpdb.models.var import Var
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Lhs:
     """
     :ivar funapp:

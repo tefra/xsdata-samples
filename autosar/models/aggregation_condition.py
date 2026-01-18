@@ -12,7 +12,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AggregationCondition:
     """
     The AggregationCondition evaluates to true, if the referenced
@@ -93,13 +93,12 @@ class AggregationCondition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AggregationRef(Ref):
-        dest: None | AggregationTailoringSubtypesEnum = field(
-            default=None,
+        dest: AggregationTailoringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

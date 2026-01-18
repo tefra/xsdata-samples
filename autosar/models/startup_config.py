@@ -26,7 +26,7 @@ from .termination_behavior_enum import TerminationBehaviorEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StartupConfig:
     """
     This meta-class represents a reusable startup configuration for
@@ -107,14 +107,13 @@ class StartupConfig:
     class Meta:
         name = "STARTUP-CONFIG"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | StartupConfig.ShortNameFragments = field(
         default=None,
@@ -251,7 +250,7 @@ class StartupConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -262,7 +261,7 @@ class StartupConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -273,7 +272,7 @@ class StartupConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EnvironmentVariables:
         tag_with_optional_value: list[TagWithOptionalValue] = field(
             default_factory=list,
@@ -284,18 +283,17 @@ class StartupConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExecutionErrorRef(Ref):
-        dest: None | ProcessExecutionErrorSubtypesEnum = field(
-            default=None,
+        dest: ProcessExecutionErrorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProcessArguments:
         process_argument: list[ProcessArgument] = field(
             default_factory=list,

@@ -13,7 +13,7 @@ from .timing_point_in_journey_pattern import TimingPointInJourneyPattern
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointsInJourneyPatternRelStructure(
     StrictContainmentAggregationStructure
 ):

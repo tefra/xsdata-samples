@@ -22,7 +22,7 @@ from ..core.voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt440001UvValuedItem:
     class Meta:
         name = "COCT_MT440001UV.ValuedItem"
@@ -81,14 +81,13 @@ class CoctMt440001UvValuedItem:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    unit_price_amt: None | RtoMoPq = field(
-        default=None,
+    unit_price_amt: RtoMoPq = field(
         metadata={
             "name": "unitPriceAmt",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     net_amt: None | Mo = field(
         default=None,

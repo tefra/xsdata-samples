@@ -9,7 +9,7 @@ from .group_of_entities_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareTableAbstract(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "FareTable_"

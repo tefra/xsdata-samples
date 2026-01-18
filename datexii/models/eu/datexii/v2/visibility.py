@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.integer_metre_distance_value import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Visibility:
     """
     Details of atmospheric visibility.
@@ -21,14 +21,13 @@ class Visibility:
     :ivar visibility_extension:
     """
 
-    minimum_visibility_distance: None | IntegerMetreDistanceValue = field(
-        default=None,
+    minimum_visibility_distance: IntegerMetreDistanceValue = field(
         metadata={
             "name": "minimumVisibilityDistance",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     visibility_extension: None | ExtensionType = field(
         default=None,

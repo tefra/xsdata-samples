@@ -9,7 +9,7 @@ from .mobility_service_constraint_zone import MobilityServiceConstraintZone
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MobilityServiceConstraintZonesInFrameRelStructure(
     ContainmentAggregationStructure
 ):

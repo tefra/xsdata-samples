@@ -8,7 +8,7 @@ from travelport.models.type_supplier_type_1 import TypeSupplierType1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeLoyaltyProgramEnrollmentHistory1(TypeKeyElement1):
     """
     History Element for Loyalty Program Enrollment.

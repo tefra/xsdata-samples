@@ -19,7 +19,7 @@ from .coct_mt150003_uv03 import CoctMt150003Uv03Organization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt040203Uv01NotificationParty:
     class Meta:
         name = "COCT_MT040203UV01.NotificationParty"
@@ -102,11 +102,10 @@ class CoctMt040203Uv01NotificationParty:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassContact = field(
-        default=None,
+    class_code: RoleClassContact = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

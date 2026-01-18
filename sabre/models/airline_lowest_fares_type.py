@@ -8,7 +8,7 @@ from sabre.models.currency_amount_type import CurrencyAmountType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirlineLowestFaresType:
     """
     IntelliSell Type . lowest fare for airline.
@@ -16,32 +16,29 @@ class AirlineLowestFaresType:
     Currently not used.
     """
 
-    airline: None | CompanyNameType = field(
-        default=None,
+    airline: CompanyNameType = field(
         metadata={
             "name": "Airline",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    no_stops: None | int = field(
-        default=None,
+    no_stops: int = field(
         metadata={
             "name": "NoStops",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    lowest_fare: None | CurrencyAmountType = field(
-        default=None,
+    lowest_fare: CurrencyAmountType = field(
         metadata={
             "name": "LowestFare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     itinerary_count: None | object = field(
         default=None,

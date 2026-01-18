@@ -8,7 +8,7 @@ from travelport.models.type_profile_type_3 import TypeProfileType3
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FieldGroup1:
     """
     Defines the structure of a new field group, which can be based on
@@ -56,23 +56,21 @@ class FieldGroup1:
             "type": "Element",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     description: None | str = field(
         default=None,
@@ -111,27 +109,24 @@ class FieldGroup1:
             "type": "Attribute",
         },
     )
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_type: None | TypeProfileType3 = field(
-        default=None,
+    profile_type: TypeProfileType3 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    is_used: None | bool = field(
-        default=None,
+    is_used: bool = field(
         metadata={
             "name": "IsUsed",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

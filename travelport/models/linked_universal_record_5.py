@@ -7,7 +7,7 @@ from travelport.models.type_element_status_6 import TypeElementStatus6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinkedUniversalRecord5:
     """
     Parameters
@@ -30,15 +30,14 @@ class LinkedUniversalRecord5:
         name = "LinkedUniversalRecord"
         namespace = "http://www.travelport.com/schema/common_v34_0"
 
-    locator_code: None | str = field(
-        default=None,
+    locator_code: str = field(
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
     key: None | str = field(
         default=None,

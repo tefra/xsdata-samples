@@ -12,7 +12,7 @@ from travelport.models.brand_list import BrandList
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeMultiQuoteRsp(BaseRsp1):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ComManagementMapping:
     """
     Describes a mapping between one or several Mode Management PortGroups
@@ -95,14 +95,13 @@ class ComManagementMapping:
     class Meta:
         name = "COM-MANAGEMENT-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ComManagementMapping.ShortNameFragments = (
         field(
@@ -223,7 +222,7 @@ class ComManagementMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -234,7 +233,7 @@ class ComManagementMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -245,7 +244,7 @@ class ComManagementMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ComManagementGroupRefs:
         com_management_group_ref: list[
             ComManagementMapping.ComManagementGroupRefs.ComManagementGroupRef
@@ -258,18 +257,17 @@ class ComManagementMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ComManagementGroupRef(Ref):
-            dest: None | ISignalIPduGroupSubtypesEnum = field(
-                default=None,
+            dest: ISignalIPduGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ComManagementPortGroupIrefs:
         com_management_port_group_iref: list[PortGroupInSystemInstanceRef] = (
             field(
@@ -282,7 +280,7 @@ class ComManagementMapping:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PhysicalChannelRefs:
         physical_channel_ref: list[
             ComManagementMapping.PhysicalChannelRefs.PhysicalChannelRef
@@ -295,13 +293,12 @@ class ComManagementMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PhysicalChannelRef(Ref):
-            dest: None | PhysicalChannelSubtypesEnum = field(
-                default=None,
+            dest: PhysicalChannelSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

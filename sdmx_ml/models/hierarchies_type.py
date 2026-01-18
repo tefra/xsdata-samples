@@ -7,7 +7,7 @@ from sdmx_ml.models.hierarchy_type import HierarchyType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class HierarchiesType:
     """
     HierarchiesType describes the structure of the hierarchies container.

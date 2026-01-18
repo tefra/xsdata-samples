@@ -9,7 +9,7 @@ from .diagnostic_trouble_code_j_1939_dtc_kind_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticTroubleCodeJ1939DtcKindEnum:
     """
     This meta-class represents the ability to further specify a J1939 DTC
@@ -31,11 +31,10 @@ class DiagnosticTroubleCodeJ1939DtcKindEnum:
     class Meta:
         name = "DIAGNOSTIC-TROUBLE-CODE-J-1939-DTC-KIND-ENUM"
 
-    value: None | DiagnosticTroubleCodeJ1939DtcKindEnumSimple = field(
-        default=None,
+    value: DiagnosticTroubleCodeJ1939DtcKindEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

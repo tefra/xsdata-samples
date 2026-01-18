@@ -7,7 +7,7 @@ from sabre.models.source_type import SourceType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PosType:
     """
     Point of Sale (POS) is the details identifying the party or connection

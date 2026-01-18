@@ -8,45 +8,41 @@ from travelport.models.supported_versions import SupportedVersions
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GdsQueuePlaceServicePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: None | GdsQueuePlaceServicePortTypeServiceInput.Header = field(
-        default=None,
+    header: GdsQueuePlaceServicePortTypeServiceInput.Header = field(
         metadata={
             "name": "Header",
             "type": "Element",
-        },
+        }
     )
-    body: None | GdsQueuePlaceServicePortTypeServiceInput.Body = field(
-        default=None,
+    body: GdsQueuePlaceServicePortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Header:
-        supported_versions: None | SupportedVersions = field(
-            default=None,
+        supported_versions: SupportedVersions = field(
             metadata={
                 "name": "SupportedVersions",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        gds_queue_place_req: None | GdsQueuePlaceReq = field(
-            default=None,
+        gds_queue_place_req: GdsQueuePlaceReq = field(
             metadata={
                 "name": "GdsQueuePlaceReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/gdsQueue_v52_0",
-            },
+            }
         )

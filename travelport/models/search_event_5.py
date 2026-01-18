@@ -8,7 +8,7 @@ from travelport.models.type_time_range_5 import TypeTimeRange5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SearchEvent5(TypeTimeRange5):
     """
     Search for various reservation events.

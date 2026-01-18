@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RestArrayPropertyDef:
     """
     This meta-class represents the ability to define a property of an
@@ -87,14 +87,13 @@ class RestArrayPropertyDef:
     class Meta:
         name = "REST-ARRAY-PROPERTY-DEF"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | RestArrayPropertyDef.ShortNameFragments = (
         field(
@@ -185,7 +184,7 @@ class RestArrayPropertyDef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -196,7 +195,7 @@ class RestArrayPropertyDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -207,7 +206,7 @@ class RestArrayPropertyDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Element:
         rest_boolean_property_def: None | RestBooleanPropertyDef = field(
             default=None,

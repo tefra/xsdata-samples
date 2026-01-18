@@ -7,7 +7,7 @@ from travelport.models.base_req_5 import BaseReq5
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileCreateTagsReq2(BaseReq5):
     """
     Request to create tags for an agency.
@@ -32,16 +32,15 @@ class ProfileCreateTagsReq2(BaseReq5):
             "max_occurs": 15,
         },
     )
-    agency_id: None | int = field(
-        default=None,
+    agency_id: int = field(
         metadata={
             "name": "AgencyID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CreateTag:
         """
         Parameters
@@ -56,15 +55,14 @@ class ProfileCreateTagsReq2(BaseReq5):
             The display order of the tag
         """
 
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "name": "Name",
                 "type": "Attribute",
                 "required": True,
                 "min_length": 1,
                 "max_length": 128,
-            },
+            }
         )
         label: None | str = field(
             default=None,

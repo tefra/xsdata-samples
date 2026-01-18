@@ -20,7 +20,7 @@ from .tp_ack_type import TpAckType
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayTpConnectionControl:
     """
     Configuration parameters to control a FlexRay TP connection.
@@ -145,14 +145,13 @@ class FlexrayTpConnectionControl:
     class Meta:
         name = "FLEXRAY-TP-CONNECTION-CONTROL"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | FlexrayTpConnectionControl.ShortNameFragments
@@ -395,7 +394,7 @@ class FlexrayTpConnectionControl:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -406,7 +405,7 @@ class FlexrayTpConnectionControl:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

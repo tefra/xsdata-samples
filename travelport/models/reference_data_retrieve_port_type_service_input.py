@@ -9,27 +9,25 @@ from travelport.models.reference_data_retrieve_req import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceDataRetrievePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | ReferenceDataRetrievePortTypeServiceInput.Body = field(
-        default=None,
+    body: ReferenceDataRetrievePortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        reference_data_retrieve_req: None | ReferenceDataRetrieveReq = field(
-            default=None,
+        reference_data_retrieve_req: ReferenceDataRetrieveReq = field(
             metadata={
                 "name": "ReferenceDataRetrieveReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/util_v52_0",
-            },
+            }
         )

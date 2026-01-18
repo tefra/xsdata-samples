@@ -11,7 +11,7 @@ from .security_event_filter_chain_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecurityEventFilterChainRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -69,13 +69,12 @@ class SecurityEventFilterChainRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecurityEventFilterChainRef(Ref):
-        dest: None | SecurityEventFilterChainSubtypesEnum = field(
-            default=None,
+        dest: SecurityEventFilterChainSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

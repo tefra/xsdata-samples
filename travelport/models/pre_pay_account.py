@@ -10,7 +10,7 @@ from travelport.models.pre_pay_price_info import PrePayPriceInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrePayAccount:
     """
     PrePay Account associated with the customer.

@@ -8,7 +8,7 @@ from travelport.models.type_element_status_1 import TypeElementStatus1
 __NAMESPACE__ = "http://www.travelport.com/schema/passive_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassiveSegment:
     """
     Parameters
@@ -170,13 +170,12 @@ class PassiveSegment:
             "type": "Attribute",
         },
     )
-    segment_type: None | str = field(
-        default=None,
+    segment_type: str = field(
         metadata={
             "name": "SegmentType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     key: None | str = field(
         default=None,
@@ -243,7 +242,7 @@ class PassiveSegment:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Amount:
         type_value: None | AmountType = field(
             default=None,

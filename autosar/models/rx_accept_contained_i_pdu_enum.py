@@ -9,7 +9,7 @@ from .rx_accept_contained_i_pdu_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RxAcceptContainedIPduEnum:
     """
     Defines whether this ContainerIPdu has a fixed set of containedIPdus
@@ -31,11 +31,10 @@ class RxAcceptContainedIPduEnum:
     class Meta:
         name = "RX-ACCEPT-CONTAINED-I-PDU-ENUM"
 
-    value: None | RxAcceptContainedIPduEnumSimple = field(
-        default=None,
+    value: RxAcceptContainedIPduEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

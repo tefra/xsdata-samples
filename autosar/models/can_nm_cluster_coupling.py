@@ -10,7 +10,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanNmClusterCoupling:
     """
     CAN attributes that are valid for each of the referenced (coupled) CAN
@@ -89,7 +89,7 @@ class CanNmClusterCoupling:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CoupledClusterRefs:
         coupled_cluster_ref: list[
             CanNmClusterCoupling.CoupledClusterRefs.CoupledClusterRef
@@ -102,13 +102,12 @@ class CanNmClusterCoupling:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CoupledClusterRef(Ref):
-            dest: None | CanNmClusterSubtypesEnum = field(
-                default=None,
+            dest: CanNmClusterSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

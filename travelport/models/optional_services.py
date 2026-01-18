@@ -11,7 +11,7 @@ from travelport.models.tax_info import TaxInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OptionalServices:
     """
     A wrapper for all the information regarding each of the Optional
@@ -68,7 +68,7 @@ class OptionalServices:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OptionalServicesTotal:
         """
         Parameters

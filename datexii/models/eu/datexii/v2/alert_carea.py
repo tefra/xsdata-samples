@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlertCArea:
     """
     An area defined by reference to a predefined ALERT-C location table.
@@ -24,44 +24,40 @@ class AlertCArea:
     :ivar alert_carea_extension:
     """
 
-    alert_clocation_country_code: None | str = field(
-        default=None,
+    alert_clocation_country_code: str = field(
         metadata={
             "name": "alertCLocationCountryCode",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
-    alert_clocation_table_number: None | str = field(
-        default=None,
+    alert_clocation_table_number: str = field(
         metadata={
             "name": "alertCLocationTableNumber",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
-    alert_clocation_table_version: None | str = field(
-        default=None,
+    alert_clocation_table_version: str = field(
         metadata={
             "name": "alertCLocationTableVersion",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
-    area_location: None | AlertCLocation = field(
-        default=None,
+    area_location: AlertCLocation = field(
         metadata={
             "name": "areaLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     alert_carea_extension: None | ExtensionType = field(
         default=None,

@@ -10,19 +10,18 @@ from .strict_containment_aggregation_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessibilityLimitationsRelStructure(
     StrictContainmentAggregationStructure
 ):
     class Meta:
         name = "accessibilityLimitations_RelStructure"
 
-    accessibility_limitation: None | AccessibilityLimitation = field(
-        default=None,
+    accessibility_limitation: AccessibilityLimitation = field(
         metadata={
             "name": "AccessibilityLimitation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

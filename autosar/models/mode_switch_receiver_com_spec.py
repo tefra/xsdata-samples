@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModeSwitchReceiverComSpec:
     """
     Communication attributes of RPortPrototypes with respect to mode
@@ -84,13 +84,12 @@ class ModeSwitchReceiverComSpec:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeGroupRef(Ref):
-        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

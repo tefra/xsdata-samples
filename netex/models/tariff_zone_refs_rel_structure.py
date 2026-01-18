@@ -10,7 +10,7 @@ from .tariff_zone_ref import TariffZoneRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TariffZoneRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "tariffZoneRefs_RelStructure"

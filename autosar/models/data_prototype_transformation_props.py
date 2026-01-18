@@ -21,7 +21,7 @@ from .transformation_props_subtypes_enum import TransformationPropsSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataPrototypeTransformationProps:
     """
     DataPrototypeTransformationProps allows to set the attributes for the
@@ -120,7 +120,7 @@ class DataPrototypeTransformationProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataProtototypeInPortInterfaceRef:
         data_prototype_in_port_interface_ref: (
             None | DataPrototypeInPortInterfaceRef
@@ -143,7 +143,7 @@ class DataPrototypeTransformationProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataPrototypeInPortInterfaceRef:
         data_prototype_in_port_interface_ref: (
             None | DataPrototypeInPortInterfaceRef
@@ -166,7 +166,7 @@ class DataPrototypeTransformationProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataPrototypeRef:
         data_prototype_with_application_data_type_in_system_ref: (
             None | DataPrototypeWithApplicationDataTypeInSystemRef
@@ -189,13 +189,12 @@ class DataPrototypeTransformationProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransformationPropsRef(Ref):
-        dest: None | TransformationPropsSubtypesEnum = field(
-            default=None,
+        dest: TransformationPropsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

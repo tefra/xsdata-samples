@@ -7,7 +7,7 @@ from travelport.models.type_vehicle_rates import TypeVehicleRates
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SupplierRate(TypeVehicleRates):
     """
     Parameters

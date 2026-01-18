@@ -10,7 +10,7 @@ from .version_of_object_ref_structure import VersionOfObjectRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupMemberVersionedChildStructure(
     AbstractGroupMemberVersionedChildStructure
 ):
@@ -25,12 +25,11 @@ class GroupMemberVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    member_object_ref: None | VersionOfObjectRefStructure = field(
-        default=None,
+    member_object_ref: VersionOfObjectRefStructure = field(
         metadata={
             "name": "MemberObjectRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

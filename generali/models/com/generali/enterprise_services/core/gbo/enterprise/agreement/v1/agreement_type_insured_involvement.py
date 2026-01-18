@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgreementTypeInsuredInvolvement:
     class Meta:
         global_type = False

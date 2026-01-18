@@ -8,7 +8,7 @@ from travelport.models.type_purpose_code import TypePurposeCode
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DestinationPurposeCode:
     """
     This code is required to indicate destination and purpose of Travel.
@@ -20,19 +20,17 @@ class DestinationPurposeCode:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    destination: None | TypeDestinationCode = field(
-        default=None,
+    destination: TypeDestinationCode = field(
         metadata={
             "name": "Destination",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    purpose: None | TypePurposeCode = field(
-        default=None,
+    purpose: TypePurposeCode = field(
         metadata={
             "name": "Purpose",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

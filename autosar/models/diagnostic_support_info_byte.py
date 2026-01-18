@@ -7,7 +7,7 @@ from .positive_integer import PositiveInteger
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticSupportInfoByte:
     """
     This meta-class defines the support information (typically byte A) to

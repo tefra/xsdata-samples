@@ -11,7 +11,7 @@ from travelport.models.type_segment_ref_5 import TypeSegmentRef5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceRemark4(TypeAssociatedRemark4):
     """
     Parameters

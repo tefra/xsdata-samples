@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Alliance:
     """
     Alliance Code.
@@ -20,11 +20,10 @@ class Alliance:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

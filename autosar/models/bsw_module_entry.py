@@ -29,7 +29,7 @@ from .sw_service_impl_policy_enum import SwServiceImplPolicyEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswModuleEntry:
     """
     This class represents a single API entry (C-function prototype) into
@@ -147,14 +147,13 @@ class BswModuleEntry:
     class Meta:
         name = "BSW-MODULE-ENTRY"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | BswModuleEntry.ShortNameFragments = field(
         default=None,
@@ -347,7 +346,7 @@ class BswModuleEntry:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -358,7 +357,7 @@ class BswModuleEntry:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -369,7 +368,7 @@ class BswModuleEntry:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -398,7 +397,7 @@ class BswModuleEntry:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Arguments:
         sw_service_arg: list[SwServiceArg] = field(
             default_factory=list,

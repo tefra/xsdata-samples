@@ -7,7 +7,7 @@ from .flexray_channel_name_simple import FlexrayChannelNameSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayChannelName:
     """
     Name of the channel.
@@ -28,11 +28,10 @@ class FlexrayChannelName:
     class Meta:
         name = "FLEXRAY-CHANNEL-NAME"
 
-    value: None | FlexrayChannelNameSimple = field(
-        default=None,
+    value: FlexrayChannelNameSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

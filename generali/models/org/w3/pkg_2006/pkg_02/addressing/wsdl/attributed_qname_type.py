@@ -6,16 +6,15 @@ from xml.etree.ElementTree import QName
 __NAMESPACE__ = "http://www.w3.org/2006/02/addressing/wsdl"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributedQnameType:
     class Meta:
         name = "AttributedQNameType"
 
-    value: None | QName = field(
-        default=None,
+    value: QName = field(
         metadata={
             "required": True,
-        },
+        }
     )
     other_attributes: dict[str, str] = field(
         default_factory=dict,

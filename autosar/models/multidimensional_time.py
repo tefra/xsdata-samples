@@ -8,7 +8,7 @@ from .integer import Integer
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MultidimensionalTime:
     """
     This is used to specify a multidimensional time value based on ASAM CSE

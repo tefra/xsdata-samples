@@ -8,7 +8,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Payload:
     """
     defines the structure of data transported by this port.
@@ -31,13 +31,12 @@ class Payload:
             "type": "Element",
         },
     )
-    type_value: None | PayloadType = field(
-        default=None,
+    type_value: PayloadType = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     extension: None | Payload.Extension = field(
         default=None,
@@ -53,7 +52,7 @@ class Payload:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Extension:
         """
         :ivar value:

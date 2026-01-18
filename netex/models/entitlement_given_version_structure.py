@@ -21,7 +21,7 @@ from .usage_parameter_version_structure import UsageParameterVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "EntitlementGiven_VersionStructure"

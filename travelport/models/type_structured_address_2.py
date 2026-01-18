@@ -11,7 +11,7 @@ from travelport.models.type_element_status_2 import TypeElementStatus2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeStructuredAddress2:
     """
     A fully structured address.

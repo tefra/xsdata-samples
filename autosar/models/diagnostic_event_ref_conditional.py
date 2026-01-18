@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEventRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -66,13 +66,12 @@ class DiagnosticEventRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticEventRef(Ref):
-        dest: None | DiagnosticEventSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

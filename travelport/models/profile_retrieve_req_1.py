@@ -14,7 +14,7 @@ from travelport.models.unique_profile_id_profile_type_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileRetrieveReq1(BaseReq2):
     """
     Request to retrieve a particular profile.
@@ -79,7 +79,7 @@ class ProfileRetrieveReq1(BaseReq2):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvisioningCode:
         """
         Parameters
@@ -98,16 +98,15 @@ class ProfileRetrieveReq1(BaseReq2):
                 "max_length": 128,
             },
         )
-        profile_type: None | ProvisioningCodeProfileType1 = field(
-            default=None,
+        profile_type: ProvisioningCodeProfileType1 = field(
             metadata={
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UniqueProfileId:
         """
         Parameters
@@ -131,13 +130,12 @@ class ProfileRetrieveReq1(BaseReq2):
                 "max_length": 128,
             },
         )
-        profile_type: None | UniqueProfileIdProfileType1 = field(
-            default=None,
+        profile_type: UniqueProfileIdProfileType1 = field(
             metadata={
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         agency_code: None | str = field(
             default=None,

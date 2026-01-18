@@ -7,7 +7,7 @@ from .data_object_subscription_structure import DataObjectSubscriptionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataObjectSubscriptionRequest(DataObjectSubscriptionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

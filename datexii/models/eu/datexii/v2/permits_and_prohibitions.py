@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.rest_area_activity_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PermitsAndProhibitions:
     """
     Defines sets of action and regulations to specify permitted and
@@ -22,21 +22,19 @@ class PermitsAndProhibitions:
     :ivar permits_and_prohibitions_extension:
     """
 
-    activity: None | RestAreaActivityEnum = field(
-        default=None,
+    activity: RestAreaActivityEnum = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    regulation: None | RegulationEnum = field(
-        default=None,
+    regulation: RegulationEnum = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     permits_and_prohibitions_extension: None | ExtensionType = field(
         default=None,

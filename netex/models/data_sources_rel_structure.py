@@ -10,7 +10,7 @@ from .data_source_ref import DataSourceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataSourcesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dataSources_RelStructure"

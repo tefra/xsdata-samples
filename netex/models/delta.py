@@ -7,7 +7,7 @@ from .delta_structure import DeltaStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Delta(DeltaStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

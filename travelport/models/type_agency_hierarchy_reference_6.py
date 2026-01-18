@@ -9,24 +9,22 @@ from travelport.models.type_agency_profile_level_6 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeAgencyHierarchyReference6:
     class Meta:
         name = "typeAgencyHierarchyReference"
 
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_type: None | TypeAgencyProfileLevel6 = field(
-        default=None,
+    profile_type: TypeAgencyProfileLevel6 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

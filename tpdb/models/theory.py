@@ -5,9 +5,9 @@ from dataclasses import dataclass, field
 from tpdb.models.theory_value import TheoryValue
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Theory:
     class Meta:
         name = "theory"
 
-    value: None | TheoryValue = field(default=None)
+    value: TheoryValue = field()

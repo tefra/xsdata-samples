@@ -25,7 +25,7 @@ from .sw_data_def_props import SwDataDefProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ImplementationDataTypeElement:
     """
     Declares a data object which is locally aggregated.
@@ -126,14 +126,13 @@ class ImplementationDataTypeElement:
     class Meta:
         name = "IMPLEMENTATION-DATA-TYPE-ELEMENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ImplementationDataTypeElement.ShortNameFragments
@@ -280,7 +279,7 @@ class ImplementationDataTypeElement:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -291,7 +290,7 @@ class ImplementationDataTypeElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -302,7 +301,7 @@ class ImplementationDataTypeElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SubElements:
         implementation_data_type_element: list[
             ImplementationDataTypeElement

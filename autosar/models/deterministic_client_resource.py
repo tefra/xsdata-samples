@@ -8,7 +8,7 @@ from .normalized_instruction import NormalizedInstruction
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeterministicClientResource:
     """
     This meta-class specifies computing resource needs of

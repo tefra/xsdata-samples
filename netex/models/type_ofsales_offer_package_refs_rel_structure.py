@@ -9,7 +9,7 @@ from .type_of_sales_offer_package_ref import TypeOfSalesOfferPackageRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfsalesOfferPackageRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfsalesOfferPackageRefs_RelStructure"

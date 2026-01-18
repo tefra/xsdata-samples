@@ -8,7 +8,7 @@ from travelport.models.type_custom_field_2 import TypeCustomField2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomField(TypeCustomField2):
     """
     Specify any existing fields that belong to this group.
@@ -65,13 +65,12 @@ class CustomField(TypeCustomField2):
             "type": "Attribute",
         },
     )
-    searchable: None | object = field(
-        default=None,
+    searchable: object = field(
         metadata={
             "name": "Searchable",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     search_option: bool = field(
         default=False,

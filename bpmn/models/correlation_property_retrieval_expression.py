@@ -9,7 +9,7 @@ from .t_correlation_property_retrieval_expression import (
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CorrelationPropertyRetrievalExpression(
     TCorrelationPropertyRetrievalExpression
 ):

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ImageLocation:
     """
     Parameters
@@ -28,27 +28,24 @@ class ImageLocation:
             "required": True,
         },
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    image_width: None | int = field(
-        default=None,
+    image_width: int = field(
         metadata={
             "name": "ImageWidth",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    image_height: None | int = field(
-        default=None,
+    image_height: int = field(
         metadata={
             "name": "ImageHeight",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

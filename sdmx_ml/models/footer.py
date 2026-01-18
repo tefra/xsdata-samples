@@ -9,7 +9,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Footer(FooterType):
     """
     Footer is used to communicate information such as error and warnings

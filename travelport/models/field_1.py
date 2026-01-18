@@ -8,7 +8,7 @@ from travelport.models.type_profile_type_3 import TypeProfileType3
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Field1(TypeCustomField1):
     """
     Specify any existing fields that belong to this group.
@@ -27,27 +27,24 @@ class Field1(TypeCustomField1):
         name = "Field"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_type: None | TypeProfileType3 = field(
-        default=None,
+    profile_type: TypeProfileType3 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    is_used: None | bool = field(
-        default=None,
+    is_used: bool = field(
         metadata={
             "name": "IsUsed",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

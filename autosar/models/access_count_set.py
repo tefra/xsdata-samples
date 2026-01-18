@@ -9,7 +9,7 @@ from .nmtoken_string import NmtokenString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessCountSet:
     """
     This meta-class provides a set of count values evaluated according to
@@ -77,7 +77,7 @@ class AccessCountSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessCounts:
         access_count: list[AccessCount] = field(
             default_factory=list,

@@ -29,7 +29,7 @@ from .text_value_specification import TextValueSpecification
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEnvDataCondition:
     """
     A DiagnosticEnvDataCondition is an atomic condition that compares the
@@ -99,7 +99,7 @@ class DiagnosticEnvDataCondition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CompareValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification
@@ -214,13 +214,12 @@ class DiagnosticEnvDataCondition:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataElementRef(Ref):
-        dest: None | DiagnosticDataElementSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticDataElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

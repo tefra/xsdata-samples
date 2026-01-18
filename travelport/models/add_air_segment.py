@@ -8,7 +8,7 @@ from travelport.models.host_token_1 import HostToken1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddAirSegment:
     """
     Container for Air Segment to be added.

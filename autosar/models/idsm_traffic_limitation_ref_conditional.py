@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IdsmTrafficLimitationRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -68,13 +68,12 @@ class IdsmTrafficLimitationRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IdsmTrafficLimitationRef(Ref):
-        dest: None | IdsmTrafficLimitationSubtypesEnum = field(
-            default=None,
+        dest: IdsmTrafficLimitationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

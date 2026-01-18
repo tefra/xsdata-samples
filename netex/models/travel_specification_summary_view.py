@@ -9,7 +9,7 @@ from .travel_specification_summary_view_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelSpecificationSummaryView(TravelSpecificationSummaryViewStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

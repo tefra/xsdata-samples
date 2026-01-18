@@ -12,7 +12,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Interconnection:
     """
     Describes a connection between two active (not monitor) busInterfaces.
@@ -38,12 +38,11 @@ class Interconnection:
         name = "interconnection"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -70,7 +69,7 @@ class Interconnection:
         metadata={
             "name": "activeInterface",
             "type": "Element",
-            "min_occurs": 2,
+            "min_occurs": 1,
             "sequence": 1,
         },
     )
@@ -79,7 +78,6 @@ class Interconnection:
         metadata={
             "name": "hierInterface",
             "type": "Element",
-            "min_occurs": 1,
             "sequence": 1,
         },
     )

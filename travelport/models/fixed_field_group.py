@@ -7,7 +7,7 @@ from travelport.models.fixed_field import FixedField
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FixedFieldGroup:
     """
     Defines the structure of a fixed group, which can be based on existing
@@ -81,23 +81,21 @@ class FixedFieldGroup:
             "max_occurs": 999,
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     description: None | str = field(
         default=None,

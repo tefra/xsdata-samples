@@ -8,19 +8,16 @@ from .point_in_single_journey_path_ref import PointInSingleJourneyPathRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointInSingleJourneyPathRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "PointInSingleJourneyPathRefs_RelStructure"
 
-    point_in_single_journey_path_ref: None | PointInSingleJourneyPathRef = (
-        field(
-            default=None,
-            metadata={
-                "name": "PointInSingleJourneyPathRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-                "required": True,
-            },
-        )
+    point_in_single_journey_path_ref: PointInSingleJourneyPathRef = field(
+        metadata={
+            "name": "PointInSingleJourneyPathRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
     )

@@ -15,7 +15,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucAddInfoParamValue:
     """
     This parameter corresponds to EcucAddInfoParamDef.
@@ -118,18 +118,17 @@ class EcucAddInfoParamValue:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DefinitionRef(Ref):
-        dest: None | EcucParameterDefSubtypesEnum = field(
-            default=None,
+        dest: EcucParameterDefSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

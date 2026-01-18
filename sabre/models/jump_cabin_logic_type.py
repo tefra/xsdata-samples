@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JumpCabinLogicType:
     """
     Attributes:
@@ -13,11 +13,10 @@ class JumpCabinLogicType:
             class different than requested.
     """
 
-    disabled: None | bool = field(
-        default=None,
+    disabled: bool = field(
         metadata={
             "name": "Disabled",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

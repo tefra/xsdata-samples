@@ -10,7 +10,7 @@ from .interchange_rule_timing_ref import InterchangeRuleTimingRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InterchangeRuleTimingsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "interchangeRuleTimings_RelStructure"

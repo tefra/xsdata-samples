@@ -113,7 +113,7 @@ from ..core.voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040InfrastructureRootTypeId(Ii):
     class Meta:
         name = "POCD_MT000040.InfrastructureRoot.typeId"
@@ -127,17 +127,16 @@ class PocdMt000040InfrastructureRootTypeId(Ii):
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    extension: None | str = field(
-        default=None,
+    extension: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
             "min_length": 1,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040RegionOfInterestValue(Int):
     class Meta:
         name = "POCD_MT000040.RegionOfInterest.value"
@@ -150,7 +149,7 @@ class PocdMt000040RegionOfInterestValue(Int):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Component5:
     class Meta:
         name = "POCD_MT000040.Component5"
@@ -179,13 +178,12 @@ class PocdMt000040Component5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    section: None | PocdMt000040Section = field(
-        default=None,
+    section: PocdMt000040Section = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -213,7 +211,7 @@ class PocdMt000040Component5:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Consent:
     class Meta:
         name = "POCD_MT000040.Consent"
@@ -256,14 +254,13 @@ class PocdMt000040Consent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -290,7 +287,7 @@ class PocdMt000040Consent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Criterion:
     class Meta:
         name = "POCD_MT000040.Criterion"
@@ -364,7 +361,7 @@ class PocdMt000040Criterion:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040CustodianOrganization:
     class Meta:
         name = "POCD_MT000040.CustodianOrganization"
@@ -447,7 +444,7 @@ class PocdMt000040CustodianOrganization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Device:
     class Meta:
         name = "POCD_MT000040.Device"
@@ -523,7 +520,7 @@ class PocdMt000040Device:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Entity:
     class Meta:
         name = "POCD_MT000040.Entity"
@@ -597,7 +594,7 @@ class PocdMt000040Entity:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040ExternalAct:
     class Meta:
         name = "POCD_MT000040.ExternalAct"
@@ -671,7 +668,7 @@ class PocdMt000040ExternalAct:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040ExternalDocument:
     class Meta:
         name = "POCD_MT000040.ExternalDocument"
@@ -761,7 +758,7 @@ class PocdMt000040ExternalDocument:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040ExternalObservation:
     class Meta:
         name = "POCD_MT000040.ExternalObservation"
@@ -835,7 +832,7 @@ class PocdMt000040ExternalObservation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040ExternalProcedure:
     class Meta:
         name = "POCD_MT000040.ExternalProcedure"
@@ -910,7 +907,7 @@ class PocdMt000040ExternalProcedure:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040LabeledDrug:
     class Meta:
         name = "POCD_MT000040.LabeledDrug"
@@ -978,7 +975,7 @@ class PocdMt000040LabeledDrug:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040LanguageCommunication:
     class Meta:
         name = "POCD_MT000040.LanguageCommunication"
@@ -1048,7 +1045,7 @@ class PocdMt000040LanguageCommunication:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Material:
     class Meta:
         name = "POCD_MT000040.Material"
@@ -1124,7 +1121,7 @@ class PocdMt000040Material:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040NonXmlbody:
     class Meta:
         name = "POCD_MT000040.NonXMLBody"
@@ -1153,13 +1150,12 @@ class PocdMt000040NonXmlbody:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: None | EdExplicit = field(
-        default=None,
+    text: EdExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     confidentiality_code: None | Ce = field(
         default=None,
@@ -1202,7 +1198,7 @@ class PocdMt000040NonXmlbody:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040ObservationRange:
     class Meta:
         name = "POCD_MT000040.ObservationRange"
@@ -1284,7 +1280,7 @@ class PocdMt000040ObservationRange:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Order:
     class Meta:
         name = "POCD_MT000040.Order"
@@ -1360,7 +1356,7 @@ class PocdMt000040Order:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Organization:
     class Meta:
         name = "POCD_MT000040.Organization"
@@ -1458,7 +1454,7 @@ class PocdMt000040Organization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040ParentDocument:
     class Meta:
         name = "POCD_MT000040.ParentDocument"
@@ -1550,7 +1546,7 @@ class PocdMt000040ParentDocument:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Person:
     class Meta:
         name = "POCD_MT000040.Person"
@@ -1611,7 +1607,7 @@ class PocdMt000040Person:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Place:
     class Meta:
         name = "POCD_MT000040.Place"
@@ -1679,7 +1675,7 @@ class PocdMt000040Place:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040PlayingEntity:
     class Meta:
         name = "POCD_MT000040.PlayingEntity"
@@ -1768,7 +1764,7 @@ class PocdMt000040PlayingEntity:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040SubjectPerson:
     class Meta:
         name = "POCD_MT000040.SubjectPerson"
@@ -1868,7 +1864,7 @@ class PocdMt000040SubjectPerson:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040AssignedCustodian:
     class Meta:
         name = "POCD_MT000040.AssignedCustodian"
@@ -1897,16 +1893,15 @@ class PocdMt000040AssignedCustodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    represented_custodian_organization: (
-        None | PocdMt000040CustodianOrganization
-    ) = field(
-        default=None,
-        metadata={
-            "name": "representedCustodianOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
+    represented_custodian_organization: PocdMt000040CustodianOrganization = (
+        field(
+            metadata={
+                "name": "representedCustodianOrganization",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "required": True,
+            }
+        )
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1925,7 +1920,7 @@ class PocdMt000040AssignedCustodian:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040AssignedEntity:
     class Meta:
         name = "POCD_MT000040.AssignedEntity"
@@ -2016,7 +2011,7 @@ class PocdMt000040AssignedEntity:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040AssociatedEntity:
     class Meta:
         name = "POCD_MT000040.AssociatedEntity"
@@ -2096,20 +2091,17 @@ class PocdMt000040AssociatedEntity:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassMutualRelationship | RoleClassPassive | str = (
-        field(
-            default=None,
-            metadata={
-                "name": "classCode",
-                "type": "Attribute",
-                "required": True,
-                "pattern": r"[^\s]+",
-            },
-        )
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str = field(
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[^\s]+",
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Authorization:
     class Meta:
         name = "POCD_MT000040.Authorization"
@@ -2138,13 +2130,12 @@ class PocdMt000040Authorization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    consent: None | PocdMt000040Consent = field(
-        default=None,
+    consent: PocdMt000040Consent = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2184,7 +2175,7 @@ class PocdMt000040Authorization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Birthplace:
     class Meta:
         name = "POCD_MT000040.Birthplace"
@@ -2213,13 +2204,12 @@ class PocdMt000040Birthplace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    place: None | PocdMt000040Place = field(
-        default=None,
+    place: PocdMt000040Place = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2255,7 +2245,7 @@ class PocdMt000040Birthplace:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Guardian:
     class Meta:
         name = "POCD_MT000040.Guardian"
@@ -2362,7 +2352,7 @@ class PocdMt000040Guardian:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040HealthCareFacility:
     class Meta:
         name = "POCD_MT000040.HealthCareFacility"
@@ -2436,7 +2426,7 @@ class PocdMt000040HealthCareFacility:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040InFulfillmentOf:
     class Meta:
         name = "POCD_MT000040.InFulfillmentOf"
@@ -2465,13 +2455,12 @@ class PocdMt000040InFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    order: None | PocdMt000040Order = field(
-        default=None,
+    order: PocdMt000040Order = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2490,7 +2479,7 @@ class PocdMt000040InFulfillmentOf:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040IntendedRecipient:
     class Meta:
         name = "POCD_MT000040.IntendedRecipient"
@@ -2572,7 +2561,7 @@ class PocdMt000040IntendedRecipient:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040MaintainedEntity:
     class Meta:
         name = "POCD_MT000040.MaintainedEntity"
@@ -2609,14 +2598,13 @@ class PocdMt000040MaintainedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    maintaining_person: None | PocdMt000040Person = field(
-        default=None,
+    maintaining_person: PocdMt000040Person = field(
         metadata={
             "name": "maintainingPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2652,7 +2640,7 @@ class PocdMt000040MaintainedEntity:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040ManufacturedProduct:
     class Meta:
         name = "POCD_MT000040.ManufacturedProduct"
@@ -2729,7 +2717,7 @@ class PocdMt000040ManufacturedProduct:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040OrganizationPartOf:
     class Meta:
         name = "POCD_MT000040.OrganizationPartOf"
@@ -2830,7 +2818,7 @@ class PocdMt000040OrganizationPartOf:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040ParticipantRole:
     class Meta:
         name = "POCD_MT000040.ParticipantRole"
@@ -2935,7 +2923,7 @@ class PocdMt000040ParticipantRole:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Precondition:
     class Meta:
         name = "POCD_MT000040.Precondition"
@@ -2964,13 +2952,12 @@ class PocdMt000040Precondition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    criterion: None | PocdMt000040Criterion = field(
-        default=None,
+    criterion: PocdMt000040Criterion = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3010,7 +2997,7 @@ class PocdMt000040Precondition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Reference:
     class Meta:
         name = "POCD_MT000040.Reference"
@@ -3086,17 +3073,16 @@ class PocdMt000040Reference:
             "type": "Attribute",
         },
     )
-    type_code: None | XActRelationshipExternalReference = field(
-        default=None,
+    type_code: XActRelationshipExternalReference = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040ReferenceRange:
     class Meta:
         name = "POCD_MT000040.ReferenceRange"
@@ -3125,14 +3111,13 @@ class PocdMt000040ReferenceRange:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    observation_range: None | PocdMt000040ObservationRange = field(
-        default=None,
+    observation_range: PocdMt000040ObservationRange = field(
         metadata={
             "name": "observationRange",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3172,7 +3157,7 @@ class PocdMt000040ReferenceRange:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040RelatedDocument:
     class Meta:
         name = "POCD_MT000040.RelatedDocument"
@@ -3201,14 +3186,13 @@ class PocdMt000040RelatedDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    parent_document: None | PocdMt000040ParentDocument = field(
-        default=None,
+    parent_document: PocdMt000040ParentDocument = field(
         metadata={
             "name": "parentDocument",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3217,17 +3201,16 @@ class PocdMt000040RelatedDocument:
             "type": "Attribute",
         },
     )
-    type_code: None | XActRelationshipDocument = field(
-        default=None,
+    type_code: XActRelationshipDocument = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040RelatedEntity:
     class Meta:
         name = "POCD_MT000040.RelatedEntity"
@@ -3300,17 +3283,16 @@ class PocdMt000040RelatedEntity:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassMutualRelationship = field(
-        default=None,
+    class_code: RoleClassMutualRelationship = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040RelatedSubject:
     class Meta:
         name = "POCD_MT000040.RelatedSubject"
@@ -3383,7 +3365,7 @@ class PocdMt000040RelatedSubject:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040SpecimenRole:
     class Meta:
         name = "POCD_MT000040.SpecimenRole"
@@ -3444,7 +3426,7 @@ class PocdMt000040SpecimenRole:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Authenticator:
     class Meta:
         name = "POCD_MT000040.Authenticator"
@@ -3473,31 +3455,28 @@ class PocdMt000040Authenticator:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: None | TsExplicit = field(
-        default=None,
+    time: TsExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    signature_code: None | Cs = field(
-        default=None,
+    signature_code: Cs = field(
         metadata={
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    assigned_entity: None | PocdMt000040AssignedEntity = field(
-        default=None,
+    assigned_entity: PocdMt000040AssignedEntity = field(
         metadata={
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3516,7 +3495,7 @@ class PocdMt000040Authenticator:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040AuthoringDevice:
     class Meta:
         name = "POCD_MT000040.AuthoringDevice"
@@ -3601,7 +3580,7 @@ class PocdMt000040AuthoringDevice:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Consumable:
     class Meta:
         name = "POCD_MT000040.Consumable"
@@ -3630,14 +3609,13 @@ class PocdMt000040Consumable:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_product: None | PocdMt000040ManufacturedProduct = field(
-        default=None,
+    manufactured_product: PocdMt000040ManufacturedProduct = field(
         metadata={
             "name": "manufacturedProduct",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3656,7 +3634,7 @@ class PocdMt000040Consumable:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Custodian:
     class Meta:
         name = "POCD_MT000040.Custodian"
@@ -3685,14 +3663,13 @@ class PocdMt000040Custodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_custodian: None | PocdMt000040AssignedCustodian = field(
-        default=None,
+    assigned_custodian: PocdMt000040AssignedCustodian = field(
         metadata={
             "name": "assignedCustodian",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3711,7 +3688,7 @@ class PocdMt000040Custodian:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040DataEnterer:
     class Meta:
         name = "POCD_MT000040.DataEnterer"
@@ -3747,14 +3724,13 @@ class PocdMt000040DataEnterer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: None | PocdMt000040AssignedEntity = field(
-        default=None,
+    assigned_entity: PocdMt000040AssignedEntity = field(
         metadata={
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3781,7 +3757,7 @@ class PocdMt000040DataEnterer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040EncounterParticipant:
     class Meta:
         name = "POCD_MT000040.EncounterParticipant"
@@ -3817,14 +3793,13 @@ class PocdMt000040EncounterParticipant:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: None | PocdMt000040AssignedEntity = field(
-        default=None,
+    assigned_entity: PocdMt000040AssignedEntity = field(
         metadata={
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3833,17 +3808,16 @@ class PocdMt000040EncounterParticipant:
             "type": "Attribute",
         },
     )
-    type_code: None | XEncounterParticipant = field(
-        default=None,
+    type_code: XEncounterParticipant = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Informant12:
     class Meta:
         name = "POCD_MT000040.Informant12"
@@ -3913,7 +3887,7 @@ class PocdMt000040Informant12:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040InformationRecipient:
     class Meta:
         name = "POCD_MT000040.InformationRecipient"
@@ -3942,14 +3916,13 @@ class PocdMt000040InformationRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    intended_recipient: None | PocdMt000040IntendedRecipient = field(
-        default=None,
+    intended_recipient: PocdMt000040IntendedRecipient = field(
         metadata={
             "name": "intendedRecipient",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3967,7 +3940,7 @@ class PocdMt000040InformationRecipient:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040LegalAuthenticator:
     class Meta:
         name = "POCD_MT000040.LegalAuthenticator"
@@ -3996,31 +3969,28 @@ class PocdMt000040LegalAuthenticator:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: None | TsExplicit = field(
-        default=None,
+    time: TsExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    signature_code: None | Cs = field(
-        default=None,
+    signature_code: Cs = field(
         metadata={
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    assigned_entity: None | PocdMt000040AssignedEntity = field(
-        default=None,
+    assigned_entity: PocdMt000040AssignedEntity = field(
         metadata={
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -4047,7 +4017,7 @@ class PocdMt000040LegalAuthenticator:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Location:
     class Meta:
         name = "POCD_MT000040.Location"
@@ -4076,14 +4046,13 @@ class PocdMt000040Location:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    health_care_facility: None | PocdMt000040HealthCareFacility = field(
-        default=None,
+    health_care_facility: PocdMt000040HealthCareFacility = field(
         metadata={
             "name": "healthCareFacility",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -4102,7 +4071,7 @@ class PocdMt000040Location:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Participant1:
     class Meta:
         name = "POCD_MT000040.Participant1"
@@ -4146,14 +4115,13 @@ class PocdMt000040Participant1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    associated_entity: None | PocdMt000040AssociatedEntity = field(
-        default=None,
+    associated_entity: PocdMt000040AssociatedEntity = field(
         metadata={
             "name": "associatedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -4162,13 +4130,12 @@ class PocdMt000040Participant1:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationType = field(
-        default=None,
+    type_code: ParticipationType = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         init=False,
@@ -4180,7 +4147,7 @@ class PocdMt000040Participant1:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Participant2:
     class Meta:
         name = "POCD_MT000040.Participant2"
@@ -4224,14 +4191,13 @@ class PocdMt000040Participant2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    participant_role: None | PocdMt000040ParticipantRole = field(
-        default=None,
+    participant_role: PocdMt000040ParticipantRole = field(
         metadata={
             "name": "participantRole",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -4240,13 +4206,12 @@ class PocdMt000040Participant2:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationType = field(
-        default=None,
+    type_code: ParticipationType = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         init=False,
@@ -4258,7 +4223,7 @@ class PocdMt000040Participant2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Patient:
     class Meta:
         name = "POCD_MT000040.Patient"
@@ -4396,7 +4361,7 @@ class PocdMt000040Patient:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Performer1:
     class Meta:
         name = "POCD_MT000040.Performer1"
@@ -4440,14 +4405,13 @@ class PocdMt000040Performer1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: None | PocdMt000040AssignedEntity = field(
-        default=None,
+    assigned_entity: PocdMt000040AssignedEntity = field(
         metadata={
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -4456,17 +4420,16 @@ class PocdMt000040Performer1:
             "type": "Attribute",
         },
     )
-    type_code: None | XServiceEventPerformer = field(
-        default=None,
+    type_code: XServiceEventPerformer = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Performer2:
     class Meta:
         name = "POCD_MT000040.Performer2"
@@ -4510,14 +4473,13 @@ class PocdMt000040Performer2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: None | PocdMt000040AssignedEntity = field(
-        default=None,
+    assigned_entity: PocdMt000040AssignedEntity = field(
         metadata={
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -4536,7 +4498,7 @@ class PocdMt000040Performer2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Product:
     class Meta:
         name = "POCD_MT000040.Product"
@@ -4565,14 +4527,13 @@ class PocdMt000040Product:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_product: None | PocdMt000040ManufacturedProduct = field(
-        default=None,
+    manufactured_product: PocdMt000040ManufacturedProduct = field(
         metadata={
             "name": "manufacturedProduct",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -4591,7 +4552,7 @@ class PocdMt000040Product:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040ResponsibleParty:
     class Meta:
         name = "POCD_MT000040.ResponsibleParty"
@@ -4620,14 +4581,13 @@ class PocdMt000040ResponsibleParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: None | PocdMt000040AssignedEntity = field(
-        default=None,
+    assigned_entity: PocdMt000040AssignedEntity = field(
         metadata={
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -4646,7 +4606,7 @@ class PocdMt000040ResponsibleParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Specimen:
     class Meta:
         name = "POCD_MT000040.Specimen"
@@ -4675,14 +4635,13 @@ class PocdMt000040Specimen:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    specimen_role: None | PocdMt000040SpecimenRole = field(
-        default=None,
+    specimen_role: PocdMt000040SpecimenRole = field(
         metadata={
             "name": "specimenRole",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -4701,7 +4660,7 @@ class PocdMt000040Specimen:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Subject:
     class Meta:
         name = "POCD_MT000040.Subject"
@@ -4738,14 +4697,13 @@ class PocdMt000040Subject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    related_subject: None | PocdMt000040RelatedSubject = field(
-        default=None,
+    related_subject: PocdMt000040RelatedSubject = field(
         metadata={
             "name": "relatedSubject",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -4772,7 +4730,7 @@ class PocdMt000040Subject:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040AssignedAuthor:
     class Meta:
         name = "POCD_MT000040.AssignedAuthor"
@@ -4871,7 +4829,7 @@ class PocdMt000040AssignedAuthor:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040EncompassingEncounter:
     class Meta:
         name = "POCD_MT000040.EncompassingEncounter"
@@ -4914,14 +4872,13 @@ class PocdMt000040EncompassingEncounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: None | IvlTsExplicit = field(
-        default=None,
+    effective_time: IvlTsExplicit = field(
         metadata={
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     discharge_disposition_code: None | Ce = field(
         default=None,
@@ -4979,7 +4936,7 @@ class PocdMt000040EncompassingEncounter:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040PatientRole:
     class Meta:
         name = "POCD_MT000040.PatientRole"
@@ -5079,7 +5036,7 @@ class PocdMt000040PatientRole:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040ServiceEvent:
     class Meta:
         name = "POCD_MT000040.ServiceEvent"
@@ -5161,7 +5118,7 @@ class PocdMt000040ServiceEvent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Author:
     class Meta:
         name = "POCD_MT000040.Author"
@@ -5198,22 +5155,20 @@ class PocdMt000040Author:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: None | TsExplicit = field(
-        default=None,
+    time: TsExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    assigned_author: None | PocdMt000040AssignedAuthor = field(
-        default=None,
+    assigned_author: PocdMt000040AssignedAuthor = field(
         metadata={
             "name": "assignedAuthor",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -5240,7 +5195,7 @@ class PocdMt000040Author:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Component1:
     class Meta:
         name = "POCD_MT000040.Component1"
@@ -5269,14 +5224,13 @@ class PocdMt000040Component1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    encompassing_encounter: None | PocdMt000040EncompassingEncounter = field(
-        default=None,
+    encompassing_encounter: PocdMt000040EncompassingEncounter = field(
         metadata={
             "name": "encompassingEncounter",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -5295,7 +5249,7 @@ class PocdMt000040Component1:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040DocumentationOf:
     class Meta:
         name = "POCD_MT000040.DocumentationOf"
@@ -5324,14 +5278,13 @@ class PocdMt000040DocumentationOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    service_event: None | PocdMt000040ServiceEvent = field(
-        default=None,
+    service_event: PocdMt000040ServiceEvent = field(
         metadata={
             "name": "serviceEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -5371,7 +5324,7 @@ class PocdMt000040DocumentationOf:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040RecordTarget:
     class Meta:
         name = "POCD_MT000040.RecordTarget"
@@ -5400,14 +5353,13 @@ class PocdMt000040RecordTarget:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    patient_role: None | PocdMt000040PatientRole = field(
-        default=None,
+    patient_role: PocdMt000040PatientRole = field(
         metadata={
             "name": "patientRole",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -5434,7 +5386,7 @@ class PocdMt000040RecordTarget:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Act:
     class Meta:
         name = "POCD_MT000040.Act"
@@ -5470,13 +5422,12 @@ class PocdMt000040Act:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     text: None | EdExplicit = field(
         default=None,
@@ -5588,21 +5539,19 @@ class PocdMt000040Act:
             "type": "Attribute",
         },
     )
-    class_code: None | XActClassDocumentEntryAct = field(
-        default=None,
+    class_code: XActClassDocumentEntryAct = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | XDocumentActMood = field(
-        default=None,
+    mood_code: XDocumentActMood = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     negation_ind: None | str = field(
         default=None,
@@ -5614,7 +5563,7 @@ class PocdMt000040Act:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Encounter:
     class Meta:
         name = "POCD_MT000040.Encounter"
@@ -5767,25 +5716,23 @@ class PocdMt000040Encounter:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClass = field(
-        default=None,
+    class_code: ActClass = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | XDocumentEncounterMood = field(
-        default=None,
+    mood_code: XDocumentEncounterMood = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Component4:
     class Meta:
         name = "POCD_MT000040.Component4"
@@ -5924,7 +5871,7 @@ class PocdMt000040Component4:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Organizer:
     class Meta:
         name = "POCD_MT000040.Organizer"
@@ -5967,14 +5914,13 @@ class PocdMt000040Organizer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     effective_time: None | IvlTsExplicit = field(
         default=None,
@@ -6054,25 +6000,23 @@ class PocdMt000040Organizer:
             "type": "Attribute",
         },
     )
-    class_code: None | XActClassDocumentEntryOrganizer = field(
-        default=None,
+    class_code: XActClassDocumentEntryOrganizer = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | ActMood = field(
-        default=None,
+    mood_code: ActMood = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040EntryRelationship:
     class Meta:
         name = "POCD_MT000040.EntryRelationship"
@@ -6192,13 +6136,12 @@ class PocdMt000040EntryRelationship:
             "type": "Attribute",
         },
     )
-    type_code: None | XActRelationshipEntryRelationship = field(
-        default=None,
+    type_code: XActRelationshipEntryRelationship = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     inversion_ind: None | str = field(
         default=None,
@@ -6226,7 +6169,7 @@ class PocdMt000040EntryRelationship:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Observation:
     class Meta:
         name = "POCD_MT000040.Observation"
@@ -6262,13 +6205,12 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     derivation_expr: None | StExplicit = field(
         default=None,
@@ -6435,21 +6377,19 @@ class PocdMt000040Observation:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassObservation = field(
-        default=None,
+    class_code: ActClassObservation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | XActMoodDocumentObservation = field(
-        default=None,
+    mood_code: XActMoodDocumentObservation = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     negation_ind: None | str = field(
         default=None,
@@ -6461,7 +6401,7 @@ class PocdMt000040Observation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040ObservationMedia:
     class Meta:
         name = "POCD_MT000040.ObservationMedia"
@@ -6505,13 +6445,12 @@ class PocdMt000040ObservationMedia:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | EdExplicit = field(
-        default=None,
+    value: EdExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     subject: None | PocdMt000040Subject = field(
         default=None,
@@ -6591,25 +6530,23 @@ class PocdMt000040ObservationMedia:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassObservation = field(
-        default=None,
+    class_code: ActClassObservation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | ActMood = field(
-        default=None,
+    mood_code: ActMood = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Procedure:
     class Meta:
         name = "POCD_MT000040.Procedure"
@@ -6786,21 +6723,19 @@ class PocdMt000040Procedure:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClass = field(
-        default=None,
+    class_code: ActClass = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | XDocumentProcedureMood = field(
-        default=None,
+    mood_code: XDocumentProcedureMood = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     negation_ind: None | str = field(
         default=None,
@@ -6812,7 +6747,7 @@ class PocdMt000040Procedure:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040RegionOfInterest:
     class Meta:
         name = "POCD_MT000040.RegionOfInterest"
@@ -6849,13 +6784,12 @@ class PocdMt000040RegionOfInterest:
             "min_occurs": 1,
         },
     )
-    code: None | Cs = field(
-        default=None,
+    code: Cs = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     value: list[PocdMt000040RegionOfInterestValue] = field(
         default_factory=list,
@@ -6963,7 +6897,7 @@ class PocdMt000040RegionOfInterest:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040SubstanceAdministration:
     class Meta:
         name = "POCD_MT000040.SubstanceAdministration"
@@ -7107,13 +7041,12 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    consumable: None | PocdMt000040Consumable = field(
-        default=None,
+    consumable: PocdMt000040Consumable = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     performer: list[PocdMt000040Performer2] = field(
         default_factory=list,
@@ -7181,13 +7114,12 @@ class PocdMt000040SubstanceAdministration:
             "required": True,
         },
     )
-    mood_code: None | XDocumentSubstanceMood = field(
-        default=None,
+    mood_code: XDocumentSubstanceMood = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     negation_ind: None | str = field(
         default=None,
@@ -7199,7 +7131,7 @@ class PocdMt000040SubstanceAdministration:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Supply:
     class Meta:
         name = "POCD_MT000040.Supply"
@@ -7391,17 +7323,16 @@ class PocdMt000040Supply:
             "required": True,
         },
     )
-    mood_code: None | XDocumentSubstanceMood = field(
-        default=None,
+    mood_code: XDocumentSubstanceMood = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Entry:
     class Meta:
         name = "POCD_MT000040.Entry"
@@ -7523,7 +7454,7 @@ class PocdMt000040Entry:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Section:
     class Meta:
         name = "POCD_MT000040.Section"
@@ -7663,7 +7594,7 @@ class PocdMt000040Section:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Component3:
     class Meta:
         name = "POCD_MT000040.Component3"
@@ -7692,13 +7623,12 @@ class PocdMt000040Component3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    section: None | PocdMt000040Section = field(
-        default=None,
+    section: PocdMt000040Section = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -7726,7 +7656,7 @@ class PocdMt000040Component3:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040StructuredBody:
     class Meta:
         name = "POCD_MT000040.StructuredBody"
@@ -7804,7 +7734,7 @@ class PocdMt000040StructuredBody:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040Component2:
     class Meta:
         name = "POCD_MT000040.Component2"
@@ -7875,7 +7805,7 @@ class PocdMt000040Component2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PocdMt000040ClinicalDocument:
     class Meta:
         name = "POCD_MT000040.ClinicalDocument"
@@ -7888,14 +7818,13 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: None | PocdMt000040InfrastructureRootTypeId = field(
-        default=None,
+    type_id: PocdMt000040InfrastructureRootTypeId = field(
         metadata={
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     template_id: list[Ii] = field(
         default_factory=list,
@@ -7905,21 +7834,19 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    code: None | Ce = field(
-        default=None,
+    code: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     title: None | StExplicit = field(
         default=None,
@@ -7928,23 +7855,21 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: None | TsExplicit = field(
-        default=None,
+    effective_time: TsExplicit = field(
         metadata={
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    confidentiality_code: None | Ce = field(
-        default=None,
+    confidentiality_code: Ce = field(
         metadata={
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     language_code: None | Cs = field(
         default=None,
@@ -8010,13 +7935,12 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    custodian: None | PocdMt000040Custodian = field(
-        default=None,
+    custodian: PocdMt000040Custodian = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     information_recipient: list[PocdMt000040InformationRecipient] = field(
         default_factory=list,
@@ -8087,13 +8011,12 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    component: None | PocdMt000040Component2 = field(
-        default=None,
+    component: PocdMt000040Component2 = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,

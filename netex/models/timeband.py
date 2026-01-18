@@ -8,7 +8,7 @@ from .entity_in_version_structure import TimebandVersionedChildStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Timeband(TimebandVersionedChildStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

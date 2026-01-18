@@ -10,7 +10,7 @@ from .timeband_refs_rel_structure import TimebandRefsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupOfTimebandsVersionedChildStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GroupOfTimebands_VersionedChildStructure"

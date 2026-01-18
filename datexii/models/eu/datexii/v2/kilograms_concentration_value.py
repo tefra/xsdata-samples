@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class KilogramsConcentrationValue(DataValue):
     """
     A measured or calculated value of concentration of a substance in grams
@@ -20,14 +20,13 @@ class KilogramsConcentrationValue(DataValue):
     :ivar kilograms_concentration_value_extension:
     """
 
-    kilograms_concentration: None | float = field(
-        default=None,
+    kilograms_concentration: float = field(
         metadata={
             "name": "kilogramsConcentration",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     kilograms_concentration_value_extension: None | ExtensionType = field(
         default=None,

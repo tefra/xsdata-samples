@@ -83,7 +83,7 @@ from .coct_mt150000_uv02 import CoctMt150000Uv02Organization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvActRef:
     class Meta:
         name = "COCT_MT080000UV.ActRef"
@@ -112,13 +112,12 @@ class CoctMt080000UvActRef:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -127,13 +126,12 @@ class CoctMt080000UvActRef:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -146,7 +144,7 @@ class CoctMt080000UvActRef:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvAdditiveMaterial:
     class Meta:
         name = "COCT_MT080000UV.AdditiveMaterial"
@@ -203,13 +201,12 @@ class CoctMt080000UvAdditiveMaterial:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassMaterial = field(
-        default=None,
+    class_code: EntityClassMaterial = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -222,7 +219,7 @@ class CoctMt080000UvAdditiveMaterial:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvAuthorOrPerformer:
     class Meta:
         name = "COCT_MT080000UV.AuthorOrPerformer"
@@ -275,13 +272,12 @@ class CoctMt080000UvAuthorOrPerformer:
         },
     )
     assigned_entity: None | CoctMt090000Uv01AssignedEntity = field(
-        default=None,
         metadata={
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -290,13 +286,12 @@ class CoctMt080000UvAuthorOrPerformer:
             "type": "Attribute",
         },
     )
-    type_code: None | XParticipationAuthorPerformer = field(
-        default=None,
+    type_code: XParticipationAuthorPerformer = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.ON,
@@ -307,7 +302,7 @@ class CoctMt080000UvAuthorOrPerformer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvAutomationSpecimenObservationEvent:
     class Meta:
         name = "COCT_MT080000UV.AutomationSpecimenObservationEvent"
@@ -343,13 +338,12 @@ class CoctMt080000UvAutomationSpecimenObservationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Ce = field(
-        default=None,
+    code: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     text: None | St = field(
         default=None,
@@ -374,13 +368,12 @@ class CoctMt080000UvAutomationSpecimenObservationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | AnyType = field(
-        default=None,
+    value: AnyType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -407,7 +400,7 @@ class CoctMt080000UvAutomationSpecimenObservationEvent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvContent4:
     class Meta:
         name = "COCT_MT080000UV.Content4"
@@ -452,14 +445,13 @@ class CoctMt080000UvContent4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    container_holder: None | CoctMt080000UvHolder = field(
-        default=None,
+    container_holder: CoctMt080000UvHolder = field(
         metadata={
             "name": "containerHolder",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -496,7 +488,7 @@ class CoctMt080000UvContent4:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvCriterion:
     class Meta:
         name = "COCT_MT080000UV.Criterion"
@@ -568,13 +560,12 @@ class CoctMt080000UvCriterion:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassObservation = field(
-        default=None,
+    class_code: ActClassObservation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -587,7 +578,7 @@ class CoctMt080000UvCriterion:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvIdentifiedContainer:
     class Meta:
         name = "COCT_MT080000UV.IdentifiedContainer"
@@ -616,13 +607,12 @@ class CoctMt080000UvIdentifiedContainer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     code: None | Ce = field(
         default=None,
@@ -666,7 +656,7 @@ class CoctMt080000UvIdentifiedContainer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvIdentifiedHolder:
     class Meta:
         name = "COCT_MT080000UV.IdentifiedHolder"
@@ -695,13 +685,12 @@ class CoctMt080000UvIdentifiedHolder:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     code: None | Ce = field(
         default=None,
@@ -743,7 +732,7 @@ class CoctMt080000UvIdentifiedHolder:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvManufacturedProduct:
     class Meta:
         name = "COCT_MT080000UV.ManufacturedProduct"
@@ -772,14 +761,13 @@ class CoctMt080000UvManufacturedProduct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufacturer_organization: None | CoctMt150000Uv02Organization = field(
-        default=None,
+    manufacturer_organization: CoctMt150000Uv02Organization = field(
         metadata={
             "name": "manufacturerOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -788,17 +776,16 @@ class CoctMt080000UvManufacturedProduct:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassManufacturedProduct = field(
-        default=None,
+    class_code: RoleClassManufacturedProduct = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvPerformer:
     class Meta:
         name = "COCT_MT080000UV.Performer"
@@ -851,13 +838,12 @@ class CoctMt080000UvPerformer:
         },
     )
     assigned_entity: None | CoctMt090000Uv01AssignedEntity = field(
-        default=None,
         metadata={
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -882,7 +868,7 @@ class CoctMt080000UvPerformer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvSpecimenAlternateIdentifier:
     class Meta:
         name = "COCT_MT080000UV.SpecimenAlternateIdentifier"
@@ -911,13 +897,12 @@ class CoctMt080000UvSpecimenAlternateIdentifier:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     code: None | Ce = field(
         default=None,
@@ -970,7 +955,7 @@ class CoctMt080000UvSpecimenAlternateIdentifier:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvSpecimenObservationEvent:
     class Meta:
         name = "COCT_MT080000UV.SpecimenObservationEvent"
@@ -1006,13 +991,12 @@ class CoctMt080000UvSpecimenObservationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Ce = field(
-        default=None,
+    code: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     text: None | St = field(
         default=None,
@@ -1037,13 +1021,12 @@ class CoctMt080000UvSpecimenObservationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | AnyType = field(
-        default=None,
+    value: AnyType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1070,7 +1053,7 @@ class CoctMt080000UvSpecimenObservationEvent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvSpecimenStub:
     class Meta:
         name = "COCT_MT080000UV.SpecimenStub"
@@ -1099,13 +1082,12 @@ class CoctMt080000UvSpecimenStub:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1114,17 +1096,16 @@ class CoctMt080000UvSpecimenStub:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassSpecimen = field(
-        default=None,
+    class_code: RoleClassSpecimen = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvAdditive:
     class Meta:
         name = "COCT_MT080000UV.Additive"
@@ -1160,13 +1141,12 @@ class CoctMt080000UvAdditive:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    additive: None | CoctMt080000UvAdditiveMaterial = field(
-        default=None,
+    additive: CoctMt080000UvAdditiveMaterial = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1203,7 +1183,7 @@ class CoctMt080000UvAdditive:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvAdditive2:
     class Meta:
         name = "COCT_MT080000UV.Additive2"
@@ -1239,13 +1219,12 @@ class CoctMt080000UvAdditive2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    additive: None | CoctMt080000UvAdditiveMaterial = field(
-        default=None,
+    additive: CoctMt080000UvAdditiveMaterial = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1282,7 +1261,7 @@ class CoctMt080000UvAdditive2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvHolder:
     class Meta:
         name = "COCT_MT080000UV.Holder"
@@ -1379,7 +1358,7 @@ class CoctMt080000UvHolder:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvPrecondition:
     class Meta:
         name = "COCT_MT080000UV.Precondition"
@@ -1433,12 +1412,11 @@ class CoctMt080000UvPrecondition:
         },
     )
     criterion: None | CoctMt080000UvCriterion = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1494,7 +1472,7 @@ class CoctMt080000UvPrecondition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvSubject1:
     class Meta:
         name = "COCT_MT080000UV.Subject1"
@@ -1539,13 +1517,12 @@ class CoctMt080000UvSubject1:
         },
     )
     identified_container: None | CoctMt080000UvIdentifiedContainer = field(
-        default=None,
         metadata={
             "name": "identifiedContainer",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1554,13 +1531,12 @@ class CoctMt080000UvSubject1:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetSubject = field(
-        default=None,
+    type_code: ParticipationTargetSubject = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.ON,
@@ -1571,7 +1547,7 @@ class CoctMt080000UvSubject1:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvSubject2:
     class Meta:
         name = "COCT_MT080000UV.Subject2"
@@ -1616,13 +1592,12 @@ class CoctMt080000UvSubject2:
         },
     )
     identified_holder: None | CoctMt080000UvIdentifiedHolder = field(
-        default=None,
         metadata={
             "name": "identifiedHolder",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1647,7 +1622,7 @@ class CoctMt080000UvSubject2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvSubject4:
     class Meta:
         name = "COCT_MT080000UV.Subject4"
@@ -1720,13 +1695,12 @@ class CoctMt080000UvSubject4:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetSubject = field(
-        default=None,
+    type_code: ParticipationTargetSubject = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.ON,
@@ -1737,7 +1711,7 @@ class CoctMt080000UvSubject4:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvContent3:
     class Meta:
         name = "COCT_MT080000UV.Content3"
@@ -1782,14 +1756,13 @@ class CoctMt080000UvContent3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    container_holder: None | CoctMt080000UvHolder = field(
-        default=None,
+    container_holder: CoctMt080000UvHolder = field(
         metadata={
             "name": "containerHolder",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1826,7 +1799,7 @@ class CoctMt080000UvContent3:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvProcess:
     class Meta:
         name = "COCT_MT080000UV.Process"
@@ -1862,13 +1835,12 @@ class CoctMt080000UvProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Ce = field(
-        default=None,
+    code: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     text: None | St = field(
         default=None,
@@ -1932,25 +1904,23 @@ class CoctMt080000UvProcess:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassProcedure = field(
-        default=None,
+    class_code: ActClassProcedure = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | XActMoodIntentEvent = field(
-        default=None,
+    mood_code: XActMoodIntentEvent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvProcessStep:
     class Meta:
         name = "COCT_MT080000UV.ProcessStep"
@@ -2048,13 +2018,12 @@ class CoctMt080000UvProcessStep:
             "type": "Attribute",
         },
     )
-    class_code: None | XLabProcessClassCodes = field(
-        default=None,
+    class_code: XLabProcessClassCodes = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -2067,7 +2036,7 @@ class CoctMt080000UvProcessStep:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvContainer:
     class Meta:
         name = "COCT_MT080000UV.Container"
@@ -2231,13 +2200,12 @@ class CoctMt080000UvContainer:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassContainer = field(
-        default=None,
+    class_code: EntityClassContainer = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -2250,7 +2218,7 @@ class CoctMt080000UvContainer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvProduct:
     class Meta:
         name = "COCT_MT080000UV.Product"
@@ -2328,7 +2296,7 @@ class CoctMt080000UvProduct:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvSubject3:
     class Meta:
         name = "COCT_MT080000UV.Subject3"
@@ -2373,13 +2341,12 @@ class CoctMt080000UvSubject3:
         },
     )
     process_step: None | CoctMt080000UvProcessStep = field(
-        default=None,
         metadata={
             "name": "processStep",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2388,13 +2355,12 @@ class CoctMt080000UvSubject3:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetSubject = field(
-        default=None,
+    type_code: ParticipationTargetSubject = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.ON,
@@ -2405,7 +2371,7 @@ class CoctMt080000UvSubject3:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvContent1:
     class Meta:
         name = "COCT_MT080000UV.Content1"
@@ -2434,13 +2400,12 @@ class CoctMt080000UvContent1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    container: None | CoctMt080000UvContainer = field(
-        default=None,
+    container: CoctMt080000UvContainer = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2477,7 +2442,7 @@ class CoctMt080000UvContent1:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvManufactured:
     class Meta:
         name = "COCT_MT080000UV.Manufactured"
@@ -2506,13 +2471,12 @@ class CoctMt080000UvManufactured:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Ce = field(
-        default=None,
+    code: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     quantity: list[PqExplicit] = field(
         default_factory=list,
@@ -2572,13 +2536,12 @@ class CoctMt080000UvManufactured:
         },
     )
     as_manufactured_product: None | CoctMt080000UvManufacturedProduct = field(
-        default=None,
         metadata={
             "name": "asManufacturedProduct",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     as_specimen_stub: list[CoctMt080000UvSpecimenStub] = field(
         default_factory=list,
@@ -2613,13 +2576,12 @@ class CoctMt080000UvManufactured:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassManufacturedMaterial = field(
-        default=None,
+    class_code: EntityClassManufacturedMaterial = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -2632,7 +2594,7 @@ class CoctMt080000UvManufactured:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvNatural:
     class Meta:
         name = "COCT_MT080000UV.Natural"
@@ -2661,13 +2623,12 @@ class CoctMt080000UvNatural:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Ce = field(
-        default=None,
+    code: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     quantity: list[PqExplicit] = field(
         default_factory=list,
@@ -2743,13 +2704,12 @@ class CoctMt080000UvNatural:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassRoot = field(
-        default=None,
+    class_code: EntityClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -2762,7 +2722,7 @@ class CoctMt080000UvNatural:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvNonPersonLivingSubject:
     class Meta:
         name = "COCT_MT080000UV.NonPersonLivingSubject"
@@ -2974,13 +2934,12 @@ class CoctMt080000UvNonPersonLivingSubject:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassNonPersonLivingSubject = field(
-        default=None,
+    class_code: EntityClassNonPersonLivingSubject = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -2993,7 +2952,7 @@ class CoctMt080000UvNonPersonLivingSubject:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvPerson:
     class Meta:
         name = "COCT_MT080000UV.Person"
@@ -3240,7 +3199,7 @@ class CoctMt080000UvPerson:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt080000UvSpecimen:
     class Meta:
         name = "COCT_MT080000UV.Specimen"
@@ -3269,21 +3228,19 @@ class CoctMt080000UvSpecimen:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    code: None | Ce = field(
-        default=None,
+    code: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     specimen_natural: None | CoctMt080000UvNatural = field(
         default=None,
@@ -3391,11 +3348,10 @@ class CoctMt080000UvSpecimen:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassSpecimen = field(
-        default=None,
+    class_code: RoleClassSpecimen = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

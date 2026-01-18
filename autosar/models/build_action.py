@@ -29,7 +29,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BuildAction:
     """
     This meta-class represents the ability to specify a build action.
@@ -122,14 +122,13 @@ class BuildAction:
     class Meta:
         name = "BUILD-ACTION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | BuildAction.ShortNameFragments = field(
         default=None,
@@ -300,7 +299,7 @@ class BuildAction:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -311,7 +310,7 @@ class BuildAction:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -322,7 +321,7 @@ class BuildAction:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -351,7 +350,7 @@ class BuildAction:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DeliveryArtifacts:
         autosar_engineering_object: list[AutosarEngineeringObject] = field(
             default_factory=list,
@@ -362,7 +361,7 @@ class BuildAction:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PredecessorActionRefs:
         predecessor_action_ref: list[
             BuildAction.PredecessorActionRefs.PredecessorActionRef
@@ -375,18 +374,17 @@ class BuildAction:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PredecessorActionRef(Ref):
-            dest: None | BuildActionSubtypesEnum = field(
-                default=None,
+            dest: BuildActionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FollowUpActionRefs:
         follow_up_action_ref: list[
             BuildAction.FollowUpActionRefs.FollowUpActionRef
@@ -399,18 +397,17 @@ class BuildAction:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FollowUpActionRef(Ref):
-            dest: None | BuildActionSubtypesEnum = field(
-                default=None,
+            dest: BuildActionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CreatedDatas:
         build_action_io_element: list[BuildActionIoElement] = field(
             default_factory=list,
@@ -421,7 +418,7 @@ class BuildAction:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InputDatas:
         build_action_io_element: list[BuildActionIoElement] = field(
             default_factory=list,
@@ -432,7 +429,7 @@ class BuildAction:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModifiedDatas:
         build_action_io_element: list[BuildActionIoElement] = field(
             default_factory=list,
@@ -443,13 +440,12 @@ class BuildAction:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredEnvironmentRef(Ref):
-        dest: None | BuildActionEnvironmentSubtypesEnum = field(
-            default=None,
+        dest: BuildActionEnvironmentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

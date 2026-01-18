@@ -8,7 +8,7 @@ from .usage_parameter_version_structure import UsageParameterVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoundTripVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "RoundTrip_VersionStructure"

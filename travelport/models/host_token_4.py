@@ -7,7 +7,7 @@ from travelport.models.type_element_status_5 import TypeElementStatus5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HostToken4:
     """
     This is a host token.

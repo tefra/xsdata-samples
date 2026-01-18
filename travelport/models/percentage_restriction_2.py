@@ -7,7 +7,7 @@ from travelport.models.type_float_restriction_2 import TypeFloatRestriction2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PercentageRestriction2(TypeFloatRestriction2):
     """
     Restrictions on profile data for fields with a data type of percentage.

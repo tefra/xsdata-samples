@@ -8,7 +8,7 @@ from .positive_integer import PositiveInteger
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BusMirrorChannel:
     """
     This element assigns a busMirrorNetworkId to the referenced channel.
@@ -65,7 +65,7 @@ class BusMirrorChannel:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Channels:
         physical_channel_ref_conditional: list[
             PhysicalChannelRefConditional

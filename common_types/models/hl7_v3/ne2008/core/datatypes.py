@@ -26,7 +26,7 @@ from .voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BxitCd(Cd):
     """
     :ivar qty: The quantity in which the bag item occurs in its
@@ -44,7 +44,7 @@ class BxitCd(Cd):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GlistPq(AnyType):
     """
     :ivar head: This is the start-value of the generated list.
@@ -69,21 +69,19 @@ class GlistPq(AnyType):
     class Meta:
         name = "GLIST_PQ"
 
-    head: None | Pq = field(
-        default=None,
+    head: Pq = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    increment: None | Pq = field(
-        default=None,
+    increment: Pq = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     period: None | int = field(
         default=None,
@@ -99,7 +97,7 @@ class GlistPq(AnyType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GlistTs(AnyType):
     """
     :ivar head: This is the start-value of the generated list.
@@ -124,21 +122,19 @@ class GlistTs(AnyType):
     class Meta:
         name = "GLIST_TS"
 
-    head: None | Ts = field(
-        default=None,
+    head: Ts = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    increment: None | Pq = field(
-        default=None,
+    increment: Pq = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     period: None | int = field(
         default=None,
@@ -154,7 +150,7 @@ class GlistTs(AnyType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HxitCe(Ce):
     """
     :ivar valid_time: The time interval during which the given
@@ -176,7 +172,7 @@ class HxitCe(Ce):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HxitPq(Pq):
     """
     :ivar valid_time: The time interval during which the given
@@ -198,7 +194,7 @@ class HxitPq(Pq):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvxbInt(Int):
     """
     :ivar inclusive: Specifies whether the limit is included in the
@@ -218,7 +214,7 @@ class IvxbInt(Int):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvxbMo(Mo):
     """
     :ivar inclusive: Specifies whether the limit is included in the
@@ -238,7 +234,7 @@ class IvxbMo(Mo):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvxbPq(Pq):
     """
     :ivar inclusive: Specifies whether the limit is included in the
@@ -258,7 +254,7 @@ class IvxbPq(Pq):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvxbReal(Real):
     """
     :ivar inclusive: Specifies whether the limit is included in the
@@ -278,7 +274,7 @@ class IvxbReal(Real):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PivlTs(SxcmTs):
     """
     Note: because this type is defined as an extension of SXCM_T, all of
@@ -342,7 +338,7 @@ class PivlTs(SxcmTs):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PpdPq(Pq):
     """
     :ivar standard_deviation: The primary measure of
@@ -379,7 +375,7 @@ class PpdPq(Pq):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PpdTs(Ts):
     """
     :ivar standard_deviation: The primary measure of
@@ -416,7 +412,7 @@ class PpdTs(Ts):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RtoMoPq(Qty):
     """
     :ivar numerator: The quantity that is being divided in the ratio.
@@ -429,25 +425,23 @@ class RtoMoPq(Qty):
     class Meta:
         name = "RTO_MO_PQ"
 
-    numerator: None | Mo = field(
-        default=None,
+    numerator: Mo = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    denominator: None | Pq = field(
-        default=None,
+    denominator: Pq = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RtoPqPq(Qty):
     """
     :ivar numerator: The quantity that is being divided in the ratio.
@@ -460,25 +454,23 @@ class RtoPqPq(Qty):
     class Meta:
         name = "RTO_PQ_PQ"
 
-    numerator: None | Pq = field(
-        default=None,
+    numerator: Pq = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    denominator: None | Pq = field(
-        default=None,
+    denominator: Pq = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SlistPq(AnyType):
     """
     :ivar origin: The origin of the list item value scale, i.e., the
@@ -493,21 +485,19 @@ class SlistPq(AnyType):
     class Meta:
         name = "SLIST_PQ"
 
-    origin: None | Pq = field(
-        default=None,
+    origin: Pq = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    scale: None | Pq = field(
-        default=None,
+    scale: Pq = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     digits: list[int] = field(
         default_factory=list,
@@ -519,7 +509,7 @@ class SlistPq(AnyType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SlistTs(AnyType):
     """
     :ivar origin: The origin of the list item value scale, i.e., the
@@ -534,21 +524,19 @@ class SlistTs(AnyType):
     class Meta:
         name = "SLIST_TS"
 
-    origin: None | Ts = field(
-        default=None,
+    origin: Ts = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    scale: None | Pq = field(
-        default=None,
+    scale: Pq = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     digits: list[int] = field(
         default_factory=list,
@@ -560,7 +548,7 @@ class SlistTs(AnyType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SxcmCd(Cd):
     """
     :ivar operator: A code specifying whether the set component is
@@ -581,7 +569,7 @@ class SxcmCd(Cd):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SxcmInt(Int):
     """
     :ivar operator: A code specifying whether the set component is
@@ -602,7 +590,7 @@ class SxcmInt(Int):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SxcmMo(Mo):
     """
     :ivar operator: A code specifying whether the set component is
@@ -623,7 +611,7 @@ class SxcmMo(Mo):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SxcmPq(Pq):
     """
     :ivar operator: A code specifying whether the set component is
@@ -644,7 +632,7 @@ class SxcmPq(Pq):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SxcmReal(Real):
     """
     :ivar operator: A code specifying whether the set component is
@@ -665,7 +653,7 @@ class SxcmReal(Real):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SxprTs(SxcmTs):
     class Meta:
         name = "SXPR_TS"
@@ -680,7 +668,7 @@ class SxprTs(SxcmTs):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UvpTs(Ts):
     """
     :ivar probability: The probability assigned to the value, a decimal
@@ -700,7 +688,7 @@ class UvpTs(Ts):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvlInt(SxcmInt):
     """
     :ivar low: The low limit of the interval.
@@ -751,7 +739,7 @@ class IvlInt(SxcmInt):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvlMo(SxcmMo):
     """
     :ivar low: The low limit of the interval.
@@ -802,7 +790,7 @@ class IvlMo(SxcmMo):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvlPq(SxcmPq):
     """
     :ivar low: The low limit of the interval.
@@ -853,7 +841,7 @@ class IvlPq(SxcmPq):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvlReal(SxcmReal):
     """
     :ivar low: The low limit of the interval.
@@ -904,7 +892,7 @@ class IvlReal(SxcmReal):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvxbPpdPq(PpdPq):
     """
     :ivar inclusive: Specifies whether the limit is included in the
@@ -924,7 +912,7 @@ class IvxbPpdPq(PpdPq):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvxbPpdTs(PpdTs):
     """
     :ivar inclusive: Specifies whether the limit is included in the
@@ -944,7 +932,7 @@ class IvxbPpdTs(PpdTs):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SxcmPpdPq(PpdPq):
     """
     :ivar operator: A code specifying whether the set component is
@@ -965,7 +953,7 @@ class SxcmPpdPq(PpdPq):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SxcmPpdTs(PpdTs):
     """
     :ivar operator: A code specifying whether the set component is
@@ -986,7 +974,7 @@ class SxcmPpdTs(PpdTs):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BxitIvlPq(IvlPq):
     """
     :ivar qty: The quantity in which the bag item occurs in its
@@ -1004,7 +992,7 @@ class BxitIvlPq(IvlPq):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EivlTs(SxcmTs):
     """
     Note: because this type is defined as an extension of SXCM_T, all of
@@ -1045,7 +1033,7 @@ class EivlTs(SxcmTs):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvlPpdPq(SxcmPpdPq):
     """
     :ivar low: The low limit of the interval.
@@ -1096,7 +1084,7 @@ class IvlPpdPq(SxcmPpdPq):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvlPpdTs(SxcmPpdTs):
     """
     :ivar low: The low limit of the interval.
@@ -1147,7 +1135,7 @@ class IvlPpdTs(SxcmPpdTs):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EivlPpdTs(SxcmPpdTs):
     """
     Note: because this type is defined as an extension of SXCM_T, all of
@@ -1188,7 +1176,7 @@ class EivlPpdTs(SxcmPpdTs):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PivlPpdTs(SxcmPpdTs):
     """
     Note: because this type is defined as an extension of SXCM_T, all of

@@ -5,15 +5,14 @@ from dataclasses import dataclass, field
 from tpdb.models.automatonstuff import Automatonstuff
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Automaton:
     class Meta:
         name = "automaton"
 
-    automatonstuff: None | Automatonstuff = field(
-        default=None,
+    automatonstuff: Automatonstuff = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )

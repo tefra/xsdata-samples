@@ -12,21 +12,20 @@ from .journey_timing_versioned_child_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefaultDeadRunRunTimeVersionedChildStructure(
     JourneyTimingVersionedChildStructure
 ):
     class Meta:
         name = "DefaultDeadRunRunTime_VersionedChildStructure"
 
-    run_time: None | XmlDuration = field(
-        default=None,
+    run_time: XmlDuration = field(
         metadata={
             "name": "RunTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     dead_run_ref: None | DeadRunRef = field(
         default=None,

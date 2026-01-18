@@ -7,7 +7,7 @@ from .show_resource_category_enum_simple import ShowResourceCategoryEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShowResourceCategoryEnum:
     """
     This enumerator specifies if the category of the reference target shall
@@ -29,11 +29,10 @@ class ShowResourceCategoryEnum:
     class Meta:
         name = "SHOW-RESOURCE-CATEGORY-ENUM"
 
-    value: None | ShowResourceCategoryEnumSimple = field(
-        default=None,
+    value: ShowResourceCategoryEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

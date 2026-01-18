@@ -8,7 +8,7 @@ from travelport.models.vendor import Vendor
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehiclePickupLocation:
     """
     A container for Vehicle Location ,Vendor and Vehicle Modifier.
@@ -25,13 +25,12 @@ class VehiclePickupLocation:
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    vendor: None | Vendor = field(
-        default=None,
+    vendor: Vendor = field(
         metadata={
             "name": "Vendor",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     vehicle_modifier: list[VehicleModifier] = field(
         default_factory=list,
@@ -41,13 +40,12 @@ class VehiclePickupLocation:
             "max_occurs": 999,
         },
     )
-    pick_up_location: None | str = field(
-        default=None,
+    pick_up_location: str = field(
         metadata={
             "name": "PickUpLocation",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )

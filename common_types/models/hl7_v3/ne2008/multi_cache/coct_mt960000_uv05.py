@@ -28,7 +28,7 @@ from .coct_mt090303_uv01 import CoctMt090303Uv01AssignedDevice
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt960000Uv05Author:
     class Meta:
         name = "COCT_MT960000UV05.Author"
@@ -58,13 +58,12 @@ class CoctMt960000Uv05Author:
         },
     )
     assigned_person: None | CoctMt090108UvAssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -89,7 +88,7 @@ class CoctMt960000Uv05Author:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt960000Uv05Device1:
     class Meta:
         name = "COCT_MT960000UV05.Device1"
@@ -119,13 +118,12 @@ class CoctMt960000Uv05Device1:
         },
     )
     assigned_device: None | CoctMt090303Uv01AssignedDevice = field(
-        default=None,
         metadata={
             "name": "assignedDevice",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -134,13 +132,12 @@ class CoctMt960000Uv05Device1:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetDevice = field(
-        default=None,
+    type_code: ParticipationTargetDevice = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.ON,
@@ -151,7 +148,7 @@ class CoctMt960000Uv05Device1:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt960000Uv05Device2:
     class Meta:
         name = "COCT_MT960000UV05.Device2"
@@ -181,13 +178,12 @@ class CoctMt960000Uv05Device2:
         },
     )
     assigned_device: None | CoctMt090303Uv01AssignedDevice = field(
-        default=None,
         metadata={
             "name": "assignedDevice",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -196,13 +192,12 @@ class CoctMt960000Uv05Device2:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetDevice = field(
-        default=None,
+    type_code: ParticipationTargetDevice = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.ON,
@@ -213,7 +208,7 @@ class CoctMt960000Uv05Device2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt960000Uv05PositionAccuracy:
     class Meta:
         name = "COCT_MT960000UV05.PositionAccuracy"
@@ -283,7 +278,7 @@ class CoctMt960000Uv05PositionAccuracy:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt960000Uv05Component2:
     class Meta:
         name = "COCT_MT960000UV05.Component2"
@@ -313,13 +308,12 @@ class CoctMt960000Uv05Component2:
         },
     )
     position_accuracy: None | CoctMt960000Uv05PositionAccuracy = field(
-        default=None,
         metadata={
             "name": "positionAccuracy",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -328,13 +322,12 @@ class CoctMt960000Uv05Component2:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipHasComponent = field(
-        default=None,
+    type_code: ActRelationshipHasComponent = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AP,
@@ -353,7 +346,7 @@ class CoctMt960000Uv05Component2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt960000Uv05PositionCoordinate:
     class Meta:
         name = "COCT_MT960000UV05.PositionCoordinate"
@@ -382,13 +375,12 @@ class CoctMt960000Uv05PositionCoordinate:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Ce = field(
-        default=None,
+    code: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     text: None | EdExplicit = field(
         default=None,
@@ -397,13 +389,12 @@ class CoctMt960000Uv05PositionCoordinate:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | AnyType = field(
-        default=None,
+    value: AnyType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     method_code: None | Ce = field(
         default=None,
@@ -448,7 +439,7 @@ class CoctMt960000Uv05PositionCoordinate:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt960000Uv05Component1:
     class Meta:
         name = "COCT_MT960000UV05.Component1"
@@ -486,13 +477,12 @@ class CoctMt960000Uv05Component1:
         },
     )
     position_coordinate: None | CoctMt960000Uv05PositionCoordinate = field(
-        default=None,
         metadata={
             "name": "positionCoordinate",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -501,13 +491,12 @@ class CoctMt960000Uv05Component1:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipHasComponent = field(
-        default=None,
+    type_code: ActRelationshipHasComponent = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
@@ -526,7 +515,7 @@ class CoctMt960000Uv05Component1:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt960000Uv05Position:
     class Meta:
         name = "COCT_MT960000UV05.Position"
@@ -562,13 +551,12 @@ class CoctMt960000Uv05Position:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Ce = field(
-        default=None,
+    code: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     text: None | EdExplicit = field(
         default=None,
@@ -639,13 +627,12 @@ class CoctMt960000Uv05Position:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassPosition = field(
-        default=None,
+    class_code: ActClassPosition = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,

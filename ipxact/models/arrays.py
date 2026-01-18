@@ -8,7 +8,7 @@ from ipxact.models.right import Right
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Arrays:
     """
     :ivar array: Specific left and right array bounds.
@@ -26,21 +26,19 @@ class Arrays:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Array:
-        left: None | Left = field(
-            default=None,
+        left: Left = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
-        right: None | Right = field(
-            default=None,
+        right: Right = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         array_id: None | str = field(
             default=None,

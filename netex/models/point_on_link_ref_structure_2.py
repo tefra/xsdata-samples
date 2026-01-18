@@ -7,7 +7,7 @@ from .point_ref_structure import PointRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointOnLinkRefStructure2(PointRefStructure):
     class Meta:
         name = "PointOnLinkRefStructure_"

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareRuleShortRef:
     """
     A reference to an Short Text Rule in a Shared List.
@@ -14,11 +14,10 @@ class FareRuleShortRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

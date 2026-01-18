@@ -16,7 +16,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucInstanceReferenceValue:
     """
     InstanceReference representation in the ECU Configuration.
@@ -105,18 +105,17 @@ class EcucInstanceReferenceValue:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DefinitionRef(Ref):
-        dest: None | EcucAbstractReferenceDefSubtypesEnum = field(
-            default=None,
+        dest: EcucAbstractReferenceDefSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

@@ -7,7 +7,7 @@ from .group_of_stop_places_structure import GroupOfStopPlacesStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupOfStopPlaces(GroupOfStopPlacesStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

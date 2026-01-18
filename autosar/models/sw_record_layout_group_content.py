@@ -10,7 +10,7 @@ from .sw_record_layout_v import SwRecordLayoutV
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwRecordLayoutGroupContent:
     """
     This is the contents of a RecordLayout which is inserted for every
@@ -90,13 +90,12 @@ class SwRecordLayoutGroupContent:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwRecordLayoutRef(Ref):
-        dest: None | SwRecordLayoutSubtypesEnum = field(
-            default=None,
+        dest: SwRecordLayoutSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

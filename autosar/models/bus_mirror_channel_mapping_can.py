@@ -23,7 +23,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BusMirrorChannelMappingCan:
     """
     This element defines the bus mirroring between a CAN or LIN
@@ -112,14 +112,13 @@ class BusMirrorChannelMappingCan:
     class Meta:
         name = "BUS-MIRROR-CHANNEL-MAPPING-CAN"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | BusMirrorChannelMappingCan.ShortNameFragments
@@ -282,7 +281,7 @@ class BusMirrorChannelMappingCan:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -293,7 +292,7 @@ class BusMirrorChannelMappingCan:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -304,7 +303,7 @@ class BusMirrorChannelMappingCan:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetPduTriggerings:
         pdu_triggering_ref_conditional: list[PduTriggeringRefConditional] = (
             field(
@@ -317,7 +316,7 @@ class BusMirrorChannelMappingCan:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CanIdRangeMappings:
         bus_mirror_can_id_range_mapping: list[BusMirrorCanIdRangeMapping] = (
             field(
@@ -330,7 +329,7 @@ class BusMirrorChannelMappingCan:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CanIdToCanIdMappings:
         bus_mirror_can_id_to_can_id_mapping: list[
             BusMirrorCanIdToCanIdMapping
@@ -343,7 +342,7 @@ class BusMirrorChannelMappingCan:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LinPidToCanIdMappings:
         bus_mirror_lin_pid_to_can_id_mapping: list[
             BusMirrorLinPidToCanIdMapping

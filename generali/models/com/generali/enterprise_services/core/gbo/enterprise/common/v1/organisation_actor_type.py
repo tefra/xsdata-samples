@@ -17,7 +17,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganisationActorType(BaseComponentType):
     """
     <description xmlns="">The definition of an Organisation parties basic
@@ -34,17 +34,15 @@ class OrganisationActorType(BaseComponentType):
     :ivar national_id:
     """
 
-    legal_name: None | TextType = field(
-        default=None,
+    legal_name: TextType = field(
         metadata={
             "name": "LegalName",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
-        },
+        }
     )
-    gunsnumber: None | str = field(
-        default=None,
+    gunsnumber: str = field(
         metadata={
             "name": "GUNSNumber",
             "type": "Element",
@@ -52,10 +50,9 @@ class OrganisationActorType(BaseComponentType):
             "required": True,
             "length": 10,
             "pattern": r"G([0-9]{9})",
-        },
+        }
     )
-    dunsnumber: None | str = field(
-        default=None,
+    dunsnumber: str = field(
         metadata={
             "name": "DUNSNumber",
             "type": "Element",
@@ -63,14 +60,13 @@ class OrganisationActorType(BaseComponentType):
             "required": True,
             "length": 9,
             "pattern": r"([0-9]{9})",
-        },
+        }
     )
-    national_id: None | Idtype = field(
-        default=None,
+    national_id: Idtype = field(
         metadata={
             "name": "NationalId",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
-        },
+        }
     )

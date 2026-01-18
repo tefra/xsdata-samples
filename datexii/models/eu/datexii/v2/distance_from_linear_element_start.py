@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DistanceFromLinearElementStart(DistanceAlongLinearElement):
     """
     Distance of a point along a linear element measured from the start node
@@ -21,14 +21,13 @@ class DistanceFromLinearElementStart(DistanceAlongLinearElement):
     :ivar distance_from_linear_element_start_extension:
     """
 
-    distance_along: None | float = field(
-        default=None,
+    distance_along: float = field(
         metadata={
             "name": "distanceAlong",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     distance_from_linear_element_start_extension: None | ExtensionType = field(
         default=None,

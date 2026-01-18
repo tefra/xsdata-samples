@@ -20,7 +20,7 @@ from ..core.voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt710000Uv01LocatedEntityHasParts:
     class Meta:
         name = "COCT_MT710000UV01.LocatedEntityHasParts"
@@ -73,17 +73,16 @@ class CoctMt710000Uv01LocatedEntityHasParts:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassLocatedEntity = field(
-        default=None,
+    class_code: RoleClassLocatedEntity = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt710000Uv01LocatedEntityPartOf:
     class Meta:
         name = "COCT_MT710000UV01.LocatedEntityPartOf"
@@ -135,17 +134,16 @@ class CoctMt710000Uv01LocatedEntityPartOf:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassLocatedEntity = field(
-        default=None,
+    class_code: RoleClassLocatedEntity = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt710000Uv01Place:
     class Meta:
         name = "COCT_MT710000UV01.Place"
@@ -255,13 +253,12 @@ class CoctMt710000Uv01Place:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassPlace = field(
-        default=None,
+    class_code: EntityClassPlace = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,

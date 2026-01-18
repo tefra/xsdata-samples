@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightInfoCriteria:
     """
     Parameters
@@ -34,31 +34,28 @@ class FlightInfoCriteria:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
-    flight_number: None | str = field(
-        default=None,
+    flight_number: str = field(
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        },
+        }
     )
     origin: None | str = field(
         default=None,
@@ -78,13 +75,12 @@ class FlightInfoCriteria:
             "white_space": "collapse",
         },
     )
-    departure_date: None | XmlDate = field(
-        default=None,
+    departure_date: XmlDate = field(
         metadata={
             "name": "DepartureDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     class_of_service: None | str = field(
         default=None,

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeStartEndTime:
     """
     Used to specify earliest and latest pickup/dropoff times for a vehicle.
@@ -28,13 +28,12 @@ class TypeStartEndTime:
     class Meta:
         name = "typeStartEndTime"
 
-    time: None | str = field(
-        default=None,
+    time: str = field(
         metadata={
             "name": "Time",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     requirement_passed: None | bool = field(
         default=None,

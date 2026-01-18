@@ -10,7 +10,7 @@ from travelport.models.type_billing_details_name import TypeBillingDetailsName
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BillingDetailItem:
     """
     The Billing Details Information.
@@ -32,37 +32,33 @@ class BillingDetailItem:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    name: None | TypeBillingDetailsName = field(
-        default=None,
+    name: TypeBillingDetailsName = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    data_type: None | TypeBillingDetailsDataType = field(
-        default=None,
+    data_type: TypeBillingDetailsDataType = field(
         metadata={
             "name": "DataType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    min_length: None | str = field(
-        default=None,
+    min_length: str = field(
         metadata={
             "name": "MinLength",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    max_length: None | str = field(
-        default=None,
+    max_length: str = field(
         metadata={
             "name": "MaxLength",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     value: None | str = field(
         default=None,

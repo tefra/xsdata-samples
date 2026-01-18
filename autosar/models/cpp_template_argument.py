@@ -13,7 +13,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CppTemplateArgument:
     """
     This meta-class has the ability to define properties for template
@@ -96,24 +96,22 @@ class CppTemplateArgument:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AllocatorRef(Ref):
-        dest: None | AllocatorSubtypesEnum = field(
-            default=None,
+        dest: AllocatorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TemplateTypeRef(Ref):
-        dest: None | CppImplementationDataTypeSubtypesEnum = field(
-            default=None,
+        dest: CppImplementationDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

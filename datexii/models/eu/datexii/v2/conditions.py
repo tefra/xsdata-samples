@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.traffic_element import TrafficElement
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Conditions(TrafficElement):
     """
     Any conditions which have the potential to degrade normal driving

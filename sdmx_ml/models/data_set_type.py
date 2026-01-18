@@ -17,7 +17,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataSetType(AnnotableType):
     """
     <ns1:p
@@ -142,14 +142,13 @@ class DataSetType(AnnotableType):
             "namespace": "",
         },
     )
-    structure_ref: None | str = field(
-        default=None,
+    structure_ref: str = field(
         metadata={
             "name": "structureRef",
             "type": "Attribute",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
             "required": True,
-        },
+        }
     )
     set_id: None | str = field(
         default=None,

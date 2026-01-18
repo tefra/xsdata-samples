@@ -38,7 +38,7 @@ from .unit_group_subtypes_enum import UnitGroupSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompositionSwComponentType:
     """
     A CompositionSwComponentType aggregates SwComponentPrototypes (that in
@@ -193,14 +193,13 @@ class CompositionSwComponentType:
     class Meta:
         name = "COMPOSITION-SW-COMPONENT-TYPE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | CompositionSwComponentType.ShortNameFragments
@@ -399,7 +398,7 @@ class CompositionSwComponentType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -410,7 +409,7 @@ class CompositionSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -421,7 +420,7 @@ class CompositionSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -450,7 +449,7 @@ class CompositionSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwComponentDocumentations:
         sw_component_documentation: list[SwComponentDocumentation] = field(
             default_factory=list,
@@ -461,7 +460,7 @@ class CompositionSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConsistencyNeedss:
         consistency_needs: list[ConsistencyNeeds] = field(
             default_factory=list,
@@ -472,7 +471,7 @@ class CompositionSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ports:
         p_port_prototype: list[PPortPrototype] = field(
             default_factory=list,
@@ -499,7 +498,7 @@ class CompositionSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortGroups:
         port_group: list[PortGroup] = field(
             default_factory=list,
@@ -510,7 +509,7 @@ class CompositionSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnitGroupRefs:
         unit_group_ref: list[
             CompositionSwComponentType.UnitGroupRefs.UnitGroupRef
@@ -523,18 +522,17 @@ class CompositionSwComponentType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UnitGroupRef(Ref):
-            dest: None | UnitGroupSubtypesEnum = field(
-                default=None,
+            dest: UnitGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Components:
         sw_component_prototype: list[SwComponentPrototype] = field(
             default_factory=list,
@@ -545,7 +543,7 @@ class CompositionSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Connectors:
         assembly_sw_connector: list[AssemblySwConnector] = field(
             default_factory=list,
@@ -572,7 +570,7 @@ class CompositionSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConstantValueMappingRefs:
         constant_value_mapping_ref: list[
             CompositionSwComponentType.ConstantValueMappingRefs.ConstantValueMappingRef
@@ -585,18 +583,17 @@ class CompositionSwComponentType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ConstantValueMappingRef(Ref):
-            dest: None | ConstantSpecificationMappingSetSubtypesEnum = field(
-                default=None,
+            dest: ConstantSpecificationMappingSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataTypeMappingRefs:
         data_type_mapping_ref: list[
             CompositionSwComponentType.DataTypeMappingRefs.DataTypeMappingRef
@@ -609,18 +606,17 @@ class CompositionSwComponentType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DataTypeMappingRef(Ref):
-            dest: None | DataTypeMappingSetSubtypesEnum = field(
-                default=None,
+            dest: DataTypeMappingSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InstantiationRteEventPropss:
         instantiation_timing_event_props: list[
             InstantiationTimingEventProps

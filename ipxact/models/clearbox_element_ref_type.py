@@ -8,7 +8,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClearboxElementRefType:
     """
     Reference to a clearboxElement within a view.
@@ -44,12 +44,11 @@ class ClearboxElementRefType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,

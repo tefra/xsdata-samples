@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ViewMap:
     """
     The ViewMap allows to relate any number of elements on the "first" side
@@ -100,14 +100,13 @@ class ViewMap:
     class Meta:
         name = "VIEW-MAP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ViewMap.ShortNameFragments = field(
         default=None,
@@ -232,7 +231,7 @@ class ViewMap:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -243,7 +242,7 @@ class ViewMap:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -254,7 +253,7 @@ class ViewMap:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FirstElementRefs:
         first_element_ref: list[ViewMap.FirstElementRefs.FirstElementRef] = (
             field(
@@ -267,18 +266,17 @@ class ViewMap:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FirstElementRef(Ref):
-            dest: None | ReferrableSubtypesEnum = field(
-                default=None,
+            dest: ReferrableSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecondElementRefs:
         second_element_ref: list[
             ViewMap.SecondElementRefs.SecondElementRef
@@ -291,18 +289,17 @@ class ViewMap:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SecondElementRef(Ref):
-            dest: None | ReferrableSubtypesEnum = field(
-                default=None,
+            dest: ReferrableSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FirstElementInstanceIrefs:
         first_element_instance_iref: list[AnyInstanceRef] = field(
             default_factory=list,
@@ -313,7 +310,7 @@ class ViewMap:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecondElementInstanceIrefs:
         second_element_instance_iref: list[AnyInstanceRef] = field(
             default_factory=list,

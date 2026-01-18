@@ -10,7 +10,7 @@ from travelport.models.type_key_element_2 import TypeKeyElement2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProprietaryData2(TypeKeyElement2):
     """
     ProprietaryData for a Traveler which can be overridden for immediate
@@ -31,29 +31,26 @@ class ProprietaryData2(TypeKeyElement2):
         name = "ProprietaryData"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    proprietary_data_type: None | ProprietaryDataProprietaryDataType2 = field(
-        default=None,
+    proprietary_data_type: ProprietaryDataProprietaryDataType2 = field(
         metadata={
             "name": "ProprietaryDataType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    value: None | str = field(
-        default=None,
+    value: str = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        },
+        }
     )
-    owner_id: None | int = field(
-        default=None,
+    owner_id: int = field(
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -18,7 +18,7 @@ from .sw_systemconst_value import SwSystemconstValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwSystemconstantValueSet:
     """
     This meta-class represents the ability to specify a set of system
@@ -85,14 +85,13 @@ class SwSystemconstantValueSet:
     class Meta:
         name = "SW-SYSTEMCONSTANT-VALUE-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SwSystemconstantValueSet.ShortNameFragments
@@ -193,7 +192,7 @@ class SwSystemconstantValueSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -204,7 +203,7 @@ class SwSystemconstantValueSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -215,7 +214,7 @@ class SwSystemconstantValueSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwSystemconstantValues:
         sw_systemconst_value: list[SwSystemconstValue] = field(
             default_factory=list,

@@ -24,7 +24,7 @@ from .coct_mt150003_uv03 import CoctMt150003Uv03Organization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090003Uv01Device:
     class Meta:
         name = "COCT_MT090003UV01.Device"
@@ -83,13 +83,12 @@ class CoctMt090003Uv01Device:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassDevice = field(
-        default=None,
+    class_code: EntityClassDevice = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -102,7 +101,7 @@ class CoctMt090003Uv01Device:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090003Uv01Organization:
     class Meta:
         name = "COCT_MT090003UV01.Organization"
@@ -146,13 +145,12 @@ class CoctMt090003Uv01Organization:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassOrganization = field(
-        default=None,
+    class_code: EntityClassOrganization = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -165,7 +163,7 @@ class CoctMt090003Uv01Organization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090003Uv01Person:
     class Meta:
         name = "COCT_MT090003UV01.Person"
@@ -229,7 +227,7 @@ class CoctMt090003Uv01Person:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090003Uv01AssignedEntity:
     class Meta:
         name = "COCT_MT090003UV01.AssignedEntity"
@@ -330,11 +328,10 @@ class CoctMt090003Uv01AssignedEntity:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassAssignedEntity = field(
-        default=None,
+    class_code: RoleClassAssignedEntity = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

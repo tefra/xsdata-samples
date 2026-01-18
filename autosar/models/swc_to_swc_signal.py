@@ -9,7 +9,7 @@ from .variable_data_prototype_in_system_instance_ref import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwcToSwcSignal:
     """
     The SwcToSwcSignal describes the information (data element) that is
@@ -63,7 +63,7 @@ class SwcToSwcSignal:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataElementIrefs:
         data_element_iref: list[VariableDataPrototypeInSystemInstanceRef] = (
             field(

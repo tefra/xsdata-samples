@@ -10,7 +10,7 @@ from sdmx_ml.models.obs_dimensions_code_type import ObsDimensionsCodeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class StructureSpecificDataStructureType(DataStructureTypeAbstract):
     """
     StructureSpecificDataStructureType defines the structural information
@@ -25,21 +25,19 @@ class StructureSpecificDataStructureType(DataStructureTypeAbstract):
     dimension or the flat data format is used.
     """
 
-    namespace: None | str = field(
-        default=None,
+    namespace: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    dimension_at_observation: None | str | ObsDimensionsCodeType = field(
-        default=None,
+    dimension_at_observation: str | ObsDimensionsCodeType = field(
         metadata={
             "name": "dimensionAtObservation",
             "type": "Attribute",
             "required": True,
             "pattern": r"[A-Za-z][A-Za-z0-9_\-]*",
-        },
+        }
     )
     explicit_measures: bool = field(
         default=False,

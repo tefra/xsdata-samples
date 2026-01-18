@@ -26,7 +26,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanTpConfig:
     """
     This element defines exactly one CAN TP Configuration.
@@ -110,14 +110,13 @@ class CanTpConfig:
     class Meta:
         name = "CAN-TP-CONFIG"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | CanTpConfig.ShortNameFragments = field(
         default=None,
@@ -256,7 +255,7 @@ class CanTpConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -267,7 +266,7 @@ class CanTpConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -278,18 +277,17 @@ class CanTpConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommunicationClusterRef(Ref):
-        dest: None | CommunicationClusterSubtypesEnum = field(
-            default=None,
+        dest: CommunicationClusterSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpAddresss:
         can_tp_address: list[CanTpAddress] = field(
             default_factory=list,
@@ -300,7 +298,7 @@ class CanTpConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpChannels:
         can_tp_channel: list[CanTpChannel] = field(
             default_factory=list,
@@ -311,7 +309,7 @@ class CanTpConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpConnections:
         can_tp_connection: list[CanTpConnection] = field(
             default_factory=list,
@@ -322,7 +320,7 @@ class CanTpConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpEcus:
         can_tp_ecu: list[CanTpEcu] = field(
             default_factory=list,
@@ -333,7 +331,7 @@ class CanTpConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpNodes:
         can_tp_node: list[CanTpNode] = field(
             default_factory=list,

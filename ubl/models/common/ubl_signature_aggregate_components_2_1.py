@@ -11,7 +11,7 @@ from ubl.models.common.ubl_xmldsig_core_schema_2_1 import Signature
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignatureInformationType:
     id: None | Id = field(
         default=None,
@@ -39,7 +39,7 @@ class SignatureInformationType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignatureInformation(SignatureInformationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"

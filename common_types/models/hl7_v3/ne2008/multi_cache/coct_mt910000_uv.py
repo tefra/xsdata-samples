@@ -40,7 +40,7 @@ from .coct_mt150003_uv03 import CoctMt150003Uv03Organization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt910000UvOtherIds:
     class Meta:
         name = "COCT_MT910000UV.OtherIDs"
@@ -110,25 +110,23 @@ class CoctMt910000UvOtherIds:
         },
     )
     class_code: (
-        None
-        | RoleClassMutualRelationship
+        RoleClassMutualRelationship
         | RoleClassPassive
         | str
         | RoleClassOntological
         | RoleClassPartitive
         | RoleClassRootValue
     ) = field(
-        default=None,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt910000UvSubjectPerson:
     class Meta:
         name = "COCT_MT910000UV.SubjectPerson"
@@ -157,13 +155,12 @@ class CoctMt910000UvSubjectPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     name: list[Pn] = field(
         default_factory=list,
@@ -199,7 +196,7 @@ class CoctMt910000UvSubjectPerson:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt910000UvEmployee:
     class Meta:
         name = "COCT_MT910000UV.Employee"
@@ -269,13 +266,12 @@ class CoctMt910000UvEmployee:
         },
     )
     employer_organization: None | CoctMt150003Uv03Organization = field(
-        default=None,
         metadata={
             "name": "employerOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -284,17 +280,16 @@ class CoctMt910000UvEmployee:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassEmployee = field(
-        default=None,
+    class_code: RoleClassEmployee = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt910000UvRelatedPerson:
     class Meta:
         name = "COCT_MT910000UV.RelatedPerson"
@@ -404,7 +399,7 @@ class CoctMt910000UvRelatedPerson:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt910000UvStudent:
     class Meta:
         name = "COCT_MT910000UV.Student"
@@ -465,13 +460,12 @@ class CoctMt910000UvStudent:
         },
     )
     school_organization: None | CoctMt150003Uv03Organization = field(
-        default=None,
         metadata={
             "name": "schoolOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -508,7 +502,7 @@ class CoctMt910000UvStudent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt910000UvCareGiver:
     class Meta:
         name = "COCT_MT910000UV.CareGiver"
@@ -568,13 +562,12 @@ class CoctMt910000UvCareGiver:
         },
     )
     care_giver_related_person: None | CoctMt910000UvRelatedPerson = field(
-        default=None,
         metadata={
             "name": "careGiverRelatedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     care_giver_scoper: None | CoctMt910000UvSubjectPerson = field(
         default=None,
@@ -620,7 +613,7 @@ class CoctMt910000UvCareGiver:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt910000UvPersonalRelationship:
     class Meta:
         name = "COCT_MT910000UV.PersonalRelationship"
@@ -656,13 +649,12 @@ class CoctMt910000UvPersonalRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Ce = field(
-        default=None,
+    code: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     status_code: None | Cs = field(
         default=None,
@@ -681,13 +673,12 @@ class CoctMt910000UvPersonalRelationship:
         },
     )
     relationship_holder: None | CoctMt910000UvRelatedPerson = field(
-        default=None,
         metadata={
             "name": "relationshipHolder",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     personal_relationship_with: None | CoctMt910000UvSubjectPerson = field(
         default=None,

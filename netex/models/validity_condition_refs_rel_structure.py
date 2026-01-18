@@ -12,7 +12,7 @@ from .validity_trigger_ref import ValidityTriggerRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidityConditionRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "validityConditionRefs_RelStructure"

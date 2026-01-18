@@ -38,7 +38,7 @@ from .tag_with_optional_value import TagWithOptionalValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequiredSomeipServiceInstance:
     """
     This meta-class represents the ability to describe the existence and
@@ -135,14 +135,13 @@ class RequiredSomeipServiceInstance:
     class Meta:
         name = "REQUIRED-SOMEIP-SERVICE-INSTANCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | RequiredSomeipServiceInstance.ShortNameFragments
@@ -349,7 +348,7 @@ class RequiredSomeipServiceInstance:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -360,7 +359,7 @@ class RequiredSomeipServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -371,7 +370,7 @@ class RequiredSomeipServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class E2EEventProtectionPropss:
         end_2_end_event_protection_props: list[End2EndEventProtectionProps] = (
             field(
@@ -384,7 +383,7 @@ class RequiredSomeipServiceInstance:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class E2EMethodProtectionPropss:
         end_2_end_method_protection_props: list[
             End2EndMethodProtectionProps
@@ -397,7 +396,7 @@ class RequiredSomeipServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecureComConfigs:
         service_interface_element_secure_com_config: list[
             ServiceInterfaceElementSecureComConfig
@@ -410,18 +409,17 @@ class RequiredSomeipServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInterfaceDeploymentRef(Ref):
-        dest: None | ServiceInterfaceDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceInterfaceDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlacklistedVersions:
         someip_service_version: list[SomeipServiceVersion] = field(
             default_factory=list,
@@ -432,7 +430,7 @@ class RequiredSomeipServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CapabilityRecords:
         tag_with_optional_value: list[TagWithOptionalValue] = field(
             default_factory=list,
@@ -443,7 +441,7 @@ class RequiredSomeipServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MethodRequestPropss:
         someip_method_props: list[SomeipMethodProps] = field(
             default_factory=list,
@@ -454,7 +452,7 @@ class RequiredSomeipServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredEventGroups:
         someip_required_event_group: list[SomeipRequiredEventGroup] = field(
             default_factory=list,
@@ -465,13 +463,12 @@ class RequiredSomeipServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SdClientConfigRef(Ref):
-        dest: None | SomeipSdClientServiceInstanceConfigSubtypesEnum = field(
-            default=None,
+        dest: SomeipSdClientServiceInstanceConfigSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

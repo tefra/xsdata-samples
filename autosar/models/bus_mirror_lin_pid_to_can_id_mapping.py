@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BusMirrorLinPidToCanIdMapping:
     """
     This element defines a rule for remapping a single LIN Frame.
@@ -67,13 +67,12 @@ class BusMirrorLinPidToCanIdMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SourceLinPidRef(Ref):
-        dest: None | LinFrameTriggeringSubtypesEnum = field(
-            default=None,
+        dest: LinFrameTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

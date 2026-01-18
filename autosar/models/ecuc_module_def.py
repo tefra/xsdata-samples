@@ -38,7 +38,7 @@ from .traceable_subtypes_enum import TraceableSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucModuleDef:
     """
     Used as the top-level element for configuration definition for Software
@@ -151,14 +151,13 @@ class EcucModuleDef:
     class Meta:
         name = "ECUC-MODULE-DEF"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EcucModuleDef.ShortNameFragments = field(
         default=None,
@@ -361,7 +360,7 @@ class EcucModuleDef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -372,7 +371,7 @@ class EcucModuleDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -383,7 +382,7 @@ class EcucModuleDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -412,18 +411,17 @@ class EcucModuleDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RelatedTraceItemRef(Ref):
-        dest: None | TraceableSubtypesEnum = field(
-            default=None,
+        dest: TraceableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucValidationConds:
         ecuc_validation_condition: list[EcucValidationCondition] = field(
             default_factory=list,
@@ -434,18 +432,17 @@ class EcucModuleDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RefinedModuleDefRef(Ref):
-        dest: None | EcucModuleDefSubtypesEnum = field(
-            default=None,
+        dest: EcucModuleDefSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SupportedConfigVariants:
         """
         :ivar supported_config_variant: Specifies which
@@ -466,7 +463,7 @@ class EcucModuleDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Containers:
         ecuc_choice_container_def: list[EcucChoiceContainerDef] = field(
             default_factory=list,

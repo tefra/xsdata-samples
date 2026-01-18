@@ -7,7 +7,7 @@ from travelport.models.rail_fare_note import RailFareNote
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailFareNoteList:
     """
     The shared object list of Notes.

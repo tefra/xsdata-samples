@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.niso.org/schemas/ali/1.0/"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FreeToRead:
     """
     <div> <h3>Free to Read (Niso Ali)</h3> </div>.

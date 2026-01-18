@@ -7,7 +7,7 @@ from ipxact.models.read_action_type import ReadActionType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReadAction:
     """
     A list of possible actions for a read to set the field after the read.
@@ -22,11 +22,10 @@ class ReadAction:
         name = "readAction"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: None | ReadActionType = field(
-        default=None,
+    value: ReadActionType = field(
         metadata={
             "required": True,
-        },
+        }
     )
     modify: None | str = field(
         default=None,

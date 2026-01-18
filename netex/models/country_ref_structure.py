@@ -7,7 +7,7 @@ from .iana_country_tld_enumeration import IanaCountryTldEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CountryRefStructure:
     value: str = field(
         default="",

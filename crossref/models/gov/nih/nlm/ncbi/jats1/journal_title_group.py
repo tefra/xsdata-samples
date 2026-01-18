@@ -16,7 +16,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.trans_title_group import (
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JournalTitleGroup:
     """
     <div> <h3>Journal Title Group</h3> </div>.

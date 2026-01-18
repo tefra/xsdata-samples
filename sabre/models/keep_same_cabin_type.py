@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class KeepSameCabinType:
     """
     Attributes:
@@ -13,11 +13,10 @@ class KeepSameCabinType:
             single shopping option belong to the requested cabin.
     """
 
-    enabled: None | bool = field(
-        default=None,
+    enabled: bool = field(
         metadata={
             "name": "Enabled",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

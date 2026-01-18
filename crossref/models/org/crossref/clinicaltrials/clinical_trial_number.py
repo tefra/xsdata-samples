@@ -9,7 +9,7 @@ from crossref.models.org.crossref.clinicaltrials.clinical_trial_number_type impo
 __NAMESPACE__ = "http://www.crossref.org/clinicaltrials.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClinicalTrialNumber:
     """
     :ivar registry: The clinical trial identifier related to the
@@ -23,15 +23,14 @@ class ClinicalTrialNumber:
         name = "clinical-trial-number"
         namespace = "http://www.crossref.org/clinicaltrials.xsd"
 
-    registry: None | str = field(
-        default=None,
+    registry: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
             "min_length": 12,
             "max_length": 200,
             "pattern": r"10.18810/[a-z-]+",
-        },
+        }
     )
     type_value: None | ClinicalTrialNumberType = field(
         default=None,

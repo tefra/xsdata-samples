@@ -9,7 +9,7 @@ from travelport.models.field_group_2 import FieldGroup2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileCreateFieldRsp2(BaseRsp5):
     """
     Response containing details of new fields and/or groups created.

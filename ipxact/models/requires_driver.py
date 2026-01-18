@@ -7,7 +7,7 @@ from ipxact.models.requires_driver_driver_type import RequiresDriverDriverType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequiresDriver:
     """
     Specifies if a port requires a driver.

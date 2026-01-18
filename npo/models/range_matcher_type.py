@@ -7,7 +7,7 @@ from npo.models.match import Match
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RangeMatcherType:
     class Meta:
         name = "rangeMatcherType"

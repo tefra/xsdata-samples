@@ -9,7 +9,7 @@ from travelport.models.type_stay_unit import TypeStayUnit
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeRestrictionLengthOfStay:
     """
     Length Of Stay Restriction ( e.g. 2 day minimum..).

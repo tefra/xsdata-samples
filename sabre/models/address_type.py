@@ -13,7 +13,7 @@ from sabre.models.street_nmbr_type import StreetNmbrType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddressType:
     """
     Attributes:

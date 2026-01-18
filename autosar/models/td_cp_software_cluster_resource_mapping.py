@@ -22,7 +22,7 @@ from .timing_description_subtypes_enum import TimingDescriptionSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdCpSoftwareClusterResourceMapping:
     """
     This is used to assign an unequivocal global resource identification to
@@ -91,14 +91,13 @@ class TdCpSoftwareClusterResourceMapping:
     class Meta:
         name = "TD-CP-SOFTWARE-CLUSTER-RESOURCE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | TdCpSoftwareClusterResourceMapping.ShortNameFragments
@@ -209,7 +208,7 @@ class TdCpSoftwareClusterResourceMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -220,7 +219,7 @@ class TdCpSoftwareClusterResourceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -231,24 +230,22 @@ class TdCpSoftwareClusterResourceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResourceRef(Ref):
-        dest: None | CpSoftwareClusterResourceSubtypesEnum = field(
-            default=None,
+        dest: CpSoftwareClusterResourceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingDescriptionRef(Ref):
-        dest: None | TimingDescriptionSubtypesEnum = field(
-            default=None,
+        dest: TimingDescriptionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

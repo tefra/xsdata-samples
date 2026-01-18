@@ -37,7 +37,7 @@ from .type_of_journey_pattern_ref import TypeOfJourneyPatternRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServicePatternVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "ServicePattern_VersionStructure"

@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NotifyProgramGbmrequestType(BaseGbmheaderType):
     """
     <description xmlns="">The definition of the message used to retrieve an
@@ -27,12 +27,11 @@ class NotifyProgramGbmrequestType(BaseGbmheaderType):
     class Meta:
         name = "NotifyProgramGBMRequestType"
 
-    program_gbo: None | ProgramGbotype = field(
-        default=None,
+    program_gbo: ProgramGbotype = field(
         metadata={
             "name": "ProgramGBO",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )

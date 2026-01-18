@@ -7,7 +7,7 @@ from .chapter_enum_break_simple import ChapterEnumBreakSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChapterEnumBreak:
     """
     This allows to specify the page break policy of a paginatable element.
@@ -28,11 +28,10 @@ class ChapterEnumBreak:
     class Meta:
         name = "CHAPTER-ENUM-BREAK"
 
-    value: None | ChapterEnumBreakSimple = field(
-        default=None,
+    value: ChapterEnumBreakSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

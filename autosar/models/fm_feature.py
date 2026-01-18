@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FmFeature:
     """
     A FMFeature describes an essential characteristic of a product.
@@ -106,14 +106,13 @@ class FmFeature:
     class Meta:
         name = "FM-FEATURE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | FmFeature.ShortNameFragments = field(
         default=None,
@@ -250,7 +249,7 @@ class FmFeature:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -261,7 +260,7 @@ class FmFeature:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -272,7 +271,7 @@ class FmFeature:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AttributeDefs:
         fm_attribute_def: list[FmAttributeDef] = field(
             default_factory=list,
@@ -283,7 +282,7 @@ class FmFeature:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Decompositions:
         fm_feature_decomposition: list[FmFeatureDecomposition] = field(
             default_factory=list,
@@ -294,7 +293,7 @@ class FmFeature:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Relations:
         fm_feature_relation: list[FmFeatureRelation] = field(
             default_factory=list,
@@ -305,7 +304,7 @@ class FmFeature:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Restrictions:
         fm_feature_restriction: list[FmFeatureRestriction] = field(
             default_factory=list,

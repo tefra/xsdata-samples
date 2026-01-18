@@ -9,7 +9,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.noisbn_reason import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Noisbn:
     """
     Identifies books or conference proceedings that have no ISBN assigned.
@@ -19,10 +19,9 @@ class Noisbn:
         name = "noisbn"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    reason: None | NoisbnReason = field(
-        default=None,
+    reason: NoisbnReason = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

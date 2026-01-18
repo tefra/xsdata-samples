@@ -9,7 +9,7 @@ from datexii.models.eu.datexii.v2.situation import Situation
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SituationPublication(PayloadPublication):
     """
     A publication containing zero or more traffic/travel situations.

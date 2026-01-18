@@ -13,7 +13,7 @@ from .nmtoken_string import NmtokenString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RptHook:
     """
     This meta class provide the ability to describe a rapid prototyping
@@ -105,7 +105,7 @@ class RptHook:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sdgs:
         sdg: list[Sdg] = field(
             default_factory=list,

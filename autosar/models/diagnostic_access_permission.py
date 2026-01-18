@@ -25,7 +25,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticAccessPermission:
     """
     This represents the specification of whether a given service can be
@@ -101,14 +101,13 @@ class DiagnosticAccessPermission:
     class Meta:
         name = "DIAGNOSTIC-ACCESS-PERMISSION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticAccessPermission.ShortNameFragments
@@ -229,7 +228,7 @@ class DiagnosticAccessPermission:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -240,7 +239,7 @@ class DiagnosticAccessPermission:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -251,7 +250,7 @@ class DiagnosticAccessPermission:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticSessionRefs:
         diagnostic_session_ref: list[
             DiagnosticAccessPermission.DiagnosticSessionRefs.DiagnosticSessionRef
@@ -264,29 +263,27 @@ class DiagnosticAccessPermission:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DiagnosticSessionRef(Ref):
-            dest: None | DiagnosticSessionSubtypesEnum = field(
-                default=None,
+            dest: DiagnosticSessionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EnvironmentalConditionRef(Ref):
-        dest: None | DiagnosticEnvironmentalConditionSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticEnvironmentalConditionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecurityLevelRefs:
         security_level_ref: list[
             DiagnosticAccessPermission.SecurityLevelRefs.SecurityLevelRef
@@ -299,13 +296,12 @@ class DiagnosticAccessPermission:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SecurityLevelRef(Ref):
-            dest: None | DiagnosticSecurityLevelSubtypesEnum = field(
-                default=None,
+            dest: DiagnosticSecurityLevelSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

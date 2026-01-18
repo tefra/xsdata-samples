@@ -12,7 +12,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.event_c
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseGbmeventType(BaseGbmtype):
     """
     <description xmlns="">The base definition of all business events and
@@ -29,13 +29,12 @@ class BaseGbmeventType(BaseGbmtype):
     class Meta:
         name = "BaseGBMEventType"
 
-    event_code: None | EventCodeType = field(
-        default=None,
+    event_code: EventCodeType = field(
         metadata={
             "name": "eventCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     business_event_code: None | str = field(
         default=None,

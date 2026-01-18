@@ -7,7 +7,7 @@ from sdmx_ml.models.dimension_type import DimensionType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Dimension(DimensionType):
     """
     Dimension describes the structure of a dimension, which is defined as a

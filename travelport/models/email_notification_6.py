@@ -9,7 +9,7 @@ from travelport.models.email_notification_recipients_6 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EmailNotification6:
     """
     Send Email Notification to the emails specified in Booking Traveler.
@@ -40,11 +40,10 @@ class EmailNotification6:
             "max_occurs": 999,
         },
     )
-    recipients: None | EmailNotificationRecipients6 = field(
-        default=None,
+    recipients: EmailNotificationRecipients6 = field(
         metadata={
             "name": "Recipients",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

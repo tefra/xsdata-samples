@@ -10,7 +10,7 @@ from travelport.models.vendor import Vendor
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleKeywordReq(BaseSearchReq1):
     """
     Used to request a list of keywords or specific keyword information for
@@ -30,21 +30,19 @@ class VehicleKeywordReq(BaseSearchReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    vendor: None | Vendor = field(
-        default=None,
+    vendor: Vendor = field(
         metadata={
             "name": "Vendor",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    pickup_date_location: None | TypePickupDateLocation = field(
-        default=None,
+    pickup_date_location: TypePickupDateLocation = field(
         metadata={
             "name": "PickupDateLocation",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     keyword: list[Keyword1] = field(
         default_factory=list,

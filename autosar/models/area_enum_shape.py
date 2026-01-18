@@ -7,7 +7,7 @@ from .area_enum_shape_simple import AreaEnumShapeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AreaEnumShape:
     """
     This enumerator specifies the shape of the area.
@@ -28,11 +28,10 @@ class AreaEnumShape:
     class Meta:
         name = "AREA-ENUM-SHAPE"
 
-    value: None | AreaEnumShapeSimple = field(
-        default=None,
+    value: AreaEnumShapeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

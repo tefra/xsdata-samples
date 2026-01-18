@@ -9,7 +9,7 @@ from travelport.models.type_taggable_electronic_address_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlternateContactElectronicAddress2(TypeTaggableElectronicAddress2):
     """
     Alternate contact email.
@@ -24,11 +24,10 @@ class AlternateContactElectronicAddress2(TypeTaggableElectronicAddress2):
         name = "AlternateContactElectronicAddress"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    alternate_contact_ref: None | str = field(
-        default=None,
+    alternate_contact_ref: str = field(
         metadata={
             "name": "AlternateContactRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

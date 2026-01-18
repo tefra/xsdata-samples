@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CpSoftwareClusterServiceResource:
     """
     Represents a single resource required or provided by a CP Software
@@ -98,14 +98,13 @@ class CpSoftwareClusterServiceResource:
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-SERVICE-RESOURCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | CpSoftwareClusterServiceResource.ShortNameFragments
@@ -224,7 +223,7 @@ class CpSoftwareClusterServiceResource:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -235,7 +234,7 @@ class CpSoftwareClusterServiceResource:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -246,7 +245,7 @@ class CpSoftwareClusterServiceResource:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DependentResources:
         role_based_resource_dependency: list[RoleBasedResourceDependency] = (
             field(
@@ -259,7 +258,7 @@ class CpSoftwareClusterServiceResource:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResourceNeedsRefs:
         resource_needs_ref: list[
             CpSoftwareClusterServiceResource.ResourceNeedsRefs.ResourceNeedsRef
@@ -272,13 +271,12 @@ class CpSoftwareClusterServiceResource:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ResourceNeedsRef(Ref):
-            dest: None | EcucContainerValueSubtypesEnum = field(
-                default=None,
+            dest: EcucContainerValueSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

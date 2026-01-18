@@ -31,7 +31,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher_item import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProceedingsMetadata:
     """
     Container for all information that applies to a non-series conference
@@ -42,12 +42,11 @@ class ProceedingsMetadata:
         name = "proceedings_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    proceedings_title: None | ProceedingsTitle = field(
-        default=None,
+    proceedings_title: ProceedingsTitle = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     proceedings_subject: None | ProceedingsSubject = field(
         default=None,

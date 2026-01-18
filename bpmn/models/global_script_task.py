@@ -7,7 +7,7 @@ from .t_global_script_task import TGlobalScriptTask
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GlobalScriptTask(TGlobalScriptTask):
     class Meta:
         name = "globalScriptTask"

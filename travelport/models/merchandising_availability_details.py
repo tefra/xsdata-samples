@@ -8,7 +8,7 @@ from travelport.models.air_itinerary_details import AirItineraryDetails
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MerchandisingAvailabilityDetails:
     """
     Rich Content and Branding for an air segment.
@@ -17,13 +17,12 @@ class MerchandisingAvailabilityDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_itinerary_details: None | AirItineraryDetails = field(
-        default=None,
+    air_itinerary_details: AirItineraryDetails = field(
         metadata={
             "name": "AirItineraryDetails",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     account_code: None | AccountCode1 = field(
         default=None,

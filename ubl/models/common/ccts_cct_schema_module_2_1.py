@@ -8,13 +8,12 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AmountType:
-    value: None | Decimal = field(
-        default=None,
+    value: Decimal = field(
         metadata={
             "required": True,
-        },
+        }
     )
     currency_id: None | str = field(
         default=None,
@@ -32,14 +31,13 @@ class AmountType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class BinaryObjectType:
-    value: None | bytes = field(
-        default=None,
+    value: bytes = field(
         metadata={
             "required": True,
             "format": "base64",
-        },
+        }
     )
     format: None | str = field(
         default=None,
@@ -82,7 +80,7 @@ class BinaryObjectType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CodeType:
     value: str = field(
         default="",
@@ -154,7 +152,7 @@ class CodeType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DateTimeType:
     value: str = field(
         default="",
@@ -170,7 +168,7 @@ class DateTimeType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class IdentifierType:
     value: str = field(
         default="",
@@ -229,7 +227,7 @@ class IdentifierType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class IndicatorType:
     value: str = field(
         default="",
@@ -245,13 +243,12 @@ class IndicatorType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MeasureType:
-    value: None | Decimal = field(
-        default=None,
+    value: Decimal = field(
         metadata={
             "required": True,
-        },
+        }
     )
     unit_code: None | str = field(
         default=None,
@@ -269,13 +266,12 @@ class MeasureType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class NumericType:
-    value: None | Decimal = field(
-        default=None,
+    value: Decimal = field(
         metadata={
             "required": True,
-        },
+        }
     )
     format: None | str = field(
         default=None,
@@ -285,13 +281,12 @@ class NumericType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class QuantityType:
-    value: None | Decimal = field(
-        default=None,
+    value: Decimal = field(
         metadata={
             "required": True,
-        },
+        }
     )
     unit_code: None | str = field(
         default=None,
@@ -323,7 +318,7 @@ class QuantityType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TextType:
     value: str = field(
         default="",

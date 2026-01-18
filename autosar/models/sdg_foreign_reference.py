@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SdgForeignReference:
     """
     A reference without variation support that can point to any referrable
@@ -98,14 +98,13 @@ class SdgForeignReference:
     class Meta:
         name = "SDG-FOREIGN-REFERENCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SdgForeignReference.ShortNameFragments = (
         field(
@@ -228,7 +227,7 @@ class SdgForeignReference:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -239,7 +238,7 @@ class SdgForeignReference:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

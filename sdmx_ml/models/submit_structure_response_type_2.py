@@ -11,7 +11,7 @@ from sdmx_ml.models.submit_structure_response_type_1 import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SubmitStructureResponseType2(RegistryInterfaceType):
     """
     SubmitStructureResponseType defines the structure of a registry submit
@@ -28,12 +28,11 @@ class SubmitStructureResponseType2(RegistryInterfaceType):
             "type": "Ignore",
         },
     )
-    submit_structure_response: None | SubmitStructureResponseType1 = field(
-        default=None,
+    submit_structure_response: SubmitStructureResponseType1 = field(
         metadata={
             "name": "SubmitStructureResponse",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
             "required": True,
-        },
+        }
     )

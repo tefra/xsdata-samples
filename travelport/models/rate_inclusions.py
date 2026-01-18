@@ -7,7 +7,7 @@ from travelport.models.included_item import IncludedItem
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RateInclusions:
     """
     Provides the list of additional charges included in Rate. e.g Tax,

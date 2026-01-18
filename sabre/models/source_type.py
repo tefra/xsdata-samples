@@ -9,7 +9,7 @@ from sabre.models.unique_id_type import UniqueIdType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourceType:
     """
     Attributes:
@@ -52,14 +52,13 @@ class SourceType:
         home_pcc: Home PCC
     """
 
-    requestor_id: None | UniqueIdType = field(
-        default=None,
+    requestor_id: UniqueIdType = field(
         metadata={
             "name": "RequestorID",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     position: None | PositionType = field(
         default=None,

@@ -10,7 +10,7 @@ from .transport_mode_structure import TransportModeStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportModesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transportModes_RelStructure"

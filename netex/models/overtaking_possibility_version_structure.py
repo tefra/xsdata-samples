@@ -13,7 +13,7 @@ from .transport_type_ref_structure import TransportTypeRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OvertakingPossibilityVersionStructure(
     NetworkRestrictionVersionStructure
 ):
@@ -28,14 +28,13 @@ class OvertakingPossibilityVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    overtaking_on_link_ref: None | LinkRefStructure = field(
-        default=None,
+    overtaking_on_link_ref: LinkRefStructure = field(
         metadata={
             "name": "OvertakingOnLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     overtaking_at_point_ref: None | PointRefStructure = field(
         default=None,

@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndividualRoleType:
     """
     :ivar individual: A contact person for the organisation.
@@ -23,6 +23,5 @@ class IndividualRoleType:
             "name": "Individual",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
         },
     )

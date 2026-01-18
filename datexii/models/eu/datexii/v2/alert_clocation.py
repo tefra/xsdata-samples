@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlertCLocation:
     """
     Identification of a specific point, linear or area location in an
@@ -29,14 +29,13 @@ class AlertCLocation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    specific_location: None | int = field(
-        default=None,
+    specific_location: int = field(
         metadata={
             "name": "specificLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     alert_clocation_extension: None | ExtensionType = field(
         default=None,

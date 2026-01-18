@@ -11,14 +11,13 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PhysicalObjectGroupRoleType:
-    physical_object_group: None | PhysicalObjectGroupType = field(
-        default=None,
+    physical_object_group: PhysicalObjectGroupType = field(
         metadata={
             "name": "PhysicalObjectGroup",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from crossref.models.xlink.arc_type import ArcType
 __NAMESPACE__ = "http://www.w3.org/1999/xlink"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Arc(ArcType):
     class Meta:
         name = "arc"

@@ -11,7 +11,7 @@ from .value_list import ValueList
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwValueCont:
     """
     This metaclass represents the content of one particular SwInstance.
@@ -91,13 +91,12 @@ class SwValueCont:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnitRef(Ref):
-        dest: None | UnitSubtypesEnum = field(
-            default=None,
+        dest: UnitSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

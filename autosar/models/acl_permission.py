@@ -27,7 +27,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AclPermission:
     """
     This meta class represents the ability to represent permissions granted
@@ -112,14 +112,13 @@ class AclPermission:
     class Meta:
         name = "ACL-PERMISSION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | AclPermission.ShortNameFragments = field(
         default=None,
@@ -264,7 +263,7 @@ class AclPermission:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -275,7 +274,7 @@ class AclPermission:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -286,7 +285,7 @@ class AclPermission:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -315,7 +314,7 @@ class AclPermission:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AclContexts:
         """
         :ivar acl_context: This attribute is intended to specify the
@@ -334,7 +333,7 @@ class AclPermission:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AclObjectRefs:
         acl_object_ref: list[AclPermission.AclObjectRefs.AclObjectRef] = field(
             default_factory=list,
@@ -345,18 +344,17 @@ class AclPermission:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AclObjectRef(Ref):
-            dest: None | AclObjectSetSubtypesEnum = field(
-                default=None,
+            dest: AclObjectSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AclOperationRefs:
         acl_operation_ref: list[
             AclPermission.AclOperationRefs.AclOperationRef
@@ -369,18 +367,17 @@ class AclPermission:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AclOperationRef(Ref):
-            dest: None | AclOperationSubtypesEnum = field(
-                default=None,
+            dest: AclOperationSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AclRoleRefs:
         acl_role_ref: list[AclPermission.AclRoleRefs.AclRoleRef] = field(
             default_factory=list,
@@ -391,13 +388,12 @@ class AclPermission:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AclRoleRef(Ref):
-            dest: None | AclRoleSubtypesEnum = field(
-                default=None,
+            dest: AclRoleSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

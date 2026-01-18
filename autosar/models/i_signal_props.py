@@ -7,7 +7,7 @@ from .handle_out_of_range_enum import HandleOutOfRangeEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ISignalProps:
     """
     Additional ISignal properties that may be stored in different files.

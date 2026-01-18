@@ -13,7 +13,7 @@ from .tp_connection_ident import TpConnectionIdent
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayArTpConnection:
     """
     A connection within a channel identifies the sender and the receiver of
@@ -156,62 +156,57 @@ class FlexrayArTpConnection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DirectTpSduRef(Ref):
-        dest: None | IPduSubtypesEnum = field(
-            default=None,
+        dest: IPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlowControlPduRef(Ref):
-        dest: None | NPduSubtypesEnum = field(
-            default=None,
+        dest: NPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MulticastRef(Ref):
-        dest: None | TpAddressSubtypesEnum = field(
-            default=None,
+        dest: TpAddressSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReversedTpSduRef(Ref):
-        dest: None | IPduSubtypesEnum = field(
-            default=None,
+        dest: IPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SourceRef(Ref):
-        dest: None | FlexrayArTpNodeSubtypesEnum = field(
-            default=None,
+        dest: FlexrayArTpNodeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetRefs:
         target_ref: list[FlexrayArTpConnection.TargetRefs.TargetRef] = field(
             default_factory=list,
@@ -222,18 +217,17 @@ class FlexrayArTpConnection:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TargetRef(Ref):
-            dest: None | FlexrayArTpNodeSubtypesEnum = field(
-                default=None,
+            dest: FlexrayArTpNodeSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransmitPduRefs:
         transmit_pdu_ref: list[
             FlexrayArTpConnection.TransmitPduRefs.TransmitPduRef
@@ -246,13 +240,12 @@ class FlexrayArTpConnection:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TransmitPduRef(Ref):
-            dest: None | NPduSubtypesEnum = field(
-                default=None,
+            dest: NPduSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

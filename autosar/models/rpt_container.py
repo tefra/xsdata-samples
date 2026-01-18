@@ -24,7 +24,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RptContainer:
     """
     This meta class defines a byPassPoint and the relation to a rptHook.
@@ -126,14 +126,13 @@ class RptContainer:
     class Meta:
         name = "RPT-CONTAINER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | RptContainer.ShortNameFragments = field(
         default=None,
@@ -282,7 +281,7 @@ class RptContainer:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -293,7 +292,7 @@ class RptContainer:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -304,7 +303,7 @@ class RptContainer:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ByPassPointIrefs:
         by_pass_point_iref: list[AnyInstanceRef] = field(
             default_factory=list,
@@ -315,7 +314,7 @@ class RptContainer:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExplicitRptProfileSelectionRefs:
         explicit_rpt_profile_selection_ref: list[
             RptContainer.ExplicitRptProfileSelectionRefs.ExplicitRptProfileSelectionRef
@@ -328,18 +327,17 @@ class RptContainer:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExplicitRptProfileSelectionRef(Ref):
-            dest: None | RptProfileSubtypesEnum = field(
-                default=None,
+            dest: RptProfileSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RptContainers:
         rpt_container: list[RptContainer] = field(
             default_factory=list,
@@ -350,7 +348,7 @@ class RptContainer:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RptHooks:
         rpt_hook: list[RptHook] = field(
             default_factory=list,

@@ -19,7 +19,7 @@ from .telephone_contact_structure import TelephoneContactStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Customer_VersionStructure"

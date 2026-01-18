@@ -9,7 +9,7 @@ from .check_constraint_delay_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CheckConstraintDelayRef(CheckConstraintDelayRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

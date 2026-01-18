@@ -7,7 +7,7 @@ from .pnc_gateway_type_enum_simple import PncGatewayTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PncGatewayTypeEnum:
     """
     Defines the PncGateway roles.
@@ -28,11 +28,10 @@ class PncGatewayTypeEnum:
     class Meta:
         name = "PNC-GATEWAY-TYPE-ENUM"
 
-    value: None | PncGatewayTypeEnumSimple = field(
-        default=None,
+    value: PncGatewayTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -8,7 +8,7 @@ from sabre.models.passenger_type_quantity_type import PassengerTypeQuantityType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelerInformationType:
     """
     Specifies passenger numbers and types.

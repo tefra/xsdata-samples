@@ -26,7 +26,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticServiceTable:
     """
     This meta-class represents a model of a diagnostic service table, i.e.
@@ -103,14 +103,13 @@ class DiagnosticServiceTable:
     class Meta:
         name = "DIAGNOSTIC-SERVICE-TABLE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DiagnosticServiceTable.ShortNameFragments = (
         field(
@@ -237,7 +236,7 @@ class DiagnosticServiceTable:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -248,7 +247,7 @@ class DiagnosticServiceTable:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -259,7 +258,7 @@ class DiagnosticServiceTable:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticConnections:
         diagnostic_connection_ref_conditional: list[
             DiagnosticConnectionRefConditional
@@ -272,18 +271,17 @@ class DiagnosticServiceTable:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuInstanceRef(Ref):
-        dest: None | EcuInstanceSubtypesEnum = field(
-            default=None,
+        dest: EcuInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInstanceRefs:
         service_instance_ref: list[
             DiagnosticServiceTable.ServiceInstanceRefs.ServiceInstanceRef
@@ -296,13 +294,12 @@ class DiagnosticServiceTable:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ServiceInstanceRef(Ref):
-            dest: None | DiagnosticServiceInstanceSubtypesEnum = field(
-                default=None,
+            dest: DiagnosticServiceInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PhmContributionToMachineMapping:
     """
     This element associates one or more
@@ -92,14 +92,13 @@ class PhmContributionToMachineMapping:
     class Meta:
         name = "PHM-CONTRIBUTION-TO-MACHINE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | PhmContributionToMachineMapping.ShortNameFragments
@@ -208,7 +207,7 @@ class PhmContributionToMachineMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -219,7 +218,7 @@ class PhmContributionToMachineMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -230,18 +229,17 @@ class PhmContributionToMachineMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MachineRef(Ref):
-        dest: None | MachineSubtypesEnum = field(
-            default=None,
+        dest: MachineSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PhmContributionRefs:
         phm_contribution_ref: list[
             PhmContributionToMachineMapping.PhmContributionRefs.PhmContributionRef
@@ -254,15 +252,12 @@ class PhmContributionToMachineMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PhmContributionRef(Ref):
-            dest: None | PlatformHealthManagementContributionSubtypesEnum = (
-                field(
-                    default=None,
-                    metadata={
-                        "name": "DEST",
-                        "type": "Attribute",
-                        "required": True,
-                    },
-                )
+            dest: PlatformHealthManagementContributionSubtypesEnum = field(
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )

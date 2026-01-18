@@ -26,7 +26,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatusRequest-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TransportProgressStatusRequestType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -68,14 +68,13 @@ class TransportProgressStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     copy_indicator: None | CopyIndicator = field(
         default=None,
@@ -93,23 +92,21 @@ class TransportProgressStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
-    issue_time: None | IssueTime = field(
-        default=None,
+    issue_time: IssueTime = field(
         metadata={
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     note: tuple[Note, ...] = field(
         default_factory=tuple,
@@ -143,14 +140,13 @@ class TransportProgressStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_means: None | TransportMeans = field(
-        default=None,
+    transport_means: TransportMeans = field(
         metadata={
             "name": "TransportMeans",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     status_location: tuple[StatusLocation, ...] = field(
         default_factory=tuple,
@@ -162,7 +158,7 @@ class TransportProgressStatusRequestType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TransportProgressStatusRequest(TransportProgressStatusRequestType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatusRequest-2"

@@ -7,7 +7,7 @@ from .diagnostic_event_kind_enum_simple import DiagnosticEventKindEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEventKindEnum:
     """
     Applicability of the diagnostic event.
@@ -28,11 +28,10 @@ class DiagnosticEventKindEnum:
     class Meta:
         name = "DIAGNOSTIC-EVENT-KIND-ENUM"
 
-    value: None | DiagnosticEventKindEnumSimple = field(
-        default=None,
+    value: DiagnosticEventKindEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

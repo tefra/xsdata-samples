@@ -9,18 +9,17 @@ from datexii.models.eu.datexii.v2.multilingual_string_value import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MultilingualString:
-    values: None | MultilingualString.Values = field(
-        default=None,
+    values: MultilingualString.Values = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Values:
         value: list[MultilingualStringValue] = field(
             default_factory=list,

@@ -8,7 +8,7 @@ from .rest_element_def_subtypes_enum import RestElementDefSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RestSystemTriggeredEvent:
     """
     This meta-class represents the ability to identify an element such that
@@ -56,13 +56,12 @@ class RestSystemTriggeredEvent:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ElementRef(Ref):
-        dest: None | RestElementDefSubtypesEnum = field(
-            default=None,
+        dest: RestElementDefSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

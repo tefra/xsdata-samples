@@ -14,7 +14,7 @@ from .service_facility_set_ref import ServiceFacilitySetRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OnboardStayVersionedChlldStructure(VersionedChildStructure):
     class Meta:
         name = "OnboardStay_VersionedChlldStructure"

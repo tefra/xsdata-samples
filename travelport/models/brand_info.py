@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BrandInfo:
     """
     Commercially recognized product offered by an airline.
@@ -32,15 +32,14 @@ class BrandInfo:
             "type": "Attribute",
         },
     )
-    brand_id: None | str = field(
-        default=None,
+    brand_id: str = field(
         metadata={
             "name": "BrandID",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 19,
-        },
+        }
     )
     air_pricing_info_ref: None | str = field(
         default=None,

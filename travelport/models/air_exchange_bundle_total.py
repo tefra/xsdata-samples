@@ -8,7 +8,7 @@ from travelport.models.penalty_1 import Penalty1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeBundleTotal:
     """
     Total exchange and penalty information for one ticket number.
@@ -23,14 +23,13 @@ class AirExchangeBundleTotal:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_exchange_info: None | AirExchangeInfo1 = field(
-        default=None,
+    air_exchange_info: AirExchangeInfo1 = field(
         metadata={
             "name": "AirExchangeInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        },
+        }
     )
     penalty: list[Penalty1] = field(
         default_factory=list,

@@ -8,7 +8,7 @@ from .positive_integer import PositiveInteger
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanGlobalTimeDomainProps:
     """
     Enables the definition of Can Global Time specific properties.
@@ -94,7 +94,7 @@ class CanGlobalTimeDomainProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FupDataIdLists:
         """
         :ivar fup_data_id_list: The DataIDList for FUP messages to
@@ -111,7 +111,7 @@ class CanGlobalTimeDomainProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OfnsDataIdLists:
         """
         :ivar ofns_data_id_list: The DataIDList for OFNS messages to
@@ -128,7 +128,7 @@ class CanGlobalTimeDomainProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OfsDataIdLists:
         """
         :ivar ofs_data_id_list: The DataIDList for OFS messages to
@@ -145,7 +145,7 @@ class CanGlobalTimeDomainProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SyncDataIdLists:
         """
         :ivar sync_data_id_list: The DataIDList for SYNC messages to

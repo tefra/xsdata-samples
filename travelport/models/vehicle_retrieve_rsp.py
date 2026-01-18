@@ -8,7 +8,7 @@ from travelport.models.vehicle_reservation import VehicleReservation
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleRetrieveRsp(BaseRsp1):
     """
     Response to a VehicleRetrieveReq.

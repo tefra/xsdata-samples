@@ -7,7 +7,7 @@ from travelport.models.location_6 import Location6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailLocation6(Location6):
     """
     RCH specific location code (a.k.a UCodes) which uniquely identifies a
@@ -18,8 +18,7 @@ class RailLocation6(Location6):
         name = "RailLocation"
         namespace = "http://www.travelport.com/schema/common_v38_0"
 
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
@@ -27,5 +26,5 @@ class RailLocation6(Location6):
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        },
+        }
     )

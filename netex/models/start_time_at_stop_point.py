@@ -10,7 +10,7 @@ from .start_time_at_stop_point_versioned_child_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StartTimeAtStopPoint(StartTimeAtStopPointVersionedChildStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

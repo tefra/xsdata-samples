@@ -18,7 +18,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CryptoServicePrimitive:
     """
     This meta-class has the ability to represent a crypto primitive.
@@ -93,14 +93,13 @@ class CryptoServicePrimitive:
     class Meta:
         name = "CRYPTO-SERVICE-PRIMITIVE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | CryptoServicePrimitive.ShortNameFragments = (
         field(
@@ -215,7 +214,7 @@ class CryptoServicePrimitive:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -226,7 +225,7 @@ class CryptoServicePrimitive:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

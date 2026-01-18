@@ -15,7 +15,7 @@ from ..core.voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090001Uv01AssignedEntity:
     class Meta:
         name = "COCT_MT090001UV01.AssignedEntity"
@@ -66,11 +66,10 @@ class CoctMt090001Uv01AssignedEntity:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassAssignedEntity = field(
-        default=None,
+    class_code: RoleClassAssignedEntity = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

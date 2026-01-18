@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeSearchLoyaltyProgram1:
     """
     The Searchable fields on LoyaltyProgram.
@@ -21,20 +21,18 @@ class TypeSearchLoyaltyProgram1:
     class Meta:
         name = "typeSearchLoyaltyProgram"
 
-    number: None | str = field(
-        default=None,
+    number: str = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    supplier_code: None | str = field(
-        default=None,
+    supplier_code: str = field(
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        },
+        }
     )

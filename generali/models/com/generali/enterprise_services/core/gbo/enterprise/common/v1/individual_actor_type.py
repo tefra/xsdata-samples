@@ -29,7 +29,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndividualActorType(BaseComponentType):
     """
     <description xmlns=""/>.

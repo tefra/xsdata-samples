@@ -8,7 +8,7 @@ from travelport.models.number_of_children import NumberOfChildren
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GuestInformation:
     """
     The information like number of rooms ,number of adults,children to be
@@ -55,7 +55,7 @@ class GuestInformation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExtraChild:
         """
         Parameters

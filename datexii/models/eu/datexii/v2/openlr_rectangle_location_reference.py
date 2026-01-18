@@ -11,21 +11,20 @@ from datexii.models.eu.datexii.v2.openlr_rectangle import OpenlrRectangle
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenlrRectangleLocationReference(OpenlrAreaLocationReference):
     """
     the openLR method of areadefinition by providing a rectangular shape
     defined by two geo-coordinate pairs.
     """
 
-    openlr_rectangle: None | OpenlrRectangle = field(
-        default=None,
+    openlr_rectangle: OpenlrRectangle = field(
         metadata={
             "name": "openlrRectangle",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     openlr_rectangle_location_reference_extension: None | ExtensionType = (
         field(

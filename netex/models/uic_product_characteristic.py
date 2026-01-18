@@ -9,14 +9,13 @@ from .uic_product_characteristic_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UicProductCharacteristic:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: None | UicProductCharacteristicEnumeration = field(
-        default=None,
+    value: UicProductCharacteristicEnumeration = field(
         metadata={
             "required": True,
-        },
+        }
     )

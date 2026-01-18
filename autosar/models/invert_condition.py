@@ -10,7 +10,7 @@ from .textual_condition import TextualCondition
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvertCondition:
     """
     inverts the nested condition.
@@ -55,7 +55,7 @@ class InvertCondition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Condition:
         aggregation_condition: None | AggregationCondition = field(
             default=None,

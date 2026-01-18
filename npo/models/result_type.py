@@ -7,7 +7,7 @@ from npo.models.total_qualifier import TotalQualifier
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResultType:
     class Meta:
         name = "resultType"
@@ -45,7 +45,7 @@ class ResultType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Items:
         item: list[object] = field(
             default_factory=list,

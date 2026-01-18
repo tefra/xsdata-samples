@@ -7,7 +7,7 @@ from .standard_name_enum_simple import StandardNameEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StandardNameEnum:
     """
     This enumeration lists all allowed standard abbreviations.
@@ -28,11 +28,10 @@ class StandardNameEnum:
     class Meta:
         name = "STANDARD-NAME-ENUM"
 
-    value: None | StandardNameEnumSimple = field(
-        default=None,
+    value: StandardNameEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

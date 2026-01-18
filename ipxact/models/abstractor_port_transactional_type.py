@@ -13,7 +13,7 @@ from ipxact.models.unsigned_int_expression import UnsignedIntExpression
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractorPortTransactionalType:
     """
     Transactional port type.
@@ -40,13 +40,12 @@ class AbstractorPortTransactionalType:
     class Meta:
         name = "abstractorPortTransactionalType"
 
-    initiative: None | Initiative = field(
-        default=None,
+    initiative: Initiative = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     kind: None | Kind = field(
         default=None,
@@ -100,7 +99,7 @@ class AbstractorPortTransactionalType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Connection:
         """
         :ivar max_connections: Indicates the maximum number of

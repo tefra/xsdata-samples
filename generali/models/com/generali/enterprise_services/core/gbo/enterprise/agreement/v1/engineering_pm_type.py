@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EngineeringPmType:
     machinery_type: None | str = field(
         default=None,

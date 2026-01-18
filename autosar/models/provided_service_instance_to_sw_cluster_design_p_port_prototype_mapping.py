@@ -24,7 +24,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
     """
     This concrete meta-class represents the ability to assign a
@@ -99,14 +99,13 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
     class Meta:
         name = "PROVIDED-SERVICE-INSTANCE-TO-SW-CLUSTER-DESIGN-P-PORT-PROTOTYPE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None
@@ -222,7 +221,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -233,7 +232,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -244,13 +243,12 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvidedServiceInstanceRef(Ref):
-        dest: None | ProvidedApServiceInstanceSubtypesEnum = field(
-            default=None,
+        dest: ProvidedApServiceInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

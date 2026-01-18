@@ -7,7 +7,7 @@ from .data_managed_object_view_structure import DataManagedObjectViewStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassingTimeViewStructure(DataManagedObjectViewStructure):
     class Meta:
         name = "PassingTime_ViewStructure"

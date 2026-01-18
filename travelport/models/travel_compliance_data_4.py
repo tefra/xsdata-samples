@@ -8,7 +8,7 @@ from travelport.models.type_profile_type_6 import TypeProfileType6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelComplianceData4:
     """
     Travel Compliance and Preferred Supplier information of the traveler
@@ -127,7 +127,7 @@ class TravelComplianceData4:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PolicyCompliance:
         """
         Parameters
@@ -140,13 +140,12 @@ class TravelComplianceData4:
             Policy or Out Of Policy.
         """
 
-        in_policy: None | bool = field(
-            default=None,
+        in_policy: bool = field(
             metadata={
                 "name": "InPolicy",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         policy_token: None | str = field(
             default=None,
@@ -158,7 +157,7 @@ class TravelComplianceData4:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContractCompliance:
         """
         Parameters
@@ -171,13 +170,12 @@ class TravelComplianceData4:
             Contract or Out Of Contract.
         """
 
-        in_contract: None | bool = field(
-            default=None,
+        in_contract: bool = field(
             metadata={
                 "name": "InContract",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         contract_token: None | str = field(
             default=None,
@@ -189,7 +187,7 @@ class TravelComplianceData4:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PreferredSupplier:
         """
         Parameters
@@ -201,19 +199,17 @@ class TravelComplianceData4:
             Agency, if Traveler Preferred then pass Traveler.
         """
 
-        preferred: None | bool = field(
-            default=None,
+        preferred: bool = field(
             metadata={
                 "name": "Preferred",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
-        profile_type: None | TypeProfileType6 = field(
-            default=None,
+        profile_type: TypeProfileType6 = field(
             metadata={
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

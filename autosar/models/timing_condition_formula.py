@@ -19,7 +19,7 @@ from .timing_mode_instance_subtypes_enum import TimingModeInstanceSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimingConditionFormula:
     """
     A TimingConditionFormula describes a specific dependency.
@@ -102,57 +102,52 @@ class TimingConditionFormula:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingArgumentRef(Ref):
-        dest: None | AutosarOperationArgumentInstanceSubtypesEnum = field(
-            default=None,
+        dest: AutosarOperationArgumentInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingConditionRef(Ref):
-        dest: None | TimingConditionSubtypesEnum = field(
-            default=None,
+        dest: TimingConditionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingEventRef(Ref):
-        dest: None | TimingDescriptionEventSubtypesEnum = field(
-            default=None,
+        dest: TimingDescriptionEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingModeRef(Ref):
-        dest: None | TimingModeInstanceSubtypesEnum = field(
-            default=None,
+        dest: TimingModeInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingVariableRef(Ref):
-        dest: None | AutosarVariableInstanceSubtypesEnum = field(
-            default=None,
+        dest: AutosarVariableInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

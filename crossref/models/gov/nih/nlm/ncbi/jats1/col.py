@@ -8,7 +8,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.col_valign import ColValign
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Col:
     class Meta:
         name = "col"

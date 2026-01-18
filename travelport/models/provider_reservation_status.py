@@ -9,7 +9,7 @@ from travelport.models.type_result_message_1 import TypeResultMessage1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProviderReservationStatus:
     """
     Status of the cancellation for this provider reservation.
@@ -46,46 +46,41 @@ class ProviderReservationStatus:
             "type": "Element",
         },
     )
-    create_date: None | XmlDateTime = field(
-        default=None,
+    create_date: XmlDateTime = field(
         metadata={
             "name": "CreateDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    modified_date: None | XmlDateTime = field(
-        default=None,
+    modified_date: XmlDateTime = field(
         metadata={
             "name": "ModifiedDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
-    locator_code: None | str = field(
-        default=None,
+    locator_code: str = field(
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        },
+        }
     )
-    cancelled: None | bool = field(
-        default=None,
+    cancelled: bool = field(
         metadata={
             "name": "Cancelled",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

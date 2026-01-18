@@ -25,7 +25,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientServerInterfaceMapping:
     """
     Defines the mapping of ClientServerOperations in context of two
@@ -105,14 +105,13 @@ class ClientServerInterfaceMapping:
     class Meta:
         name = "CLIENT-SERVER-INTERFACE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ClientServerInterfaceMapping.ShortNameFragments
@@ -239,7 +238,7 @@ class ClientServerInterfaceMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -250,7 +249,7 @@ class ClientServerInterfaceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -261,7 +260,7 @@ class ClientServerInterfaceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -290,7 +289,7 @@ class ClientServerInterfaceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ErrorMappings:
         client_server_application_error_mapping: list[
             ClientServerApplicationErrorMapping
@@ -303,7 +302,7 @@ class ClientServerInterfaceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OperationMappings:
         client_server_operation_mapping: list[ClientServerOperationMapping] = (
             field(

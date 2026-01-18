@@ -7,7 +7,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocalPoliciesTypeLocalPolicyPartyIdsPartyId:
     """
     :ivar value:
@@ -32,11 +32,10 @@ class LocalPoliciesTypeLocalPolicyPartyIdsPartyId:
             "type": "Attribute",
         },
     )
-    party_guns: None | str = field(
-        default=None,
+    party_guns: str = field(
         metadata={
             "name": "PartyGUNS",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

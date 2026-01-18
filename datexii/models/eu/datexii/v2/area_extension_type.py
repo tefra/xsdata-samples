@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.openlr_extended_area import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AreaExtensionType:
     class Meta:
         name = "_AreaExtensionType"

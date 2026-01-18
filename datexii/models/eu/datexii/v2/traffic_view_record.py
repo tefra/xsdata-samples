@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.url_link import UrlLink
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrafficViewRecord:
     """
     An identifiable instance of a single record within a traffic view which
@@ -29,14 +29,13 @@ class TrafficViewRecord:
     :ivar id:
     """
 
-    record_sequence_number: None | int = field(
-        default=None,
+    record_sequence_number: int = field(
         metadata={
             "name": "recordSequenceNumber",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     traffic_element: None | TrafficElement = field(
         default=None,
@@ -78,10 +77,9 @@ class TrafficViewRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

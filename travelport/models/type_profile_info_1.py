@@ -7,7 +7,7 @@ from travelport.models.client_data_list import ClientDataList
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeProfileInfo1:
     """
     Base type for Profile Infos.

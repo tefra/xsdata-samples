@@ -14,7 +14,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoConIPduIdentifier:
     """
     Identification of Pdu content on a socket connection.
@@ -58,14 +58,13 @@ class SoConIPduIdentifier:
     class Meta:
         name = "SO-CON-I-PDU-IDENTIFIER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SoConIPduIdentifier.ShortNameFragments = (
         field(
@@ -133,7 +132,7 @@ class SoConIPduIdentifier:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -144,13 +143,12 @@ class SoConIPduIdentifier:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduTriggeringRef(Ref):
-        dest: None | PduTriggeringSubtypesEnum = field(
-            default=None,
+        dest: PduTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

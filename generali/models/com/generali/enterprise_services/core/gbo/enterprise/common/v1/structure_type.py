@@ -29,7 +29,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StructureType(RiskElementType):
     additional_information: None | TextType = field(
         default=None,

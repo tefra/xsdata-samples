@@ -9,7 +9,7 @@ from .quality_structure_factor_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareQuotaFactorVersionStructure(QualityStructureFactorVersionStructure):
     class Meta:
         name = "FareQuotaFactor_VersionStructure"

@@ -43,7 +43,7 @@ from .wait_point import WaitPoint
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RunnableEntity:
     """
     A RunnableEntity represents the smallest code-fragment that is provided
@@ -271,14 +271,13 @@ class RunnableEntity:
     class Meta:
         name = "RUNNABLE-ENTITY"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | RunnableEntity.ShortNameFragments = field(
         default=None,
@@ -585,7 +584,7 @@ class RunnableEntity:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -596,7 +595,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -607,7 +606,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ActivationReasons:
         executable_entity_activation_reason: list[
             ExecutableEntityActivationReason
@@ -620,7 +619,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CanEnterExclusiveAreaRefs:
         can_enter_exclusive_area_ref: list[
             RunnableEntity.CanEnterExclusiveAreaRefs.CanEnterExclusiveAreaRef
@@ -633,18 +632,17 @@ class RunnableEntity:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CanEnterExclusiveAreaRef(Ref):
-            dest: None | ExclusiveAreaSubtypesEnum = field(
-                default=None,
+            dest: ExclusiveAreaSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExclusiveAreaNestingOrderRefs:
         exclusive_area_nesting_order_ref: list[
             RunnableEntity.ExclusiveAreaNestingOrderRefs.ExclusiveAreaNestingOrderRef
@@ -657,18 +655,17 @@ class RunnableEntity:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExclusiveAreaNestingOrderRef(Ref):
-            dest: None | ExclusiveAreaNestingOrderSubtypesEnum = field(
-                default=None,
+            dest: ExclusiveAreaNestingOrderSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RunsInsideExclusiveAreaRefs:
         runs_inside_exclusive_area_ref: list[
             RunnableEntity.RunsInsideExclusiveAreaRefs.RunsInsideExclusiveAreaRef
@@ -681,29 +678,27 @@ class RunnableEntity:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RunsInsideExclusiveAreaRef(Ref):
-            dest: None | ExclusiveAreaSubtypesEnum = field(
-                default=None,
+            dest: ExclusiveAreaSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwAddrMethodRef(Ref):
-        dest: None | SwAddrMethodSubtypesEnum = field(
-            default=None,
+        dest: SwAddrMethodSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Arguments:
         runnable_entity_argument: list[RunnableEntityArgument] = field(
             default_factory=list,
@@ -714,7 +709,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AsynchronousServerCallResultPoints:
         asynchronous_server_call_result_point: list[
             AsynchronousServerCallResultPoint
@@ -727,7 +722,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataReadAccesss:
         variable_access: list[VariableAccess] = field(
             default_factory=list,
@@ -738,7 +733,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataReceivePointByArguments:
         variable_access: list[VariableAccess] = field(
             default_factory=list,
@@ -749,7 +744,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataReceivePointByValues:
         variable_access: list[VariableAccess] = field(
             default_factory=list,
@@ -760,7 +755,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataSendPoints:
         variable_access: list[VariableAccess] = field(
             default_factory=list,
@@ -771,7 +766,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataWriteAccesss:
         variable_access: list[VariableAccess] = field(
             default_factory=list,
@@ -782,7 +777,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExternalTriggeringPoints:
         external_triggering_point: list[ExternalTriggeringPoint] = field(
             default_factory=list,
@@ -793,7 +788,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InternalTriggeringPoints:
         internal_triggering_point: list[InternalTriggeringPoint] = field(
             default_factory=list,
@@ -804,7 +799,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeAccessPoints:
         mode_access_point: list[ModeAccessPoint] = field(
             default_factory=list,
@@ -815,7 +810,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeSwitchPoints:
         mode_switch_point: list[ModeSwitchPoint] = field(
             default_factory=list,
@@ -826,7 +821,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ParameterAccesss:
         parameter_access: list[ParameterAccess] = field(
             default_factory=list,
@@ -837,7 +832,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReadLocalVariables:
         variable_access: list[VariableAccess] = field(
             default_factory=list,
@@ -848,7 +843,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServerCallPoints:
         asynchronous_server_call_point: list[AsynchronousServerCallPoint] = (
             field(
@@ -871,7 +866,7 @@ class RunnableEntity:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class WaitPoints:
         wait_point: list[WaitPoint] = field(
             default_factory=list,
@@ -882,7 +877,7 @@ class RunnableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class WrittenLocalVariables:
         variable_access: list[VariableAccess] = field(
             default_factory=list,

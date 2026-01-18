@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExternalObjectRefStructure:
     value: str = field(
         default="",
@@ -20,10 +20,9 @@ class ExternalObjectRefStructure:
             "type": "Attribute",
         },
     )
-    ref: None | str = field(
-        default=None,
+    ref: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

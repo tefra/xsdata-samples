@@ -13,7 +13,7 @@ from .service_pattern_ref import ServicePatternRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyPatternWaitTimeVersionedChildStructure(
     JourneyWaitTimeVersionedChildStructure
 ):

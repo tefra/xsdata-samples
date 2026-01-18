@@ -25,7 +25,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucContainerValue:
     """
     Represents a Container definition in the ECU Configuration Description.
@@ -105,14 +105,13 @@ class EcucContainerValue:
     class Meta:
         name = "ECUC-CONTAINER-VALUE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EcucContainerValue.ShortNameFragments = field(
         default=None,
@@ -241,7 +240,7 @@ class EcucContainerValue:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -252,7 +251,7 @@ class EcucContainerValue:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -263,18 +262,17 @@ class EcucContainerValue:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DefinitionRef(Ref):
-        dest: None | EcucContainerDefSubtypesEnum = field(
-            default=None,
+        dest: EcucContainerDefSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ParameterValues:
         ecuc_add_info_param_value: list[EcucAddInfoParamValue] = field(
             default_factory=list,
@@ -301,7 +299,7 @@ class EcucContainerValue:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReferenceValues:
         ecuc_instance_reference_value: list[EcucInstanceReferenceValue] = (
             field(
@@ -322,7 +320,7 @@ class EcucContainerValue:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SubContainers:
         ecuc_container_value: list[EcucContainerValue] = field(
             default_factory=list,

@@ -9,7 +9,7 @@ from npo.models.range_facet_result_item import RangeFacetResultItem
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DurationFacetResultItemType(RangeFacetResultItem):
     class Meta:
         name = "durationFacetResultItemType"

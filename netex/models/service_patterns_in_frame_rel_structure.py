@@ -9,7 +9,7 @@ from .service_pattern import ServicePattern
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServicePatternsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "servicePatternsInFrame_RelStructure"

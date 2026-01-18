@@ -9,7 +9,7 @@ from .point_of_interest_classification import PointOfInterestClassification
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointOfInterestClassificationsInFrameRelStructure(
     ContainmentAggregationStructure
 ):

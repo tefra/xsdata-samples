@@ -7,7 +7,7 @@ from sdmx_ml.models.dimension_list_type import DimensionListType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DimensionList(DimensionListType):
     """
     DimensionList describes the key descriptor for the data structure

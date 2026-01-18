@@ -8,7 +8,7 @@ from travelport.models.host_token_3 import HostToken3
 __NAMESPACE__ = "http://www.travelport.com/schema/terminal_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EndTerminalSessionReq(BaseReq4):
     """
     Use this request to close a session you no longer need.
@@ -22,12 +22,11 @@ class EndTerminalSessionReq(BaseReq4):
     class Meta:
         namespace = "http://www.travelport.com/schema/terminal_v33_0"
 
-    host_token: None | HostToken3 = field(
-        default=None,
+    host_token: HostToken3 = field(
         metadata={
             "name": "HostToken",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "required": True,
-        },
+        }
     )

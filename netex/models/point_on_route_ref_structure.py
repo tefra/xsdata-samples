@@ -7,6 +7,6 @@ from .point_in_sequence_ref_structure import PointInSequenceRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointOnRouteRefStructure(PointInSequenceRefStructure):
     pass

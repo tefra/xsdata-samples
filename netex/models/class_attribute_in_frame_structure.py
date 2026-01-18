@@ -8,7 +8,7 @@ from .mandatory_enumeration import MandatoryEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClassAttributeInFrameStructure:
     type_value: None | QName = field(
         default=None,

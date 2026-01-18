@@ -9,7 +9,7 @@ from .entity_in_version_structure import AvailabilityCondition
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContainedAvailabilityConditionsRelStructure(
     ContainmentAggregationStructure
 ):

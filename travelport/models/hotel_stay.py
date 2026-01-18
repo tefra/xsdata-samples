@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelStay:
     """
     Arrival and Departure dates.
@@ -14,23 +14,21 @@ class HotelStay:
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
-    checkin_date: None | str = field(
-        default=None,
+    checkin_date: str = field(
         metadata={
             "name": "CheckinDate",
             "type": "Element",
             "required": True,
             "pattern": r"[^:Z].*",
-        },
+        }
     )
-    checkout_date: None | str = field(
-        default=None,
+    checkout_date: str = field(
         metadata={
             "name": "CheckoutDate",
             "type": "Element",
             "required": True,
             "pattern": r"[^:Z].*",
-        },
+        }
     )
     key: None | str = field(
         default=None,

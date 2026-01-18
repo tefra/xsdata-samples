@@ -7,7 +7,7 @@ from sdmx_ml.models.link_type import LinkType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Link(LinkType):
     """
     Allows for the linking of other resources to identifiable objects.

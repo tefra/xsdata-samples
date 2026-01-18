@@ -7,7 +7,7 @@ from .support_buffer_locking_enum import SupportBufferLockingEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CommunicationBufferLocking:
     """
     The aggregation of this meta-class specifies that a RunnableEntity

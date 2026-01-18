@@ -7,7 +7,7 @@ from travelport.models.seat_attribute_1 import SeatAttribute1
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SeatAttributes1:
     """
     Identifies the seat attribute of the service.

@@ -8,7 +8,7 @@ from npo.models.search_result_type import SearchResultType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GenericMediaSearchResultType(SearchResultType):
     class Meta:
         name = "genericMediaSearchResultType"

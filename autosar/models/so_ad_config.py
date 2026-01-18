@@ -10,7 +10,7 @@ from .socket_connection_bundle import SocketConnectionBundle
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoAdConfig:
     """
     SoAd Configuration for one specific Physical Channel.
@@ -90,7 +90,7 @@ class SoAdConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Connections:
         socket_connection: list[SocketConnection] = field(
             default_factory=list,
@@ -101,7 +101,7 @@ class SoAdConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConnectionBundles:
         socket_connection_bundle: list[SocketConnectionBundle] = field(
             default_factory=list,
@@ -112,7 +112,7 @@ class SoAdConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LogicAddresss:
         logic_address: list[LogicAddress] = field(
             default_factory=list,
@@ -123,7 +123,7 @@ class SoAdConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SocketAddresss:
         socket_address: list[SocketAddress] = field(
             default_factory=list,

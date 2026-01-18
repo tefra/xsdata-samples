@@ -11,7 +11,7 @@ from sdmx_ml.models.time_dimension_representation_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TimeDimensionType(BaseDimensionType):
     """
     TimeDimensionType describes the structure of a time dimension.
@@ -52,14 +52,13 @@ class TimeDimensionType(BaseDimensionType):
             "type": "Ignore",
         },
     )
-    local_representation: None | TimeDimensionRepresentationType = field(
-        default=None,
+    local_representation: TimeDimensionRepresentationType = field(
         metadata={
             "name": "LocalRepresentation",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
     id: str = field(
         init=False,

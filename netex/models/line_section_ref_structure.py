@@ -7,6 +7,6 @@ from .section_ref_structure import SectionRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LineSectionRefStructure(SectionRefStructure):
     pass

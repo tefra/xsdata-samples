@@ -9,7 +9,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.article_version import (
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ArticleVersionAlternatives:
     """
     <div> <h3>Article Version Alternatives</h3> </div>.
@@ -24,7 +24,6 @@ class ArticleVersionAlternatives:
         metadata={
             "name": "article-version",
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     id: None | str = field(

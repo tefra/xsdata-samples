@@ -10,7 +10,7 @@ from .train_stop_assignment_ref import TrainStopAssignmentRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrainStopAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "trainStopAssignments_RelStructure"

@@ -7,6 +7,6 @@ from .version_frame_ref_structure import VersionFrameRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareFrameRefStructure(VersionFrameRefStructure):
     pass

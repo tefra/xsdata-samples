@@ -7,7 +7,7 @@ from travelport.models.rating_range import RatingRange
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelRating:
     """
     Hotel rating information.
@@ -40,11 +40,10 @@ class HotelRating:
             "type": "Element",
         },
     )
-    rating_provider: None | str = field(
-        default=None,
+    rating_provider: str = field(
         metadata={
             "name": "RatingProvider",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

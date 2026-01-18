@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrecipitationIntensityValue(DataValue):
     """
     A measured or calculated value of the accumulation rate of
@@ -19,14 +19,13 @@ class PrecipitationIntensityValue(DataValue):
     :ivar precipitation_intensity_value_extension:
     """
 
-    millimetres_per_hour_intensity: None | float = field(
-        default=None,
+    millimetres_per_hour_intensity: float = field(
         metadata={
             "name": "millimetresPerHourIntensity",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     precipitation_intensity_value_extension: None | ExtensionType = field(
         default=None,

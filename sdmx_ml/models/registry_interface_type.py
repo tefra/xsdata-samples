@@ -39,21 +39,20 @@ from sdmx_ml.models.submit_subscriptions_response_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RegistryInterfaceType:
     """
     This is a type which describes a structure for holding all of the
     various dedicated registry interface message types.
     """
 
-    header: None | BasicHeaderType = field(
-        default=None,
+    header: BasicHeaderType = field(
         metadata={
             "name": "Header",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
             "required": True,
-        },
+        }
     )
     choice: (
         None

@@ -9,7 +9,7 @@ from .sections_in_sequence_rel_structure import CommonSection
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CommonSectionsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "commonSectionsInFrame_RelStructure"

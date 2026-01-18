@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProviderReservationInfoRef2:
     """
     Container for Provider reservation reference key.
@@ -15,11 +15,10 @@ class ProviderReservationInfoRef2:
         name = "ProviderReservationInfoRef"
         namespace = "http://www.travelport.com/schema/uprofileCommon_v30_0"
 
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

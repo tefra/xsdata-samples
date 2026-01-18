@@ -16,7 +16,7 @@ from travelport.models.search_priority import SearchPriority
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelSearchModifiers:
     """
     Controls and switches for the Hotel Search request.
@@ -260,7 +260,7 @@ class HotelSearchModifiers:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PermittedChains:
         hotel_chain: list[HotelChain] = field(
             default_factory=list,
@@ -272,7 +272,7 @@ class HotelSearchModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProhibitedChains:
         hotel_chain: list[HotelChain] = field(
             default_factory=list,
@@ -284,7 +284,7 @@ class HotelSearchModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Amenities:
         amenity: list[Amenity] = field(
             default_factory=list,
@@ -295,7 +295,7 @@ class HotelSearchModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HotelTransportation:
         """
         Parameters
@@ -304,11 +304,10 @@ class HotelSearchModifiers:
             Transportation type code
         """
 
-        type_value: None | int = field(
-            default=None,
+        type_value: int = field(
             metadata={
                 "name": "Type",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

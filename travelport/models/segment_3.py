@@ -8,7 +8,7 @@ from travelport.models.type_element_status_4 import TypeElementStatus4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Segment3:
     """
     The base segment type.
@@ -46,13 +46,12 @@ class Segment3:
             "max_occurs": 999,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     status: None | str = field(
         default=None,

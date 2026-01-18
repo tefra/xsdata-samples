@@ -7,7 +7,7 @@ from .reentrancy_level_enum_simple import ReentrancyLevelEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReentrancyLevelEnum:
     """
     Specifies if and in which kinds of environments an entity is reentrant.
@@ -28,11 +28,10 @@ class ReentrancyLevelEnum:
     class Meta:
         name = "REENTRANCY-LEVEL-ENUM"
 
-    value: None | ReentrancyLevelEnumSimple = field(
-        default=None,
+    value: ReentrancyLevelEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

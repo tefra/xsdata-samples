@@ -7,7 +7,7 @@ from sdmx_ml.models.geo_grid_codelist_base_type import GeoGridCodelistBaseType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GeoGridCodelistType(GeoGridCodelistBaseType):
     """
     GeoGridCodelistType defines the structure of a geographic grid code
@@ -20,12 +20,11 @@ class GeoGridCodelistType(GeoGridCodelistBaseType):
         corresponding to the grid definition for the GeoGrid Codelist.
     """
 
-    grid_definition: None | str = field(
-        default=None,
+    grid_definition: str = field(
         metadata={
             "name": "GridDefinition",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )

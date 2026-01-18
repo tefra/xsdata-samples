@@ -7,7 +7,7 @@ from ipxact.models.address_block_type import AddressBlockType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddressBlock(AddressBlockType):
     """
     This is a single contiguous block of memory inside a memory map.

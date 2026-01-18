@@ -13,7 +13,7 @@ from travelport.models.type_preference_purpose_2 import TypePreferencePurpose2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeBasePreference2(TypeKeyTaggedElement2):
     """
     Parameters

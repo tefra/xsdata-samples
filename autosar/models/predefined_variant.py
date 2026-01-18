@@ -25,7 +25,7 @@ from .sw_systemconstant_value_set_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PredefinedVariant:
     """
     This specifies one predefined variant.
@@ -104,14 +104,13 @@ class PredefinedVariant:
     class Meta:
         name = "PREDEFINED-VARIANT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | PredefinedVariant.ShortNameFragments = field(
         default=None,
@@ -230,7 +229,7 @@ class PredefinedVariant:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -241,7 +240,7 @@ class PredefinedVariant:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -252,7 +251,7 @@ class PredefinedVariant:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IncludedVariantRefs:
         included_variant_ref: list[
             PredefinedVariant.IncludedVariantRefs.IncludedVariantRef
@@ -265,18 +264,17 @@ class PredefinedVariant:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class IncludedVariantRef(Ref):
-            dest: None | PredefinedVariantSubtypesEnum = field(
-                default=None,
+            dest: PredefinedVariantSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PostBuildVariantCriterionValueSetRefs:
         post_build_variant_criterion_value_set_ref: list[
             PredefinedVariant.PostBuildVariantCriterionValueSetRefs.PostBuildVariantCriterionValueSetRef
@@ -289,18 +287,17 @@ class PredefinedVariant:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PostBuildVariantCriterionValueSetRef(Ref):
-            dest: None | PostBuildVariantCriterionValueSetSubtypesEnum = field(
-                default=None,
+            dest: PostBuildVariantCriterionValueSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwSystemconstantValueSetRefs:
         sw_systemconstant_value_set_ref: list[
             PredefinedVariant.SwSystemconstantValueSetRefs.SwSystemconstantValueSetRef
@@ -313,13 +310,12 @@ class PredefinedVariant:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SwSystemconstantValueSetRef(Ref):
-            dest: None | SwSystemconstantValueSetSubtypesEnum = field(
-                default=None,
+            dest: SwSystemconstantValueSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

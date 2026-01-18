@@ -13,7 +13,7 @@ from .zone_ref_structure import ZoneRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ZoneVersionStructure(GroupOfPointsVersionStructure):
     class Meta:
         name = "Zone_VersionStructure"

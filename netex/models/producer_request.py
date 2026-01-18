@@ -9,7 +9,7 @@ from .producer_request_endpoint_structure import (
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProducerRequest(ProducerRequestEndpointStructure):
     class Meta:
         namespace = "http://www.siri.org.uk/siri"

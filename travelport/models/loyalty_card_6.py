@@ -11,7 +11,7 @@ from travelport.models.type_provider_reservation_specific_info_6 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LoyaltyCard6:
     """
     Provider loyalty card information.
@@ -65,14 +65,13 @@ class LoyaltyCard6:
             "type": "Attribute",
         },
     )
-    supplier_code: None | str = field(
-        default=None,
+    supplier_code: str = field(
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
     alliance_level: None | str = field(
         default=None,
@@ -104,15 +103,14 @@ class LoyaltyCard6:
             "type": "Attribute",
         },
     )
-    card_number: None | str = field(
-        default=None,
+    card_number: str = field(
         metadata={
             "name": "CardNumber",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 36,
-        },
+        }
     )
     status: None | str = field(
         default=None,

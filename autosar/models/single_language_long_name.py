@@ -11,7 +11,7 @@ from .tt import Tt
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SingleLanguageLongName:
     """
     SingleLanguageLongName.
@@ -83,10 +83,10 @@ class SingleLanguageLongName:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(Supscript):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(Supscript):
         pass

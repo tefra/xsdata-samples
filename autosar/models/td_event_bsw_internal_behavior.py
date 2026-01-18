@@ -23,7 +23,7 @@ from .td_event_occurrence_expression import TdEventOccurrenceExpression
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventBswInternalBehavior:
     """
     This is used to describe timing events related to the
@@ -93,14 +93,13 @@ class TdEventBswInternalBehavior:
     class Meta:
         name = "TD-EVENT-BSW-INTERNAL-BEHAVIOR"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | TdEventBswInternalBehavior.ShortNameFragments
@@ -219,7 +218,7 @@ class TdEventBswInternalBehavior:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -230,7 +229,7 @@ class TdEventBswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -241,13 +240,12 @@ class TdEventBswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BswModuleEntityRef(Ref):
-        dest: None | BswModuleEntitySubtypesEnum = field(
-            default=None,
+        dest: BswModuleEntitySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

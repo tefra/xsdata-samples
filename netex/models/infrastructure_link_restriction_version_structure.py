@@ -10,28 +10,26 @@ from .network_restriction_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InfrastructureLinkRestrictionVersionStructure(
     NetworkRestrictionVersionStructure
 ):
     class Meta:
         name = "InfrastructureLinkRestriction_VersionStructure"
 
-    from_link_ref: None | LinkRefStructure = field(
-        default=None,
+    from_link_ref: LinkRefStructure = field(
         metadata={
             "name": "FromLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    to_link_ref: None | LinkRefStructure = field(
-        default=None,
+    to_link_ref: LinkRefStructure = field(
         metadata={
             "name": "ToLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

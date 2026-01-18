@@ -11,27 +11,25 @@ from ..common.nhinc_common import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RespondingGatewayPrpaIn201305Uv02RequestType:
     class Meta:
         name = "RespondingGateway_PRPA_IN201305UV02RequestType"
 
-    prpa_in201305_uv02: None | PrpaIn201305Uv02 = field(
-        default=None,
+    prpa_in201305_uv02: PrpaIn201305Uv02 = field(
         metadata={
             "name": "PRPA_IN201305UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    assertion: None | AssertionType = field(
-        default=None,
+    assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     nhin_target_communities: None | NhinTargetCommunitiesType = field(
         default=None,
@@ -43,19 +41,18 @@ class RespondingGatewayPrpaIn201305Uv02RequestType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RespondingGatewayPrpaIn201305Uv02SecuredRequestType:
     class Meta:
         name = "RespondingGateway_PRPA_IN201305UV02SecuredRequestType"
 
-    prpa_in201305_uv02: None | PrpaIn201305Uv02 = field(
-        default=None,
+    prpa_in201305_uv02: PrpaIn201305Uv02 = field(
         metadata={
             "name": "PRPA_IN201305UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     nhin_target_communities: None | NhinTargetCommunitiesType = field(
         default=None,
@@ -67,7 +64,7 @@ class RespondingGatewayPrpaIn201305Uv02SecuredRequestType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RespondingGatewayPrpaIn201305Uv02Request(
     RespondingGatewayPrpaIn201305Uv02RequestType
 ):
@@ -76,7 +73,7 @@ class RespondingGatewayPrpaIn201305Uv02Request(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RespondingGatewayPrpaIn201305Uv02SecuredRequest(
     RespondingGatewayPrpaIn201305Uv02SecuredRequestType
 ):

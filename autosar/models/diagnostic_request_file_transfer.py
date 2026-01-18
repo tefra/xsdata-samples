@@ -24,7 +24,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticRequestFileTransfer:
     """
     This diagnostic service instance implements the UDS service 0x38.
@@ -96,14 +96,13 @@ class DiagnosticRequestFileTransfer:
     class Meta:
         name = "DIAGNOSTIC-REQUEST-FILE-TRANSFER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticRequestFileTransfer.ShortNameFragments
@@ -214,7 +213,7 @@ class DiagnosticRequestFileTransfer:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -225,7 +224,7 @@ class DiagnosticRequestFileTransfer:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -236,24 +235,22 @@ class DiagnosticRequestFileTransfer:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessPermissionRef(Ref):
-        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticAccessPermissionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequestFileTransferClassRef(Ref):
-        dest: None | DiagnosticRequestFileTransferClassSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticRequestFileTransferClassSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

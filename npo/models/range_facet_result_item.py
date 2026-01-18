@@ -7,7 +7,7 @@ from npo.models.facet_result_item import FacetResultItem
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RangeFacetResultItem(FacetResultItem):
     class Meta:
         name = "rangeFacetResultItem"

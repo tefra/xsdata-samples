@@ -11,7 +11,7 @@ from travelport.models.fare_family_criteria import FareFamilyCriteria
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BrandedFareSearchReq(BaseReq1):
     """
     Branded Fare search request.
@@ -20,19 +20,17 @@ class BrandedFareSearchReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    fare_family_criteria: None | FareFamilyCriteria = field(
-        default=None,
+    fare_family_criteria: FareFamilyCriteria = field(
         metadata={
             "name": "FareFamilyCriteria",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    branded_fare_search_modifier: None | BrandedFareSearchModifier = field(
-        default=None,
+    branded_fare_search_modifier: BrandedFareSearchModifier = field(
         metadata={
             "name": "BrandedFareSearchModifier",
             "type": "Element",
             "required": True,
-        },
+        }
     )

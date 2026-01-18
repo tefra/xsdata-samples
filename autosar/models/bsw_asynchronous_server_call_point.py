@@ -16,7 +16,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswAsynchronousServerCallPoint:
     """
     Represents an asynchronous procedure call point via the BSW Scheduler.
@@ -47,14 +47,13 @@ class BswAsynchronousServerCallPoint:
     class Meta:
         name = "BSW-ASYNCHRONOUS-SERVER-CALL-POINT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | BswAsynchronousServerCallPoint.ShortNameFragments
@@ -110,7 +109,7 @@ class BswAsynchronousServerCallPoint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -121,7 +120,7 @@ class BswAsynchronousServerCallPoint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextLimitationRefs:
         context_limitation_ref: list[
             BswAsynchronousServerCallPoint.ContextLimitationRefs.ContextLimitationRef
@@ -134,24 +133,22 @@ class BswAsynchronousServerCallPoint:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ContextLimitationRef(Ref):
-            dest: None | BswDistinguishedPartitionSubtypesEnum = field(
-                default=None,
+            dest: BswDistinguishedPartitionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CalledEntryRef(Ref):
-        dest: None | BswModuleClientServerEntrySubtypesEnum = field(
-            default=None,
+        dest: BswModuleClientServerEntrySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -102,7 +102,7 @@ from .coct_mt810000_uv import CoctMt810000UvVerification
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06CoverageChargePolicy:
     class Meta:
         name = "COCT_MT510000UV06.CoverageChargePolicy"
@@ -196,7 +196,7 @@ class CoctMt510000Uv06CoverageChargePolicy:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06CoverageDefinition:
     class Meta:
         name = "COCT_MT510000UV06.CoverageDefinition"
@@ -273,7 +273,7 @@ class CoctMt510000Uv06CoverageDefinition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06CoverageLimitObservation:
     class Meta:
         name = "COCT_MT510000UV06.CoverageLimitObservation"
@@ -338,13 +338,12 @@ class CoctMt510000Uv06CoverageLimitObservation:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassObservation = field(
-        default=None,
+    class_code: ActClassObservation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -357,7 +356,7 @@ class CoctMt510000Uv06CoverageLimitObservation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06CoveragePolicy:
     class Meta:
         name = "COCT_MT510000UV06.CoveragePolicy"
@@ -451,7 +450,7 @@ class CoctMt510000Uv06CoveragePolicy:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06DirectAuthorityOver:
     class Meta:
         name = "COCT_MT510000UV06.DirectAuthorityOver"
@@ -481,12 +480,11 @@ class CoctMt510000Uv06DirectAuthorityOver:
         },
     )
     underwriter: None | CoctMt510000Uv06Underwriter = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -506,7 +504,7 @@ class CoctMt510000Uv06DirectAuthorityOver:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06DirectAuthorityOver4:
     class Meta:
         name = "COCT_MT510000UV06.DirectAuthorityOver4"
@@ -536,12 +534,11 @@ class CoctMt510000Uv06DirectAuthorityOver4:
         },
     )
     payor: None | CoctMt510000Uv06Payor = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -561,7 +558,7 @@ class CoctMt510000Uv06DirectAuthorityOver4:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06EligibilityStatusObservation:
     class Meta:
         name = "COCT_MT510000UV06.EligibilityStatusObservation"
@@ -626,13 +623,12 @@ class CoctMt510000Uv06EligibilityStatusObservation:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassObservation = field(
-        default=None,
+    class_code: ActClassObservation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -645,7 +641,7 @@ class CoctMt510000Uv06EligibilityStatusObservation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Organization:
     class Meta:
         name = "COCT_MT510000UV06.Organization"
@@ -703,13 +699,12 @@ class CoctMt510000Uv06Organization:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassOrganization = field(
-        default=None,
+    class_code: EntityClassOrganization = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -722,7 +717,7 @@ class CoctMt510000Uv06Organization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Person:
     class Meta:
         name = "COCT_MT510000UV06.Person"
@@ -808,7 +803,7 @@ class CoctMt510000Uv06Person:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06PolicyOrProgramFinancialLimit:
     class Meta:
         name = "COCT_MT510000UV06.PolicyOrProgramFinancialLimit"
@@ -894,7 +889,7 @@ class CoctMt510000Uv06PolicyOrProgramFinancialLimit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Precondition:
     class Meta:
         name = "COCT_MT510000UV06.Precondition"
@@ -1030,7 +1025,7 @@ class CoctMt510000Uv06Precondition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06PreviousPolicyOrProgram:
     class Meta:
         name = "COCT_MT510000UV06.PreviousPolicyOrProgram"
@@ -1066,14 +1061,13 @@ class CoctMt510000Uv06PreviousPolicyOrProgram:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     effective_time: None | IvlTsExplicit = field(
         default=None,
@@ -1110,7 +1104,7 @@ class CoctMt510000Uv06PreviousPolicyOrProgram:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06ServiceDefinition:
     class Meta:
         name = "COCT_MT510000UV06.ServiceDefinition"
@@ -1153,13 +1147,12 @@ class CoctMt510000Uv06ServiceDefinition:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -1172,7 +1165,7 @@ class CoctMt510000Uv06ServiceDefinition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Subject3:
     class Meta:
         name = "COCT_MT510000UV06.Subject3"
@@ -1202,12 +1195,11 @@ class CoctMt510000Uv06Subject3:
         },
     )
     verification: None | CoctMt810000UvVerification = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1216,17 +1208,16 @@ class CoctMt510000Uv06Subject3:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetSubject = field(
-        default=None,
+    type_code: ParticipationTargetSubject = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Beneficiary:
     class Meta:
         name = "COCT_MT510000UV06.Beneficiary"
@@ -1350,7 +1341,7 @@ class CoctMt510000Uv06Beneficiary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Definition:
     class Meta:
         name = "COCT_MT510000UV06.Definition"
@@ -1572,7 +1563,7 @@ class CoctMt510000Uv06Definition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Definition3:
     class Meta:
         name = "COCT_MT510000UV06.Definition3"
@@ -1602,13 +1593,12 @@ class CoctMt510000Uv06Definition3:
         },
     )
     coverage_definition: None | CoctMt510000Uv06CoverageDefinition = field(
-        default=None,
         metadata={
             "name": "coverageDefinition",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1649,7 +1639,7 @@ class CoctMt510000Uv06Definition3:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Limitation:
     class Meta:
         name = "COCT_MT510000UV06.Limitation"
@@ -1681,13 +1671,12 @@ class CoctMt510000Uv06Limitation:
     coverage_limit_observation: (
         None | CoctMt510000Uv06CoverageLimitObservation
     ) = field(
-        default=None,
         metadata={
             "name": "coverageLimitObservation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1728,7 +1717,7 @@ class CoctMt510000Uv06Limitation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Limitation3:
     class Meta:
         name = "COCT_MT510000UV06.Limitation3"
@@ -1760,13 +1749,12 @@ class CoctMt510000Uv06Limitation3:
     policy_or_program_financial_limit: (
         None | CoctMt510000Uv06PolicyOrProgramFinancialLimit
     ) = field(
-        default=None,
         metadata={
             "name": "policyOrProgramFinancialLimit",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1807,7 +1795,7 @@ class CoctMt510000Uv06Limitation3:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Payor:
     class Meta:
         name = "COCT_MT510000UV06.Payor"
@@ -1941,7 +1929,7 @@ class CoctMt510000Uv06Payor:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06PersonalRelationship:
     class Meta:
         name = "COCT_MT510000UV06.PersonalRelationship"
@@ -2037,7 +2025,7 @@ class CoctMt510000Uv06PersonalRelationship:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06PolicyHolder:
     class Meta:
         name = "COCT_MT510000UV06.PolicyHolder"
@@ -2149,7 +2137,7 @@ class CoctMt510000Uv06PolicyHolder:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Reference:
     class Meta:
         name = "COCT_MT510000UV06.Reference"
@@ -2179,13 +2167,12 @@ class CoctMt510000Uv06Reference:
         },
     )
     coverage_policy: None | CoctMt510000Uv06CoveragePolicy = field(
-        default=None,
         metadata={
             "name": "coveragePolicy",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2226,7 +2213,7 @@ class CoctMt510000Uv06Reference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Reference2:
     class Meta:
         name = "COCT_MT510000UV06.Reference2"
@@ -2257,13 +2244,12 @@ class CoctMt510000Uv06Reference2:
     )
     coverage_charge_policy: None | CoctMt510000Uv06CoverageChargePolicy = (
         field(
-            default=None,
             metadata={
                 "name": "coverageChargePolicy",
                 "type": "Element",
                 "namespace": "urn:hl7-org:v3",
                 "nillable": True,
-            },
+            }
         )
     )
     null_flavor: None | NullFlavor = field(
@@ -2305,7 +2291,7 @@ class CoctMt510000Uv06Reference2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06ReplacementOf:
     class Meta:
         name = "COCT_MT510000UV06.ReplacementOf"
@@ -2337,13 +2323,12 @@ class CoctMt510000Uv06ReplacementOf:
     previous_policy_or_program: (
         None | CoctMt510000Uv06PreviousPolicyOrProgram
     ) = field(
-        default=None,
         metadata={
             "name": "previousPolicyOrProgram",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2384,7 +2369,7 @@ class CoctMt510000Uv06ReplacementOf:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06ResponsibleParty:
     class Meta:
         name = "COCT_MT510000UV06.ResponsibleParty"
@@ -2475,17 +2460,16 @@ class CoctMt510000Uv06ResponsibleParty:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassAgent = field(
-        default=None,
+    class_code: RoleClassAgent = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Subject:
     class Meta:
         name = "COCT_MT510000UV06.Subject"
@@ -2517,13 +2501,12 @@ class CoctMt510000Uv06Subject:
     eligibility_status_observation: (
         None | CoctMt510000Uv06EligibilityStatusObservation
     ) = field(
-        default=None,
         metadata={
             "name": "eligibilityStatusObservation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2532,17 +2515,16 @@ class CoctMt510000Uv06Subject:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetSubject = field(
-        default=None,
+    type_code: ParticipationTargetSubject = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Beneficiary2:
     class Meta:
         name = "COCT_MT510000UV06.Beneficiary2"
@@ -2613,7 +2595,7 @@ class CoctMt510000Uv06Beneficiary2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06CoverageCharge:
     class Meta:
         name = "COCT_MT510000UV06.CoverageCharge"
@@ -2720,17 +2702,16 @@ class CoctMt510000Uv06CoverageCharge:
             "required": True,
         },
     )
-    mood_code: None | ActMoodCriterion = field(
-        default=None,
+    mood_code: ActMoodCriterion = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06DirectAuthorityOver2:
     class Meta:
         name = "COCT_MT510000UV06.DirectAuthorityOver2"
@@ -2760,12 +2741,11 @@ class CoctMt510000Uv06DirectAuthorityOver2:
         },
     )
     payor: None | CoctMt510000Uv06Payor = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2785,7 +2765,7 @@ class CoctMt510000Uv06DirectAuthorityOver2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06FinancialParticipationCharge:
     class Meta:
         name = "COCT_MT510000UV06.FinancialParticipationCharge"
@@ -2892,17 +2872,16 @@ class CoctMt510000Uv06FinancialParticipationCharge:
             "required": True,
         },
     )
-    mood_code: None | ActMoodCriterion = field(
-        default=None,
+    mood_code: ActMoodCriterion = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Holder:
     class Meta:
         name = "COCT_MT510000UV06.Holder"
@@ -2932,13 +2911,12 @@ class CoctMt510000Uv06Holder:
         },
     )
     policy_holder: None | CoctMt510000Uv06PolicyHolder = field(
-        default=None,
         metadata={
             "name": "policyHolder",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2958,7 +2936,7 @@ class CoctMt510000Uv06Holder:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06IndirectAuthorithyOver:
     class Meta:
         name = "COCT_MT510000UV06.IndirectAuthorithyOver"
@@ -2988,13 +2966,12 @@ class CoctMt510000Uv06IndirectAuthorithyOver:
         },
     )
     responsible_party: None | CoctMt510000Uv06ResponsibleParty = field(
-        default=None,
         metadata={
             "name": "responsibleParty",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3014,7 +2991,7 @@ class CoctMt510000Uv06IndirectAuthorithyOver:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06IndirectAuthorithyOver2:
     class Meta:
         name = "COCT_MT510000UV06.IndirectAuthorithyOver2"
@@ -3044,13 +3021,12 @@ class CoctMt510000Uv06IndirectAuthorithyOver2:
         },
     )
     policy_holder: None | CoctMt510000Uv06PolicyHolder = field(
-        default=None,
         metadata={
             "name": "policyHolder",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3070,7 +3046,7 @@ class CoctMt510000Uv06IndirectAuthorithyOver2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Part:
     class Meta:
         name = "COCT_MT510000UV06.Part"
@@ -3116,13 +3092,12 @@ class CoctMt510000Uv06Part:
         },
     )
     personal_relationship: None | CoctMt510000Uv06PersonalRelationship = field(
-        default=None,
         metadata={
             "name": "personalRelationship",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3142,7 +3117,7 @@ class CoctMt510000Uv06Part:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06PrimaryPerformer:
     class Meta:
         name = "COCT_MT510000UV06.PrimaryPerformer"
@@ -3180,12 +3155,11 @@ class CoctMt510000Uv06PrimaryPerformer:
         },
     )
     payor: None | CoctMt510000Uv06Payor = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3205,7 +3179,7 @@ class CoctMt510000Uv06PrimaryPerformer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06CoveredParty:
     class Meta:
         name = "COCT_MT510000UV06.CoveredParty"
@@ -3362,17 +3336,16 @@ class CoctMt510000Uv06CoveredParty:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassCoveredParty = field(
-        default=None,
+    class_code: RoleClassCoveredParty = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Limitation2:
     class Meta:
         name = "COCT_MT510000UV06.Limitation2"
@@ -3460,7 +3433,7 @@ class CoctMt510000Uv06Limitation2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Underwriter:
     class Meta:
         name = "COCT_MT510000UV06.Underwriter"
@@ -3603,7 +3576,7 @@ class CoctMt510000Uv06Underwriter:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Author2:
     class Meta:
         name = "COCT_MT510000UV06.Author2"
@@ -3641,12 +3614,11 @@ class CoctMt510000Uv06Author2:
         },
     )
     underwriter: None | CoctMt510000Uv06Underwriter = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3666,7 +3638,7 @@ class CoctMt510000Uv06Author2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Benefit:
     class Meta:
         name = "COCT_MT510000UV06.Benefit"
@@ -3772,21 +3744,19 @@ class CoctMt510000Uv06Benefit:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassCareProvision = field(
-        default=None,
+    class_code: ActClassCareProvision = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | ActMoodCompletionTrack = field(
-        default=None,
+    mood_code: ActMoodCompletionTrack = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     negation_ind: None | str = field(
         default=None,
@@ -3798,7 +3768,7 @@ class CoctMt510000Uv06Benefit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06CoveredParty2:
     class Meta:
         name = "COCT_MT510000UV06.CoveredParty2"
@@ -3828,13 +3798,12 @@ class CoctMt510000Uv06CoveredParty2:
         },
     )
     covered_party: None | CoctMt510000Uv06CoveredParty = field(
-        default=None,
         metadata={
             "name": "coveredParty",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3860,7 +3829,7 @@ class CoctMt510000Uv06CoveredParty2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06DirectAuthorityOver3:
     class Meta:
         name = "COCT_MT510000UV06.DirectAuthorityOver3"
@@ -3890,12 +3859,11 @@ class CoctMt510000Uv06DirectAuthorityOver3:
         },
     )
     underwriter: None | CoctMt510000Uv06Underwriter = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3915,7 +3883,7 @@ class CoctMt510000Uv06DirectAuthorityOver3:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Coverage2:
     class Meta:
         name = "COCT_MT510000UV06.Coverage2"
@@ -3945,12 +3913,11 @@ class CoctMt510000Uv06Coverage2:
         },
     )
     benefit: None | CoctMt510000Uv06Benefit = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -3999,7 +3966,7 @@ class CoctMt510000Uv06Coverage2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Sponsor:
     class Meta:
         name = "COCT_MT510000UV06.Sponsor"
@@ -4133,7 +4100,7 @@ class CoctMt510000Uv06Sponsor:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06ResponsibleParty2:
     class Meta:
         name = "COCT_MT510000UV06.ResponsibleParty2"
@@ -4171,12 +4138,11 @@ class CoctMt510000Uv06ResponsibleParty2:
         },
     )
     sponsor: None | CoctMt510000Uv06Sponsor = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -4196,7 +4162,7 @@ class CoctMt510000Uv06ResponsibleParty2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06PolicyOrProgram:
     class Meta:
         name = "COCT_MT510000UV06.PolicyOrProgram"
@@ -4232,13 +4198,12 @@ class CoctMt510000Uv06PolicyOrProgram:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     status_code: None | Cs = field(
         default=None,
@@ -4265,13 +4230,12 @@ class CoctMt510000Uv06PolicyOrProgram:
         },
     )
     covered_party: None | CoctMt510000Uv06CoveredParty2 = field(
-        default=None,
         metadata={
             "name": "coveredParty",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     holder: None | CoctMt510000Uv06Holder = field(
         default=None,
@@ -4376,7 +4340,7 @@ class CoctMt510000Uv06PolicyOrProgram:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06Component:
     class Meta:
         name = "COCT_MT510000UV06.Component"
@@ -4414,13 +4378,12 @@ class CoctMt510000Uv06Component:
         },
     )
     policy_or_program: None | CoctMt510000Uv06PolicyOrProgram = field(
-        default=None,
         metadata={
             "name": "policyOrProgram",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -4429,17 +4392,16 @@ class CoctMt510000Uv06Component:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipHasComponent = field(
-        default=None,
+    type_code: ActRelationshipHasComponent = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt510000Uv06CoverageRecord:
     class Meta:
         name = "COCT_MT510000UV06.CoverageRecord"

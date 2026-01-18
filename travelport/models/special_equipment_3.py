@@ -7,7 +7,7 @@ from travelport.models.type_element_status_4 import TypeElementStatus4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecialEquipment3:
     """
     Parameters
@@ -36,13 +36,12 @@ class SpecialEquipment3:
             "type": "Attribute",
         },
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     el_stat: None | TypeElementStatus4 = field(
         default=None,

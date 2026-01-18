@@ -9,7 +9,7 @@ from travelport.models.flex_explore_modifiers_type import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexExploreModifiers:
     """
     This is the container for a set of modifiers which allow the user to
@@ -49,13 +49,12 @@ class FlexExploreModifiers:
             "white_space": "collapse",
         },
     )
-    type_value: None | FlexExploreModifiersType = field(
-        default=None,
+    type_value: FlexExploreModifiersType = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     radius: None | int = field(
         default=None,

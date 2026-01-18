@@ -8,7 +8,7 @@ from .integer import Integer
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class J1939NodeName:
     """
     This element contains attributes to configure the J1939NmNode NAME.

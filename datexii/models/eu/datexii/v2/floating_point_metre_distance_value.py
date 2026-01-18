@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FloatingPointMetreDistanceValue(DataValue):
     """
     A measured or calculated value of distance in metres in a floating
@@ -19,14 +19,13 @@ class FloatingPointMetreDistanceValue(DataValue):
     :ivar floating_point_metre_distance_value_extension:
     """
 
-    floating_point_metre_distance: None | float = field(
-        default=None,
+    floating_point_metre_distance: float = field(
         metadata={
             "name": "floatingPointMetreDistance",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     floating_point_metre_distance_value_extension: None | ExtensionType = (
         field(

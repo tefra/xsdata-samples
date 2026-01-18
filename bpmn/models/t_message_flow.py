@@ -8,7 +8,7 @@ from .t_base_element import TBaseElement
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TMessageFlow(TBaseElement):
     class Meta:
         name = "tMessageFlow"
@@ -19,21 +19,19 @@ class TMessageFlow(TBaseElement):
             "type": "Attribute",
         },
     )
-    source_ref: None | QName = field(
-        default=None,
+    source_ref: QName = field(
         metadata={
             "name": "sourceRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    target_ref: None | QName = field(
-        default=None,
+    target_ref: QName = field(
         metadata={
             "name": "targetRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     message_ref: None | QName = field(
         default=None,

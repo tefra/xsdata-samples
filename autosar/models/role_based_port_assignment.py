@@ -10,7 +10,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoleBasedPortAssignment:
     """
     This class specifies an assignment of a role to a particular service
@@ -88,13 +88,12 @@ class RoleBasedPortAssignment:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortPrototypeRef(Ref):
-        dest: None | PortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: PortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -25,7 +25,7 @@ from .mcai_mt900001_uv01 import McaiMt900001Uv01DetectedIssueEvent
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuqiMt021001Uv01AuthorOrPerformer:
     class Meta:
         name = "QUQI_MT021001UV01.AuthorOrPerformer"
@@ -118,13 +118,12 @@ class QuqiMt021001Uv01AuthorOrPerformer:
             "type": "Attribute",
         },
     )
-    type_code: None | XParticipationAuthorPerformer = field(
-        default=None,
+    type_code: XParticipationAuthorPerformer = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AP,
@@ -135,7 +134,7 @@ class QuqiMt021001Uv01AuthorOrPerformer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuqiMt021001Uv01DataEnterer:
     class Meta:
         name = "QUQI_MT021001UV01.DataEnterer"
@@ -172,13 +171,12 @@ class QuqiMt021001Uv01DataEnterer:
         },
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -205,7 +203,7 @@ class QuqiMt021001Uv01DataEnterer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuqiMt021001Uv01InformationRecipient:
     class Meta:
         name = "QUQI_MT021001UV01.InformationRecipient"
@@ -242,13 +240,12 @@ class QuqiMt021001Uv01InformationRecipient:
         },
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -257,13 +254,12 @@ class QuqiMt021001Uv01InformationRecipient:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationInformationRecipient = field(
-        default=None,
+    type_code: ParticipationInformationRecipient = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AP,
@@ -274,7 +270,7 @@ class QuqiMt021001Uv01InformationRecipient:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuqiMt021001Uv01Overseer:
     class Meta:
         name = "QUQI_MT021001UV01.Overseer"
@@ -343,13 +339,12 @@ class QuqiMt021001Uv01Overseer:
         },
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -358,13 +353,12 @@ class QuqiMt021001Uv01Overseer:
             "type": "Attribute",
         },
     )
-    type_code: None | XParticipationVrfRespSprfWit = field(
-        default=None,
+    type_code: XParticipationVrfRespSprfWit = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AP,
@@ -375,7 +369,7 @@ class QuqiMt021001Uv01Overseer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuqiMt021001Uv01Reason:
     class Meta:
         name = "QUQI_MT021001UV01.Reason"
@@ -405,13 +399,12 @@ class QuqiMt021001Uv01Reason:
         },
     )
     detected_issue_event: None | McaiMt900001Uv01DetectedIssueEvent = field(
-        default=None,
         metadata={
             "name": "detectedIssueEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -420,13 +413,12 @@ class QuqiMt021001Uv01Reason:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipReason = field(
-        default=None,
+    type_code: ActRelationshipReason = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_conduction_ind: None | str = field(
         default=None,

@@ -7,7 +7,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FilterExitManagement:
     """
     Filter indicators management information.
@@ -22,23 +22,21 @@ class FilterExitManagement:
     :ivar filter_exit_management_extension:
     """
 
-    filter_end: None | bool = field(
-        default=None,
+    filter_end: bool = field(
         metadata={
             "name": "filterEnd",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    filter_out_of_range: None | bool = field(
-        default=None,
+    filter_out_of_range: bool = field(
         metadata={
             "name": "filterOutOfRange",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     filter_exit_management_extension: None | ExtensionType = field(
         default=None,

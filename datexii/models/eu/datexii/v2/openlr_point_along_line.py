@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.openlr_base_point_location import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenlrPointAlongLine(OpenlrBasePointLocation):
     """
     Point along a line.

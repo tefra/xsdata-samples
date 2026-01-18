@@ -36,7 +36,7 @@ from .coct_mt150000_uv02 import CoctMt150000Uv02Organization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt050000Uv01Patient:
     class Meta:
         name = "COCT_MT050000UV01.Patient"
@@ -87,14 +87,13 @@ class CoctMt050000Uv01Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     effective_time: None | IvlTsExplicit = field(
         default=None,

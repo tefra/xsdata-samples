@@ -14,32 +14,29 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EngineeringMaintenanceType:
-    inception_date: None | DateTimeType = field(
-        default=None,
+    inception_date: DateTimeType = field(
         metadata={
             "name": "InceptionDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    expiry_date: None | DateTimeType = field(
-        default=None,
+    expiry_date: DateTimeType = field(
         metadata={
             "name": "ExpiryDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    years: None | EngineeringMaintenanceTypeYears = field(
-        default=None,
+    years: EngineeringMaintenanceTypeYears = field(
         metadata={
             "name": "Years",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from .network_target_address_type_simple import NetworkTargetAddressTypeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NetworkTargetAddressType:
     """
     Network Target Address type (see ISO 15765-2).
@@ -28,11 +28,10 @@ class NetworkTargetAddressType:
     class Meta:
         name = "NETWORK-TARGET-ADDRESS-TYPE"
 
-    value: None | NetworkTargetAddressTypeSimple = field(
-        default=None,
+    value: NetworkTargetAddressTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

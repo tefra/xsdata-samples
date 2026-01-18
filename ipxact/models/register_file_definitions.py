@@ -26,7 +26,7 @@ from ipxact.models.volatile import Volatile
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RegisterFileDefinitions:
     class Meta:
         name = "registerFileDefinitions"
@@ -43,7 +43,7 @@ class RegisterFileDefinitions:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RegisterFileDefinition:
         """
         :ivar name: Unique name
@@ -65,12 +65,11 @@ class RegisterFileDefinitions:
         :ivar id:
         """
 
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         display_name: None | DisplayName = field(
             default=None,
@@ -99,12 +98,11 @@ class RegisterFileDefinitions:
                 "type": "Element",
             },
         )
-        range: None | UnsignedPositiveLongintExpression = field(
-            default=None,
+        range: UnsignedPositiveLongintExpression = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         access_policies: None | AccessPolicies = field(
             default=None,
@@ -150,7 +148,7 @@ class RegisterFileDefinitions:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Register:
             """
             :ivar name: Unique name
@@ -180,12 +178,11 @@ class RegisterFileDefinitions:
             :ivar id:
             """
 
-            name: None | str = field(
-                default=None,
+            name: str = field(
                 metadata={
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             display_name: None | DisplayName = field(
                 default=None,
@@ -223,13 +220,12 @@ class RegisterFileDefinitions:
                     "type": "Element",
                 },
             )
-            address_offset: None | UnsignedLongintExpression = field(
-                default=None,
+            address_offset: UnsignedLongintExpression = field(
                 metadata={
                     "name": "addressOffset",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             register_definition_ref: (
                 None
@@ -302,7 +298,7 @@ class RegisterFileDefinitions:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class AccessHandles:
                 access_handle: list[SimpleAccessHandle] = field(
                     default_factory=list,
@@ -313,7 +309,7 @@ class RegisterFileDefinitions:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class RegisterDefinitionRef:
                 value: str = field(
                     default="",
@@ -321,11 +317,10 @@ class RegisterFileDefinitions:
                         "required": True,
                     },
                 )
-                type_definitions: None | str = field(
-                    default=None,
+                type_definitions: str = field(
                     metadata={
                         "name": "typeDefinitions",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )

@@ -23,7 +23,7 @@ from sabre.models.warnings_type import WarningsType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtaAirLowFareSearchRs:
     """
     The Low Fare Search Response message contains a number of .Priced
@@ -190,13 +190,12 @@ class OtaAirLowFareSearchRs:
             "type": "Attribute",
         },
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     transaction_identifier: None | str = field(
         default=None,
@@ -280,7 +279,7 @@ class OtaAirLowFareSearchRs:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PricedItineraries:
         """
         Attributes:
@@ -307,7 +306,7 @@ class OtaAirLowFareSearchRs:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TpaExtensions:
             """
             Attributes:
@@ -323,7 +322,7 @@ class OtaAirLowFareSearchRs:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OneWayItineraries:
         """
         Attributes:
@@ -354,7 +353,7 @@ class OtaAirLowFareSearchRs:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class BrandedOneWayItineraries:
             """
             Attributes:
@@ -380,17 +379,16 @@ class OtaAirLowFareSearchRs:
                     "type": "Element",
                 },
             )
-            rph: None | str = field(
-                default=None,
+            rph: str = field(
                 metadata={
                     "name": "RPH",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[0-9]{1,8}",
-                },
+                }
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TpaExtensions:
                 """
                 Attributes:
@@ -406,7 +404,7 @@ class OtaAirLowFareSearchRs:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SimpleOneWayItineraries:
             """
             Attributes:
@@ -432,17 +430,16 @@ class OtaAirLowFareSearchRs:
                     "type": "Element",
                 },
             )
-            rph: None | str = field(
-                default=None,
+            rph: str = field(
                 metadata={
                     "name": "RPH",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[0-9]{1,8}",
-                },
+                }
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TpaExtensions:
                 """
                 Attributes:
@@ -458,7 +455,7 @@ class OtaAirLowFareSearchRs:
                     },
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DepartedItineraries:
         """
         Attributes:
@@ -486,7 +483,7 @@ class OtaAirLowFareSearchRs:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PricedItineraries:
             """
             Attributes:
@@ -515,7 +512,7 @@ class OtaAirLowFareSearchRs:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TpaExtensions:
                 """
                 Attributes:
@@ -531,7 +528,7 @@ class OtaAirLowFareSearchRs:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class OneWayItineraries:
             """
             Attributes:
@@ -562,7 +559,7 @@ class OtaAirLowFareSearchRs:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class BrandedOneWayItineraries:
                 """
                 Attributes:
@@ -589,17 +586,16 @@ class OtaAirLowFareSearchRs:
                         "type": "Element",
                     },
                 )
-                rph: None | str = field(
-                    default=None,
+                rph: str = field(
                     metadata={
                         "name": "RPH",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9]{1,8}",
-                    },
+                    }
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class TpaExtensions:
                     """
                     Attributes:
@@ -617,7 +613,7 @@ class OtaAirLowFareSearchRs:
                         )
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class SimpleOneWayItineraries:
                 """
                 Attributes:
@@ -644,17 +640,16 @@ class OtaAirLowFareSearchRs:
                         "type": "Element",
                     },
                 )
-                rph: None | str = field(
-                    default=None,
+                rph: str = field(
                     metadata={
                         "name": "RPH",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9]{1,8}",
-                    },
+                    }
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class TpaExtensions:
                     """
                     Attributes:
@@ -672,7 +667,7 @@ class OtaAirLowFareSearchRs:
                         )
                     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SoldOutItineraries:
         """
         Attributes:
@@ -700,7 +695,7 @@ class OtaAirLowFareSearchRs:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PricedItineraries:
             """
             Attributes:
@@ -729,7 +724,7 @@ class OtaAirLowFareSearchRs:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TpaExtensions:
                 """
                 Attributes:
@@ -745,7 +740,7 @@ class OtaAirLowFareSearchRs:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class OneWayItineraries:
             """
             Attributes:
@@ -776,7 +771,7 @@ class OtaAirLowFareSearchRs:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class BrandedOneWayItineraries:
                 """
                 Attributes:
@@ -803,17 +798,16 @@ class OtaAirLowFareSearchRs:
                         "type": "Element",
                     },
                 )
-                rph: None | str = field(
-                    default=None,
+                rph: str = field(
                     metadata={
                         "name": "RPH",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9]{1,8}",
-                    },
+                    }
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class TpaExtensions:
                     """
                     Attributes:
@@ -831,7 +825,7 @@ class OtaAirLowFareSearchRs:
                         )
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class SimpleOneWayItineraries:
                 """
                 Attributes:
@@ -858,17 +852,16 @@ class OtaAirLowFareSearchRs:
                         "type": "Element",
                     },
                 )
-                rph: None | str = field(
-                    default=None,
+                rph: str = field(
                     metadata={
                         "name": "RPH",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9]{1,8}",
-                    },
+                    }
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class TpaExtensions:
                     """
                     Attributes:
@@ -886,7 +879,7 @@ class OtaAirLowFareSearchRs:
                         )
                     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AvailableItineraries:
         """
         Attributes:
@@ -914,7 +907,7 @@ class OtaAirLowFareSearchRs:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PricedItineraries:
             """
             Attributes:
@@ -943,7 +936,7 @@ class OtaAirLowFareSearchRs:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TpaExtensions:
                 """
                 Attributes:
@@ -959,7 +952,7 @@ class OtaAirLowFareSearchRs:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class OneWayItineraries:
             """
             Attributes:
@@ -990,7 +983,7 @@ class OtaAirLowFareSearchRs:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class BrandedOneWayItineraries:
                 """
                 Attributes:
@@ -1017,17 +1010,16 @@ class OtaAirLowFareSearchRs:
                         "type": "Element",
                     },
                 )
-                rph: None | str = field(
-                    default=None,
+                rph: str = field(
                     metadata={
                         "name": "RPH",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9]{1,8}",
-                    },
+                    }
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class TpaExtensions:
                     """
                     Attributes:
@@ -1045,7 +1037,7 @@ class OtaAirLowFareSearchRs:
                         )
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class SimpleOneWayItineraries:
                 """
                 Attributes:
@@ -1072,17 +1064,16 @@ class OtaAirLowFareSearchRs:
                         "type": "Element",
                     },
                 )
-                rph: None | str = field(
-                    default=None,
+                rph: str = field(
                     metadata={
                         "name": "RPH",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9]{1,8}",
-                    },
+                    }
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class TpaExtensions:
                     """
                     Attributes:
@@ -1100,7 +1091,7 @@ class OtaAirLowFareSearchRs:
                         )
                     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpaExtensions:
         airline_order_list: (
             None | OtaAirLowFareSearchRs.TpaExtensions.AirlineOrderList
@@ -1112,7 +1103,7 @@ class OtaAirLowFareSearchRs:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AirlineOrderList:
             """
             Attributes:
@@ -1130,13 +1121,12 @@ class OtaAirLowFareSearchRs:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class AirlineOrder(CompanyNameType):
-                sequence_number: None | int = field(
-                    default=None,
+                sequence_number: int = field(
                     metadata={
                         "name": "SequenceNumber",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )

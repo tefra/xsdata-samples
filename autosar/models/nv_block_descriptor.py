@@ -34,7 +34,7 @@ from .variable_data_prototype import VariableDataPrototype
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NvBlockDescriptor:
     """
     Specifies the properties of exactly on NVRAM Block.
@@ -154,14 +154,13 @@ class NvBlockDescriptor:
     class Meta:
         name = "NV-BLOCK-DESCRIPTOR"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | NvBlockDescriptor.ShortNameFragments = field(
         default=None,
@@ -356,7 +355,7 @@ class NvBlockDescriptor:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -367,7 +366,7 @@ class NvBlockDescriptor:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -378,7 +377,7 @@ class NvBlockDescriptor:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClientServerPorts:
         role_based_port_assignment: list[RoleBasedPortAssignment] = field(
             default_factory=list,
@@ -389,7 +388,7 @@ class NvBlockDescriptor:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConstantValueMappingRefs:
         constant_value_mapping_ref: list[
             NvBlockDescriptor.ConstantValueMappingRefs.ConstantValueMappingRef
@@ -402,18 +401,17 @@ class NvBlockDescriptor:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ConstantValueMappingRef(Ref):
-            dest: None | ConstantSpecificationMappingSetSubtypesEnum = field(
-                default=None,
+            dest: ConstantSpecificationMappingSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataTypeMappingRefs:
         data_type_mapping_ref: list[
             NvBlockDescriptor.DataTypeMappingRefs.DataTypeMappingRef
@@ -426,18 +424,17 @@ class NvBlockDescriptor:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DataTypeMappingRef(Ref):
-            dest: None | DataTypeMappingSetSubtypesEnum = field(
-                default=None,
+            dest: DataTypeMappingSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InstantiationDataDefPropss:
         instantiation_data_def_props: list[InstantiationDataDefProps] = field(
             default_factory=list,
@@ -448,7 +445,7 @@ class NvBlockDescriptor:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeSwitchEventTriggeredActivitys:
         mode_switch_event_triggered_activity: list[
             ModeSwitchEventTriggeredActivity
@@ -461,7 +458,7 @@ class NvBlockDescriptor:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NvBlockDataMappings:
         nv_block_data_mapping: list[NvBlockDataMapping] = field(
             default_factory=list,
@@ -472,13 +469,12 @@ class NvBlockDescriptor:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingEventRef(Ref):
-        dest: None | TimingEventSubtypesEnum = field(
-            default=None,
+        dest: TimingEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

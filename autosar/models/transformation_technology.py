@@ -28,7 +28,7 @@ from .user_defined_transformation_description import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransformationTechnology:
     """
     A TransformationTechnology is a transformer inside a transformer chain.
@@ -106,14 +106,13 @@ class TransformationTechnology:
     class Meta:
         name = "TRANSFORMATION-TECHNOLOGY"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | TransformationTechnology.ShortNameFragments
@@ -262,7 +261,7 @@ class TransformationTechnology:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -273,7 +272,7 @@ class TransformationTechnology:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -284,7 +283,7 @@ class TransformationTechnology:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransformationDescriptions:
         end_to_end_transformation_description: list[
             EndToEndTransformationDescription

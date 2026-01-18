@@ -7,7 +7,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.event import Event
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PubHistory:
     """
     <div> <h3>Publication History</h3> </div>.
@@ -21,7 +21,6 @@ class PubHistory:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     id: None | str = field(

@@ -25,7 +25,7 @@ from .coct_mt150003_uv03 import CoctMt150003Uv03Organization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090003UvDevice:
     class Meta:
         name = "COCT_MT090003UV.Device"
@@ -101,7 +101,7 @@ class CoctMt090003UvDevice:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090003UvNonPersonLivingSubject:
     class Meta:
         name = "COCT_MT090003UV.NonPersonLivingSubject"
@@ -175,7 +175,7 @@ class CoctMt090003UvNonPersonLivingSubject:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090003UvOrganization:
     class Meta:
         name = "COCT_MT090003UV.Organization"
@@ -236,7 +236,7 @@ class CoctMt090003UvOrganization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090003UvPerson:
     class Meta:
         name = "COCT_MT090003UV.Person"
@@ -298,7 +298,7 @@ class CoctMt090003UvPerson:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090003UvAssignedEntity:
     class Meta:
         name = "COCT_MT090003UV.AssignedEntity"

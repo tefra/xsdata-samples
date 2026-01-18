@@ -7,7 +7,7 @@ from .send_indication_enum import SendIndicationEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataComProps:
     """
     Represents a single resource required or provided by a CP Software

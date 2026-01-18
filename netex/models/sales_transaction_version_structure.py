@@ -28,7 +28,7 @@ from .type_of_payment_method_ref import TypeOfPaymentMethodRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
     class Meta:
         name = "SalesTransaction_VersionStructure"

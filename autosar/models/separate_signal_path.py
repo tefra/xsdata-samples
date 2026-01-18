@@ -12,7 +12,7 @@ from .swc_to_swc_signal import SwcToSwcSignal
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SeparateSignalPath:
     """
     The SeparateSignalPath describes that two SwcToSwcSignals and/or
@@ -93,7 +93,7 @@ class SeparateSignalPath:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Operations:
         swc_to_swc_operation_arguments: list[SwcToSwcOperationArguments] = (
             field(
@@ -106,7 +106,7 @@ class SeparateSignalPath:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Signals:
         swc_to_swc_signal: list[SwcToSwcSignal] = field(
             default_factory=list,

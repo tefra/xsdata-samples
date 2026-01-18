@@ -7,7 +7,7 @@ from .refunding_ref_structure import RefundingRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RefundingRef(RefundingRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

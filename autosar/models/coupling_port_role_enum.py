@@ -7,7 +7,7 @@ from .coupling_port_role_enum_simple import CouplingPortRoleEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CouplingPortRoleEnum:
     """
     Defines the role a CouplingPort takes in the context of a
@@ -29,11 +29,10 @@ class CouplingPortRoleEnum:
     class Meta:
         name = "COUPLING-PORT-ROLE-ENUM"
 
-    value: None | CouplingPortRoleEnumSimple = field(
-        default=None,
+    value: CouplingPortRoleEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

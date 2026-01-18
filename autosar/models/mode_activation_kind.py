@@ -7,7 +7,7 @@ from .mode_activation_kind_simple import ModeActivationKindSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModeActivationKind:
     """
     Kind of mode switch condition used for activation of an event, as
@@ -29,11 +29,10 @@ class ModeActivationKind:
     class Meta:
         name = "MODE-ACTIVATION-KIND"
 
-    value: None | ModeActivationKindSimple = field(
-        default=None,
+    value: ModeActivationKindSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

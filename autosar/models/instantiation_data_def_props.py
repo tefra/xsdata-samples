@@ -10,7 +10,7 @@ from .sw_data_def_props import SwDataDefProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InstantiationDataDefProps:
     """
     This is a general class allowing to apply additional SwDataDefProps to

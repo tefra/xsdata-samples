@@ -8,7 +8,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HierInterfaceType:
     """
     A representation of an exported interface.
@@ -40,13 +40,12 @@ class HierInterfaceType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bus_ref: None | str = field(
-        default=None,
+    bus_ref: str = field(
         metadata={
             "name": "busRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,

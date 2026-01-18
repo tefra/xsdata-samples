@@ -10,7 +10,7 @@ from .positive_integer import PositiveInteger
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticParameter:
     """
     This meta-class represents the ability to describe information relevant
@@ -91,7 +91,7 @@ class DiagnosticParameter:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataElements:
         diagnostic_data_element: list[DiagnosticDataElement] = field(
             default_factory=list,

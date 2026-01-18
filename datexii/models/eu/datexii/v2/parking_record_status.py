@@ -43,7 +43,7 @@ from datexii.models.eu.datexii.v2.winter_equipment_management_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingRecordStatus:
     """
     Contains the current status of one parking record defined in the static
@@ -86,23 +86,21 @@ class ParkingRecordStatus:
     :ivar parking_record_status_extension:
     """
 
-    parking_record_reference: None | ParkingRecordVersionedReference = field(
-        default=None,
+    parking_record_reference: ParkingRecordVersionedReference = field(
         metadata={
             "name": "parkingRecordReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    parking_status_origin_time: None | XmlDateTime = field(
-        default=None,
+    parking_status_origin_time: XmlDateTime = field(
         metadata={
             "name": "parkingStatusOriginTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     parking_status_description: None | MultilingualString = field(
         default=None,
@@ -164,14 +162,13 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_occupancy: None | ParkingOccupancy = field(
-        default=None,
+    parking_occupancy: ParkingOccupancy = field(
         metadata={
             "name": "parkingOccupancy",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     group_of_parking_spaces_status: list[
         ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus

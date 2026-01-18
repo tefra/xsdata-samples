@@ -9,7 +9,7 @@ from .crypto_certificate_format_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CryptoCertificateFormatEnum:
     """
     This meta-class defines possible formats of cryptographic certificates.
@@ -30,11 +30,10 @@ class CryptoCertificateFormatEnum:
     class Meta:
         name = "CRYPTO-CERTIFICATE-FORMAT-ENUM"
 
-    value: None | CryptoCertificateFormatEnumSimple = field(
-        default=None,
+    value: CryptoCertificateFormatEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

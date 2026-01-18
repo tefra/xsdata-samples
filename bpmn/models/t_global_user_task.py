@@ -9,7 +9,7 @@ from .t_implementation_value import TImplementationValue
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TGlobalUserTask(TGlobalTask):
     class Meta:
         name = "tGlobalUserTask"

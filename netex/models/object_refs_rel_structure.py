@@ -572,7 +572,7 @@ from .zone_ref import ZoneRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ObjectRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "objectRefs_RelStructure"

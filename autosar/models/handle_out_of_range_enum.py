@@ -7,7 +7,7 @@ from .handle_out_of_range_enum_simple import HandleOutOfRangeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HandleOutOfRangeEnum:
     """
     A value of this type is taken for controlling the range checking
@@ -29,11 +29,10 @@ class HandleOutOfRangeEnum:
     class Meta:
         name = "HANDLE-OUT-OF-RANGE-ENUM"
 
-    value: None | HandleOutOfRangeEnumSimple = field(
-        default=None,
+    value: HandleOutOfRangeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

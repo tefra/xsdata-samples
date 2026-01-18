@@ -9,7 +9,7 @@ from travelport.models.type_agency_payment_history_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgencyPaymentHistory2(TypeAgencyPaymentHistory2):
     """
     Container for Agency Payment.

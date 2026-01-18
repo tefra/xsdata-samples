@@ -24,7 +24,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticFimAliasEventGroupMapping:
     """
     This meta-class represents the ability to map a DiagnosticFimEventGroup
@@ -96,14 +96,13 @@ class DiagnosticFimAliasEventGroupMapping:
     class Meta:
         name = "DIAGNOSTIC-FIM-ALIAS-EVENT-GROUP-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticFimAliasEventGroupMapping.ShortNameFragments
@@ -216,7 +215,7 @@ class DiagnosticFimAliasEventGroupMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -227,7 +226,7 @@ class DiagnosticFimAliasEventGroupMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -238,24 +237,22 @@ class DiagnosticFimAliasEventGroupMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ActualEventRef(Ref):
-        dest: None | DiagnosticFimEventGroupSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticFimEventGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AliasEventRef(Ref):
-        dest: None | DiagnosticFimAliasEventGroupSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticFimAliasEventGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

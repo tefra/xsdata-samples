@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.parking_record import ParkingRecord
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingTable:
     """
     A collection of parking records, which can be parking sites or groups
@@ -36,14 +36,13 @@ class ParkingTable:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_table_version_time: None | XmlDateTime = field(
-        default=None,
+    parking_table_version_time: XmlDateTime = field(
         metadata={
             "name": "parkingTableVersionTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     parking_record: list[ParkingRecord] = field(
         default_factory=list,
@@ -62,17 +61,15 @@ class ParkingTable:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

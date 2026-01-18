@@ -28,7 +28,7 @@ from .variable_data_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransformationPropsToServiceInterfaceElementMapping:
     """
     This meta-class represents the ability to associate a ServiceInterface
@@ -105,14 +105,13 @@ class TransformationPropsToServiceInterfaceElementMapping:
     class Meta:
         name = "TRANSFORMATION-PROPS-TO-SERVICE-INTERFACE-ELEMENT-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None
@@ -250,7 +249,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -261,7 +260,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -272,7 +271,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventRefs:
         event_ref: list[
             TransformationPropsToServiceInterfaceElementMapping.EventRefs.EventRef
@@ -285,18 +284,17 @@ class TransformationPropsToServiceInterfaceElementMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EventRef(Ref):
-            dest: None | VariableDataPrototypeSubtypesEnum = field(
-                default=None,
+            dest: VariableDataPrototypeSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FieldRefs:
         field_ref: list[
             TransformationPropsToServiceInterfaceElementMapping.FieldRefs.FieldRef
@@ -309,18 +307,17 @@ class TransformationPropsToServiceInterfaceElementMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FieldRef(Ref):
-            dest: None | FieldSubtypesEnum = field(
-                default=None,
+            dest: FieldSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MethodRefs:
         method_ref: list[
             TransformationPropsToServiceInterfaceElementMapping.MethodRefs.MethodRef
@@ -333,18 +330,17 @@ class TransformationPropsToServiceInterfaceElementMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MethodRef(Ref):
-            dest: None | ClientServerOperationSubtypesEnum = field(
-                default=None,
+            dest: ClientServerOperationSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TlvDataIdDefinitionRefs:
         tlv_data_id_definition_ref: list[
             TransformationPropsToServiceInterfaceElementMapping.TlvDataIdDefinitionRefs.TlvDataIdDefinitionRef
@@ -357,24 +353,22 @@ class TransformationPropsToServiceInterfaceElementMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TlvDataIdDefinitionRef(Ref):
-            dest: None | TlvDataIdDefinitionSetSubtypesEnum = field(
-                default=None,
+            dest: TlvDataIdDefinitionSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransformationPropsRef(Ref):
-        dest: None | TransformationPropsSubtypesEnum = field(
-            default=None,
+        dest: TransformationPropsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

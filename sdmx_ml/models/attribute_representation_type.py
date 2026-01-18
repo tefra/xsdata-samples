@@ -8,7 +8,7 @@ from sdmx_ml.models.unbounded_code_type import UnboundedCodeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AttributeRepresentationType(RepresentationType):
     """
     AttributeRepresentationType defines the representation for a data

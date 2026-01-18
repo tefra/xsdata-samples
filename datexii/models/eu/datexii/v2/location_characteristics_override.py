@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.lane_enum import LaneEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationCharacteristicsOverride:
     """
     Location characteristics which override values set in the referenced

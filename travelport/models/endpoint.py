@@ -7,7 +7,7 @@ from travelport.models.type_endpoint_data_type import TypeEndpointDataType
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Endpoint:
     """
     Endpoint information.
@@ -36,23 +36,21 @@ class Endpoint:
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    id: None | int = field(
-        default=None,
+    id: int = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     description: None | str = field(
         default=None,
@@ -63,13 +61,12 @@ class Endpoint:
             "max_length": 255,
         },
     )
-    data_type: None | TypeEndpointDataType = field(
-        default=None,
+    data_type: TypeEndpointDataType = field(
         metadata={
             "name": "DataType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     min_occurs: int = field(
         default=0,
@@ -85,11 +82,10 @@ class Endpoint:
             "type": "Attribute",
         },
     )
-    end_point_code: None | str = field(
-        default=None,
+    end_point_code: str = field(
         metadata={
             "name": "EndPointCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

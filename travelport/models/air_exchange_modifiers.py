@@ -7,7 +7,7 @@ from travelport.models.contract_code import ContractCode
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeModifiers:
     """
     Provides controls and switches for the Exchange process.
@@ -111,7 +111,7 @@ class AirExchangeModifiers:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContractCodes:
         contract_code: list[ContractCode] = field(
             default_factory=list,

@@ -7,7 +7,7 @@ from .fr_ar_tp_ack_type_simple import FrArTpAckTypeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FrArTpAckType:
     """
     Type of Acknowledgement.
@@ -28,11 +28,10 @@ class FrArTpAckType:
     class Meta:
         name = "FR-AR-TP-ACK-TYPE"
 
-    value: None | FrArTpAckTypeSimple = field(
-        default=None,
+    value: FrArTpAckTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

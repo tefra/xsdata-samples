@@ -9,7 +9,7 @@ from npo.models.workflow_enum_type import WorkflowEnumType
 __NAMESPACE__ = "urn:vpro:shared:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PublishableObjectType:
     class Meta:
         name = "publishableObjectType"

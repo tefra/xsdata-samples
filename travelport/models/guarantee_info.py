@@ -13,7 +13,7 @@ from travelport.models.guarantee_payment_type import GuaranteePaymentType
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GuaranteeInfo:
     """
     Parameters

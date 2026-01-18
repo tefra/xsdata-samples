@@ -7,7 +7,7 @@ from travelport.models.type_air_pnr_element import TypeAirPnrElement
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeleteAirPnrElement:
     """
     Container for Air PNR elements to be deleted.
@@ -16,19 +16,17 @@ class DeleteAirPnrElement:
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
-    element: None | TypeAirPnrElement = field(
-        default=None,
+    element: TypeAirPnrElement = field(
         metadata={
             "name": "Element",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

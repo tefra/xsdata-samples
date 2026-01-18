@@ -10,7 +10,7 @@ from .vehicle_type_stop_assignment_ref import VehicleTypeStopAssignmentRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleTypeStopAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicleTypeStopAssignments_RelStructure"

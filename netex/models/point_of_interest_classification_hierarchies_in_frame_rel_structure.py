@@ -11,7 +11,7 @@ from .point_of_interest_classification_hierarchy import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointOfInterestClassificationHierarchiesInFrameRelStructure(
     ContainmentAggregationStructure
 ):

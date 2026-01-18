@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GoverningCarrierOverrideType:
     """
     Attributes:
@@ -13,12 +13,11 @@ class GoverningCarrierOverrideType:
             CARRIER to get the fare filed by that carrier.
     """
 
-    airline_code: None | str = field(
-        default=None,
+    airline_code: str = field(
         metadata={
             "name": "AirlineCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[0-9A-Z]{2,3}",
-        },
+        }
     )

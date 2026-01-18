@@ -29,7 +29,7 @@ from .udp_nm_node import UdpNmNode
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayNmCluster:
     """
     FlexRay specific NM cluster attributes.
@@ -170,14 +170,13 @@ class FlexrayNmCluster:
     class Meta:
         name = "FLEXRAY-NM-CLUSTER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | FlexrayNmCluster.ShortNameFragments = field(
         default=None,
@@ -468,7 +467,7 @@ class FlexrayNmCluster:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -479,7 +478,7 @@ class FlexrayNmCluster:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -490,18 +489,17 @@ class FlexrayNmCluster:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommunicationClusterRef(Ref):
-        dest: None | CommunicationClusterSubtypesEnum = field(
-            default=None,
+        dest: CommunicationClusterSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NmNodes:
         can_nm_node: list[CanNmNode] = field(
             default_factory=list,

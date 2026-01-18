@@ -19,72 +19,64 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocalPolicy:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    local_policy_id: None | str = field(
-        default=None,
+    local_policy_id: str = field(
         metadata={
             "name": "LocalPolicyID",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    party_ids: None | PartyIds = field(
-        default=None,
+    party_ids: PartyIds = field(
         metadata={
             "name": "PartyIDs",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    risks: None | Risks = field(
-        default=None,
+    risks: Risks = field(
         metadata={
             "name": "Risks",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    reinsurance_agreements: None | ReinsuranceAgreements = field(
-        default=None,
+    reinsurance_agreements: ReinsuranceAgreements = field(
         metadata={
             "name": "ReinsuranceAgreements",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    inception_date: None | XmlDateTime = field(
-        default=None,
+    inception_date: XmlDateTime = field(
         metadata={
             "name": "InceptionDate",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    issuance_date: None | XmlDateTime = field(
-        default=None,
+    issuance_date: XmlDateTime = field(
         metadata={
             "name": "IssuanceDate",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    expiry_date: None | XmlDateTime = field(
-        default=None,
+    expiry_date: XmlDateTime = field(
         metadata={
             "name": "ExpiryDate",
             "type": "Element",
             "required": True,
-        },
+        }
     )

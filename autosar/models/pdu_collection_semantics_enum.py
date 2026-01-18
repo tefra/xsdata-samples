@@ -9,7 +9,7 @@ from .pdu_collection_semantics_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PduCollectionSemanticsEnum:
     """
     Defines the collection semantics for the PDU collection feature.
@@ -30,11 +30,10 @@ class PduCollectionSemanticsEnum:
     class Meta:
         name = "PDU-COLLECTION-SEMANTICS-ENUM"
 
-    value: None | PduCollectionSemanticsEnumSimple = field(
-        default=None,
+    value: PduCollectionSemanticsEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

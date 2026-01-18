@@ -10,7 +10,7 @@ from travelport.models.type_supplier_type_2 import TypeSupplierType2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Contract2(TypeKeyTaggedElement2):
     """
     A representation of a contract given between the agency and a
@@ -47,40 +47,36 @@ class Contract2(TypeKeyTaggedElement2):
         name = "Contract"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    supplier: None | str = field(
-        default=None,
+    supplier: str = field(
         metadata={
             "name": "Supplier",
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        },
+        }
     )
-    supplier_type: None | TypeSupplierType2 = field(
-        default=None,
+    supplier_type: TypeSupplierType2 = field(
         metadata={
             "name": "SupplierType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    provider: None | str = field(
-        default=None,
+    provider: str = field(
         metadata={
             "name": "Provider",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
-    start_date: None | XmlDate = field(
-        default=None,
+    start_date: XmlDate = field(
         metadata={
             "name": "StartDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     expiration_date: None | XmlDate = field(
         default=None,
@@ -104,15 +100,14 @@ class Contract2(TypeKeyTaggedElement2):
             "type": "Attribute",
         },
     )
-    supplier_contract_number: None | str = field(
-        default=None,
+    supplier_contract_number: str = field(
         metadata={
             "name": "SupplierContractNumber",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        },
+        }
     )
     promotional_designator_name: None | str = field(
         default=None,

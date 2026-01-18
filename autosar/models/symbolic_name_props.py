@@ -9,7 +9,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SymbolicNameProps:
     """
     This meta-class can be taken to contribute to the creation of symbolic
@@ -37,14 +37,13 @@ class SymbolicNameProps:
     class Meta:
         name = "SYMBOLIC-NAME-PROPS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SymbolicNameProps.ShortNameFragments = field(
         default=None,
@@ -78,7 +77,7 @@ class SymbolicNameProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,

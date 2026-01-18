@@ -7,7 +7,7 @@ from sdmx_ml.models.group_type import GroupType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Group(GroupType):
     """
     Group describes a group descriptor in a data structure definition.

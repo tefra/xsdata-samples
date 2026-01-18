@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WarningIndicatorRequestedBitNeeds:
     """
     This meta-class represents the ability to explicitly request the
@@ -91,14 +91,13 @@ class WarningIndicatorRequestedBitNeeds:
     class Meta:
         name = "WARNING-INDICATOR-REQUESTED-BIT-NEEDS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | WarningIndicatorRequestedBitNeeds.ShortNameFragments
@@ -205,7 +204,7 @@ class WarningIndicatorRequestedBitNeeds:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -216,7 +215,7 @@ class WarningIndicatorRequestedBitNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -227,7 +226,7 @@ class WarningIndicatorRequestedBitNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Audiences:
         """
         :ivar audience: This specifies the intended audience for the

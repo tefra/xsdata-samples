@@ -13,7 +13,7 @@ from .time_range_type import TimeRangeType
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CyclicTiming:
     """
     Specification of a cyclic sending behavior.

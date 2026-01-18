@@ -18,7 +18,7 @@ from .tlv_data_id_definition import TlvDataIdDefinition
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TlvDataIdDefinitionSet:
     """
     This meta-class acts as a container of TlvDataIdDefinitions to be used
@@ -86,14 +86,13 @@ class TlvDataIdDefinitionSet:
     class Meta:
         name = "TLV-DATA-ID-DEFINITION-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TlvDataIdDefinitionSet.ShortNameFragments = (
         field(
@@ -194,7 +193,7 @@ class TlvDataIdDefinitionSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -205,7 +204,7 @@ class TlvDataIdDefinitionSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -216,7 +215,7 @@ class TlvDataIdDefinitionSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TlvDataIdDefinitions:
         tlv_data_id_definition: list[TlvDataIdDefinition] = field(
             default_factory=list,

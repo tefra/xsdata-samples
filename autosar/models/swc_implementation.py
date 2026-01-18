@@ -37,7 +37,7 @@ from .swc_internal_behavior_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwcImplementation:
     """
     This meta-class represents a specialization of the general
@@ -174,14 +174,13 @@ class SwcImplementation:
     class Meta:
         name = "SWC-IMPLEMENTATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SwcImplementation.ShortNameFragments = field(
         default=None,
@@ -420,7 +419,7 @@ class SwcImplementation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -431,7 +430,7 @@ class SwcImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -442,7 +441,7 @@ class SwcImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BuildActionManifests:
         build_action_manifest_ref_conditional: list[
             BuildActionManifestRefConditional
@@ -455,7 +454,7 @@ class SwcImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CodeDescriptors:
         code: list[Code] = field(
             default_factory=list,
@@ -466,7 +465,7 @@ class SwcImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Compilers:
         compiler: list[Compiler] = field(
             default_factory=list,
@@ -477,7 +476,7 @@ class SwcImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GeneratedArtifacts:
         dependency_on_artifact: list[DependencyOnArtifact] = field(
             default_factory=list,
@@ -488,7 +487,7 @@ class SwcImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwElementRefs:
         hw_element_ref: list[SwcImplementation.HwElementRefs.HwElementRef] = (
             field(
@@ -501,18 +500,17 @@ class SwcImplementation:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class HwElementRef(Ref):
-            dest: None | HwElementSubtypesEnum = field(
-                default=None,
+            dest: HwElementSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Linkers:
         linker: list[Linker] = field(
             default_factory=list,
@@ -523,7 +521,7 @@ class SwcImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredArtifacts:
         dependency_on_artifact: list[DependencyOnArtifact] = field(
             default_factory=list,
@@ -534,7 +532,7 @@ class SwcImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredGeneratorTools:
         dependency_on_artifact: list[DependencyOnArtifact] = field(
             default_factory=list,
@@ -545,29 +543,27 @@ class SwcImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwcBswMappingRef(Ref):
-        dest: None | SwcBswMappingSubtypesEnum = field(
-            default=None,
+        dest: SwcBswMappingSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BehaviorRef(Ref):
-        dest: None | SwcInternalBehaviorSubtypesEnum = field(
-            default=None,
+        dest: SwcInternalBehaviorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PerInstanceMemorySizes:
         per_instance_memory_size: list[PerInstanceMemorySize] = field(
             default_factory=list,

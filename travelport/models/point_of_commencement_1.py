@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointOfCommencement1:
     """
     Point of Commencement is optional.
@@ -25,21 +25,19 @@ class PointOfCommencement1:
         name = "PointOfCommencement"
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
-    city_or_airport_code: None | str = field(
-        default=None,
+    city_or_airport_code: str = field(
         metadata={
             "name": "CityOrAirportCode",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    time: None | str = field(
-        default=None,
+    time: str = field(
         metadata={
             "name": "Time",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

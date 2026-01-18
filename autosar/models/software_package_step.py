@@ -20,7 +20,7 @@ from .software_package_subtypes_enum import SoftwarePackageSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoftwarePackageStep:
     """
     This meta-class represents the configuration of an activation step in
@@ -95,14 +95,13 @@ class SoftwarePackageStep:
     class Meta:
         name = "SOFTWARE-PACKAGE-STEP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SoftwarePackageStep.ShortNameFragments = (
         field(
@@ -225,7 +224,7 @@ class SoftwarePackageStep:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -236,7 +235,7 @@ class SoftwarePackageStep:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -247,7 +246,7 @@ class SoftwarePackageStep:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PreActivateRefs:
         pre_activate_ref: list[
             SoftwarePackageStep.PreActivateRefs.PreActivateRef
@@ -260,29 +259,27 @@ class SoftwarePackageStep:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PreActivateRef(Ref):
-            dest: None | SoftwarePackageSubtypesEnum = field(
-                default=None,
+            dest: SoftwarePackageSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProcessRef(Ref):
-        dest: None | SoftwarePackageSubtypesEnum = field(
-            default=None,
+        dest: SoftwarePackageSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Transfers:
         software_package_storing: list[SoftwarePackageStoring] = field(
             default_factory=list,
@@ -293,7 +290,7 @@ class SoftwarePackageStep:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VerifyRefs:
         verify_ref: list[SoftwarePackageStep.VerifyRefs.VerifyRef] = field(
             default_factory=list,
@@ -304,13 +301,12 @@ class SoftwarePackageStep:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class VerifyRef(Ref):
-            dest: None | SoftwarePackageSubtypesEnum = field(
-                default=None,
+            dest: SoftwarePackageSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

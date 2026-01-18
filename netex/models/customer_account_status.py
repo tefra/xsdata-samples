@@ -9,7 +9,7 @@ from .customer_account_status_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerAccountStatus(CustomerAccountStatusVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

@@ -19,7 +19,7 @@ from travelport.models.unique_profile_id_profile_type_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileCreateReq1(BaseReq2):
     """
     Creates a new profile.
@@ -60,13 +60,12 @@ class ProfileCreateReq1(BaseReq2):
             "type": "Element",
         },
     )
-    profile_data: None | ProfileData1 = field(
-        default=None,
+    profile_data: ProfileData1 = field(
         metadata={
             "name": "ProfileData",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     profile_link: list[ProfileLink1] = field(
         default_factory=list,
@@ -75,13 +74,12 @@ class ProfileCreateReq1(BaseReq2):
             "type": "Element",
         },
     )
-    profile_type: None | TypeProfileType3 = field(
-        default=None,
+    profile_type: TypeProfileType3 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     status: TypeProfileEntityStatus1 = field(
         default=TypeProfileEntityStatus1.ACTIVE,
@@ -105,7 +103,7 @@ class ProfileCreateReq1(BaseReq2):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProfileParent:
         """
         Parameters
@@ -146,7 +144,7 @@ class ProfileCreateReq1(BaseReq2):
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ProvisioningCode:
             """
             Parameters
@@ -165,16 +163,15 @@ class ProfileCreateReq1(BaseReq2):
                     "max_length": 128,
                 },
             )
-            profile_type: None | ProvisioningCodeProfileType1 = field(
-                default=None,
+            profile_type: ProvisioningCodeProfileType1 = field(
                 metadata={
                     "name": "ProfileType",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UniqueProfileId:
             """
             Parameters
@@ -198,13 +195,12 @@ class ProfileCreateReq1(BaseReq2):
                     "max_length": 128,
                 },
             )
-            profile_type: None | UniqueProfileIdProfileType1 = field(
-                default=None,
+            profile_type: UniqueProfileIdProfileType1 = field(
                 metadata={
                     "name": "ProfileType",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
             agency_code: None | str = field(
                 default=None,

@@ -7,7 +7,7 @@ from .t_category import TCategory
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Category(TCategory):
     class Meta:
         name = "category"

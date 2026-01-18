@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InternationalIdentifier:
     """
     An identifier/name whose range is specific to the particular country.
@@ -19,23 +19,21 @@ class InternationalIdentifier:
     :ivar international_identifier_extension:
     """
 
-    country: None | CountryEnum = field(
-        default=None,
+    country: CountryEnum = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    national_identifier: None | str = field(
-        default=None,
+    national_identifier: str = field(
         metadata={
             "name": "nationalIdentifier",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
     international_identifier_extension: None | ExtensionType = field(
         default=None,

@@ -5,9 +5,9 @@ from dataclasses import dataclass, field
 from tpdb.models.conditiontype_value import ConditiontypeValue
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Conditiontype:
     class Meta:
         name = "conditiontype"
 
-    value: None | ConditiontypeValue = field(default=None)
+    value: ConditiontypeValue = field()

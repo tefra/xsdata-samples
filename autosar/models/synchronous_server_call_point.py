@@ -26,7 +26,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SynchronousServerCallPoint:
     """
     This means that the RunnableEntity is supposed to perform a blocking
@@ -101,14 +101,13 @@ class SynchronousServerCallPoint:
     class Meta:
         name = "SYNCHRONOUS-SERVER-CALL-POINT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SynchronousServerCallPoint.ShortNameFragments
@@ -233,7 +232,7 @@ class SynchronousServerCallPoint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -244,7 +243,7 @@ class SynchronousServerCallPoint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -255,13 +254,12 @@ class SynchronousServerCallPoint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CalledFromWithinExclusiveAreaRef(Ref):
-        dest: None | ExclusiveAreaNestingOrderSubtypesEnum = field(
-            default=None,
+        dest: ExclusiveAreaNestingOrderSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

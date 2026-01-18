@@ -9,7 +9,7 @@ from sdmx_ml.models.provision_agreement_base_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ProvisionAgreementType(ProvisionAgreementBaseType):
     """
     ProvisionAgreementType describes the structure of a provision
@@ -28,23 +28,21 @@ class ProvisionAgreementType(ProvisionAgreementBaseType):
         provided via a URN and/or a full set of reference fields.
     """
 
-    dataflow: None | str = field(
-        default=None,
+    dataflow: str = field(
         metadata={
             "name": "Dataflow",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r".+\.datastructure\.Dataflow=.+",
-        },
+        }
     )
-    data_provider: None | str = field(
-        default=None,
+    data_provider: str = field(
         metadata={
             "name": "DataProvider",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
-        },
+        }
     )

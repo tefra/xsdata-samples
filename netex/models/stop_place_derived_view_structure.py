@@ -15,7 +15,7 @@ from .type_of_place_refs_rel_structure import TypeOfPlaceRefsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StopPlaceDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "StopPlace_DerivedViewStructure"

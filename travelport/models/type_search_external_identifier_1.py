@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeSearchExternalIdentifier1:
     """
     This is meant for external identification of a Profile.
@@ -22,15 +22,14 @@ class TypeSearchExternalIdentifier1:
     class Meta:
         name = "typeSearchExternalIdentifier"
 
-    ext_id: None | str = field(
-        default=None,
+    ext_id: str = field(
         metadata={
             "name": "ExtID",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        },
+        }
     )
     source: None | str = field(
         default=None,

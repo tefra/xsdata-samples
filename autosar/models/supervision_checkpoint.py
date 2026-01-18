@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SupervisionCheckpoint:
     """
     This element contains an instance reference to a RPortPrototype
@@ -91,14 +91,13 @@ class SupervisionCheckpoint:
     class Meta:
         name = "SUPERVISION-CHECKPOINT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SupervisionCheckpoint.ShortNameFragments = (
         field(
@@ -205,7 +204,7 @@ class SupervisionCheckpoint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -216,7 +215,7 @@ class SupervisionCheckpoint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -227,13 +226,12 @@ class SupervisionCheckpoint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProcessRef(Ref):
-        dest: None | ProcessSubtypesEnum = field(
-            default=None,
+        dest: ProcessSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -26,7 +26,7 @@ from .transfer_refs_rel_structure import TransferRefsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NavigationPathVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "NavigationPath_VersionStructure"

@@ -9,7 +9,7 @@ from travelport.models.reference_data_search_item_type import (
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceDataSearchItem:
     """
     Container for a Reference Data search item that includes its type and
@@ -49,11 +49,10 @@ class ReferenceDataSearchItem:
             "white_space": "collapse",
         },
     )
-    type_value: None | ReferenceDataSearchItemType = field(
-        default=None,
+    type_value: ReferenceDataSearchItemType = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

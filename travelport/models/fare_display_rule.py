@@ -9,7 +9,7 @@ from travelport.models.rule_length_of_stay import RuleLengthOfStay
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareDisplayRule:
     """
     Fare Display Rule Container.

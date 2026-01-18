@@ -7,7 +7,7 @@ from travelport.models.location_1 import Location1
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class City1(Location1):
     """
     City identifier.
@@ -17,13 +17,12 @@ class City1(Location1):
         name = "City"
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )

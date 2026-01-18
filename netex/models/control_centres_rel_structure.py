@@ -10,7 +10,7 @@ from .control_centre_ref import ControlCentreRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ControlCentresRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "ControlCentres_RelStructure"

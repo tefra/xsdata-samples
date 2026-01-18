@@ -7,7 +7,7 @@ from .diag_pdu_type_simple import DiagPduTypeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagPduType:
     """
     Used to distinguish a diagnostic request from a response.
@@ -28,11 +28,10 @@ class DiagPduType:
     class Meta:
         name = "DIAG-PDU-TYPE"
 
-    value: None | DiagPduTypeSimple = field(
-        default=None,
+    value: DiagPduTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

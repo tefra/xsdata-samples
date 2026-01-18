@@ -9,7 +9,7 @@ from .diagnostic_common_props_conditional import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticCommonProps:
     """
     This meta-class aggregates a number of common properties that are
@@ -58,7 +58,7 @@ class DiagnosticCommonProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticCommonPropsVariants:
         diagnostic_common_props_conditional: list[
             DiagnosticCommonPropsConditional

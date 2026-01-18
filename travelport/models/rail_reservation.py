@@ -14,7 +14,7 @@ from travelport.models.supplier_locator_1 import SupplierLocator1
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailReservation(BaseReservation1):
     """
     The parent container for all Rail booking data.
@@ -96,11 +96,10 @@ class RailReservation(BaseReservation1):
             "max_occurs": 999,
         },
     )
-    booking_status: None | str = field(
-        default=None,
+    booking_status: str = field(
         metadata={
             "name": "BookingStatus",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

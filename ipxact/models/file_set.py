@@ -7,7 +7,7 @@ from ipxact.models.file_set_type import FileSetType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FileSet(FileSetType):
     """
     This element specifies a list of unique pathnames to files and

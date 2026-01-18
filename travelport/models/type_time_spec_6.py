@@ -8,7 +8,7 @@ from travelport.models.type_time_range_6 import TypeTimeRange6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeTimeSpec6:
     """
     Specifies times as either specific times, or a time range.

@@ -9,7 +9,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.component_list import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SaComponent:
     """
     Container for component metadata if the component is being registered
@@ -20,19 +20,17 @@ class SaComponent:
         name = "sa_component"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    component_list: None | ComponentList = field(
-        default=None,
+    component_list: ComponentList = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    parent_doi: None | str = field(
-        default=None,
+    parent_doi: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
             "min_length": 6,
             "max_length": 2048,
-        },
+        }
     )

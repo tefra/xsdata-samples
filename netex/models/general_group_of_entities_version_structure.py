@@ -10,7 +10,7 @@ from .object_refs_rel_structure import ObjectRefsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneralGroupOfEntitiesVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GeneralGroupOfEntities_VersionStructure"

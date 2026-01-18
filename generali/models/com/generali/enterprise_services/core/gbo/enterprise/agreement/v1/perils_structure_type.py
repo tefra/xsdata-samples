@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PerilsStructureType:
     peril_structure: list[PerilStructureType] = field(
         default_factory=list,

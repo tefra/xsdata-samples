@@ -7,7 +7,7 @@ from .key_list_structure import KeyListStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class KeyList(KeyListStructure):
     class Meta:
         name = "keyList"

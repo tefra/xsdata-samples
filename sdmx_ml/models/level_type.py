@@ -8,7 +8,7 @@ from sdmx_ml.models.level_base_type import LevelBaseType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class LevelType(LevelBaseType):
     """
     LevelType describes a level in a hierarchical codelist.

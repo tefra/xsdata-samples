@@ -13,7 +13,7 @@ from travelport.models.profile_search_modifiers_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileRetrieveHistoryReq2(BaseReq5):
     """
     Request to retrieve history for the whole profile, a particular
@@ -35,13 +35,12 @@ class ProfileRetrieveHistoryReq2(BaseReq5):
         name = "ProfileRetrieveHistoryReq"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     profile_history_retrieve_criteria: (
         None | ProfileHistoryRetrieveCriteria2

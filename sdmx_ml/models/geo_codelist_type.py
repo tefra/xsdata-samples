@@ -8,7 +8,7 @@ from sdmx_ml.models.geo_codelist_type_type import GeoCodelistTypeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GeoCodelistType(GeoCodelistBaseType):
     """
     GeoCodelistType is an abstract refinement of a codelist from which
@@ -19,11 +19,10 @@ class GeoCodelistType(GeoCodelistBaseType):
         type implementations.
     """
 
-    geo_type: None | GeoCodelistTypeType = field(
-        default=None,
+    geo_type: GeoCodelistTypeType = field(
         metadata={
             "name": "geoType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

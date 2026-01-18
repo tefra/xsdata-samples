@@ -35,7 +35,7 @@ from .variation_restriction_with_severity import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractClassTailoring:
     """
     Tailoring of abststract classes in the AUTOSAR meta-model.
@@ -107,14 +107,13 @@ class AbstractClassTailoring:
     class Meta:
         name = "ABSTRACT-CLASS-TAILORING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | AbstractClassTailoring.ShortNameFragments = (
         field(
@@ -231,7 +230,7 @@ class AbstractClassTailoring:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -242,7 +241,7 @@ class AbstractClassTailoring:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -253,7 +252,7 @@ class AbstractClassTailoring:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClassContents:
         class_content_conditional: list[ClassContentConditional] = field(
             default_factory=list,
@@ -265,7 +264,7 @@ class AbstractClassTailoring:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AggregationTailoring:
     """
     Tailoring of aggregations in the AUTOSAR meta-model.
@@ -339,14 +338,13 @@ class AggregationTailoring:
     class Meta:
         name = "AGGREGATION-TAILORING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | AggregationTailoring.ShortNameFragments = (
         field(
@@ -471,7 +469,7 @@ class AggregationTailoring:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -482,7 +480,7 @@ class AggregationTailoring:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -493,7 +491,7 @@ class AggregationTailoring:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeTailorings:
         abstract_class_tailoring: list[AbstractClassTailoring] = field(
             default_factory=list,
@@ -513,7 +511,7 @@ class AggregationTailoring:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClassContentConditional:
     """
     Specifies the valid content of the class.
@@ -586,14 +584,13 @@ class ClassContentConditional:
     class Meta:
         name = "CLASS-CONTENT-CONDITIONAL"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ClassContentConditional.ShortNameFragments = (
         field(
@@ -712,7 +709,7 @@ class ClassContentConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -723,7 +720,7 @@ class ClassContentConditional:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -734,7 +731,7 @@ class ClassContentConditional:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Condition:
         aggregation_condition: None | AggregationCondition = field(
             default=None,
@@ -779,7 +776,7 @@ class ClassContentConditional:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AttributeTailorings:
         aggregation_tailoring: list[AggregationTailoring] = field(
             default_factory=list,
@@ -808,7 +805,7 @@ class ClassContentConditional:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConstraintTailorings:
         constraint_tailoring: list[ConstraintTailoring] = field(
             default_factory=list,
@@ -819,7 +816,7 @@ class ClassContentConditional:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SdgTailorings:
         sdg_tailoring: list[SdgTailoring] = field(
             default_factory=list,
@@ -831,7 +828,7 @@ class ClassContentConditional:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConcreteClassTailoring:
     """
     Tailoring of concrete meta classes.
@@ -911,14 +908,13 @@ class ConcreteClassTailoring:
     class Meta:
         name = "CONCRETE-CLASS-TAILORING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ConcreteClassTailoring.ShortNameFragments = (
         field(
@@ -1051,7 +1047,7 @@ class ConcreteClassTailoring:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -1062,7 +1058,7 @@ class ConcreteClassTailoring:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -1073,7 +1069,7 @@ class ConcreteClassTailoring:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClassContents:
         class_content_conditional: list[ClassContentConditional] = field(
             default_factory=list,
@@ -1085,7 +1081,7 @@ class ConcreteClassTailoring:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceTailoring:
     """
     Tailoring of Non-Containment References.
@@ -1161,14 +1157,13 @@ class ReferenceTailoring:
     class Meta:
         name = "REFERENCE-TAILORING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ReferenceTailoring.ShortNameFragments = field(
         default=None,
@@ -1301,7 +1296,7 @@ class ReferenceTailoring:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -1312,7 +1307,7 @@ class ReferenceTailoring:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -1323,7 +1318,7 @@ class ReferenceTailoring:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeTailorings:
         abstract_class_tailoring: list[AbstractClassTailoring] = field(
             default_factory=list,

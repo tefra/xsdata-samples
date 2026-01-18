@@ -10,19 +10,18 @@ from .multilingual_string import MultilingualString
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MonthValidityOffsetVersionedStructure(DataManagedObjectStructure):
     class Meta:
         name = "MonthValidityOffset_VersionedStructure"
 
-    month: None | XmlPeriod = field(
-        default=None,
+    month: XmlPeriod = field(
         metadata={
             "name": "Month",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     name: None | MultilingualString = field(
         default=None,
@@ -32,12 +31,11 @@ class MonthValidityOffsetVersionedStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_offset: None | int = field(
-        default=None,
+    day_offset: int = field(
         metadata={
             "name": "DayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

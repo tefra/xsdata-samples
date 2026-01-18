@@ -20,7 +20,7 @@ from .unit_subtypes_enum import UnitSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HwAttributeDef:
     """
     This metaclass represents the ability to define a particular hardware
@@ -95,14 +95,13 @@ class HwAttributeDef:
     class Meta:
         name = "HW-ATTRIBUTE-DEF"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | HwAttributeDef.ShortNameFragments = field(
         default=None,
@@ -207,7 +206,7 @@ class HwAttributeDef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -218,7 +217,7 @@ class HwAttributeDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -229,7 +228,7 @@ class HwAttributeDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwAttributeLiterals:
         hw_attribute_literal_def: list[HwAttributeLiteralDef] = field(
             default_factory=list,
@@ -240,13 +239,12 @@ class HwAttributeDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnitRef(Ref):
-        dest: None | UnitSubtypesEnum = field(
-            default=None,
+        dest: UnitSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

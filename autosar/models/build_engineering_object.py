@@ -10,7 +10,7 @@ from .uri_string import UriString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BuildEngineeringObject:
     """
     This meta-class represents the ability to denote an artifact which is
@@ -163,7 +163,7 @@ class BuildEngineeringObject:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RevisionLabels:
         """
         :ivar revision_label: This is a revision label denoting a

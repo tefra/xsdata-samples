@@ -19,7 +19,7 @@ from .user_defined_physical_channel import UserDefinedPhysicalChannel
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthernetClusterConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -167,7 +167,7 @@ class EthernetClusterConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PhysicalChannels:
         can_physical_channel: list[CanPhysicalChannel] = field(
             default_factory=list,
@@ -220,7 +220,7 @@ class EthernetClusterConditional:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CouplingPortConnections:
         coupling_port_connection: list[CouplingPortConnection] = field(
             default_factory=list,
@@ -231,7 +231,7 @@ class EthernetClusterConditional:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MacMulticastGroups:
         mac_multicast_group: list[MacMulticastGroup] = field(
             default_factory=list,

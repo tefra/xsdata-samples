@@ -17,7 +17,7 @@ from .strict_containment_aggregation_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareTableColumnsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareTableColumns_RelStructure"
@@ -33,7 +33,7 @@ class FareTableColumnsRelStructure(StrictContainmentAggregationStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareTableColumnVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FareTableColumn_VersionedChildStructure"
@@ -102,7 +102,7 @@ class FareTableColumnVersionedChildStructure(VersionedChildStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareTableColumn(FareTableColumnVersionedChildStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

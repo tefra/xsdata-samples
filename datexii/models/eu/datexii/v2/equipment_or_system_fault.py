@@ -14,7 +14,7 @@ from datexii.models.eu.datexii.v2.traffic_element import TrafficElement
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EquipmentOrSystemFault(TrafficElement):
     """
     Equipment or system which is faulty, malfunctioning or not in a fully
@@ -29,25 +29,21 @@ class EquipmentOrSystemFault(TrafficElement):
     :ivar equipment_or_system_fault_extension:
     """
 
-    equipment_or_system_fault_type: None | EquipmentOrSystemFaultTypeEnum = (
-        field(
-            default=None,
-            metadata={
-                "name": "equipmentOrSystemFaultType",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
-            },
-        )
+    equipment_or_system_fault_type: EquipmentOrSystemFaultTypeEnum = field(
+        metadata={
+            "name": "equipmentOrSystemFaultType",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
+        }
     )
-    faulty_equipment_or_system_type: None | EquipmentOrSystemTypeEnum = field(
-        default=None,
+    faulty_equipment_or_system_type: EquipmentOrSystemTypeEnum = field(
         metadata={
             "name": "faultyEquipmentOrSystemType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     equipment_or_system_fault_extension: None | ExtensionType = field(
         default=None,

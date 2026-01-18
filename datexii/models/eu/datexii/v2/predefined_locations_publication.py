@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.predefined_location_container import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PredefinedLocationsPublication(PayloadPublication):
     """
     A publication containing one or more groups of predefined locations
@@ -20,14 +20,13 @@ class PredefinedLocationsPublication(PayloadPublication):
     locations.
     """
 
-    header_information: None | HeaderInformation = field(
-        default=None,
+    header_information: HeaderInformation = field(
         metadata={
             "name": "headerInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     predefined_location_container: list[PredefinedLocationContainer] = field(
         default_factory=list,

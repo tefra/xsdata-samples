@@ -14,23 +14,21 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LegalCostType:
-    amount: None | AmountType = field(
-        default=None,
+    amount: AmountType = field(
         metadata={
             "name": "Amount",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    cost_type: None | LegalCostTypeCostType = field(
-        default=None,
+    cost_type: LegalCostTypeCostType = field(
         metadata={
             "name": "CostType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )

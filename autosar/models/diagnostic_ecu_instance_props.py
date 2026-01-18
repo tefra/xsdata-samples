@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEcuInstanceProps:
     """
     This meta-class represents the ability to model properties that are
@@ -105,14 +105,13 @@ class DiagnosticEcuInstanceProps:
     class Meta:
         name = "DIAGNOSTIC-ECU-INSTANCE-PROPS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticEcuInstanceProps.ShortNameFragments
@@ -237,7 +236,7 @@ class DiagnosticEcuInstanceProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -248,7 +247,7 @@ class DiagnosticEcuInstanceProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -259,7 +258,7 @@ class DiagnosticEcuInstanceProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuInstanceRefs:
         ecu_instance_ref: list[
             DiagnosticEcuInstanceProps.EcuInstanceRefs.EcuInstanceRef
@@ -272,13 +271,12 @@ class DiagnosticEcuInstanceProps:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EcuInstanceRef(Ref):
-            dest: None | EcuInstanceSubtypesEnum = field(
-                default=None,
+            dest: EcuInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

@@ -18,7 +18,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractorSubPortType:
     """
     A port description, giving a name and an access type for high level
@@ -43,15 +43,14 @@ class AbstractorSubPortType:
     class Meta:
         name = "abstractorSubPortType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
             "white_space": "collapse",
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -128,7 +127,7 @@ class AbstractorSubPortType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractorPortStructuredType:
     """
     :ivar struct:
@@ -173,23 +172,21 @@ class AbstractorPortStructuredType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    sub_ports: None | AbstractorPortStructuredType.SubPorts = field(
-        default=None,
+    sub_ports: AbstractorPortStructuredType.SubPorts = field(
         metadata={
             "name": "subPorts",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
-    struct_port_type_defs: None | StructPortTypeDefs = field(
-        default=None,
+    struct_port_type_defs: StructPortTypeDefs = field(
         metadata={
             "name": "structPortTypeDefs",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     packed: bool = field(
         default=True,
@@ -198,7 +195,7 @@ class AbstractorPortStructuredType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SubPorts:
         sub_port: list[AbstractorSubPortType] = field(
             default_factory=list,
@@ -210,7 +207,7 @@ class AbstractorPortStructuredType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Struct:
         """
         :ivar direction: The direction of a wire style port. The basic
@@ -228,7 +225,7 @@ class AbstractorPortStructuredType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnionType:
         """
         :ivar direction: The direction of a wire style port. The basic
@@ -246,7 +243,7 @@ class AbstractorPortStructuredType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Interface:
         phantom: None | bool = field(
             default=None,

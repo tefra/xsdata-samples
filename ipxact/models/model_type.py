@@ -18,7 +18,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModelType:
     """
     Model information.
@@ -53,7 +53,7 @@ class ModelType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Views:
         """
         :ivar view: Single view of a component
@@ -68,7 +68,7 @@ class ModelType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class View:
             """
             :ivar name: Unique name
@@ -92,13 +92,12 @@ class ModelType:
             :ivar id:
             """
 
-            name: None | str = field(
-                default=None,
+            name: str = field(
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     "required": True,
-                },
+                }
             )
             display_name: None | DisplayName = field(
                 default=None,
@@ -171,7 +170,7 @@ class ModelType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class EnvIdentifier:
                 value: str = field(
                     default="",
@@ -188,7 +187,7 @@ class ModelType:
                     },
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Instantiations:
         """
         :ivar component_instantiation: Component Instantiation
@@ -224,7 +223,7 @@ class ModelType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ports:
         port: list[Port] = field(
             default_factory=list,

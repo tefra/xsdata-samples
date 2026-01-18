@@ -8,7 +8,7 @@ from .point import Point
 __NAMESPACE__ = "http://www.omg.org/spec/DD/20100524/DI"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Edge(DiagramElement):
     class Meta:
         namespace = "http://www.omg.org/spec/DD/20100524/DI"

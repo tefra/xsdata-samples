@@ -6,7 +6,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MeasureListType:
     value: Iterable[float] = field(
         default_factory=list,
@@ -14,11 +14,10 @@ class MeasureListType:
             "tokens": True,
         },
     )
-    uom: None | str = field(
-        default=None,
+    uom: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
             "pattern": r"[^: \n\r\t]+",
-        },
+        }
     )

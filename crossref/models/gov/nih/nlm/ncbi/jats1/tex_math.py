@@ -9,7 +9,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.tex_math_notation import (
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TexMath:
     """
     <div> <h3>Tex Math Equation</h3> </div>.

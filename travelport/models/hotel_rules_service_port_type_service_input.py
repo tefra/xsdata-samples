@@ -7,27 +7,25 @@ from travelport.models.hotel_rules_req import HotelRulesReq
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelRulesServicePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | HotelRulesServicePortTypeServiceInput.Body = field(
-        default=None,
+    body: HotelRulesServicePortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        hotel_rules_req: None | HotelRulesReq = field(
-            default=None,
+        hotel_rules_req: HotelRulesReq = field(
             metadata={
                 "name": "HotelRulesReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            },
+            }
         )

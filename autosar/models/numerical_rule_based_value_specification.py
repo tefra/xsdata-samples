@@ -9,7 +9,7 @@ from .rule_based_value_specification import RuleBasedValueSpecification
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NumericalRuleBasedValueSpecification:
     """
     This meta-class is used to support a rule-based initialization approach

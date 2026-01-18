@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.vms_unit_record_versioned_reference import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingVMS:
     """
     A reference to a record that contains the metadata for a specific VMS
@@ -26,16 +26,13 @@ class ParkingVMS:
     :ivar parking_vmsextension:
     """
 
-    vms_unit_used_to_manage_parking: None | VmsUnitRecordVersionedReference = (
-        field(
-            default=None,
-            metadata={
-                "name": "vmsUnitUsedToManageParking",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
-            },
-        )
+    vms_unit_used_to_manage_parking: VmsUnitRecordVersionedReference = field(
+        metadata={
+            "name": "vmsUnitUsedToManageParking",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
+        }
     )
     vms_operator: list[Contact] = field(
         default_factory=list,

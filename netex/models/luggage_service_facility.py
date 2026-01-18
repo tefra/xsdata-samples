@@ -9,14 +9,13 @@ from .luggage_service_facility_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LuggageServiceFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: None | LuggageServiceFacilityEnumeration = field(
-        default=None,
+    value: LuggageServiceFacilityEnumeration = field(
         metadata={
             "required": True,
-        },
+        }
     )

@@ -9,7 +9,7 @@ from .special_service_ref import SpecialServiceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecialServiceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "specialServiceRefs_RelStructure"

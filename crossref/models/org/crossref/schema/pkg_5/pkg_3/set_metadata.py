@@ -22,7 +22,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.titles import Titles
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SetMetadata:
     """
     When a book consists of multiple volumes that are not part of a serial
@@ -34,12 +34,11 @@ class SetMetadata:
         name = "set_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    titles: None | Titles = field(
-        default=None,
+    titles: Titles = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     isbn: list[Isbn] = field(
         default_factory=list,

@@ -52,7 +52,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TransportExecutionPlanType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -94,14 +94,13 @@ class TransportExecutionPlanType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     version_id: None | VersionId = field(
         default=None,
@@ -211,25 +210,21 @@ class TransportExecutionPlanType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_user_party: None | TransportUserParty = field(
-        default=None,
+    transport_user_party: TransportUserParty = field(
         metadata={
             "name": "TransportUserParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    transport_service_provider_party: None | TransportServiceProviderParty = (
-        field(
-            default=None,
-            metadata={
-                "name": "TransportServiceProviderParty",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-                "required": True,
-            },
-        )
+    transport_service_provider_party: TransportServiceProviderParty = field(
+        metadata={
+            "name": "TransportServiceProviderParty",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            "required": True,
+        }
     )
     bill_to_party: None | BillToParty = field(
         default=None,
@@ -400,7 +395,7 @@ class TransportExecutionPlanType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TransportExecutionPlan(TransportExecutionPlanType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlan-2"

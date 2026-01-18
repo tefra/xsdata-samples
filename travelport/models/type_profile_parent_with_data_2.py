@@ -12,7 +12,7 @@ from travelport.models.type_profile_type_7 import TypeProfileType7
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeProfileParentWithData2:
     """
     A parent's profile, including the profile data (if specified in the
@@ -79,37 +79,33 @@ class TypeProfileParentWithData2:
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
         },
     )
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_type: None | TypeProfileType7 = field(
-        default=None,
+    profile_type: TypeProfileType7 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    status: None | TypeProfileEntityStatusWithDelete2 = field(
-        default=None,
+    status: TypeProfileEntityStatusWithDelete2 = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     hierarchy_level_id: None | str = field(
         default=None,
@@ -118,14 +114,13 @@ class TypeProfileParentWithData2:
             "type": "Attribute",
         },
     )
-    version: None | int = field(
-        default=None,
+    version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        },
+        }
     )
     template_id: None | int = field(
         default=None,
@@ -144,7 +139,7 @@ class TypeProfileParentWithData2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileParent2(TypeProfileParentWithData2):
     """
     A parent's profile, including the profile data (if specified in the

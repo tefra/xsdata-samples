@@ -12,7 +12,7 @@ from .url import Url
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Xdoc:
     """
     This meta-class represents the ability to refer to an external document
@@ -51,14 +51,13 @@ class Xdoc:
     class Meta:
         name = "XDOC"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | Xdoc.ShortNameFragments = field(
         default=None,
@@ -140,7 +139,7 @@ class Xdoc:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,

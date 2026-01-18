@@ -13,7 +13,7 @@ from generali.models.amount import (
 from generali.models.links import Links
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Models:
     class Meta:
         name = "models"
@@ -64,12 +64,11 @@ class Models:
             "type": "Element",
         },
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     fault_cause: None | FaultCause = field(
         default=None,

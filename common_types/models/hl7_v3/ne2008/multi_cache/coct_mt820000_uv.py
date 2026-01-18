@@ -43,7 +43,7 @@ from .coct_mt150003_uv03 import CoctMt150003Uv03Organization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt820000UvHealthCareProvider:
     class Meta:
         name = "COCT_MT820000UV.HealthCareProvider"
@@ -138,7 +138,7 @@ class CoctMt820000UvHealthCareProvider:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt820000UvRoleOther:
     class Meta:
         name = "COCT_MT820000UV.RoleOther"
@@ -192,25 +192,23 @@ class CoctMt820000UvRoleOther:
         },
     )
     class_code: (
-        None
-        | RoleClassMutualRelationship
+        RoleClassMutualRelationship
         | RoleClassPassive
         | str
         | RoleClassOntological
         | RoleClassPartitive
         | RoleClassRootValue
     ) = field(
-        default=None,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt820000UvPerson:
     class Meta:
         name = "COCT_MT820000UV.Person"
@@ -293,7 +291,7 @@ class CoctMt820000UvPerson:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt820000UvAssignedProvider:
     class Meta:
         name = "COCT_MT820000UV.AssignedProvider"
@@ -391,17 +389,16 @@ class CoctMt820000UvAssignedProvider:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassAssignedEntity = field(
-        default=None,
+    class_code: RoleClassAssignedEntity = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt820000UvPerformer:
     class Meta:
         name = "COCT_MT820000UV.Performer"
@@ -439,13 +436,12 @@ class CoctMt820000UvPerformer:
         },
     )
     assigned_provider: None | CoctMt820000UvAssignedProvider = field(
-        default=None,
         metadata={
             "name": "assignedProvider",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -454,17 +450,16 @@ class CoctMt820000UvPerformer:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationPhysicalPerformer = field(
-        default=None,
+    type_code: ParticipationPhysicalPerformer = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt820000UvCareProvision:
     class Meta:
         name = "COCT_MT820000UV.CareProvision"
@@ -524,12 +519,11 @@ class CoctMt820000UvCareProvision:
         },
     )
     performer: None | CoctMt820000UvPerformer = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -538,13 +532,12 @@ class CoctMt820000UvCareProvision:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassCareProvision = field(
-        default=None,
+    class_code: ActClassCareProvision = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,

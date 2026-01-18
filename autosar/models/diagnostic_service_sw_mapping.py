@@ -40,7 +40,7 @@ from .swc_service_dependency_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticServiceSwMapping:
     """
     This represents the ability to define a mapping of a diagnostic service
@@ -136,14 +136,13 @@ class DiagnosticServiceSwMapping:
     class Meta:
         name = "DIAGNOSTIC-SERVICE-SW-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticServiceSwMapping.ShortNameFragments
@@ -312,7 +311,7 @@ class DiagnosticServiceSwMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -323,7 +322,7 @@ class DiagnosticServiceSwMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -334,57 +333,52 @@ class DiagnosticServiceSwMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticDataElementRef(Ref):
-        dest: None | DiagnosticDataElementSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticDataElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MappedBswServiceDependencyRef(Ref):
-        dest: None | BswServiceDependencyIdentSubtypesEnum = field(
-            default=None,
+        dest: BswServiceDependencyIdentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MappedFlatSwcServiceDependencyRef(Ref):
-        dest: None | SwcServiceDependencySubtypesEnum = field(
-            default=None,
+        dest: SwcServiceDependencySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProcessRef(Ref):
-        dest: None | ProcessDesignSubtypesEnum = field(
-            default=None,
+        dest: ProcessDesignSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInstanceRef(Ref):
-        dest: None | DiagnosticServiceInstanceSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticServiceInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -8,7 +8,7 @@ from .request_structure import RequestStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CapabilitiesRequestStructure(RequestStructure):
     data_object_capabilities_request: None | DataObjectCapabilitiesRequest = (
         field(

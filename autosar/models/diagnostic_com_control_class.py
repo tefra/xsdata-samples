@@ -33,7 +33,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticComControlClass:
     """
     This meta-class contains attributes shared by all instances of the
@@ -118,14 +118,13 @@ class DiagnosticComControlClass:
     class Meta:
         name = "DIAGNOSTIC-COM-CONTROL-CLASS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticComControlClass.ShortNameFragments
@@ -266,7 +265,7 @@ class DiagnosticComControlClass:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -277,7 +276,7 @@ class DiagnosticComControlClass:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -288,18 +287,17 @@ class DiagnosticComControlClass:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessPermissionRef(Ref):
-        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticAccessPermissionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AllChannelsRefs:
         all_channels_ref: list[
             DiagnosticComControlClass.AllChannelsRefs.AllChannelsRef
@@ -312,18 +310,17 @@ class DiagnosticComControlClass:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AllChannelsRef(Ref):
-            dest: None | CommunicationClusterSubtypesEnum = field(
-                default=None,
+            dest: CommunicationClusterSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SpecificChannels:
         diagnostic_com_control_specific_channel: list[
             DiagnosticComControlSpecificChannel
@@ -336,7 +333,7 @@ class DiagnosticComControlClass:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SubNodeChannels:
         diagnostic_com_control_sub_node_channel: list[
             DiagnosticComControlSubNodeChannel

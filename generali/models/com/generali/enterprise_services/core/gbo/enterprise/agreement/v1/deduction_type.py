@@ -29,34 +29,31 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeductionType(BaseIdentifiedComponentType):
-    calculated: None | bool = field(
-        default=None,
+    calculated: bool = field(
         metadata={
             "name": "Calculated",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    value: None | ValueTypeDeduction = field(
-        default=None,
+    value: ValueTypeDeduction = field(
         metadata={
             "name": "Value",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    applies_to_premium_type: None | DeductionApplyToEnum = field(
-        default=None,
+    applies_to_premium_type: DeductionApplyToEnum = field(
         metadata={
             "name": "AppliesToPremiumType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     value_type: None | PremiumValueEnum = field(
         default=None,
@@ -66,14 +63,13 @@ class DeductionType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    deduction_type: None | CodeDescriptionType = field(
-        default=None,
+    deduction_type: CodeDescriptionType = field(
         metadata={
             "name": "DeductionType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     time_applied: None | TimeAppliedEnum = field(
         default=None,

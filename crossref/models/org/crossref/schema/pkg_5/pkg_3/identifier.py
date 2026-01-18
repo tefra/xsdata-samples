@@ -9,7 +9,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.identifier_id_type import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Identifier:
     """
     A public standard identifier that can be used to uniquely identify the
@@ -28,10 +28,9 @@ class Identifier:
             "max_length": 255,
         },
     )
-    id_type: None | IdentifierIdType = field(
-        default=None,
+    id_type: IdentifierIdType = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

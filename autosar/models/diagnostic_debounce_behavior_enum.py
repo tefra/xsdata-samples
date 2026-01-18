@@ -9,7 +9,7 @@ from .diagnostic_debounce_behavior_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticDebounceBehaviorEnum:
     """
     Event debounce algorithm behavior options.
@@ -30,11 +30,10 @@ class DiagnosticDebounceBehaviorEnum:
     class Meta:
         name = "DIAGNOSTIC-DEBOUNCE-BEHAVIOR-ENUM"
 
-    value: None | DiagnosticDebounceBehaviorEnumSimple = field(
-        default=None,
+    value: DiagnosticDebounceBehaviorEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

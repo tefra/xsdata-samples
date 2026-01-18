@@ -10,7 +10,7 @@ from .revision_label_string import RevisionLabelString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Graphic:
     """
     This class represents an artifact containing the image to be inserted
@@ -246,7 +246,7 @@ class Graphic:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RevisionLabels:
         """
         :ivar revision_label: This is a revision label denoting a

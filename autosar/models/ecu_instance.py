@@ -54,7 +54,7 @@ from .v_2_x_support_enum import V2XSupportEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcuInstance:
     """
     ECUInstances are used to define the ECUs used in the topology.
@@ -206,14 +206,13 @@ class EcuInstance:
     class Meta:
         name = "ECU-INSTANCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EcuInstance.ShortNameFragments = field(
         default=None,
@@ -524,7 +523,7 @@ class EcuInstance:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -535,7 +534,7 @@ class EcuInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -546,7 +545,7 @@ class EcuInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AssociatedComIPduGroupRefs:
         associated_com_i_pdu_group_ref: list[
             EcuInstance.AssociatedComIPduGroupRefs.AssociatedComIPduGroupRef
@@ -559,18 +558,17 @@ class EcuInstance:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AssociatedComIPduGroupRef(Ref):
-            dest: None | ISignalIPduGroupSubtypesEnum = field(
-                default=None,
+            dest: ISignalIPduGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AssociatedConsumedProvidedServiceInstanceGroups:
         consumed_provided_service_instance_group_ref_conditional: list[
             ConsumedProvidedServiceInstanceGroupRefConditional
@@ -583,7 +581,7 @@ class EcuInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AssociatedPdurIPduGroupRefs:
         associated_pdur_i_pdu_group_ref: list[
             EcuInstance.AssociatedPdurIPduGroupRefs.AssociatedPdurIPduGroupRef
@@ -596,18 +594,17 @@ class EcuInstance:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AssociatedPdurIPduGroupRef(Ref):
-            dest: None | PdurIPduGroupSubtypesEnum = field(
-                default=None,
+            dest: PdurIPduGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CanTpAddressRefs:
         can_tp_address_ref: list[
             EcuInstance.CanTpAddressRefs.CanTpAddressRef
@@ -620,18 +617,17 @@ class EcuInstance:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CanTpAddressRef(Ref):
-            dest: None | CanTpAddressSubtypesEnum = field(
-                default=None,
+            dest: CanTpAddressSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommControllers:
         can_communication_controller: list[CanCommunicationController] = field(
             default_factory=list,
@@ -698,7 +694,7 @@ class EcuInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Connectors:
         can_communication_connector: list[CanCommunicationConnector] = field(
             default_factory=list,
@@ -757,7 +753,7 @@ class EcuInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuInstancePropss:
         ecu_instance_props: list[EcuInstanceProps] = field(
             default_factory=list,
@@ -768,7 +764,7 @@ class EcuInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Partitions:
         ecu_partition: list[EcuPartition] = field(
             default_factory=list,
@@ -779,29 +775,27 @@ class EcuInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TcpIpIcmpPropsRef(Ref):
-        dest: None | EthTcpIpIcmpPropsSubtypesEnum = field(
-            default=None,
+        dest: EthTcpIpIcmpPropsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TcpIpPropsRef(Ref):
-        dest: None | EthTcpIpPropsSubtypesEnum = field(
-            default=None,
+        dest: EthTcpIpPropsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpAddressRefs:
         tp_address_ref: list[EcuInstance.TpAddressRefs.TpAddressRef] = field(
             default_factory=list,
@@ -812,13 +806,12 @@ class EcuInstance:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TpAddressRef(Ref):
-            dest: None | TpAddressSubtypesEnum = field(
-                default=None,
+            dest: TpAddressSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeKeyBasedReference5:
     """
     Generic type to be used for Key based reference.
@@ -14,11 +14,10 @@ class TypeKeyBasedReference5:
     class Meta:
         name = "typeKeyBasedReference"
 
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

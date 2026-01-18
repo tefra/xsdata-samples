@@ -12,7 +12,7 @@ from .passing_time_view_structure import PassingTimeViewStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TargetPassingTimeViewStructure(PassingTimeViewStructure):
     class Meta:
         name = "TargetPassingTime_ViewStructure"
@@ -90,56 +90,50 @@ class TargetPassingTimeViewStructure(PassingTimeViewStructure):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AimedArrivalTime:
-        value: None | XmlTime = field(
-            default=None,
+        value: XmlTime = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArrivalDayOffset:
-        value: None | int = field(
-            default=None,
+        value: int = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AimedDepartureTime:
-        value: None | XmlTime = field(
-            default=None,
+        value: XmlTime = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DepartureDayOffset:
-        value: None | int = field(
-            default=None,
+        value: int = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AimedNonstopPassingTime:
-        value: None | XmlTime = field(
-            default=None,
+        value: XmlTime = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PassingDayOffset:
-        value: None | int = field(
-            default=None,
+        value: int = field(
             metadata={
                 "required": True,
-            },
+            }
         )

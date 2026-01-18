@@ -10,7 +10,7 @@ from .type_of_value_ref_structure import TypeOfValueRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupConstraintMemberVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "GroupConstraintMember_VersionedChildStructure"
@@ -23,14 +23,13 @@ class GroupConstraintMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    member_class_ref: None | ClassRefStructure = field(
-        default=None,
+    member_class_ref: ClassRefStructure = field(
         metadata={
             "name": "MemberClassRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     member_type_of_value_ref: None | TypeOfValueRefStructure = field(
         default=None,

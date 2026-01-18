@@ -7,7 +7,7 @@ from ipxact.models.simple_port_access_type import SimplePortAccessType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortAccessType:
     """
     Indicates how a netlister accesses a port. 'ref' means accessed by
@@ -18,9 +18,8 @@ class PortAccessType:
         name = "portAccessType"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: None | SimplePortAccessType = field(
-        default=None,
+    value: SimplePortAccessType = field(
         metadata={
             "required": True,
-        },
+        }
     )

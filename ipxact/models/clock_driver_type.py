@@ -9,7 +9,7 @@ from ipxact.models.unsigned_bit_expression import UnsignedBitExpression
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClockDriverType:
     """
     :ivar clock_period: Clock period in units defined by the units
@@ -25,41 +25,37 @@ class ClockDriverType:
     class Meta:
         name = "clockDriverType"
 
-    clock_period: None | ClockDriverType.ClockPeriod = field(
-        default=None,
+    clock_period: ClockDriverType.ClockPeriod = field(
         metadata={
             "name": "clockPeriod",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
-    clock_pulse_offset: None | ClockDriverType.ClockPulseOffset = field(
-        default=None,
+    clock_pulse_offset: ClockDriverType.ClockPulseOffset = field(
         metadata={
             "name": "clockPulseOffset",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
-    clock_pulse_value: None | UnsignedBitExpression = field(
-        default=None,
+    clock_pulse_value: UnsignedBitExpression = field(
         metadata={
             "name": "clockPulseValue",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
-    clock_pulse_duration: None | ClockDriverType.ClockPulseDuration = field(
-        default=None,
+    clock_pulse_duration: ClockDriverType.ClockPulseDuration = field(
         metadata={
             "name": "clockPulseDuration",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,
@@ -69,7 +65,7 @@ class ClockDriverType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClockPeriod(RealExpression):
         units: DelayValueUnitType = field(
             default=DelayValueUnitType.NS,
@@ -78,7 +74,7 @@ class ClockDriverType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClockPulseOffset(RealExpression):
         units: DelayValueUnitType = field(
             default=DelayValueUnitType.NS,
@@ -87,7 +83,7 @@ class ClockDriverType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClockPulseDuration(RealExpression):
         units: DelayValueUnitType = field(
             default=DelayValueUnitType.NS,

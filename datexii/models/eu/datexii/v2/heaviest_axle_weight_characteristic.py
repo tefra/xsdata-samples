@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HeaviestAxleWeightCharacteristic:
     """
     Weight characteristic of the heaviest axle on the vehicle.
@@ -22,23 +22,21 @@ class HeaviestAxleWeightCharacteristic:
     :ivar heaviest_axle_weight_characteristic_extension:
     """
 
-    comparison_operator: None | ComparisonOperatorEnum = field(
-        default=None,
+    comparison_operator: ComparisonOperatorEnum = field(
         metadata={
             "name": "comparisonOperator",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    heaviest_axle_weight: None | float = field(
-        default=None,
+    heaviest_axle_weight: float = field(
         metadata={
             "name": "heaviestAxleWeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     heaviest_axle_weight_characteristic_extension: None | ExtensionType = (
         field(

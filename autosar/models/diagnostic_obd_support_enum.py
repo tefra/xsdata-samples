@@ -7,7 +7,7 @@ from .diagnostic_obd_support_enum_simple import DiagnosticObdSupportEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticObdSupportEnum:
     """
     This meta-class represents the ability to model the roles in which a
@@ -32,11 +32,10 @@ class DiagnosticObdSupportEnum:
     class Meta:
         name = "DIAGNOSTIC-OBD-SUPPORT-ENUM"
 
-    value: None | DiagnosticObdSupportEnumSimple = field(
-        default=None,
+    value: DiagnosticObdSupportEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

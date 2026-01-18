@@ -13,7 +13,7 @@ from .variable_data_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McSwEmulationMethodSupport:
     """
     This denotes the method used by the RTE to handle the calibration data.
@@ -128,18 +128,17 @@ class McSwEmulationMethodSupport:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BaseReferenceRef(Ref):
-        dest: None | VariableDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: VariableDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ElementGroups:
         mc_parameter_element_group: list[McParameterElementGroup] = field(
             default_factory=list,
@@ -150,13 +149,12 @@ class McSwEmulationMethodSupport:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReferenceTableRef(Ref):
-        dest: None | VariableDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: VariableDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

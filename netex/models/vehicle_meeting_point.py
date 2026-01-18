@@ -9,7 +9,7 @@ from .vehicle_meeting_point_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleMeetingPoint(VehicleMeetingPointVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

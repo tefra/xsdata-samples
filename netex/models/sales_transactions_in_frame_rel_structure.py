@@ -9,7 +9,7 @@ from .sales_transaction import SalesTransaction
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SalesTransactionsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "salesTransactionsInFrame_RelStructure"

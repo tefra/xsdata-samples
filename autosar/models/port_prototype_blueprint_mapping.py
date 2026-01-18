@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortPrototypeBlueprintMapping:
     """
     This meta-class represents the ability to map a PortPrototypeBlueprint
@@ -72,24 +72,22 @@ class PortPrototypeBlueprintMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortPrototypeBlueprintRef(Ref):
-        dest: None | PortPrototypeBlueprintSubtypesEnum = field(
-            default=None,
+        dest: PortPrototypeBlueprintSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DerivedPortPrototypeRef(Ref):
-        dest: None | PortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: PortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

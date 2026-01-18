@@ -9,7 +9,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateType:
     """
     <ns1:UniqueID
@@ -28,9 +28,8 @@ class DateType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">date</ns1:PrimitiveType>.
     """
 
-    value: None | XmlDate = field(
-        default=None,
+    value: XmlDate = field(
         metadata={
             "required": True,
-        },
+        }
     )

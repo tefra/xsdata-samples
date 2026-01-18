@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupedOption:
     """
     Parameters
@@ -18,11 +18,10 @@ class GroupedOption:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    optional_service_ref: None | str = field(
-        default=None,
+    optional_service_ref: str = field(
         metadata={
             "name": "OptionalServiceRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -9,7 +9,7 @@ from .t_relationship_direction import TRelationshipDirection
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TRelationship(TBaseElement):
     class Meta:
         name = "tRelationship"
@@ -30,13 +30,12 @@ class TRelationship(TBaseElement):
             "min_occurs": 1,
         },
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     direction: None | TRelationshipDirection = field(
         default=None,

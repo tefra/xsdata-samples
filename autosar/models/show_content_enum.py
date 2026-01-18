@@ -7,7 +7,7 @@ from .show_content_enum_simple import ShowContentEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShowContentEnum:
     """
     This specifies if the content of the xref element shall be rendered.
@@ -28,11 +28,10 @@ class ShowContentEnum:
     class Meta:
         name = "SHOW-CONTENT-ENUM"
 
-    value: None | ShowContentEnumSimple = field(
-        default=None,
+    value: ShowContentEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IdsmInstanceRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -66,13 +66,12 @@ class IdsmInstanceRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IdsmInstanceRef(Ref):
-        dest: None | IdsmInstanceSubtypesEnum = field(
-            default=None,
+        dest: IdsmInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

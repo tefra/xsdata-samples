@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinConfigurableFrame:
     """
     Assignment of messageIds to Frames.
@@ -66,13 +66,12 @@ class LinConfigurableFrame:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FrameRef(Ref):
-        dest: None | LinFrameSubtypesEnum = field(
-            default=None,
+        dest: LinFrameSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

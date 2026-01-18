@@ -8,17 +8,16 @@ from .containment_aggregation_structure import ContainmentAggregationStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContactsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "contacts_RelStructure"
 
-    contact: None | Contact = field(
-        default=None,
+    contact: Contact = field(
         metadata={
             "name": "Contact",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

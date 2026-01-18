@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DirectionBearingValue(DataValue):
     """
     A measured or calculated value of direction as a bearing.
@@ -19,14 +19,13 @@ class DirectionBearingValue(DataValue):
     :ivar direction_bearing_value_extension:
     """
 
-    direction_bearing: None | int = field(
-        default=None,
+    direction_bearing: int = field(
         metadata={
             "name": "directionBearing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     direction_bearing_value_extension: None | ExtensionType = field(
         default=None,

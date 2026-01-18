@@ -21,7 +21,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UserDefinedPdu:
     """
     UserDefinedPdu allows to describe PDU-based communication over Complex
@@ -104,14 +104,13 @@ class UserDefinedPdu:
     class Meta:
         name = "USER-DEFINED-PDU"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | UserDefinedPdu.ShortNameFragments = field(
         default=None,
@@ -232,7 +231,7 @@ class UserDefinedPdu:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -243,7 +242,7 @@ class UserDefinedPdu:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

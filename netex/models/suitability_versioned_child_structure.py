@@ -10,17 +10,16 @@ from .user_need_versioned_child_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SuitabilityVersionedChildStructure(UserNeedVersionedChildStructure):
     class Meta:
         name = "Suitability_VersionedChildStructure"
 
-    suitable: None | SuitableEnumeration = field(
-        default=None,
+    suitable: SuitableEnumeration = field(
         metadata={
             "name": "Suitable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

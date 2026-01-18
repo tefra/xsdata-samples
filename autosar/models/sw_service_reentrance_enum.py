@@ -7,7 +7,7 @@ from .sw_service_reentrance_enum_simple import SwServiceReentranceEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwServiceReentranceEnum:
     """
     Specifies the legal values for reentrancy of services.
@@ -28,11 +28,10 @@ class SwServiceReentranceEnum:
     class Meta:
         name = "SW-SERVICE-REENTRANCE-ENUM"
 
-    value: None | SwServiceReentranceEnumSimple = field(
-        default=None,
+    value: SwServiceReentranceEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

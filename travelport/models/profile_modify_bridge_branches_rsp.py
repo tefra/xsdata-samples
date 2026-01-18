@@ -8,7 +8,7 @@ from travelport.models.bridge_branch import BridgeBranch
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileModifyBridgeBranchesRsp(BaseRsp5):
     """
     Response to add or delete an Agent's Bridge Branch Assignments.
@@ -36,21 +36,19 @@ class ProfileModifyBridgeBranchesRsp(BaseRsp5):
             "max_occurs": 999,
         },
     )
-    agent_id: None | int = field(
-        default=None,
+    agent_id: int = field(
         metadata={
             "name": "AgentID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    user_name: None | str = field(
-        default=None,
+    user_name: str = field(
         metadata={
             "name": "UserName",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )

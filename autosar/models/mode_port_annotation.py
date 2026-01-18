@@ -13,7 +13,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModePortAnnotation:
     """
     Annotation to a port used for calibration regarding a certain
@@ -90,13 +90,12 @@ class ModePortAnnotation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeGroupRef(Ref):
-        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

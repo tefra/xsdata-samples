@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.roadside_assistance_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoadsideAssistance(OperatorAction):
     """
     Details of road side assistance required or being given.
@@ -21,14 +21,13 @@ class RoadsideAssistance(OperatorAction):
     :ivar roadside_assistance_extension:
     """
 
-    roadside_assistance_type: None | RoadsideAssistanceTypeEnum = field(
-        default=None,
+    roadside_assistance_type: RoadsideAssistanceTypeEnum = field(
         metadata={
             "name": "roadsideAssistanceType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     roadside_assistance_extension: None | ExtensionType = field(
         default=None,

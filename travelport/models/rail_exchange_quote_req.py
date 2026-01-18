@@ -14,7 +14,7 @@ from travelport.models.type_response_type import TypeResponseType
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailExchangeQuoteReq(BaseReq1):
     """
     Queries the host for availability.
@@ -91,15 +91,14 @@ class RailExchangeQuoteReq(BaseReq1):
             "type": "Element",
         },
     )
-    locator_code: None | str = field(
-        default=None,
+    locator_code: str = field(
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
     response_type: None | TypeResponseType = field(
         default=None,

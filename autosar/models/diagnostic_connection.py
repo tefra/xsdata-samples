@@ -20,7 +20,7 @@ from .tp_connection_ident_subtypes_enum import TpConnectionIdentSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticConnection:
     """
     DiagnosticConncection that is used to describe the relationship between
@@ -93,14 +93,13 @@ class DiagnosticConnection:
     class Meta:
         name = "DIAGNOSTIC-CONNECTION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DiagnosticConnection.ShortNameFragments = (
         field(
@@ -239,7 +238,7 @@ class DiagnosticConnection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -250,7 +249,7 @@ class DiagnosticConnection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -261,7 +260,7 @@ class DiagnosticConnection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FunctionalRequestRefs:
         functional_request_ref: list[
             DiagnosticConnection.FunctionalRequestRefs.FunctionalRequestRef
@@ -274,18 +273,17 @@ class DiagnosticConnection:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FunctionalRequestRef(Ref):
-            dest: None | TpConnectionIdentSubtypesEnum = field(
-                default=None,
+            dest: TpConnectionIdentSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PeriodicResponseUudtRefs:
         periodic_response_uudt_ref: list[
             DiagnosticConnection.PeriodicResponseUudtRefs.PeriodicResponseUudtRef
@@ -298,46 +296,42 @@ class DiagnosticConnection:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PeriodicResponseUudtRef(Ref):
-            dest: None | PduTriggeringSubtypesEnum = field(
-                default=None,
+            dest: PduTriggeringSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PhysicalRequestRef(Ref):
-        dest: None | TpConnectionIdentSubtypesEnum = field(
-            default=None,
+        dest: TpConnectionIdentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResponseOnEventRef(Ref):
-        dest: None | TpConnectionIdentSubtypesEnum = field(
-            default=None,
+        dest: TpConnectionIdentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResponseRef(Ref):
-        dest: None | TpConnectionIdentSubtypesEnum = field(
-            default=None,
+        dest: TpConnectionIdentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

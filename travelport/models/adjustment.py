@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Adjustment:
     """
     An indentifier which indentifies adjustment made on original pricing.
@@ -47,13 +47,12 @@ class Adjustment:
             "type": "Element",
         },
     )
-    adjusted_total_price: None | str = field(
-        default=None,
+    adjusted_total_price: str = field(
         metadata={
             "name": "AdjustedTotalPrice",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     approximate_adjusted_total_price: None | str = field(
         default=None,

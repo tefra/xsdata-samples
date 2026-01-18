@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.subject_type_of_works_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Subjects:
     """
     The subjects with which the roadworks are associated.
@@ -23,14 +23,13 @@ class Subjects:
     :ivar subjects_extension:
     """
 
-    subject_type_of_works: None | SubjectTypeOfWorksEnum = field(
-        default=None,
+    subject_type_of_works: SubjectTypeOfWorksEnum = field(
         metadata={
             "name": "subjectTypeOfWorks",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     number_of_subjects: None | int = field(
         default=None,

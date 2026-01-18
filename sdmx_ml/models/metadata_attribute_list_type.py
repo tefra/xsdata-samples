@@ -9,7 +9,7 @@ from sdmx_ml.models.metadata_attribute_type import MetadataAttribute
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataAttributeListType(ComponentListType):
     """
     MetadataAttributeListType describes the structure of a meta data

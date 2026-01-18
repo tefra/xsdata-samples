@@ -29,7 +29,7 @@ from .signal_based_method_to_i_signal_triggering_mapping import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceInstanceToSignalMapping:
     """
     This meta-class is defined for a specific ServiceInstance and contains
@@ -100,14 +100,13 @@ class ServiceInstanceToSignalMapping:
     class Meta:
         name = "SERVICE-INSTANCE-TO-SIGNAL-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ServiceInstanceToSignalMapping.ShortNameFragments
@@ -228,7 +227,7 @@ class ServiceInstanceToSignalMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -239,7 +238,7 @@ class ServiceInstanceToSignalMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -250,7 +249,7 @@ class ServiceInstanceToSignalMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventElementMappings:
         signal_based_event_element_to_i_signal_triggering_mapping: list[
             SignalBasedEventElementToISignalTriggeringMapping
@@ -263,7 +262,7 @@ class ServiceInstanceToSignalMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FieldMappings:
         signal_based_field_to_i_signal_triggering_mapping: list[
             SignalBasedFieldToISignalTriggeringMapping
@@ -276,13 +275,12 @@ class ServiceInstanceToSignalMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInstanceRef(Ref):
-        dest: None | AdaptivePlatformServiceInstanceSubtypesEnum = field(
-            default=None,
+        dest: AdaptivePlatformServiceInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

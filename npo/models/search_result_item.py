@@ -7,7 +7,7 @@ from npo.models.hightlight_type import HightlightType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SearchResultItem:
     class Meta:
         name = "searchResultItem"

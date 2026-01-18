@@ -8,7 +8,7 @@ from travelport.models.system_time import SystemTime
 __NAMESPACE__ = "http://www.travelport.com/schema/system_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeRsp(BaseRsp3):
     """
     Returns the time of the system.

@@ -9,7 +9,7 @@ from .memory_allocation_keyword_policy_type_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MemoryAllocationKeywordPolicyType:
     """
     Enumeration to specify the name pattern of the Memory Allocation
@@ -31,11 +31,10 @@ class MemoryAllocationKeywordPolicyType:
     class Meta:
         name = "MEMORY-ALLOCATION-KEYWORD-POLICY-TYPE"
 
-    value: None | MemoryAllocationKeywordPolicyTypeSimple = field(
-        default=None,
+    value: MemoryAllocationKeywordPolicyTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

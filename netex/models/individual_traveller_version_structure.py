@@ -17,7 +17,7 @@ from .vehicle_pooling_driver_infos_rel_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndividualTravellerVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "IndividualTraveller_VersionStructure"

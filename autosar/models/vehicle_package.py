@@ -27,7 +27,7 @@ from .vehicle_rollout_step import VehicleRolloutStep
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehiclePackage:
     """
     This meta-class represents the ability to define a vehicle package for
@@ -107,14 +107,13 @@ class VehiclePackage:
     class Meta:
         name = "VEHICLE-PACKAGE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | VehiclePackage.ShortNameFragments = field(
         default=None,
@@ -265,7 +264,7 @@ class VehiclePackage:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -276,7 +275,7 @@ class VehiclePackage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -287,7 +286,7 @@ class VehiclePackage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DriverNotifications:
         vehicle_driver_notification: list[VehicleDriverNotification] = field(
             default_factory=list,
@@ -298,18 +297,17 @@ class VehiclePackage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PackagerSignatureRef(Ref):
-        dest: None | CryptoServiceCertificateSubtypesEnum = field(
-            default=None,
+        dest: CryptoServiceCertificateSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RolloutQualifications:
         vehicle_rollout_step: list[VehicleRolloutStep] = field(
             default_factory=list,
@@ -320,7 +318,7 @@ class VehiclePackage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ucms:
         ucm_description: list[UcmDescription] = field(
             default_factory=list,
@@ -331,7 +329,7 @@ class VehiclePackage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UcmMasterFallbackRefs:
         ucm_master_fallback_ref: list[
             VehiclePackage.UcmMasterFallbackRefs.UcmMasterFallbackRef
@@ -344,24 +342,22 @@ class VehiclePackage:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UcmMasterFallbackRef(Ref):
-            dest: None | UcmDescriptionSubtypesEnum = field(
-                default=None,
+            dest: UcmDescriptionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VehicleDescriptionRef(Ref):
-        dest: None | DocumentationSubtypesEnum = field(
-            default=None,
+        dest: DocumentationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

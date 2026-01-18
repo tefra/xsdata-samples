@@ -11,7 +11,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.title import Title
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Titles:
     """
     A container for the title and original language title elements.
@@ -21,12 +21,11 @@ class Titles:
         name = "titles"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    title: None | Title = field(
-        default=None,
+    title: Title = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     subtitle: list[Subtitle] = field(
         default_factory=list,

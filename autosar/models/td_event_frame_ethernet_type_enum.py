@@ -9,7 +9,7 @@ from .td_event_frame_ethernet_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventFrameEthernetTypeEnum:
     """
     This is used to describe the specific event type of a
@@ -31,11 +31,10 @@ class TdEventFrameEthernetTypeEnum:
     class Meta:
         name = "TD-EVENT-FRAME-ETHERNET-TYPE-ENUM"
 
-    value: None | TdEventFrameEthernetTypeEnumSimple = field(
-        default=None,
+    value: TdEventFrameEthernetTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

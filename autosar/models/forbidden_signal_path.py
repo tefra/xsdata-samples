@@ -14,7 +14,7 @@ from .swc_to_swc_signal import SwcToSwcSignal
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ForbiddenSignalPath:
     """
     The ForbiddenSignalPath describes the physical channels which an
@@ -108,7 +108,7 @@ class ForbiddenSignalPath:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Operations:
         swc_to_swc_operation_arguments: list[SwcToSwcOperationArguments] = (
             field(
@@ -121,7 +121,7 @@ class ForbiddenSignalPath:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PhysicalChannelRefs:
         physical_channel_ref: list[
             ForbiddenSignalPath.PhysicalChannelRefs.PhysicalChannelRef
@@ -134,18 +134,17 @@ class ForbiddenSignalPath:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PhysicalChannelRef(Ref):
-            dest: None | PhysicalChannelSubtypesEnum = field(
-                default=None,
+            dest: PhysicalChannelSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Signals:
         swc_to_swc_signal: list[SwcToSwcSignal] = field(
             default_factory=list,

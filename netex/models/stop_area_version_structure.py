@@ -10,7 +10,7 @@ from .zone_version_structure import ZoneVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StopAreaVersionStructure(ZoneVersionStructure):
     class Meta:
         name = "StopArea_VersionStructure"

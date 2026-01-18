@@ -34,170 +34,159 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DateTimeType:
-    value: None | XmlDateTime = field(
-        default=None,
+    value: XmlDateTime = field(
         metadata={
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DateType:
-    value: None | XmlDate = field(
-        default=None,
+    value: XmlDate = field(
         metadata={
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class IndicatorType:
-    value: None | bool = field(
-        default=None,
+    value: bool = field(
         metadata={
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TimeType:
-    value: None | XmlTime = field(
-        default=None,
+    value: XmlTime = field(
         metadata={
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AmountType(CctsCctSchemaModule21AmountType):
-    currency_id: None | str = field(
-        default=None,
+    currency_id: str = field(
         metadata={
             "name": "currencyID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class BinaryObjectType(CctsCctSchemaModule21BinaryObjectType):
-    mime_code: None | str = field(
-        default=None,
+    mime_code: str = field(
         metadata={
             "name": "mimeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CodeType(CctsCctSchemaModule21CodeType):
     pass
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GraphicType(CctsCctSchemaModule21BinaryObjectType):
-    mime_code: None | str = field(
-        default=None,
+    mime_code: str = field(
         metadata={
             "name": "mimeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class IdentifierType(CctsCctSchemaModule21IdentifierType):
     pass
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MeasureType(CctsCctSchemaModule21MeasureType):
-    unit_code: None | str = field(
-        default=None,
+    unit_code: str = field(
         metadata={
             "name": "unitCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class NameType(CctsCctSchemaModule21TextType):
     pass
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class NumericType(CctsCctSchemaModule21NumericType):
     pass
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class PercentType(CctsCctSchemaModule21NumericType):
     pass
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class PictureType(CctsCctSchemaModule21BinaryObjectType):
-    mime_code: None | str = field(
-        default=None,
+    mime_code: str = field(
         metadata={
             "name": "mimeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class QuantityType(CctsCctSchemaModule21QuantityType):
     pass
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RateType(CctsCctSchemaModule21NumericType):
     pass
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SoundType(CctsCctSchemaModule21BinaryObjectType):
-    mime_code: None | str = field(
-        default=None,
+    mime_code: str = field(
         metadata={
             "name": "mimeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TextType(CctsCctSchemaModule21TextType):
     pass
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ValueType(CctsCctSchemaModule21NumericType):
     pass
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class VideoType(CctsCctSchemaModule21BinaryObjectType):
-    mime_code: None | str = field(
-        default=None,
+    mime_code: str = field(
         metadata={
             "name": "mimeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

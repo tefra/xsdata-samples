@@ -10,7 +10,7 @@ from travelport.models.type_structured_address_2 import TypeStructuredAddress2
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypePaymentCardHistory1:
     """
     Container for all credit and debit card information.

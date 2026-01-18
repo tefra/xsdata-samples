@@ -11,7 +11,7 @@ from travelport.models.profile_summary_1 import ProfileSummary1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileSearchRsp1(BaseRsp2):
     """
     Response with the profile.
@@ -56,11 +56,10 @@ class ProfileSearchRsp1(BaseRsp2):
             "max_length": 128,
         },
     )
-    more_results: None | bool = field(
-        default=None,
+    more_results: bool = field(
         metadata={
             "name": "MoreResults",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -14,7 +14,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswModeSenderPolicy:
     """
     Specifies the details for the sending of a mode switch for the referred
@@ -106,13 +106,12 @@ class BswModeSenderPolicy:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvidedModeGroupRef(Ref):
-        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

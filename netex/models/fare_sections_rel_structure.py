@@ -10,7 +10,7 @@ from .sections_in_sequence_rel_structure import FareSection
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareSectionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fareSections_RelStructure"

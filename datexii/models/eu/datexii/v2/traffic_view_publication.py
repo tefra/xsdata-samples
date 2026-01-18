@@ -10,20 +10,19 @@ from datexii.models.eu.datexii.v2.traffic_view import TrafficView
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrafficViewPublication(PayloadPublication):
     """
     A publication containing one or more traffic views.
     """
 
-    header_information: None | HeaderInformation = field(
-        default=None,
+    header_information: HeaderInformation = field(
         metadata={
             "name": "headerInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     traffic_view: list[TrafficView] = field(
         default_factory=list,

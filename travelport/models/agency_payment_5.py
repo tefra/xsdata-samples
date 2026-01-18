@@ -7,7 +7,7 @@ from travelport.models.type_agency_payment_5 import TypeAgencyPayment5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgencyPayment5(TypeAgencyPayment5):
     """
     Container for Agency Payment.

@@ -7,7 +7,7 @@ from .t_participant import TParticipant
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Participant(TParticipant):
     class Meta:
         name = "participant"

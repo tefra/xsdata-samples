@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.tpeg_area_location import TpegAreaLocation
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TpegGeometricArea(TpegAreaLocation):
     """
     A geometric area defined by a centre point and a radius.
@@ -23,22 +23,20 @@ class TpegGeometricArea(TpegAreaLocation):
     :ivar tpeg_geometric_area_extension:
     """
 
-    radius: None | int = field(
-        default=None,
+    radius: int = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    centre_point: None | PointCoordinates = field(
-        default=None,
+    centre_point: PointCoordinates = field(
         metadata={
             "name": "centrePoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     name: None | TpegAreaDescriptor = field(
         default=None,

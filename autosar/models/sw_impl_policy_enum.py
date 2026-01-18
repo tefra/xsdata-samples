@@ -7,7 +7,7 @@ from .sw_impl_policy_enum_simple import SwImplPolicyEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwImplPolicyEnum:
     """
     Specifies the implementation strategy with respect to consistency
@@ -29,11 +29,10 @@ class SwImplPolicyEnum:
     class Meta:
         name = "SW-IMPL-POLICY-ENUM"
 
-    value: None | SwImplPolicyEnumSimple = field(
-        default=None,
+    value: SwImplPolicyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -14,7 +14,7 @@ from travelport.models.rail_fare_note_list import RailFareNoteList
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailExchangeReq(BaseCreateWithFormOfPaymentReq1):
     """
     Creates a rail exchange reservation request with the host.
@@ -83,23 +83,21 @@ class RailExchangeReq(BaseCreateWithFormOfPaymentReq1):
             "max_occurs": 999,
         },
     )
-    locator_code: None | str = field(
-        default=None,
+    locator_code: str = field(
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
-    booking_action_type: None | str = field(
-        default=None,
+    booking_action_type: str = field(
         metadata={
             "name": "BookingActionType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     refund_option: None | str = field(
         default=None,

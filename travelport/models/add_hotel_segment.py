@@ -13,7 +13,7 @@ from travelport.models.promotion_code import PromotionCode
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddHotelSegment:
     """
     Container for Hotel Segment to be added.
@@ -33,32 +33,29 @@ class AddHotelSegment:
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
-    hotel_rate_detail: None | HotelRateDetail = field(
-        default=None,
+    hotel_rate_detail: HotelRateDetail = field(
         metadata={
             "name": "HotelRateDetail",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        },
+        }
     )
-    hotel_property: None | HotelProperty = field(
-        default=None,
+    hotel_property: HotelProperty = field(
         metadata={
             "name": "HotelProperty",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        },
+        }
     )
-    hotel_stay: None | HotelStay = field(
-        default=None,
+    hotel_stay: HotelStay = field(
         metadata={
             "name": "HotelStay",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        },
+        }
     )
     hotel_bedding: list[HotelBedding] = field(
         default_factory=list,

@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.predefined_location_container import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PredefinedLocation(PredefinedLocationContainer):
     """
     An identifiable versioned instance of a single predefined location.
@@ -34,13 +34,12 @@ class PredefinedLocation(PredefinedLocationContainer):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    location: None | Location = field(
-        default=None,
+    location: Location = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     predefined_location_extension: None | ExtensionType = field(
         default=None,
@@ -50,17 +49,15 @@ class PredefinedLocation(PredefinedLocationContainer):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

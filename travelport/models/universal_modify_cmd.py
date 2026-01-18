@@ -21,7 +21,7 @@ from travelport.models.vehicle_update import VehicleUpdate
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalModifyCmd:
     """
     Container for the elements that will be batch updated to a
@@ -157,11 +157,10 @@ class UniversalModifyCmd:
             "type": "Element",
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

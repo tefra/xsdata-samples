@@ -20,7 +20,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organi
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganisationGbotype:
     """
     - <xs:description
@@ -82,14 +82,13 @@ class OrganisationGbotype:
             "pattern": r"([0-9]{9})",
         },
     )
-    primary_address: None | AddressType = field(
-        default=None,
+    primary_address: AddressType = field(
         metadata={
             "name": "PrimaryAddress",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
             "required": True,
-        },
+        }
     )
     global_ultimate_guns: None | str = field(
         default=None,
@@ -141,14 +140,13 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    is_individual: None | bool = field(
-        default=None,
+    is_individual: bool = field(
         metadata={
             "name": "IsIndividual",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
             "required": True,
-        },
+        }
     )
     creation_date: None | XmlDateTime = field(
         default=None,

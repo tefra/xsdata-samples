@@ -12,7 +12,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AttsType(AnnotableType):
     """
     <ns1:p

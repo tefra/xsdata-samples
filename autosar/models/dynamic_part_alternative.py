@@ -10,7 +10,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DynamicPartAlternative:
     """
     One of the Com IPdu alternatives that are transmitted in the Dynamic
@@ -84,13 +84,12 @@ class DynamicPartAlternative:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IPduRef(Ref):
-        dest: None | ISignalIPduSubtypesEnum = field(
-            default=None,
+        dest: ISignalIPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -9,7 +9,7 @@ from generali.models.com.generali.enterprise_services.core.gbm.enterprise.organi
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbm/enterprise/organisation/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NotifyOrganisationGbmresponse(NotifyOrganisationGbmresponseType):
     """
     <description xmlns="">The definition of the response message that

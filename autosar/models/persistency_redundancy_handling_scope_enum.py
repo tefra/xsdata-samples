@@ -9,7 +9,7 @@ from .persistency_redundancy_handling_scope_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersistencyRedundancyHandlingScopeEnum:
     """
     This meta-class provides values to control the scope of redundancy
@@ -31,11 +31,10 @@ class PersistencyRedundancyHandlingScopeEnum:
     class Meta:
         name = "PERSISTENCY-REDUNDANCY-HANDLING-SCOPE-ENUM"
 
-    value: None | PersistencyRedundancyHandlingScopeEnumSimple = field(
-        default=None,
+    value: PersistencyRedundancyHandlingScopeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

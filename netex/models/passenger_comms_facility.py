@@ -9,7 +9,7 @@ from .passenger_comms_facility_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassengerCommsFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

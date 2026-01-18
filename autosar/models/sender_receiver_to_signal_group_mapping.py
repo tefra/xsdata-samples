@@ -25,7 +25,7 @@ from .variable_data_prototype_in_system_instance_ref import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SenderReceiverToSignalGroupMapping:
     """
     Mapping of a sender receiver communication data element with a
@@ -165,7 +165,7 @@ class SenderReceiverToSignalGroupMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventGroupRefs:
         event_group_ref: list[
             SenderReceiverToSignalGroupMapping.EventGroupRefs.EventGroupRef
@@ -178,18 +178,17 @@ class SenderReceiverToSignalGroupMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EventGroupRef(Ref):
-            dest: None | ConsumedEventGroupSubtypesEnum = field(
-                default=None,
+            dest: ConsumedEventGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventHandlerRefs:
         event_handler_ref: list[
             SenderReceiverToSignalGroupMapping.EventHandlerRefs.EventHandlerRef
@@ -202,18 +201,17 @@ class SenderReceiverToSignalGroupMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EventHandlerRef(Ref):
-            dest: None | EventHandlerSubtypesEnum = field(
-                default=None,
+            dest: EventHandlerSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInstanceRefs:
         service_instance_ref: list[
             SenderReceiverToSignalGroupMapping.ServiceInstanceRefs.ServiceInstanceRef
@@ -226,29 +224,27 @@ class SenderReceiverToSignalGroupMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ServiceInstanceRef(Ref):
-            dest: None | AbstractServiceInstanceSubtypesEnum = field(
-                default=None,
+            dest: AbstractServiceInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SignalGroupRef(Ref):
-        dest: None | SystemSignalGroupSubtypesEnum = field(
-            default=None,
+        dest: SystemSignalGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeMapping:
         sender_rec_array_type_mapping: None | SenderRecArrayTypeMapping = (
             field(

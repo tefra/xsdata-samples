@@ -27,7 +27,7 @@ from .variable_access_subtypes_enum import VariableAccessSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventSwcInternalBehavior:
     """
     This is used to describe timing events related to the
@@ -100,14 +100,13 @@ class TdEventSwcInternalBehavior:
     class Meta:
         name = "TD-EVENT-SWC-INTERNAL-BEHAVIOR"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | TdEventSwcInternalBehavior.ShortNameFragments
@@ -242,7 +241,7 @@ class TdEventSwcInternalBehavior:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -253,7 +252,7 @@ class TdEventSwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -264,24 +263,22 @@ class TdEventSwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RunnableRef(Ref):
-        dest: None | RunnableEntitySubtypesEnum = field(
-            default=None,
+        dest: RunnableEntitySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VariableAccessRef(Ref):
-        dest: None | VariableAccessSubtypesEnum = field(
-            default=None,
+        dest: VariableAccessSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

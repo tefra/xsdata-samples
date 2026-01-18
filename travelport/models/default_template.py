@@ -9,7 +9,7 @@ from travelport.models.type_hierarchy_override_type import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefaultTemplate:
     """
     The information about the default account and traveler templates for
@@ -31,28 +31,25 @@ class DefaultTemplate:
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    profile_type: None | TypeHierarchyOverrideType = field(
-        default=None,
+    profile_type: TypeHierarchyOverrideType = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    template_id: None | int = field(
-        default=None,
+    template_id: int = field(
         metadata={
             "name": "TemplateID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    template_version: None | int = field(
-        default=None,
+    template_version: int = field(
         metadata={
             "name": "TemplateVersion",
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        },
+        }
     )

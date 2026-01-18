@@ -9,7 +9,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.archive_name import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Archive:
     """
     Used to indicate the designated archiving organization(s) for an item.
@@ -19,10 +19,9 @@ class Archive:
         name = "archive"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    name: None | ArchiveName = field(
-        default=None,
+    name: ArchiveName = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

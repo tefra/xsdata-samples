@@ -16,7 +16,7 @@ from ipxact.models.unsigned_int_expression import UnsignedIntExpression
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortTransactionalType:
     """
     Transactional port type.
@@ -44,13 +44,12 @@ class PortTransactionalType:
     class Meta:
         name = "portTransactionalType"
 
-    initiative: None | Initiative = field(
-        default=None,
+    initiative: Initiative = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     kind: None | Kind = field(
         default=None,
@@ -112,7 +111,7 @@ class PortTransactionalType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Connection:
         """
         :ivar max_connections: Indicates the maximum number of
@@ -141,7 +140,7 @@ class PortTransactionalType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PowerConstraints:
         """
         :ivar power_constraint: Single wire port set of power

@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.openlr_functional_road_class_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenlrPathAttributes:
     """
     The field path attributes is part of a location reference point (except
@@ -26,25 +26,21 @@ class OpenlrPathAttributes:
     :ivar openlr_path_attributes_extension:
     """
 
-    openlr_lowest_frcto_next_lrpoint: None | OpenlrFunctionalRoadClassEnum = (
-        field(
-            default=None,
-            metadata={
-                "name": "openlrLowestFRCToNextLRPoint",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
-            },
-        )
+    openlr_lowest_frcto_next_lrpoint: OpenlrFunctionalRoadClassEnum = field(
+        metadata={
+            "name": "openlrLowestFRCToNextLRPoint",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
+        }
     )
-    openlr_distance_to_next_lrpoint: None | int = field(
-        default=None,
+    openlr_distance_to_next_lrpoint: int = field(
         metadata={
             "name": "openlrDistanceToNextLRPoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     openlr_path_attributes_extension: None | ExtensionType = field(
         default=None,

@@ -9,7 +9,7 @@ from datexii.models.eu.datexii.v2.url_link_type_enum import UrlLinkTypeEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UrlLink:
     """
     Details of a Uniform Resource Locator (URL) address pointing to a
@@ -26,14 +26,13 @@ class UrlLink:
     :ivar url_link_extension:
     """
 
-    url_link_address: None | str = field(
-        default=None,
+    url_link_address: str = field(
         metadata={
             "name": "urlLinkAddress",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     url_link_description: None | MultilingualString = field(
         default=None,

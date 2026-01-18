@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticJ1939FreezeFrame:
     """
     This meta-class represents the ability to model a J1939 Freeze Frame.
@@ -90,14 +90,13 @@ class DiagnosticJ1939FreezeFrame:
     class Meta:
         name = "DIAGNOSTIC-J-1939-FREEZE-FRAME"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticJ1939FreezeFrame.ShortNameFragments
@@ -204,7 +203,7 @@ class DiagnosticJ1939FreezeFrame:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -215,7 +214,7 @@ class DiagnosticJ1939FreezeFrame:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -226,18 +225,17 @@ class DiagnosticJ1939FreezeFrame:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NodeRef(Ref):
-        dest: None | DiagnosticJ1939NodeSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticJ1939NodeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SpnRefs:
         spn_ref: list[DiagnosticJ1939FreezeFrame.SpnRefs.SpnRef] = field(
             default_factory=list,
@@ -248,13 +246,12 @@ class DiagnosticJ1939FreezeFrame:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SpnRef(Ref):
-            dest: None | DiagnosticJ1939SpnSubtypesEnum = field(
-                default=None,
+            dest: DiagnosticJ1939SpnSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

@@ -14,7 +14,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortInterfaceElementInImplementationDatatypeRef:
     """
     This meta-class represents the ability to refer to the internal
@@ -110,7 +110,7 @@ class PortInterfaceElementInImplementationDatatypeRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextDataPrototypeRefs:
         context_data_prototype_ref: list[
             PortInterfaceElementInImplementationDatatypeRef.ContextDataPrototypeRefs.ContextDataPrototypeRef
@@ -123,50 +123,42 @@ class PortInterfaceElementInImplementationDatatypeRef:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ContextDataPrototypeRef(Ref):
-            dest: None | CppImplementationDataTypeContextTargetSubtypesEnum = (
-                field(
-                    default=None,
-                    metadata={
-                        "name": "DEST",
-                        "type": "Attribute",
-                        "required": True,
-                    },
-                )
-            )
-
-    @dataclass
-    class PortInterfaceRef(Ref):
-        dest: None | PortInterfaceSubtypesEnum = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
-        )
-
-    @dataclass
-    class RootDataPrototypeRef(Ref):
-        dest: None | AutosarDataPrototypeSubtypesEnum = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
-        )
-
-    @dataclass
-    class TargetDataPrototypeRef(Ref):
-        dest: None | CppImplementationDataTypeContextTargetSubtypesEnum = (
-            field(
-                default=None,
+            dest: CppImplementationDataTypeContextTargetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
+
+    @dataclass(kw_only=True)
+    class PortInterfaceRef(Ref):
+        dest: PortInterfaceSubtypesEnum = field(
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            }
+        )
+
+    @dataclass(kw_only=True)
+    class RootDataPrototypeRef(Ref):
+        dest: AutosarDataPrototypeSubtypesEnum = field(
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            }
+        )
+
+    @dataclass(kw_only=True)
+    class TargetDataPrototypeRef(Ref):
+        dest: CppImplementationDataTypeContextTargetSubtypesEnum = field(
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            }
         )

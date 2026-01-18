@@ -7,7 +7,7 @@ from .t_boundary_event import TBoundaryEvent
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BoundaryEvent(TBoundaryEvent):
     class Meta:
         name = "boundaryEvent"

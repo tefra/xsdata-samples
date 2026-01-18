@@ -10,7 +10,7 @@ from .accommodation_facility_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccommodationFacilityList:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

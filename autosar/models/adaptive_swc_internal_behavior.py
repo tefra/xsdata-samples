@@ -18,7 +18,7 @@ from .swc_service_dependency import SwcServiceDependency
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdaptiveSwcInternalBehavior:
     """
     This meta-class represents the ability to define an internal behavior
@@ -89,14 +89,13 @@ class AdaptiveSwcInternalBehavior:
     class Meta:
         name = "ADAPTIVE-SWC-INTERNAL-BEHAVIOR"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | AdaptiveSwcInternalBehavior.ShortNameFragments
@@ -197,7 +196,7 @@ class AdaptiveSwcInternalBehavior:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -208,7 +207,7 @@ class AdaptiveSwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -219,7 +218,7 @@ class AdaptiveSwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceDependencys:
         swc_service_dependency: list[SwcServiceDependency] = field(
             default_factory=list,

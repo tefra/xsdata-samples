@@ -7,7 +7,7 @@ from .ip_transport_protocol_enum_simple import IpTransportProtocolEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IpTransportProtocolEnum:
     """
     Transport Layer protocols in the Internet protocol suite.
@@ -28,11 +28,10 @@ class IpTransportProtocolEnum:
     class Meta:
         name = "IP-TRANSPORT-PROTOCOL-ENUM"
 
-    value: None | IpTransportProtocolEnumSimple = field(
-        default=None,
+    value: IpTransportProtocolEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

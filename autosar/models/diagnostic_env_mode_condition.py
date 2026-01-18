@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEnvModeCondition:
     """
     DiagnosticEnvModeCondition are atomic condition based on the comparison
@@ -77,13 +77,12 @@ class DiagnosticEnvModeCondition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeElementRef(Ref):
-        dest: None | DiagnosticEnvModeElementSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticEnvModeElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

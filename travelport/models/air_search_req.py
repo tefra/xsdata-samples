@@ -14,7 +14,7 @@ from travelport.models.search_specific_air_segment import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirSearchReq(BaseSearchReq1):
     """
     Base Request for Air Search.

@@ -8,16 +8,15 @@ from .language_use_enumeration import LanguageUseEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LanguageUsageStructure:
-    language: None | str = field(
-        default=None,
+    language: str = field(
         metadata={
             "name": "Language",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     language_use: Iterable[LanguageUseEnumeration] = field(
         default_factory=list,

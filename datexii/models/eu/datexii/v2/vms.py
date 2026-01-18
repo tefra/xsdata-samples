@@ -24,7 +24,7 @@ from datexii.models.eu.datexii.v2.vms_pictogram_display_area_index_pictogram_dis
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Vms:
     """
     Provides the current status and settings of the VMS and the currently
@@ -55,14 +55,13 @@ class Vms:
     :ivar vms_extension:
     """
 
-    vms_working: None | bool = field(
-        default=None,
+    vms_working: bool = field(
         metadata={
             "name": "vmsWorking",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     vms_message_sequencing_interval: None | float = field(
         default=None,

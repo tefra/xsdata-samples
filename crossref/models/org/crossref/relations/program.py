@@ -7,7 +7,7 @@ from crossref.models.org.crossref.relations.related_item import RelatedItem
 __NAMESPACE__ = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Program:
     """
     Wrapper element for relationship metadata.

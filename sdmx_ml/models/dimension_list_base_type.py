@@ -8,7 +8,7 @@ from sdmx_ml.models.component_list_type import ComponentListType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DimensionListBaseType(ComponentListType):
     """
     DimensionListBaseType is an abstract base type used as the basis for

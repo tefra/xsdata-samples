@@ -12,7 +12,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FrameMapping:
     """
     The entire source frame is mapped as it is onto the target frame (what
@@ -96,24 +96,22 @@ class FrameMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SourceFrameRef(Ref):
-        dest: None | FrameTriggeringSubtypesEnum = field(
-            default=None,
+        dest: FrameTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetFrameRef(Ref):
-        dest: None | FrameTriggeringSubtypesEnum = field(
-            default=None,
+        dest: FrameTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

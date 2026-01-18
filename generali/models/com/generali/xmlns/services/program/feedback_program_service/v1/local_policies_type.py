@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocalPoliciesType:
     local_policy: list[LocalPoliciesTypeLocalPolicy] = field(
         default_factory=list,

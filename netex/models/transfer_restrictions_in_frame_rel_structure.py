@@ -9,7 +9,7 @@ from .transfer_restriction import TransferRestriction
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransferRestrictionsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transferRestrictionsInFrame_RelStructure"

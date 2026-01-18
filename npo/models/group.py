@@ -7,7 +7,7 @@ from npo.models.group_type import GroupType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Group(GroupType):
     """
     A groups collects a number of programs and/or other groups.

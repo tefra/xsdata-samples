@@ -33,7 +33,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IdsmInstance:
     """
     This meta-class provides the ability to create a relation between an
@@ -139,14 +139,13 @@ class IdsmInstance:
     class Meta:
         name = "IDSM-INSTANCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | IdsmInstance.ShortNameFragments = field(
         default=None,
@@ -311,7 +310,7 @@ class IdsmInstance:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -322,7 +321,7 @@ class IdsmInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -333,7 +332,7 @@ class IdsmInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlockStates:
         block_state: list[BlockState] = field(
             default_factory=list,
@@ -344,7 +343,7 @@ class IdsmInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuInstances:
         ecu_instance_ref_conditional: list[EcuInstanceRefConditional] = field(
             default_factory=list,
@@ -355,18 +354,17 @@ class IdsmInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IdsmModuleInstantiationRef(Ref):
-        dest: None | IdsmModuleInstantiationSubtypesEnum = field(
-            default=None,
+        dest: IdsmModuleInstantiationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RateLimitationFilters:
         idsm_rate_limitation_ref_conditional: list[
             IdsmRateLimitationRefConditional
@@ -379,7 +377,7 @@ class IdsmInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TrafficLimitationFilters:
         idsm_traffic_limitation_ref_conditional: list[
             IdsmTrafficLimitationRefConditional

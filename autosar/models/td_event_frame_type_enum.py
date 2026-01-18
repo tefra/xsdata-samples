@@ -7,7 +7,7 @@ from .td_event_frame_type_enum_simple import TdEventFrameTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventFrameTypeEnum:
     """
     This is used to describe the specific event type of a TDEventFrame.
@@ -28,11 +28,10 @@ class TdEventFrameTypeEnum:
     class Meta:
         name = "TD-EVENT-FRAME-TYPE-ENUM"
 
-    value: None | TdEventFrameTypeEnumSimple = field(
-        default=None,
+    value: TdEventFrameTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

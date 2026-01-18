@@ -12,7 +12,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gb
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbm/technical/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransmissionRequestType(BaseGbmheaderType):
     """
     <description xmlns="">The definition of the message used to retrieve an
@@ -22,12 +22,11 @@ class TransmissionRequestType(BaseGbmheaderType):
         retrieve</description>
     """
 
-    payload: None | PayloadType = field(
-        default=None,
+    payload: PayloadType = field(
         metadata={
             "name": "Payload",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/technical/v1",
             "required": True,
-        },
+        }
     )

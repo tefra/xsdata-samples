@@ -12,7 +12,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswParameterPolicy:
     """
     The perInstanceParameter for which the BSW Scheduler using this policy.
@@ -80,13 +80,12 @@ class BswParameterPolicy:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PerInstanceParameterRef(Ref):
-        dest: None | ParameterDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ParameterDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

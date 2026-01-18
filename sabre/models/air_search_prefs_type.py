@@ -40,7 +40,7 @@ from sabre.models.xofares_type import XofaresType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirSearchPrefsType:
     """
     Defines user preferences to be used in conducting a search.
@@ -242,7 +242,7 @@ class AirSearchPrefsType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FareRestrictPref(FareRestrictPrefType):
         """
         Attributes:
@@ -282,7 +282,7 @@ class AirSearchPrefsType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpaExtensions:
         """
         Attributes:
@@ -1206,7 +1206,7 @@ class AirSearchPrefsType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExcludeVendorPref:
             """
             Attributes:
@@ -1223,7 +1223,7 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NumTripsWithRouting:
             number: int = field(
                 default=5,
@@ -1234,7 +1234,7 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TripType:
             value: None | AirTripType = field(
                 default=None,
@@ -1244,7 +1244,7 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MaxPrice:
             value: None | Decimal = field(
                 default=None,
@@ -1255,7 +1255,7 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ContentType:
             type_value: None | ContentTypeType = field(
                 default=None,
@@ -1265,18 +1265,17 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DomesticLayoverTime:
-            hours: None | int = field(
-                default=None,
+            hours: int = field(
                 metadata={
                     "name": "Hours",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class LongConnectTime:
             min: None | int = field(
                 default=None,
@@ -1300,7 +1299,7 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class LongConnectPoints:
             min: None | int = field(
                 default=None,
@@ -1317,447 +1316,407 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AirServiceOnly:
-            ind: None | bool = field(
-                default=None,
+            ind: bool = field(
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class JetServiceOnly:
-            ind: None | bool = field(
-                default=None,
+            ind: bool = field(
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SameConnectionAirportOnly:
-            ind: None | bool = field(
-                default=None,
+            ind: bool = field(
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SameOriginAirportOnly:
-            ind: None | bool = field(
-                default=None,
+            ind: bool = field(
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SameTurnaroundAirportOnly:
-            ind: None | bool = field(
-                default=None,
+            ind: bool = field(
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AircraftTypePenalty:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AlternateAirportPenalty:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareAmountThreshold:
-            value: None | float = field(
-                default=None,
+            value: float = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NumOfLowFareSol:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NumOfMustPriceOnlSol:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NumOfMustPriceInrlSol:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NumOfMustPriceNstpOnlSol:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NumOfMustPriceNstpInrlSol:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NumOfMustPriceSstopOnlSol:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class StpPenaltyInUsd:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DurPenaltyInUsd:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DepPenaltyInUsd:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MaxAllowedMustPriceOveragePerCrr:
-            value: None | float = field(
-                default=None,
+            value: float = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FltOptMustPriceReuseLimit:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UpperBoundMustPriceFactorForNotNonStp:
-            value: None | float = field(
-                default=None,
+            value: float = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UpperBoundLfsfactor:
-            value: None | float = field(
-                default=None,
+            value: float = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NumOfMustPriceNstp1StpOnlSol:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NumOfMustPriceNstp1StpInrlSol:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UpperBoundMustPriceFactorForNonStp:
-            value: None | float = field(
-                default=None,
+            value: float = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MaxAllowedLfsoveragePerCrrPercent:
-            value: None | float = field(
-                default=None,
+            value: float = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TargetMinNumOfLfsonlSolPerCrr:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TargetMinNumOfLfstotOnlSolPercent:
-            value: None | float = field(
-                default=None,
+            value: float = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FltOptLfsreuseLimitForNonAvs:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FltOptLfsreuseLimitForAvs:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AvsPenaltyCrrs:
-            value: None | str = field(
-                default=None,
+            value: str = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MaxNumOfNonStpOnlSol:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MaxNumOfNonStpInrlSol:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MaxNumOfSingleStpOnlSol:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MaxNumOf2PlusStpSol:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MinAllowedOveragePerCrrPercent:
-            value: None | float = field(
-                default=None,
+            value: float = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MinAllowedOveragePerCrr:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MaxRelFareLvlOfxForNonStp:
-            value: None | float = field(
-                default=None,
+            value: float = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MaxRelFareLvlOfxForCnx:
-            value: None | float = field(
-                default=None,
+            value: float = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NumOfMustPrice2PlusStpSol:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ItineraryNumberThreshold:
-            value: None | float = field(
-                default=None,
+            value: float = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TicketingSumOfLocals:
             """
             Attributes:
@@ -1772,7 +1731,7 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MultiAirportCodes:
             """
             Attributes:
@@ -1787,7 +1746,7 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExcludeCallDirectCarriers:
             """
             Attributes:
@@ -1803,31 +1762,23 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ValidatingCarrierCheck:
-            settlement_validation: (
-                None
-                | AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.SettlementValidation
-            ) = field(
-                default=None,
+            settlement_validation: AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.SettlementValidation = field(
                 metadata={
                     "name": "SettlementValidation",
                     "type": "Element",
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                     "required": True,
-                },
+                }
             )
-            ietvalidation: (
-                None
-                | AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Ietvalidation
-            ) = field(
-                default=None,
+            ietvalidation: AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Ietvalidation = field(
                 metadata={
                     "name": "IETValidation",
                     "type": "Element",
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                     "required": True,
-                },
+                }
             )
             carrier: list[
                 AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Carrier
@@ -1850,61 +1801,57 @@ class AirSearchPrefsType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class SettlementValidation:
                 """
                 If set to true validate BSP agreement for given carriers.
                 """
 
-                ind: None | bool = field(
-                    default=None,
+                ind: bool = field(
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Ietvalidation:
                 """
                 If set to true validate IET agreement for listed countries.
                 """
 
-                ind: None | bool = field(
-                    default=None,
+                ind: bool = field(
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Carrier:
-                code: None | str = field(
-                    default=None,
+                code: str = field(
                     metadata={
                         "name": "Code",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9A-Z]{2,3}",
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Country:
-                code: None | str = field(
-                    default=None,
+                code: str = field(
                     metadata={
                         "name": "Code",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[a-zA-Z]{2}",
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FlightRepeatLimit:
             """
             Attributes:
@@ -1912,16 +1859,15 @@ class AirSearchPrefsType:
                     1-100.
             """
 
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DiversityParameters:
             """
             Attributes:
@@ -1993,7 +1939,7 @@ class AirSearchPrefsType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Weightings:
                 """
                 Attributes:
@@ -2003,28 +1949,26 @@ class AirSearchPrefsType:
                         time options are on a scale from 0 to 10.
                 """
 
-                price_weight: None | int = field(
-                    default=None,
+                price_weight: int = field(
                     metadata={
                         "name": "PriceWeight",
                         "type": "Attribute",
                         "required": True,
                         "min_inclusive": 0,
                         "max_inclusive": 10,
-                    },
+                    }
                 )
-                travel_time_weight: None | int = field(
-                    default=None,
+                travel_time_weight: int = field(
                     metadata={
                         "name": "TravelTimeWeight",
                         "type": "Attribute",
                         "required": True,
                         "min_inclusive": 0,
                         "max_inclusive": 10,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TimeOfDayDistribution:
                 time_of_day_range: list[
                     AirSearchPrefsType.TpaExtensions.DiversityParameters.TimeOfDayDistribution.TimeOfDayRange
@@ -2039,7 +1983,7 @@ class AirSearchPrefsType:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class TimeOfDayRange:
                     """
                     Attributes:
@@ -2050,52 +1994,48 @@ class AirSearchPrefsType:
                             should be in the TimeOfDayRange.
                     """
 
-                    begin: None | str = field(
-                        default=None,
+                    begin: str = field(
                         metadata={
                             "name": "Begin",
                             "type": "Attribute",
                             "required": True,
                             "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
-                        },
+                        }
                     )
-                    end: None | str = field(
-                        default=None,
+                    end: str = field(
                         metadata={
                             "name": "End",
                             "type": "Attribute",
                             "required": True,
                             "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
-                        },
+                        }
                     )
-                    percentage: None | int = field(
-                        default=None,
+                    percentage: int = field(
                         metadata={
                             "name": "Percentage",
                             "type": "Attribute",
                             "required": True,
                             "min_inclusive": 0,
                             "max_inclusive": 100,
-                        },
+                        }
                     )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AdditionalFareLimit:
             """
             Attributes:
                 value: Additional fare limit.
             """
 
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareFocusRules:
             """
             Attributes:
@@ -2110,7 +2050,7 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SellingLevels:
             selling_level_rules: (
                 None
@@ -2135,23 +2075,22 @@ class AirSearchPrefsType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class SellingLevelRules:
                 """
                 Attributes:
                     ignore: Force ignore adjustment selling level rules
                 """
 
-                ignore: None | bool = field(
-                    default=None,
+                ignore: bool = field(
                     metadata={
                         "name": "Ignore",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ShowFareAmounts:
                 """
                 Attributes:
@@ -2176,7 +2115,7 @@ class AirSearchPrefsType:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Budget:
             """
             Attributes:
@@ -2210,7 +2149,7 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class OptionsPerDatePairList:
             options_per_date_pair: list[OptionsPerDatePairType] = field(
                 default_factory=list,
@@ -2222,28 +2161,26 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CountryPref:
-            code: None | str = field(
-                default=None,
+            code: str = field(
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[a-zA-Z]{2}",
-                },
+                }
             )
-            prefer_level: None | str = field(
-                default=None,
+            prefer_level: str = field(
                 metadata={
                     "name": "PreferLevel",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"Unacceptable",
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class OnlineIndicator:
             """
             Attributes:
@@ -2260,7 +2197,7 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class InterlineIndicator:
             """
             Attributes:
@@ -2277,29 +2214,27 @@ class AirSearchPrefsType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExemptAllTaxes:
-            value: None | bool = field(
-                default=None,
+            value: bool = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExemptAllTaxesAndFees:
-            value: None | bool = field(
-                default=None,
+            value: bool = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Taxes:
             """
             Attributes:
@@ -2315,7 +2250,7 @@ class AirSearchPrefsType:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AncillaryFees:
         """
         Attributes:
@@ -2334,13 +2269,12 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        enable: None | bool = field(
-            default=None,
+        enable: bool = field(
             metadata={
                 "name": "Enable",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         summary: None | bool = field(
             default=None,
@@ -2350,7 +2284,7 @@ class AirSearchPrefsType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AncillaryFeeGroup:
             """
             Attributes:
@@ -2358,13 +2292,12 @@ class AirSearchPrefsType:
                 count: Number of items
             """
 
-            code: None | object = field(
-                default=None,
+            code: object = field(
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
             count: None | object = field(
                 default=None,
@@ -2374,7 +2307,7 @@ class AirSearchPrefsType:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FrequentFlyer:
         """
         Attributes:
@@ -2382,13 +2315,12 @@ class AirSearchPrefsType:
             airline_code: Airline Carrier Code
         """
 
-        status: None | int = field(
-            default=None,
+        status: int = field(
             metadata={
                 "name": "Status",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         airline_code: None | str = field(
             default=None,
@@ -2398,7 +2330,7 @@ class AirSearchPrefsType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SpanishFamilyDiscount:
         """
         Attributes:
@@ -2406,11 +2338,10 @@ class AirSearchPrefsType:
                 1 or 2.
         """
 
-        level: None | SpanishFamilyDiscountLevel = field(
-            default=None,
+        level: SpanishFamilyDiscountLevel = field(
             metadata={
                 "name": "Level",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

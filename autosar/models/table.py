@@ -14,7 +14,7 @@ from .tgroup import Tgroup
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Table:
     """
     This class implements an exchange table according to OASIS Technical

@@ -11,7 +11,7 @@ from crossref.models.org.crossref.fundref.assertion_provider import (
 __NAMESPACE__ = "http://www.crossref.org/fundref.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Assertion:
     """
     FundRef attributes included in assertion are: fundgroup: used to group
@@ -34,12 +34,11 @@ class Assertion:
             "type": "Attribute",
         },
     )
-    name: None | AssertionName = field(
-        default=None,
+    name: AssertionName = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     content: list[object] = field(
         default_factory=list,

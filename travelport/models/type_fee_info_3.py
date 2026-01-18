@@ -7,7 +7,7 @@ from travelport.models.type_element_status_4 import TypeElementStatus4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeFeeInfo3:
     """
     A generic type of fee for those charges which are incurred by the
@@ -75,29 +75,26 @@ class TypeFeeInfo3:
             "type": "Attribute",
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    amount: None | str = field(
-        default=None,
+    amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     fee_token: None | str = field(
         default=None,
@@ -162,13 +159,12 @@ class TypeFeeInfo3:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TaxInfoRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

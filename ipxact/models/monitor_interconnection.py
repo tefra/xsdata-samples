@@ -11,7 +11,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MonitorInterconnection:
     """
     Describes a connection from the interface of one component to any
@@ -44,12 +44,11 @@ class MonitorInterconnection:
         name = "monitorInterconnection"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -71,13 +70,12 @@ class MonitorInterconnection:
             "type": "Element",
         },
     )
-    monitored_active_interface: None | MonitorInterfaceType = field(
-        default=None,
+    monitored_active_interface: MonitorInterfaceType = field(
         metadata={
             "name": "monitoredActiveInterface",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     monitor_interface: list[MonitorInterfaceType] = field(
         default_factory=list,

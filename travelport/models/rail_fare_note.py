@@ -7,7 +7,7 @@ from travelport.models.type_element_status_1 import TypeElementStatus1
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailFareNote:
     """
     A simple textual fare note.
@@ -38,21 +38,19 @@ class RailFareNote:
             "required": True,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    note_name: None | str = field(
-        default=None,
+    note_name: str = field(
         metadata={
             "name": "NoteName",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,

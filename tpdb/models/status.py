@@ -7,7 +7,7 @@ from tpdb.models.no import No
 from tpdb.models.yes import Yes
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Status:
     """
     This tag shows the termination status of this problem, if known.

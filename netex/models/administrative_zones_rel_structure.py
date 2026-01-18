@@ -27,7 +27,7 @@ from .zone_version_structure import ZoneVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "administrativeZones_RelStructure"
@@ -61,7 +61,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdministrativeZoneVersionStructure(ZoneVersionStructure):
     class Meta:
         name = "AdministrativeZone_VersionStructure"
@@ -168,13 +168,13 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdministrativeZone(AdministrativeZoneVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportAdministrativeZoneVersionStructure(
     AdministrativeZoneVersionStructure
 ):
@@ -192,7 +192,7 @@ class TransportAdministrativeZoneVersionStructure(
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportAdministrativeZone(TransportAdministrativeZoneVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

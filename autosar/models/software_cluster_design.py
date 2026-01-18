@@ -37,7 +37,7 @@ from .uploadable_package_element_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoftwareClusterDesign:
     """
     This meta-class represents the ability for the OEM to design the
@@ -128,14 +128,13 @@ class SoftwareClusterDesign:
     class Meta:
         name = "SOFTWARE-CLUSTER-DESIGN"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SoftwareClusterDesign.ShortNameFragments = (
         field(
@@ -322,7 +321,7 @@ class SoftwareClusterDesign:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -333,7 +332,7 @@ class SoftwareClusterDesign:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -344,7 +343,7 @@ class SoftwareClusterDesign:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContainedProcessRefs:
         contained_process_ref: list[
             SoftwareClusterDesign.ContainedProcessRefs.ContainedProcessRef
@@ -357,18 +356,17 @@ class SoftwareClusterDesign:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ContainedProcessRef(Ref):
-            dest: None | ProcessDesignSubtypesEnum = field(
-                default=None,
+            dest: ProcessDesignSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DependsOnRefs:
         depends_on_ref: list[
             SoftwareClusterDesign.DependsOnRefs.DependsOnRef
@@ -381,18 +379,17 @@ class SoftwareClusterDesign:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DependsOnRef(Ref):
-            dest: None | SoftwareClusterDesignSubtypesEnum = field(
-                default=None,
+            dest: SoftwareClusterDesignSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticAddresss:
         software_cluster_doip_diagnostic_address: list[
             SoftwareClusterDoipDiagnosticAddress
@@ -405,7 +402,7 @@ class SoftwareClusterDesign:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticContributionRefs:
         diagnostic_contribution_ref: list[
             SoftwareClusterDesign.DiagnosticContributionRefs.DiagnosticContributionRef
@@ -418,29 +415,27 @@ class SoftwareClusterDesign:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DiagnosticContributionRef(Ref):
-            dest: None | DiagnosticContributionSetSubtypesEnum = field(
-                default=None,
+            dest: DiagnosticContributionSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IntendedTargetMachineRef(Ref):
-        dest: None | MachineDesignSubtypesEnum = field(
-            default=None,
+        dest: MachineDesignSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredArElementRefs:
         required_ar_element_ref: list[
             SoftwareClusterDesign.RequiredArElementRefs.RequiredArElementRef
@@ -453,18 +448,17 @@ class SoftwareClusterDesign:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RequiredArElementRef(Ref):
-            dest: None | ArElementSubtypesEnum = field(
-                default=None,
+            dest: ArElementSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredFibexElementRefs:
         required_fibex_element_ref: list[
             SoftwareClusterDesign.RequiredFibexElementRefs.RequiredFibexElementRef
@@ -477,18 +471,17 @@ class SoftwareClusterDesign:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RequiredFibexElementRef(Ref):
-            dest: None | FibexElementSubtypesEnum = field(
-                default=None,
+            dest: FibexElementSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredPackageElementRefs:
         required_package_element_ref: list[
             SoftwareClusterDesign.RequiredPackageElementRefs.RequiredPackageElementRef
@@ -501,18 +494,17 @@ class SoftwareClusterDesign:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RequiredPackageElementRef(Ref):
-            dest: None | UploadablePackageElementSubtypesEnum = field(
-                default=None,
+            dest: UploadablePackageElementSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SubSoftwareClusterRefs:
         sub_software_cluster_ref: list[
             SoftwareClusterDesign.SubSoftwareClusterRefs.SubSoftwareClusterRef
@@ -525,13 +517,12 @@ class SoftwareClusterDesign:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SubSoftwareClusterRef(Ref):
-            dest: None | SoftwareClusterDesignSubtypesEnum = field(
-                default=None,
+            dest: SoftwareClusterDesignSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

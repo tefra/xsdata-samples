@@ -19,7 +19,7 @@ from .validable_element_ref import ValidableElementRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerPurchasePackageElementAccessVersionedChildStructure(
     VersionedChildStructure
 ):

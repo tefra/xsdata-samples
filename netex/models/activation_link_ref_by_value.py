@@ -9,7 +9,7 @@ from .activation_link_ref_by_value_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ActivationLinkRefByValue(ActivationLinkRefByValueStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

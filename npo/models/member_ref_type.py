@@ -10,7 +10,7 @@ from npo.models.recursive_member_ref import RecursiveMemberRef
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MemberRefType:
     class Meta:
         name = "memberRefType"

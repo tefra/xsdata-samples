@@ -7,7 +7,7 @@ from .taxi_submode_enumeration import TaxiSubmodeEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxiSubmode:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

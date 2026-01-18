@@ -15,7 +15,7 @@ from sdmx_ml.models.wild_card_value_type import WildCardValueType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class StructuralRepositoryEventsType:
     """
     StructuralRepositoryEventsType details the structural events for the
@@ -278,94 +278,94 @@ class StructuralRepositoryEventsType:
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class AgencyScheme(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class DataConsmerScheme(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class DataProviderScheme(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class OrganisationUnitScheme(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Dataflow(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Metadataflow(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class CategoryScheme(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Codelist(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class HierarchicalCodelist(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class ConceptScheme(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class MetadataStructureDefinition(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class KeyFamily(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class StructureSet(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class ReportingTaxonomy(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Process(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class AttachmentConstraint(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class ContentConstraint(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class ProvisionAgreement(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class TransformationScheme(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class NameAliasScheme(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class NamePersonalisationScheme(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class RulesetScheme(VersionableObjectEventType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class UserDefinedOperatorScheme(VersionableObjectEventType):
         pass

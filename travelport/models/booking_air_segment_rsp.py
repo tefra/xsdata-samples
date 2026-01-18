@@ -10,7 +10,7 @@ from travelport.models.booking_base_rsp import BookingBaseRsp
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingAirSegmentRsp(BookingBaseRsp):
     """
     Returns sold segments and sell messages.

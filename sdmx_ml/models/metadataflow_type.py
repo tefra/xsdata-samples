@@ -7,7 +7,7 @@ from sdmx_ml.models.metadataflow_base_type import MetadataflowBaseType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataflowType(MetadataflowBaseType):
     """
     MetadataflowType describes the structure of a metadata flow.

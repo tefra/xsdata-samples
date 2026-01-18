@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirSearchAsynchModifiers:
     """
     Controls and switches for the Air Search request for Asynch Request.
@@ -24,7 +24,7 @@ class AirSearchAsynchModifiers:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InitialAsynchResult:
         """
         Parameters

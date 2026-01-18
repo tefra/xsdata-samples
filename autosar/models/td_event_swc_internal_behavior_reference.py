@@ -23,7 +23,7 @@ from .td_event_swc_subtypes_enum import TdEventSwcSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventSwcInternalBehaviorReference:
     """
     This is used to reference timing description events related to the
@@ -95,14 +95,13 @@ class TdEventSwcInternalBehaviorReference:
     class Meta:
         name = "TD-EVENT-SWC-INTERNAL-BEHAVIOR-REFERENCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | TdEventSwcInternalBehaviorReference.ShortNameFragments
@@ -221,7 +220,7 @@ class TdEventSwcInternalBehaviorReference:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -232,7 +231,7 @@ class TdEventSwcInternalBehaviorReference:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -243,13 +242,12 @@ class TdEventSwcInternalBehaviorReference:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReferencedTdEventSwcRef(Ref):
-        dest: None | TdEventSwcSubtypesEnum = field(
-            default=None,
+        dest: TdEventSwcSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

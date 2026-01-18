@@ -50,7 +50,7 @@ from .variable_access import VariableAccess
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NonqueuedReceiverComSpec:
     """
     Communication attributes specific to non-queued receiving.
@@ -382,7 +382,7 @@ class NonqueuedReceiverComSpec:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CompositeNetworkRepresentations:
         composite_network_representation: list[
             CompositeNetworkRepresentation
@@ -395,29 +395,27 @@ class NonqueuedReceiverComSpec:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataElementRef(Ref):
-        dest: None | AutosarDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: AutosarDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExternalReplacementRef(Ref):
-        dest: None | AutosarDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: AutosarDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransformationComSpecPropss:
         end_to_end_transformation_com_spec_props: list[
             EndToEndTransformationComSpecProps
@@ -440,7 +438,7 @@ class NonqueuedReceiverComSpec:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InitValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification
@@ -555,7 +553,7 @@ class NonqueuedReceiverComSpec:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimeoutSubstitutionValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification

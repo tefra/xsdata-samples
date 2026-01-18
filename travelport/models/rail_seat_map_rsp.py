@@ -8,7 +8,7 @@ from travelport.models.coach import Coach
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailSeatMapRsp(BaseRsp1):
     """
     Returns rail seat map/coach map.

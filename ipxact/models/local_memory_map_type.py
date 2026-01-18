@@ -12,7 +12,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocalMemoryMapType:
     """
     Map of address space blocks on the local memory map of a initiator bus
@@ -35,13 +35,12 @@ class LocalMemoryMapType:
     class Meta:
         name = "localMemoryMapType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,

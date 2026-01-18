@@ -10,7 +10,7 @@ from npo.models.title_sort_order_type import TitleSortOrderType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MediaFormType:
     class Meta:
         name = "mediaFormType"
@@ -44,7 +44,7 @@ class MediaFormType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SortFields:
         sort: list[MediaSortType] = field(
             default_factory=list,

@@ -8,7 +8,7 @@ from travelport.models.type_payment_type_1 import TypePaymentType1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeSearchPaymentDetails1:
     """
     The Searchable fields on PaymentDetails.
@@ -35,13 +35,12 @@ class TypeSearchPaymentDetails1:
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
         },
     )
-    type_value: None | TypePaymentType1 = field(
-        default=None,
+    type_value: TypePaymentType1 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     payment_supplier: None | str = field(
         default=None,

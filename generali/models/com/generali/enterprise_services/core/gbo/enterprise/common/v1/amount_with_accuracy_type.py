@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AmountWithAccuracyType(AmountType):
     accuracy: None | AccuracyCodeList = field(
         default=None,

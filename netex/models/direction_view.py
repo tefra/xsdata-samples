@@ -7,7 +7,7 @@ from .direction_derived_view_structure import DirectionDerivedViewStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DirectionView(DirectionDerivedViewStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

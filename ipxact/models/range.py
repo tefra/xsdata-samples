@@ -8,7 +8,7 @@ from ipxact.models.right import Right
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Range:
     """
     Left and right bound of a reference into a vector.
@@ -18,17 +18,15 @@ class Range:
         name = "range"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    left: None | Left = field(
-        default=None,
+    left: Left = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    right: None | Right = field(
-        default=None,
+    right: Right = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )

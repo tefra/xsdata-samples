@@ -7,7 +7,7 @@ from sdmx_ml.models.data_provider_scheme_type import DataProviderSchemeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataProviderSchemesType:
     """
     DataProviderSchemesType describes the structure of the data provider

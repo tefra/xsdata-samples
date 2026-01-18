@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Source(SourceType):
     """
     <description xmlns="">The specification of the source country, locale,

@@ -14,7 +14,7 @@ from datexii.models.eu.datexii.v2.openlr_offsets import OpenlrOffsets
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenlrLineLocationReference:
     """
     A LineLocationReference is defined by an ordered sequence of location
@@ -32,16 +32,15 @@ class OpenlrLineLocationReference:
             },
         )
     )
-    openlr_last_location_reference_point: (
-        None | OpenlrLastLocationReferencePoint
-    ) = field(
-        default=None,
-        metadata={
-            "name": "openlrLastLocationReferencePoint",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    openlr_last_location_reference_point: OpenlrLastLocationReferencePoint = (
+        field(
+            metadata={
+                "name": "openlrLastLocationReferencePoint",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            }
+        )
     )
     openlr_offsets: None | OpenlrOffsets = field(
         default=None,

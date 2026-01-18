@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Certificate5:
     """
     Certificate Form of Payment.
@@ -32,13 +32,12 @@ class Certificate5:
         name = "Certificate"
         namespace = "http://www.travelport.com/schema/common_v37_0"
 
-    number: None | str = field(
-        default=None,
+    number: str = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     amount: None | str = field(
         default=None,

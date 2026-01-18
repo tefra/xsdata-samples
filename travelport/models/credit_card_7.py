@@ -7,7 +7,7 @@ from travelport.models.type_credit_card_type_6 import TypeCreditCardType6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreditCard7(TypeCreditCardType6):
     """
     Container for all credit card information.

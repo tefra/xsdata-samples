@@ -19,7 +19,7 @@ from .sw_record_layout_v import SwRecordLayoutV
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwRecordLayoutGroup:
     """
     Specifies how a record layout is set up.
@@ -231,24 +231,22 @@ class SwRecordLayoutGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwGenericAxisParamTypeRef(Ref):
-        dest: None | SwGenericAxisParamTypeSubtypesEnum = field(
-            default=None,
+        dest: SwGenericAxisParamTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwRecordLayoutRef(Ref):
-        dest: None | SwRecordLayoutSubtypesEnum = field(
-            default=None,
+        dest: SwRecordLayoutSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

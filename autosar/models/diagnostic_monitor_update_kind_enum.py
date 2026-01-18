@@ -9,7 +9,7 @@ from .diagnostic_monitor_update_kind_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticMonitorUpdateKindEnum:
     """
     This enumeration indicates the acceptance criteria for a diagnostic
@@ -31,11 +31,10 @@ class DiagnosticMonitorUpdateKindEnum:
     class Meta:
         name = "DIAGNOSTIC-MONITOR-UPDATE-KIND-ENUM"
 
-    value: None | DiagnosticMonitorUpdateKindEnumSimple = field(
-        default=None,
+    value: DiagnosticMonitorUpdateKindEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

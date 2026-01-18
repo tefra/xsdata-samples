@@ -7,7 +7,7 @@ from .crypto_key_slot_usage_enum_simple import CryptoKeySlotUsageEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CryptoKeySlotUsageEnum:
     """
     This enum defines the possible roles of the keySlotUsage.
@@ -28,11 +28,10 @@ class CryptoKeySlotUsageEnum:
     class Meta:
         name = "CRYPTO-KEY-SLOT-USAGE-ENUM"
 
-    value: None | CryptoKeySlotUsageEnumSimple = field(
-        default=None,
+    value: CryptoKeySlotUsageEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -9,17 +9,16 @@ from tpdb.models.rules import Rules
 from tpdb.models.signature import Signature
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Trs:
     class Meta:
         name = "trs"
 
-    rules: None | Rules = field(
-        default=None,
+    rules: Rules = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     signature: None | Signature = field(
         default=None,

@@ -7,7 +7,7 @@ from travelport.models.option import Option
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightOption:
     """
     List of Options available for any search air leg.
@@ -43,23 +43,21 @@ class FlightOption:
             "type": "Attribute",
         },
     )
-    origin: None | str = field(
-        default=None,
+    origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    destination: None | str = field(
-        default=None,
+    destination: str = field(
         metadata={
             "name": "Destination",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )

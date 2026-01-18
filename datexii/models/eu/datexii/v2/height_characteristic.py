@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HeightCharacteristic:
     """
     Height characteristic of a vehicle.
@@ -23,23 +23,21 @@ class HeightCharacteristic:
     :ivar height_characteristic_extension:
     """
 
-    comparison_operator: None | ComparisonOperatorEnum = field(
-        default=None,
+    comparison_operator: ComparisonOperatorEnum = field(
         metadata={
             "name": "comparisonOperator",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    vehicle_height: None | float = field(
-        default=None,
+    vehicle_height: float = field(
         metadata={
             "name": "vehicleHeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     height_characteristic_extension: None | ExtensionType = field(
         default=None,

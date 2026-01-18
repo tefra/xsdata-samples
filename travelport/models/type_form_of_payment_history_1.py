@@ -30,7 +30,7 @@ from travelport.models.united_nations_history_1 import UnitedNationsHistory1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeFormOfPaymentHistory1(TypeKeyElement1):
     """
     Parameters

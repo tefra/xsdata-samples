@@ -7,7 +7,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlertCPoint:
     """
     A single point on the road network defined by reference to a
@@ -23,35 +23,32 @@ class AlertCPoint:
     :ivar alert_cpoint_extension:
     """
 
-    alert_clocation_country_code: None | str = field(
-        default=None,
+    alert_clocation_country_code: str = field(
         metadata={
             "name": "alertCLocationCountryCode",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
-    alert_clocation_table_number: None | str = field(
-        default=None,
+    alert_clocation_table_number: str = field(
         metadata={
             "name": "alertCLocationTableNumber",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
-    alert_clocation_table_version: None | str = field(
-        default=None,
+    alert_clocation_table_version: str = field(
         metadata={
             "name": "alertCLocationTableVersion",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
     alert_cpoint_extension: None | ExtensionType = field(
         default=None,

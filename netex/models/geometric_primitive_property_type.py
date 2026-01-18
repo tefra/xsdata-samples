@@ -10,7 +10,7 @@ from .polygon import Polygon
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeometricPrimitivePropertyType:
     abstract_surface_or_abstract_curve_or_abstract_geometric_primitive: (
         None | Polygon | LineString | Point1

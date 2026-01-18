@@ -7,7 +7,7 @@ from travelport.models.type_structured_address_6 import TypeStructuredAddress6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationAddress5(TypeStructuredAddress6):
     class Meta:
         name = "LocationAddress"

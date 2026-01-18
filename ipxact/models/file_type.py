@@ -7,7 +7,7 @@ from ipxact.models.simple_file_type import SimpleFileType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FileType:
     """
     Enumerated file types known by IP-XACT.
@@ -17,11 +17,10 @@ class FileType:
         name = "fileType"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: None | SimpleFileType = field(
-        default=None,
+    value: SimpleFileType = field(
         metadata={
             "required": True,
-        },
+        }
     )
     user: None | str = field(
         default=None,

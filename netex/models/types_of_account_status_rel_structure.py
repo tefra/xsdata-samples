@@ -10,7 +10,7 @@ from .customer_account_status_ref import CustomerAccountStatusRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypesOfAccountStatusRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfAccountStatus_RelStructure"

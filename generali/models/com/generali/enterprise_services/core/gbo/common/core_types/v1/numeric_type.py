@@ -8,7 +8,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NumericType:
     """
     <ns1:UniqueID
@@ -30,9 +30,8 @@ class NumericType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">decimal</ns1:PrimitiveType>.
     """
 
-    value: None | Decimal = field(
-        default=None,
+    value: Decimal = field(
         metadata={
             "required": True,
-        },
+        }
     )

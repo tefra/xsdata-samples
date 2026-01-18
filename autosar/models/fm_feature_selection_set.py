@@ -23,7 +23,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FmFeatureSelectionSet:
     """
     A FMFeatureSelectionSet is a set of FMFeatures that describes a
@@ -97,14 +97,13 @@ class FmFeatureSelectionSet:
     class Meta:
         name = "FM-FEATURE-SELECTION-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | FmFeatureSelectionSet.ShortNameFragments = (
         field(
@@ -219,7 +218,7 @@ class FmFeatureSelectionSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -230,7 +229,7 @@ class FmFeatureSelectionSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -241,7 +240,7 @@ class FmFeatureSelectionSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FeatureModelRefs:
         feature_model_ref: list[
             FmFeatureSelectionSet.FeatureModelRefs.FeatureModelRef
@@ -254,18 +253,17 @@ class FmFeatureSelectionSet:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FeatureModelRef(Ref):
-            dest: None | FmFeatureModelSubtypesEnum = field(
-                default=None,
+            dest: FmFeatureModelSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IncludeRefs:
         include_ref: list[FmFeatureSelectionSet.IncludeRefs.IncludeRef] = (
             field(
@@ -278,18 +276,17 @@ class FmFeatureSelectionSet:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class IncludeRef(Ref):
-            dest: None | FmFeatureSelectionSetSubtypesEnum = field(
-                default=None,
+            dest: FmFeatureSelectionSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Selections:
         fm_feature_selection: list[FmFeatureSelection] = field(
             default_factory=list,

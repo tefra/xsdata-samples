@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.pollutant_type_enum import PollutantTypeEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Pollution:
     """
     Details of atmospheric pollution.
@@ -22,14 +22,13 @@ class Pollution:
     :ivar pollution_extension:
     """
 
-    pollutant_type: None | PollutantTypeEnum = field(
-        default=None,
+    pollutant_type: PollutantTypeEnum = field(
         metadata={
             "name": "pollutantType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     pollutant_concentration: None | MicrogramsConcentrationValue = field(
         default=None,

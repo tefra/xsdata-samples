@@ -11,6 +11,6 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RiskElementType(BaseIdentifiedComponentType):
     pass

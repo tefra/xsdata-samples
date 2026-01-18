@@ -20,7 +20,7 @@ from .ttcan_communication_controller_conditional import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TtcanCommunicationController:
     """
     TTCAN bus specific communication port attributes.
@@ -86,14 +86,13 @@ class TtcanCommunicationController:
     class Meta:
         name = "TTCAN-COMMUNICATION-CONTROLLER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | TtcanCommunicationController.ShortNameFragments
@@ -195,7 +194,7 @@ class TtcanCommunicationController:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -206,7 +205,7 @@ class TtcanCommunicationController:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -217,7 +216,7 @@ class TtcanCommunicationController:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TtcanCommunicationControllerVariants:
         ttcan_communication_controller_conditional: list[
             TtcanCommunicationControllerConditional

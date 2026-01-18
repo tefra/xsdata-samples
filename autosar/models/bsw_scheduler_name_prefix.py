@@ -10,7 +10,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswSchedulerNamePrefix:
     """
     A prefix to be used in names of generated code artifacts which make up
@@ -40,14 +40,13 @@ class BswSchedulerNamePrefix:
     class Meta:
         name = "BSW-SCHEDULER-NAME-PREFIX"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | BswSchedulerNamePrefix.ShortNameFragments = (
         field(
@@ -91,7 +90,7 @@ class BswSchedulerNamePrefix:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,

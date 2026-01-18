@@ -9,16 +9,15 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.core_types
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CrestaZoneType:
-    cresta_zone_identifier: None | Idtype = field(
-        default=None,
+    cresta_zone_identifier: Idtype = field(
         metadata={
             "name": "CrestaZoneIdentifier",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )
     cresta_zone_name: None | Idtype = field(
         default=None,

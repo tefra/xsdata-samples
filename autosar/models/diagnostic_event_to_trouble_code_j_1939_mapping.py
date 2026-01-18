@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEventToTroubleCodeJ1939Mapping:
     """
     By means of this meta-class it is possible to associate a
@@ -91,14 +91,13 @@ class DiagnosticEventToTroubleCodeJ1939Mapping:
     class Meta:
         name = "DIAGNOSTIC-EVENT-TO-TROUBLE-CODE-J-1939-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticEventToTroubleCodeJ1939Mapping.ShortNameFragments
@@ -211,7 +210,7 @@ class DiagnosticEventToTroubleCodeJ1939Mapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -222,7 +221,7 @@ class DiagnosticEventToTroubleCodeJ1939Mapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -233,24 +232,22 @@ class DiagnosticEventToTroubleCodeJ1939Mapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticEventRef(Ref):
-        dest: None | DiagnosticEventSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TroubleCodeJ1939Ref(Ref):
-        dest: None | DiagnosticTroubleCodeJ1939SubtypesEnum = field(
-            default=None,
+        dest: DiagnosticTroubleCodeJ1939SubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -19,19 +19,18 @@ from .service_pattern_ref import ServicePatternRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "ConnectingJourney_DerivedViewStructure"
 
-    service_journey_ref: None | ServiceJourneyRefStructure = field(
-        default=None,
+    service_journey_ref: ServiceJourneyRefStructure = field(
         metadata={
             "name": "ServiceJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     departure_time_or_frequency: None | XmlTime | FrequencyStructure = field(
         default=None,

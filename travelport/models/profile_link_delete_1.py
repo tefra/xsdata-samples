@@ -9,7 +9,7 @@ from travelport.models.type_profile_link_relationship_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileLinkDelete1:
     """
     Delete the link between this profile and the specificied profile.
@@ -26,19 +26,17 @@ class ProfileLinkDelete1:
         name = "ProfileLinkDelete"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    traveler_id: None | int = field(
-        default=None,
+    traveler_id: int = field(
         metadata={
             "name": "TravelerID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    relationship: None | TypeProfileLinkRelationship1 = field(
-        default=None,
+    relationship: TypeProfileLinkRelationship1 = field(
         metadata={
             "name": "Relationship",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

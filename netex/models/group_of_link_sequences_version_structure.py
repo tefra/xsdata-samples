@@ -10,7 +10,7 @@ from .link_sequence_refs_rel_structure import LinkSequenceRefsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupOfLinkSequencesVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GroupOfLinkSequences_VersionStructure"

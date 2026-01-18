@@ -18,7 +18,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PhmHealthChannelStatus:
     """
     The PhmHealthChannelStatus specifies one possible status of the health
@@ -91,14 +91,13 @@ class PhmHealthChannelStatus:
     class Meta:
         name = "PHM-HEALTH-CHANNEL-STATUS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | PhmHealthChannelStatus.ShortNameFragments = (
         field(
@@ -197,7 +196,7 @@ class PhmHealthChannelStatus:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -208,7 +207,7 @@ class PhmHealthChannelStatus:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

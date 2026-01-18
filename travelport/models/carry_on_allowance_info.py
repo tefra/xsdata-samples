@@ -10,7 +10,7 @@ from travelport.models.base_baggage_allowance_info import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CarryOnAllowanceInfo(BaseBaggageAllowanceInfo):
     """
     Information related to Carry-On allowance like URL, pricing etc.
@@ -33,7 +33,7 @@ class CarryOnAllowanceInfo(BaseBaggageAllowanceInfo):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CarryOnDetails:
         """
         Parameters

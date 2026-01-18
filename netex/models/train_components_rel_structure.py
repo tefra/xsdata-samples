@@ -10,7 +10,7 @@ from .train_component_ref import TrainComponentRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrainComponentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "trainComponents_RelStructure"

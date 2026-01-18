@@ -7,7 +7,7 @@ from sdmx_ml.models.maintainable_type import MaintainableType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class HierarchyAssociationType(MaintainableType):
     """
     HierarchyAssociationType defines the structure of a hiearchy
@@ -22,25 +22,23 @@ class HierarchyAssociationType(MaintainableType):
         performed.
     """
 
-    linked_hierarchy: None | str = field(
-        default=None,
+    linked_hierarchy: str = field(
         metadata={
             "name": "LinkedHierarchy",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r".+\.codelist\.Hierarchy=.+",
-        },
+        }
     )
-    linked_object: None | str = field(
-        default=None,
+    linked_object: str = field(
         metadata={
             "name": "LinkedObject",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r".+\)(\.[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*)?",
-        },
+        }
     )
     context_object: None | str = field(
         default=None,

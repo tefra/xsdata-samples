@@ -10,7 +10,7 @@ from travelport.models.marketing_information_1 import MarketingInformation1
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleSearchAvailabilityRsp(BaseVehicleSearchAvailabilityRsp):
     """
     Parameters

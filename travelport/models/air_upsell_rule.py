@@ -8,7 +8,7 @@ from travelport.models.air_upsell_qualify import AirUpsellQualify
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirUpsellRule:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"

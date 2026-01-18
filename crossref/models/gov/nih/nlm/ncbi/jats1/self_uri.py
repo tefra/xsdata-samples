@@ -10,7 +10,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SelfUri:
     """
     <div> <h3>Uri For This Same Article Online</h3> </div>.

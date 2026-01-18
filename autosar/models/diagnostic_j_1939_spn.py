@@ -18,7 +18,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticJ1939Spn:
     """
     This meta-class represents the ability to model a J1939 Suspect
@@ -85,14 +85,13 @@ class DiagnosticJ1939Spn:
     class Meta:
         name = "DIAGNOSTIC-J-1939-SPN"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DiagnosticJ1939Spn.ShortNameFragments = field(
         default=None,
@@ -189,7 +188,7 @@ class DiagnosticJ1939Spn:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -200,7 +199,7 @@ class DiagnosticJ1939Spn:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

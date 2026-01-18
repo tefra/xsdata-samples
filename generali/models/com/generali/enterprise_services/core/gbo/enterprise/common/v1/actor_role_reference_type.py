@@ -23,7 +23,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ActorRoleReferenceType(BaseReferenceComponentType):
     """
     <description xmlns="">A component defining a reference to a Party

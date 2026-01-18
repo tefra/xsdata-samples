@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.week_of_month_enum import WeekOfMonthEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DayWeekMonth:
     """
     Specification of periods defined by the intersection of days, weeks and

@@ -13,7 +13,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayFifoConfiguration:
     """
     One First In First Out (FIFO) queued receive structure, defining the
@@ -128,18 +128,17 @@ class FlexrayFifoConfiguration:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ChannelRef(Ref):
-        dest: None | FlexrayPhysicalChannelSubtypesEnum = field(
-            default=None,
+        dest: FlexrayPhysicalChannelSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FifoRanges:
         flexray_fifo_range: list[FlexrayFifoRange] = field(
             default_factory=list,

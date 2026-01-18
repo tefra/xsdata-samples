@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VoluntaryChangesType:
     """
     Specifies charges and/or penalties associated with making ticket
@@ -36,7 +36,7 @@ class VoluntaryChangesType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Penalty:
         """
         Attributes:

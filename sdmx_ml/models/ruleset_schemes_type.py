@@ -7,7 +7,7 @@ from sdmx_ml.models.ruleset_scheme_type import RulesetSchemeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RulesetSchemesType:
     """
     RulesetSchemesType describes the structure of the ruleset schemes

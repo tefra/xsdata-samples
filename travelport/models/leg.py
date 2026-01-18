@@ -7,7 +7,7 @@ from travelport.models.leg_detail import LegDetail
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Leg:
     """
     Information about the journey Leg.
@@ -35,24 +35,21 @@ class Leg:
             "max_occurs": 999,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    group: None | int = field(
-        default=None,
+    group: int = field(
         metadata={
             "name": "Group",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    origin: None | str = field(
-        default=None,
+    origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
@@ -60,10 +57,9 @@ class Leg:
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        },
+        }
     )
-    destination: None | str = field(
-        default=None,
+    destination: str = field(
         metadata={
             "name": "Destination",
             "type": "Attribute",
@@ -71,5 +67,5 @@ class Leg:
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        },
+        }
     )

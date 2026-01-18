@@ -10,7 +10,7 @@ from .sw_data_def_props import SwDataDefProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompositeNetworkRepresentation:
     """
     This meta-class is used to define the network representation of leaf

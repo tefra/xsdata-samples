@@ -17,7 +17,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricingAmountType(BaseIdentifiedComponentType):
     premium: None | PricingPremiumType = field(
         default=None,

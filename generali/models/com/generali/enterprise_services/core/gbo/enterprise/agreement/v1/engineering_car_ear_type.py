@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EngineeringCarEarType:
     insured_values_md: None | AmountType = field(
         default=None,

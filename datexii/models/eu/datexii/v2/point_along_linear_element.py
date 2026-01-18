@@ -17,7 +17,7 @@ from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointAlongLinearElement:
     """
     A point on a linear element where the linear element is either a part
@@ -72,23 +72,21 @@ class PointAlongLinearElement:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    linear_element: None | LinearElement = field(
-        default=None,
+    linear_element: LinearElement = field(
         metadata={
             "name": "linearElement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    distance_along_linear_element: None | DistanceAlongLinearElement = field(
-        default=None,
+    distance_along_linear_element: DistanceAlongLinearElement = field(
         metadata={
             "name": "distanceAlongLinearElement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     point_along_linear_element_extension: None | ExtensionType = field(
         default=None,

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/system_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SystemInfo:
     """
     Identifies the type of system and version running.
@@ -23,21 +23,19 @@ class SystemInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/system_v32_0"
 
-    system_type: None | str = field(
-        default=None,
+    system_type: str = field(
         metadata={
             "name": "SystemType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    application_version: None | str = field(
-        default=None,
+    application_version: str = field(
         metadata={
             "name": "ApplicationVersion",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     description: None | str = field(
         default=None,

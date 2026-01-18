@@ -7,7 +7,7 @@ from travelport.models.base_search_modifiers import BaseSearchModifiers
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SavedTripSearchModifiers(BaseSearchModifiers):
     """
     Controls and switches for the SavedTrip Search request.

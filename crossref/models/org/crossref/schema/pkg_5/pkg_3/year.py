@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Year:
     """
     Year of publication.
@@ -15,12 +15,11 @@ class Year:
         name = "year"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    value: None | int = field(
-        default=None,
+    value: int = field(
         metadata={
             "required": True,
             "min_inclusive": 1400,
             "max_inclusive": 2200,
             "total_digits": 4,
-        },
+        }
     )

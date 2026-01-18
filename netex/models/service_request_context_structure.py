@@ -12,7 +12,7 @@ from .predictors_enumeration import PredictorsEnumeration
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceRequestContextStructure:
     check_status_address: None | str = field(
         default=None,

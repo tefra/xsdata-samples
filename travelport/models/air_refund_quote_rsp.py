@@ -9,7 +9,7 @@ from travelport.models.tcrrefund_bundle import TcrrefundBundle
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirRefundQuoteRsp(BaseRsp1):
     """
     Parameters

@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Tax2:
     """
     Parameters
@@ -46,13 +46,12 @@ class Tax2:
             "type": "Element",
         },
     )
-    code: None | int = field(
-        default=None,
+    code: int = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     effective_date: None | XmlDate = field(
         default=None,

@@ -9,7 +9,7 @@ from .group_of_links import GroupOfLinks
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupOfLinksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "groupOfLinksInFrame_RelStructure"

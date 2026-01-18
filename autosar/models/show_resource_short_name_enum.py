@@ -9,7 +9,7 @@ from .show_resource_short_name_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShowResourceShortNameEnum:
     """
     This enumerator specifies if the short name of the reference target
@@ -31,11 +31,10 @@ class ShowResourceShortNameEnum:
     class Meta:
         name = "SHOW-RESOURCE-SHORT-NAME-ENUM"
 
-    value: None | ShowResourceShortNameEnumSimple = field(
-        default=None,
+    value: ShowResourceShortNameEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

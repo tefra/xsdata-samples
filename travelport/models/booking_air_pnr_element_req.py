@@ -10,7 +10,7 @@ from travelport.models.update_air_pnr_element import UpdateAirPnrElement
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingAirPnrElementReq(BookingBaseReq):
     """
     Adds, Modifies air elements like Stored fare FOP, Credit Card Auth,

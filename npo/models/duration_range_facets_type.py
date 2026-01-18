@@ -10,7 +10,7 @@ from npo.models.duration_range_facet_item_type import (
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DurationRangeFacetsType(AbstractFacetType):
     class Meta:
         name = "durationRangeFacetsType"

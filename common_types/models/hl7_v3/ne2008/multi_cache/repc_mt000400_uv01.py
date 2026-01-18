@@ -36,7 +36,7 @@ from .repc_mt000100_uv01 import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000400Uv01Author5:
     class Meta:
         name = "REPC_MT000400UV01.Author5"
@@ -73,31 +73,28 @@ class RepcMt000400Uv01Author5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: None | TsExplicit = field(
-        default=None,
+    time: TsExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    mode_code: None | Ce = field(
-        default=None,
+    mode_code: Ce = field(
         metadata={
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    signature_code: None | Cs = field(
-        default=None,
+    signature_code: Cs = field(
         metadata={
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     signature_text: None | EdExplicit = field(
         default=None,
@@ -108,13 +105,12 @@ class RepcMt000400Uv01Author5:
         },
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -142,7 +138,7 @@ class RepcMt000400Uv01Author5:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000400Uv01Component4:
     class Meta:
         name = "REPC_MT000400UV01.Component4"
@@ -254,13 +250,12 @@ class RepcMt000400Uv01Component4:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipHasComponent = field(
-        default=None,
+    type_code: ActRelationshipHasComponent = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: str = field(
         default="AN",
@@ -280,7 +275,7 @@ class RepcMt000400Uv01Component4:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000400Uv01Custodian:
     class Meta:
         name = "REPC_MT000400UV01.Custodian"
@@ -317,13 +312,12 @@ class RepcMt000400Uv01Custodian:
         },
     )
     responsible_party: None | CoctMt040200Uv01ResponsibleParty = field(
-        default=None,
         metadata={
             "name": "responsibleParty",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -343,7 +337,7 @@ class RepcMt000400Uv01Custodian:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000400Uv01ActCategory:
     class Meta:
         name = "REPC_MT000400UV01.ActCategory"
@@ -372,13 +366,12 @@ class RepcMt000400Uv01ActCategory:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Cs = field(
-        default=None,
+    code: Cs = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     author: list[RepcMt000400Uv01Author5] = field(
         default_factory=list,
@@ -423,7 +416,7 @@ class RepcMt000400Uv01ActCategory:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000400Uv01ActList:
     class Meta:
         name = "REPC_MT000400UV01.ActList"
@@ -452,13 +445,12 @@ class RepcMt000400Uv01ActList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     effective_time: None | IvlTsExplicit = field(
         default=None,

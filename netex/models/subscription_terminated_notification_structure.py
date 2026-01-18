@@ -13,7 +13,7 @@ from .subscription_qualifier_structure import SubscriptionQualifierStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
     subscriber_ref: Iterable[ParticipantRefStructure] = field(
         default_factory=list,

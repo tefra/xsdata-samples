@@ -9,7 +9,7 @@ from .transport_layer_protocol_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportLayerProtocolEnum:
     """
     This enumeration allows to choose a TCP/IP transport layer protocol.
@@ -30,11 +30,10 @@ class TransportLayerProtocolEnum:
     class Meta:
         name = "TRANSPORT-LAYER-PROTOCOL-ENUM"
 
-    value: None | TransportLayerProtocolEnumSimple = field(
-        default=None,
+    value: TransportLayerProtocolEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

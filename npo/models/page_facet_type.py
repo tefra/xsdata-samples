@@ -8,7 +8,7 @@ from npo.models.text_facet_type import TextFacetType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PageFacetType(TextFacetType):
     class Meta:
         name = "pageFacetType"

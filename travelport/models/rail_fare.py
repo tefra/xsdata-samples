@@ -15,7 +15,7 @@ from travelport.models.type_journey_direction import TypeJourneyDirection
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailFare:
     """
     Information about this fare component.
@@ -140,13 +140,12 @@ class RailFare:
             "max_occurs": 99,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     fare_basis: None | str = field(
         default=None,
@@ -155,15 +154,14 @@ class RailFare:
             "type": "Attribute",
         },
     )
-    cabin_class: None | str = field(
-        default=None,
+    cabin_class: str = field(
         metadata={
             "name": "CabinClass",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     passenger_type_code: None | str = field(
         default=None,
@@ -192,13 +190,12 @@ class RailFare:
             "white_space": "collapse",
         },
     )
-    effective_date: None | str = field(
-        default=None,
+    effective_date: str = field(
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     amount: None | str = field(
         default=None,

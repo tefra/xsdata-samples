@@ -8,36 +8,33 @@ from sabre.models.response_location_type import ResponseLocationType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlternateLocationLowestFaresType:
     """
     IntelliSell Type . lowest fare for alternate origin / destination pair.
     """
 
-    origin_location: None | ResponseLocationType = field(
-        default=None,
+    origin_location: ResponseLocationType = field(
         metadata={
             "name": "OriginLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    destination_location: None | ResponseLocationType = field(
-        default=None,
+    destination_location: ResponseLocationType = field(
         metadata={
             "name": "DestinationLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    lowest_fare: None | CurrencyAmountType = field(
-        default=None,
+    lowest_fare: CurrencyAmountType = field(
         metadata={
             "name": "LowestFare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )

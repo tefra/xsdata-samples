@@ -11,7 +11,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanControllerFdConfigurationRequirements:
     """
     This element allows the specification of ranges for the CanFD bit

@@ -8,31 +8,29 @@ from travelport.models.payment_1 import Payment1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailUpdate:
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
-    booking_action: None | RailUpdate.BookingAction = field(
-        default=None,
+    booking_action: RailUpdate.BookingAction = field(
         metadata={
             "name": "BookingAction",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    reservation_locator_code: None | str = field(
-        default=None,
+    reservation_locator_code: str = field(
         metadata={
             "name": "ReservationLocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BookingAction:
         """
         Parameters
@@ -62,11 +60,10 @@ class RailUpdate:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
             },
         )
-        type_value: None | str = field(
-            default=None,
+        type_value: str = field(
             metadata={
                 "name": "Type",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

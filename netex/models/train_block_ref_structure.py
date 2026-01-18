@@ -7,6 +7,6 @@ from .block_ref_structure import BlockRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrainBlockRefStructure(BlockRefStructure):
     pass

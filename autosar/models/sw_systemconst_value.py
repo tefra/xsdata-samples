@@ -10,7 +10,7 @@ from .sw_systemconst_subtypes_enum import SwSystemconstSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwSystemconstValue:
     """
     This meta-class assigns a particular value to a system constant.
@@ -79,18 +79,17 @@ class SwSystemconstValue:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwSystemconstRef(Ref):
-        dest: None | SwSystemconstSubtypesEnum = field(
-            default=None,
+        dest: SwSystemconstSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

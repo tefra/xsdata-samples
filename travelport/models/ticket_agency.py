@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TicketAgency:
     """
     This modifier will override the pseudo of the ticketing agency found in
@@ -24,19 +24,17 @@ class TicketAgency:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    provider_code: None | object = field(
-        default=None,
+    provider_code: object = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    pseudo_city_code: None | object = field(
-        default=None,
+    pseudo_city_code: object = field(
         metadata={
             "name": "PseudoCityCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

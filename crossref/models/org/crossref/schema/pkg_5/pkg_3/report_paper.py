@@ -21,7 +21,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.report_paper_series_metadat
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReportPaper:
     """
     report-paper is the top level element for deposit of metadata about one

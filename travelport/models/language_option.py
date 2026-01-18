@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LanguageOption:
     """
     Enables itineraries and invoices to print in different languages.
@@ -21,21 +21,19 @@ class LanguageOption:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    language: None | str = field(
-        default=None,
+    language: str = field(
         metadata={
             "name": "Language",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
-    country: None | str = field(
-        default=None,
+    country: str = field(
         metadata={
             "name": "Country",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )

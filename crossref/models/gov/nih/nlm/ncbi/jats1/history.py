@@ -7,7 +7,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.date import Date
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class History:
     """
     <div> <h3>History: Document History</h3> </div>.
@@ -21,7 +21,6 @@ class History:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     id: None | str = field(

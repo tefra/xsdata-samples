@@ -10,7 +10,7 @@ from sdmx_ml.models.standard_to_vtl_mapping_method_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ToVtlMappingType:
     """
     ToVtlMappingType defines the mapping method and filter used when

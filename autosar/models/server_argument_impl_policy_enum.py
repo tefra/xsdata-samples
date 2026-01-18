@@ -9,7 +9,7 @@ from .server_argument_impl_policy_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServerArgumentImplPolicyEnum:
     """
     This defines how the argument type of the servers RunnableEntity is
@@ -31,11 +31,10 @@ class ServerArgumentImplPolicyEnum:
     class Meta:
         name = "SERVER-ARGUMENT-IMPL-POLICY-ENUM"
 
-    value: None | ServerArgumentImplPolicyEnumSimple = field(
-        default=None,
+    value: ServerArgumentImplPolicyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -9,7 +9,7 @@ from .rule_arguments import RuleArguments
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RuleBasedValueSpecification:
     """
     This meta-class is used to support a rule-based initialization approach
@@ -84,7 +84,7 @@ class RuleBasedValueSpecification:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Argumentss:
         rule_arguments: list[RuleArguments] = field(
             default_factory=list,

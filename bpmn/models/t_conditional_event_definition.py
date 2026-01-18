@@ -8,16 +8,15 @@ from .t_expression import TExpression
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TConditionalEventDefinition(TEventDefinition):
     class Meta:
         name = "tConditionalEventDefinition"
 
-    condition: None | TExpression = field(
-        default=None,
+    condition: TExpression = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "required": True,
-        },
+        }
     )

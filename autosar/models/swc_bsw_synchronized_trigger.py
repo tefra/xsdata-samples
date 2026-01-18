@@ -12,7 +12,7 @@ from .trigger_subtypes_enum import TriggerSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwcBswSynchronizedTrigger:
     """
     Synchronizes a Trigger provided by a component via a port with a
@@ -78,13 +78,12 @@ class SwcBswSynchronizedTrigger:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BswTriggerRef(Ref):
-        dest: None | TriggerSubtypesEnum = field(
-            default=None,
+        dest: TriggerSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

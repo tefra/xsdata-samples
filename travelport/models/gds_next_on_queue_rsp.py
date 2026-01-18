@@ -8,7 +8,7 @@ from travelport.models.universal_record import UniversalRecord
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GdsNextOnQueueRsp(BaseRsp1):
     """
     The response from the host for a NextOnQueueReq.

@@ -9,7 +9,7 @@ from .diagnostic_event_window_time_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEventWindowTimeEnum:
     """
     This represents the ability to define the semantics of the event
@@ -31,11 +31,10 @@ class DiagnosticEventWindowTimeEnum:
     class Meta:
         name = "DIAGNOSTIC-EVENT-WINDOW-TIME-ENUM"
 
-    value: None | DiagnosticEventWindowTimeEnumSimple = field(
-        default=None,
+    value: DiagnosticEventWindowTimeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

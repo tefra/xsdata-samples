@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.tpeg_loc03_area_descriptor_subtype_enum import
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TpegAreaDescriptor(TpegDescriptor):
     """
     A descriptor for describing an area location.
@@ -22,16 +22,13 @@ class TpegAreaDescriptor(TpegDescriptor):
     :ivar tpeg_area_descriptor_extension:
     """
 
-    tpeg_area_descriptor_type: None | TpegLoc03AreaDescriptorSubtypeEnum = (
-        field(
-            default=None,
-            metadata={
-                "name": "tpegAreaDescriptorType",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
-            },
-        )
+    tpeg_area_descriptor_type: TpegLoc03AreaDescriptorSubtypeEnum = field(
+        metadata={
+            "name": "tpegAreaDescriptorType",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
+        }
     )
     tpeg_area_descriptor_extension: None | ExtensionType = field(
         default=None,

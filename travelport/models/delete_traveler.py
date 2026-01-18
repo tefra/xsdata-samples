@@ -9,7 +9,7 @@ from travelport.models.type_booking_traveler_element import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeleteTraveler:
     """
     Container for Booking Traveler or its contents to be deleted.
@@ -18,19 +18,17 @@ class DeleteTraveler:
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
-    element: None | TypeBookingTravelerElement = field(
-        default=None,
+    element: TypeBookingTravelerElement = field(
         metadata={
             "name": "Element",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

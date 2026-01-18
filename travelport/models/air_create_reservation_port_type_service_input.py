@@ -10,45 +10,41 @@ from travelport.models.supported_versions import SupportedVersions
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirCreateReservationPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: None | AirCreateReservationPortTypeServiceInput.Header = field(
-        default=None,
+    header: AirCreateReservationPortTypeServiceInput.Header = field(
         metadata={
             "name": "Header",
             "type": "Element",
-        },
+        }
     )
-    body: None | AirCreateReservationPortTypeServiceInput.Body = field(
-        default=None,
+    body: AirCreateReservationPortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Header:
-        supported_versions: None | SupportedVersions = field(
-            default=None,
+        supported_versions: SupportedVersions = field(
             metadata={
                 "name": "SupportedVersions",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        air_create_reservation_req: None | AirCreateReservationReq = field(
-            default=None,
+        air_create_reservation_req: AirCreateReservationReq = field(
             metadata={
                 "name": "AirCreateReservationReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+            }
         )

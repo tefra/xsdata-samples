@@ -7,7 +7,7 @@ from sdmx_ml.models.process_type import ProcessType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ProcessesType:
     """
     ProcessesType describes the structure of the processes container.

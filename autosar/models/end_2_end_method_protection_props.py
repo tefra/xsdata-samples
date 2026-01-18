@@ -15,7 +15,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class End2EndMethodProtectionProps:
     """
     This element allows to protect a method, a field setter or a field
@@ -140,7 +140,7 @@ class End2EndMethodProtectionProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataIds:
         """
         :ivar data_id: This represents a numerical identifier that is
@@ -162,24 +162,22 @@ class End2EndMethodProtectionProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class E2EProfileConfigurationRef(Ref):
-        dest: None | E2EProfileConfigurationSubtypesEnum = field(
-            default=None,
+        dest: E2EProfileConfigurationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MethodRef(Ref):
-        dest: None | ServiceMethodDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceMethodDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -29,7 +29,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticIoControl:
     """
     This represents an instance of the "I/O Control" diagnostic service.
@@ -113,14 +113,13 @@ class DiagnosticIoControl:
     class Meta:
         name = "DIAGNOSTIC-IO-CONTROL"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DiagnosticIoControl.ShortNameFragments = (
         field(
@@ -271,7 +270,7 @@ class DiagnosticIoControl:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -282,7 +281,7 @@ class DiagnosticIoControl:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -293,18 +292,17 @@ class DiagnosticIoControl:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessPermissionRef(Ref):
-        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticAccessPermissionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ControlEnableMaskBits:
         diagnostic_control_enable_mask_bit: list[
             DiagnosticControlEnableMaskBit
@@ -317,24 +315,22 @@ class DiagnosticIoControl:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataIdentifierRef(Ref):
-        dest: None | DiagnosticDataIdentifierSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticDataIdentifierSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IoControlClassRef(Ref):
-        dest: None | DiagnosticIoControlClassSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticIoControlClassSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -11,7 +11,7 @@ from .vehicle_sharing_place_assignment import VehicleSharingPlaceAssignment
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleServicePlaceAssignmentsRelStructure(
     OneToManyRelationshipStructure
 ):

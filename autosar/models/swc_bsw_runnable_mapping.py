@@ -10,7 +10,7 @@ from .runnable_entity_subtypes_enum import RunnableEntitySubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwcBswRunnableMapping:
     """
     Maps a BswModuleEntity to a RunnableEntity if it is implemented as part
@@ -80,24 +80,22 @@ class SwcBswRunnableMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BswEntityRef(Ref):
-        dest: None | BswModuleEntitySubtypesEnum = field(
-            default=None,
+        dest: BswModuleEntitySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwcRunnableRef(Ref):
-        dest: None | RunnableEntitySubtypesEnum = field(
-            default=None,
+        dest: RunnableEntitySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

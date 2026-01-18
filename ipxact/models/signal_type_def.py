@@ -7,7 +7,7 @@ from ipxact.models.signal_type_def_signal_type import SignalTypeDefSignalType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SignalTypeDef:
     """
     Definition of a single signal type defintion that can relate to
@@ -39,13 +39,12 @@ class SignalTypeDef:
         name = "signalTypeDef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    signal_type: None | SignalTypeDefSignalType = field(
-        default=None,
+    signal_type: SignalTypeDefSignalType = field(
         metadata={
             "name": "signalType",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     view_ref: list[SignalTypeDef.ViewRef] = field(
         default_factory=list,
@@ -62,7 +61,7 @@ class SignalTypeDef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ViewRef:
         value: str = field(
             default="",

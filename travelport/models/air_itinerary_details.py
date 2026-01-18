@@ -8,7 +8,7 @@ from travelport.models.passenger_details import PassengerDetails
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirItineraryDetails:
     """
     Itinerary details containing brand details.
@@ -42,11 +42,10 @@ class AirItineraryDetails:
             "max_occurs": 15,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -9,7 +9,7 @@ from travelport.models.formatted_text_text_type_text_format_6 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FormattedTextTextType6:
     """
     Provides text and indicates whether it is formatted or not.

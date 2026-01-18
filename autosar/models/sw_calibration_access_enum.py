@@ -7,7 +7,7 @@ from .sw_calibration_access_enum_simple import SwCalibrationAccessEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwCalibrationAccessEnum:
     """
     Determines the access rights to a data object w.r.t. measurement and
@@ -29,11 +29,10 @@ class SwCalibrationAccessEnum:
     class Meta:
         name = "SW-CALIBRATION-ACCESS-ENUM"
 
-    value: None | SwCalibrationAccessEnumSimple = field(
-        default=None,
+    value: SwCalibrationAccessEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -7,7 +7,7 @@ from .boolean import Boolean
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEcuProps:
     """
     This meta-class is defined to gather diagnostic-related properties that

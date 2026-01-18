@@ -25,7 +25,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticControlDtcSetting:
     """
     This represents an instance of the "Control DTC Setting" diagnostic
@@ -101,14 +101,13 @@ class DiagnosticControlDtcSetting:
     class Meta:
         name = "DIAGNOSTIC-CONTROL-DTC-SETTING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticControlDtcSetting.ShortNameFragments
@@ -227,7 +226,7 @@ class DiagnosticControlDtcSetting:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -238,7 +237,7 @@ class DiagnosticControlDtcSetting:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -249,24 +248,22 @@ class DiagnosticControlDtcSetting:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessPermissionRef(Ref):
-        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticAccessPermissionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DtcSettingClassRef(Ref):
-        dest: None | DiagnosticControlDtcSettingClassSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticControlDtcSettingClassSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

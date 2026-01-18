@@ -7,7 +7,7 @@ from .align_enum_simple import AlignEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlignEnum:
     """
     This enumerator specifies horizontal alignment.
@@ -28,11 +28,10 @@ class AlignEnum:
     class Meta:
         name = "ALIGN-ENUM"
 
-    value: None | AlignEnumSimple = field(
-        default=None,
+    value: AlignEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

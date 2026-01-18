@@ -7,7 +7,7 @@ from .mcci_mt000200_uv01 import McciMt000200Uv01Message
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McciIn000002Uv01(McciMt000200Uv01Message):
     class Meta:
         name = "MCCI_IN000002UV01"

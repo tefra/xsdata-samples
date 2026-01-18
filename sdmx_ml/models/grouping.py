@@ -7,7 +7,7 @@ from sdmx_ml.models.grouping_type import GroupingType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Grouping(GroupingType):
     """
     Grouping is an abstract element that serves as a substitution head for

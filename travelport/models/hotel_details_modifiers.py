@@ -14,7 +14,7 @@ from travelport.models.type_rate_rule_detail import TypeRateRuleDetail
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelDetailsModifiers:
     """
     Controls and switches for the Hotel Details request.
@@ -90,13 +90,12 @@ class HotelDetailsModifiers:
             "max_occurs": 999,
         },
     )
-    hotel_stay: None | HotelStay = field(
-        default=None,
+    hotel_stay: HotelStay = field(
         metadata={
             "name": "HotelStay",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     number_of_children: None | NumberOfChildren = field(
         default=None,

@@ -7,7 +7,7 @@ from .t_data_state import TDataState
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataState(TDataState):
     class Meta:
         name = "dataState"

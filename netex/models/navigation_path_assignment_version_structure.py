@@ -17,7 +17,7 @@ from .taxi_rank_ref import TaxiRankRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NavigationPathAssignmentVersionStructure(StopAssignmentVersionStructure):
     class Meta:
         name = "NavigationPathAssignment_VersionStructure"

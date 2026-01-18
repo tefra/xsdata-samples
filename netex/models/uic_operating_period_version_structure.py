@@ -9,19 +9,18 @@ from .operating_period_version_structure import OperatingPeriodVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UicOperatingPeriodVersionStructure(OperatingPeriodVersionStructure):
     class Meta:
         name = "UicOperatingPeriod_VersionStructure"
 
-    valid_day_bits: None | str = field(
-        default=None,
+    valid_day_bits: str = field(
         metadata={
             "name": "ValidDayBits",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     days_of_week: Iterable[DayOfWeekEnumeration] = field(
         default_factory=list,

@@ -9,7 +9,7 @@ from travelport.models.air_exchange_multi_quote_option import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeMulitQuoteList:
     """
     The shared object list of AirExchangeMultiQuotes.

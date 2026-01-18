@@ -8,7 +8,7 @@ from .l_overview_paragraph import LOverviewParagraph
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndentSample:
     """
     This represents the ability to specify indentation of a labeled list by

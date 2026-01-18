@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CouplingPortShaper:
     """
     Defines a shaper for the CouplingPort egress structure.
@@ -85,14 +85,13 @@ class CouplingPortShaper:
     class Meta:
         name = "COUPLING-PORT-SHAPER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | CouplingPortShaper.ShortNameFragments = field(
         default=None,
@@ -189,7 +188,7 @@ class CouplingPortShaper:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -200,7 +199,7 @@ class CouplingPortShaper:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -211,13 +210,12 @@ class CouplingPortShaper:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PredecessorFifoRef(Ref):
-        dest: None | CouplingPortFifoSubtypesEnum = field(
-            default=None,
+        dest: CouplingPortFifoSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

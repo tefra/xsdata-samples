@@ -11,7 +11,7 @@ from travelport.models.type_mcotype import TypeMcotype
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McoSearchResult:
     """
     Parameters
@@ -40,37 +40,33 @@ class McoSearchResult:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    create_date: None | XmlDateTime = field(
-        default=None,
+    create_date: XmlDateTime = field(
         metadata={
             "name": "CreateDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    number: None | str = field(
-        default=None,
+    number: str = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    status: None | TypeMcostatus = field(
-        default=None,
+    status: TypeMcostatus = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    type_value: None | TypeMcotype = field(
-        default=None,
+    type_value: TypeMcotype = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     locator_code: None | str = field(
         default=None,

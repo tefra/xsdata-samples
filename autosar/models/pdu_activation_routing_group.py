@@ -14,7 +14,7 @@ from .so_con_i_pdu_identifier_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PduActivationRoutingGroup:
     """
     Group of Pdus that can be activated or deactivated for transmission
@@ -57,14 +57,13 @@ class PduActivationRoutingGroup:
     class Meta:
         name = "PDU-ACTIVATION-ROUTING-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | PduActivationRoutingGroup.ShortNameFragments
@@ -128,7 +127,7 @@ class PduActivationRoutingGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -139,7 +138,7 @@ class PduActivationRoutingGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IPduIdentifierTcpRefs:
         i_pdu_identifier_tcp_ref: list[
             PduActivationRoutingGroup.IPduIdentifierTcpRefs.IPduIdentifierTcpRef
@@ -152,18 +151,17 @@ class PduActivationRoutingGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class IPduIdentifierTcpRef(Ref):
-            dest: None | SoConIPduIdentifierSubtypesEnum = field(
-                default=None,
+            dest: SoConIPduIdentifierSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IPduIdentifierUdpRefs:
         i_pdu_identifier_udp_ref: list[
             PduActivationRoutingGroup.IPduIdentifierUdpRefs.IPduIdentifierUdpRef
@@ -176,13 +174,12 @@ class PduActivationRoutingGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class IPduIdentifierUdpRef(Ref):
-            dest: None | SoConIPduIdentifierSubtypesEnum = field(
-                default=None,
+            dest: SoConIPduIdentifierSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

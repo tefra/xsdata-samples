@@ -12,7 +12,7 @@ from travelport.models.restriction_2 import Restriction2
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingRules:
     """
     Rules related to pre pay booking.
@@ -73,7 +73,7 @@ class BookingRules:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RuleInfo:
         charges_rules: None | ChargesRules = field(
             default=None,

@@ -14,7 +14,7 @@ from .types_of_machine_readabilities_rel_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
     class Meta:
         name = "TypeOfTravelDocument_VersionStructure"

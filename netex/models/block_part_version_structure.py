@@ -16,7 +16,7 @@ from .vehicle_type_ref import VehicleTypeRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BlockPartVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "BlockPart_VersionStructure"

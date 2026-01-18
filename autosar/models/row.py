@@ -11,7 +11,7 @@ from .valign_enum_simple import ValignEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Row:
     """
     This meta-class represents the ability to express one row in a table.

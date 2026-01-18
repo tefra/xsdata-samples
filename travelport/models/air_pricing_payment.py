@@ -10,7 +10,7 @@ from travelport.models.payment_1 import Payment1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirPricingPayment:
     """
     AirPricing Payment information - used to associate a FormOfPayment

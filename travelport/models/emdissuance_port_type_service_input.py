@@ -7,27 +7,25 @@ from travelport.models.emdissuance_req import EmdissuanceReq
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EmdissuancePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | EmdissuancePortTypeServiceInput.Body = field(
-        default=None,
+    body: EmdissuancePortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        emdissuance_req: None | EmdissuanceReq = field(
-            default=None,
+        emdissuance_req: EmdissuanceReq = field(
             metadata={
                 "name": "EMDIssuanceReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
-            },
+            }
         )

@@ -13,7 +13,7 @@ from travelport.models.othtype import Othtype
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareRulesFilter:
     """
     Fare Rules Filter about this fare component.
@@ -91,7 +91,7 @@ class FareRulesFilter:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Refundability:
         """
         Parameters
@@ -102,11 +102,10 @@ class FareRulesFilter:
             (1G,1V,1P).Refundable.
         """
 
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "name": "Value",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

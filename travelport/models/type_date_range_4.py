@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeDateRange4:
     """
     Specify a range of dates.
@@ -16,19 +16,17 @@ class TypeDateRange4:
     class Meta:
         name = "typeDateRange"
 
-    start_date: None | XmlDate = field(
-        default=None,
+    start_date: XmlDate = field(
         metadata={
             "name": "StartDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    end_date: None | XmlDate = field(
-        default=None,
+    end_date: XmlDate = field(
         metadata={
             "name": "EndDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

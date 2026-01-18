@@ -23,7 +23,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecurityEventContextMappingBswModule:
     """
     This meta-class represents the ability to associate a collection of
@@ -107,14 +107,13 @@ class SecurityEventContextMappingBswModule:
     class Meta:
         name = "SECURITY-EVENT-CONTEXT-MAPPING-BSW-MODULE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SecurityEventContextMappingBswModule.ShortNameFragments
@@ -245,7 +244,7 @@ class SecurityEventContextMappingBswModule:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -256,7 +255,7 @@ class SecurityEventContextMappingBswModule:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -267,7 +266,7 @@ class SecurityEventContextMappingBswModule:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FilterChains:
         security_event_filter_chain_ref_conditional: list[
             SecurityEventFilterChainRefConditional
@@ -280,7 +279,7 @@ class SecurityEventContextMappingBswModule:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IdsmInstances:
         idsm_instance_ref_conditional: list[IdsmInstanceRefConditional] = (
             field(
@@ -293,7 +292,7 @@ class SecurityEventContextMappingBswModule:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MappedSecurityEvents:
         security_event_context_props: list[SecurityEventContextProps] = field(
             default_factory=list,

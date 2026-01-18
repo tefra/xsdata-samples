@@ -14,7 +14,7 @@ from sdmx_ml.models.text_type import TextType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class BaseHeaderType:
     """
     BaseHeaderType in an abstract base type that defines the basis for all
@@ -66,15 +66,14 @@ class BaseHeaderType:
         source of the data.
     """
 
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
             "required": True,
             "pattern": r"[A-Za-z0-9_@$\-]+",
-        },
+        }
     )
     test: bool = field(
         default=False,
@@ -85,23 +84,21 @@ class BaseHeaderType:
             "required": True,
         },
     )
-    prepared: None | XmlDateTime | XmlDate = field(
-        default=None,
+    prepared: XmlDateTime | XmlDate = field(
         metadata={
             "name": "Prepared",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
             "required": True,
-        },
+        }
     )
-    sender: None | SenderType = field(
-        default=None,
+    sender: SenderType = field(
         metadata={
             "name": "Sender",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
             "required": True,
-        },
+        }
     )
     receiver: tuple[PartyType, ...] = field(
         default_factory=tuple,

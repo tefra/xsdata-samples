@@ -7,7 +7,7 @@ from .extensions_structure_1 import ExtensionsStructure1
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Extensions1(ExtensionsStructure1):
     class Meta:
         name = "Extensions"

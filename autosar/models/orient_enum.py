@@ -7,7 +7,7 @@ from .orient_enum_simple import OrientEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrientEnum:
     """
     This enumerator specifies how the table shall be oriented.
@@ -28,11 +28,10 @@ class OrientEnum:
     class Meta:
         name = "ORIENT-ENUM"
 
-    value: None | OrientEnumSimple = field(
-        default=None,
+    value: OrientEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

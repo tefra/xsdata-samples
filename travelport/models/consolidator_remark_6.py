@@ -8,7 +8,7 @@ from travelport.models.type_element_status_7 import TypeElementStatus7
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConsolidatorRemark6:
     """
     Authorization remark for Consolidator access to a PNR .

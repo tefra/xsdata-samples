@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McFunction:
     """
     Represents a functional element to be used as input to support
@@ -103,14 +103,13 @@ class McFunction:
     class Meta:
         name = "MC-FUNCTION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | McFunction.ShortNameFragments = field(
         default=None,
@@ -255,7 +254,7 @@ class McFunction:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -266,7 +265,7 @@ class McFunction:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -277,7 +276,7 @@ class McFunction:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SubFunctionRefs:
         sub_function_ref: list[McFunction.SubFunctionRefs.SubFunctionRef] = (
             field(
@@ -290,13 +289,12 @@ class McFunction:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SubFunctionRef(Ref):
-            dest: None | McFunctionSubtypesEnum = field(
-                default=None,
+            dest: McFunctionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

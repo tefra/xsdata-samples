@@ -13,21 +13,20 @@ from .vehicle_rental_ref import VehicleRentalRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleRentalServiceVersionStructure(
     CommonVehicleServiceVersionStructure
 ):
     class Meta:
         name = "VehicleRentalService_VersionStructure"
 
-    vehicle_rental_ref: None | VehicleRentalRef = field(
-        default=None,
+    vehicle_rental_ref: VehicleRentalRef = field(
         metadata={
             "name": "VehicleRentalRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     maximum_rental_period: None | XmlDuration = field(
         default=None,

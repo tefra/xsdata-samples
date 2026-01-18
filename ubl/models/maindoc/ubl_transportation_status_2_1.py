@@ -41,7 +41,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TransportationStatusType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -83,14 +83,13 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     carrier_assigned_id: None | CarrierAssignedId = field(
         default=None,
@@ -288,7 +287,7 @@ class TransportationStatusType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TransportationStatus(TransportationStatusType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"

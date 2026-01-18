@@ -7,27 +7,25 @@ from travelport.models.schedule_search_req import ScheduleSearchReq
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirScheduleSearchPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | AirScheduleSearchPortTypeServiceInput.Body = field(
-        default=None,
+    body: AirScheduleSearchPortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        schedule_search_req: None | ScheduleSearchReq = field(
-            default=None,
+        schedule_search_req: ScheduleSearchReq = field(
             metadata={
                 "name": "ScheduleSearchReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
-            },
+            }
         )

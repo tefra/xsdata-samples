@@ -8,7 +8,7 @@ from travelport.models.display_detail import DisplayDetail
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DisplayDetails:
     """
     The container to display the contents of PNR in GDS format.

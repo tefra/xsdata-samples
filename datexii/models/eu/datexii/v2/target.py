@@ -7,7 +7,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Target:
     """
     The details of a DATEX II target client.
@@ -18,23 +18,21 @@ class Target:
     :ivar target_extension:
     """
 
-    address: None | str = field(
-        default=None,
+    address: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
-    protocol: None | str = field(
-        default=None,
+    protocol: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
     target_extension: None | ExtensionType = field(
         default=None,

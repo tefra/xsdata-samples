@@ -9,7 +9,7 @@ from .multilingual_string import MultilingualString
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DirectionDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Direction_DerivedViewStructure"

@@ -10,7 +10,7 @@ from npo.models.segment import Segment
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduleEventApiType(ScheduleEventType):
     class Meta:
         name = "scheduleEventApiType"

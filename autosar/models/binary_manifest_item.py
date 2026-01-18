@@ -22,7 +22,7 @@ from .symbol_string import SymbolString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BinaryManifestItem:
     """
     This meta-class represents the ability to describe a specific handle or
@@ -98,14 +98,13 @@ class BinaryManifestItem:
     class Meta:
         name = "BINARY-MANIFEST-ITEM"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | BinaryManifestItem.ShortNameFragments = field(
         default=None,
@@ -226,7 +225,7 @@ class BinaryManifestItem:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -237,7 +236,7 @@ class BinaryManifestItem:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -248,7 +247,7 @@ class BinaryManifestItem:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Value:
         binary_manifest_item_numerical_value: (
             None | BinaryManifestItemNumericalValue
@@ -271,7 +270,7 @@ class BinaryManifestItem:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DefaultValue:
         binary_manifest_item_numerical_value: (
             None | BinaryManifestItemNumericalValue
@@ -294,7 +293,7 @@ class BinaryManifestItem:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AuxiliaryFields:
         binary_manifest_item: list[BinaryManifestItem] = field(
             default_factory=list,

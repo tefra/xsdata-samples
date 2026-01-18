@@ -9,7 +9,7 @@ from travelport.models.base_vehicle_search_availability_req import (
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleSearchAvailabilityReq(BaseVehicleSearchAvailabilityReq):
     """
     Parameters

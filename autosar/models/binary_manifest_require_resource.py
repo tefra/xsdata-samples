@@ -27,7 +27,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BinaryManifestRequireResource:
     """
     This meta-class represents a required resource in the binary manifest.
@@ -109,14 +109,13 @@ class BinaryManifestRequireResource:
     class Meta:
         name = "BINARY-MANIFEST-REQUIRE-RESOURCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | BinaryManifestRequireResource.ShortNameFragments
@@ -249,7 +248,7 @@ class BinaryManifestRequireResource:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -260,7 +259,7 @@ class BinaryManifestRequireResource:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -271,7 +270,7 @@ class BinaryManifestRequireResource:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Items:
         binary_manifest_item: list[BinaryManifestItem] = field(
             default_factory=list,
@@ -282,24 +281,22 @@ class BinaryManifestRequireResource:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResourceDefinitionRef(Ref):
-        dest: None | BinaryManifestResourceDefinitionSubtypesEnum = field(
-            default=None,
+        dest: BinaryManifestResourceDefinitionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResourceRef(Ref):
-        dest: None | CpSoftwareClusterResourceSubtypesEnum = field(
-            default=None,
+        dest: CpSoftwareClusterResourceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

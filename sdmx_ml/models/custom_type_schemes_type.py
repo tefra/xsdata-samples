@@ -7,7 +7,7 @@ from sdmx_ml.models.custom_type_scheme_type import CustomTypeSchemeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CustomTypeSchemesType:
     """
     CustomTypeSchemesType describes the structure of the custom type

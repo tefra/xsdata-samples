@@ -9,7 +9,7 @@ from .time_synchronization_kind_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSynchronizationKindEnum:
     """
     Defines the possible kinds of TimeSynchronizationInterfaces.
@@ -30,11 +30,10 @@ class TimeSynchronizationKindEnum:
     class Meta:
         name = "TIME-SYNCHRONIZATION-KIND-ENUM"
 
-    value: None | TimeSynchronizationKindEnumSimple = field(
-        default=None,
+    value: TimeSynchronizationKindEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

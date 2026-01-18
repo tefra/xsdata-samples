@@ -18,7 +18,7 @@ from .vehicle_services_in_frame_rel_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleScheduleVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "VehicleSchedule_VersionFrameStructure"

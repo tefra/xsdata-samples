@@ -7,7 +7,7 @@ from .send_indication_enum_simple import SendIndicationEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SendIndicationEnum:
     """
     This meta-class provides a way to specify in which way redundancy shall
@@ -29,11 +29,10 @@ class SendIndicationEnum:
     class Meta:
         name = "SEND-INDICATION-ENUM"
 
-    value: None | SendIndicationEnumSimple = field(
-        default=None,
+    value: SendIndicationEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

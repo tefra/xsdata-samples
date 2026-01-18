@@ -29,7 +29,7 @@ from travelport.models.type_profile_type_3 import TypeProfileType3
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileSummary1:
     """
     Profile summary information.
@@ -209,41 +209,37 @@ class ProfileSummary1:
             "type": "Element",
         },
     )
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_type: None | TypeProfileType3 = field(
-        default=None,
+    profile_type: TypeProfileType3 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    status: None | TypeProfileEntityStatus1 = field(
-        default=None,
+    status: TypeProfileEntityStatus1 = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | int = field(
-        default=None,
+    version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImmediateParentProfile:
         """
         Parameters

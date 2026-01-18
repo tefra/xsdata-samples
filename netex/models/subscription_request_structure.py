@@ -11,7 +11,7 @@ from .data_object_subscription_request import DataObjectSubscriptionRequest
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubscriptionRequestStructure(AbstractSubscriptionRequestStructure):
     data_object_subscription_request: Iterable[
         DataObjectSubscriptionRequest

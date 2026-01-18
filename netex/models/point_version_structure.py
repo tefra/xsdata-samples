@@ -14,7 +14,7 @@ from .type_of_point_refs_rel_structure import TypeOfPointRefsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Point_VersionStructure"

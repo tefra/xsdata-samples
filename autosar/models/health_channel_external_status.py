@@ -25,7 +25,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HealthChannelExternalStatus:
     """
     This element defines a health channel representing the status of an
@@ -95,14 +95,13 @@ class HealthChannelExternalStatus:
     class Meta:
         name = "HEALTH-CHANNEL-EXTERNAL-STATUS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | HealthChannelExternalStatus.ShortNameFragments
@@ -221,7 +220,7 @@ class HealthChannelExternalStatus:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -232,7 +231,7 @@ class HealthChannelExternalStatus:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -243,7 +242,7 @@ class HealthChannelExternalStatus:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NotifiedStatuss:
         health_channel_external_reported_status: list[
             HealthChannelExternalReportedStatus
@@ -256,13 +255,12 @@ class HealthChannelExternalStatus:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProcessRef(Ref):
-        dest: None | ProcessSubtypesEnum = field(
-            default=None,
+        dest: ProcessSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

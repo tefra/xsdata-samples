@@ -7,7 +7,7 @@ from .bsw_call_type_simple import BswCallTypeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswCallType:
     """
     Denotes the mechanism by which the entry into the Bsw module shall be
@@ -29,11 +29,10 @@ class BswCallType:
     class Meta:
         name = "BSW-CALL-TYPE"
 
-    value: None | BswCallTypeSimple = field(
-        default=None,
+    value: BswCallTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

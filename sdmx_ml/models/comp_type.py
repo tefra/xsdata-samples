@@ -10,7 +10,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CompType(AnnotableType):
     """
     CompType is the abstract base for any component value (e.g. a data or
@@ -39,11 +39,10 @@ class CompType(AnnotableType):
             "namespace": "",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
             "pattern": r"[A-Za-z][A-Za-z0-9_\-]*",
-        },
+        }
     )

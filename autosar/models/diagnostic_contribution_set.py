@@ -26,7 +26,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticContributionSet:
     """
     This meta-class represents a root node of a diagnostic extract.
@@ -107,14 +107,13 @@ class DiagnosticContributionSet:
     class Meta:
         name = "DIAGNOSTIC-CONTRIBUTION-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticContributionSet.ShortNameFragments
@@ -239,7 +238,7 @@ class DiagnosticContributionSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -250,7 +249,7 @@ class DiagnosticContributionSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -261,7 +260,7 @@ class DiagnosticContributionSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuInstanceRefs:
         ecu_instance_ref: list[
             DiagnosticContributionSet.EcuInstanceRefs.EcuInstanceRef
@@ -274,18 +273,17 @@ class DiagnosticContributionSet:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EcuInstanceRef(Ref):
-            dest: None | EcuInstanceSubtypesEnum = field(
-                default=None,
+            dest: EcuInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Elements:
         diagnostic_common_element_ref_conditional: list[
             DiagnosticCommonElementRefConditional
@@ -298,7 +296,7 @@ class DiagnosticContributionSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceTables:
         diagnostic_service_table_ref_conditional: list[
             DiagnosticServiceTableRefConditional

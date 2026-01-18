@@ -17,7 +17,7 @@ from datexii.models.eu.datexii.v2.vehicle_characteristics import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NetworkManagement(OperatorAction):
     """
     Network management action which is applicable to the road network and
@@ -39,14 +39,13 @@ class NetworkManagement(OperatorAction):
     :ivar network_management_extension:
     """
 
-    compliance_option: None | ComplianceOptionEnum = field(
-        default=None,
+    compliance_option: ComplianceOptionEnum = field(
         metadata={
             "name": "complianceOption",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     applicable_for_traffic_direction: list[DirectionEnum] = field(
         default_factory=list,

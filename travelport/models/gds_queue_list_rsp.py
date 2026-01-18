@@ -9,7 +9,7 @@ from travelport.models.queue_element import QueueElement
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GdsQueueListRsp(BaseRsp1):
     """
     The response from the host for a queue list.

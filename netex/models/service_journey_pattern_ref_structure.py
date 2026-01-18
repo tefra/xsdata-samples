@@ -7,6 +7,6 @@ from .journey_pattern_ref_structure import JourneyPatternRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceJourneyPatternRefStructure(JourneyPatternRefStructure):
     pass

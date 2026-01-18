@@ -9,7 +9,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataSetBaseType(MaintainableType):
     """
     MetadataSetBaseType defines the base refinement of the MetadataSetType.

@@ -9,7 +9,7 @@ from datexii.models.eu.datexii.v2.traffic_status_enum import TrafficStatusEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrafficStatusValue(DataValue):
     """
     A measured or calculated value of the status of traffic conditions on a
@@ -20,14 +20,13 @@ class TrafficStatusValue(DataValue):
     :ivar traffic_status_value_extension:
     """
 
-    traffic_status_value: None | TrafficStatusEnum = field(
-        default=None,
+    traffic_status_value: TrafficStatusEnum = field(
         metadata={
             "name": "trafficStatusValue",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     traffic_status_value_extension: None | ExtensionType = field(
         default=None,

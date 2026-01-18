@@ -28,7 +28,7 @@ from travelport.models.vehicle_type_identifier import VehicleTypeIdentifier
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleUpdate:
     """
     Parameters
@@ -200,15 +200,14 @@ class VehicleUpdate:
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
         },
     )
-    reservation_locator_code: None | str = field(
-        default=None,
+    reservation_locator_code: str = field(
         metadata={
             "name": "ReservationLocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
     booking_traveler_ref: None | str = field(
         default=None,

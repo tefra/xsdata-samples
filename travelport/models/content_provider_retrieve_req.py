@@ -8,7 +8,7 @@ from travelport.models.type_show_providers_type import TypeShowProvidersType
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContentProviderRetrieveReq(BaseReq1):
     """
     Retrieves all available providers with their suppliers.

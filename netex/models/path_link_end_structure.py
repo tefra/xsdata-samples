@@ -9,16 +9,15 @@ from .place_ref_structure import PlaceRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PathLinkEndStructure:
-    place_ref: None | PlaceRefStructure = field(
-        default=None,
+    place_ref: PlaceRefStructure = field(
         metadata={
             "name": "PlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     level_ref: None | LevelRefStructure = field(
         default=None,

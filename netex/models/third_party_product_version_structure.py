@@ -9,7 +9,7 @@ from .general_group_of_entities_ref import GeneralGroupOfEntitiesRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ThirdPartyProductVersionStructure(FareProductVersionStructure):
     class Meta:
         name = "ThirdPartyProduct_VersionStructure"

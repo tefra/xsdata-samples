@@ -8,7 +8,7 @@ from travelport.models.urlinfo import Urlinfo
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseBaggageAllowanceInfo:
     """
     This contains common elements that are used for Baggage Allowance info,

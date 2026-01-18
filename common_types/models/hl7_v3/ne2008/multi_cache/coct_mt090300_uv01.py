@@ -43,7 +43,7 @@ from .coct_mt150003_uv03 import CoctMt150003Uv03Organization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090300Uv01Group:
     class Meta:
         name = "COCT_MT090300UV01.Group"
@@ -127,7 +127,7 @@ class CoctMt090300Uv01Group:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090300Uv01LanguageCommunication:
     class Meta:
         name = "COCT_MT090300UV01.LanguageCommunication"
@@ -197,7 +197,7 @@ class CoctMt090300Uv01LanguageCommunication:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090300Uv01LicensedEntity:
     class Meta:
         name = "COCT_MT090300UV01.LicensedEntity"
@@ -264,17 +264,16 @@ class CoctMt090300Uv01LicensedEntity:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassLicensedEntity = field(
-        default=None,
+    class_code: RoleClassLicensedEntity = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090300Uv01RoleOther:
     class Meta:
         name = "COCT_MT090300UV01.RoleOther"
@@ -328,25 +327,23 @@ class CoctMt090300Uv01RoleOther:
         },
     )
     class_code: (
-        None
-        | RoleClassMutualRelationship
+        RoleClassMutualRelationship
         | RoleClassPassive
         | str
         | RoleClassOntological
         | RoleClassPartitive
         | RoleClassRootValue
     ) = field(
-        default=None,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090300Uv01Member:
     class Meta:
         name = "COCT_MT090300UV01.Member"
@@ -420,12 +417,11 @@ class CoctMt090300Uv01Member:
         },
     )
     group: None | CoctMt090300Uv01Group = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -462,7 +458,7 @@ class CoctMt090300Uv01Member:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090300Uv01Device:
     class Meta:
         name = "COCT_MT090300UV01.Device"
@@ -561,13 +557,12 @@ class CoctMt090300Uv01Device:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassDevice = field(
-        default=None,
+    class_code: EntityClassDevice = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -580,7 +575,7 @@ class CoctMt090300Uv01Device:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090300Uv01AssignedDevice:
     class Meta:
         name = "COCT_MT090300UV01.AssignedDevice"
@@ -678,11 +673,10 @@ class CoctMt090300Uv01AssignedDevice:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassAssignedEntity = field(
-        default=None,
+    class_code: RoleClassAssignedEntity = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

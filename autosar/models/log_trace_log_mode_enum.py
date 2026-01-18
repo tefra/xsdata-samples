@@ -7,7 +7,7 @@ from .log_trace_log_mode_enum_simple import LogTraceLogModeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LogTraceLogModeEnum:
     """
     This enum defines the possible destinations of a log&amp;trace message.
@@ -28,11 +28,10 @@ class LogTraceLogModeEnum:
     class Meta:
         name = "LOG-TRACE-LOG-MODE-ENUM"
 
-    value: None | LogTraceLogModeEnumSimple = field(
-        default=None,
+    value: LogTraceLogModeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

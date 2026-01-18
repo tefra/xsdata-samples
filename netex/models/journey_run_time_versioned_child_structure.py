@@ -12,7 +12,7 @@ from .timing_link_ref import TimingLinkRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyRunTimeVersionedChildStructure(
     JourneyTimingVersionedChildStructure
 ):
@@ -27,12 +27,11 @@ class JourneyRunTimeVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    run_time: None | XmlDuration = field(
-        default=None,
+    run_time: XmlDuration = field(
         metadata={
             "name": "RunTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

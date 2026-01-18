@@ -9,7 +9,7 @@ from .eth_global_time_message_format_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthGlobalTimeMessageFormatEnum:
     """
     Specifies which message formats are available to for the Ethernet time
@@ -31,11 +31,10 @@ class EthGlobalTimeMessageFormatEnum:
     class Meta:
         name = "ETH-GLOBAL-TIME-MESSAGE-FORMAT-ENUM"
 
-    value: None | EthGlobalTimeMessageFormatEnumSimple = field(
-        default=None,
+    value: EthGlobalTimeMessageFormatEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

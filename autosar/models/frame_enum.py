@@ -7,7 +7,7 @@ from .frame_enum_simple import FrameEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FrameEnum:
     """
     This enumerator specifies the policy, where to place a frame border
@@ -29,11 +29,10 @@ class FrameEnum:
     class Meta:
         name = "FRAME-ENUM"
 
-    value: None | FrameEnumSimple = field(
-        default=None,
+    value: FrameEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

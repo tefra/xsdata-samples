@@ -18,7 +18,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.organization_sequence impor
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Organization:
     """
     The name of an organization (as opposed to a person) that contributed
@@ -42,19 +42,17 @@ class Organization:
             "white_space": "collapse",
         },
     )
-    sequence: None | OrganizationSequence = field(
-        default=None,
+    sequence: OrganizationSequence = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    contributor_role: None | OrganizationContributorRole = field(
-        default=None,
+    contributor_role: OrganizationContributorRole = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     name_style: None | OrganizationNameStyle = field(
         default=None,

@@ -9,7 +9,7 @@ from travelport.models.type_key_based_reference_2 import TypeKeyBasedReference2
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceData2:
     """
     Parameters

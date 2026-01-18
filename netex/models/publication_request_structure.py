@@ -18,16 +18,15 @@ from .participant_ref import ParticipantRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PublicationRequestStructure:
-    request_timestamp: None | XmlDateTime = field(
-        default=None,
+    request_timestamp: XmlDateTime = field(
         metadata={
             "name": "RequestTimestamp",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     participant_ref: None | ParticipantRef = field(
         default=None,
@@ -77,7 +76,7 @@ class PublicationRequestStructure:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Topics:
         network_frame_topic: Iterable[NetworkFrameTopicStructure] = field(
             default_factory=list,

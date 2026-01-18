@@ -12,7 +12,7 @@ from .uic_operating_period_ref import UicOperatingPeriodRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OperatingPeriodsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operatingPeriods_RelStructure"

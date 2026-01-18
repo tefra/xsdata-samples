@@ -10,7 +10,7 @@ from .check_constraint_ref import CheckConstraintRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CheckConstraintThroughputVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "CheckConstraintThroughput_VersionStructure"

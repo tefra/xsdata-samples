@@ -7,7 +7,7 @@ from .class_of_use_value_structure import ClassOfUseValueStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClassOfUse(ClassOfUseValueStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

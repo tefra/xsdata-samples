@@ -7,7 +7,7 @@ from .timing_point_version_structure import TimingPointVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReliefPointAbstract(TimingPointVersionStructure):
     class Meta:
         name = "ReliefPoint_"

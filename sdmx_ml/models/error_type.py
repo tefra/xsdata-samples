@@ -7,7 +7,7 @@ from sdmx_ml.models.coded_status_message_type import CodedStatusMessageType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ErrorType:
     """
     ErrorType describes the structure of an error response.

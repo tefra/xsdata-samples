@@ -10,7 +10,7 @@ from .time_unit_prices_rel_structure import TimeUnitPricesRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeUnitVersionStructure(FareUnitVersionStructure):
     class Meta:
         name = "TimeUnit_VersionStructure"

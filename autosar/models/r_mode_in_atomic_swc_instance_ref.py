@@ -14,7 +14,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RModeInAtomicSwcInstanceRef:
     """
     :ivar context_port_ref:
@@ -82,35 +82,32 @@ class RModeInAtomicSwcInstanceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextPortRef(Ref):
-        dest: None | AbstractRequiredPortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: AbstractRequiredPortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextModeDeclarationGroupPrototypeRef(Ref):
-        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetModeDeclarationRef(Ref):
-        dest: None | ModeDeclarationSubtypesEnum = field(
-            default=None,
+        dest: ModeDeclarationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

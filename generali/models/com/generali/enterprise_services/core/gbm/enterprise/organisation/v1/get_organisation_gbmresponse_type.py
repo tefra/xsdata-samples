@@ -12,7 +12,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organi
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbm/enterprise/organisation/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GetOrganisationGbmresponseType(BaseGbmheaderType):
     """
     <description xmlns="">The definition of the response message that
@@ -25,12 +25,11 @@ class GetOrganisationGbmresponseType(BaseGbmheaderType):
     class Meta:
         name = "GetOrganisationGBMResponseType"
 
-    organisation_gbo: None | OrganisationGbotype = field(
-        default=None,
+    organisation_gbo: OrganisationGbotype = field(
         metadata={
             "name": "OrganisationGBO",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/organisation/v1",
             "required": True,
-        },
+        }
     )

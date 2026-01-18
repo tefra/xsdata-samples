@@ -20,7 +20,7 @@ from .verbatim_string import VerbatimString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BinaryManifestMetaDataField:
     """
     This meta-class provides the ability to define a meta-data field for
@@ -91,14 +91,13 @@ class BinaryManifestMetaDataField:
     class Meta:
         name = "BINARY-MANIFEST-META-DATA-FIELD"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | BinaryManifestMetaDataField.ShortNameFragments
@@ -213,7 +212,7 @@ class BinaryManifestMetaDataField:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -224,7 +223,7 @@ class BinaryManifestMetaDataField:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

@@ -10,7 +10,7 @@ from travelport.models.type_structured_address_3 import TypeStructuredAddress3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypePaymentCard3:
     """
     Container for all credit and debit card information.

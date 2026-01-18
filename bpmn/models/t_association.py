@@ -9,26 +9,24 @@ from .t_association_direction import TAssociationDirection
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TAssociation(TArtifact):
     class Meta:
         name = "tAssociation"
 
-    source_ref: None | QName = field(
-        default=None,
+    source_ref: QName = field(
         metadata={
             "name": "sourceRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    target_ref: None | QName = field(
-        default=None,
+    target_ref: QName = field(
         metadata={
             "name": "targetRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     association_direction: TAssociationDirection = field(
         default=TAssociationDirection.NONE,

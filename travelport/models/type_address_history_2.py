@@ -9,7 +9,7 @@ from travelport.models.type_key_tagged_element_2 import TypeKeyTaggedElement2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeAddressHistory2(TypeKeyTaggedElement2):
     """
     Profile Address.

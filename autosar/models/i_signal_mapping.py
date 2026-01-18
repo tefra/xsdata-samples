@@ -12,7 +12,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ISignalMapping:
     """
     Arranges those signals (or SignalGroups) that are transferred by the
@@ -93,24 +93,22 @@ class ISignalMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SourceSignalRef(Ref):
-        dest: None | ISignalTriggeringSubtypesEnum = field(
-            default=None,
+        dest: ISignalTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetSignalRef(Ref):
-        dest: None | ISignalTriggeringSubtypesEnum = field(
-            default=None,
+        dest: ISignalTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

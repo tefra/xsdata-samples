@@ -8,7 +8,7 @@ from travelport.models.type_structured_address_1 import TypeStructuredAddress1
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CollectionAddress(TypeStructuredAddress1):
     """
     An address from which a rental car should be picked up at the end of a

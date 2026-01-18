@@ -29,7 +29,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class J1939NmNode:
     """
     J1939 specific NM Node attributes.
@@ -111,14 +111,13 @@ class J1939NmNode:
     class Meta:
         name = "J-1939-NM-NODE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | J1939NmNode.ShortNameFragments = field(
         default=None,
@@ -287,7 +286,7 @@ class J1939NmNode:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -298,7 +297,7 @@ class J1939NmNode:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -309,40 +308,37 @@ class J1939NmNode:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ControllerRef(Ref):
-        dest: None | CommunicationControllerSubtypesEnum = field(
-            default=None,
+        dest: CommunicationControllerSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MachineRef(Ref):
-        dest: None | MachineDesignSubtypesEnum = field(
-            default=None,
+        dest: MachineDesignSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NmIfEcuRef(Ref):
-        dest: None | NmEcuSubtypesEnum = field(
-            default=None,
+        dest: NmEcuSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RxNmPduRefs:
         rx_nm_pdu_ref: list[J1939NmNode.RxNmPduRefs.RxNmPduRef] = field(
             default_factory=list,
@@ -353,18 +349,17 @@ class J1939NmNode:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RxNmPduRef(Ref):
-            dest: None | NmPduSubtypesEnum = field(
-                default=None,
+            dest: NmPduSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TxNmPduRefs:
         tx_nm_pdu_ref: list[J1939NmNode.TxNmPduRefs.TxNmPduRef] = field(
             default_factory=list,
@@ -375,13 +370,12 @@ class J1939NmNode:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TxNmPduRef(Ref):
-            dest: None | NmPduSubtypesEnum = field(
-                default=None,
+            dest: NmPduSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

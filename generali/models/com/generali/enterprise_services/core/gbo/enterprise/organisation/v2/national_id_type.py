@@ -9,23 +9,21 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.core_types
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NationalIdType:
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
             "required": True,
-        },
+        }
     )
-    type_value: None | CodeType = field(
-        default=None,
+    type_value: CodeType = field(
         metadata={
             "name": "Type",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
             "required": True,
-        },
+        }
     )

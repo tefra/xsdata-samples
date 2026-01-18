@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlPeriod
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MiscFormOfPaymentHistory1:
     """
     Miscellaneous Form of Payments.

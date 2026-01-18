@@ -8,7 +8,7 @@ from travelport.models.tax_calc_info import TaxCalcInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CalculateTaxReq(BaseReq1):
     """
     Request to calculate US taxes based on a series of segments.

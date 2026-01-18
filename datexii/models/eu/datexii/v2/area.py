@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.tpeg_area_location import TpegAreaLocation
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Area(Location):
     """
     A geographic or geometric defined area which may be qualified by height

@@ -7,25 +7,23 @@ from datexii.models.eu.datexii.v2.vms_text import VmsText
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TextPage:
     class Meta:
         name = "_TextPage"
 
-    vms_text: None | VmsText = field(
-        default=None,
+    vms_text: VmsText = field(
         metadata={
             "name": "vmsText",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    page_number: None | int = field(
-        default=None,
+    page_number: int = field(
         metadata={
             "name": "pageNumber",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

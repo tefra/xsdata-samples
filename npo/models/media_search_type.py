@@ -22,7 +22,7 @@ from npo.models.title_search_type import TitleSearchType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MediaSearchType:
     """
     Limits the search result to media with certain properties.

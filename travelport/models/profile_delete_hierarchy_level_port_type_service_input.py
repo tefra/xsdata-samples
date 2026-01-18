@@ -9,29 +9,25 @@ from travelport.models.profile_delete_hierarchy_level_req import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileDeleteHierarchyLevelPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | ProfileDeleteHierarchyLevelPortTypeServiceInput.Body = field(
-        default=None,
+    body: ProfileDeleteHierarchyLevelPortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        profile_delete_hierarchy_level_req: (
-            None | ProfileDeleteHierarchyLevelReq
-        ) = field(
-            default=None,
+        profile_delete_hierarchy_level_req: ProfileDeleteHierarchyLevelReq = field(
             metadata={
                 "name": "ProfileDeleteHierarchyLevelReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-            },
+            }
         )

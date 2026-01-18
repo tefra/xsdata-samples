@@ -7,7 +7,7 @@ from .search_intention_enum import SearchIntentionEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RPortPrototypeProps:
     """
     PortPrototypeProps for a RPort.

@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CpSoftwareClusterRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -66,13 +66,12 @@ class CpSoftwareClusterRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CpSoftwareClusterRef(Ref):
-        dest: None | CpSoftwareClusterSubtypesEnum = field(
-            default=None,
+        dest: CpSoftwareClusterSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -7,7 +7,7 @@ from travelport.models.base_req_5 import BaseReq5
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileRetrieveHierarchyReq(BaseReq5):
     """
     Request to retrieve the superset of profile levels within an

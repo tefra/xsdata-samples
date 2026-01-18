@@ -7,7 +7,7 @@ from .data_exchange_point_kind_simple import DataExchangePointKindSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataExchangePointKind:
     """
     Specifies the kind of a DataExchangePoint.
@@ -28,11 +28,10 @@ class DataExchangePointKind:
     class Meta:
         name = "DATA-EXCHANGE-POINT-KIND"
 
-    value: None | DataExchangePointKindSimple = field(
-        default=None,
+    value: DataExchangePointKindSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -9,7 +9,7 @@ from .customer_purchase_package_element import CustomerPurchasePackageElement
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerPurchasePackageElementsRelStructure(
     ContainmentAggregationStructure
 ):

@@ -15,7 +15,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientServerOperationBlueprintMapping:
     """
     This class describes a specific mapping between a ClientServerOperation
@@ -97,24 +97,22 @@ class ClientServerOperationBlueprintMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BswModuleEntryRef(Ref):
-        dest: None | BswModuleEntrySubtypesEnum = field(
-            default=None,
+        dest: BswModuleEntrySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClientServerOperationRef(Ref):
-        dest: None | ClientServerOperationSubtypesEnum = field(
-            default=None,
+        dest: ClientServerOperationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

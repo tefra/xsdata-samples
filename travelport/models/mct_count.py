@@ -7,7 +7,7 @@ from travelport.models.type_mct_connection import TypeMctConnection
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MctCount:
     """
     The count of MCT exceptions for the given search criteria.
@@ -16,13 +16,12 @@ class MctCount:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    connection: None | TypeMctConnection = field(
-        default=None,
+    connection: TypeMctConnection = field(
         metadata={
             "name": "Connection",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     carrier: None | str = field(
         default=None,
@@ -32,11 +31,10 @@ class MctCount:
             "length": 2,
         },
     )
-    count: None | int = field(
-        default=None,
+    count: int = field(
         metadata={
             "name": "Count",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

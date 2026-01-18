@@ -8,7 +8,7 @@ from travelport.models.type_profile_type_2 import TypeProfileType2
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SingleProfileMigrationRsp1(BaseRsp2):
     """
     Response of migration process of a single Account or Traveler profile

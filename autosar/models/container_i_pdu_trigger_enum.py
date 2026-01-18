@@ -7,7 +7,7 @@ from .container_i_pdu_trigger_enum_simple import ContainerIPduTriggerEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContainerIPduTriggerEnum:
     """
     Defines when the transmission of the ContainerIPdu shall be requested.
@@ -28,11 +28,10 @@ class ContainerIPduTriggerEnum:
     class Meta:
         name = "CONTAINER-I-PDU-TRIGGER-ENUM"
 
-    value: None | ContainerIPduTriggerEnumSimple = field(
-        default=None,
+    value: ContainerIPduTriggerEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

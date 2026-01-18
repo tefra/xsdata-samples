@@ -8,7 +8,7 @@ from travelport.models.type_policy_3 import TypePolicy3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PolicyInformation4:
     """
     Policy Information required for File Finishing.
@@ -37,13 +37,12 @@ class PolicyInformation4:
             "type": "Element",
         },
     )
-    type_value: None | TypePolicy3 = field(
-        default=None,
+    type_value: TypePolicy3 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     name: None | object = field(
         default=None,
@@ -67,7 +66,7 @@ class PolicyInformation4:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReasonCode:
         """
         Parameters

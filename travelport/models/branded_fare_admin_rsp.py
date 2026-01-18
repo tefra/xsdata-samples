@@ -8,7 +8,7 @@ from travelport.models.fare_family import FareFamily
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BrandedFareAdminRsp(BaseRsp1):
     """
     Response to BrandedFareAdminReq containing the FareFamily being added,

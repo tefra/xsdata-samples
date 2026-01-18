@@ -11,7 +11,7 @@ from travelport.models.type_location_1 import TypeLocation1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneralTimeTable:
     """
     Parameters
@@ -40,21 +40,19 @@ class GeneralTimeTable:
             "type": "Element",
         },
     )
-    flight_origin: None | TypeLocation1 = field(
-        default=None,
+    flight_origin: TypeLocation1 = field(
         metadata={
             "name": "FlightOrigin",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    flight_destination: None | TypeLocation1 = field(
-        default=None,
+    flight_destination: TypeLocation1 = field(
         metadata={
             "name": "FlightDestination",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     carrier_list: None | CarrierList = field(
         default=None,
@@ -63,13 +61,12 @@ class GeneralTimeTable:
             "type": "Element",
         },
     )
-    start_date: None | str = field(
-        default=None,
+    start_date: str = field(
         metadata={
             "name": "StartDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     end_date: None | str = field(
         default=None,

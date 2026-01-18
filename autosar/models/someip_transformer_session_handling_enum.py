@@ -9,7 +9,7 @@ from .someip_transformer_session_handling_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipTransformerSessionHandlingEnum:
     """
     Enables or disable session handling for SOME/IP transformer.
@@ -30,11 +30,10 @@ class SomeipTransformerSessionHandlingEnum:
     class Meta:
         name = "SOMEIP-TRANSFORMER-SESSION-HANDLING-ENUM"
 
-    value: None | SomeipTransformerSessionHandlingEnumSimple = field(
-        default=None,
+    value: SomeipTransformerSessionHandlingEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

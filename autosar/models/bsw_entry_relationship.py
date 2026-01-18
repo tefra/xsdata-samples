@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswEntryRelationship:
     """
     Describes a relationship between two BswModuleEntrys and the type of
@@ -77,24 +77,22 @@ class BswEntryRelationship:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FromRef(Ref):
-        dest: None | BswModuleEntrySubtypesEnum = field(
-            default=None,
+        dest: BswModuleEntrySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ToRef(Ref):
-        dest: None | BswModuleEntrySubtypesEnum = field(
-            default=None,
+        dest: BswModuleEntrySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

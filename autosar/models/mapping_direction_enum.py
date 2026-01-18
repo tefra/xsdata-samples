@@ -7,7 +7,7 @@ from .mapping_direction_enum_simple import MappingDirectionEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MappingDirectionEnum:
     """
     Specifies the conversion direction for which the mapping is applicable.
@@ -28,11 +28,10 @@ class MappingDirectionEnum:
     class Meta:
         name = "MAPPING-DIRECTION-ENUM"
 
-    value: None | MappingDirectionEnumSimple = field(
-        default=None,
+    value: MappingDirectionEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

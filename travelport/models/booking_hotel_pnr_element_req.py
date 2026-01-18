@@ -10,7 +10,7 @@ from travelport.models.update_hotel_pnr_element import UpdateHotelPnrElement
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingHotelPnrElementReq(BookingBaseReq):
     """
     Adds, Modifies hotel elements like Guarantee, BookingSource, etc.

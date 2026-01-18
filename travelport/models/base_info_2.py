@@ -8,7 +8,7 @@ from travelport.models.branch_base_info_2 import BranchBaseInfo2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseInfo2:
     """
     Parameters

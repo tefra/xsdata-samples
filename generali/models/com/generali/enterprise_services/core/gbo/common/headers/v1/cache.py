@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Cache(CacheType):
     """
     <description xmlns="">Mandatory cache parameter support by all services

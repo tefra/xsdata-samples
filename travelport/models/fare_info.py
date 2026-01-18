@@ -24,7 +24,7 @@ from travelport.models.type_private_fare import TypePrivateFare
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareInfo:
     """
     Information about this fare component.
@@ -247,59 +247,53 @@ class FareInfo:
             "type": "Element",
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    fare_basis: None | str = field(
-        default=None,
+    fare_basis: str = field(
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    passenger_type_code: None | str = field(
-        default=None,
+    passenger_type_code: str = field(
         metadata={
             "name": "PassengerTypeCode",
             "type": "Attribute",
             "required": True,
             "min_length": 3,
             "max_length": 5,
-        },
+        }
     )
-    origin: None | str = field(
-        default=None,
+    origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    destination: None | str = field(
-        default=None,
+    destination: str = field(
         metadata={
             "name": "Destination",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    effective_date: None | str = field(
-        default=None,
+    effective_date: str = field(
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     travel_date: None | XmlDate = field(
         default=None,

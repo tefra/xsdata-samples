@@ -22,7 +22,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AliasNameSet:
     """
     This meta-class represents a set of AliasNames.
@@ -102,14 +102,13 @@ class AliasNameSet:
     class Meta:
         name = "ALIAS-NAME-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | AliasNameSet.ShortNameFragments = field(
         default=None,
@@ -222,7 +221,7 @@ class AliasNameSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -233,7 +232,7 @@ class AliasNameSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -244,7 +243,7 @@ class AliasNameSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -273,7 +272,7 @@ class AliasNameSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AliasNames:
         alias_name_assignment: list[AliasNameAssignment] = field(
             default_factory=list,

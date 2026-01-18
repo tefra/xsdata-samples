@@ -21,7 +21,7 @@ from datexii.models.eu.datexii.v2.reservation_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingSite(ParkingRecord):
     """
     A record containing static details of a parking site.

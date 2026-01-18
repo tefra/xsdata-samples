@@ -13,7 +13,7 @@ from .variable_data_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NvDataPortAnnotation:
     """
     Annotation to a port regarding a certain VariableDataPrototype.
@@ -88,13 +88,12 @@ class NvDataPortAnnotation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VariableRef(Ref):
-        dest: None | VariableDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: VariableDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

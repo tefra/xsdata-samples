@@ -7,7 +7,7 @@ from travelport.models.name_2 import Name2
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingTravelerInformation2:
     """
     Booking Traveler information tied to invoice.
@@ -23,13 +23,12 @@ class BookingTravelerInformation2:
         name = "BookingTravelerInformation"
         namespace = "http://www.travelport.com/schema/common_v32_0"
 
-    name: None | Name2 = field(
-        default=None,
+    name: Name2 = field(
         metadata={
             "name": "Name",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     booking_traveler_ref: None | str = field(
         default=None,

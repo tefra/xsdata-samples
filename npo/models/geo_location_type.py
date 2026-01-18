@@ -8,18 +8,17 @@ from npo.models.gtaa_status_type import GtaaStatusType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeoLocationType:
     class Meta:
         name = "geoLocationType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "required": True,
-        },
+        }
     )
     scope_note: list[str] = field(
         default_factory=list,
@@ -29,12 +28,11 @@ class GeoLocationType:
             "namespace": "urn:vpro:media:2009",
         },
     )
-    role: None | GeoRoleType = field(
-        default=None,
+    role: GeoRoleType = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     gtaa_uri: None | str = field(
         default=None,

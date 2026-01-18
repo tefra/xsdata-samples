@@ -7,7 +7,7 @@ from .t_group import TGroup
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Group(TGroup):
     class Meta:
         name = "group"

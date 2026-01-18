@@ -20,7 +20,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleType(RiskElementType):
     manufactured_date: None | DateType = field(
         default=None,

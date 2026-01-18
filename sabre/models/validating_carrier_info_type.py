@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidatingCarrierInfoType:
     """
     Attributes:
@@ -49,7 +49,7 @@ class ValidatingCarrierInfoType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Default:
         country: list[ValidatingCarrierInfoType.Default.Country] = field(
             default_factory=list,
@@ -68,19 +68,18 @@ class ValidatingCarrierInfoType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Country:
-            code: None | str = field(
-                default=None,
+            code: str = field(
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[a-zA-Z]{2}",
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Alternate:
         country: list[ValidatingCarrierInfoType.Alternate.Country] = field(
             default_factory=list,
@@ -99,14 +98,13 @@ class ValidatingCarrierInfoType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Country:
-            code: None | str = field(
-                default=None,
+            code: str = field(
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[a-zA-Z]{2}",
-                },
+                }
             )

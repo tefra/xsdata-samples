@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwVariableRefProxy:
     """
     Proxy class for several kinds of references to a variable.
@@ -72,13 +72,12 @@ class SwVariableRefProxy:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McDataInstanceVarRef(Ref):
-        dest: None | McDataInstanceSubtypesEnum = field(
-            default=None,
+        dest: McDataInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

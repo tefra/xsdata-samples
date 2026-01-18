@@ -13,7 +13,7 @@ from travelport.models.ticket_number_1 import TicketNumber1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McoSearchReq(BaseReq1):
     """
     Search for MCOs by certain criteria and return a list.

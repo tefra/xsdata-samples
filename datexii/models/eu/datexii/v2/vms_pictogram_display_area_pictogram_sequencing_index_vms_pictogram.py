@@ -7,25 +7,23 @@ from datexii.models.eu.datexii.v2.vms_pictogram import VmsPictogram
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram:
     class Meta:
         name = "_VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram"
 
-    vms_pictogram: None | VmsPictogram = field(
-        default=None,
+    vms_pictogram: VmsPictogram = field(
         metadata={
             "name": "vmsPictogram",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    pictogram_sequencing_index: None | int = field(
-        default=None,
+    pictogram_sequencing_index: int = field(
         metadata={
             "name": "pictogramSequencingIndex",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

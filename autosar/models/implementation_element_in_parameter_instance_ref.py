@@ -13,7 +13,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ImplementationElementInParameterInstanceRef:
     """
     Describes a reference to a particular ImplementationDataTypeElement
@@ -84,24 +84,22 @@ class ImplementationElementInParameterInstanceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextRef(Ref):
-        dest: None | ParameterDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ParameterDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetRef(Ref):
-        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
-            default=None,
+        dest: ImplementationDataTypeElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

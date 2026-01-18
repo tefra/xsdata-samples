@@ -10,7 +10,7 @@ from .path_junction_ref import PathJunctionRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PathJunctionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pathJunctions_RelStructure"

@@ -12,20 +12,19 @@ from datexii.models.eu.datexii.v2.payload_publication import PayloadPublication
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MeasurementSiteTablePublication(PayloadPublication):
     """
     A publication containing one or more Measurment Site Tables.
     """
 
-    header_information: None | HeaderInformation = field(
-        default=None,
+    header_information: HeaderInformation = field(
         metadata={
             "name": "headerInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     measurement_site_table: list[MeasurementSiteTable] = field(
         default_factory=list,

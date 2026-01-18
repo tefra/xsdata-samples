@@ -25,7 +25,7 @@ from .swc_service_dependency_in_executable_instance_ref import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticServiceGenericMapping:
     """
     This meta-class represents the ability to implement a generic generic
@@ -98,14 +98,13 @@ class DiagnosticServiceGenericMapping:
     class Meta:
         name = "DIAGNOSTIC-SERVICE-GENERIC-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticServiceGenericMapping.ShortNameFragments
@@ -224,7 +223,7 @@ class DiagnosticServiceGenericMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -235,7 +234,7 @@ class DiagnosticServiceGenericMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -246,24 +245,22 @@ class DiagnosticServiceGenericMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticServiceInstanceRef(Ref):
-        dest: None | DiagnosticServiceInstanceSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticServiceInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProcessRef(Ref):
-        dest: None | ProcessDesignSubtypesEnum = field(
-            default=None,
+        dest: ProcessDesignSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

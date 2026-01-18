@@ -9,7 +9,7 @@ from .notice import Notice
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NoticesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "noticesInFrame_RelStructure"

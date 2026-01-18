@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IpSecConfig:
     """
     IPsec is a protocol that is designed to provide "end-to-end"
@@ -67,18 +67,17 @@ class IpSecConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IpSecConfigPropsRef(Ref):
-        dest: None | IpSecConfigPropsSubtypesEnum = field(
-            default=None,
+        dest: IpSecConfigPropsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IpSecRules:
         ip_sec_rule: list[IpSecRule] = field(
             default_factory=list,

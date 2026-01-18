@@ -9,7 +9,7 @@ from .general_group_of_entities_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneralGroupOfEntities(GeneralGroupOfEntitiesVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

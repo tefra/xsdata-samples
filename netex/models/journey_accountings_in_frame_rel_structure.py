@@ -9,7 +9,7 @@ from .journey_accounting import JourneyAccounting
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyAccountingsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeyAccountingsInFrame_RelStructure"

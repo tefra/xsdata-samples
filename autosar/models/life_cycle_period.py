@@ -8,7 +8,7 @@ from .revision_label_string import RevisionLabelString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LifeCyclePeriod:
     """
     This meta class represents the ability to specify a point of time

@@ -7,7 +7,7 @@ from .request_type_enum_simple import RequestTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestTypeEnum:
     """
     This enumeration defines the DiagnosticMessage request types.
@@ -28,11 +28,10 @@ class RequestTypeEnum:
     class Meta:
         name = "REQUEST-TYPE-ENUM"
 
-    value: None | RequestTypeEnumSimple = field(
-        default=None,
+    value: RequestTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

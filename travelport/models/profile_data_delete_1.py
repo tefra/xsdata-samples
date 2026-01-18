@@ -9,7 +9,7 @@ from travelport.models.type_profile_data_element_type_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileDataDelete1:
     """
     Delete one element of given type identified by its key.
@@ -26,19 +26,17 @@ class ProfileDataDelete1:
         name = "ProfileDataDelete"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    element: None | TypeProfileDataElementType1 = field(
-        default=None,
+    element: TypeProfileDataElementType1 = field(
         metadata={
             "name": "Element",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

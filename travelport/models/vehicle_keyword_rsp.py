@@ -8,7 +8,7 @@ from travelport.models.keyword_1 import Keyword1
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleKeywordRsp(BaseRsp1):
     """
     Used to respond with a list of keywords or specific keyword

@@ -9,7 +9,7 @@ from .path_link import PathLink
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PathLinksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pathLinksInFrame_RelStructure"

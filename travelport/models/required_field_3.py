@@ -7,7 +7,7 @@ from travelport.models.required_field_name_3 import RequiredFieldName3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequiredField3:
     """
     Parameters
@@ -20,11 +20,10 @@ class RequiredField3:
         name = "RequiredField"
         namespace = "http://www.travelport.com/schema/common_v33_0"
 
-    name: None | RequiredFieldName3 = field(
-        default=None,
+    name: RequiredFieldName3 = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

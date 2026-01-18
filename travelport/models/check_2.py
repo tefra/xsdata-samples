@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Check2:
     """
     Check Form of Payment.

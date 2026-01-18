@@ -7,24 +7,22 @@ from datexii.models.eu.datexii.v2.measured_value import MeasuredValue
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SiteMeasurementsIndexMeasuredValue:
     class Meta:
         name = "_SiteMeasurementsIndexMeasuredValue"
 
-    measured_value: None | MeasuredValue = field(
-        default=None,
+    measured_value: MeasuredValue = field(
         metadata={
             "name": "measuredValue",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    index: None | int = field(
-        default=None,
+    index: int = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

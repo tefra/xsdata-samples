@@ -14,7 +14,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessCount:
     """
     This meta-class provides one count value for a AbstractAccessPoint.
@@ -80,13 +80,12 @@ class AccessCount:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessPointRef(Ref):
-        dest: None | AbstractAccessPointSubtypesEnum = field(
-            default=None,
+        dest: AbstractAccessPointSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

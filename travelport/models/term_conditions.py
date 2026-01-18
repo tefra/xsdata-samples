@@ -7,7 +7,7 @@ from travelport.models.language_option import LanguageOption
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TermConditions:
     """
     The terms and conditions to be included in Fax details.
@@ -30,11 +30,10 @@ class TermConditions:
             "max_occurs": 2,
         },
     )
-    include_term_conditions: None | bool = field(
-        default=None,
+    include_term_conditions: bool = field(
         metadata={
             "name": "IncludeTermConditions",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

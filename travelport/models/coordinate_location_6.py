@@ -7,7 +7,7 @@ from travelport.models.location_6 import Location6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoordinateLocation6(Location6):
     """
     Specific lat/long location, usually associated with a Distance.
@@ -17,17 +17,15 @@ class CoordinateLocation6(Location6):
         name = "CoordinateLocation"
         namespace = "http://www.travelport.com/schema/common_v38_0"
 
-    latitude: None | float = field(
-        default=None,
+    latitude: float = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    longitude: None | float = field(
-        default=None,
+    longitude: float = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

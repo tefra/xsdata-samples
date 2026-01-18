@@ -16,7 +16,7 @@ from .type_of_point_ref import TypeOfPointRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "ScheduledStopPoint_DerivedViewStructure"

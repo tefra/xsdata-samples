@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MemorySectionLocation:
     """
     Specifies in which hardware ProvidedMemorySegment the
@@ -70,24 +70,22 @@ class MemorySectionLocation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvidedMemoryRef(Ref):
-        dest: None | HwElementSubtypesEnum = field(
-            default=None,
+        dest: HwElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SoftwareMemorySectionRef(Ref):
-        dest: None | MemorySectionSubtypesEnum = field(
-            default=None,
+        dest: MemorySectionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

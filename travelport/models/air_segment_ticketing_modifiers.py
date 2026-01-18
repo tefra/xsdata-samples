@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirSegmentTicketingModifiers:
     """
     Specifies modifiers that a particular segment should be priced with.
@@ -30,13 +30,12 @@ class AirSegmentTicketingModifiers:
             "type": "Attribute",
         },
     )
-    brand_tier: None | str = field(
-        default=None,
+    brand_tier: str = field(
         metadata={
             "name": "BrandTier",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 10,
-        },
+        }
     )

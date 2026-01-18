@@ -8,7 +8,7 @@ from travelport.models.type_hotel_details import TypeHotelDetails
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestedHotelDetails(TypeHotelDetails):
     """
     Parameters

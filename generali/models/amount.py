@@ -29,7 +29,7 @@ from generali.models.to_date_time import ToDateTime
 from generali.models.unit_code import UnitCode
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Amount:
     class Meta:
         name = "amount"
@@ -75,7 +75,7 @@ class Amount:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Code:
     class Meta:
         name = "code"
@@ -128,7 +128,7 @@ class Code:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataRef:
     class Meta:
         name = "data-ref"
@@ -154,7 +154,7 @@ class DataRef:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ErrorCode:
     class Meta:
         name = "error-code"
@@ -181,7 +181,7 @@ class ErrorCode:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FaultCause:
     class Meta:
         name = "fault-cause"
@@ -207,7 +207,7 @@ class FaultCause:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Metadata:
     class Meta:
         name = "metadata"
@@ -227,7 +227,7 @@ class Metadata:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Quantity:
     class Meta:
         name = "quantity"
@@ -273,7 +273,7 @@ class Quantity:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceParameters:
     class Meta:
         name = "reference-parameters"
@@ -293,7 +293,7 @@ class ReferenceParameters:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeCode:
     class Meta:
         name = "type-code"
@@ -346,7 +346,7 @@ class TypeCode:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Failure:
     class Meta:
         name = "failure"
@@ -379,7 +379,7 @@ class Failure:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Originator:
     class Meta:
         name = "originator"
@@ -418,7 +418,7 @@ class Originator:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Value:
     class Meta:
         name = "value"
@@ -511,7 +511,7 @@ class Value:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Failures:
     class Meta:
         name = "failures"
@@ -537,7 +537,7 @@ class Failures:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Values:
     class Meta:
         name = "values"
@@ -563,7 +563,7 @@ class Values:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Characteristic:
     class Meta:
         name = "characteristic"
@@ -616,7 +616,7 @@ class Characteristic:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Characteristics:
     class Meta:
         name = "characteristics"
@@ -642,7 +642,7 @@ class Characteristics:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Properties:
     class Meta:
         name = "properties"
@@ -988,83 +988,75 @@ class Properties:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Categories:
     class Meta:
         name = "categories"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    properties: None | Properties = field(
-        default=None,
+    properties: Properties = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CategoryCode:
     class Meta:
         name = "category-code"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    properties: None | Properties = field(
-        default=None,
+    properties: Properties = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreatedById:
     class Meta:
         name = "created-by-id"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    properties: None | Properties = field(
-        default=None,
+    properties: Properties = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     required: list[str] = field(
         default_factory=list,
@@ -1075,18 +1067,17 @@ class CreatedById:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Criteria:
     class Meta:
         name = "criteria"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     description: None | object = field(
         default=None,
@@ -1094,41 +1085,37 @@ class Criteria:
             "type": "Element",
         },
     )
-    properties: None | Properties = field(
-        default=None,
+    properties: Properties = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Id:
     class Meta:
         name = "id"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    properties: None | Properties = field(
-        default=None,
+    properties: Properties = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     required: list[str] = field(
         default_factory=list,
@@ -1139,83 +1126,75 @@ class Id:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Identification:
     class Meta:
         name = "identification"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    properties: None | Properties = field(
-        default=None,
+    properties: Properties = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ids:
     class Meta:
         name = "ids"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    properties: None | Properties = field(
-        default=None,
+    properties: Properties = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LastModifiedById:
     class Meta:
         name = "last-modified-by-id"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    properties: None | Properties = field(
-        default=None,
+    properties: Properties = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     required: list[str] = field(
         default_factory=list,
@@ -1226,54 +1205,49 @@ class LastModifiedById:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QueryExpression:
     class Meta:
         name = "query-expression"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    properties: None | Properties = field(
-        default=None,
+    properties: Properties = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StatusCode:
     class Meta:
         name = "status-code"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    properties: None | Properties = field(
-        default=None,
+    properties: Properties = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     required: list[str] = field(
         default_factory=list,
@@ -1284,83 +1258,75 @@ class StatusCode:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidityPeriod:
     class Meta:
         name = "validity-period"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    properties: None | Properties = field(
-        default=None,
+    properties: Properties = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValueExpression:
     class Meta:
         name = "value-expression"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    properties: None | Properties = field(
-        default=None,
+    properties: Properties = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VersionId:
     class Meta:
         name = "version-id"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    properties: None | Properties = field(
-        default=None,
+    properties: Properties = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     required: list[str] = field(
         default_factory=list,

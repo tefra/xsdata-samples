@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://xml.amadeus.com/FMPTBQ_15_3_1A"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareMasterPricerTravelBoardSearch:
     class Meta:
         name = "Fare_MasterPricerTravelBoardSearch"
@@ -180,7 +180,7 @@ class FareMasterPricerTravelBoardSearch:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NumberOfUnit:
         unit_number_detail: list[
             FareMasterPricerTravelBoardSearch.NumberOfUnit.UnitNumberDetail
@@ -194,28 +194,26 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UnitNumberDetail:
-            number_of_units: None | Decimal = field(
-                default=None,
+            number_of_units: Decimal = field(
                 metadata={
                     "name": "numberOfUnits",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
-            type_of_unit: None | str = field(
-                default=None,
+            type_of_unit: str = field(
                 metadata={
                     "name": "typeOfUnit",
                     "type": "Element",
                     "required": True,
                     "min_length": 1,
                     "max_length": 3,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GlobalOptions:
         selection_details: list[
             FareMasterPricerTravelBoardSearch.GlobalOptions.SelectionDetails
@@ -229,16 +227,15 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SelectionDetails:
-            option: None | str = field(
-                default=None,
+            option: str = field(
                 metadata={
                     "type": "Element",
                     "required": True,
                     "min_length": 1,
                     "max_length": 3,
-                },
+                }
             )
             option_information: None | str = field(
                 default=None,
@@ -250,7 +247,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PaxReference:
         ptc: list[str] = field(
             default_factory=list,
@@ -272,14 +269,13 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Traveller:
-            ref: None | Decimal = field(
-                default=None,
+            ref: Decimal = field(
                 metadata={
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             infant_indicator: None | str = field(
                 default=None,
@@ -291,7 +287,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CustomerRef:
         customer_references: list[
             FareMasterPricerTravelBoardSearch.CustomerRef.CustomerReferences
@@ -305,17 +301,16 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CustomerReferences:
-            reference_qualifier: None | str = field(
-                default=None,
+            reference_qualifier: str = field(
                 metadata={
                     "name": "referenceQualifier",
                     "type": "Element",
                     "required": True,
                     "min_length": 1,
                     "max_length": 3,
-                },
+                }
             )
             reference_number: None | str = field(
                 default=None,
@@ -345,18 +340,14 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FormOfPaymentByPassenger:
-        form_of_payment_details: (
-            None
-            | FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails
-        ) = field(
-            default=None,
+        form_of_payment_details: FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails = field(
             metadata={
                 "name": "formOfPaymentDetails",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         passenger_fee_reference: (
             None
@@ -369,7 +360,7 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FormOfPaymentDetails:
             form_of_payment_details: list[
                 FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails.FormOfPaymentDetailsInner
@@ -382,17 +373,16 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FormOfPaymentDetailsInner:
-                type_value: None | str = field(
-                    default=None,
+                type_value: str = field(
                     metadata={
                         "name": "type",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 3,
-                    },
+                    }
                 )
                 charged_amount: None | Decimal = field(
                     default=None,
@@ -411,7 +401,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PassengerFeeReference:
             passenger_fee_ref_type: None | str = field(
                 default=None,
@@ -440,7 +430,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class OtherCharacteristics:
                 passenger_fee_ref_qualif: None | str = field(
                     default=None,
@@ -452,7 +442,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SolutionFamily:
         value_qualifier: None | str = field(
             default=None,
@@ -507,7 +497,7 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareDetails:
             qualifier: None | str = field(
                 default=None,
@@ -541,7 +531,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareTypeGrouping:
             pricing_group: None | str = field(
                 default=None,
@@ -553,18 +543,14 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PassengerInfoGrp:
-        passenger_reference: (
-            None
-            | FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PassengerReference
-        ) = field(
-            default=None,
+        passenger_reference: FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PassengerReference = field(
             metadata={
                 "name": "passengerReference",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         psg_details_info: list[
             FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo
@@ -577,7 +563,7 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PassengerReference:
             segment_control_details: list[
                 FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PassengerReference.SegmentControlDetails
@@ -590,7 +576,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class SegmentControlDetails:
                 quantity: None | Decimal = field(
                     default=None,
@@ -599,18 +585,14 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PsgDetailsInfo:
-            discount_ptc: (
-                None
-                | FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.DiscountPtc
-            ) = field(
-                default=None,
+            discount_ptc: FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.DiscountPtc = field(
                 metadata={
                     "name": "discountPtc",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             flequent_flyer_details: (
                 None
@@ -623,7 +605,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class DiscountPtc:
                 value_qualifier: None | str = field(
                     default=None,
@@ -641,7 +623,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FlequentFlyerDetails:
                 frequent_traveller_details: list[
                     FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.FlequentFlyerDetails.FrequentTravellerDetails
@@ -655,7 +637,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FrequentTravellerDetails:
                     carrier: None | str = field(
                         default=None,
@@ -743,18 +725,14 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FareFamilies:
-        family_information: (
-            None
-            | FareMasterPricerTravelBoardSearch.FareFamilies.FamilyInformation
-        ) = field(
-            default=None,
+        family_information: FareMasterPricerTravelBoardSearch.FareFamilies.FamilyInformation = field(
             metadata={
                 "name": "familyInformation",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         family_criteria: (
             None
@@ -787,7 +765,7 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FamilyInformation:
             ref_number: None | Decimal = field(
                 default=None,
@@ -822,20 +800,19 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CommercialFamilyDetails:
-                commercial_family: None | str = field(
-                    default=None,
+                commercial_family: str = field(
                     metadata={
                         "name": "commercialFamily",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 10,
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FamilyCriteria:
             carrier_id: list[str] = field(
                 default_factory=list,
@@ -926,7 +903,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FareFamilyInfo:
                 fare_family_qual: list[str] = field(
                     default_factory=list,
@@ -940,7 +917,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FareProductDetail:
                 fare_basis: None | str = field(
                     default=None,
@@ -962,7 +939,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CorporateInfo:
                 corporate_number_identifier: None | str = field(
                     default=None,
@@ -983,29 +960,27 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CabinProduct:
-                cabin_designator: None | str = field(
-                    default=None,
+                cabin_designator: str = field(
                     metadata={
                         "name": "cabinDesignator",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 1,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class DateTimeDetails:
-                date: None | str = field(
-                    default=None,
+                date: str = field(
                     metadata={
                         "type": "Element",
                         "required": True,
                         "min_length": 6,
                         "max_length": 6,
-                    },
+                    }
                 )
                 other_date: None | Decimal = field(
                     default=None,
@@ -1015,16 +990,15 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class OtherCriteria:
-                name: None | str = field(
-                    default=None,
+                name: str = field(
                     metadata={
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 5,
-                    },
+                    }
                 )
                 value: list[str] = field(
                     default_factory=list,
@@ -1036,18 +1010,14 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareFamilySegment:
-            reference_info: (
-                None
-                | FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.ReferenceInfo
-            ) = field(
-                default=None,
+            reference_info: FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.ReferenceInfo = field(
                 metadata={
                     "name": "referenceInfo",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             family_criteria: (
                 None
@@ -1060,7 +1030,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ReferenceInfo:
                 referencing_detail: list[
                     FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.ReferenceInfo.ReferencingDetail
@@ -1073,7 +1043,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class ReferencingDetail:
                     ref_qualifier: None | str = field(
                         default=None,
@@ -1084,16 +1054,15 @@ class FareMasterPricerTravelBoardSearch:
                             "max_length": 3,
                         },
                     )
-                    ref_number: None | Decimal = field(
-                        default=None,
+                    ref_number: Decimal = field(
                         metadata={
                             "name": "refNumber",
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FamilyCriteria:
                 carrier_id: list[str] = field(
                     default_factory=list,
@@ -1184,7 +1153,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FareFamilyInfo:
                     fare_family_qual: list[str] = field(
                         default_factory=list,
@@ -1198,7 +1167,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FareProductDetail:
                     fare_basis: None | str = field(
                         default=None,
@@ -1220,7 +1189,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class CorporateInfo:
                     corporate_number_identifier: None | str = field(
                         default=None,
@@ -1241,29 +1210,27 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class CabinProduct:
-                    cabin_designator: None | str = field(
-                        default=None,
+                    cabin_designator: str = field(
                         metadata={
                             "name": "cabinDesignator",
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 1,
-                        },
+                        }
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class DateTimeDetails:
-                    date: None | str = field(
-                        default=None,
+                    date: str = field(
                         metadata={
                             "type": "Element",
                             "required": True,
                             "min_length": 6,
                             "max_length": 6,
-                        },
+                        }
                     )
                     other_date: None | Decimal = field(
                         default=None,
@@ -1273,16 +1240,15 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class OtherCriteria:
-                    name: None | str = field(
-                        default=None,
+                    name: str = field(
                         metadata={
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 5,
-                        },
+                        }
                     )
                     value: list[str] = field(
                         default_factory=list,
@@ -1294,18 +1260,14 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class OtherPossibleCriteria:
-            logical_link: (
-                None
-                | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink
-            ) = field(
-                default=None,
+            logical_link: FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink = field(
                 metadata={
                     "name": "logicalLink",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             family_criteria: (
                 None
@@ -1328,21 +1290,17 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class LogicalLink:
-                boolean_expression: (
-                    None
-                    | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink.BooleanExpression
-                ) = field(
-                    default=None,
+                boolean_expression: FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink.BooleanExpression = field(
                     metadata={
                         "name": "booleanExpression",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class BooleanExpression:
                     code_operator: None | str = field(
                         default=None,
@@ -1354,7 +1312,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FamilyCriteria:
                 carrier_id: list[str] = field(
                     default_factory=list,
@@ -1445,7 +1403,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FareFamilyInfo:
                     fare_family_qual: list[str] = field(
                         default_factory=list,
@@ -1459,7 +1417,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FareProductDetail:
                     fare_basis: None | str = field(
                         default=None,
@@ -1481,7 +1439,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class CorporateInfo:
                     corporate_number_identifier: None | str = field(
                         default=None,
@@ -1502,29 +1460,27 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class CabinProduct:
-                    cabin_designator: None | str = field(
-                        default=None,
+                    cabin_designator: str = field(
                         metadata={
                             "name": "cabinDesignator",
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 1,
-                        },
+                        }
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class DateTimeDetails:
-                    date: None | str = field(
-                        default=None,
+                    date: str = field(
                         metadata={
                             "type": "Element",
                             "required": True,
                             "min_length": 6,
                             "max_length": 6,
-                        },
+                        }
                     )
                     other_date: None | Decimal = field(
                         default=None,
@@ -1534,16 +1490,15 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class OtherCriteria:
-                    name: None | str = field(
-                        default=None,
+                    name: str = field(
                         metadata={
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 5,
-                        },
+                        }
                     )
                     value: list[str] = field(
                         default_factory=list,
@@ -1555,18 +1510,14 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FareFamilySegment:
-                reference_info: (
-                    None
-                    | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.ReferenceInfo
-                ) = field(
-                    default=None,
+                reference_info: FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.ReferenceInfo = field(
                     metadata={
                         "name": "referenceInfo",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 family_criteria: (
                     None
@@ -1579,7 +1530,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class ReferenceInfo:
                     referencing_detail: list[
                         FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.ReferenceInfo.ReferencingDetail
@@ -1592,7 +1543,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class ReferencingDetail:
                         ref_qualifier: None | str = field(
                             default=None,
@@ -1603,16 +1554,15 @@ class FareMasterPricerTravelBoardSearch:
                                 "max_length": 3,
                             },
                         )
-                        ref_number: None | Decimal = field(
-                            default=None,
+                        ref_number: Decimal = field(
                             metadata={
                                 "name": "refNumber",
                                 "type": "Element",
                                 "required": True,
-                            },
+                            }
                         )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FamilyCriteria:
                     carrier_id: list[str] = field(
                         default_factory=list,
@@ -1703,7 +1653,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class FareFamilyInfo:
                         fare_family_qual: list[str] = field(
                             default_factory=list,
@@ -1717,7 +1667,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class FareProductDetail:
                         fare_basis: None | str = field(
                             default=None,
@@ -1739,7 +1689,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class CorporateInfo:
                         corporate_number_identifier: None | str = field(
                             default=None,
@@ -1760,29 +1710,27 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class CabinProduct:
-                        cabin_designator: None | str = field(
-                            default=None,
+                        cabin_designator: str = field(
                             metadata={
                                 "name": "cabinDesignator",
                                 "type": "Element",
                                 "required": True,
                                 "min_length": 1,
                                 "max_length": 1,
-                            },
+                            }
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class DateTimeDetails:
-                        date: None | str = field(
-                            default=None,
+                        date: str = field(
                             metadata={
                                 "type": "Element",
                                 "required": True,
                                 "min_length": 6,
                                 "max_length": 6,
-                            },
+                            }
                         )
                         other_date: None | Decimal = field(
                             default=None,
@@ -1792,16 +1740,15 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class OtherCriteria:
-                        name: None | str = field(
-                            default=None,
+                        name: str = field(
                             metadata={
                                 "type": "Element",
                                 "required": True,
                                 "min_length": 1,
                                 "max_length": 5,
-                            },
+                            }
                         )
                         value: list[str] = field(
                             default_factory=list,
@@ -1813,18 +1760,14 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FareOptions:
-        pricing_tick_info: (
-            None
-            | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo
-        ) = field(
-            default=None,
+        pricing_tick_info: FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo = field(
             metadata={
                 "name": "pricingTickInfo",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         corporate: (
             None | FareMasterPricerTravelBoardSearch.FareOptions.Corporate
@@ -1893,7 +1836,7 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PricingTickInfo:
             pricing_ticketing: (
                 None
@@ -1963,7 +1906,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class PricingTicketing:
                 price_type: list[str] = field(
                     default_factory=list,
@@ -1977,16 +1920,15 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TicketingDate:
-                date: None | str = field(
-                    default=None,
+                date: str = field(
                     metadata={
                         "type": "Element",
                         "required": True,
                         "min_length": 6,
                         "max_length": 6,
-                    },
+                    }
                 )
                 rtc_date: None | str = field(
                     default=None,
@@ -1998,17 +1940,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class SellingPoint:
-                location_id: None | str = field(
-                    default=None,
+                location_id: str = field(
                     metadata={
                         "name": "locationId",
                         "type": "Element",
                         "required": True,
                         "min_length": 3,
                         "max_length": 5,
-                    },
+                    }
                 )
                 country: None | str = field(
                     default=None,
@@ -2019,17 +1960,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TicketingPoint:
-                location_id: None | str = field(
-                    default=None,
+                location_id: str = field(
                     metadata={
                         "name": "locationId",
                         "type": "Element",
                         "required": True,
                         "min_length": 3,
                         "max_length": 5,
-                    },
+                    }
                 )
                 country: None | str = field(
                     default=None,
@@ -2040,17 +1980,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class JourneyOriginPoint:
-                location_id: None | str = field(
-                    default=None,
+                location_id: str = field(
                     metadata={
                         "name": "locationId",
                         "type": "Element",
                         "required": True,
                         "min_length": 3,
                         "max_length": 5,
-                    },
+                    }
                 )
                 country: None | str = field(
                     default=None,
@@ -2061,7 +2000,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CorporateId:
                 arc_number: None | str = field(
                     default=None,
@@ -2091,7 +2030,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Corporate:
             corporate_id: list[
                 FareMasterPricerTravelBoardSearch.FareOptions.Corporate.CorporateId
@@ -2104,17 +2043,16 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CorporateId:
-                corporate_qualifier: None | str = field(
-                    default=None,
+                corporate_qualifier: str = field(
                     metadata={
                         "name": "corporateQualifier",
                         "type": "Element",
                         "required": True,
                         "min_length": 0,
                         "max_length": 3,
-                    },
+                    }
                 )
                 identity: list[str] = field(
                     default_factory=list,
@@ -2127,17 +2065,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TicketingPriceScheme:
-            reference_number: None | str = field(
-                default=None,
+            reference_number: str = field(
                 metadata={
                     "name": "referenceNumber",
                     "type": "Element",
                     "required": True,
                     "min_length": 1,
                     "max_length": 35,
-                },
+                }
             )
             name: None | str = field(
                 default=None,
@@ -2164,7 +2101,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FeeIdDescription:
             fee_id: list[
                 FareMasterPricerTravelBoardSearch.FareOptions.FeeIdDescription.FeeId
@@ -2177,30 +2114,28 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FeeId:
-                fee_type: None | str = field(
-                    default=None,
+                fee_type: str = field(
                     metadata={
                         "name": "feeType",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 5,
-                    },
+                    }
                 )
-                fee_id_number: None | str = field(
-                    default=None,
+                fee_id_number: str = field(
                     metadata={
                         "name": "feeIdNumber",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 50,
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ConversionRate:
             conversion_rate_detail: list[
                 FareMasterPricerTravelBoardSearch.FareOptions.ConversionRate.ConversionRateDetail
@@ -2214,7 +2149,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ConversionRateDetail:
                 conversion_type: None | str = field(
                     default=None,
@@ -2225,17 +2160,16 @@ class FareMasterPricerTravelBoardSearch:
                         "max_length": 3,
                     },
                 )
-                currency: None | str = field(
-                    default=None,
+                currency: str = field(
                     metadata={
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 3,
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FormOfPayment:
             form_of_payment_details: list[
                 FareMasterPricerTravelBoardSearch.FareOptions.FormOfPayment.FormOfPaymentDetails
@@ -2248,17 +2182,16 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FormOfPaymentDetails:
-                type_value: None | str = field(
-                    default=None,
+                type_value: str = field(
                     metadata={
                         "name": "type",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 3,
-                    },
+                    }
                 )
                 charged_amount: None | Decimal = field(
                     default=None,
@@ -2277,7 +2210,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FrequentTravellerInfo:
             frequent_traveller_details: list[
                 FareMasterPricerTravelBoardSearch.FareOptions.FrequentTravellerInfo.FrequentTravellerDetails
@@ -2291,16 +2224,15 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FrequentTravellerDetails:
-                carrier: None | str = field(
-                    default=None,
+                carrier: str = field(
                     metadata={
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 3,
-                    },
+                    }
                 )
                 number: None | str = field(
                     default=None,
@@ -2356,7 +2288,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MonetaryCabinInfo:
             money_and_cabin_info: list[
                 FareMasterPricerTravelBoardSearch.FareOptions.MonetaryCabinInfo.MoneyAndCabinInfo
@@ -2369,7 +2301,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class MoneyAndCabinInfo:
                 amount_type: None | str = field(
                     default=None,
@@ -2380,12 +2312,11 @@ class FareMasterPricerTravelBoardSearch:
                         "max_length": 3,
                     },
                 )
-                amount: None | Decimal = field(
-                    default=None,
+                amount: Decimal = field(
                     metadata={
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 currency: None | str = field(
                     default=None,
@@ -2415,17 +2346,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PriceToBeat:
-        money_info: (
-            None | FareMasterPricerTravelBoardSearch.PriceToBeat.MoneyInfo
-        ) = field(
-            default=None,
-            metadata={
-                "name": "moneyInfo",
-                "type": "Element",
-                "required": True,
-            },
+        money_info: FareMasterPricerTravelBoardSearch.PriceToBeat.MoneyInfo = (
+            field(
+                metadata={
+                    "name": "moneyInfo",
+                    "type": "Element",
+                    "required": True,
+                }
+            )
         )
         additional_money_info: list[
             FareMasterPricerTravelBoardSearch.PriceToBeat.AdditionalMoneyInfo
@@ -2438,7 +2368,7 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MoneyInfo:
             qualifier: None | str = field(
                 default=None,
@@ -2448,12 +2378,11 @@ class FareMasterPricerTravelBoardSearch:
                     "max_length": 3,
                 },
             )
-            amount: None | Decimal = field(
-                default=None,
+            amount: Decimal = field(
                 metadata={
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             currency: None | str = field(
                 default=None,
@@ -2464,7 +2393,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AdditionalMoneyInfo:
             qualifier: None | str = field(
                 default=None,
@@ -2474,12 +2403,11 @@ class FareMasterPricerTravelBoardSearch:
                     "max_length": 3,
                 },
             )
-            amount: None | Decimal = field(
-                default=None,
+            amount: Decimal = field(
                 metadata={
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             currency: None | str = field(
                 default=None,
@@ -2499,7 +2427,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TaxInfo:
         withhold_tax_surcharge: None | str = field(
             default=None,
@@ -2521,7 +2449,7 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TaxDetail:
             rate: None | str = field(
                 default=None,
@@ -2566,7 +2494,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TravelFlightInfo:
         cabin_id: (
             None | FareMasterPricerTravelBoardSearch.TravelFlightInfo.CabinId
@@ -2628,7 +2556,7 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CabinId:
             cabin_qualifier: None | str = field(
                 default=None,
@@ -2649,17 +2577,16 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CompanyIdentity:
-            carrier_qualifier: None | str = field(
-                default=None,
+            carrier_qualifier: str = field(
                 metadata={
                     "name": "carrierQualifier",
                     "type": "Element",
                     "required": True,
                     "min_length": 0,
                     "max_length": 1,
-                },
+                }
             )
             carrier_id: list[str] = field(
                 default_factory=list,
@@ -2673,7 +2600,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FlightDetail:
             flight_type: list[str] = field(
                 default_factory=list,
@@ -2686,27 +2613,25 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class InclusionDetail:
-            inclusion_identifier: None | str = field(
-                default=None,
+            inclusion_identifier: str = field(
                 metadata={
                     "name": "inclusionIdentifier",
                     "type": "Element",
                     "required": True,
                     "min_length": 0,
                     "max_length": 1,
-                },
+                }
             )
-            location_id: None | str = field(
-                default=None,
+            location_id: str = field(
                 metadata={
                     "name": "locationId",
                     "type": "Element",
                     "required": True,
                     "min_length": 3,
                     "max_length": 5,
-                },
+                }
             )
             airport_city_qualifier: None | str = field(
                 default=None,
@@ -2718,27 +2643,25 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExclusionDetail:
-            exclusion_identifier: None | str = field(
-                default=None,
+            exclusion_identifier: str = field(
                 metadata={
                     "name": "exclusionIdentifier",
                     "type": "Element",
                     "required": True,
                     "min_length": 0,
                     "max_length": 1,
-                },
+                }
             )
-            location_id: None | str = field(
-                default=None,
+            location_id: str = field(
                 metadata={
                     "name": "locationId",
                     "type": "Element",
                     "required": True,
                     "min_length": 3,
                     "max_length": 5,
-                },
+                }
             )
             airport_city_qualifier: None | str = field(
                 default=None,
@@ -2750,28 +2673,26 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UnitNumberDetail:
-            number_of_units: None | Decimal = field(
-                default=None,
+            number_of_units: Decimal = field(
                 metadata={
                     "name": "numberOfUnits",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
-            type_of_unit: None | str = field(
-                default=None,
+            type_of_unit: str = field(
                 metadata={
                     "name": "typeOfUnit",
                     "type": "Element",
                     "required": True,
                     "min_length": 1,
                     "max_length": 3,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ValueSearch:
         criteria_name: None | str = field(
             default=None,
@@ -2810,7 +2731,7 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CriteriaDetails:
             type_value: None | str = field(
                 default=None,
@@ -2839,17 +2760,16 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Buckets:
-        bucket_info: (
-            None | FareMasterPricerTravelBoardSearch.Buckets.BucketInfo
-        ) = field(
-            default=None,
-            metadata={
-                "name": "bucketInfo",
-                "type": "Element",
-                "required": True,
-            },
+        bucket_info: FareMasterPricerTravelBoardSearch.Buckets.BucketInfo = (
+            field(
+                metadata={
+                    "name": "bucketInfo",
+                    "type": "Element",
+                    "required": True,
+                }
+            )
         )
         bucket_details: list[
             FareMasterPricerTravelBoardSearch.Buckets.BucketDetails
@@ -2862,7 +2782,7 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class BucketInfo:
             number: None | str = field(
                 default=None,
@@ -2925,7 +2845,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class BucketDetails:
             code: None | str = field(
                 default=None,
@@ -2954,7 +2874,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Attribute:
                 requested_sgt: None | str = field(
                     default=None,
@@ -2975,18 +2895,14 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Itinerary:
-        requested_segment_ref: (
-            None
-            | FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentRef
-        ) = field(
-            default=None,
+        requested_segment_ref: FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentRef = field(
             metadata={
                 "name": "requestedSegmentRef",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         departure_localization: (
             None
@@ -3085,15 +3001,14 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RequestedSegmentRef:
-            seg_ref: None | Decimal = field(
-                default=None,
+            seg_ref: Decimal = field(
                 metadata={
                     "name": "segRef",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             location_forcing: list[
                 FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentRef.LocationForcing
@@ -3106,28 +3021,26 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class LocationForcing:
-                airport_city_qualifier: None | str = field(
-                    default=None,
+                airport_city_qualifier: str = field(
                     metadata={
                         "name": "airportCityQualifier",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 1,
-                    },
+                    }
                 )
-                segment_number: None | Decimal = field(
-                    default=None,
+                segment_number: Decimal = field(
                     metadata={
                         "name": "segmentNumber",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DepartureLocalization:
             departure_point: (
                 None
@@ -3170,7 +3083,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class DeparturePoint:
                 distance: None | Decimal = field(
                     default=None,
@@ -3222,17 +3135,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class DepMultiCity:
-                location_id: None | str = field(
-                    default=None,
+                location_id: str = field(
                     metadata={
                         "name": "locationId",
                         "type": "Element",
                         "required": True,
                         "min_length": 3,
                         "max_length": 5,
-                    },
+                    }
                 )
                 airport_city_qualifier: None | str = field(
                     default=None,
@@ -3244,7 +3156,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FirstPnrSegmentRef:
                 pnr_segment_tattoo: None | Decimal = field(
                     default=None,
@@ -3263,7 +3175,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class AttributeDetails:
                 type_value: None | str = field(
                     default=None,
@@ -3284,7 +3196,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ArrivalLocalization:
             arrival_point_details: (
                 None
@@ -3317,7 +3229,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ArrivalPointDetails:
                 distance: None | Decimal = field(
                     default=None,
@@ -3369,17 +3281,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ArrivalMultiCity:
-                location_id: None | str = field(
-                    default=None,
+                location_id: str = field(
                     metadata={
                         "name": "locationId",
                         "type": "Element",
                         "required": True,
                         "min_length": 3,
                         "max_length": 5,
-                    },
+                    }
                 )
                 airport_city_qualifier: None | str = field(
                     default=None,
@@ -3391,7 +3302,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class AttributeDetails:
                 type_value: None | str = field(
                     default=None,
@@ -3412,18 +3323,14 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TimeDetails:
-            first_date_time_detail: (
-                None
-                | FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.FirstDateTimeDetail
-            ) = field(
-                default=None,
+            first_date_time_detail: FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.FirstDateTimeDetail = field(
                 metadata={
                     "name": "firstDateTimeDetail",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             range_of_date: (
                 None
@@ -3446,7 +3353,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FirstDateTimeDetail:
                 time_qualifier: None | str = field(
                     default=None,
@@ -3483,7 +3390,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class RangeOfDate:
                 range_qualifier: None | str = field(
                     default=None,
@@ -3511,7 +3418,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TripDetails:
                 flexibility_qualifier: None | str = field(
                     default=None,
@@ -3537,7 +3444,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FlightInfo:
             cabin_id: (
                 None
@@ -3600,7 +3507,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CabinId:
                 cabin_qualifier: None | str = field(
                     default=None,
@@ -3621,17 +3528,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CompanyIdentity:
-                carrier_qualifier: None | str = field(
-                    default=None,
+                carrier_qualifier: str = field(
                     metadata={
                         "name": "carrierQualifier",
                         "type": "Element",
                         "required": True,
                         "min_length": 0,
                         "max_length": 1,
-                    },
+                    }
                 )
                 carrier_id: list[str] = field(
                     default_factory=list,
@@ -3645,7 +3551,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FlightDetail:
                 flight_type: list[str] = field(
                     default_factory=list,
@@ -3658,27 +3564,25 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class InclusionDetail:
-                inclusion_identifier: None | str = field(
-                    default=None,
+                inclusion_identifier: str = field(
                     metadata={
                         "name": "inclusionIdentifier",
                         "type": "Element",
                         "required": True,
                         "min_length": 0,
                         "max_length": 1,
-                    },
+                    }
                 )
-                location_id: None | str = field(
-                    default=None,
+                location_id: str = field(
                     metadata={
                         "name": "locationId",
                         "type": "Element",
                         "required": True,
                         "min_length": 3,
                         "max_length": 5,
-                    },
+                    }
                 )
                 airport_city_qualifier: None | str = field(
                     default=None,
@@ -3690,27 +3594,25 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ExclusionDetail:
-                exclusion_identifier: None | str = field(
-                    default=None,
+                exclusion_identifier: str = field(
                     metadata={
                         "name": "exclusionIdentifier",
                         "type": "Element",
                         "required": True,
                         "min_length": 0,
                         "max_length": 1,
-                    },
+                    }
                 )
-                location_id: None | str = field(
-                    default=None,
+                location_id: str = field(
                     metadata={
                         "name": "locationId",
                         "type": "Element",
                         "required": True,
                         "min_length": 3,
                         "max_length": 5,
-                    },
+                    }
                 )
                 airport_city_qualifier: None | str = field(
                     default=None,
@@ -3722,28 +3624,26 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class UnitNumberDetail:
-                number_of_units: None | Decimal = field(
-                    default=None,
+                number_of_units: Decimal = field(
                     metadata={
                         "name": "numberOfUnits",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
-                type_of_unit: None | str = field(
-                    default=None,
+                type_of_unit: str = field(
                     metadata={
                         "name": "typeOfUnit",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 3,
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FamilyInformation:
             commercial_family_details: list[
                 FareMasterPricerTravelBoardSearch.Itinerary.FamilyInformation.CommercialFamilyDetails
@@ -3756,20 +3656,19 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CommercialFamilyDetails:
-                commercial_family: None | str = field(
-                    default=None,
+                commercial_family: str = field(
                     metadata={
                         "name": "commercialFamily",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 10,
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ValueSearch:
             criteria_name: None | str = field(
                 default=None,
@@ -3808,7 +3707,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CriteriaDetails:
                 type_value: None | str = field(
                     default=None,
@@ -3837,18 +3736,14 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class GroupOfFlights:
-            prop_flight_gr_detail: (
-                None
-                | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PropFlightGrDetail
-            ) = field(
-                default=None,
+            prop_flight_gr_detail: FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PropFlightGrDetail = field(
                 metadata={
                     "name": "propFlightGrDetail",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             price_to_beat: (
                 None
@@ -3872,7 +3767,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class PropFlightGrDetail:
                 flight_proposal: list[
                     FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PropFlightGrDetail.FlightProposal
@@ -3904,7 +3799,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FlightProposal:
                     ref: None | str = field(
                         default=None,
@@ -3924,18 +3819,14 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class PriceToBeat:
-                money_info: (
-                    None
-                    | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat.MoneyInfo
-                ) = field(
-                    default=None,
+                money_info: FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat.MoneyInfo = field(
                     metadata={
                         "name": "moneyInfo",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 additional_money_info: list[
                     FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat.AdditionalMoneyInfo
@@ -3948,7 +3839,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class MoneyInfo:
                     qualifier: None | str = field(
                         default=None,
@@ -3958,12 +3849,11 @@ class FareMasterPricerTravelBoardSearch:
                             "max_length": 3,
                         },
                     )
-                    amount: None | Decimal = field(
-                        default=None,
+                    amount: Decimal = field(
                         metadata={
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
                     currency: None | str = field(
                         default=None,
@@ -3974,7 +3864,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class AdditionalMoneyInfo:
                     qualifier: None | str = field(
                         default=None,
@@ -3984,12 +3874,11 @@ class FareMasterPricerTravelBoardSearch:
                             "max_length": 3,
                         },
                     )
-                    amount: None | Decimal = field(
-                        default=None,
+                    amount: Decimal = field(
                         metadata={
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
                     currency: None | str = field(
                         default=None,
@@ -4009,18 +3898,14 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FlightDetails:
-                flight_information: (
-                    None
-                    | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation
-                ) = field(
-                    default=None,
+                flight_information: FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation = field(
                     metadata={
                         "name": "flightInformation",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 avl_info: list[
                     FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AvlInfo
@@ -4093,18 +3978,14 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FlightInformation:
-                    product_date_time: (
-                        None
-                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.ProductDateTime
-                    ) = field(
-                        default=None,
+                    product_date_time: FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.ProductDateTime = field(
                         metadata={
                             "name": "productDateTime",
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
                     location: list[
                         FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.Location
@@ -4166,17 +4047,16 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class ProductDateTime:
-                        date_of_departure: None | str = field(
-                            default=None,
+                        date_of_departure: str = field(
                             metadata={
                                 "name": "dateOfDeparture",
                                 "type": "Element",
                                 "required": True,
                                 "min_length": 6,
                                 "max_length": 6,
-                            },
+                            }
                         )
                         time_of_departure: None | str = field(
                             default=None,
@@ -4215,17 +4095,16 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class Location:
-                        location_id: None | str = field(
-                            default=None,
+                        location_id: str = field(
                             metadata={
                                 "name": "locationId",
                                 "type": "Element",
                                 "required": True,
                                 "min_length": 3,
                                 "max_length": 5,
-                            },
+                            }
                         )
                         airport_city_qualifier: None | str = field(
                             default=None,
@@ -4245,17 +4124,16 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class CompanyId:
-                        marketing_carrier: None | str = field(
-                            default=None,
+                        marketing_carrier: str = field(
                             metadata={
                                 "name": "marketingCarrier",
                                 "type": "Element",
                                 "required": True,
                                 "min_length": 2,
                                 "max_length": 3,
-                            },
+                            }
                         )
                         operating_carrier: None | str = field(
                             default=None,
@@ -4267,7 +4145,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class ProductDetail:
                         equipment_type: None | str = field(
                             default=None,
@@ -4305,7 +4183,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class AddProductDetail:
                         last_seat_available: None | str = field(
                             default=None,
@@ -4363,17 +4241,16 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class AttributeDetails:
-                        attribute_type: None | str = field(
-                            default=None,
+                        attribute_type: str = field(
                             metadata={
                                 "name": "attributeType",
                                 "type": "Element",
                                 "required": True,
                                 "min_length": 1,
                                 "max_length": 5,
-                            },
+                            }
                         )
                         attribute_description: None | str = field(
                             default=None,
@@ -4385,7 +4262,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class AvlInfo:
                     cabin_product: list[
                         FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AvlInfo.CabinProduct
@@ -4408,16 +4285,15 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class CabinProduct:
-                        rbd: None | str = field(
-                            default=None,
+                        rbd: str = field(
                             metadata={
                                 "type": "Element",
                                 "required": True,
                                 "min_length": 1,
                                 "max_length": 1,
-                            },
+                            }
                         )
                         booking_modifier: None | str = field(
                             default=None,
@@ -4446,7 +4322,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class ContextDetails:
                         avl: list[str] = field(
                             default_factory=list,
@@ -4459,7 +4335,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class TechnicalStop:
                     stop_details: list[
                         FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TechnicalStop.StopDetails
@@ -4473,7 +4349,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class StopDetails:
                         date_qualifier: None | str = field(
                             default=None,
@@ -4520,7 +4396,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class CommercialAgreement:
                     codeshare_details: (
                         None
@@ -4543,7 +4419,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class CodeshareDetails:
                         code_share_type: None | str = field(
                             default=None,
@@ -4571,7 +4447,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class OtherCodeshareDetails:
                         code_share_type: None | str = field(
                             default=None,
@@ -4599,7 +4475,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class AddInfo:
                     status: list[str] = field(
                         default_factory=list,
@@ -4640,16 +4516,15 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class DateTimePeriodDetails:
-                        qualifier: None | str = field(
-                            default=None,
+                        qualifier: str = field(
                             metadata={
                                 "type": "Element",
                                 "required": True,
                                 "min_length": 1,
                                 "max_length": 3,
-                            },
+                            }
                         )
                         value: None | str = field(
                             default=None,
@@ -4660,7 +4535,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class TerminalEquipmentDetails:
                     leg_details: (
                         None
@@ -4703,7 +4578,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class LegDetails:
                         equipment: None | str = field(
                             default=None,
@@ -4729,7 +4604,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class DepartureStationInfo:
                         terminal: None | str = field(
                             default=None,
@@ -4740,7 +4615,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class ArrivalStationInfo:
                         terminal: None | str = field(
                             default=None,
@@ -4751,7 +4626,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class MileageTimeDetails:
                         elapsed_ground_time: None | Decimal = field(
                             default=None,
@@ -4761,7 +4636,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class ReservationInfo:
                     booking: None | str = field(
                         default=None,
@@ -4832,16 +4707,15 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class DateTimeDetails:
-                        date: None | str = field(
-                            default=None,
+                        date: str = field(
                             metadata={
                                 "type": "Element",
                                 "required": True,
                                 "min_length": 6,
                                 "max_length": 6,
-                            },
+                            }
                         )
                         time: None | str = field(
                             default=None,
@@ -4852,7 +4726,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class ProductTypeDetails:
                         sequence_number: None | str = field(
                             default=None,
@@ -4873,18 +4747,14 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class PriceToBeat:
-                    money_info: (
-                        None
-                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat.MoneyInfo
-                    ) = field(
-                        default=None,
+                    money_info: FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat.MoneyInfo = field(
                         metadata={
                             "name": "moneyInfo",
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
                     additional_money_info: list[
                         FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat.AdditionalMoneyInfo
@@ -4897,7 +4767,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class MoneyInfo:
                         qualifier: None | str = field(
                             default=None,
@@ -4907,12 +4777,11 @@ class FareMasterPricerTravelBoardSearch:
                                 "max_length": 3,
                             },
                         )
-                        amount: None | Decimal = field(
-                            default=None,
+                        amount: Decimal = field(
                             metadata={
                                 "type": "Element",
                                 "required": True,
-                            },
+                            }
                         )
                         currency: None | str = field(
                             default=None,
@@ -4923,7 +4792,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class AdditionalMoneyInfo:
                         qualifier: None | str = field(
                             default=None,
@@ -4933,12 +4802,11 @@ class FareMasterPricerTravelBoardSearch:
                                 "max_length": 3,
                             },
                         )
-                        amount: None | Decimal = field(
-                            default=None,
+                        amount: Decimal = field(
                             metadata={
                                 "type": "Element",
                                 "required": True,
-                            },
+                            }
                         )
                         currency: None | str = field(
                             default=None,
@@ -4958,18 +4826,14 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FlightInfoPnr:
-            travel_response_details: (
-                None
-                | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails
-            ) = field(
-                default=None,
+            travel_response_details: FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails = field(
                 metadata={
                     "name": "travelResponseDetails",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             time_table_date: (
                 None
@@ -5051,7 +4915,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TravelResponseDetails:
                 flight_date: (
                     None
@@ -5063,38 +4927,26 @@ class FareMasterPricerTravelBoardSearch:
                         "type": "Element",
                     },
                 )
-                board_point_details: (
-                    None
-                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.BoardPointDetails
-                ) = field(
-                    default=None,
+                board_point_details: FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.BoardPointDetails = field(
                     metadata={
                         "name": "boardPointDetails",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
-                offpoint_details: (
-                    None
-                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.OffpointDetails
-                ) = field(
-                    default=None,
+                offpoint_details: FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.OffpointDetails = field(
                     metadata={
                         "name": "offpointDetails",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
-                company_details: (
-                    None
-                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.CompanyDetails
-                ) = field(
-                    default=None,
+                company_details: FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.CompanyDetails = field(
                     metadata={
                         "name": "companyDetails",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 flight_identification: (
                     None
@@ -5117,7 +4969,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FlightDate:
                     departure_date: None | str = field(
                         default=None,
@@ -5165,54 +5017,50 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class BoardPointDetails:
-                    true_location_id: None | str = field(
-                        default=None,
+                    true_location_id: str = field(
                         metadata={
                             "name": "trueLocationId",
                             "type": "Element",
                             "required": True,
                             "min_length": 3,
                             "max_length": 3,
-                        },
+                        }
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class OffpointDetails:
-                    true_location_id: None | str = field(
-                        default=None,
+                    true_location_id: str = field(
                         metadata={
                             "name": "trueLocationId",
                             "type": "Element",
                             "required": True,
                             "min_length": 3,
                             "max_length": 3,
-                        },
+                        }
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class CompanyDetails:
-                    marketing_company: None | str = field(
-                        default=None,
+                    marketing_company: str = field(
                         metadata={
                             "name": "marketingCompany",
                             "type": "Element",
                             "required": True,
                             "min_length": 2,
                             "max_length": 3,
-                        },
+                        }
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FlightIdentification:
-                    flight_number: None | Decimal = field(
-                        default=None,
+                    flight_number: Decimal = field(
                         metadata={
                             "name": "flightNumber",
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
                     operational_suffix: None | str = field(
                         default=None,
@@ -5224,7 +5072,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FlightTypeDetails:
                     flight_indicator: list[str] = field(
                         default_factory=list,
@@ -5238,7 +5086,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TimeTableDate:
                 begin_date_time: (
                     None
@@ -5270,7 +5118,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class BeginDateTime:
                     year: None | str = field(
                         default=None,
@@ -5293,7 +5141,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class EndDateTime:
                     year: None | str = field(
                         default=None,
@@ -5316,16 +5164,15 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class Frequency:
-                    qualifier: None | str = field(
-                        default=None,
+                    qualifier: str = field(
                         metadata={
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 3,
-                        },
+                        }
                     )
                     value: list[str] = field(
                         default_factory=list,
@@ -5337,7 +5184,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TerminalEquipmentDetails:
                 leg_details: (
                     None
@@ -5380,7 +5227,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class LegDetails:
                     equipment: None | str = field(
                         default=None,
@@ -5406,7 +5253,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class DepartureStationInfo:
                     terminal: None | str = field(
                         default=None,
@@ -5417,7 +5264,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class ArrivalStationInfo:
                     terminal: None | str = field(
                         default=None,
@@ -5428,7 +5275,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class MileageTimeDetails:
                     elapsed_ground_time: None | Decimal = field(
                         default=None,
@@ -5438,18 +5285,14 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CodeshareData:
-                codeshare_details: (
-                    None
-                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData.CodeshareDetails
-                ) = field(
-                    default=None,
+                codeshare_details: FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData.CodeshareDetails = field(
                     metadata={
                         "name": "codeshareDetails",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 other_codeshare_details: list[
                     FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData.OtherCodeshareDetails
@@ -5462,17 +5305,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class CodeshareDetails:
-                    transport_stage_qualifier: None | str = field(
-                        default=None,
+                    transport_stage_qualifier: str = field(
                         metadata={
                             "name": "transportStageQualifier",
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 1,
-                        },
+                        }
                     )
                     airline_designator: None | str = field(
                         default=None,
@@ -5500,17 +5342,16 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class OtherCodeshareDetails:
-                    transport_stage_qualifier: None | str = field(
-                        default=None,
+                    transport_stage_qualifier: str = field(
                         metadata={
                             "name": "transportStageQualifier",
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 1,
-                        },
+                        }
                     )
                     airline_designator: None | str = field(
                         default=None,
@@ -5538,41 +5379,35 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Disclosure:
-                free_text_details: (
-                    None
-                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.Disclosure.FreeTextDetails
-                ) = field(
-                    default=None,
+                free_text_details: FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.Disclosure.FreeTextDetails = field(
                     metadata={
                         "name": "freeTextDetails",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
-                free_text: None | str = field(
-                    default=None,
+                free_text: str = field(
                     metadata={
                         "name": "freeText",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 70,
-                    },
+                    }
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FreeTextDetails:
-                    text_subject_qualifier: None | str = field(
-                        default=None,
+                    text_subject_qualifier: str = field(
                         metadata={
                             "name": "textSubjectQualifier",
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 3,
-                        },
+                        }
                     )
                     information_type: None | str = field(
                         default=None,
@@ -5583,26 +5418,24 @@ class FareMasterPricerTravelBoardSearch:
                             "max_length": 4,
                         },
                     )
-                    source: None | str = field(
-                        default=None,
+                    source: str = field(
                         metadata={
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 3,
-                        },
+                        }
                     )
-                    encoding: None | str = field(
-                        default=None,
+                    encoding: str = field(
                         metadata={
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 3,
-                        },
+                        }
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class StopDetails:
                 routing_details: list[
                     FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.StopDetails.RoutingDetails
@@ -5615,7 +5448,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class RoutingDetails:
                     station: None | str = field(
                         default=None,
@@ -5626,7 +5459,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TrafficRestrictionData:
                 traffic_restriction_details: list[
                     FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TrafficRestrictionData.TrafficRestrictionDetails
@@ -5639,7 +5472,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class TrafficRestrictionDetails:
                     code: None | str = field(
                         default=None,
@@ -5650,7 +5483,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ReservationInfo:
                 booking: None | str = field(
                     default=None,
@@ -5721,16 +5554,15 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class DateTimeDetails:
-                    date: None | str = field(
-                        default=None,
+                    date: str = field(
                         metadata={
                             "type": "Element",
                             "required": True,
                             "min_length": 6,
                             "max_length": 6,
-                        },
+                        }
                     )
                     time: None | str = field(
                         default=None,
@@ -5741,7 +5573,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class ProductTypeDetails:
                     sequence_number: None | str = field(
                         default=None,
@@ -5762,21 +5594,17 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class IncidentalStopInfo:
-                date_time_info: (
-                    None
-                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo.DateTimeInfo
-                ) = field(
-                    default=None,
+                date_time_info: FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo.DateTimeInfo = field(
                     metadata={
                         "name": "dateTimeInfo",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class DateTimeInfo:
                     date_time_details: list[
                         FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo.DateTimeInfo.DateTimeDetails
@@ -5789,7 +5617,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class DateTimeDetails:
                         qualifier: None | str = field(
                             default=None,
@@ -5840,17 +5668,16 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RequestedSegmentAction:
-            action_request_code: None | str = field(
-                default=None,
+            action_request_code: str = field(
                 metadata={
                     "name": "actionRequestCode",
                     "type": "Element",
                     "required": True,
                     "min_length": 1,
                     "max_length": 3,
-                },
+                }
             )
             product_details: (
                 None
@@ -5863,17 +5690,16 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ProductDetails:
-                flight_number: None | str = field(
-                    default=None,
+                flight_number: str = field(
                     metadata={
                         "name": "flightNumber",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 5,
-                    },
+                    }
                 )
                 booking_class: None | str = field(
                     default=None,
@@ -5903,7 +5729,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Attributes:
             attribute_details: list[
                 FareMasterPricerTravelBoardSearch.Itinerary.Attributes.AttributeDetails
@@ -5917,17 +5743,16 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class AttributeDetails:
-                attribute_type: None | str = field(
-                    default=None,
+                attribute_type: str = field(
                     metadata={
                         "name": "attributeType",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 5,
-                    },
+                    }
                 )
                 attribute_description: None | str = field(
                     default=None,
@@ -5939,18 +5764,14 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TicketChangeInfo:
-        ticket_number_details: (
-            None
-            | FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketNumberDetails
-        ) = field(
-            default=None,
+        ticket_number_details: FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketNumberDetails = field(
             metadata={
                 "name": "ticketNumberDetails",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         ticket_requested_segments: list[
             FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments
@@ -5963,7 +5784,7 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TicketNumberDetails:
             document_details: list[
                 FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketNumberDetails.DocumentDetails
@@ -5977,7 +5798,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class DocumentDetails:
                 number: None | str = field(
                     default=None,
@@ -5988,18 +5809,14 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TicketRequestedSegments:
-            action_identification: (
-                None
-                | FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ActionIdentification
-            ) = field(
-                default=None,
+            action_identification: FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ActionIdentification = field(
                 metadata={
                     "name": "actionIdentification",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             connect_point_details: (
                 None
@@ -6012,17 +5829,16 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ActionIdentification:
-                action_request_code: None | str = field(
-                    default=None,
+                action_request_code: str = field(
                     metadata={
                         "name": "actionRequestCode",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 3,
-                    },
+                    }
                 )
                 product_details: (
                     None
@@ -6035,17 +5851,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class ProductDetails:
-                    flight_number: None | str = field(
-                        default=None,
+                    flight_number: str = field(
                         metadata={
                             "name": "flightNumber",
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 5,
-                        },
+                        }
                     )
                     booking_class: None | str = field(
                         default=None,
@@ -6075,7 +5890,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ConnectPointDetails:
                 connection_details: list[
                     FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ConnectPointDetails.ConnectionDetails
@@ -6089,30 +5904,25 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class ConnectionDetails:
-                    location: None | str = field(
-                        default=None,
+                    location: str = field(
                         metadata={
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 3,
-                        },
+                        }
                     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CombinationFareFamilies:
-        item_ffcnumber: (
-            None
-            | FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber
-        ) = field(
-            default=None,
+        item_ffcnumber: FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber = field(
             metadata={
                 "name": "itemFFCNumber",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         nb_of_units: (
             None
@@ -6135,21 +5945,17 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ItemFfcnumber:
-            item_number_id: (
-                None
-                | FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber.ItemNumberId
-            ) = field(
-                default=None,
+            item_number_id: FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber.ItemNumberId = field(
                 metadata={
                     "name": "itemNumberId",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ItemNumberId:
                 number: None | str = field(
                     default=None,
@@ -6186,7 +5992,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NbOfUnits:
             unit_number_detail: list[
                 FareMasterPricerTravelBoardSearch.CombinationFareFamilies.NbOfUnits.UnitNumberDetail
@@ -6200,7 +6006,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class UnitNumberDetail:
                 number_of_units: None | Decimal = field(
                     default=None,
@@ -6209,18 +6015,17 @@ class FareMasterPricerTravelBoardSearch:
                         "type": "Element",
                     },
                 )
-                type_of_unit: None | str = field(
-                    default=None,
+                type_of_unit: str = field(
                     metadata={
                         "name": "typeOfUnit",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 3,
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ReferenceInfo:
             referencing_detail: list[
                 FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ReferenceInfo.ReferencingDetail
@@ -6233,7 +6038,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ReferencingDetail:
                 ref_qualifier: None | str = field(
                     default=None,
@@ -6244,26 +6049,22 @@ class FareMasterPricerTravelBoardSearch:
                         "max_length": 3,
                     },
                 )
-                ref_number: None | Decimal = field(
-                    default=None,
+                ref_number: Decimal = field(
                     metadata={
                         "name": "refNumber",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FeeOption:
-        fee_type_info: (
-            None | FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo
-        ) = field(
-            default=None,
+        fee_type_info: FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo = field(
             metadata={
                 "name": "feeTypeInfo",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         rate_tax: (
             None | FareMasterPricerTravelBoardSearch.FeeOption.RateTax
@@ -6285,18 +6086,14 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FeeTypeInfo:
-            carrier_fee_details: (
-                None
-                | FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo.CarrierFeeDetails
-            ) = field(
-                default=None,
+            carrier_fee_details: FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo.CarrierFeeDetails = field(
                 metadata={
                     "name": "carrierFeeDetails",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             other_selection_details: list[
                 FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo.OtherSelectionDetails
@@ -6309,17 +6106,16 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CarrierFeeDetails:
-                type_value: None | str = field(
-                    default=None,
+                type_value: str = field(
                     metadata={
                         "name": "type",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 3,
-                    },
+                    }
                 )
                 option_information: None | str = field(
                     default=None,
@@ -6331,16 +6127,15 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class OtherSelectionDetails:
-                option: None | str = field(
-                    default=None,
+                option: str = field(
                     metadata={
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 3,
-                    },
+                    }
                 )
                 option_information: None | str = field(
                     default=None,
@@ -6352,7 +6147,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RateTax:
             monetary_details: list[
                 FareMasterPricerTravelBoardSearch.FeeOption.RateTax.MonetaryDetails
@@ -6366,17 +6161,16 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class MonetaryDetails:
-                type_qualifier: None | str = field(
-                    default=None,
+                type_qualifier: str = field(
                     metadata={
                         "name": "typeQualifier",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 3,
-                    },
+                    }
                 )
                 amount: None | str = field(
                     default=None,
@@ -6395,18 +6189,14 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FeeDetails:
-            fee_info: (
-                None
-                | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo
-            ) = field(
-                default=None,
+            fee_info: FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo = field(
                 metadata={
                     "name": "feeInfo",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             associated_amounts: (
                 None
@@ -6429,18 +6219,14 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FeeInfo:
-                data_type_information: (
-                    None
-                    | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo.DataTypeInformation
-                ) = field(
-                    default=None,
+                data_type_information: FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo.DataTypeInformation = field(
                     metadata={
                         "name": "dataTypeInformation",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 data_information: list[
                     FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo.DataInformation
@@ -6453,17 +6239,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class DataTypeInformation:
-                    sub_type: None | str = field(
-                        default=None,
+                    sub_type: str = field(
                         metadata={
                             "name": "subType",
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 3,
-                        },
+                        }
                     )
                     option: None | str = field(
                         default=None,
@@ -6474,7 +6259,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class DataInformation:
                     indicator: None | str = field(
                         default=None,
@@ -6485,7 +6270,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class AssociatedAmounts:
                 monetary_details: list[
                     FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.AssociatedAmounts.MonetaryDetails
@@ -6499,17 +6284,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class MonetaryDetails:
-                    type_qualifier: None | str = field(
-                        default=None,
+                    type_qualifier: str = field(
                         metadata={
                             "name": "typeQualifier",
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 3,
-                        },
+                        }
                     )
                     amount: None | str = field(
                         default=None,
@@ -6536,18 +6320,14 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FeeDescriptionGrp:
-                item_number_info: (
-                    None
-                    | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo
-                ) = field(
-                    default=None,
+                item_number_info: FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo = field(
                     metadata={
                         "name": "itemNumberInfo",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 service_attributes_info: (
                     None
@@ -6570,21 +6350,17 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class ItemNumberInfo:
-                    item_number_details: (
-                        None
-                        | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo.ItemNumberDetails
-                    ) = field(
-                        default=None,
+                    item_number_details: FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo.ItemNumberDetails = field(
                         metadata={
                             "name": "itemNumberDetails",
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class ItemNumberDetails:
                         number: None | str = field(
                             default=None,
@@ -6621,7 +6397,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class ServiceAttributesInfo:
                     attribute_qualifier: None | str = field(
                         default=None,
@@ -6644,17 +6420,16 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class AttributeDetails:
-                        attribute_type: None | str = field(
-                            default=None,
+                        attribute_type: str = field(
                             metadata={
                                 "name": "attributeType",
                                 "type": "Element",
                                 "required": True,
                                 "min_length": 1,
                                 "max_length": 25,
-                            },
+                            }
                         )
                         attribute_description: None | str = field(
                             default=None,
@@ -6666,18 +6441,14 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class ServiceDescriptionInfo:
-                    service_requirements_info: (
-                        None
-                        | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo.ServiceRequirementsInfo
-                    ) = field(
-                        default=None,
+                    service_requirements_info: FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo.ServiceRequirementsInfo = field(
                         metadata={
                             "name": "serviceRequirementsInfo",
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
                     seat_details: list[
                         FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo.SeatDetails
@@ -6690,17 +6461,16 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class ServiceRequirementsInfo:
-                        service_classification: None | str = field(
-                            default=None,
+                        service_classification: str = field(
                             metadata={
                                 "name": "serviceClassification",
                                 "type": "Element",
                                 "required": True,
                                 "min_length": 1,
                                 "max_length": 4,
-                            },
+                            }
                         )
                         service_status: None | str = field(
                             default=None,
@@ -6756,7 +6526,7 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class SeatDetails:
                         seat_characteristics: list[str] = field(
                             default_factory=list,
@@ -6769,18 +6539,14 @@ class FareMasterPricerTravelBoardSearch:
                             },
                         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OfficeIdDetails:
-        office_id_information: (
-            None
-            | FareMasterPricerTravelBoardSearch.OfficeIdDetails.OfficeIdInformation
-        ) = field(
-            default=None,
+        office_id_information: FareMasterPricerTravelBoardSearch.OfficeIdDetails.OfficeIdInformation = field(
             metadata={
                 "name": "officeIdInformation",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         nb_of_units: (
             None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.NbOfUnits
@@ -6841,7 +6607,7 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class OfficeIdInformation:
             office_identification: (
                 None
@@ -6872,7 +6638,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class OfficeIdentification:
                 office_name: None | Decimal = field(
                     default=None,
@@ -6909,7 +6675,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NbOfUnits:
             unit_number_detail: list[
                 FareMasterPricerTravelBoardSearch.OfficeIdDetails.NbOfUnits.UnitNumberDetail
@@ -6923,7 +6689,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class UnitNumberDetail:
                 number_of_units: None | Decimal = field(
                     default=None,
@@ -6932,18 +6698,17 @@ class FareMasterPricerTravelBoardSearch:
                         "type": "Element",
                     },
                 )
-                type_of_unit: None | str = field(
-                    default=None,
+                type_of_unit: str = field(
                     metadata={
                         "name": "typeOfUnit",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 3,
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UidOption:
             attribute_details: list[
                 FareMasterPricerTravelBoardSearch.OfficeIdDetails.UidOption.AttributeDetails
@@ -6957,17 +6722,16 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class AttributeDetails:
-                attribute_type: None | str = field(
-                    default=None,
+                attribute_type: str = field(
                     metadata={
                         "name": "attributeType",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 5,
-                    },
+                    }
                 )
                 attribute_description: None | str = field(
                     default=None,
@@ -6979,7 +6743,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PricingTickInfo:
             pricing_ticketing: (
                 None
@@ -7049,7 +6813,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class PricingTicketing:
                 price_type: list[str] = field(
                     default_factory=list,
@@ -7063,16 +6827,15 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TicketingDate:
-                date: None | str = field(
-                    default=None,
+                date: str = field(
                     metadata={
                         "type": "Element",
                         "required": True,
                         "min_length": 6,
                         "max_length": 6,
-                    },
+                    }
                 )
                 rtc_date: None | str = field(
                     default=None,
@@ -7084,17 +6847,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class SellingPoint:
-                location_id: None | str = field(
-                    default=None,
+                location_id: str = field(
                     metadata={
                         "name": "locationId",
                         "type": "Element",
                         "required": True,
                         "min_length": 3,
                         "max_length": 5,
-                    },
+                    }
                 )
                 country: None | str = field(
                     default=None,
@@ -7105,17 +6867,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TicketingPoint:
-                location_id: None | str = field(
-                    default=None,
+                location_id: str = field(
                     metadata={
                         "name": "locationId",
                         "type": "Element",
                         "required": True,
                         "min_length": 3,
                         "max_length": 5,
-                    },
+                    }
                 )
                 country: None | str = field(
                     default=None,
@@ -7126,17 +6887,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class JourneyOriginPoint:
-                location_id: None | str = field(
-                    default=None,
+                location_id: str = field(
                     metadata={
                         "name": "locationId",
                         "type": "Element",
                         "required": True,
                         "min_length": 3,
                         "max_length": 5,
-                    },
+                    }
                 )
                 country: None | str = field(
                     default=None,
@@ -7147,7 +6907,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CorporateId:
                 arc_number: None | str = field(
                     default=None,
@@ -7177,7 +6937,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CorporateFareInfo:
             corporate_fare_identifiers: (
                 None
@@ -7190,7 +6950,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CorporateFareIdentifiers:
                 fare_qualifier: None | str = field(
                     default=None,
@@ -7212,7 +6972,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TravelFlightInfo:
             cabin_id: (
                 None
@@ -7275,7 +7035,7 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CabinId:
                 cabin_qualifier: None | str = field(
                     default=None,
@@ -7297,17 +7057,16 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CompanyIdentity:
-                carrier_qualifier: None | str = field(
-                    default=None,
+                carrier_qualifier: str = field(
                     metadata={
                         "name": "carrierQualifier",
                         "type": "Element",
                         "required": True,
                         "min_length": 0,
                         "max_length": 1,
-                    },
+                    }
                 )
                 carrier_id: list[str] = field(
                     default_factory=list,
@@ -7321,7 +7080,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FlightDetail:
                 flight_type: list[str] = field(
                     default_factory=list,
@@ -7334,27 +7093,25 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class InclusionDetail:
-                inclusion_identifier: None | str = field(
-                    default=None,
+                inclusion_identifier: str = field(
                     metadata={
                         "name": "inclusionIdentifier",
                         "type": "Element",
                         "required": True,
                         "min_length": 0,
                         "max_length": 1,
-                    },
+                    }
                 )
-                location_id: None | str = field(
-                    default=None,
+                location_id: str = field(
                     metadata={
                         "name": "locationId",
                         "type": "Element",
                         "required": True,
                         "min_length": 3,
                         "max_length": 5,
-                    },
+                    }
                 )
                 airport_city_qualifier: None | str = field(
                     default=None,
@@ -7366,27 +7123,25 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ExclusionDetail:
-                exclusion_identifier: None | str = field(
-                    default=None,
+                exclusion_identifier: str = field(
                     metadata={
                         "name": "exclusionIdentifier",
                         "type": "Element",
                         "required": True,
                         "min_length": 0,
                         "max_length": 1,
-                    },
+                    }
                 )
-                location_id: None | str = field(
-                    default=None,
+                location_id: str = field(
                     metadata={
                         "name": "locationId",
                         "type": "Element",
                         "required": True,
                         "min_length": 3,
                         "max_length": 5,
-                    },
+                    }
                 )
                 airport_city_qualifier: None | str = field(
                     default=None,
@@ -7398,39 +7153,33 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class UnitNumberDetail:
-                number_of_units: None | Decimal = field(
-                    default=None,
+                number_of_units: Decimal = field(
                     metadata={
                         "name": "numberOfUnits",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
-                type_of_unit: None | str = field(
-                    default=None,
+                type_of_unit: str = field(
                     metadata={
                         "name": "typeOfUnit",
                         "type": "Element",
                         "required": True,
                         "min_length": 1,
                         "max_length": 3,
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AirlineDistributionDetails:
-            requested_segment_ref: (
-                None
-                | FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.RequestedSegmentRef
-            ) = field(
-                default=None,
+            requested_segment_ref: FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.RequestedSegmentRef = field(
                 metadata={
                     "name": "requestedSegmentRef",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             flight_info: (
                 None
@@ -7443,15 +7192,14 @@ class FareMasterPricerTravelBoardSearch:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class RequestedSegmentRef:
-                seg_ref: None | Decimal = field(
-                    default=None,
+                seg_ref: Decimal = field(
                     metadata={
                         "name": "segRef",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 location_forcing: list[
                     FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.RequestedSegmentRef.LocationForcing
@@ -7464,28 +7212,26 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class LocationForcing:
-                    airport_city_qualifier: None | str = field(
-                        default=None,
+                    airport_city_qualifier: str = field(
                         metadata={
                             "name": "airportCityQualifier",
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 1,
-                        },
+                        }
                     )
-                    segment_number: None | Decimal = field(
-                        default=None,
+                    segment_number: Decimal = field(
                         metadata={
                             "name": "segmentNumber",
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FlightInfo:
                 cabin_id: (
                     None
@@ -7548,7 +7294,7 @@ class FareMasterPricerTravelBoardSearch:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class CabinId:
                     cabin_qualifier: None | str = field(
                         default=None,
@@ -7570,17 +7316,16 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class CompanyIdentity:
-                    carrier_qualifier: None | str = field(
-                        default=None,
+                    carrier_qualifier: str = field(
                         metadata={
                             "name": "carrierQualifier",
                             "type": "Element",
                             "required": True,
                             "min_length": 0,
                             "max_length": 1,
-                        },
+                        }
                     )
                     carrier_id: list[str] = field(
                         default_factory=list,
@@ -7594,7 +7339,7 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FlightDetail:
                     flight_type: list[str] = field(
                         default_factory=list,
@@ -7607,27 +7352,25 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class InclusionDetail:
-                    inclusion_identifier: None | str = field(
-                        default=None,
+                    inclusion_identifier: str = field(
                         metadata={
                             "name": "inclusionIdentifier",
                             "type": "Element",
                             "required": True,
                             "min_length": 0,
                             "max_length": 1,
-                        },
+                        }
                     )
-                    location_id: None | str = field(
-                        default=None,
+                    location_id: str = field(
                         metadata={
                             "name": "locationId",
                             "type": "Element",
                             "required": True,
                             "min_length": 3,
                             "max_length": 5,
-                        },
+                        }
                     )
                     airport_city_qualifier: None | str = field(
                         default=None,
@@ -7639,27 +7382,25 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class ExclusionDetail:
-                    exclusion_identifier: None | str = field(
-                        default=None,
+                    exclusion_identifier: str = field(
                         metadata={
                             "name": "exclusionIdentifier",
                             "type": "Element",
                             "required": True,
                             "min_length": 0,
                             "max_length": 1,
-                        },
+                        }
                     )
-                    location_id: None | str = field(
-                        default=None,
+                    location_id: str = field(
                         metadata={
                             "name": "locationId",
                             "type": "Element",
                             "required": True,
                             "min_length": 3,
                             "max_length": 5,
-                        },
+                        }
                     )
                     airport_city_qualifier: None | str = field(
                         default=None,
@@ -7671,23 +7412,21 @@ class FareMasterPricerTravelBoardSearch:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class UnitNumberDetail:
-                    number_of_units: None | Decimal = field(
-                        default=None,
+                    number_of_units: Decimal = field(
                         metadata={
                             "name": "numberOfUnits",
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
-                    type_of_unit: None | str = field(
-                        default=None,
+                    type_of_unit: str = field(
                         metadata={
                             "name": "typeOfUnit",
                             "type": "Element",
                             "required": True,
                             "min_length": 1,
                             "max_length": 3,
-                        },
+                        }
                     )

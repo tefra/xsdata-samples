@@ -7,7 +7,7 @@ from .search_intention_enum_simple import SearchIntentionEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SearchIntentionEnum:
     """
     This meta-class allows for the definition of a dedicated search
@@ -29,11 +29,10 @@ class SearchIntentionEnum:
     class Meta:
         name = "SEARCH-INTENTION-ENUM"
 
-    value: None | SearchIntentionEnumSimple = field(
-        default=None,
+    value: SearchIntentionEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

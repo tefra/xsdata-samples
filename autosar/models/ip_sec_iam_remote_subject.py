@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IpSecIamRemoteSubject:
     """
     This meta-class defines the proxy information about the remote node in
@@ -86,14 +86,13 @@ class IpSecIamRemoteSubject:
     class Meta:
         name = "IP-SEC-IAM-REMOTE-SUBJECT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | IpSecIamRemoteSubject.ShortNameFragments = (
         field(
@@ -194,7 +193,7 @@ class IpSecIamRemoteSubject:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -205,7 +204,7 @@ class IpSecIamRemoteSubject:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -216,7 +215,7 @@ class IpSecIamRemoteSubject:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LocalIpSecRuleRefs:
         local_ip_sec_rule_ref: list[
             IpSecIamRemoteSubject.LocalIpSecRuleRefs.LocalIpSecRuleRef
@@ -229,13 +228,12 @@ class IpSecIamRemoteSubject:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class LocalIpSecRuleRef(Ref):
-            dest: None | IpSecRuleSubtypesEnum = field(
-                default=None,
+            dest: IpSecRuleSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

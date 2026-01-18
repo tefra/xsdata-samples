@@ -9,29 +9,25 @@ from travelport.models.vehicle_upsell_search_availability_req import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleUpsellSearchServicePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | VehicleUpsellSearchServicePortTypeServiceInput.Body = field(
-        default=None,
+    body: VehicleUpsellSearchServicePortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        vehicle_upsell_search_availability_req: (
-            None | VehicleUpsellSearchAvailabilityReq
-        ) = field(
-            default=None,
+        vehicle_upsell_search_availability_req: VehicleUpsellSearchAvailabilityReq = field(
             metadata={
                 "name": "VehicleUpsellSearchAvailabilityReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-            },
+            }
         )

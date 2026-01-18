@@ -10,7 +10,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Baseline:
     """
     Specification of the baseline of the AUTOSAR standard this Data
@@ -82,7 +82,7 @@ class Baseline:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StandardRevisions:
         """
         :ivar standard_revision: Specifies a combination of revisions of
@@ -102,7 +102,7 @@ class Baseline:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CustomSpecificationRefs:
         custom_specification_ref: list[
             Baseline.CustomSpecificationRefs.CustomSpecificationRef
@@ -115,18 +115,17 @@ class Baseline:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CustomSpecificationRef(Ref):
-            dest: None | DocumentationSubtypesEnum = field(
-                default=None,
+            dest: DocumentationSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CustomSdgDefRefs:
         custom_sdg_def_ref: list[Baseline.CustomSdgDefRefs.CustomSdgDefRef] = (
             field(
@@ -139,13 +138,12 @@ class Baseline:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CustomSdgDefRef(Ref):
-            dest: None | SdgDefSubtypesEnum = field(
-                default=None,
+            dest: SdgDefSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

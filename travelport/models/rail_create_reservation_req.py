@@ -17,7 +17,7 @@ from travelport.models.rail_specific_seat_assignment import (
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
     """
     Creates a rail reservation with the host.
@@ -42,14 +42,13 @@ class RailCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
-    rail_pricing_solution: None | RailPricingSolution = field(
-        default=None,
+    rail_pricing_solution: RailPricingSolution = field(
         metadata={
             "name": "RailPricingSolution",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
             "required": True,
-        },
+        }
     )
     payment: None | Payment1 = field(
         default=None,
@@ -93,11 +92,10 @@ class RailCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "max_occurs": 999,
         },
     )
-    booking_action_type: None | str = field(
-        default=None,
+    booking_action_type: str = field(
         metadata={
             "name": "BookingActionType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

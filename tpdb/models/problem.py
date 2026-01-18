@@ -10,7 +10,7 @@ from tpdb.models.strategy import Strategy
 from tpdb.models.trs import Trs
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Problem:
     """
     This is the root element representing a termination problem.
@@ -26,19 +26,17 @@ class Problem:
     class Meta:
         name = "problem"
 
-    trs: None | Trs = field(
-        default=None,
+    trs: Trs = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    strategy: None | Strategy = field(
-        default=None,
+    strategy: Strategy = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     startterm: None | Startterm = field(
         default=None,
@@ -58,11 +56,10 @@ class Problem:
             "type": "Element",
         },
     )
-    type_value: None | ProblemType = field(
-        default=None,
+    type_value: ProblemType = field(
         metadata={
             "name": "type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

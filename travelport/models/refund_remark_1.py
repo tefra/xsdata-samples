@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RefundRemark1:
     """
     A textual remark displayed in Refund Quote and Refund response.
@@ -20,11 +20,10 @@ class RefundRemark1:
         name = "RefundRemark"
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
-    remark_data: None | str = field(
-        default=None,
+    remark_data: str = field(
         metadata={
             "name": "RemarkData",
             "type": "Element",
             "required": True,
-        },
+        }
     )

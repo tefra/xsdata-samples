@@ -11,7 +11,7 @@ from travelport.models.type_commission_type_5 import TypeCommissionType5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Commission9:
     """
     Identifies the agency commission.
@@ -50,21 +50,19 @@ class Commission9:
             "type": "Attribute",
         },
     )
-    level: None | TypeCommissionLevel5 = field(
-        default=None,
+    level: TypeCommissionLevel5 = field(
         metadata={
             "name": "Level",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    type_value: None | TypeCommissionType5 = field(
-        default=None,
+    type_value: TypeCommissionType5 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     modifier: None | TypeCommissionModifier5 = field(
         default=None,

@@ -21,7 +21,7 @@ from .variable_data_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DdsEventDeployment:
     """
     DDS configuration settings for an Event.
@@ -87,14 +87,13 @@ class DdsEventDeployment:
     class Meta:
         name = "DDS-EVENT-DEPLOYMENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DdsEventDeployment.ShortNameFragments = field(
         default=None,
@@ -199,7 +198,7 @@ class DdsEventDeployment:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -210,7 +209,7 @@ class DdsEventDeployment:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -221,18 +220,17 @@ class DdsEventDeployment:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventRef(Ref):
-        dest: None | VariableDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: VariableDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransportProtocols:
         """
         :ivar transport_protocol: This attribute defines over which

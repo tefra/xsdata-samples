@@ -8,7 +8,7 @@ from travelport.models.air_itinerary_details import AirItineraryDetails
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MerchandisingDetails:
     """
     Rich Content and Branding for a fare brand.

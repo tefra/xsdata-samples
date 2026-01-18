@@ -14,7 +14,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SectionNamePrefix:
     """
     A prefix to be used for generated code artifacts defining a memory
@@ -50,14 +50,13 @@ class SectionNamePrefix:
     class Meta:
         name = "SECTION-NAME-PREFIX"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SectionNamePrefix.ShortNameFragments = field(
         default=None,
@@ -107,7 +106,7 @@ class SectionNamePrefix:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -118,13 +117,12 @@ class SectionNamePrefix:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplementedInRef(Ref):
-        dest: None | DependencyOnArtifactSubtypesEnum = field(
-            default=None,
+        dest: DependencyOnArtifactSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -7,7 +7,7 @@ from .air_submode_enumeration import AirSubmodeEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirSubmode:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

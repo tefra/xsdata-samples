@@ -8,7 +8,7 @@ from travelport.models.segment_1 import Segment1
 __NAMESPACE__ = "http://www.travelport.com/schema/cruise_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CruiseSegment(Segment1):
     """
     An Cruise marketable travel segment.
@@ -35,13 +35,12 @@ class CruiseSegment(Segment1):
     class Meta:
         namespace = "http://www.travelport.com/schema/cruise_v52_0"
 
-    cruise_stay: None | CruiseStay = field(
-        default=None,
+    cruise_stay: CruiseStay = field(
         metadata={
             "name": "CruiseStay",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     vendor: None | str = field(
         default=None,
@@ -61,25 +60,23 @@ class CruiseSegment(Segment1):
             "max_length": 30,
         },
     )
-    origin: None | str = field(
-        default=None,
+    origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        },
+        }
     )
-    destination: None | str = field(
-        default=None,
+    destination: str = field(
         metadata={
             "name": "Destination",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        },
+        }
     )
     departure_time: None | str = field(
         default=None,

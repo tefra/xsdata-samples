@@ -8,7 +8,7 @@ from .t_choreography_activity import TChoreographyActivity
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TChoreographyTask(TChoreographyActivity):
     class Meta:
         name = "tChoreographyTask"

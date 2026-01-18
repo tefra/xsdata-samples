@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeAgencyPayment4:
     """
     Type for Agency Payment.
@@ -23,14 +23,13 @@ class TypeAgencyPayment4:
     class Meta:
         name = "typeAgencyPayment"
 
-    agency_billing_identifier: None | str = field(
-        default=None,
+    agency_billing_identifier: str = field(
         metadata={
             "name": "AgencyBillingIdentifier",
             "type": "Attribute",
             "required": True,
             "max_length": 128,
-        },
+        }
     )
     agency_billing_number: None | str = field(
         default=None,

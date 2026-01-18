@@ -9,7 +9,7 @@ from travelport.models.base_availability_search_rsp import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilitySearchRsp(BaseAvailabilitySearchRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

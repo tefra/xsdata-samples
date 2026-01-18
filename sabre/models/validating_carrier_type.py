@@ -9,7 +9,7 @@ from sabre.models.validating_carrier_prefer_level_type import (
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidatingCarrierType:
     """
     Attributes:
@@ -34,22 +34,20 @@ class ValidatingCarrierType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Preference:
-        code: None | str = field(
-            default=None,
+        code: str = field(
             metadata={
                 "name": "Code",
                 "type": "Attribute",
                 "required": True,
                 "pattern": r"[0-9A-Z]{2,3}",
-            },
+            }
         )
-        level: None | ValidatingCarrierPreferLevelType = field(
-            default=None,
+        level: ValidatingCarrierPreferLevelType = field(
             metadata={
                 "name": "Level",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

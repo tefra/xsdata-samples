@@ -12,7 +12,7 @@ from generali.models.com.generali.xmlns.services.program.feedback_program_servic
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FeedbackProgramServiceFeedbackProgramPoliciesOutputBody:
     class Meta:
         global_type = False

@@ -32,7 +32,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.volume import Volume
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProceedingsSeriesMetadata:
     """
     Container for all information that applies to a specific conference
@@ -43,25 +43,22 @@ class ProceedingsSeriesMetadata:
         name = "proceedings_series_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    series_metadata: None | SeriesMetadata = field(
-        default=None,
+    series_metadata: SeriesMetadata = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     proceedings_title: None | ProceedingsTitle = field(
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     volume: list[Volume] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
             "max_occurs": 2,
             "sequence": 1,
         },

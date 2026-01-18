@@ -10,7 +10,7 @@ from travelport.models.air_solution_changed_info_reason_code import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirSolutionChangedInfo:
     """
     If RetainReservation is None, this will contain the new values returned
@@ -26,19 +26,17 @@ class AirSolutionChangedInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_pricing_solution: None | AirPricingSolution = field(
-        default=None,
+    air_pricing_solution: AirPricingSolution = field(
         metadata={
             "name": "AirPricingSolution",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    reason_code: None | AirSolutionChangedInfoReasonCode = field(
-        default=None,
+    reason_code: AirSolutionChangedInfoReasonCode = field(
         metadata={
             "name": "ReasonCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

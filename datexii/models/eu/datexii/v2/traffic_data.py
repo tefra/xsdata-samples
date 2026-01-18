@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.vehicle_characteristics import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrafficData(BasicData):
     """
     Measured or derived values relating to traffic or individual vehicle

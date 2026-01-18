@@ -7,7 +7,7 @@ from .show_resource_long_name_enum_simple import ShowResourceLongNameEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShowResourceLongNameEnum:
     """
     This enumerator specifies if the long name of the reference target
@@ -29,11 +29,10 @@ class ShowResourceLongNameEnum:
     class Meta:
         name = "SHOW-RESOURCE-LONG-NAME-ENUM"
 
-    value: None | ShowResourceLongNameEnumSimple = field(
-        default=None,
+    value: ShowResourceLongNameEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

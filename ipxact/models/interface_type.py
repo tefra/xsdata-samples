@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InterfaceType:
     """
     A representation of a component/bus interface relation; i.e. a bus
@@ -20,21 +20,19 @@ class InterfaceType:
     class Meta:
         name = "interfaceType"
 
-    component_instance_ref: None | str = field(
-        default=None,
+    component_instance_ref: str = field(
         metadata={
             "name": "componentInstanceRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    bus_ref: None | str = field(
-        default=None,
+    bus_ref: str = field(
         metadata={
             "name": "busRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,

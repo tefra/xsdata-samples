@@ -9,7 +9,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.inline_graphic import InlineGraphic
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrivateChar:
     """
     <div> <h3>Private Character (Custom or Unicode)</h3> </div>.

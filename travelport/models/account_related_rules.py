@@ -8,7 +8,7 @@ from travelport.models.routing_rules import RoutingRules
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccountRelatedRules:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

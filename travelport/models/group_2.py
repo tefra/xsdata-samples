@@ -10,7 +10,7 @@ from travelport.models.type_structured_address_3 import TypeStructuredAddress3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Group2:
     """
     Represents a traveler group for Group booking and all their
@@ -50,15 +50,14 @@ class Group2:
         name = "Group"
         namespace = "http://www.travelport.com/schema/common_v32_0"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Element",
             "required": True,
             "min_length": 1,
             "white_space": "collapse",
-        },
+        }
     )
     delivery_info: None | DeliveryInfo2 = field(
         default=None,
@@ -114,13 +113,12 @@ class Group2:
             "max_length": 5,
         },
     )
-    group_size: None | int = field(
-        default=None,
+    group_size: int = field(
         metadata={
             "name": "GroupSize",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     el_stat: None | TypeElementStatus3 = field(
         default=None,
@@ -137,24 +135,22 @@ class Group2:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ssrref:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BookingTravelerRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

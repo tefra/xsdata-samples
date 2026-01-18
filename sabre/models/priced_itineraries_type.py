@@ -7,7 +7,7 @@ from sabre.models.priced_itinerary_type import PricedItineraryType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricedItinerariesType:
     """
     Container for priced itineraries.

@@ -7,7 +7,7 @@ from sdmx_ml.models.data_key_type import DataKeyType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataKeySetType:
     """
     DataKeySetType defines a collection of full or partial data keys
@@ -29,11 +29,10 @@ class DataKeySetType:
             "min_occurs": 1,
         },
     )
-    is_included: None | bool = field(
-        default=None,
+    is_included: bool = field(
         metadata={
             "name": "isIncluded",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -9,7 +9,7 @@ from .terminate_subscription_request_structure import (
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TerminateSubscriptionRequest(TerminateSubscriptionRequestStructure):
     class Meta:
         namespace = "http://www.siri.org.uk/siri"

@@ -12,7 +12,7 @@ from .unit_subtypes_enum import UnitSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PhysConstrs:
     """
     This meta-class represents the ability to express physical constraints.
@@ -120,7 +120,7 @@ class PhysConstrs:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ScaleConstrs:
         scale_constr: list[ScaleConstr] = field(
             default_factory=list,
@@ -131,13 +131,12 @@ class PhysConstrs:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnitRef(Ref):
-        dest: None | UnitSubtypesEnum = field(
-            default=None,
+        dest: UnitSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

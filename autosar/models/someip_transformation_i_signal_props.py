@@ -15,7 +15,7 @@ from .someip_transformation_i_signal_props_conditional import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipTransformationISignalProps:
     """
     The class SOMEIPTransformationISignalProps specifies ISignal specific
@@ -111,7 +111,7 @@ class SomeipTransformationISignalProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SomeipTransformationISignalPropsVariants:
         someip_transformation_i_signal_props_conditional: list[
             SomeipTransformationISignalPropsConditional

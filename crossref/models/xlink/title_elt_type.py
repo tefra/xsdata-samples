@@ -8,7 +8,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.w3.org/1999/xlink"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TitleEltType:
     """
     :ivar type_value:

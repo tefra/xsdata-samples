@@ -8,7 +8,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.head import Head
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DoiBatch:
     """
     Top level element for a metadata record submission.
@@ -21,19 +21,17 @@ class DoiBatch:
         name = "doi_batch"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    head: None | Head = field(
-        default=None,
+    head: Head = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    body: None | Body = field(
-        default=None,
+    body: Body = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     version: str = field(
         init=False,

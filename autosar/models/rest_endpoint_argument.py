@@ -13,7 +13,7 @@ from .rest_string_property_def import RestStringPropertyDef
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RestEndpointArgument:
     """
     This meta-class represents the ability to define an argument for a REST
@@ -70,7 +70,7 @@ class RestEndpointArgument:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Parameter:
         rest_array_property_def: None | RestArrayPropertyDef = field(
             default=None,

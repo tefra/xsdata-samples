@@ -8,7 +8,7 @@ from ipxact.models.edge_value_type import EdgeValueType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimingConstraint:
     """
     Defines a timing constraint for the associated port.
@@ -32,13 +32,12 @@ class TimingConstraint:
         name = "timingConstraint"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: None | float = field(
-        default=None,
+    value: float = field(
         metadata={
             "required": True,
             "min_inclusive": 0.0,
             "max_inclusive": 100.0,
-        },
+        }
     )
     clock_edge: None | EdgeValueType = field(
         default=None,
@@ -54,15 +53,14 @@ class TimingConstraint:
             "type": "Attribute",
         },
     )
-    clock_name: None | str = field(
-        default=None,
+    clock_name: str = field(
         metadata={
             "name": "clockName",
             "type": "Attribute",
             "required": True,
             "white_space": "collapse",
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
-        },
+        }
     )
     id: None | str = field(
         default=None,

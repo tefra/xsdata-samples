@@ -50,7 +50,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RiskElementRoleType(BaseReferenceComponentOptionalType):
     building: None | BuildingType = field(
         default=None,

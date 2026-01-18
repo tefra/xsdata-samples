@@ -10,7 +10,7 @@ from travelport.models.permitted_providers_1 import PermittedProviders1
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelRulesModifiers:
     """
     Controls and switches for the Hotel Rules request.

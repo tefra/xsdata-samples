@@ -19,7 +19,7 @@ from datexii.models.eu.datexii.v2.subjects import Subjects
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Roadworks(OperatorAction):
     """
     Highway maintenance, installation and construction activities that may

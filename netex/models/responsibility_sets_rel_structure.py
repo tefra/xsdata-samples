@@ -10,7 +10,7 @@ from .responsibility_set_ref import ResponsibilitySetRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResponsibilitySetsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "responsibilitySets_RelStructure"

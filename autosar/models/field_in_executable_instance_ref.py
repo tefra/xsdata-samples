@@ -15,7 +15,7 @@ from .sw_component_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FieldInExecutableInstanceRef:
     """
     :ivar context_root_sw_component_prototype_ref:
@@ -93,46 +93,42 @@ class FieldInExecutableInstanceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextRootSwComponentPrototypeRef(Ref):
-        dest: None | RootSwComponentPrototypeSubtypesEnum = field(
-            default=None,
+        dest: RootSwComponentPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextSwComponentPrototypeRef(Ref):
-        dest: None | SwComponentPrototypeSubtypesEnum = field(
-            default=None,
+        dest: SwComponentPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextRPortPrototypeRef(Ref):
-        dest: None | RPortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: RPortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetFieldRef(Ref):
-        dest: None | FieldSubtypesEnum = field(
-            default=None,
+        dest: FieldSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

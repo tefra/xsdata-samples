@@ -7,7 +7,7 @@ from .mapping_scope_enum_simple import MappingScopeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MappingScopeEnum:
     """
     Defines the scope for the mapping constraints.
@@ -28,11 +28,10 @@ class MappingScopeEnum:
     class Meta:
         name = "MAPPING-SCOPE-ENUM"
 
-    value: None | MappingScopeEnumSimple = field(
-        default=None,
+    value: MappingScopeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

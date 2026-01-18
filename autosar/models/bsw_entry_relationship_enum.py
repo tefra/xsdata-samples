@@ -7,7 +7,7 @@ from .bsw_entry_relationship_enum_simple import BswEntryRelationshipEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswEntryRelationshipEnum:
     """
     :ivar value:
@@ -26,11 +26,10 @@ class BswEntryRelationshipEnum:
     class Meta:
         name = "BSW-ENTRY-RELATIONSHIP-ENUM"
 
-    value: None | BswEntryRelationshipEnumSimple = field(
-        default=None,
+    value: BswEntryRelationshipEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

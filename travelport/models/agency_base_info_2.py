@@ -7,7 +7,7 @@ from travelport.models.phone_2 import Phone2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgencyBaseInfo2:
     """
     Information relating to Agency.

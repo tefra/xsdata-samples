@@ -37,7 +37,7 @@ from .ucm_module_instantiation import UcmModuleInstantiation
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Machine:
     """
     Machine that represents an Adaptive Autosar Software Stack.
@@ -119,14 +119,13 @@ class Machine:
     class Meta:
         name = "MACHINE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | Machine.ShortNameFragments = field(
         default=None,
@@ -275,7 +274,7 @@ class Machine:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -286,7 +285,7 @@ class Machine:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -297,7 +296,7 @@ class Machine:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EnvironmentVariables:
         tag_with_optional_value: list[TagWithOptionalValue] = field(
             default_factory=list,
@@ -308,18 +307,17 @@ class Machine:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MachineDesignRef(Ref):
-        dest: None | MachineDesignSubtypesEnum = field(
-            default=None,
+        dest: MachineDesignSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModuleInstantiations:
         crypto_module_instantiation: list[CryptoModuleInstantiation] = field(
             default_factory=list,
@@ -404,7 +402,7 @@ class Machine:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Processors:
         processor: list[Processor] = field(
             default_factory=list,
@@ -415,7 +413,7 @@ class Machine:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecureCommunicationDeployments:
         sec_oc_deployment: list[SecOcDeployment] = field(
             default_factory=list,

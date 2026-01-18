@@ -15,7 +15,7 @@ from .transmission_mode_declaration import TransmissionModeDeclaration
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IPduTiming:
     """
     AUTOSAR COM provides the possibility to define two different

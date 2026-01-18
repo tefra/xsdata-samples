@@ -28,7 +28,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AclObjectSet:
     """
     This meta class represents the ability to denote a set of objects for
@@ -133,14 +133,13 @@ class AclObjectSet:
     class Meta:
         name = "ACL-OBJECT-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | AclObjectSet.ShortNameFragments = field(
         default=None,
@@ -311,7 +310,7 @@ class AclObjectSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -322,7 +321,7 @@ class AclObjectSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -333,7 +332,7 @@ class AclObjectSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -362,7 +361,7 @@ class AclObjectSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AclObjectClasss:
         """
         :ivar acl_object_class: This specifies that the considered
@@ -378,18 +377,17 @@ class AclObjectSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CollectionRef(Ref):
-        dest: None | CollectionSubtypesEnum = field(
-            default=None,
+        dest: CollectionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DerivedFromBlueprintRefs:
         derived_from_blueprint_ref: list[
             AclObjectSet.DerivedFromBlueprintRefs.DerivedFromBlueprintRef
@@ -402,18 +400,17 @@ class AclObjectSet:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DerivedFromBlueprintRef(Ref):
-            dest: None | AtpBlueprintSubtypesEnum = field(
-                default=None,
+            dest: AtpBlueprintSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EngineeringObjects:
         autosar_engineering_object: list[AutosarEngineeringObject] = field(
             default_factory=list,
@@ -424,7 +421,7 @@ class AclObjectSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ObjectDefinitionRefs:
         object_definition_ref: list[
             AclObjectSet.ObjectDefinitionRefs.ObjectDefinitionRef
@@ -437,18 +434,17 @@ class AclObjectSet:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ObjectDefinitionRef(Ref):
-            dest: None | AtpDefinitionSubtypesEnum = field(
-                default=None,
+            dest: AtpDefinitionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ObjectDefintionRefs:
         object_defintion_ref: list[
             AclObjectSet.ObjectDefintionRefs.ObjectDefintionRef
@@ -461,18 +457,17 @@ class AclObjectSet:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ObjectDefintionRef(Ref):
-            dest: None | AtpDefinitionSubtypesEnum = field(
-                default=None,
+            dest: AtpDefinitionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ObjectRefs:
         object_ref: list[AclObjectSet.ObjectRefs.ObjectRef] = field(
             default_factory=list,
@@ -483,13 +478,12 @@ class AclObjectSet:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ObjectRef(Ref):
-            dest: None | ReferrableSubtypesEnum = field(
-                default=None,
+            dest: ReferrableSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

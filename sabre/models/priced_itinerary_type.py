@@ -14,7 +14,7 @@ from sabre.models.unflown_price_type import UnflownPriceType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricedItineraryType:
     """
     Itinerary with pricing information.
@@ -97,13 +97,12 @@ class PricedItineraryType:
             "type": "Attribute",
         },
     )
-    sequence_number: None | int = field(
-        default=None,
+    sequence_number: int = field(
         metadata={
             "name": "SequenceNumber",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     origin_destination_rph: None | str = field(
         default=None,
@@ -135,7 +134,7 @@ class PricedItineraryType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AirItineraryPricingInfo(AirItineraryPricingInfoType):
         """
         Attributes:
@@ -151,7 +150,7 @@ class PricedItineraryType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpaExtensions:
         """
         Attributes:
@@ -247,7 +246,7 @@ class PricedItineraryType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AdditionalFares:
             """
             Attributes:
@@ -297,7 +296,7 @@ class PricedItineraryType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class AirItineraryPricingInfo(AirItineraryPricingInfoType):
                 """
                 Attributes:
@@ -314,7 +313,7 @@ class PricedItineraryType:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Ops:
             """
             Attributes:
@@ -334,16 +333,15 @@ class PricedItineraryType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            action_code: None | int = field(
-                default=None,
+            action_code: int = field(
                 metadata={
                     "name": "ActionCode",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FareTypes:
                 fare_type: list[
                     PricedItineraryType.TpaExtensions.Ops.FareTypes.FareType
@@ -357,35 +355,33 @@ class PricedItineraryType:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FareType:
-                    code: None | str = field(
-                        default=None,
+                    code: str = field(
                         metadata={
                             "name": "Code",
                             "type": "Attribute",
                             "required": True,
                             "pattern": r"[0-9A-Z]{1,3}",
-                        },
+                        }
                     )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ItinSource:
             """
             Attributes:
                 source: The name of the source.
             """
 
-            source: None | str = field(
-                default=None,
+            source: str = field(
                 metadata={
                     "name": "Source",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ValueBucket:
             """
             Attributes:
@@ -408,24 +404,23 @@ class PricedItineraryType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ValidatingCarrier:
             """
             Attributes:
                 code: Identifies a company by the company code.
             """
 
-            code: None | str = field(
-                default=None,
+            code: str = field(
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[A-Z][0-9A-Z]|[0-9A-Z][A-Z][0-9A-Z]?|[A-Za-z]{0}",
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DiversitySwapper:
             """
             Attributes:
@@ -433,16 +428,15 @@ class PricedItineraryType:
                     itins are sorted in Diversity Swapper
             """
 
-            weighed_price_amount: None | float = field(
-                default=None,
+            weighed_price_amount: float = field(
                 metadata={
                     "name": "WeighedPriceAmount",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Failed:
             """
             Attributes:

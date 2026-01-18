@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Type:
     class Meta:
         name = "type"
@@ -22,7 +22,7 @@ class Type:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeArrow:
     class Meta:
         global_type = False

@@ -7,7 +7,7 @@ from sdmx_ml.models.group_dimension_base_type import GroupDimensionBaseType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GroupDimensionType(GroupDimensionBaseType):
     """
     GroupDimensionType defines a dimension component with a group key
@@ -25,13 +25,12 @@ class GroupDimensionType(GroupDimensionBaseType):
         defined.
     """
 
-    dimension_reference: None | str = field(
-        default=None,
+    dimension_reference: str = field(
         metadata={
             "name": "DimensionReference",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r"[A-Za-z][A-Za-z0-9_\-]*",
-        },
+        }
     )

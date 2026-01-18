@@ -10,7 +10,7 @@ from travelport.models.option_journey_details import OptionJourneyDetails
 __NAMESPACE__ = "http://www.travelport.com/schema/cruise_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OptionalService2:
     """
     Featues/Optionals supported with the cruise booked.
@@ -73,14 +73,13 @@ class OptionalService2:
             "max_occurs": 5,
         },
     )
-    feature_type: None | str = field(
-        default=None,
+    feature_type: str = field(
         metadata={
             "name": "FeatureType",
             "type": "Attribute",
             "required": True,
             "length": 1,
-        },
+        }
     )
     status: None | str = field(
         default=None,

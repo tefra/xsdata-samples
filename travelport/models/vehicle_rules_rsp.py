@@ -18,7 +18,7 @@ from travelport.models.vehicle import Vehicle
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleRulesRsp(BaseSearchRsp1):
     """
     The rules associated with a vehicle rental rate.
@@ -52,13 +52,12 @@ class VehicleRulesRsp(BaseSearchRsp1):
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    vehicle: None | Vehicle = field(
-        default=None,
+    vehicle: Vehicle = field(
         metadata={
             "name": "Vehicle",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     operation_time: list[OperationTime] = field(
         default_factory=list,
@@ -146,7 +145,7 @@ class VehicleRulesRsp(BaseSearchRsp1):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StartEndTimes:
         """
         Parameters
@@ -181,7 +180,7 @@ class VehicleRulesRsp(BaseSearchRsp1):
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RentalPeriodRules:
         """
         Parameters
@@ -216,7 +215,7 @@ class VehicleRulesRsp(BaseSearchRsp1):
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PrePayCancelInfo:
         """
         Parameters
@@ -236,13 +235,12 @@ class VehicleRulesRsp(BaseSearchRsp1):
             Number of rental days (e.g. 001 up to 365), 1P only.
         """
 
-        code: None | int = field(
-            default=None,
+        code: int = field(
             metadata={
                 "name": "Code",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         amount: None | str = field(
             default=None,
@@ -273,7 +271,7 @@ class VehicleRulesRsp(BaseSearchRsp1):
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PaymentRule(TypeDepositGuarantee):
         """
         Parameters

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://docs.oasis-open.org/wsrf/bf-2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseFaultTypeFaultCause:
     class Meta:
         global_type = False

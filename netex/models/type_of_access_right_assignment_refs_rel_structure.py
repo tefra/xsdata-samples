@@ -9,7 +9,7 @@ from .type_of_access_right_assignment_ref import TypeOfAccessRightAssignmentRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfAccessRightAssignmentRefsRelStructure(
     OneToManyRelationshipStructure
 ):

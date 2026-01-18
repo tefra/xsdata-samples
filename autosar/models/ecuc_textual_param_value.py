@@ -15,7 +15,7 @@ from .verbatim_string import VerbatimString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucTextualParamValue:
     """
     Holding a value which is not subject to variation.
@@ -119,18 +119,17 @@ class EcucTextualParamValue:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DefinitionRef(Ref):
-        dest: None | EcucParameterDefSubtypesEnum = field(
-            default=None,
+        dest: EcucParameterDefSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

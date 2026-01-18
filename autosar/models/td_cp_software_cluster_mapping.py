@@ -20,7 +20,7 @@ from .timing_description_subtypes_enum import TimingDescriptionSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdCpSoftwareClusterMapping:
     """
     This is used to specify a mapping between a software cluster that
@@ -92,14 +92,13 @@ class TdCpSoftwareClusterMapping:
     class Meta:
         name = "TD-CP-SOFTWARE-CLUSTER-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | TdCpSoftwareClusterMapping.ShortNameFragments
@@ -216,7 +215,7 @@ class TdCpSoftwareClusterMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -227,7 +226,7 @@ class TdCpSoftwareClusterMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -238,18 +237,17 @@ class TdCpSoftwareClusterMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProviderRef(Ref):
-        dest: None | CpSoftwareClusterSubtypesEnum = field(
-            default=None,
+        dest: CpSoftwareClusterSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequestorRefs:
         requestor_ref: list[
             TdCpSoftwareClusterMapping.RequestorRefs.RequestorRef
@@ -262,24 +260,22 @@ class TdCpSoftwareClusterMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RequestorRef(Ref):
-            dest: None | CpSoftwareClusterSubtypesEnum = field(
-                default=None,
+            dest: CpSoftwareClusterSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingDescriptionRef(Ref):
-        dest: None | TimingDescriptionSubtypesEnum = field(
-            default=None,
+        dest: TimingDescriptionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

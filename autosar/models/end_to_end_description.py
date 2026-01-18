@@ -8,7 +8,7 @@ from .positive_integer import PositiveInteger
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EndToEndDescription:
     """
     This meta-class contains information about end-to-end protection.
@@ -183,7 +183,7 @@ class EndToEndDescription:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataIds:
         """
         :ivar data_id: This represents a unique numerical identifier.

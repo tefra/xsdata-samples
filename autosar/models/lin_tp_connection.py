@@ -16,7 +16,7 @@ from .tp_connection_ident import TpConnectionIdent
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinTpConnection:
     """
     A LinTP channel represents an internal path for the transmission or
@@ -235,51 +235,47 @@ class LinTpConnection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataPduRef(Ref):
-        dest: None | NPduSubtypesEnum = field(
-            default=None,
+        dest: NPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlowControlRef(Ref):
-        dest: None | NPduSubtypesEnum = field(
-            default=None,
+        dest: NPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LinTpNSduRef(Ref):
-        dest: None | IPduSubtypesEnum = field(
-            default=None,
+        dest: IPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MulticastRef(Ref):
-        dest: None | TpAddressSubtypesEnum = field(
-            default=None,
+        dest: TpAddressSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReceiverRefs:
         receiver_ref: list[LinTpConnection.ReceiverRefs.ReceiverRef] = field(
             default_factory=list,
@@ -290,24 +286,22 @@ class LinTpConnection:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ReceiverRef(Ref):
-            dest: None | LinTpNodeSubtypesEnum = field(
-                default=None,
+            dest: LinTpNodeSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransmitterRef(Ref):
-        dest: None | LinTpNodeSubtypesEnum = field(
-            default=None,
+        dest: LinTpNodeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

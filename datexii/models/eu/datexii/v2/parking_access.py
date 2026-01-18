@@ -19,7 +19,7 @@ from datexii.models.eu.datexii.v2.road import Road
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingAccess:
     """
     Describes one entrance or exit (or both) to a parking site.
@@ -147,10 +147,9 @@ class ParkingAccess:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

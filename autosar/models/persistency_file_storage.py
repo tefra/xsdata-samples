@@ -27,7 +27,7 @@ from .uri_string import UriString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersistencyFileStorage:
     """
     This meta-class comes with the ability to define a collection of single
@@ -108,14 +108,13 @@ class PersistencyFileStorage:
     class Meta:
         name = "PERSISTENCY-FILE-STORAGE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | PersistencyFileStorage.ShortNameFragments = (
         field(
@@ -258,7 +257,7 @@ class PersistencyFileStorage:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -269,7 +268,7 @@ class PersistencyFileStorage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -280,7 +279,7 @@ class PersistencyFileStorage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RedundancyHandlings:
         persistency_redundancy_crc: list[PersistencyRedundancyCrc] = field(
             default_factory=list,
@@ -309,7 +308,7 @@ class PersistencyFileStorage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Files:
         persistency_file: list[PersistencyFile] = field(
             default_factory=list,

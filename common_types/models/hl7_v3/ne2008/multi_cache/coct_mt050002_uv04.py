@@ -35,7 +35,7 @@ from .coct_mt150003_uv03 import CoctMt150003Uv03Organization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt050002Uv04NonPersonLivingSubject:
     class Meta:
         name = "COCT_MT050002UV04.NonPersonLivingSubject"
@@ -101,13 +101,12 @@ class CoctMt050002Uv04NonPersonLivingSubject:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassNonPersonLivingSubject = field(
-        default=None,
+    class_code: EntityClassNonPersonLivingSubject = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -120,7 +119,7 @@ class CoctMt050002Uv04NonPersonLivingSubject:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt050002Uv04Person:
     class Meta:
         name = "COCT_MT050002UV04.Person"
@@ -206,7 +205,7 @@ class CoctMt050002Uv04Person:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt050002Uv04Patient:
     class Meta:
         name = "COCT_MT050002UV04.Patient"

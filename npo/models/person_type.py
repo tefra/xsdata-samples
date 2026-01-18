@@ -8,35 +8,32 @@ from npo.models.role_type import RoleType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersonType:
     class Meta:
         name = "personType"
 
-    given_name: None | str = field(
-        default=None,
+    given_name: str = field(
         metadata={
             "name": "givenName",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "required": True,
-        },
+        }
     )
-    family_name: None | str = field(
-        default=None,
+    family_name: str = field(
         metadata={
             "name": "familyName",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "required": True,
-        },
+        }
     )
-    role: None | RoleType = field(
-        default=None,
+    role: RoleType = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     gtaa_uri: None | str = field(
         default=None,

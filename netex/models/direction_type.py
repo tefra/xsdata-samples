@@ -7,7 +7,7 @@ from .direction_type_enumeration import DirectionTypeEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DirectionType:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

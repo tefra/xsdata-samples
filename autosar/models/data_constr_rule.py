@@ -9,7 +9,7 @@ from .phys_constrs import PhysConstrs
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataConstrRule:
     """
     This meta-class represents the ability to express one specific data

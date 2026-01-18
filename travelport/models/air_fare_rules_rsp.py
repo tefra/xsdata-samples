@@ -8,7 +8,7 @@ from travelport.models.fare_rule import FareRule
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirFareRulesRsp(BaseRsp1):
     """
     Response to an AirFareRuleReq.

@@ -7,7 +7,7 @@ from travelport.models.type_key_element_2 import TypeKeyElement2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PolicyReference2(TypeKeyElement2):
     """
     Used by the Traveler's employer to administer policy.
@@ -33,25 +33,23 @@ class PolicyReference2(TypeKeyElement2):
         name = "PolicyReference"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
-    value: None | str = field(
-        default=None,
+    value: str = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        },
+        }
     )
     desc: None | str = field(
         default=None,

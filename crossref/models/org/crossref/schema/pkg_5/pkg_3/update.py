@@ -11,7 +11,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.cm_update_type import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Update:
     """
     The DOI of the content being updated (e.g. corrected, retracted, etc.)
@@ -37,20 +37,18 @@ class Update:
         name = "update"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    type_value: None | CmUpdateType = field(
-        default=None,
+    type_value: CmUpdateType = field(
         metadata={
             "name": "type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    date: None | XmlDate = field(
-        default=None,
+    date: XmlDate = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     content: list[object] = field(
         default_factory=list,

@@ -13,7 +13,7 @@ from sabre.models.side_trip_type import SideTripType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginDestinationFlightType:
     """
     Attributes:
@@ -37,32 +37,29 @@ class OriginDestinationFlightType:
         shopped: Specify whether the flight is shopped.
     """
 
-    origin_location: None | RequestLocationType = field(
-        default=None,
+    origin_location: RequestLocationType = field(
         metadata={
             "name": "OriginLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    destination_location: None | RequestLocationType = field(
-        default=None,
+    destination_location: RequestLocationType = field(
         metadata={
             "name": "DestinationLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    airline: None | AirlineType = field(
-        default=None,
+    airline: AirlineType = field(
         metadata={
             "name": "Airline",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     side_trip: None | SideTripType = field(
         default=None,
@@ -113,31 +110,28 @@ class OriginDestinationFlightType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    number: None | int = field(
-        default=None,
+    number: int = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    departure_date_time: None | str = field(
-        default=None,
+    departure_date_time: str = field(
         metadata={
             "name": "DepartureDateTime",
             "type": "Attribute",
             "required": True,
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
-        },
+        }
     )
-    arrival_date_time: None | str = field(
-        default=None,
+    arrival_date_time: str = field(
         metadata={
             "name": "ArrivalDateTime",
             "type": "Attribute",
             "required": True,
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
-        },
+        }
     )
     marriage_status: None | str = field(
         default=None,
@@ -146,14 +140,13 @@ class OriginDestinationFlightType:
             "type": "Attribute",
         },
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
             "pattern": r"[AKO]",
-        },
+        }
     )
     flown: bool = field(
         default=False,

@@ -8,7 +8,7 @@ from sdmx_ml.models.representation_type import RepresentationType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ComponentType(ComponentBaseType):
     """
     ComponentType is an abstract base type for all components.

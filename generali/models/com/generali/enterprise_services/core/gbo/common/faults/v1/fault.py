@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Fault(FaultType):
     """
     <description xmlns="">The fault object used to hold values for an

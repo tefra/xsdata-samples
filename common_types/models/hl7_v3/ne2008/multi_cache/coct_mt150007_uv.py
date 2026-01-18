@@ -22,7 +22,7 @@ from ..core.voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt150007UvPerson:
     class Meta:
         name = "COCT_MT150007UV.Person"
@@ -86,7 +86,7 @@ class CoctMt150007UvPerson:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt150007UvContactParty:
     class Meta:
         name = "COCT_MT150007UV.ContactParty"
@@ -159,17 +159,16 @@ class CoctMt150007UvContactParty:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassContact = field(
-        default=None,
+    class_code: RoleClassContact = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt150007UvOrganization:
     class Meta:
         name = "COCT_MT150007UV.Organization"
@@ -236,13 +235,12 @@ class CoctMt150007UvOrganization:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassOrganization = field(
-        default=None,
+    class_code: EntityClassOrganization = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,

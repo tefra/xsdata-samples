@@ -13,21 +13,20 @@ from .vehicle_sharing_ref import VehicleSharingRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleSharingServiceVersionStructure(
     CommonVehicleServiceVersionStructure
 ):
     class Meta:
         name = "VehicleSharingService_VersionStructure"
 
-    vehicle_sharing_ref: None | VehicleSharingRef = field(
-        default=None,
+    vehicle_sharing_ref: VehicleSharingRef = field(
         metadata={
             "name": "VehicleSharingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     sharing_policy_url: None | str = field(
         default=None,

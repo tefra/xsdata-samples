@@ -9,7 +9,7 @@ from .tbody import Tbody
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Tgroup:
     """
     This meta-class represents the ability to denote a table section.

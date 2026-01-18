@@ -8,7 +8,7 @@ from travelport.models.calculate_tax_result import CalculateTaxResult
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CalculateTaxRsp(BaseRsp1):
     """
     Response containg calculated total of base prices and taxes.
@@ -17,11 +17,10 @@ class CalculateTaxRsp(BaseRsp1):
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    calculate_tax_result: None | CalculateTaxResult = field(
-        default=None,
+    calculate_tax_result: CalculateTaxResult = field(
         metadata={
             "name": "CalculateTaxResult",
             "type": "Element",
             "required": True,
-        },
+        }
     )

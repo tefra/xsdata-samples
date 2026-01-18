@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordHistorySearchModifiers:
     """
     Controls and switches for the Universal Record history request.
@@ -87,21 +87,19 @@ class UniversalRecordHistorySearchModifiers:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModifiedRange:
-        modified_start: None | XmlDate = field(
-            default=None,
+        modified_start: XmlDate = field(
             metadata={
                 "name": "ModifiedStart",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
-        modified_end: None | XmlDate = field(
-            default=None,
+        modified_end: XmlDate = field(
             metadata={
                 "name": "ModifiedEnd",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )

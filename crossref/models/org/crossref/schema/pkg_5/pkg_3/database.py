@@ -13,7 +13,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.dataset import Dataset
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Database:
     """
     database is the top level element for deposit of metadata about one or
@@ -24,12 +24,11 @@ class Database:
         name = "database"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    database_metadata: None | DatabaseMetadata = field(
-        default=None,
+    database_metadata: DatabaseMetadata = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     dataset: list[Dataset] = field(
         default_factory=list,

@@ -20,7 +20,7 @@ from .sw_data_def_props import SwDataDefProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticDataElement:
     """
     This meta-class represents the ability to describe a concrete piece of
@@ -97,14 +97,13 @@ class DiagnosticDataElement:
     class Meta:
         name = "DIAGNOSTIC-DATA-ELEMENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DiagnosticDataElement.ShortNameFragments = (
         field(
@@ -227,7 +226,7 @@ class DiagnosticDataElement:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -238,7 +237,7 @@ class DiagnosticDataElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

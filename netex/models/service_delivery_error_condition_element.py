@@ -9,7 +9,7 @@ from .service_delivery_error_condition_structure import (
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceDeliveryErrorConditionElement(
     ServiceDeliveryErrorConditionStructure
 ):

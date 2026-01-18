@@ -13,7 +13,7 @@ from travelport.models.vendor_location_1 import VendorLocation1
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelSuperShopperRsp(BaseSearchRsp1):
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"

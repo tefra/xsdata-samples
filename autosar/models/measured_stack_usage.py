@@ -24,7 +24,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MeasuredStackUsage:
     """
     The stack usage has been measured.
@@ -104,14 +104,13 @@ class MeasuredStackUsage:
     class Meta:
         name = "MEASURED-STACK-USAGE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | MeasuredStackUsage.ShortNameFragments = field(
         default=None,
@@ -266,7 +265,7 @@ class MeasuredStackUsage:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -277,7 +276,7 @@ class MeasuredStackUsage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -288,24 +287,22 @@ class MeasuredStackUsage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExecutableEntityRef(Ref):
-        dest: None | ExecutableEntitySubtypesEnum = field(
-            default=None,
+        dest: ExecutableEntitySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwElementRef(Ref):
-        dest: None | HwElementSubtypesEnum = field(
-            default=None,
+        dest: HwElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

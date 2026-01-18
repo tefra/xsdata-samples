@@ -13,7 +13,7 @@ from .service_link_ref import ServiceLinkRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OnwardServiceLinkDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "OnwardServiceLink_DerivedViewStructure"

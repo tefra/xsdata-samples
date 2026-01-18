@@ -30,7 +30,7 @@ from .wire_link_ref import WireLinkRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinkOnSectionVersionedChildStructure(
     LinkInLinkSequenceVersionedChildStructure
 ):

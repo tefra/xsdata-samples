@@ -13,7 +13,7 @@ from travelport.models.type_vehicle_transmission import TypeVehicleTransmission
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleUpsellOffer:
     """
     Offer data of Vehicle which is used to send an upsell request.
@@ -50,37 +50,33 @@ class VehicleUpsellOffer:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    air_conditioning: None | bool = field(
-        default=None,
+    air_conditioning: bool = field(
         metadata={
             "name": "AirConditioning",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    transmission_type: None | TypeVehicleTransmission = field(
-        default=None,
+    transmission_type: TypeVehicleTransmission = field(
         metadata={
             "name": "TransmissionType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    vehicle_class: None | TypeVehicleClass = field(
-        default=None,
+    vehicle_class: TypeVehicleClass = field(
         metadata={
             "name": "VehicleClass",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    category: None | TypeVehicleCategory = field(
-        default=None,
+    category: TypeVehicleCategory = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     door_count: None | TypeDoorCount = field(
         default=None,

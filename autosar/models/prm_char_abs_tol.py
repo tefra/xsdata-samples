@@ -7,7 +7,7 @@ from .numerical_value import NumericalValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrmCharAbsTol:
     """
     The parameter is specified as ablolute value with a tolerance.

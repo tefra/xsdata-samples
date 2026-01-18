@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InstalmentPlansType:
     instalment_plan: list[InstalmentPlansTypeInstalmentPlan] = field(
         default_factory=list,

@@ -7,7 +7,7 @@ from .service_provider_enum_simple import ServiceProviderEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceProviderEnum:
     """
     This represents a list of possible service providers.
@@ -28,11 +28,10 @@ class ServiceProviderEnum:
     class Meta:
         name = "SERVICE-PROVIDER-ENUM"
 
-    value: None | ServiceProviderEnumSimple = field(
-        default=None,
+    value: ServiceProviderEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

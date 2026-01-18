@@ -16,7 +16,7 @@ from travelport.models.type_unstructured_address import TypeUnstructuredAddress
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelProperty:
     """
     The hotel property.
@@ -121,23 +121,21 @@ class HotelProperty:
             "type": "Element",
         },
     )
-    hotel_chain: None | str = field(
-        default=None,
+    hotel_chain: str = field(
         metadata={
             "name": "HotelChain",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
-    hotel_code: None | str = field(
-        default=None,
+    hotel_code: str = field(
         metadata={
             "name": "HotelCode",
             "type": "Attribute",
             "required": True,
             "max_length": 32,
-        },
+        }
     )
     hotel_location: None | str = field(
         default=None,

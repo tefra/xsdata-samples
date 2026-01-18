@@ -20,7 +20,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VesselType(VehicleType):
     passenger_capacity: None | NumberType = field(
         default=None,

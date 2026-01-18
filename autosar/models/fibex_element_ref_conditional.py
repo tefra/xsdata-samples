@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FibexElementRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -66,13 +66,12 @@ class FibexElementRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FibexElementRef(Ref):
-        dest: None | FibexElementSubtypesEnum = field(
-            default=None,
+        dest: FibexElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

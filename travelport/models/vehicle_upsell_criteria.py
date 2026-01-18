@@ -9,7 +9,7 @@ from travelport.models.vehicle_upsell_update import VehicleUpsellUpdate
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleUpsellCriteria:
     """
     Wraps all Upsell Admin commands related to Vehicle.

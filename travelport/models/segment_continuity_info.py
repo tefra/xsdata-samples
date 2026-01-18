@@ -10,7 +10,7 @@ from travelport.models.continuity_override_remark import (
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SegmentContinuityInfo:
     """
     This container holds Arnks and segment continuity remarks.

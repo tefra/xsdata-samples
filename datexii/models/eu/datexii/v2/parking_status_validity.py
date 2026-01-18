@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.overall_period import OverallPeriod
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingStatusValidity:
     """
     To be used only for historical or forecasted data.

@@ -14,7 +14,7 @@ from datexii.models.eu.datexii.v2.weather_related_road_condition_type_enum impor
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WeatherRelatedRoadConditions(RoadConditions):
     """
     Road surface conditions that are related to the weather which may

@@ -7,7 +7,7 @@ from .programminglanguage_enum_simple import ProgramminglanguageEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProgramminglanguageEnum:
     """
     Programming language the implementation was created in.
@@ -28,11 +28,10 @@ class ProgramminglanguageEnum:
     class Meta:
         name = "PROGRAMMINGLANGUAGE-ENUM"
 
-    value: None | ProgramminglanguageEnumSimple = field(
-        default=None,
+    value: ProgramminglanguageEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

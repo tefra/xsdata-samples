@@ -7,7 +7,7 @@ from .site_version_frame_structure import SiteVersionFrameStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SiteFrame(SiteVersionFrameStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

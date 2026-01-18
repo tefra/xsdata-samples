@@ -9,7 +9,7 @@ from ipxact.models.timing_constraint import TimingConstraint
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractionDefPortConstraintsType:
     """
     Defines constraints that apply to a wire type port in an abstraction
@@ -25,7 +25,6 @@ class AbstractionDefPortConstraintsType:
             "name": "timingConstraint",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "min_occurs": 1,
         },
     )
     drive_constraint: list[DriveConstraint] = field(

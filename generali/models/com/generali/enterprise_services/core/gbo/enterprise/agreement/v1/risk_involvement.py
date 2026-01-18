@@ -26,7 +26,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RiskInvolvement(BaseIdentifiedComponentType):
     exposures_for: None | ExposuresType = field(
         default=None,

@@ -12,7 +12,7 @@ from .visual_obstacle_enumeration import VisualObstacleEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
     class Meta:
         name = "CrossingEquipment_VersionStructure"

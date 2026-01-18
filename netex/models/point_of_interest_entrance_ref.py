@@ -9,7 +9,7 @@ from .point_of_interest_entrance_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointOfInterestEntranceRef(PointOfInterestEntranceRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

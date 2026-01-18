@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocalSupervision:
     """
     This element defines a LocalSupervision in the context of platform
@@ -95,14 +95,13 @@ class LocalSupervision:
     class Meta:
         name = "LOCAL-SUPERVISION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | LocalSupervision.ShortNameFragments = field(
         default=None,
@@ -225,7 +224,7 @@ class LocalSupervision:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -236,7 +235,7 @@ class LocalSupervision:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -247,7 +246,7 @@ class LocalSupervision:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AliveSupervisions:
         alive_supervision: list[AliveSupervision] = field(
             default_factory=list,
@@ -258,7 +257,7 @@ class LocalSupervision:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DeadlineSupervisions:
         deadline_supervision: list[DeadlineSupervision] = field(
             default_factory=list,
@@ -269,7 +268,7 @@ class LocalSupervision:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LogicalSupervisions:
         logical_supervision: list[LogicalSupervision] = field(
             default_factory=list,
@@ -280,7 +279,7 @@ class LocalSupervision:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Transitions:
         checkpoint_transition: list[CheckpointTransition] = field(
             default_factory=list,

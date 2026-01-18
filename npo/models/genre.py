@@ -7,7 +7,7 @@ from npo.models.genre_type_2 import GenreType2
 __NAMESPACE__ = "urn:vpro:pages:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Genre(GenreType2):
     class Meta:
         name = "genre"

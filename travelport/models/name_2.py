@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Name2:
     """
     Complete name fields.
@@ -39,15 +39,14 @@ class Name2:
             "max_length": 20,
         },
     )
-    first: None | str = field(
-        default=None,
+    first: str = field(
         metadata={
             "name": "First",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 256,
-        },
+        }
     )
     middle: None | str = field(
         default=None,
@@ -58,15 +57,14 @@ class Name2:
             "max_length": 256,
         },
     )
-    last: None | str = field(
-        default=None,
+    last: str = field(
         metadata={
             "name": "Last",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 256,
-        },
+        }
     )
     suffix: None | str = field(
         default=None,

@@ -14,7 +14,7 @@ from travelport.models.unique_profile_id_profile_type_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileModifyReq2(BaseReq5):
     """
     Request to add, change, or remove data on a specific profile.
@@ -79,14 +79,13 @@ class ProfileModifyReq2(BaseReq5):
             "max_occurs": 999,
         },
     )
-    version: None | int = field(
-        default=None,
+    version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        },
+        }
     )
     return_profile: bool = field(
         default=False,
@@ -103,7 +102,7 @@ class ProfileModifyReq2(BaseReq5):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvisioningCode:
         """
         Parameters
@@ -122,16 +121,15 @@ class ProfileModifyReq2(BaseReq5):
                 "max_length": 128,
             },
         )
-        profile_type: None | ProvisioningCodeProfileType2 = field(
-            default=None,
+        profile_type: ProvisioningCodeProfileType2 = field(
             metadata={
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UniqueProfileId:
         """
         Parameters
@@ -155,13 +153,12 @@ class ProfileModifyReq2(BaseReq5):
                 "max_length": 128,
             },
         )
-        profile_type: None | UniqueProfileIdProfileType2 = field(
-            default=None,
+        profile_type: UniqueProfileIdProfileType2 = field(
             metadata={
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         agency_code: None | str = field(
             default=None,

@@ -11,16 +11,15 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Errors:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    error_item: None | ErrorItem = field(
-        default=None,
+    error_item: ErrorItem = field(
         metadata={
             "name": "ErrorItem",
             "type": "Element",
             "required": True,
-        },
+        }
     )

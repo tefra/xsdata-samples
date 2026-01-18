@@ -20,7 +20,7 @@ from .coct_mt710000_uv01 import CoctMt710000Uv01Place
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt240000Uv01ServiceDeliveryLocation:
     class Meta:
         name = "COCT_MT240000UV01.ServiceDeliveryLocation"
@@ -117,11 +117,10 @@ class CoctMt240000Uv01ServiceDeliveryLocation:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassServiceDeliveryLocation = field(
-        default=None,
+    class_code: RoleClassServiceDeliveryLocation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

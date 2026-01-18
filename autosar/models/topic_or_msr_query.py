@@ -8,7 +8,7 @@ from .topic_1 import Topic1
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TopicOrMsrQuery:
     """
     This class provides the alternative of a Topic with an MsrQuery which

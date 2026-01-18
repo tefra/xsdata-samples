@@ -41,7 +41,7 @@ from .swc_bsw_mapping_subtypes_enum import SwcBswMappingSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswImplementation:
     """
     Contains the implementation specific information in addition to the
@@ -203,14 +203,13 @@ class BswImplementation:
     class Meta:
         name = "BSW-IMPLEMENTATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | BswImplementation.ShortNameFragments = field(
         default=None,
@@ -485,7 +484,7 @@ class BswImplementation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -496,7 +495,7 @@ class BswImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -507,7 +506,7 @@ class BswImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BuildActionManifests:
         build_action_manifest_ref_conditional: list[
             BuildActionManifestRefConditional
@@ -520,7 +519,7 @@ class BswImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CodeDescriptors:
         code: list[Code] = field(
             default_factory=list,
@@ -531,7 +530,7 @@ class BswImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Compilers:
         compiler: list[Compiler] = field(
             default_factory=list,
@@ -542,7 +541,7 @@ class BswImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GeneratedArtifacts:
         dependency_on_artifact: list[DependencyOnArtifact] = field(
             default_factory=list,
@@ -553,7 +552,7 @@ class BswImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwElementRefs:
         hw_element_ref: list[BswImplementation.HwElementRefs.HwElementRef] = (
             field(
@@ -566,18 +565,17 @@ class BswImplementation:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class HwElementRef(Ref):
-            dest: None | HwElementSubtypesEnum = field(
-                default=None,
+            dest: HwElementSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Linkers:
         linker: list[Linker] = field(
             default_factory=list,
@@ -588,7 +586,7 @@ class BswImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredArtifacts:
         dependency_on_artifact: list[DependencyOnArtifact] = field(
             default_factory=list,
@@ -599,7 +597,7 @@ class BswImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredGeneratorTools:
         dependency_on_artifact: list[DependencyOnArtifact] = field(
             default_factory=list,
@@ -610,29 +608,27 @@ class BswImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwcBswMappingRef(Ref):
-        dest: None | SwcBswMappingSubtypesEnum = field(
-            default=None,
+        dest: SwcBswMappingSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BehaviorRef(Ref):
-        dest: None | BswInternalBehaviorSubtypesEnum = field(
-            default=None,
+        dest: BswInternalBehaviorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DebugInfos:
         bsw_debug_info: list[BswDebugInfo] = field(
             default_factory=list,
@@ -643,7 +639,7 @@ class BswImplementation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PreconfiguredConfigurationRefs:
         preconfigured_configuration_ref: list[
             BswImplementation.PreconfiguredConfigurationRefs.PreconfiguredConfigurationRef
@@ -656,18 +652,17 @@ class BswImplementation:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PreconfiguredConfigurationRef(Ref):
-            dest: None | EcucModuleConfigurationValuesSubtypesEnum = field(
-                default=None,
+            dest: EcucModuleConfigurationValuesSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RecommendedConfigurationRefs:
         recommended_configuration_ref: list[
             BswImplementation.RecommendedConfigurationRefs.RecommendedConfigurationRef
@@ -680,18 +675,17 @@ class BswImplementation:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RecommendedConfigurationRef(Ref):
-            dest: None | EcucModuleConfigurationValuesSubtypesEnum = field(
-                default=None,
+            dest: EcucModuleConfigurationValuesSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VendorSpecificModuleDefRefs:
         vendor_specific_module_def_ref: list[
             BswImplementation.VendorSpecificModuleDefRefs.VendorSpecificModuleDefRef
@@ -704,13 +698,12 @@ class BswImplementation:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class VendorSpecificModuleDefRef(Ref):
-            dest: None | EcucModuleDefSubtypesEnum = field(
-                default=None,
+            dest: EcucModuleDefSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

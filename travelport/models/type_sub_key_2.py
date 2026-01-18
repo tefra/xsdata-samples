@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeSubKey2:
     """
     The attributes and elements in a SubKey.
@@ -32,14 +32,13 @@ class TypeSubKey2:
             "max_occurs": 999,
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "max_length": 10,
-        },
+        }
     )
     description: None | object = field(
         default=None,

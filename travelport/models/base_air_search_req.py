@@ -14,7 +14,7 @@ from travelport.models.split_ticketing_search import SplitTicketingSearch
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseAirSearchReq(BaseCoreSearchReq1):
     """
     Base Request for Low fare air Search.

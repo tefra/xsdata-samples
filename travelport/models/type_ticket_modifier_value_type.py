@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeTicketModifierValueType:
     """
     Ticketing Modifier used to add value discount information.
@@ -20,14 +20,13 @@ class TypeTicketModifierValueType:
     class Meta:
         name = "typeTicketModifierValueType"
 
-    value: None | str = field(
-        default=None,
+    value: str = field(
         metadata={
             "name": "Value",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "required": True,
-        },
+        }
     )
     net_fare_value: None | bool = field(
         default=None,

@@ -9,7 +9,7 @@ from travelport.models.type_account_type_profile_info_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeAccountInfoHistory2(TypeAccountTypeProfileInfo2):
     """
     History Element for Account Info.

@@ -11,7 +11,7 @@ from .someip_event_deployment_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipEventProps:
     """
     This meta-class allows to set configuration options for an event in the
@@ -68,13 +68,12 @@ class SomeipEventProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventRef(Ref):
-        dest: None | SomeipEventDeploymentSubtypesEnum = field(
-            default=None,
+        dest: SomeipEventDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

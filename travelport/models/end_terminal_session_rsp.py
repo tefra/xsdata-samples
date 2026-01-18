@@ -7,7 +7,7 @@ from travelport.models.base_rsp_4 import BaseRsp4
 __NAMESPACE__ = "http://www.travelport.com/schema/terminal_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EndTerminalSessionRsp(BaseRsp4):
     """
     An empty response indicates success.

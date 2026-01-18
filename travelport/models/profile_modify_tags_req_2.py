@@ -8,7 +8,7 @@ from travelport.models.modify_tag_2 import ModifyTag2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileModifyTagsReq2(BaseReq5):
     """
     Request to modify tags for an agency.

@@ -23,7 +23,7 @@ from .coct_mt090200_uv01 import CoctMt090200Uv01AssignedOrganization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt900350Uv02Admitter:
     class Meta:
         name = "PRPA_MT900350UV02.Admitter"
@@ -52,22 +52,20 @@ class PrpaMt900350Uv02Admitter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: None | IvlTsExplicit = field(
-        default=None,
+    time: IvlTsExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -87,7 +85,7 @@ class PrpaMt900350Uv02Admitter:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt900350Uv02Attender:
     class Meta:
         name = "PRPA_MT900350UV02.Attender"
@@ -124,13 +122,12 @@ class PrpaMt900350Uv02Attender:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: None | IvlTsExplicit = field(
-        default=None,
+    time: IvlTsExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     status_code: None | Cs = field(
         default=None,
@@ -141,13 +138,12 @@ class PrpaMt900350Uv02Attender:
         },
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -167,7 +163,7 @@ class PrpaMt900350Uv02Attender:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt900350Uv02ResponsibleParty:
     class Meta:
         name = "PRPA_MT900350UV02.ResponsibleParty"
@@ -196,13 +192,12 @@ class PrpaMt900350Uv02ResponsibleParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: None | IvlTsExplicit = field(
-        default=None,
+    time: IvlTsExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     status_code: None | Cs = field(
         default=None,
@@ -213,13 +208,12 @@ class PrpaMt900350Uv02ResponsibleParty:
         },
     )
     assigned_organization: None | CoctMt090200Uv01AssignedOrganization = field(
-        default=None,
         metadata={
             "name": "assignedOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -239,7 +233,7 @@ class PrpaMt900350Uv02ResponsibleParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt900350Uv02Subject:
     class Meta:
         name = "PRPA_MT900350UV02.Subject"
@@ -268,13 +262,12 @@ class PrpaMt900350Uv02Subject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    patient: None | CoctMt050002Uv04Patient = field(
-        default=None,
+    patient: CoctMt050002Uv04Patient = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -283,17 +276,16 @@ class PrpaMt900350Uv02Subject:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetSubject = field(
-        default=None,
+    type_code: ParticipationTargetSubject = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt900350Uv02EncounterEvent:
     class Meta:
         name = "PRPA_MT900350UV02.EncounterEvent"
@@ -330,39 +322,35 @@ class PrpaMt900350Uv02EncounterEvent:
             "min_occurs": 1,
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    effective_time: None | IvlTsExplicit = field(
-        default=None,
+    effective_time: IvlTsExplicit = field(
         metadata={
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    subject: None | PrpaMt900350Uv02Subject = field(
-        default=None,
+    subject: PrpaMt900350Uv02Subject = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     responsible_party: list[PrpaMt900350Uv02ResponsibleParty] = field(
         default_factory=list,
@@ -374,12 +362,11 @@ class PrpaMt900350Uv02EncounterEvent:
         },
     )
     admitter: None | PrpaMt900350Uv02Admitter = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     attender: list[PrpaMt900350Uv02Attender] = field(
         default_factory=list,

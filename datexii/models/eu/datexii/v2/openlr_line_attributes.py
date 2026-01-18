@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.openlr_functional_road_class_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenlrLineAttributes:
     """
     Line attributes are part of a location reference point and consists of
@@ -30,32 +30,29 @@ class OpenlrLineAttributes:
     :ivar openlr_line_attributes_extension:
     """
 
-    openlr_functional_road_class: None | OpenlrFunctionalRoadClassEnum = field(
-        default=None,
+    openlr_functional_road_class: OpenlrFunctionalRoadClassEnum = field(
         metadata={
             "name": "openlrFunctionalRoadClass",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    openlr_form_of_way: None | OpenlrFormOfWayEnum = field(
-        default=None,
+    openlr_form_of_way: OpenlrFormOfWayEnum = field(
         metadata={
             "name": "openlrFormOfWay",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    openlr_bearing: None | int = field(
-        default=None,
+    openlr_bearing: int = field(
         metadata={
             "name": "openlrBearing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     openlr_line_attributes_extension: None | ExtensionType = field(
         default=None,

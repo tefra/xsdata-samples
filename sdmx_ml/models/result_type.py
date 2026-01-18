@@ -7,7 +7,7 @@ from sdmx_ml.models.registration_type import RegistrationType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ResultType:
     """
     ResultType contains the details about a data or metadata source,
@@ -28,14 +28,13 @@ class ResultType:
         complete set of reference fields.
     """
 
-    registration: None | RegistrationType = field(
-        default=None,
+    registration: RegistrationType = field(
         metadata={
             "name": "Registration",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )
     constraint: tuple[str, ...] = field(
         default_factory=tuple,

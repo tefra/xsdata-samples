@@ -11,7 +11,7 @@ from travelport.models.remark_1 import Remark1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirMerchandisingOfferAvailabilityRsp(BaseRsp1):
     """
     Contains the merchandising offerings for the given passenger and
@@ -30,13 +30,12 @@ class AirMerchandisingOfferAvailabilityRsp(BaseRsp1):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_solution: None | AirSolution = field(
-        default=None,
+    air_solution: AirSolution = field(
         metadata={
             "name": "AirSolution",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     remark: None | Remark1 = field(
         default=None,

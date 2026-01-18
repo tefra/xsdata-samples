@@ -20,7 +20,7 @@ from .variable_access_scope_enum import VariableAccessScopeEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VariableAccess:
     """
     The presence of a VariableAccess implies that a RunnableEntity needs
@@ -96,14 +96,13 @@ class VariableAccess:
     class Meta:
         name = "VARIABLE-ACCESS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | VariableAccess.ShortNameFragments = field(
         default=None,
@@ -216,7 +215,7 @@ class VariableAccess:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -227,7 +226,7 @@ class VariableAccess:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

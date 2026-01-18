@@ -8,7 +8,7 @@ from sabre.models.seat_status_sim_type import SeatStatusSimType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransactionType:
     """
     IntelliSell Type.
@@ -213,7 +213,7 @@ class TransactionType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequestType:
         value: str = field(
             default="",
@@ -229,7 +229,7 @@ class TransactionType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceTag:
         value: str = field(
             default="",
@@ -245,7 +245,7 @@ class TransactionType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PurchaseType:
         name: None | str = field(
             default=None,
@@ -255,7 +255,7 @@ class TransactionType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SabreAth:
         value: None | str = field(
             default=None,
@@ -279,7 +279,7 @@ class TransactionType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TranId:
         value: None | str = field(
             default=None,
@@ -289,7 +289,7 @@ class TransactionType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClientSessionId:
         value: None | str = field(
             default=None,
@@ -299,7 +299,7 @@ class TransactionType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Branch:
         name: str = field(
             default="Main",
@@ -309,7 +309,7 @@ class TransactionType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CompressResponse:
         value: bool = field(
             default=False,
@@ -319,7 +319,7 @@ class TransactionType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FareOverrides:
         """
         Attributes:
@@ -342,7 +342,7 @@ class TransactionType:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareOverride:
             """
             Attributes:
@@ -374,13 +374,12 @@ class TransactionType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            fare_type: None | str = field(
-                default=None,
+            fare_type: str = field(
                 metadata={
                     "name": "FareType",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
             pseudo_city_code: None | str = field(
                 default=None,
@@ -404,7 +403,7 @@ class TransactionType:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Diagnostics:
         """
         Attributes:
@@ -422,7 +421,7 @@ class TransactionType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Diagnostic:
             """
             Attributes:
@@ -459,25 +458,23 @@ class TransactionType:
                     "type": "Attribute",
                 },
             )
-            code: None | str = field(
-                default=None,
+            code: str = field(
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[A-Za-z0-9_]+(/[A-Za-z0-9_]+)*",
-                },
+                }
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class DiagnosticArgument:
-                name: None | str = field(
-                    default=None,
+                name: str = field(
                     metadata={
                         "name": "Name",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
                 value: None | str = field(
                     default=None,
@@ -487,7 +484,7 @@ class TransactionType:
                     },
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SubagentData:
         code: None | str = field(
             default=None,
@@ -497,7 +494,7 @@ class TransactionType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResponseSorting:
         enable_chronological_sorting: None | bool = field(
             default=None,
@@ -507,18 +504,17 @@ class TransactionType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AvailableLevel:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "name": "Value",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Atsetest:
         """
         Attributes:

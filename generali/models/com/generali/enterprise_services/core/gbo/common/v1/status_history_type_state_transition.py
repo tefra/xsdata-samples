@@ -21,7 +21,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StatusHistoryTypeStateTransition(BaseSimpleComponentType):
     """
     :ivar from_status_code: <description xmlns="">The source lifecycle

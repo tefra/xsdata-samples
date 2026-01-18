@@ -10,7 +10,7 @@ from .message_ref_structure import MessageRefStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataSupplyRequestStructure(ConsumerRequestEndpointStructure):
     notification_ref: None | MessageRefStructure = field(
         default=None,

@@ -16,7 +16,7 @@ from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceDesignatorStructure:
     from_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,

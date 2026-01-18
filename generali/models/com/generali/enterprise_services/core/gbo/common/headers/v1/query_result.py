@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QueryResult(QueryResultType):
     """
     <description xmlns="">A header providing meta-data about the result of

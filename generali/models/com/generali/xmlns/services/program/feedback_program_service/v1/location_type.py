@@ -7,23 +7,21 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationType:
-    global_location_id: None | str = field(
-        default=None,
+    global_location_id: str = field(
         metadata={
             "name": "GlobalLocationID",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
             "required": True,
-        },
+        }
     )
-    local_location_id: None | str = field(
-        default=None,
+    local_location_id: str = field(
         metadata={
             "name": "LocalLocationID",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
             "required": True,
-        },
+        }
     )

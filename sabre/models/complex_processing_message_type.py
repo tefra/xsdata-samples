@@ -9,7 +9,7 @@ from sabre.models.processing_message_type import ProcessingMessageType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ComplexProcessingMessageType(ProcessingMessageType):
     """
     Attributes:
@@ -26,18 +26,17 @@ class ComplexProcessingMessageType(ProcessingMessageType):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Leg:
         """
         Attributes:
             departure_date: Departure date
         """
 
-        departure_date: None | XmlDate = field(
-            default=None,
+        departure_date: XmlDate = field(
             metadata={
                 "name": "DepartureDate",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

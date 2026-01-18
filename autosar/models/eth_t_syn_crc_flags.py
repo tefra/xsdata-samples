@@ -7,7 +7,7 @@ from .boolean import Boolean
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthTSynCrcFlags:
     """
     Defines the fields of the message which shall be taken into account for

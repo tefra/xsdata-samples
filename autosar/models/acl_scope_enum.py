@@ -7,7 +7,7 @@ from .acl_scope_enum_simple import AclScopeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AclScopeEnum:
     """
     This enumerator represents the scope of a definition in context of
@@ -29,11 +29,10 @@ class AclScopeEnum:
     class Meta:
         name = "ACL-SCOPE-ENUM"
 
-    value: None | AclScopeEnumSimple = field(
-        default=None,
+    value: AclScopeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

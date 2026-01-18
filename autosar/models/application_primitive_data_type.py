@@ -22,7 +22,7 @@ from .sw_data_def_props import SwDataDefProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationPrimitiveDataType:
     """
     A primitive data type defines a set of allowed values.
@@ -98,14 +98,13 @@ class ApplicationPrimitiveDataType:
     class Meta:
         name = "APPLICATION-PRIMITIVE-DATA-TYPE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ApplicationPrimitiveDataType.ShortNameFragments
@@ -222,7 +221,7 @@ class ApplicationPrimitiveDataType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -233,7 +232,7 @@ class ApplicationPrimitiveDataType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -244,7 +243,7 @@ class ApplicationPrimitiveDataType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,

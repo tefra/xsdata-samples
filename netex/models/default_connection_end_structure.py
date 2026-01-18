@@ -10,7 +10,7 @@ from .operator_view import OperatorView
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefaultConnectionEndStructure:
     transport_mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,

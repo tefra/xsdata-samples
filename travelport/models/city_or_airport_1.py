@@ -7,7 +7,7 @@ from travelport.models.location_1 import Location1
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CityOrAirport1(Location1):
     """
     This element can be used when it is not known whether the value is an
@@ -26,15 +26,14 @@ class CityOrAirport1(Location1):
         name = "CityOrAirport"
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
     prefer_city: bool = field(
         default=False,

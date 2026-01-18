@@ -7,18 +7,17 @@ from npo.models.section_type import SectionType
 __NAMESPACE__ = "urn:vpro:pages:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortalType:
     class Meta:
         name = "portalType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
             "required": True,
-        },
+        }
     )
     section: None | SectionType = field(
         default=None,
@@ -27,17 +26,15 @@ class PortalType:
             "namespace": "urn:vpro:pages:2013",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    url: None | str = field(
-        default=None,
+    url: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

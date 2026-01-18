@@ -7,7 +7,7 @@ from ipxact.models.component_type import ComponentType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Component(ComponentType):
     """
     This is the root element for all non platform-core components.

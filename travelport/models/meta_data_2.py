@@ -7,7 +7,7 @@ from travelport.models.meta_data_details import MetaDataDetails
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MetaData2:
     """
     An element created under the service which will store all settings for
@@ -34,13 +34,12 @@ class MetaData2:
             "max_occurs": 99,
         },
     )
-    user_type: None | str = field(
-        default=None,
+    user_type: str = field(
         metadata={
             "name": "UserType",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        },
+        }
     )

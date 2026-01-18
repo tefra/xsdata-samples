@@ -21,7 +21,7 @@ from .coct_mt090001_uv01 import CoctMt090001Uv01AssignedEntity
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt120104UvAuthor:
     class Meta:
         name = "COCT_MT120104UV.Author"
@@ -51,13 +51,12 @@ class CoctMt120104UvAuthor:
         },
     )
     assigned_entity: None | CoctMt090001Uv01AssignedEntity = field(
-        default=None,
         metadata={
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -84,7 +83,7 @@ class CoctMt120104UvAuthor:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt120104UvObservationDx:
     class Meta:
         name = "COCT_MT120104UV.ObservationDx"
@@ -120,22 +119,20 @@ class CoctMt120104UvObservationDx:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Ce = field(
-        default=None,
+    code: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     effective_time: None | IvlTsExplicit = field(
         default=None,
@@ -145,13 +142,12 @@ class CoctMt120104UvObservationDx:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | Ce = field(
-        default=None,
+    value: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     target_site_code: None | Cd = field(
         default=None,
@@ -176,13 +172,12 @@ class CoctMt120104UvObservationDx:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassObservation = field(
-        default=None,
+    class_code: ActClassObservation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,

@@ -9,7 +9,7 @@ from .diagnostic_logical_operator_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticLogicalOperatorEnum:
     """
     Logical AND and OR operation (&amp;&amp;, ||).
@@ -30,11 +30,10 @@ class DiagnosticLogicalOperatorEnum:
     class Meta:
         name = "DIAGNOSTIC-LOGICAL-OPERATOR-ENUM"
 
-    value: None | DiagnosticLogicalOperatorEnumSimple = field(
-        default=None,
+    value: DiagnosticLogicalOperatorEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

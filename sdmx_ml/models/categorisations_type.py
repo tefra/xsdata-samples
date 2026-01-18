@@ -7,7 +7,7 @@ from sdmx_ml.models.categorisation_type import CategorisationType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CategorisationsType:
     """
     CategorisationsType describes the structure of the categorisations

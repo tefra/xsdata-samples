@@ -49,7 +49,7 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.math import Math
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MetaValue:
     """
     <div> <h3>Metadata Data Value For Custom Metadata</h3> </div>.

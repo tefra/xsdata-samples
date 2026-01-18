@@ -11,59 +11,48 @@ from travelport.models.universal_record_retrieve_req import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordRetrieveServicePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: (
-        None | UniversalRecordRetrieveServicePortTypeServiceInput.Header
-    ) = field(
-        default=None,
+    header: UniversalRecordRetrieveServicePortTypeServiceInput.Header = field(
         metadata={
             "name": "Header",
             "type": "Element",
-        },
+        }
     )
-    body: None | UniversalRecordRetrieveServicePortTypeServiceInput.Body = (
-        field(
-            default=None,
-            metadata={
-                "name": "Body",
-                "type": "Element",
-            },
-        )
+    body: UniversalRecordRetrieveServicePortTypeServiceInput.Body = field(
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Header:
-        session_context: None | SessionContext = field(
-            default=None,
+        session_context: SessionContext = field(
             metadata={
                 "name": "SessionContext",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
-            },
+            }
         )
-        supported_versions: None | SupportedVersions = field(
-            default=None,
+        supported_versions: SupportedVersions = field(
             metadata={
                 "name": "SupportedVersions",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        universal_record_retrieve_req: None | UniversalRecordRetrieveReq = (
-            field(
-                default=None,
-                metadata={
-                    "name": "UniversalRecordRetrieveReq",
-                    "type": "Element",
-                    "namespace": "http://www.travelport.com/schema/universal_v52_0",
-                },
-            )
+        universal_record_retrieve_req: UniversalRecordRetrieveReq = field(
+            metadata={
+                "name": "UniversalRecordRetrieveReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/universal_v52_0",
+            }
         )

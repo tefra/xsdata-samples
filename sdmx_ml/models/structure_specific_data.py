@@ -9,7 +9,7 @@ from sdmx_ml.models.structure_specific_data_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class StructureSpecificData(StructureSpecificDataType):
     """
     StructureSpecificData is used to convey data structure specific

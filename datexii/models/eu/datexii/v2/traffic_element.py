@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.situation_record import SituationRecord
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrafficElement(SituationRecord):
     """
     An event which is not planned by the traffic operator, which is

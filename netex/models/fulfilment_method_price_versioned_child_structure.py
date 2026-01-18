@@ -10,7 +10,7 @@ from .fulfilment_method_ref import FulfilmentMethodRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FulfilmentMethodPriceVersionedChildStructure(
     FarePriceVersionedChildStructure
 ):

@@ -9,7 +9,7 @@ from .ethernet_coupling_port_scheduler_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthernetCouplingPortSchedulerEnum:
     """
     Defines the schedule algorithm to be used.
@@ -30,11 +30,10 @@ class EthernetCouplingPortSchedulerEnum:
     class Meta:
         name = "ETHERNET-COUPLING-PORT-SCHEDULER-ENUM"
 
-    value: None | EthernetCouplingPortSchedulerEnumSimple = field(
-        default=None,
+    value: EthernetCouplingPortSchedulerEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

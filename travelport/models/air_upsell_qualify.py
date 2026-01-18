@@ -11,7 +11,7 @@ from travelport.models.type_time_spec_1 import TypeTimeSpec1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirUpsellQualify:
     """
     Parameters
@@ -73,32 +73,29 @@ class AirUpsellQualify:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
-    effective_date: None | str = field(
-        default=None,
+    effective_date: str = field(
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        },
+        }
     )
-    expiration_date: None | str = field(
-        default=None,
+    expiration_date: str = field(
         metadata={
             "name": "ExpirationDate",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        },
+        }
     )
     provider_code: None | str = field(
         default=None,

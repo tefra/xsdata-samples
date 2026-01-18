@@ -7,7 +7,7 @@ from travelport.models.type_endpoint_ref import TypeEndpointRef
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EndpointRef(TypeEndpointRef):
     """
     A reference to an endpoint.
@@ -32,11 +32,10 @@ class EndpointRef(TypeEndpointRef):
             "max_length": 50,
         },
     )
-    end_point_code: None | str = field(
-        default=None,
+    end_point_code: str = field(
         metadata={
             "name": "EndPointCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

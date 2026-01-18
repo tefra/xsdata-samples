@@ -61,7 +61,7 @@ from .vehicle_stopping_position_ref import VehicleStoppingPositionRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
     network_ref: None | NetworkRef = field(
         default=None,
@@ -79,7 +79,7 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Places:
         choice: Iterable[
             HailAndRideAreaRef

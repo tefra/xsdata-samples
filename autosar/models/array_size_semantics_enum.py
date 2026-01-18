@@ -7,7 +7,7 @@ from .array_size_semantics_enum_simple import ArraySizeSemanticsEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ArraySizeSemanticsEnum:
     """
     This type controls how the information about the number of elements in
@@ -29,11 +29,10 @@ class ArraySizeSemanticsEnum:
     class Meta:
         name = "ARRAY-SIZE-SEMANTICS-ENUM"
 
-    value: None | ArraySizeSemanticsEnumSimple = field(
-        default=None,
+    value: ArraySizeSemanticsEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

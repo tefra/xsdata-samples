@@ -11,7 +11,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinMasterConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -117,7 +117,7 @@ class LinMasterConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LinSlaves:
         lin_slave_config: list[LinSlaveConfig] = field(
             default_factory=list,

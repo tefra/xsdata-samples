@@ -9,7 +9,7 @@ from sdmx_ml.models.party_type import PartyType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class BasicHeaderType(BaseHeaderType):
     """
     BasicHeaderType defines the most basic header information used in

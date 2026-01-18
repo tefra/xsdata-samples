@@ -8,7 +8,7 @@ from .stair_flights_rel_structure import StairFlightsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StaircaseEquipmentVersionStructure(StairEquipmentVersionStructure):
     class Meta:
         name = "StaircaseEquipment_VersionStructure"

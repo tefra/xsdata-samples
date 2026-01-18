@@ -9,7 +9,7 @@ from sabre.models.stay_unit_type import StayUnitType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdvResTicketingType:
     """
     Container used to hold information regarding advance reservation and/or
@@ -58,7 +58,7 @@ class AdvResTicketingType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AdvReservation:
         """
         Attributes:
@@ -95,7 +95,7 @@ class AdvResTicketingType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AdvTicketing:
         """
         Attributes:

@@ -11,72 +11,67 @@ from ..common.nhinc_common import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProxyPrpaIn201306UvproxyRequestType:
     class Meta:
         name = "Proxy_PRPA_IN201306UVProxyRequestType"
 
-    prpa_in201306_uv02: None | PrpaIn201306Uv02 = field(
-        default=None,
+    prpa_in201306_uv02: PrpaIn201306Uv02 = field(
         metadata={
             "name": "PRPA_IN201306UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    assertion: None | AssertionType = field(
-        default=None,
+    assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    nhin_target_system: None | NhinTargetSystemType = field(
-        default=None,
+    nhin_target_system: NhinTargetSystemType = field(
         metadata={
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProxyPrpaIn201306UvproxySecuredRequestType:
     class Meta:
         name = "Proxy_PRPA_IN201306UVProxySecuredRequestType"
 
-    prpa_in201306_uv02: None | PrpaIn201306Uv02 = field(
-        default=None,
+    prpa_in201306_uv02: PrpaIn201306Uv02 = field(
         metadata={
             "name": "PRPA_IN201306UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    nhin_target_system: None | NhinTargetSystemType = field(
-        default=None,
+    nhin_target_system: NhinTargetSystemType = field(
         metadata={
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProxyPrpaIn201306UvproxyRequest(ProxyPrpaIn201306UvproxyRequestType):
     class Meta:
         name = "Proxy_PRPA_IN201306UVProxyRequest"
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProxyPrpaIn201306UvproxySecuredRequest(
     ProxyPrpaIn201306UvproxySecuredRequestType
 ):

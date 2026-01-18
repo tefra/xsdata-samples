@@ -8,7 +8,7 @@ from sabre.models.email_type_share_synch_ind import EmailTypeShareSynchInd
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EmailType:
     """
     Electronic email addresses, in IETF specified format.

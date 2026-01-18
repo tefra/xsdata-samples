@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceMatchError:
     """
     Parameters
@@ -35,13 +35,12 @@ class PriceMatchError:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
-    error_message: None | str = field(
-        default=None,
+    error_message: str = field(
         metadata={
             "name": "ErrorMessage",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     vendor_code: None | str = field(
         default=None,

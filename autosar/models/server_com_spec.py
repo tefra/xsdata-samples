@@ -18,7 +18,7 @@ from .user_defined_transformation_com_spec_props import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServerComSpec:
     """
     @RESTRICT_TO_STANDARD:CP!
@@ -118,40 +118,37 @@ class ServerComSpec:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GetterRef(Ref):
-        dest: None | FieldSubtypesEnum = field(
-            default=None,
+        dest: FieldSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OperationRef(Ref):
-        dest: None | ClientServerOperationSubtypesEnum = field(
-            default=None,
+        dest: ClientServerOperationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SetterRef(Ref):
-        dest: None | FieldSubtypesEnum = field(
-            default=None,
+        dest: FieldSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransformationComSpecPropss:
         end_to_end_transformation_com_spec_props: list[
             EndToEndTransformationComSpecProps

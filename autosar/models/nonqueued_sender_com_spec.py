@@ -39,7 +39,7 @@ from .transmission_com_spec_props import TransmissionComSpecProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NonqueuedSenderComSpec:
     """
     Communication attributes for non-queued sender/receiver communication
@@ -197,7 +197,7 @@ class NonqueuedSenderComSpec:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CompositeNetworkRepresentations:
         composite_network_representation: list[
             CompositeNetworkRepresentation
@@ -210,18 +210,17 @@ class NonqueuedSenderComSpec:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataElementRef(Ref):
-        dest: None | AutosarDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: AutosarDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InitValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification

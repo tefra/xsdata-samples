@@ -19,7 +19,7 @@ from .user_defined_physical_channel import UserDefinedPhysicalChannel
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayClusterConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -490,7 +490,7 @@ class FlexrayClusterConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PhysicalChannels:
         can_physical_channel: list[CanPhysicalChannel] = field(
             default_factory=list,

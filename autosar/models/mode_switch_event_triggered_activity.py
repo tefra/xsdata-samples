@@ -10,7 +10,7 @@ from .swc_mode_switch_event_subtypes_enum import SwcModeSwitchEventSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModeSwitchEventTriggeredActivity:
     """
     This meta-class defines an activity of the NvBlockSwComponentType for a
@@ -79,13 +79,12 @@ class ModeSwitchEventTriggeredActivity:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwcModeSwitchEventRef(Ref):
-        dest: None | SwcModeSwitchEventSubtypesEnum = field(
-            default=None,
+        dest: SwcModeSwitchEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

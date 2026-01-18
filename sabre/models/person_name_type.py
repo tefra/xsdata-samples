@@ -12,7 +12,7 @@ from sabre.models.person_name_type_share_synch_ind import (
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersonNameType:
     """
     This is an XML Schema representing the OTA Person Name object.
@@ -77,8 +77,7 @@ class PersonNameType:
             "max_length": 16,
         },
     )
-    surname: None | str = field(
-        default=None,
+    surname: str = field(
         metadata={
             "name": "Surname",
             "type": "Element",
@@ -86,7 +85,7 @@ class PersonNameType:
             "required": True,
             "min_length": 1,
             "max_length": 64,
-        },
+        }
     )
     name_suffix: list[str] = field(
         default_factory=list,

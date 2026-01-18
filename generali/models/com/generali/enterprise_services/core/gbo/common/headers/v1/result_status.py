@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResultStatus(ResultStatusType):
     """
     <description xmlns="">For business faults records the error or warning

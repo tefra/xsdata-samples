@@ -9,7 +9,7 @@ from .geographical_unit_prices_rel_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeographicalUnitPrice(GeographicalUnitPriceVersionedChildStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

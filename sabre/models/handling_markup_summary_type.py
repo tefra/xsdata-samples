@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HandlingMarkupSummaryType:
     """
     Attributes:
@@ -17,29 +17,26 @@ class HandlingMarkupSummaryType:
             amount currency.
     """
 
-    type_code: None | str = field(
-        default=None,
+    type_code: str = field(
         metadata={
             "name": "TypeCode",
             "type": "Attribute",
             "required": True,
             "length": 1,
-        },
+        }
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "name": "Description",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    monetary_amount_value: None | Decimal = field(
-        default=None,
+    monetary_amount_value: Decimal = field(
         metadata={
             "name": "MonetaryAmountValue",
             "type": "Attribute",
             "required": True,
             "fraction_digits": 3,
-        },
+        }
     )

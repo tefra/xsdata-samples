@@ -30,7 +30,7 @@ from .worst_case_stack_usage import WorstCaseStackUsage
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResourceConsumption:
     """
     Description of consumed resources by one implementation of a software.
@@ -121,14 +121,13 @@ class ResourceConsumption:
     class Meta:
         name = "RESOURCE-CONSUMPTION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ResourceConsumption.ShortNameFragments = (
         field(
@@ -271,7 +270,7 @@ class ResourceConsumption:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -282,7 +281,7 @@ class ResourceConsumption:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -293,7 +292,7 @@ class ResourceConsumption:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessCountSets:
         access_count_set: list[AccessCountSet] = field(
             default_factory=list,
@@ -304,7 +303,7 @@ class ResourceConsumption:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExecutionTimes:
         analyzed_execution_time: list[AnalyzedExecutionTime] = field(
             default_factory=list,
@@ -341,7 +340,7 @@ class ResourceConsumption:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HeapUsages:
         measured_heap_usage: list[MeasuredHeapUsage] = field(
             default_factory=list,
@@ -368,7 +367,7 @@ class ResourceConsumption:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MemorySections:
         memory_section: list[MemorySection] = field(
             default_factory=list,
@@ -379,7 +378,7 @@ class ResourceConsumption:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SectionNamePrefixs:
         section_name_prefix: list[SectionNamePrefix] = field(
             default_factory=list,
@@ -390,7 +389,7 @@ class ResourceConsumption:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StackUsages:
         measured_stack_usage: list[MeasuredStackUsage] = field(
             default_factory=list,
@@ -417,7 +416,7 @@ class ResourceConsumption:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SystemMemoryUsages:
         system_memory_usage: list[SystemMemoryUsage] = field(
             default_factory=list,

@@ -12,7 +12,7 @@ from .vehicle_manoeuvring_requirement_ref import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleManoeuvringRequirementsRelStructure(
     ContainmentAggregationStructure
 ):

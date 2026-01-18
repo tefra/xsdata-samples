@@ -11,7 +11,7 @@ from travelport.models.type_vendor_location_1 import TypeVendorLocation1
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeVehicleVendorLocation(TypeVendorLocation1):
     """
     Parameters

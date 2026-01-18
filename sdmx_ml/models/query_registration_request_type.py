@@ -13,7 +13,7 @@ from sdmx_ml.models.reference_period_type import ReferencePeriodType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class QueryRegistrationRequestType:
     """
     QueryRegistrationRequestType describes the structure of a registration
@@ -40,14 +40,13 @@ class QueryRegistrationRequestType:
         metadata sets returned should also be sent the results.
     """
 
-    query_type: None | QueryTypeType = field(
-        default=None,
+    query_type: QueryTypeType = field(
         metadata={
             "name": "QueryType",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )
     choice: (
         None
@@ -138,42 +137,38 @@ class QueryRegistrationRequestType:
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class ProvisionAgreement:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.registry\.ProvisionAgreement=.+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class DataProvider:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Dataflow:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.datastructure\.Dataflow=.+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Metadataflow:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.metadatastructure\.Metadataflow=.+",
-            },
+            }
         )

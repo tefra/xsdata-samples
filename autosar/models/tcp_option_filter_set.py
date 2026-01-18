@@ -18,7 +18,7 @@ from .tcp_option_filter_list import TcpOptionFilterList
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TcpOptionFilterSet:
     """
     Set of TcpOptionFilterLists.
@@ -84,14 +84,13 @@ class TcpOptionFilterSet:
     class Meta:
         name = "TCP-OPTION-FILTER-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TcpOptionFilterSet.ShortNameFragments = field(
         default=None,
@@ -190,7 +189,7 @@ class TcpOptionFilterSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -201,7 +200,7 @@ class TcpOptionFilterSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -212,7 +211,7 @@ class TcpOptionFilterSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TcpOptionFilterLists:
         tcp_option_filter_list: list[TcpOptionFilterList] = field(
             default_factory=list,

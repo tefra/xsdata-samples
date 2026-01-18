@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DoIpRoutingActivation:
     """
     This meta-class defines a DoIP routing activation possibility that
@@ -90,14 +90,13 @@ class DoIpRoutingActivation:
     class Meta:
         name = "DO-IP-ROUTING-ACTIVATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DoIpRoutingActivation.ShortNameFragments = (
         field(
@@ -190,7 +189,7 @@ class DoIpRoutingActivation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -201,7 +200,7 @@ class DoIpRoutingActivation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -212,7 +211,7 @@ class DoIpRoutingActivation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DoIpTargetAddressRefs:
         do_ip_target_address_ref: list[
             DoIpRoutingActivation.DoIpTargetAddressRefs.DoIpTargetAddressRef
@@ -225,13 +224,12 @@ class DoIpRoutingActivation:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DoIpTargetAddressRef(Ref):
-            dest: None | DoIpLogicTargetAddressPropsSubtypesEnum = field(
-                default=None,
+            dest: DoIpLogicTargetAddressPropsSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

@@ -19,7 +19,7 @@ from travelport.models.type_fare_rule_type import TypeFareRuleType
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseAirExchangeQuoteReq(BaseCoreReq1):
     """
     Parameters
@@ -139,7 +139,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProviderReservationInfo:
         """
         Parameters
@@ -150,24 +150,22 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
             Represents Carrier Code for ACH PNR Retrieve.
         """
 
-        provider_code: None | str = field(
-            default=None,
+        provider_code: str = field(
             metadata={
                 "name": "ProviderCode",
                 "type": "Attribute",
                 "required": True,
                 "min_length": 2,
                 "max_length": 5,
-            },
+            }
         )
-        provider_locator_code: None | str = field(
-            default=None,
+        provider_locator_code: str = field(
             metadata={
                 "name": "ProviderLocatorCode",
                 "type": "Attribute",
                 "required": True,
                 "max_length": 15,
-            },
+            }
         )
         supplier_code: None | str = field(
             default=None,

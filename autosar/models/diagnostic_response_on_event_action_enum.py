@@ -9,7 +9,7 @@ from .diagnostic_response_on_event_action_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticResponseOnEventActionEnum:
     """
     This meta-class has the ability to define sub-functions of the UDS
@@ -31,11 +31,10 @@ class DiagnosticResponseOnEventActionEnum:
     class Meta:
         name = "DIAGNOSTIC-RESPONSE-ON-EVENT-ACTION-ENUM"
 
-    value: None | DiagnosticResponseOnEventActionEnumSimple = field(
-        default=None,
+    value: DiagnosticResponseOnEventActionEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

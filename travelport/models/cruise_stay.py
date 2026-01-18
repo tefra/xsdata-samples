@@ -9,7 +9,7 @@ from travelport.models.cabin_info import CabinInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/cruise_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CruiseStay:
     """
     Provides Cruise information.
@@ -180,7 +180,7 @@ class CruiseStay:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Package:
         """
         Parameters
@@ -229,7 +229,7 @@ class CruiseStay:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiningInfo:
         """
         Parameters

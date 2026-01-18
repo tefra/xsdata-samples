@@ -8,7 +8,7 @@ from travelport.models.baggage_restriction import BaggageRestriction
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BagDetails:
     """
     Information related to Bag details .
@@ -45,13 +45,12 @@ class BagDetails:
             "max_occurs": 999,
         },
     )
-    applicable_bags: None | str = field(
-        default=None,
+    applicable_bags: str = field(
         metadata={
             "name": "ApplicableBags",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     base_price: None | str = field(
         default=None,

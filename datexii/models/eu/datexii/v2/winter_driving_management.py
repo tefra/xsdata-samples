@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.winter_equipment_management_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WinterDrivingManagement(NetworkManagement):
     """
     Winter driving management action that is instigated by the network/road
@@ -22,16 +22,15 @@ class WinterDrivingManagement(NetworkManagement):
     :ivar winter_driving_management_extension:
     """
 
-    winter_equipment_management_type: (
-        None | WinterEquipmentManagementTypeEnum
-    ) = field(
-        default=None,
-        metadata={
-            "name": "winterEquipmentManagementType",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    winter_equipment_management_type: WinterEquipmentManagementTypeEnum = (
+        field(
+            metadata={
+                "name": "winterEquipmentManagementType",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            }
+        )
     )
     winter_driving_management_extension: None | ExtensionType = field(
         default=None,

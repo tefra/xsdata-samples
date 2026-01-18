@@ -8,7 +8,7 @@ from travelport.models.ticketing_modifiers import TicketingModifiers
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirPricingTicketingModifiers:
     """
     AirPricing TicketingModifier information - used to associate Ticketing
@@ -26,11 +26,10 @@ class AirPricingTicketingModifiers:
             "max_occurs": 999,
         },
     )
-    ticketing_modifiers: None | TicketingModifiers = field(
-        default=None,
+    ticketing_modifiers: TicketingModifiers = field(
         metadata={
             "name": "TicketingModifiers",
             "type": "Element",
             "required": True,
-        },
+        }
     )

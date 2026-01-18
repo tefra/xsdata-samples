@@ -27,7 +27,7 @@ from .variable_data_prototype_in_system_instance_ref import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SignalServiceTranslationEventProps:
     """
     This element allows to define the properties which are applicable for
@@ -101,14 +101,13 @@ class SignalServiceTranslationEventProps:
     class Meta:
         name = "SIGNAL-SERVICE-TRANSLATION-EVENT-PROPS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SignalServiceTranslationEventProps.ShortNameFragments
@@ -237,7 +236,7 @@ class SignalServiceTranslationEventProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -248,7 +247,7 @@ class SignalServiceTranslationEventProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -259,7 +258,7 @@ class SignalServiceTranslationEventProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ElementPropss:
         signal_service_translation_element_props: list[
             SignalServiceTranslationElementProps
@@ -272,7 +271,7 @@ class SignalServiceTranslationEventProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceElementMappingRefs:
         service_element_mapping_ref: list[
             SignalServiceTranslationEventProps.ServiceElementMappingRefs.ServiceElementMappingRef
@@ -285,16 +284,14 @@ class SignalServiceTranslationEventProps:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ServiceElementMappingRef(Ref):
-            dest: (
-                None
-                | AbstractSignalBasedToISignalTriggeringMappingSubtypesEnum
-            ) = field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
+            dest: AbstractSignalBasedToISignalTriggeringMappingSubtypesEnum = (
+                field(
+                    metadata={
+                        "name": "DEST",
+                        "type": "Attribute",
+                        "required": True,
+                    }
+                )
             )

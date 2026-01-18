@@ -9,31 +9,25 @@ from travelport.models.air_merchandising_offer_availability_req import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirMerchandisingOfferAvailabilityPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | AirMerchandisingOfferAvailabilityPortTypeServiceInput.Body = (
-        field(
-            default=None,
-            metadata={
-                "name": "Body",
-                "type": "Element",
-            },
-        )
+    body: AirMerchandisingOfferAvailabilityPortTypeServiceInput.Body = field(
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        air_merchandising_offer_availability_req: (
-            None | AirMerchandisingOfferAvailabilityReq
-        ) = field(
-            default=None,
+        air_merchandising_offer_availability_req: AirMerchandisingOfferAvailabilityReq = field(
             metadata={
                 "name": "AirMerchandisingOfferAvailabilityReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
-            },
+            }
         )

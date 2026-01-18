@@ -8,7 +8,7 @@ from travelport.models.type_tckey_element import TypeTckeyElement
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeAddress1(TypeTckeyElement):
     """
     Profile Address.
@@ -88,13 +88,12 @@ class TypeAddress1(TypeTckeyElement):
             "max_length": 12,
         },
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )

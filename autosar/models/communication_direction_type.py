@@ -9,7 +9,7 @@ from .communication_direction_type_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CommunicationDirectionType:
     """
     Describes the communication direction.
@@ -30,11 +30,10 @@ class CommunicationDirectionType:
     class Meta:
         name = "COMMUNICATION-DIRECTION-TYPE"
 
-    value: None | CommunicationDirectionTypeSimple = field(
-        default=None,
+    value: CommunicationDirectionTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

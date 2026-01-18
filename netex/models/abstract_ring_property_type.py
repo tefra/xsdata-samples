@@ -7,7 +7,7 @@ from .linear_ring import LinearRing
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractRingPropertyType:
     linear_ring: None | LinearRing = field(
         default=None,

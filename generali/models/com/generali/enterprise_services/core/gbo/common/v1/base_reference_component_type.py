@@ -30,7 +30,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.time_pe
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseReferenceComponentType(BaseComponentType):
     """
     <description xmlns="">The base type for all components with an
@@ -90,14 +90,13 @@ class BaseReferenceComponentType(BaseComponentType):
         Notification or Sales Order.</description>
     """
 
-    ids: None | BaseReferenceComponentTypeIds = field(
-        default=None,
+    ids: BaseReferenceComponentTypeIds = field(
         metadata={
             "name": "IDs",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )
     name_text: None | TextType = field(
         default=None,

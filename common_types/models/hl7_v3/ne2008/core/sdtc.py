@@ -12,35 +12,35 @@ from .datatypes_base import (
 __NAMESPACE__ = "urn:hl7-org:sdtc"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BirthTime(Ts):
     class Meta:
         name = "birthTime"
         namespace = "urn:hl7-org:sdtc"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeceasedInd(Bl):
     class Meta:
         name = "deceasedInd"
         namespace = "urn:hl7-org:sdtc"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeceasedTime(Ts):
     class Meta:
         name = "deceasedTime"
         namespace = "urn:hl7-org:sdtc"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DischargeDispositionCode(Ce):
     class Meta:
         name = "dischargeDispositionCode"
         namespace = "urn:hl7-org:sdtc"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Id(Ii):
     class Meta:
         name = "id"

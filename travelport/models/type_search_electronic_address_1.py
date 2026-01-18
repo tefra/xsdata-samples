@@ -7,7 +7,7 @@ from travelport.models.type_contact_purpose_1 import TypeContactPurpose1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeSearchElectronicAddress1:
     """
     The electronic address of the profile to search for.

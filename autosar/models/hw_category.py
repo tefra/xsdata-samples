@@ -18,7 +18,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HwCategory:
     """
     This metaclass represents the ability to declare hardware categories
@@ -85,14 +85,13 @@ class HwCategory:
     class Meta:
         name = "HW-CATEGORY"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | HwCategory.ShortNameFragments = field(
         default=None,
@@ -189,7 +188,7 @@ class HwCategory:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -200,7 +199,7 @@ class HwCategory:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -211,7 +210,7 @@ class HwCategory:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwAttributeDefs:
         hw_attribute_def: list[HwAttributeDef] = field(
             default_factory=list,

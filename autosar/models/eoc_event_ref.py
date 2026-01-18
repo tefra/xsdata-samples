@@ -25,7 +25,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EocEventRef:
     """
     This is used to define a reference to an RTE or BSW Event.
@@ -97,14 +97,13 @@ class EocEventRef:
     class Meta:
         name = "EOC-EVENT-REF"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EocEventRef.ShortNameFragments = field(
         default=None,
@@ -225,7 +224,7 @@ class EocEventRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -236,7 +235,7 @@ class EocEventRef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -247,7 +246,7 @@ class EocEventRef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DirectSuccessorRefs:
         direct_successor_ref: list[
             EocEventRef.DirectSuccessorRefs.DirectSuccessorRef
@@ -260,40 +259,37 @@ class EocEventRef:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DirectSuccessorRef(Ref):
-            dest: None | EocExecutableEntityRefAbstractSubtypesEnum = field(
-                default=None,
+            dest: EocExecutableEntityRefAbstractSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BswModuleInstanceRef(Ref):
-        dest: None | BswImplementationSubtypesEnum = field(
-            default=None,
+        dest: BswImplementationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventRef(Ref):
-        dest: None | AbstractEventSubtypesEnum = field(
-            default=None,
+        dest: AbstractEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SuccessorRefs:
         successor_ref: list[EocEventRef.SuccessorRefs.SuccessorRef] = field(
             default_factory=list,
@@ -304,13 +300,12 @@ class EocEventRef:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SuccessorRef(Ref):
-            dest: None | EocExecutableEntityRefAbstractSubtypesEnum = field(
-                default=None,
+            dest: EocExecutableEntityRefAbstractSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

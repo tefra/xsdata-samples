@@ -10,20 +10,19 @@ from travelport.models.vehicle_search_modifiers import VehicleSearchModifiers
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseVehicleSearchAvailabilityReq(BaseSearchReq1):
     """
     Base request to search for vehicle availability.
     """
 
-    vehicle_date_location: None | VehicleDateLocation = field(
-        default=None,
+    vehicle_date_location: VehicleDateLocation = field(
         metadata={
             "name": "VehicleDateLocation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "required": True,
-        },
+        }
     )
     vehicle_search_modifiers: None | VehicleSearchModifiers = field(
         default=None,

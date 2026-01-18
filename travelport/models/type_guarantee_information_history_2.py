@@ -12,7 +12,7 @@ from travelport.models.type_guarantee_information_history_type_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeGuaranteeInformationHistory2:
     """
     Information pertaining to the payment of type Guarantee.

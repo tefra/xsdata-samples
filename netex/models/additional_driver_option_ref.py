@@ -9,7 +9,7 @@ from .additional_driver_option_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdditionalDriverOptionRef(AdditionalDriverOptionRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

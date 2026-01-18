@@ -9,7 +9,7 @@ from ...www.w3.org.pkg_2005.pkg_08.addressing.ws_addr import (
 __NAMESPACE__ = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AcknowledgementType:
     message: None | str = field(
         default=None,
@@ -20,53 +20,49 @@ class AcknowledgementType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AssigningAuthorityType:
-    assigning_authority_id: None | str = field(
-        default=None,
+    assigning_authority_id: str = field(
         metadata={
             "name": "assigningAuthorityId",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConnectcustomHttpHeadersType:
     class Meta:
         name = "CONNECTCustomHttpHeadersType"
 
-    header_name: None | str = field(
-        default=None,
+    header_name: str = field(
         metadata={
             "name": "headerName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    header_value: None | str = field(
-        default=None,
+    header_value: str = field(
         metadata={
             "name": "headerValue",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CeType:
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
     code_system: None | str = field(
         default=None,
@@ -84,32 +80,29 @@ class CeType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    code_system_version: None | str = field(
-        default=None,
+    code_system_version: str = field(
         metadata={
             "name": "codeSystemVersion",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    display_name: None | str = field(
-        default=None,
+    display_name: str = field(
         metadata={
             "name": "displayName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    original_text: None | str = field(
-        default=None,
+    original_text: str = field(
         metadata={
             "name": "originalText",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
     translation: list[CeType] = field(
         default_factory=list,
@@ -120,59 +113,54 @@ class CeType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreateEprrequestType:
     class Meta:
         name = "CreateEPRRequestType"
 
-    endpoint_url: None | str = field(
-        default=None,
+    endpoint_url: str = field(
         metadata={
             "name": "endpointURL",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    namespace_uri: None | str = field(
-        default=None,
+    namespace_uri: str = field(
         metadata={
             "name": "namespaceURI",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    namespace_prefix: None | str = field(
-        default=None,
+    namespace_prefix: str = field(
         metadata={
             "name": "namespacePrefix",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    service_name: None | str = field(
-        default=None,
+    service_name: str = field(
         metadata={
             "name": "serviceName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    port_name: None | str = field(
-        default=None,
+    port_name: str = field(
         metadata={
             "name": "portName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HomeCommunityType:
     description: None | str = field(
         default=None,
@@ -181,14 +169,13 @@ class HomeCommunityType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    home_community_id: None | str = field(
-        default=None,
+    home_community_id: str = field(
         metadata={
             "name": "homeCommunityId",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
     name: None | str = field(
         default=None,
@@ -199,58 +186,53 @@ class HomeCommunityType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QualifiedSubjectIdentifierType:
-    subject_identifier: None | str = field(
-        default=None,
+    subject_identifier: str = field(
         metadata={
             "name": "SubjectIdentifier",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    assigning_authority_identifier: None | str = field(
-        default=None,
+    assigning_authority_identifier: str = field(
         metadata={
             "name": "AssigningAuthorityIdentifier",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResponseType:
-    status: None | bool = field(
-        default=None,
+    status: bool = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    message: None | str = field(
-        default=None,
+    message: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlAuthnStatementType:
-    auth_instant: None | str = field(
-        default=None,
+    auth_instant: str = field(
         metadata={
             "name": "authInstant",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
     session_index: None | str = field(
         default=None,
@@ -260,14 +242,13 @@ class SamlAuthnStatementType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    auth_context_class_ref: None | str = field(
-        default=None,
+    auth_context_class_ref: str = field(
         metadata={
             "name": "authContextClassRef",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
     subject_locality_address: None | str = field(
         default=None,
@@ -287,7 +268,7 @@ class SamlAuthnStatementType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlAuthzDecisionStatementEvidenceConditionsType:
     not_before: None | str = field(
         default=None,
@@ -307,29 +288,27 @@ class SamlAuthzDecisionStatementEvidenceConditionsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlConditionsType:
-    not_before: None | str = field(
-        default=None,
+    not_before: str = field(
         metadata={
             "name": "notBefore",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    not_on_or_after: None | str = field(
-        default=None,
+    not_on_or_after: str = field(
         metadata={
             "name": "notOnOrAfter",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlIssuerType:
     issuer: None | str = field(
         default=None,
@@ -348,7 +327,7 @@ class SamlIssuerType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlSignatureKeyInfoType:
     rsa_key_value_modulus: None | bytes = field(
         default=None,
@@ -370,39 +349,36 @@ class SamlSignatureKeyInfoType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TokenRetrieveInfoType:
-    request: None | str = field(
-        default=None,
+    request: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UrlInfoType:
-    url: None | str = field(
-        default=None,
+    url: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UrlSetType:
     url: list[str] = field(
         default_factory=list,
@@ -413,68 +389,62 @@ class UrlSetType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Acknowledgement(AcknowledgementType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddressType:
-    address_type: None | CeType = field(
-        default=None,
+    address_type: CeType = field(
         metadata={
             "name": "addressType",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    city: None | str = field(
-        default=None,
+    city: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    country: None | str = field(
-        default=None,
+    country: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    state: None | str = field(
-        default=None,
+    state: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    street_address: None | str = field(
-        default=None,
+    street_address: str = field(
         metadata={
             "name": "streetAddress",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    zip_code: None | str = field(
-        default=None,
+    zip_code: str = field(
         metadata={
             "name": "zipCode",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AssigningAuthoritiesType:
     assigning_authority: list[AssigningAuthorityType] = field(
         default_factory=list,
@@ -486,40 +456,40 @@ class AssigningAuthoritiesType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AssigningAuthority(AssigningAuthorityType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConnectcustomHttpHeaders(ConnectcustomHttpHeadersType):
     class Meta:
         name = "CONNECTCustomHttpHeaders"
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ce(CeType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreateEprrequest(CreateEprrequestType):
     class Meta:
         name = "CreateEPRRequest"
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Epr(EndpointReferenceType):
     class Meta:
         name = "EPR"
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HomeCommunitiesType:
     home_community: list[HomeCommunityType] = field(
         default_factory=list,
@@ -531,22 +501,21 @@ class HomeCommunitiesType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HomeCommunity(HomeCommunityType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NhinTargetCommunityType:
-    home_community: None | HomeCommunityType = field(
-        default=None,
+    home_community: HomeCommunityType = field(
         metadata={
             "name": "homeCommunity",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
     list_value: None | str = field(
         default=None,
@@ -565,7 +534,7 @@ class NhinTargetCommunityType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NhinTargetSystemType:
     epr: None | EndpointReferenceType = field(
         default=None,
@@ -607,126 +576,114 @@ class NhinTargetSystemType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersonNameType:
-    family_name: None | str = field(
-        default=None,
+    family_name: str = field(
         metadata={
             "name": "familyName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    given_name: None | str = field(
-        default=None,
+    given_name: str = field(
         metadata={
             "name": "givenName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    name_type: None | CeType = field(
-        default=None,
+    name_type: CeType = field(
         metadata={
             "name": "nameType",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    second_name_or_initials: None | str = field(
-        default=None,
+    second_name_or_initials: str = field(
         metadata={
             "name": "secondNameOrInitials",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    full_name: None | str = field(
-        default=None,
+    full_name: str = field(
         metadata={
             "name": "fullName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    prefix: None | str = field(
-        default=None,
+    prefix: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    suffix: None | str = field(
-        default=None,
+    suffix: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PhoneType:
-    area_code: None | str = field(
-        default=None,
+    area_code: str = field(
         metadata={
             "name": "areaCode",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    country_code: None | str = field(
-        default=None,
+    country_code: str = field(
         metadata={
             "name": "countryCode",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    extension: None | str = field(
-        default=None,
+    extension: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    local_number: None | str = field(
-        default=None,
+    local_number: str = field(
         metadata={
             "name": "localNumber",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    phone_number_type: None | CeType = field(
-        default=None,
+    phone_number_type: CeType = field(
         metadata={
             "name": "phoneNumberType",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QualifiedSubjectIdentifier(QualifiedSubjectIdentifierType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QualifiedSubjectIdentifiersType:
     qualified_subject_identifier: list[QualifiedSubjectIdentifierType] = field(
         default_factory=list,
@@ -738,19 +695,19 @@ class QualifiedSubjectIdentifiersType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Response(ResponseType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlAuthnStatement(SamlAuthnStatementType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlAuthzDecisionStatementEvidenceAssertionType:
     id: None | str = field(
         default=None,
@@ -823,7 +780,7 @@ class SamlAuthzDecisionStatementEvidenceAssertionType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlAuthzDecisionStatementEvidenceConditions(
     SamlAuthzDecisionStatementEvidenceConditionsType
 ):
@@ -831,25 +788,25 @@ class SamlAuthzDecisionStatementEvidenceConditions(
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlConditions(SamlConditionsType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlIssuer(SamlIssuerType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlSignatureKeyInfo(SamlSignatureKeyInfoType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlSignatureType:
     key_info: None | SamlSignatureKeyInfoType = field(
         default=None,
@@ -870,15 +827,14 @@ class SamlSignatureType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlSubjectConfirmationType:
-    method: None | str = field(
-        default=None,
+    method: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
     subject_condition: None | SamlConditionsType = field(
         default=None,
@@ -912,31 +868,31 @@ class SamlSubjectConfirmationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TokenRetrieveInfo(TokenRetrieveInfoType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UrlInfo(UrlInfoType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UrlSet(UrlSetType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Address(AddressType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddressesType:
     address: list[AddressType] = field(
         default_factory=list,
@@ -948,13 +904,13 @@ class AddressesType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HomeCommunities(HomeCommunitiesType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NhinTargetCommunitiesType:
     nhin_target_community: list[NhinTargetCommunityType] = field(
         default_factory=list,
@@ -983,37 +939,37 @@ class NhinTargetCommunitiesType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NhinTargetCommunity(NhinTargetCommunityType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NhinTargetSystem(NhinTargetSystemType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersonName(PersonNameType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Phone(PhoneType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QualifiedSubjectIdentifiers(QualifiedSubjectIdentifiersType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlAuthzDecisionStatementEvidenceAssertion(
     SamlAuthzDecisionStatementEvidenceAssertionType
 ):
@@ -1021,7 +977,7 @@ class SamlAuthzDecisionStatementEvidenceAssertion(
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlAuthzDecisionStatementEvidenceType:
     assertion: None | SamlAuthzDecisionStatementEvidenceAssertionType = field(
         default=None,
@@ -1032,102 +988,95 @@ class SamlAuthzDecisionStatementEvidenceType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlSignature(SamlSignatureType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UserType:
-    person_name: None | PersonNameType = field(
-        default=None,
+    person_name: PersonNameType = field(
         metadata={
             "name": "personName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    user_name: None | str = field(
-        default=None,
+    user_name: str = field(
         metadata={
             "name": "userName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    org: None | HomeCommunityType = field(
-        default=None,
+    org: HomeCommunityType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    role_coded: None | CeType = field(
-        default=None,
+    role_coded: CeType = field(
         metadata={
             "name": "roleCoded",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AssigningAuthorites(AssigningAuthoritiesType):
     class Meta:
         name = "assigningAuthorites"
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Addresses(AddressesType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConfigAssertionType:
-    user_info: None | UserType = field(
-        default=None,
+    user_info: UserType = field(
         metadata={
             "name": "userInfo",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    config_instance: None | str = field(
-        default=None,
+    config_instance: str = field(
         metadata={
             "name": "configInstance",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    auth_method: None | str = field(
-        default=None,
+    auth_method: str = field(
         metadata={
             "name": "authMethod",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NhinTargetCommunities(NhinTargetCommunitiesType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlAuthzDecisionStatementEvidence(
     SamlAuthzDecisionStatementEvidenceType
 ):
@@ -1135,7 +1084,7 @@ class SamlAuthzDecisionStatementEvidence(
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlAuthzDecisionStatementType:
     decision: None | str = field(
         default=None,
@@ -1167,13 +1116,13 @@ class SamlAuthzDecisionStatementType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class User(UserType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AssertionType:
     address: None | AddressType = field(
         default=None,
@@ -1222,14 +1171,13 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    home_community: None | HomeCommunityType = field(
-        default=None,
+    home_community: HomeCommunityType = field(
         metadata={
             "name": "homeCommunity",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
     national_provider_id: None | str = field(
         default=None,
@@ -1319,31 +1267,28 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    user_info: None | UserType = field(
-        default=None,
+    user_info: UserType = field(
         metadata={
             "name": "userInfo",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    authorized: None | bool = field(
-        default=None,
+    authorized: bool = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    purpose_of_disclosure_coded: None | CeType = field(
-        default=None,
+    purpose_of_disclosure_coded: CeType = field(
         metadata={
             "name": "purposeOfDisclosureCoded",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
     acp_attribute: None | str = field(
         default=None,
@@ -1477,55 +1422,52 @@ class AssertionType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConfigAssertion(ConfigAssertionType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SamlAuthzDecisionStatement(SamlAuthzDecisionStatementType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Assertion(AssertionType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TokenCreationInfoType:
-    assertion: None | AssertionType = field(
-        default=None,
+    assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    action_name: None | str = field(
-        default=None,
+    action_name: str = field(
         metadata={
             "name": "actionName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
-    resource_name: None | str = field(
-        default=None,
+    resource_name: str = field(
         metadata={
             "name": "resourceName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TokenCreationInfo(TokenCreationInfoType):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"

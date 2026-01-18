@@ -8,7 +8,7 @@ from travelport.models.profile_template import ProfileTemplate
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileRetrieveTemplateRsp(BaseRsp5):
     """
     Response with profile template data.

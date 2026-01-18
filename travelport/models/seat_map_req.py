@@ -15,7 +15,7 @@ from travelport.models.search_traveler import SearchTraveler
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SeatMapReq(BaseReq1):
     """
     Request a seat map for the give flight information.
@@ -96,13 +96,12 @@ class SeatMapReq(BaseReq1):
             },
         )
     )
-    return_seat_pricing: None | bool = field(
-        default=None,
+    return_seat_pricing: bool = field(
         metadata={
             "name": "ReturnSeatPricing",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     return_branding_info: bool = field(
         default=False,

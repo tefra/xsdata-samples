@@ -9,7 +9,7 @@ from sdmx_ml.models.submit_structure_request_type_2 import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SubmitStructureRequest(SubmitStructureRequestType2):
     """
     SubmitStructureRequest is used to submit structure definitions to the

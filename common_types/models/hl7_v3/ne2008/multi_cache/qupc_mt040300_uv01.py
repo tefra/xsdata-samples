@@ -18,7 +18,7 @@ from ..core.voc import NullFlavor
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcMt040300Uv01CareProvisionCode:
     class Meta:
         name = "QUPC_MT040300UV01.CareProvisionCode"
@@ -47,13 +47,12 @@ class QupcMt040300Uv01CareProvisionCode:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | Cd = field(
-        default=None,
+    value: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -64,7 +63,7 @@ class QupcMt040300Uv01CareProvisionCode:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcMt040300Uv01CareProvisionReason:
     class Meta:
         name = "QUPC_MT040300UV01.CareProvisionReason"
@@ -93,13 +92,12 @@ class QupcMt040300Uv01CareProvisionReason:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | Cd = field(
-        default=None,
+    value: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -110,7 +108,7 @@ class QupcMt040300Uv01CareProvisionReason:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcMt040300Uv01CareRecordTimePeriod:
     class Meta:
         name = "QUPC_MT040300UV01.CareRecordTimePeriod"
@@ -139,13 +137,12 @@ class QupcMt040300Uv01CareRecordTimePeriod:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | IvlTsExplicit = field(
-        default=None,
+    value: IvlTsExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -156,7 +153,7 @@ class QupcMt040300Uv01CareRecordTimePeriod:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcMt040300Uv01ClinicalStatementTimePeriod:
     class Meta:
         name = "QUPC_MT040300UV01.ClinicalStatementTimePeriod"
@@ -185,13 +182,12 @@ class QupcMt040300Uv01ClinicalStatementTimePeriod:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | IvlTsExplicit = field(
-        default=None,
+    value: IvlTsExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -202,7 +198,7 @@ class QupcMt040300Uv01ClinicalStatementTimePeriod:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcMt040300Uv01IncludeCarePlanAttachment:
     class Meta:
         name = "QUPC_MT040300UV01.IncludeCarePlanAttachment"
@@ -231,13 +227,12 @@ class QupcMt040300Uv01IncludeCarePlanAttachment:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | Bl = field(
-        default=None,
+    value: Bl = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -248,7 +243,7 @@ class QupcMt040300Uv01IncludeCarePlanAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcMt040300Uv01MaximumHistoryStatements:
     class Meta:
         name = "QUPC_MT040300UV01.MaximumHistoryStatements"
@@ -277,13 +272,12 @@ class QupcMt040300Uv01MaximumHistoryStatements:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | Int = field(
-        default=None,
+    value: Int = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -294,7 +288,7 @@ class QupcMt040300Uv01MaximumHistoryStatements:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcMt040300Uv01PatientAdministrativeGender:
     class Meta:
         name = "QUPC_MT040300UV01.PatientAdministrativeGender"
@@ -323,13 +317,12 @@ class QupcMt040300Uv01PatientAdministrativeGender:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | Ce = field(
-        default=None,
+    value: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -340,7 +333,7 @@ class QupcMt040300Uv01PatientAdministrativeGender:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcMt040300Uv01PatientBirthTime:
     class Meta:
         name = "QUPC_MT040300UV01.PatientBirthTime"
@@ -369,13 +362,12 @@ class QupcMt040300Uv01PatientBirthTime:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | TsExplicit = field(
-        default=None,
+    value: TsExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -386,7 +378,7 @@ class QupcMt040300Uv01PatientBirthTime:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcMt040300Uv01PatientId:
     class Meta:
         name = "QUPC_MT040300UV01.PatientId"
@@ -415,13 +407,12 @@ class QupcMt040300Uv01PatientId:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | Ii = field(
-        default=None,
+    value: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -432,7 +423,7 @@ class QupcMt040300Uv01PatientId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcMt040300Uv01PatientName:
     class Meta:
         name = "QUPC_MT040300UV01.PatientName"
@@ -461,13 +452,12 @@ class QupcMt040300Uv01PatientName:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | PnExplicit = field(
-        default=None,
+    value: PnExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -478,7 +468,7 @@ class QupcMt040300Uv01PatientName:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QupcMt040300Uv01ParameterList:
     class Meta:
         name = "QUPC_MT040300UV01.ParameterList"
@@ -589,14 +579,13 @@ class QupcMt040300Uv01ParameterList:
             "nillable": True,
         },
     )
-    patient_id: None | QupcMt040300Uv01PatientId = field(
-        default=None,
+    patient_id: QupcMt040300Uv01PatientId = field(
         metadata={
             "name": "patientId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     patient_name: None | QupcMt040300Uv01PatientName = field(
         default=None,

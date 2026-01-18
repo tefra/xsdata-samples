@@ -7,7 +7,7 @@ from travelport.models.distance_1 import Distance1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlternateLocationDistance:
     """
     Information about the Original Search Airport to Alternate Search
@@ -26,40 +26,36 @@ class AlternateLocationDistance:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    distance: None | Distance1 = field(
-        default=None,
+    distance: Distance1 = field(
         metadata={
             "name": "Distance",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        },
+        }
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    search_location: None | str = field(
-        default=None,
+    search_location: str = field(
         metadata={
             "name": "SearchLocation",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    alternate_location: None | str = field(
-        default=None,
+    alternate_location: str = field(
         metadata={
             "name": "AlternateLocation",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )

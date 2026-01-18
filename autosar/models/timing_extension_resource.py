@@ -21,7 +21,7 @@ from .timing_mode_instance import TimingModeInstance
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimingExtensionResource:
     """
     A TimingExtensionResource provides the capability to contain instance
@@ -96,14 +96,13 @@ class TimingExtensionResource:
     class Meta:
         name = "TIMING-EXTENSION-RESOURCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TimingExtensionResource.ShortNameFragments = (
         field(
@@ -210,7 +209,7 @@ class TimingExtensionResource:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -221,7 +220,7 @@ class TimingExtensionResource:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -232,7 +231,7 @@ class TimingExtensionResource:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingArguments:
         autosar_operation_argument_instance: list[
             AutosarOperationArgumentInstance
@@ -245,7 +244,7 @@ class TimingExtensionResource:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingModes:
         timing_mode_instance: list[TimingModeInstance] = field(
             default_factory=list,
@@ -256,7 +255,7 @@ class TimingExtensionResource:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingVariables:
         autosar_variable_instance: list[AutosarVariableInstance] = field(
             default_factory=list,

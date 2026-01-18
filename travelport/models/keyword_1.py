@@ -7,7 +7,7 @@ from travelport.models.type_keyword_1 import TypeKeyword1
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Keyword1(TypeKeyword1):
     """
     Detail information of keywords.

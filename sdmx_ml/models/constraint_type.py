@@ -10,7 +10,7 @@ from sdmx_ml.models.release_calendar_type import ReleaseCalendarType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ConstraintType(ConstraintBaseType):
     """
     ConstraintType is an abstract base type that specific types of
@@ -46,10 +46,9 @@ class ConstraintType(ConstraintBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    role: None | ConstraintRoleType = field(
-        default=None,
+    role: ConstraintRoleType = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

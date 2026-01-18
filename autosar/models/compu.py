@@ -8,7 +8,7 @@ from .compu_scale import CompuScale
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Compu:
     """
     This meta-class represents the ability to express one particular
@@ -71,7 +71,7 @@ class Compu:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CompuScales:
         compu_scale: list[CompuScale] = field(
             default_factory=list,

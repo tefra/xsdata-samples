@@ -8,7 +8,7 @@ from npo.models.license_enum import LicenseEnum
 __NAMESPACE__ = "urn:vpro:pages:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ImageType2:
     class Meta:
         name = "imageType"

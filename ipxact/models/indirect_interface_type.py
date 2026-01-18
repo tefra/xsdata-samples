@@ -16,7 +16,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndirectInterfaceType:
     """
     Type definition for a indirectInterface in a component.
@@ -45,13 +45,12 @@ class IndirectInterfaceType:
     class Meta:
         name = "indirectInterfaceType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -76,23 +75,21 @@ class IndirectInterfaceType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    indirect_address_ref: None | IndirectAddressRef = field(
-        default=None,
+    indirect_address_ref: IndirectAddressRef = field(
         metadata={
             "name": "indirectAddressRef",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
-    indirect_data_ref: None | IndirectDataRef = field(
-        default=None,
+    indirect_data_ref: IndirectDataRef = field(
         metadata={
             "name": "indirectDataRef",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     memory_map_ref: None | str = field(
         default=None,

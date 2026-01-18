@@ -46,7 +46,7 @@ from .type_of_fare_structure_element_ref import TypeOfFareStructureElementRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "FareStructureElement_VersionStructure"

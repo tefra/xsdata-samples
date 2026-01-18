@@ -10,7 +10,7 @@ from .timing_point_status_enumeration import TimingPointStatusEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimingPointVersionStructure(PointVersionStructure):
     class Meta:
         name = "TimingPoint_VersionStructure"

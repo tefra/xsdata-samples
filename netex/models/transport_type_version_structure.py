@@ -17,7 +17,7 @@ from .propulsion_type_enumeration import PropulsionTypeEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportTypeVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TransportType_VersionStructure"
@@ -137,20 +137,18 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FuelType:
-        value: None | FuelTypeEnumeration = field(
-            default=None,
+        value: FuelTypeEnumeration = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeOfFuel:
-        value: None | FuelTypeEnumeration = field(
-            default=None,
+        value: FuelTypeEnumeration = field(
             metadata={
                 "required": True,
-            },
+            }
         )

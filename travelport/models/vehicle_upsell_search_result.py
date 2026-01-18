@@ -8,7 +8,7 @@ from travelport.models.vehicle_upsell_qualify import VehicleUpsellQualify
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleUpsellSearchResult:
     """
     Vehicle upsell search criteria result having matching offer and
@@ -27,11 +27,10 @@ class VehicleUpsellSearchResult:
             "max_occurs": 999,
         },
     )
-    vehicle_upsell_offer: None | VehicleUpsellOffer = field(
-        default=None,
+    vehicle_upsell_offer: VehicleUpsellOffer = field(
         metadata={
             "name": "VehicleUpsellOffer",
             "type": "Element",
             "required": True,
-        },
+        }
     )

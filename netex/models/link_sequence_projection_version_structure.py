@@ -11,7 +11,7 @@ from .projection_version_structure import ProjectionVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinkSequenceProjectionVersionStructure(ProjectionVersionStructure):
     class Meta:
         name = "LinkSequenceProjection_VersionStructure"

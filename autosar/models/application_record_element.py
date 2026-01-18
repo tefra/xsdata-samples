@@ -23,7 +23,7 @@ from .sw_data_def_props import SwDataDefProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationRecordElement:
     """
     Describes the properties of one particular element of an application
@@ -98,14 +98,13 @@ class ApplicationRecordElement:
     class Meta:
         name = "APPLICATION-RECORD-ELEMENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ApplicationRecordElement.ShortNameFragments
@@ -220,7 +219,7 @@ class ApplicationRecordElement:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -231,7 +230,7 @@ class ApplicationRecordElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -242,13 +241,12 @@ class ApplicationRecordElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeTref(Ref):
-        dest: None | ApplicationDataTypeSubtypesEnum = field(
-            default=None,
+        dest: ApplicationDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -7,7 +7,7 @@ from .report_behavior_enum_simple import ReportBehaviorEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReportBehaviorEnum:
     """
     This enumeration specifies the report status of related events before
@@ -29,11 +29,10 @@ class ReportBehaviorEnum:
     class Meta:
         name = "REPORT-BEHAVIOR-ENUM"
 
-    value: None | ReportBehaviorEnumSimple = field(
-        default=None,
+    value: ReportBehaviorEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

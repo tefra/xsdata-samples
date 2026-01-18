@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BridgeBranch:
     """
     Summary information for the Bridge Branch.
@@ -26,33 +26,30 @@ class BridgeBranch:
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    branch_code: None | str = field(
-        default=None,
+    branch_code: str = field(
         metadata={
             "name": "BranchCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     default: bool = field(
         default=False,

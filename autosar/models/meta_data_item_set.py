@@ -11,7 +11,7 @@ from .variable_data_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MetaDataItemSet:
     """
     This meta-class represents the ability to define a set of meta-data
@@ -68,7 +68,7 @@ class MetaDataItemSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataElementRefs:
         data_element_ref: list[
             MetaDataItemSet.DataElementRefs.DataElementRef
@@ -81,18 +81,17 @@ class MetaDataItemSet:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DataElementRef(Ref):
-            dest: None | VariableDataPrototypeSubtypesEnum = field(
-                default=None,
+            dest: VariableDataPrototypeSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MetaDataItems:
         meta_data_item: list[MetaDataItem] = field(
             default_factory=list,

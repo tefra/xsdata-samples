@@ -22,7 +22,7 @@ from .software_context import SoftwareContext
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WorstCaseHeapUsage:
     """
     Provides a formal worst case heap usage.
@@ -93,14 +93,13 @@ class WorstCaseHeapUsage:
     class Meta:
         name = "WORST-CASE-HEAP-USAGE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | WorstCaseHeapUsage.ShortNameFragments = field(
         default=None,
@@ -221,7 +220,7 @@ class WorstCaseHeapUsage:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -232,7 +231,7 @@ class WorstCaseHeapUsage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -243,13 +242,12 @@ class WorstCaseHeapUsage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwElementRef(Ref):
-        dest: None | HwElementSubtypesEnum = field(
-            default=None,
+        dest: HwElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

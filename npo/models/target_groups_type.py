@@ -8,7 +8,7 @@ from npo.models.target_group_enum import TargetGroupEnum
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TargetGroupsType:
     class Meta:
         name = "targetGroupsType"

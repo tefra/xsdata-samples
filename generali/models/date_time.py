@@ -3,23 +3,21 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateTime:
     class Meta:
         name = "date-time"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    format: None | str = field(
-        default=None,
+    format: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )

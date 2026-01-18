@@ -7,7 +7,7 @@ from travelport.models.type_remark_5 import TypeRemark5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerId5(TypeRemark5):
     """
     A provider reservation field used to store customer information.

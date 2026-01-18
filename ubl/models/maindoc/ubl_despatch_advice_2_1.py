@@ -34,7 +34,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DespatchAdviceType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -76,14 +76,13 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     copy_indicator: None | CopyIndicator = field(
         default=None,
@@ -101,14 +100,13 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -176,23 +174,21 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch_supplier_party: None | DespatchSupplierParty = field(
-        default=None,
+    despatch_supplier_party: DespatchSupplierParty = field(
         metadata={
             "name": "DespatchSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    delivery_customer_party: None | DeliveryCustomerParty = field(
-        default=None,
+    delivery_customer_party: DeliveryCustomerParty = field(
         metadata={
             "name": "DeliveryCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     buyer_customer_party: None | BuyerCustomerParty = field(
         default=None,
@@ -237,7 +233,7 @@ class DespatchAdviceType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DespatchAdvice(DespatchAdviceType):
     class Meta:
         namespace = (

@@ -15,7 +15,7 @@ from travelport.models.travel_compliance_data_1 import TravelComplianceData1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddAirPnrElement:
     """
     Container for PNR elements to be added.

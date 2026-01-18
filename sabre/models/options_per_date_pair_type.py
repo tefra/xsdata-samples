@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OptionsPerDatePairType:
     """
     Attributes:
@@ -15,14 +15,13 @@ class OptionsPerDatePairType:
         max: Maximum number of options per date/date pair
     """
 
-    departure: None | str = field(
-        default=None,
+    departure: str = field(
         metadata={
             "name": "Departure",
             "type": "Attribute",
             "required": True,
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
-        },
+        }
     )
     return_value: None | str = field(
         default=None,
@@ -32,19 +31,17 @@ class OptionsPerDatePairType:
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
         },
     )
-    min: None | int = field(
-        default=None,
+    min: int = field(
         metadata={
             "name": "Min",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    max: None | int = field(
-        default=None,
+    max: int = field(
         metadata={
             "name": "Max",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

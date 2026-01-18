@@ -21,7 +21,7 @@ from .uri_string import UriString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersistencyFileElement:
     """
     This meta-class has the ability to represent a file at design time such
@@ -92,14 +92,13 @@ class PersistencyFileElement:
     class Meta:
         name = "PERSISTENCY-FILE-ELEMENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | PersistencyFileElement.ShortNameFragments = (
         field(
@@ -206,7 +205,7 @@ class PersistencyFileElement:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -217,7 +216,7 @@ class PersistencyFileElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

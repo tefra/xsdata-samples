@@ -7,7 +7,7 @@ from travelport.models.type_weight import TypeWeight
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaggageAllowance:
     """
     Free Baggage Allowance.

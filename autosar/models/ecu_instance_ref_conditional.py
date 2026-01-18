@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcuInstanceRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -64,13 +64,12 @@ class EcuInstanceRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuInstanceRef(Ref):
-        dest: None | EcuInstanceSubtypesEnum = field(
-            default=None,
+        dest: EcuInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

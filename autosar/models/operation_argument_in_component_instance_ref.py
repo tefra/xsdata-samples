@@ -22,7 +22,7 @@ from .sw_component_type_subtypes_enum import SwComponentTypeSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OperationArgumentInComponentInstanceRef:
     """
     :ivar base_ref:
@@ -132,81 +132,72 @@ class OperationArgumentInComponentInstanceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BaseRef(Ref):
-        dest: None | SwComponentTypeSubtypesEnum = field(
-            default=None,
+        dest: SwComponentTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextComponentRef(Ref):
-        dest: None | SwComponentPrototypeSubtypesEnum = field(
-            default=None,
+        dest: SwComponentPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextPortPrototypeRef(Ref):
-        dest: None | PortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: PortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextOperationRef(Ref):
-        dest: None | ClientServerOperationSubtypesEnum = field(
-            default=None,
+        dest: ClientServerOperationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RootArgumentDataPrototypeRef(Ref):
-        dest: None | ArgumentDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ArgumentDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextDataPrototypeRef(Ref):
-        dest: None | ApplicationCompositeElementDataPrototypeSubtypesEnum = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
-        )
-
-    @dataclass
-    class TargetDataPrototypeRef(Ref):
-        dest: None | DataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
+        )
+
+    @dataclass(kw_only=True)
+    class TargetDataPrototypeRef(Ref):
+        dest: DataPrototypeSubtypesEnum = field(
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            }
         )

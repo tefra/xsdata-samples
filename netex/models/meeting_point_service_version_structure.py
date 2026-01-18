@@ -9,19 +9,18 @@ from .multilingual_string import MultilingualString
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MeetingPointServiceVersionStructure(CustomerServiceVersionStructure):
     class Meta:
         name = "MeetingPointService_VersionStructure"
 
-    meeting_point_service_type: None | MeetingPointEnumeration = field(
-        default=None,
+    meeting_point_service_type: MeetingPointEnumeration = field(
         metadata={
             "name": "MeetingPointServiceType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     label: None | MultilingualString = field(
         default=None,

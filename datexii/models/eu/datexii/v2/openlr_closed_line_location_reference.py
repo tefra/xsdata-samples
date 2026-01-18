@@ -16,7 +16,7 @@ from datexii.models.eu.datexii.v2.openlr_location_reference_point import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenlrClosedLineLocationReference(OpenlrAreaLocationReference):
     """
     the openLR method of areadefinition by providing a closed path (i.e. a
@@ -36,14 +36,13 @@ class OpenlrClosedLineLocationReference(OpenlrAreaLocationReference):
             },
         )
     )
-    openlr_last_line: None | OpenlrLineAttributes = field(
-        default=None,
+    openlr_last_line: OpenlrLineAttributes = field(
         metadata={
             "name": "openlrLastLine",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     openlr_closed_line_location_reference_extension: None | ExtensionType = (
         field(

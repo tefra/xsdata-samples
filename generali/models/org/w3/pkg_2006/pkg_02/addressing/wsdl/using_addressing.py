@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.w3.org/2006/02/addressing/wsdl"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UsingAddressing:
     class Meta:
         namespace = "http://www.w3.org/2006/02/addressing/wsdl"

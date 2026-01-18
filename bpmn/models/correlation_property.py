@@ -7,7 +7,7 @@ from .t_correlation_property import TCorrelationProperty
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CorrelationProperty(TCorrelationProperty):
     class Meta:
         name = "correlationProperty"

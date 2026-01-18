@@ -9,7 +9,7 @@ from sabre.models.alt_cities_combinations_locations_type import (
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AltCitiesCombinationsType:
     """
     Which (if any) alt cities locations should be handled in a special way

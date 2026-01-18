@@ -7,14 +7,13 @@ from .response_timestamp import ResponseTimestamp
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResponseStructure:
-    response_timestamp: None | ResponseTimestamp = field(
-        default=None,
+    response_timestamp: ResponseTimestamp = field(
         metadata={
             "name": "ResponseTimestamp",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        },
+        }
     )

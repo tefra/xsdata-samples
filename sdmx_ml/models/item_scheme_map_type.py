@@ -8,7 +8,7 @@ from sdmx_ml.models.single_value_mapping_type import SingleValueMappingType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ItemSchemeMapType(ItemSchemeMapBaseType):
     """
     ItemSchemeMapType is an abstract base type which forms the basis for
@@ -21,25 +21,23 @@ class ItemSchemeMapType(ItemSchemeMapBaseType):
     :ivar item_map:
     """
 
-    source: None | str = field(
-        default=None,
+    source: str = field(
         metadata={
             "name": "Source",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r".+\)",
-        },
+        }
     )
-    target: None | str = field(
-        default=None,
+    target: str = field(
         metadata={
             "name": "Target",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r".+\)",
-        },
+        }
     )
     item_map: tuple[SingleValueMappingType, ...] = field(
         default_factory=tuple,

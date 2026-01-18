@@ -21,7 +21,7 @@ from .system_subtypes_enum import SystemSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RapidPrototypingScenario:
     """
     This meta class provides the ability to describe a Rapid Prototyping
@@ -101,14 +101,13 @@ class RapidPrototypingScenario:
     class Meta:
         name = "RAPID-PROTOTYPING-SCENARIO"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | RapidPrototypingScenario.ShortNameFragments
@@ -231,7 +230,7 @@ class RapidPrototypingScenario:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -242,7 +241,7 @@ class RapidPrototypingScenario:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -253,18 +252,17 @@ class RapidPrototypingScenario:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HostSystemRef(Ref):
-        dest: None | SystemSubtypesEnum = field(
-            default=None,
+        dest: SystemSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RptContainers:
         rpt_container: list[RptContainer] = field(
             default_factory=list,
@@ -275,7 +273,7 @@ class RapidPrototypingScenario:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RptProfiles:
         rpt_profile: list[RptProfile] = field(
             default_factory=list,
@@ -286,13 +284,12 @@ class RapidPrototypingScenario:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RptSystemRef(Ref):
-        dest: None | SystemSubtypesEnum = field(
-            default=None,
+        dest: SystemSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

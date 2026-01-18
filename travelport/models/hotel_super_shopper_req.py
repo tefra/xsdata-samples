@@ -11,7 +11,7 @@ from travelport.models.quick_response import QuickResponse
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelSuperShopperReq(BaseSearchReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
@@ -30,13 +30,12 @@ class HotelSuperShopperReq(BaseSearchReq1):
             "type": "Element",
         },
     )
-    hotel_stay: None | HotelStay = field(
-        default=None,
+    hotel_stay: HotelStay = field(
         metadata={
             "name": "HotelStay",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     quick_response: None | QuickResponse = field(
         default=None,

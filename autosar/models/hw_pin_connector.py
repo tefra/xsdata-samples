@@ -15,7 +15,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HwPinConnector:
     """
     This meta-class represents the ability to connect two pins.
@@ -116,7 +116,7 @@ class HwPinConnector:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwPinRefs:
         hw_pin_ref: list[HwPinConnector.HwPinRefs.HwPinRef] = field(
             default_factory=list,
@@ -128,13 +128,12 @@ class HwPinConnector:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class HwPinRef(Ref):
-            dest: None | HwPinSubtypesEnum = field(
-                default=None,
+            dest: HwPinSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

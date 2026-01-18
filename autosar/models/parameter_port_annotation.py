@@ -13,7 +13,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParameterPortAnnotation:
     """
     Annotation to a port used for calibration regarding a certain
@@ -90,13 +90,12 @@ class ParameterPortAnnotation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ParameterRef(Ref):
-        dest: None | ParameterDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ParameterDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -8,7 +8,7 @@ from npo.models.facet_order_type_enum import FacetOrderTypeEnum
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TextFacetType(AbstractFacetType):
     class Meta:
         name = "textFacetType"

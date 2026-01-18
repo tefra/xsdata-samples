@@ -29,7 +29,7 @@ from .swc_to_application_partition_mapping import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CpSoftwareClusterMappingSet:
     """
     This meta-class represents the ability to aggregate a collection of CP
@@ -115,14 +115,13 @@ class CpSoftwareClusterMappingSet:
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-MAPPING-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | CpSoftwareClusterMappingSet.ShortNameFragments
@@ -254,7 +253,7 @@ class CpSoftwareClusterMappingSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -265,7 +264,7 @@ class CpSoftwareClusterMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -276,7 +275,7 @@ class CpSoftwareClusterMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortElementToComResourceMappings:
         port_element_to_communication_resource_mapping: list[
             PortElementToCommunicationResourceMapping
@@ -289,7 +288,7 @@ class CpSoftwareClusterMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResourceToApplicationPartitionMappings:
         cp_software_cluster_resource_to_application_partition_mapping: list[
             CpSoftwareClusterResourceToApplicationPartitionMapping
@@ -302,7 +301,7 @@ class CpSoftwareClusterMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SoftwareClusterToResourceMappings:
         cp_software_cluster_to_resource_mapping: list[
             CpSoftwareClusterToResourceMapping
@@ -315,7 +314,7 @@ class CpSoftwareClusterMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwcToApplicationPartitionMappings:
         swc_to_application_partition_mapping: list[
             SwcToApplicationPartitionMapping

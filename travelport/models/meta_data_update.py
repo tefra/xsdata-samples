@@ -7,7 +7,7 @@ from travelport.models.meta_data_2 import MetaData2
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MetaDataUpdate:
     """
     Command to update profile data information.

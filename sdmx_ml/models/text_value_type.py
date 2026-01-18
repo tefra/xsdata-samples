@@ -9,7 +9,7 @@ from sdmx_ml.models.value_type import ValueType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TextValueType(ValueType):
     """
     TextValueType is a restriction of ValueType that allows mutliple Text

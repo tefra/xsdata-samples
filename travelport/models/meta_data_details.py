@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MetaDataDetails:
     """
     <xs:annotation xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -32,15 +32,14 @@ class MetaDataDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    element_name: None | str = field(
-        default=None,
+    element_name: str = field(
         metadata={
             "name": "ElementName",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        },
+        }
     )
     type_value: None | str = field(
         default=None,
@@ -51,15 +50,14 @@ class MetaDataDetails:
             "max_length": 50,
         },
     )
-    customization: None | str = field(
-        default=None,
+    customization: str = field(
         metadata={
             "name": "Customization",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        },
+        }
     )
     key: None | int = field(
         default=None,

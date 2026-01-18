@@ -7,7 +7,7 @@ from datexii.models.eu.datexii.v2.reference import Reference
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingAccessReference(Reference):
     class Meta:
         name = "_ParkingAccessReference"

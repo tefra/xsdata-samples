@@ -30,107 +30,98 @@ from ...hl7_v3.ne2008.multi_cache.qupc_in043200_uv01 import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043100Uv01RequestType:
     class Meta:
         name = "CareRecord_QUPC_IN043100UV01RequestType"
 
-    local_device_id: None | str = field(
-        default=None,
+    local_device_id: str = field(
         metadata={
             "name": "localDeviceId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    sender_oid: None | str = field(
-        default=None,
+    sender_oid: str = field(
         metadata={
             "name": "senderOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    receiver_oid: None | str = field(
-        default=None,
+    receiver_oid: str = field(
         metadata={
             "name": "receiverOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    query: None | QupcIn043100Uv01McciMt000100Uv01Message = field(
-        default=None,
+    query: QupcIn043100Uv01McciMt000100Uv01Message = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043200Uv01ResponseType:
     class Meta:
         name = "CareRecord_QUPC_IN043200UV01ResponseType"
 
-    care_record: None | QupcIn043200Uv01MfmiMt700712Uv01Subject1 = field(
-        default=None,
+    care_record: QupcIn043200Uv01MfmiMt700712Uv01Subject1 = field(
         metadata={
             "name": "careRecord",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FindEncountersPrpaIn900300Uv02RequestType:
     class Meta:
         name = "FindEncounters_PRPA_IN900300UV02RequestType"
 
-    local_device_id: None | str = field(
-        default=None,
+    local_device_id: str = field(
         metadata={
             "name": "localDeviceId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    sender_oid: None | str = field(
-        default=None,
+    sender_oid: str = field(
         metadata={
             "name": "senderOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    receiver_oid: None | str = field(
-        default=None,
+    receiver_oid: str = field(
         metadata={
             "name": "receiverOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    query: None | PrpaIn900300Uv02McciMt000100Uv01Message = field(
-        default=None,
+    query: PrpaIn900300Uv02McciMt000100Uv01Message = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FindEncountersPrpaMt900350Uv02ResponseType:
     class Meta:
         name = "FindEncounters_PRPA_MT900350UV02ResponseType"
@@ -144,49 +135,45 @@ class FindEncountersPrpaMt900350Uv02ResponseType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FindPatientsPrpaIn201305Uv02RequestType:
     class Meta:
         name = "FindPatients_PRPA_IN201305UV02RequestType"
 
-    local_device_id: None | str = field(
-        default=None,
+    local_device_id: str = field(
         metadata={
             "name": "localDeviceId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    sender_oid: None | str = field(
-        default=None,
+    sender_oid: str = field(
         metadata={
             "name": "senderOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    receiver_oid: None | str = field(
-        default=None,
+    receiver_oid: str = field(
         metadata={
             "name": "receiverOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    query: None | PrpaIn201305Uv02McciMt000100Uv01Message = field(
-        default=None,
+    query: PrpaIn201305Uv02McciMt000100Uv01Message = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FindPatientsPrpaMt201310Uv02ResponseType:
     class Meta:
         name = "FindPatients_PRPA_MT201310UV02ResponseType"
@@ -200,64 +187,59 @@ class FindPatientsPrpaMt201310Uv02ResponseType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PatientDemographicsPrpaIn201307Uv02RequestType:
     class Meta:
         name = "PatientDemographics_PRPA_IN201307UV02RequestType"
 
-    local_device_id: None | str = field(
-        default=None,
+    local_device_id: str = field(
         metadata={
             "name": "localDeviceId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    sender_oid: None | str = field(
-        default=None,
+    sender_oid: str = field(
         metadata={
             "name": "senderOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    receiver_oid: None | str = field(
-        default=None,
+    receiver_oid: str = field(
         metadata={
             "name": "receiverOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    query: None | PrpaIn201307Uv02McciMt000100Uv01Message = field(
-        default=None,
+    query: PrpaIn201307Uv02McciMt000100Uv01Message = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PatientDemographicsPrpaMt201303Uv02ResponseType:
     class Meta:
         name = "PatientDemographics_PRPA_MT201303UV02ResponseType"
 
-    subject: None | PrpaMt201303Uv02Patient = field(
-        default=None,
+    subject: PrpaMt201303Uv02Patient = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043100Uv01AdmissionsRequest(
     CareRecordQupcIn043100Uv01RequestType
 ):
@@ -266,7 +248,7 @@ class CareRecordQupcIn043100Uv01AdmissionsRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043100Uv01AllergiesRequest(
     CareRecordQupcIn043100Uv01RequestType
 ):
@@ -275,7 +257,7 @@ class CareRecordQupcIn043100Uv01AllergiesRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043100Uv01AppointmentsRequest(
     CareRecordQupcIn043100Uv01RequestType
 ):
@@ -284,7 +266,7 @@ class CareRecordQupcIn043100Uv01AppointmentsRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043100Uv01FamilyHistoryRequest(
     CareRecordQupcIn043100Uv01RequestType
 ):
@@ -293,7 +275,7 @@ class CareRecordQupcIn043100Uv01FamilyHistoryRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043100Uv01ImmunizationsRequest(
     CareRecordQupcIn043100Uv01RequestType
 ):
@@ -302,7 +284,7 @@ class CareRecordQupcIn043100Uv01ImmunizationsRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043100Uv01MedicationsRequest(
     CareRecordQupcIn043100Uv01RequestType
 ):
@@ -311,7 +293,7 @@ class CareRecordQupcIn043100Uv01MedicationsRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043100Uv01OrdersRequest(
     CareRecordQupcIn043100Uv01RequestType
 ):
@@ -320,7 +302,7 @@ class CareRecordQupcIn043100Uv01OrdersRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043100Uv01ProblemsRequest(
     CareRecordQupcIn043100Uv01RequestType
 ):
@@ -329,7 +311,7 @@ class CareRecordQupcIn043100Uv01ProblemsRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043100Uv01ProceduresRequest(
     CareRecordQupcIn043100Uv01RequestType
 ):
@@ -338,14 +320,14 @@ class CareRecordQupcIn043100Uv01ProceduresRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043100Uv01Request(CareRecordQupcIn043100Uv01RequestType):
     class Meta:
         name = "CareRecord_QUPC_IN043100UV01Request"
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043100Uv01SocialHistoryRequest(
     CareRecordQupcIn043100Uv01RequestType
 ):
@@ -354,7 +336,7 @@ class CareRecordQupcIn043100Uv01SocialHistoryRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043100Uv01TestResultsRequest(
     CareRecordQupcIn043100Uv01RequestType
 ):
@@ -363,7 +345,7 @@ class CareRecordQupcIn043100Uv01TestResultsRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043100Uv01VitalsRequest(
     CareRecordQupcIn043100Uv01RequestType
 ):
@@ -372,7 +354,7 @@ class CareRecordQupcIn043100Uv01VitalsRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CareRecordQupcIn043200Uv01Response(
     CareRecordQupcIn043200Uv01ResponseType
 ):
@@ -381,7 +363,7 @@ class CareRecordQupcIn043200Uv01Response(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FindEncountersPrpaIn900300Uv02Request(
     FindEncountersPrpaIn900300Uv02RequestType
 ):
@@ -390,7 +372,7 @@ class FindEncountersPrpaIn900300Uv02Request(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FindEncountersPrpaMt900350Uv02Response(
     FindEncountersPrpaMt900350Uv02ResponseType
 ):
@@ -399,7 +381,7 @@ class FindEncountersPrpaMt900350Uv02Response(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FindPatientsPrpaIn201305Uv02Request(
     FindPatientsPrpaIn201305Uv02RequestType
 ):
@@ -408,7 +390,7 @@ class FindPatientsPrpaIn201305Uv02Request(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FindPatientsPrpaMt201310Uv02Response(
     FindPatientsPrpaMt201310Uv02ResponseType
 ):
@@ -417,7 +399,7 @@ class FindPatientsPrpaMt201310Uv02Response(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PatientDemographicsPrpaIn201307Uv02Request(
     PatientDemographicsPrpaIn201307Uv02RequestType
 ):
@@ -426,7 +408,7 @@ class PatientDemographicsPrpaIn201307Uv02Request(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PatientDemographicsPrpaMt201303Uv02Response(
     PatientDemographicsPrpaMt201303Uv02ResponseType
 ):

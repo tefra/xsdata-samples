@@ -17,7 +17,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IdsMgrNeeds:
     """
     This meta-class is used to indicate that the enclosing
@@ -84,14 +84,13 @@ class IdsMgrNeeds:
     class Meta:
         name = "IDS-MGR-NEEDS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | IdsMgrNeeds.ShortNameFragments = field(
         default=None,
@@ -180,7 +179,7 @@ class IdsMgrNeeds:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -191,7 +190,7 @@ class IdsMgrNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

@@ -9,7 +9,7 @@ from generali.models.org.w3.pkg_2005.pkg_08.addressing.endpoint_reference_type i
 __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReplyTo(EndpointReferenceType):
     class Meta:
         namespace = "http://www.w3.org/2005/08/addressing"

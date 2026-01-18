@@ -11,7 +11,7 @@ from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientServerPrimitiveTypeMapping:
     """
     Mapping of an argument with a primitive datatype to a signal.
@@ -69,24 +69,22 @@ class ClientServerPrimitiveTypeMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArgumentRef(Ref):
-        dest: None | ArgumentDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ArgumentDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SystemSignalRef(Ref):
-        dest: None | SystemSignalSubtypesEnum = field(
-            default=None,
+        dest: SystemSignalSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

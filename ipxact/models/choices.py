@@ -7,7 +7,7 @@ from ipxact.models.complex_base_expression import ComplexBaseExpression
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Choices:
     """
     Choices used by elements with an attribute ipxact:choiceRef.
@@ -28,7 +28,7 @@ class Choices:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Choice:
         """
         :ivar name: Choice key, available for reference by the
@@ -37,12 +37,11 @@ class Choices:
         :ivar id:
         """
 
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         enumeration: list[Choices.Choice.Enumeration] = field(
             default_factory=list,
@@ -59,7 +58,7 @@ class Choices:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Enumeration(ComplexBaseExpression):
             """
             :ivar text: When specified, displayed in place of the

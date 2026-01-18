@@ -16,7 +16,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GenericModuleInstantiation:
     """
     This meta-class defines the attributes for the generic module
@@ -83,14 +83,13 @@ class GenericModuleInstantiation:
     class Meta:
         name = "GENERIC-MODULE-INSTANTIATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | GenericModuleInstantiation.ShortNameFragments
@@ -173,7 +172,7 @@ class GenericModuleInstantiation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -184,7 +183,7 @@ class GenericModuleInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

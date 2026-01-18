@@ -10,7 +10,7 @@ from sdmx_ml.models.mapped_value_type import MappedValueType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SingleValueMappingType(AnnotableType):
     """
     SingleValueMappingType defines a mapping with a single source and
@@ -27,14 +27,13 @@ class SingleValueMappingType(AnnotableType):
     :ivar valid_to:
     """
 
-    source_value: None | MappedValueType = field(
-        default=None,
+    source_value: MappedValueType = field(
         metadata={
             "name": "SourceValue",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
     target_value: None | str = field(
         default=None,

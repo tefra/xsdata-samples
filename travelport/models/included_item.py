@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IncludedItem:
     """
     Provides details of included item.
@@ -21,19 +21,17 @@ class IncludedItem:
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "name": "Description",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

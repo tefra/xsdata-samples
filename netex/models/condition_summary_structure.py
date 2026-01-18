@@ -11,7 +11,7 @@ from .vehicle_collection_enumeration import VehicleCollectionEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConditionSummaryStructure:
     fare_structure_type: None | FareStructureTypeEnumeration = field(
         default=None,

@@ -7,16 +7,15 @@ from xml.etree.ElementTree import QName
 __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributedQnameType:
     class Meta:
         name = "AttributedQNameType"
 
-    value: None | QName = field(
-        default=None,
+    value: QName = field(
         metadata={
             "required": True,
-        },
+        }
     )
     other_attributes: dict[str, str] = field(
         default_factory=dict,
@@ -27,7 +26,7 @@ class AttributedQnameType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributedUritype:
     class Meta:
         name = "AttributedURIType"
@@ -47,13 +46,12 @@ class AttributedUritype:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributedUnsignedLongType:
-    value: None | int = field(
-        default=None,
+    value: int = field(
         metadata={
             "required": True,
-        },
+        }
     )
     other_attributes: dict[str, str] = field(
         default_factory=dict,
@@ -64,7 +62,7 @@ class AttributedUnsignedLongType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MetadataType:
     any_element: list[object] = field(
         default_factory=list,
@@ -82,7 +80,7 @@ class MetadataType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceParametersType:
     any_element: list[object] = field(
         default_factory=list,
@@ -106,46 +104,46 @@ class RelationshipType(Enum):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Action(AttributedUritype):
     class Meta:
         namespace = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MessageId(AttributedUritype):
     class Meta:
         name = "MessageID"
         namespace = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Metadata(MetadataType):
     class Meta:
         namespace = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProblemHeaderQname(AttributedQnameType):
     class Meta:
         name = "ProblemHeaderQName"
         namespace = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProblemIri(AttributedUritype):
     class Meta:
         name = "ProblemIRI"
         namespace = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceParameters(ReferenceParametersType):
     class Meta:
         namespace = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RelatesToType:
     value: str = field(
         default="",
@@ -169,28 +167,27 @@ class RelatesToType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RetryAfter(AttributedUnsignedLongType):
     class Meta:
         namespace = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class To(AttributedUritype):
     class Meta:
         namespace = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EndpointReferenceType:
-    address: None | AttributedUritype = field(
-        default=None,
+    address: AttributedUritype = field(
         metadata={
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.w3.org/2005/08/addressing",
             "required": True,
-        },
+        }
     )
     reference_parameters: None | ReferenceParameters = field(
         default=None,
@@ -224,7 +221,7 @@ class EndpointReferenceType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProblemActionType:
     action: None | Action = field(
         default=None,
@@ -251,37 +248,37 @@ class ProblemActionType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RelatesTo(RelatesToType):
     class Meta:
         namespace = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EndpointReference(EndpointReferenceType):
     class Meta:
         namespace = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FaultTo(EndpointReferenceType):
     class Meta:
         namespace = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class From(EndpointReferenceType):
     class Meta:
         namespace = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProblemAction(ProblemActionType):
     class Meta:
         namespace = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReplyTo(EndpointReferenceType):
     class Meta:
         namespace = "http://www.w3.org/2005/08/addressing"

@@ -9,7 +9,7 @@ from .entity_in_version_structure import OperatingDay
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OperatingDaysInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operatingDaysInFrame_RelStructure"

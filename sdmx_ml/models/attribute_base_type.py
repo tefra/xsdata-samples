@@ -7,7 +7,7 @@ from sdmx_ml.models.component_type import ComponentType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AttributeBaseType(ComponentType):
     """
     AttributeBaseType is an abstract base type that serves as the basis for
@@ -19,13 +19,12 @@ class AttributeBaseType(ComponentType):
     concept role is restricted to the values valid for a data attribute.
     """
 
-    concept_identity: None | str = field(
-        default=None,
+    concept_identity: str = field(
         metadata={
             "name": "ConceptIdentity",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r".+\.conceptscheme\.Concept=.+",
-        },
+        }
     )

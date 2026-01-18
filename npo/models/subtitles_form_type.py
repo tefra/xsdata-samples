@@ -7,7 +7,7 @@ from npo.models.subtitles_search_type import SubtitlesSearchType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubtitlesFormType:
     class Meta:
         name = "subtitlesFormType"

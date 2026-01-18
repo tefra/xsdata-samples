@@ -13,7 +13,7 @@ from .standard_fare_table import StandardFareTable
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareTablesInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fareTablesInFrame_RelStructure"

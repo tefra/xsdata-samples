@@ -12,7 +12,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.resource_mime_type import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Resource:
     """
     The URI associated with a DOI.

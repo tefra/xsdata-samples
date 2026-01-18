@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuthorityOperation(Activity):
     """
     Authority initiated operation or activity that could disrupt traffic.
@@ -21,14 +21,13 @@ class AuthorityOperation(Activity):
     :ivar authority_operation_extension:
     """
 
-    authority_operation_type: None | AuthorityOperationTypeEnum = field(
-        default=None,
+    authority_operation_type: AuthorityOperationTypeEnum = field(
         metadata={
             "name": "authorityOperationType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     authority_operation_extension: None | ExtensionType = field(
         default=None,

@@ -17,7 +17,7 @@ from travelport.models.type_search_payment_details_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileSearch1:
     """
     All the fixed fields allowed for searching.

@@ -15,7 +15,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DesignConfigurationInstantiationType:
     """
     Design configuration instantiation type.
@@ -38,13 +38,12 @@ class DesignConfigurationInstantiationType:
     class Meta:
         name = "designConfigurationInstantiationType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -76,14 +75,13 @@ class DesignConfigurationInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    design_configuration_ref: None | ConfigurableLibraryRefType = field(
-        default=None,
+    design_configuration_ref: ConfigurableLibraryRefType = field(
         metadata={
             "name": "designConfigurationRef",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     parameters: None | Parameters = field(
         default=None,

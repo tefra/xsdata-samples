@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecificSeatAssignment:
     """
     Request object used to specify a specific seat.
@@ -29,21 +29,19 @@ class SpecificSeatAssignment:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    booking_traveler_ref: None | str = field(
-        default=None,
+    booking_traveler_ref: str = field(
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    segment_ref: None | str = field(
-        default=None,
+    segment_ref: str = field(
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     flight_detail_ref: None | str = field(
         default=None,
@@ -52,13 +50,12 @@ class SpecificSeatAssignment:
             "type": "Attribute",
         },
     )
-    seat_id: None | str = field(
-        default=None,
+    seat_id: str = field(
         metadata={
             "name": "SeatId",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     rail_coach_number: None | str = field(
         default=None,

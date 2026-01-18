@@ -16,7 +16,7 @@ from datexii.models.eu.datexii.v2.openlr_point_along_line import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenlrPointLocationReference:
     """
     A point location is a zero-dimensional element in a map that specifies

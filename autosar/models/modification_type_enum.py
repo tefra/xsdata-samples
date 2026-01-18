@@ -7,7 +7,7 @@ from .modification_type_enum_simple import ModificationTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModificationTypeEnum:
     """
     This enumerator expresses if an object has been changed in its content
@@ -29,11 +29,10 @@ class ModificationTypeEnum:
     class Meta:
         name = "MODIFICATION-TYPE-ENUM"
 
-    value: None | ModificationTypeEnumSimple = field(
-        default=None,
+    value: ModificationTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

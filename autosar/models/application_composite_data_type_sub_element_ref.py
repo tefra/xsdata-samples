@@ -10,7 +10,7 @@ from .application_composite_element_in_port_interface_instance_ref import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationCompositeDataTypeSubElementRef:
     """
     This meta-class represents the specialization of SubElementMapping with

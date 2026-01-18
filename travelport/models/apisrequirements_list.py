@@ -7,7 +7,7 @@ from travelport.models.apisrequirements import Apisrequirements
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApisrequirementsList:
     """
     The shared object list of APISRequirements.

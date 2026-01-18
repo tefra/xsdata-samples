@@ -11,7 +11,7 @@ from .transmission_mode_timing import TransmissionModeTiming
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransmissionModeDeclaration:
     """
     AUTOSAR COM provides the possibility to define two different
@@ -129,7 +129,7 @@ class TransmissionModeDeclaration:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeDrivenFalseConditions:
         mode_driven_transmission_mode_condition: list[
             ModeDrivenTransmissionModeCondition
@@ -142,7 +142,7 @@ class TransmissionModeDeclaration:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeDrivenTrueConditions:
         mode_driven_transmission_mode_condition: list[
             ModeDrivenTransmissionModeCondition
@@ -155,7 +155,7 @@ class TransmissionModeDeclaration:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransmissionModeConditions:
         transmission_mode_condition: list[TransmissionModeCondition] = field(
             default_factory=list,

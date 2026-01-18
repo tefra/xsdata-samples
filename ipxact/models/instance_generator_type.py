@@ -10,7 +10,7 @@ from ipxact.models.instance_generator_type_scope import (
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InstanceGeneratorType(GeneratorType):
     """
     :ivar group: An identifier to specify the generator group. This is
@@ -38,7 +38,7 @@ class InstanceGeneratorType(GeneratorType):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Group:
         value: str = field(
             default="",

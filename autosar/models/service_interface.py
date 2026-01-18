@@ -28,7 +28,7 @@ from .variable_data_prototype import VariableDataPrototype
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceInterface:
     """
     This represents the ability to define a PortInterface that consists of
@@ -129,14 +129,13 @@ class ServiceInterface:
     class Meta:
         name = "SERVICE-INTERFACE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ServiceInterface.ShortNameFragments = field(
         default=None,
@@ -305,7 +304,7 @@ class ServiceInterface:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -316,7 +315,7 @@ class ServiceInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -327,7 +326,7 @@ class ServiceInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -356,7 +355,7 @@ class ServiceInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Namespaces:
         symbol_props: list[SymbolProps] = field(
             default_factory=list,
@@ -367,7 +366,7 @@ class ServiceInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Events:
         variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
@@ -378,7 +377,7 @@ class ServiceInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Fields:
         field_value: list[FieldType] = field(
             default_factory=list,
@@ -389,7 +388,7 @@ class ServiceInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Methods:
         client_server_operation: list[ClientServerOperation] = field(
             default_factory=list,

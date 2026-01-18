@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "urn:vpro:pages:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GenreType2:
     class Meta:
         name = "genreType"

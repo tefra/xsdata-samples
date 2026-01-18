@@ -11,7 +11,7 @@ from .vehicle_journey_ref import VehicleJourneyRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrainComponentLabelAssignmentVersionStructure(
     AssignmentVersionStructure1
 ):
@@ -44,12 +44,11 @@ class TrainComponentLabelAssignmentVersionStructure(
             ),
         },
     )
-    train_component_ref: None | TrainComponentRef = field(
-        default=None,
+    train_component_ref: TrainComponentRef = field(
         metadata={
             "name": "TrainComponentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocalPoliciesTypeLocalPolicyReinsuranceAgreements:
     class Meta:
         global_type = False

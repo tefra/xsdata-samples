@@ -7,7 +7,7 @@ from .can_addressing_mode_type_simple import CanAddressingModeTypeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanAddressingModeType:
     """
     Indicates whether standard or extended CAN identifiers are used.
@@ -28,11 +28,10 @@ class CanAddressingModeType:
     class Meta:
         name = "CAN-ADDRESSING-MODE-TYPE"
 
-    value: None | CanAddressingModeTypeSimple = field(
-        default=None,
+    value: CanAddressingModeTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

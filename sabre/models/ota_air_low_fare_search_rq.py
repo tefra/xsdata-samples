@@ -41,7 +41,7 @@ from sabre.models.traveler_info_summary_type import TravelerInfoSummaryType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtaAirLowFareSearchRq:
     """
     The Low Fare Search Request message requests priced itinerary options
@@ -114,13 +114,12 @@ class OtaAirLowFareSearchRq:
         name = "OTA_AirLowFareSearchRQ"
         namespace = "http://www.opentravel.org/OTA/2003/05"
 
-    pos: None | PosType = field(
-        default=None,
+    pos: PosType = field(
         metadata={
             "name": "POS",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     origin_destination_information: list[
         OtaAirLowFareSearchRq.OriginDestinationInformation
@@ -146,13 +145,12 @@ class OtaAirLowFareSearchRq:
             "type": "Element",
         },
     )
-    traveler_info_summary: None | TravelerInfoSummaryType = field(
-        default=None,
+    traveler_info_summary: TravelerInfoSummaryType = field(
         metadata={
             "name": "TravelerInfoSummary",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     tpa_extensions: None | OtaAirLowFareSearchRq.TpaExtensions = field(
         default=None,
@@ -184,13 +182,12 @@ class OtaAirLowFareSearchRq:
             "type": "Attribute",
         },
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     transaction_identifier: None | str = field(
         default=None,
@@ -281,7 +278,7 @@ class OtaAirLowFareSearchRq:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpaExtensions:
         """
         Attributes:
@@ -438,7 +435,7 @@ class OtaAirLowFareSearchRq:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MessagingDetails:
             mdrsubset: (
                 None
@@ -451,7 +448,7 @@ class OtaAirLowFareSearchRq:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Mdrsubset:
                 code: None | str = field(
                     default=None,
@@ -461,7 +458,7 @@ class OtaAirLowFareSearchRq:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SplitTaxes:
             by_leg: None | bool = field(
                 default=None,
@@ -478,7 +475,7 @@ class OtaAirLowFareSearchRq:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AlternateDatesProcessing:
             calendar_mode: None | bool = field(
                 default=None,
@@ -495,7 +492,7 @@ class OtaAirLowFareSearchRq:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ItineraryCache:
             public_time_to_live: None | int = field(
                 default=None,
@@ -512,7 +509,7 @@ class OtaAirLowFareSearchRq:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MultiTicket:
             """
             Attributes:
@@ -531,7 +528,7 @@ class OtaAirLowFareSearchRq:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Partitions:
             partition: list[CachePartitionType] = field(
                 default_factory=list,
@@ -548,7 +545,7 @@ class OtaAirLowFareSearchRq:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ReservationData:
             """
             Attributes:
@@ -563,7 +560,7 @@ class OtaAirLowFareSearchRq:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AlternatePcc:
             """
             Attributes:
@@ -582,18 +579,17 @@ class OtaAirLowFareSearchRq:
                     "type": "Element",
                 },
             )
-            pseudo_city_code: None | str = field(
-                default=None,
+            pseudo_city_code: str = field(
                 metadata={
                     "name": "PseudoCityCode",
                     "type": "Attribute",
                     "required": True,
                     "min_length": 1,
                     "max_length": 16,
-                },
+                }
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TravelPreferences:
                 vendor_pref: list[
                     OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences.VendorPref
@@ -615,7 +611,7 @@ class OtaAirLowFareSearchRq:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class VendorPref:
                     """
                     Attributes:
@@ -623,15 +619,14 @@ class OtaAirLowFareSearchRq:
                         prefer_level:
                     """
 
-                    code: None | str = field(
-                        default=None,
+                    code: str = field(
                         metadata={
                             "name": "Code",
                             "type": "Attribute",
                             "required": True,
                             "min_length": 1,
                             "max_length": 8,
-                        },
+                        }
                     )
                     prefer_level: PreferLevelType = field(
                         default=PreferLevelType.PREFERRED,
@@ -641,7 +636,7 @@ class OtaAirLowFareSearchRq:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class TpaExtensions:
                     """
                     Attributes:
@@ -666,7 +661,7 @@ class OtaAirLowFareSearchRq:
                         },
                     )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AlternateAirportCities:
             """
             Attributes:
@@ -675,16 +670,12 @@ class OtaAirLowFareSearchRq:
                     city).
             """
 
-            specified_location: (
-                None
-                | OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportCities.SpecifiedLocation
-            ) = field(
-                default=None,
+            specified_location: OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportCities.SpecifiedLocation = field(
                 metadata={
                     "name": "SpecifiedLocation",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             alternate_location: list[
                 OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportCities.AlternateLocation
@@ -698,7 +689,7 @@ class OtaAirLowFareSearchRq:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class SpecifiedLocation:
                 location_code: None | str = field(
                     default=None,
@@ -709,7 +700,7 @@ class OtaAirLowFareSearchRq:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class AlternateLocation:
                 location_code: None | str = field(
                     default=None,
@@ -720,7 +711,7 @@ class OtaAirLowFareSearchRq:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AlternateAirportMileage:
             """
             Attributes:
@@ -728,16 +719,15 @@ class OtaAirLowFareSearchRq:
                     airport.
             """
 
-            number: None | str = field(
-                default=None,
+            number: str = field(
                 metadata={
                     "name": "Number",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OriginDestinationInformation(OriginDestinationInformationType):
         """
         Attributes:
@@ -787,7 +777,7 @@ class OtaAirLowFareSearchRq:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TpaExtensions:
             """
             Attributes:
@@ -973,7 +963,7 @@ class OtaAirLowFareSearchRq:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class DateFlexibility:
                 """
                 Attributes:
@@ -1017,29 +1007,27 @@ class OtaAirLowFareSearchRq:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class SisterDestinationMileage:
-                number: None | int = field(
-                    default=None,
+                number: int = field(
                     metadata={
                         "name": "Number",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class SisterOriginMileage:
-                number: None | int = field(
-                    default=None,
+                number: int = field(
                     metadata={
                         "name": "Number",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class SegmentType:
                 """
                 Attributes:
@@ -1055,7 +1043,7 @@ class OtaAirLowFareSearchRq:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class AlternateTime:
                 """
                 Attributes:
@@ -1093,29 +1081,27 @@ class OtaAirLowFareSearchRq:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class MaxOneWayOptions:
-                value: None | int = field(
-                    default=None,
+                value: int = field(
                     metadata={
                         "name": "Value",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class NumOneWayOptions:
-                number: None | int = field(
-                    default=None,
+                number: int = field(
                     metadata={
                         "name": "Number",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ConnectionTime:
                 """
                 Attributes:
@@ -1167,7 +1153,7 @@ class OtaAirLowFareSearchRq:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TotalTravelTime:
                 min: None | int = field(
                     default=None,
@@ -1184,7 +1170,7 @@ class OtaAirLowFareSearchRq:
                     },
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Leg:
         """
         Attributes:
@@ -1219,21 +1205,19 @@ class OtaAirLowFareSearchRq:
                 "type": "Element",
             },
         )
-        origins: None | OtaAirLowFareSearchRq.Leg.Origins = field(
-            default=None,
+        origins: OtaAirLowFareSearchRq.Leg.Origins = field(
             metadata={
                 "name": "Origins",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
-        destinations: None | OtaAirLowFareSearchRq.Leg.Destinations = field(
-            default=None,
+        destinations: OtaAirLowFareSearchRq.Leg.Destinations = field(
             metadata={
                 "name": "Destinations",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         connection_locations: None | ConnectionType = field(
             default=None,
@@ -1256,14 +1240,13 @@ class OtaAirLowFareSearchRq:
                 "type": "Element",
             },
         )
-        rph: None | str = field(
-            default=None,
+        rph: str = field(
             metadata={
                 "name": "RPH",
                 "type": "Attribute",
                 "required": True,
                 "pattern": r"[0-9]{1,8}",
-            },
+            }
         )
         max_options: None | int = field(
             default=None,
@@ -1273,7 +1256,7 @@ class OtaAirLowFareSearchRq:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Origins:
             origin: list[OtaAirLowFareSearchRq.Leg.Origins.Origin] = field(
                 default_factory=list,
@@ -1284,7 +1267,7 @@ class OtaAirLowFareSearchRq:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Origin:
                 """
                 Attributes:
@@ -1310,7 +1293,7 @@ class OtaAirLowFareSearchRq:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Destinations:
             destination: list[
                 OtaAirLowFareSearchRq.Leg.Destinations.Destination
@@ -1323,7 +1306,7 @@ class OtaAirLowFareSearchRq:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Destination:
                 """
                 Attributes:
@@ -1349,7 +1332,7 @@ class OtaAirLowFareSearchRq:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Carriers:
             """
             Attributes:
@@ -1375,25 +1358,24 @@ class OtaAirLowFareSearchRq:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ExcludeVendorPref:
                 """
                 Attributes:
                     code: Identifies a company by the company code.
                 """
 
-                code: None | str = field(
-                    default=None,
+                code: str = field(
                     metadata={
                         "name": "Code",
                         "type": "Attribute",
                         "required": True,
                         "min_length": 1,
                         "max_length": 8,
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Cabin:
             """
             Attributes:
@@ -1416,7 +1398,7 @@ class OtaAirLowFareSearchRq:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DepartureDateTime(GlobalDateTimeType):
             """
             Attributes:

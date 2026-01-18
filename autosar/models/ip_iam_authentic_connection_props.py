@@ -12,7 +12,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IpIamAuthenticConnectionProps:
     """
     This meta-class defines a set of properties for IP connections in the
@@ -122,24 +122,22 @@ class IpIamAuthenticConnectionProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LocalNetworkEndpointRef(Ref):
-        dest: None | EthernetPhysicalChannelSubtypesEnum = field(
-            default=None,
+        dest: EthernetPhysicalChannelSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RemoteNetworkEndpointRef(Ref):
-        dest: None | EthernetPhysicalChannelSubtypesEnum = field(
-            default=None,
+        dest: EthernetPhysicalChannelSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

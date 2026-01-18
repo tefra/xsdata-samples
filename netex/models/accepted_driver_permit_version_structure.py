@@ -9,7 +9,7 @@ from .type_of_driver_permit_ref import TypeOfDriverPermitRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AcceptedDriverPermitVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "AcceptedDriverPermit_VersionStructure"

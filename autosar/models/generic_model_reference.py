@@ -7,7 +7,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GenericModelReference:
     """
     This meta-class represents the ability to express a late binding

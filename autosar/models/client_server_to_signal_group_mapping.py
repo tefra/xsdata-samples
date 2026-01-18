@@ -30,7 +30,7 @@ from .system_signal_group_subtypes_enum import SystemSignalGroupSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientServerToSignalGroupMapping:
     """
     This mapping is deprecated and will be removed in future.
@@ -246,7 +246,7 @@ class ClientServerToSignalGroupMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventGroupRefs:
         event_group_ref: list[
             ClientServerToSignalGroupMapping.EventGroupRefs.EventGroupRef
@@ -259,18 +259,17 @@ class ClientServerToSignalGroupMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EventGroupRef(Ref):
-            dest: None | ConsumedEventGroupSubtypesEnum = field(
-                default=None,
+            dest: ConsumedEventGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventHandlerRefs:
         event_handler_ref: list[
             ClientServerToSignalGroupMapping.EventHandlerRefs.EventHandlerRef
@@ -283,18 +282,17 @@ class ClientServerToSignalGroupMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EventHandlerRef(Ref):
-            dest: None | EventHandlerSubtypesEnum = field(
-                default=None,
+            dest: EventHandlerSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInstanceRefs:
         service_instance_ref: list[
             ClientServerToSignalGroupMapping.ServiceInstanceRefs.ServiceInstanceRef
@@ -307,18 +305,17 @@ class ClientServerToSignalGroupMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ServiceInstanceRef(Ref):
-            dest: None | AbstractServiceInstanceSubtypesEnum = field(
-                default=None,
+            dest: AbstractServiceInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CompositeTypeMappings:
         client_server_array_type_mapping: list[
             ClientServerArrayTypeMapping
@@ -341,7 +338,7 @@ class ClientServerToSignalGroupMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PrimitiveTypeMappings:
         client_server_primitive_type_mapping: list[
             ClientServerPrimitiveTypeMapping
@@ -354,24 +351,22 @@ class ClientServerToSignalGroupMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequestGroupRef(Ref):
-        dest: None | SystemSignalGroupSubtypesEnum = field(
-            default=None,
+        dest: SystemSignalGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResponseGroupRef(Ref):
-        dest: None | SystemSignalGroupSubtypesEnum = field(
-            default=None,
+        dest: SystemSignalGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

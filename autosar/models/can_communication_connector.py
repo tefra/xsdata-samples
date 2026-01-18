@@ -28,7 +28,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanCommunicationConnector:
     """
     CAN bus specific communication connector attributes.
@@ -128,14 +128,13 @@ class CanCommunicationConnector:
     class Meta:
         name = "CAN-COMMUNICATION-CONNECTOR"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | CanCommunicationConnector.ShortNameFragments
@@ -310,7 +309,7 @@ class CanCommunicationConnector:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -321,7 +320,7 @@ class CanCommunicationConnector:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -332,18 +331,17 @@ class CanCommunicationConnector:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommControllerRef(Ref):
-        dest: None | CommunicationControllerSubtypesEnum = field(
-            default=None,
+        dest: CommunicationControllerSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuCommPortInstances:
         frame_port: list[FramePort] = field(
             default_factory=list,

@@ -7,7 +7,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExternalReferencing:
     """
     A location defined by reference to an external/other referencing
@@ -20,25 +20,23 @@ class ExternalReferencing:
     :ivar external_referencing_extension:
     """
 
-    external_location_code: None | str = field(
-        default=None,
+    external_location_code: str = field(
         metadata={
             "name": "externalLocationCode",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
-    external_referencing_system: None | str = field(
-        default=None,
+    external_referencing_system: str = field(
         metadata={
             "name": "externalReferencingSystem",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
     external_referencing_extension: None | ExtensionType = field(
         default=None,

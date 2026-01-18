@@ -11,7 +11,7 @@ from .vehicle_service_parts_rel_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleServiceVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "VehicleService_VersionStructure"

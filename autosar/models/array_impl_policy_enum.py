@@ -7,7 +7,7 @@ from .array_impl_policy_enum_simple import ArrayImplPolicyEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ArrayImplPolicyEnum:
     """
     This meta-class provides values to configure the implementation of the
@@ -29,11 +29,10 @@ class ArrayImplPolicyEnum:
     class Meta:
         name = "ARRAY-IMPL-POLICY-ENUM"
 
-    value: None | ArrayImplPolicyEnumSimple = field(
-        default=None,
+    value: ArrayImplPolicyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

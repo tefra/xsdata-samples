@@ -8,7 +8,7 @@ from .luggage_carriage_enumeration import LuggageCarriageEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LuggageCarriageFacilityList:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

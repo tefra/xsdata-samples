@@ -7,7 +7,7 @@ from travelport.models.display_details import DisplayDetails
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProviderReservationDisplayDetailsList:
     """
     Response to display the addtional details of provider reservation

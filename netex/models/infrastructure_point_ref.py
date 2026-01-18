@@ -7,7 +7,7 @@ from .infrastructure_point_ref_structure import InfrastructurePointRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InfrastructurePointRef(InfrastructurePointRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

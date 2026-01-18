@@ -7,7 +7,7 @@ from travelport.models.optional_service_modifier import OptionalServiceModifier
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OptionalServiceModifiers:
     """
     Rich Content and Branding for an optional service.

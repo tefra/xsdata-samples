@@ -10,7 +10,7 @@ from sdmx_ml.models.value_type import ValueType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ObservationalTimePeriodValueType(ValueType):
     """
     ObservationalTimePeriodValueType is a refinement of SimpleValueType

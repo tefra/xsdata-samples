@@ -9,7 +9,7 @@ from .diagnostic_store_event_support_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticStoreEventSupportEnum:
     """
     This meta-class has the ability to define how a specific event in the
@@ -31,11 +31,10 @@ class DiagnosticStoreEventSupportEnum:
     class Meta:
         name = "DIAGNOSTIC-STORE-EVENT-SUPPORT-ENUM"
 
-    value: None | DiagnosticStoreEventSupportEnumSimple = field(
-        default=None,
+    value: DiagnosticStoreEventSupportEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -27,7 +27,7 @@ from .tls_secure_com_props_subtypes_enum import TlsSecureComPropsSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RestHttpPortPrototypeMapping:
     """
     This meta-class represents the ability to define pieces of a URI for
@@ -109,14 +109,13 @@ class RestHttpPortPrototypeMapping:
     class Meta:
         name = "REST-HTTP-PORT-PROTOTYPE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | RestHttpPortPrototypeMapping.ShortNameFragments
@@ -267,7 +266,7 @@ class RestHttpPortPrototypeMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -278,7 +277,7 @@ class RestHttpPortPrototypeMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -289,7 +288,7 @@ class RestHttpPortPrototypeMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AcceptsEncodings:
         http_accept_encoding: list[HttpAcceptEncoding] = field(
             default_factory=list,
@@ -300,35 +299,32 @@ class RestHttpPortPrototypeMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HostRef(Ref):
-        dest: None | NetworkEndpointSubtypesEnum = field(
-            default=None,
+        dest: NetworkEndpointSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProcessRef(Ref):
-        dest: None | ProcessSubtypesEnum = field(
-            default=None,
+        dest: ProcessSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TlsSecureComPropsRef(Ref):
-        dest: None | TlsSecureComPropsSubtypesEnum = field(
-            default=None,
+        dest: TlsSecureComPropsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

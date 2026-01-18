@@ -16,7 +16,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class V2XFacUserNeeds:
     """
     This meta-class represents the ability to define service needs for V2x
@@ -79,14 +79,13 @@ class V2XFacUserNeeds:
     class Meta:
         name = "V-2-X-FAC-USER-NEEDS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | V2XFacUserNeeds.ShortNameFragments = field(
         default=None,
@@ -167,7 +166,7 @@ class V2XFacUserNeeds:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -178,7 +177,7 @@ class V2XFacUserNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

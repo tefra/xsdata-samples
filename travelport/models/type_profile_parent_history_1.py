@@ -7,7 +7,7 @@ from travelport.models.type_profile_type_3 import TypeProfileType3
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeProfileParentHistory1:
     """
     Parameters

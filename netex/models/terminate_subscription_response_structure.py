@@ -11,7 +11,7 @@ from .termination_response_status_structure import (
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TerminateSubscriptionResponseStructure(ResponseEndpointStructure):
     termination_response_status: Iterable[
         TerminationResponseStatusStructure

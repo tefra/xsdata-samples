@@ -24,7 +24,7 @@ from .time_base_resource_ref_conditional import TimeBaseResourceRefConditional
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IdsmModuleInstantiation:
     """
     This meta-class defines the attributes for the IdsM configuration on a
@@ -95,14 +95,13 @@ class IdsmModuleInstantiation:
     class Meta:
         name = "IDSM-MODULE-INSTANTIATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | IdsmModuleInstantiation.ShortNameFragments = (
         field(
@@ -213,7 +212,7 @@ class IdsmModuleInstantiation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -224,7 +223,7 @@ class IdsmModuleInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -235,20 +234,17 @@ class IdsmModuleInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NetworkInterfaceRef(Ref):
-        dest: (
-            None | PlatformModuleEthernetEndpointConfigurationSubtypesEnum
-        ) = field(
-            default=None,
+        dest: PlatformModuleEthernetEndpointConfigurationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimeBases:
         time_base_resource_ref_conditional: list[
             TimeBaseResourceRefConditional
@@ -261,7 +257,7 @@ class IdsmModuleInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReportableSecurityEventRefs:
         reportable_security_event_ref: list[
             IdsmModuleInstantiation.ReportableSecurityEventRefs.ReportableSecurityEventRef
@@ -274,13 +270,12 @@ class IdsmModuleInstantiation:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ReportableSecurityEventRef(Ref):
-            dest: None | SecurityEventMappingSubtypesEnum = field(
-                default=None,
+            dest: SecurityEventMappingSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

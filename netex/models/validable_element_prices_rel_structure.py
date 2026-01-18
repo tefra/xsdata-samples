@@ -13,7 +13,7 @@ from .validable_element_price_ref import ValidableElementPriceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidableElementPricesRelStructure(
     StrictContainmentAggregationStructure
 ):

@@ -7,7 +7,7 @@ from .train_element_ref_structure import TrainElementRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrainElementRef(TrainElementRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

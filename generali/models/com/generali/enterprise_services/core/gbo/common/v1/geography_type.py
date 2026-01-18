@@ -18,7 +18,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.geograp
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeographyType:
     description: None | TextType = field(
         default=None,
@@ -28,14 +28,13 @@ class GeographyType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    name: None | CodeType = field(
-        default=None,
+    name: CodeType = field(
         metadata={
             "name": "Name",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )
     country: None | CountryGbotype = field(
         default=None,

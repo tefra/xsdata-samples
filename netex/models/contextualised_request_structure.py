@@ -11,7 +11,7 @@ from .service_request_context_structure import ServiceRequestContextStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContextualisedRequestStructure:
     service_request_context: None | ServiceRequestContextStructure = field(
         default=None,
@@ -21,14 +21,13 @@ class ContextualisedRequestStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    request_timestamp: None | RequestTimestamp = field(
-        default=None,
+    request_timestamp: RequestTimestamp = field(
         metadata={
             "name": "RequestTimestamp",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        },
+        }
     )
     account_id: None | str = field(
         default=None,
@@ -54,14 +53,13 @@ class ContextualisedRequestStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    requestor_ref: None | RequestorRef = field(
-        default=None,
+    requestor_ref: RequestorRef = field(
         metadata={
             "name": "RequestorRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        },
+        }
     )
     message_identifier: None | MessageQualifierStructure = field(
         default=None,

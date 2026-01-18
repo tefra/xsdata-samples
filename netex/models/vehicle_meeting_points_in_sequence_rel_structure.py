@@ -9,7 +9,7 @@ from .vehicle_meeting_point_in_path import VehicleMeetingPointInPath
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleMeetingPointsInSequenceRelStructure(
     ContainmentAggregationStructure
 ):

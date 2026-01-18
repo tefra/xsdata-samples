@@ -18,7 +18,7 @@ from .user_defined_cluster_conditional import UserDefinedClusterConditional
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UserDefinedCluster:
     """
     This element allows the modeling of arbitrary Communication Clusters
@@ -85,14 +85,13 @@ class UserDefinedCluster:
     class Meta:
         name = "USER-DEFINED-CLUSTER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | UserDefinedCluster.ShortNameFragments = field(
         default=None,
@@ -191,7 +190,7 @@ class UserDefinedCluster:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -202,7 +201,7 @@ class UserDefinedCluster:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -213,7 +212,7 @@ class UserDefinedCluster:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UserDefinedClusterVariants:
         user_defined_cluster_conditional: list[
             UserDefinedClusterConditional

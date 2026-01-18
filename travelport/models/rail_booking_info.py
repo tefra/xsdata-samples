@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailBookingInfo:
     """
     Links journeys and fares together.
@@ -23,21 +23,19 @@ class RailBookingInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
-    rail_fare_ref: None | str = field(
-        default=None,
+    rail_fare_ref: str = field(
         metadata={
             "name": "RailFareRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    rail_journey_ref: None | str = field(
-        default=None,
+    rail_journey_ref: str = field(
         metadata={
             "name": "RailJourneyRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     optional_service: bool = field(
         default=False,

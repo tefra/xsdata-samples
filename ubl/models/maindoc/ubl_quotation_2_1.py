@@ -40,7 +40,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:Quotation-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class QuotationType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -106,14 +106,13 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -191,14 +190,13 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: None | SellerSupplierParty = field(
-        default=None,
+    seller_supplier_party: SellerSupplierParty = field(
         metadata={
             "name": "SellerSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     buyer_customer_party: None | BuyerCustomerParty = field(
         default=None,
@@ -272,14 +270,13 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    quoted_monetary_total: None | QuotedMonetaryTotal = field(
-        default=None,
+    quoted_monetary_total: QuotedMonetaryTotal = field(
         metadata={
             "name": "QuotedMonetaryTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     quotation_line: tuple[QuotationLine, ...] = field(
         default_factory=tuple,
@@ -292,7 +289,7 @@ class QuotationType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Quotation(QuotationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:Quotation-2"

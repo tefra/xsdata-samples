@@ -7,7 +7,7 @@ from .mode_in_process_instance_ref import ModeInProcessInstanceRef
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExecutionDependency:
     """
     This element defines a ProcessState in which a dependent process needs

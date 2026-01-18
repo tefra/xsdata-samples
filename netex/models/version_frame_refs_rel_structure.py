@@ -22,7 +22,7 @@ from .vehicle_schedule_frame_ref import VehicleScheduleFrameRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "versionFrameRefs_RelStructure"

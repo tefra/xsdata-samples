@@ -10,7 +10,7 @@ from .ttcan_trigger_type import TtcanTriggerType
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TtcanAbsolutelyScheduledTiming:
     """
     Each frame in TTCAN is identified by its slot id and communication
@@ -84,7 +84,7 @@ class TtcanAbsolutelyScheduledTiming:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommunicationCycle:
         cycle_counter: None | CycleCounter = field(
             default=None,

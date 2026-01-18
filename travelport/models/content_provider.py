@@ -12,7 +12,7 @@ from travelport.models.type_provider_supplier_capability_type import (
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContentProvider:
     """
     A content provider uniquely identified with its provider code and
@@ -71,13 +71,12 @@ class ContentProvider:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     supplier_code: None | str = field(
         default=None,
@@ -86,29 +85,26 @@ class ContentProvider:
             "type": "Attribute",
         },
     )
-    agency_credentials: None | ContentProviderAgencyCredentials = field(
-        default=None,
+    agency_credentials: ContentProviderAgencyCredentials = field(
         metadata={
             "name": "AgencyCredentials",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    active: None | bool = field(
-        default=None,
+    active: bool = field(
         metadata={
             "name": "Active",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    provisionable: None | bool = field(
-        default=None,
+    provisionable: bool = field(
         metadata={
             "name": "Provisionable",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     merchandising_achadapter: None | str = field(
         default=None,

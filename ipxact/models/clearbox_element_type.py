@@ -12,7 +12,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClearboxElementType:
     """
     Defines a clear box reference point within the component.
@@ -35,13 +35,12 @@ class ClearboxElementType:
     class Meta:
         name = "clearboxElementType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -66,14 +65,13 @@ class ClearboxElementType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    clearbox_type: None | SimpleClearboxType = field(
-        default=None,
+    clearbox_type: SimpleClearboxType = field(
         metadata={
             "name": "clearboxType",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     driveable: None | bool = field(
         default=None,

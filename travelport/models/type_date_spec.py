@@ -9,7 +9,7 @@ from travelport.models.type_date_range_1 import TypeDateRange1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeDateSpec:
     """
     Specifies dates as either specific date or a date range.

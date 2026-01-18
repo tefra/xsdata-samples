@@ -8,7 +8,7 @@ from xsdata.models.datatype import XmlDateTime
 from spacex.mixins import DictMixin
 
 
-@dataclass
+@dataclass(kw_only=True)
 @typed_dataclass
 class Cores(DictMixin):
     class Meta:
@@ -70,18 +70,17 @@ class Cores(DictMixin):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 @typed_dataclass
 class Failures(DictMixin):
     class Meta:
         name = "failures"
 
-    time: None | int = field(
-        default=None,
+    time: int = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     altitude: None | int = field(
         default=None,
@@ -89,16 +88,15 @@ class Failures(DictMixin):
             "type": "Element",
         },
     )
-    reason: None | str = field(
-        default=None,
+    reason: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 @typed_dataclass
 class Fairings(DictMixin):
     class Meta:
@@ -130,7 +128,7 @@ class Fairings(DictMixin):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 @typed_dataclass
 class Flickr(DictMixin):
     class Meta:
@@ -150,7 +148,7 @@ class Flickr(DictMixin):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 @typed_dataclass
 class Patch(DictMixin):
     class Meta:
@@ -170,7 +168,7 @@ class Patch(DictMixin):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 @typed_dataclass
 class Reddit(DictMixin):
     class Meta:
@@ -202,32 +200,29 @@ class Reddit(DictMixin):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 @typed_dataclass
 class Links(DictMixin):
     class Meta:
         name = "links"
 
-    patch: None | Patch = field(
-        default=None,
+    patch: Patch = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    reddit: None | Reddit = field(
-        default=None,
+    reddit: Reddit = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    flickr: None | Flickr = field(
-        default=None,
+    flickr: Flickr = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     presskit: None | str = field(
         default=None,
@@ -261,7 +256,7 @@ class Links(DictMixin):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 @typed_dataclass
 class Launches(DictMixin):
     class Meta:
@@ -273,12 +268,11 @@ class Launches(DictMixin):
             "type": "Element",
         },
     )
-    links: None | Links = field(
-        default=None,
+    links: Links = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     static_fire_date_utc: None | XmlDateTime = field(
         default=None,
@@ -292,19 +286,17 @@ class Launches(DictMixin):
             "type": "Element",
         },
     )
-    tbd: None | bool = field(
-        default=None,
+    tbd: bool = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    net: None | bool = field(
-        default=None,
+    net: bool = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     window: None | int = field(
         default=None,
@@ -312,12 +304,11 @@ class Launches(DictMixin):
             "type": "Element",
         },
     )
-    rocket: None | str = field(
-        default=None,
+    rocket: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     success: None | bool = field(
         default=None,
@@ -356,19 +347,17 @@ class Launches(DictMixin):
             "min_occurs": 1,
         },
     )
-    launchpad: None | str = field(
-        default=None,
+    launchpad: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    auto_update: None | bool = field(
-        default=None,
+    auto_update: bool = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     launch_library_id: None | str = field(
         default=None,
@@ -382,54 +371,47 @@ class Launches(DictMixin):
             "type": "Element",
         },
     )
-    flight_number: None | int = field(
-        default=None,
+    flight_number: int = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    date_utc: None | XmlDateTime = field(
-        default=None,
+    date_utc: XmlDateTime = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    date_unix: None | int = field(
-        default=None,
+    date_unix: int = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    date_local: None | XmlDateTime = field(
-        default=None,
+    date_local: XmlDateTime = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    date_precision: None | str = field(
-        default=None,
+    date_precision: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    upcoming: None | bool = field(
-        default=None,
+    upcoming: bool = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     cores: list[Cores] = field(
         default_factory=list,
@@ -438,10 +420,9 @@ class Launches(DictMixin):
             "min_occurs": 1,
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )

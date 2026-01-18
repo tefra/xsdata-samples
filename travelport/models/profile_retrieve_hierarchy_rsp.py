@@ -8,7 +8,7 @@ from travelport.models.hierarchy_level import HierarchyLevel
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileRetrieveHierarchyRsp(BaseRsp5):
     """
     Response with the requested hierarchy structure.

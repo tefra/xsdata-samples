@@ -13,7 +13,7 @@ from .type_of_medium_access_device_ref import TypeOfMediumAccessDeviceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MediumAccessDeviceVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "MediumAccessDevice_VersionStructure"

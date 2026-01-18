@@ -9,7 +9,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class FooterType:
     """
     FooterType describes the structure of a message footer.

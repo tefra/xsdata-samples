@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NumberOfChildren:
     """
     Number of Children.
@@ -33,13 +33,12 @@ class NumberOfChildren:
             "max_occurs": 99,
         },
     )
-    count: None | int = field(
-        default=None,
+    count: int = field(
         metadata={
             "name": "Count",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     amount: None | str = field(
         default=None,

@@ -7,7 +7,7 @@ from .logging_behavior_enum_simple import LoggingBehaviorEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LoggingBehaviorEnum:
     """
     This enumeration provides options for controlling of whether an
@@ -29,11 +29,10 @@ class LoggingBehaviorEnum:
     class Meta:
         name = "LOGGING-BEHAVIOR-ENUM"
 
-    value: None | LoggingBehaviorEnumSimple = field(
-        default=None,
+    value: LoggingBehaviorEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

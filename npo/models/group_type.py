@@ -8,7 +8,7 @@ from npo.models.group_type_enum import GroupTypeEnum
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupType(BaseMediaType):
     class Meta:
         name = "groupType"
@@ -21,21 +21,19 @@ class GroupType(BaseMediaType):
             "namespace": "urn:vpro:media:2009",
         },
     )
-    is_ordered: None | bool = field(
-        default=None,
+    is_ordered: bool = field(
         metadata={
             "name": "isOrdered",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    type_value: None | GroupTypeEnum = field(
-        default=None,
+    type_value: GroupTypeEnum = field(
         metadata={
             "name": "type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     default_element: None | int = field(
         default=None,

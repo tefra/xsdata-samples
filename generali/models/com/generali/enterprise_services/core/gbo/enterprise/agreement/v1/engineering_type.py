@@ -17,7 +17,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EngineeringType:
     signoff_date: None | DateTimeType = field(
         default=None,

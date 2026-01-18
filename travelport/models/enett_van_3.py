@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDuration
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnettVan3:
     """
     Container for all eNett Van information.

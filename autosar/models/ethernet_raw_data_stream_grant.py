@@ -24,7 +24,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthernetRawDataStreamGrant:
     """
     This meta-class represents the ability to define the IAM configuration
@@ -95,14 +95,13 @@ class EthernetRawDataStreamGrant:
     class Meta:
         name = "ETHERNET-RAW-DATA-STREAM-GRANT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | EthernetRawDataStreamGrant.ShortNameFragments
@@ -211,7 +210,7 @@ class EthernetRawDataStreamGrant:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -222,7 +221,7 @@ class EthernetRawDataStreamGrant:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -233,24 +232,22 @@ class EthernetRawDataStreamGrant:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DesignRef(Ref):
-        dest: None | RawDataStreamGrantDesignSubtypesEnum = field(
-            default=None,
+        dest: RawDataStreamGrantDesignSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EthernetRawDataStreamMappingRef(Ref):
-        dest: None | EthernetRawDataStreamMappingSubtypesEnum = field(
-            default=None,
+        dest: EthernetRawDataStreamMappingSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

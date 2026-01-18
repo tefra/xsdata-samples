@@ -10,7 +10,7 @@ from .tag_with_optional_value import TagWithOptionalValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SdClientConfig:
     """
     Client configuration for Service-Discovery.
@@ -108,7 +108,7 @@ class SdClientConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CapabilityRecords:
         tag_with_optional_value: list[TagWithOptionalValue] = field(
             default_factory=list,

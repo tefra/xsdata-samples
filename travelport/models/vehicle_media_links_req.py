@@ -9,7 +9,7 @@ from travelport.models.vehicle_search_id import VehicleSearchId
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleMediaLinksReq(BaseReq1):
     """
     Used to request a list of images for a location (airport or city code)

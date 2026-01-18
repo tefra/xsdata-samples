@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RptExecutableEntity:
     """
     This describes a ExecutableEntity instance which can be bypassed.
@@ -96,14 +96,13 @@ class RptExecutableEntity:
     class Meta:
         name = "RPT-EXECUTABLE-ENTITY"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | RptExecutableEntity.ShortNameFragments = (
         field(
@@ -228,7 +227,7 @@ class RptExecutableEntity:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -239,7 +238,7 @@ class RptExecutableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -250,7 +249,7 @@ class RptExecutableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RptExecutableEntityEvents:
         rpt_executable_entity_event: list[RptExecutableEntityEvent] = field(
             default_factory=list,
@@ -261,7 +260,7 @@ class RptExecutableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RptReads:
         role_based_mc_data_assignment: list[RoleBasedMcDataAssignment] = field(
             default_factory=list,
@@ -272,7 +271,7 @@ class RptExecutableEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RptWrites:
         role_based_mc_data_assignment: list[RoleBasedMcDataAssignment] = field(
             default_factory=list,

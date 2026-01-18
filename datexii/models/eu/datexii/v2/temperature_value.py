@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TemperatureValue(DataValue):
     """
     A measured or calculated value of temperature.
@@ -18,13 +18,12 @@ class TemperatureValue(DataValue):
     :ivar temperature_value_extension:
     """
 
-    temperature: None | float = field(
-        default=None,
+    temperature: float = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     temperature_value_extension: None | ExtensionType = field(
         default=None,

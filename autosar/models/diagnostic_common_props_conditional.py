@@ -36,7 +36,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticCommonPropsConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -317,7 +317,7 @@ class DiagnosticCommonPropsConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DebounceAlgorithmPropss:
         diagnostic_debounce_algorithm_props: list[
             DiagnosticDebounceAlgorithmProps

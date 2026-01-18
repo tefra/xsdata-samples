@@ -7,34 +7,31 @@ from travelport.models.profile_modify_req_1 import ProfileModifyReq1
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileModifyPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: None | object = field(
-        default=None,
+    header: object = field(
         metadata={
             "name": "Header",
             "type": "Element",
-        },
+        }
     )
-    body: None | ProfileModifyPortTypeServiceInput.Body = field(
-        default=None,
+    body: ProfileModifyPortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        profile_modify_req: None | ProfileModifyReq1 = field(
-            default=None,
+        profile_modify_req: ProfileModifyReq1 = field(
             metadata={
                 "name": "ProfileModifyReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-            },
+            }
         )

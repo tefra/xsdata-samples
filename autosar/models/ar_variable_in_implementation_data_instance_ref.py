@@ -14,7 +14,7 @@ from .variable_data_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ArVariableInImplementationDataInstanceRef:
     """
     This class represents the ability to navigate into a data element
@@ -111,29 +111,27 @@ class ArVariableInImplementationDataInstanceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortPrototypeRef(Ref):
-        dest: None | PortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: PortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RootVariableDataPrototypeRef(Ref):
-        dest: None | VariableDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: VariableDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextDataPrototypeRefs:
         context_data_prototype_ref: list[
             ArVariableInImplementationDataInstanceRef.ContextDataPrototypeRefs.ContextDataPrototypeRef
@@ -146,24 +144,22 @@ class ArVariableInImplementationDataInstanceRef:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ContextDataPrototypeRef(Ref):
-            dest: None | ImplementationDataTypeElementSubtypesEnum = field(
-                default=None,
+            dest: ImplementationDataTypeElementSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetDataPrototypeRef(Ref):
-        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
-            default=None,
+        dest: ImplementationDataTypeElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -8,7 +8,7 @@ from .t_root_element import TRootElement
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TResource(TRootElement):
     class Meta:
         name = "tResource"
@@ -21,10 +21,9 @@ class TResource(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

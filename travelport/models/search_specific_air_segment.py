@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SearchSpecificAirSegment:
     """
     Parameters
@@ -30,51 +30,46 @@ class SearchSpecificAirSegment:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    departure_time: None | str = field(
-        default=None,
+    departure_time: str = field(
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
-    flight_number: None | str = field(
-        default=None,
+    flight_number: str = field(
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        },
+        }
     )
-    origin: None | str = field(
-        default=None,
+    origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    destination: None | str = field(
-        default=None,
+    destination: str = field(
         metadata={
             "name": "Destination",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
     segment_index: None | int = field(
         default=None,

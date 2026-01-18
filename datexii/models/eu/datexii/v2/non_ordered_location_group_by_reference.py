@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.predefined_non_ordered_location_group_versione
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NonOrderedLocationGroupByReference(NonOrderedLocations):
     """
     A group of (i.e. more than one) physically separate locations which
@@ -26,16 +26,13 @@ class NonOrderedLocationGroupByReference(NonOrderedLocations):
     :ivar non_ordered_location_group_by_reference_extension:
     """
 
-    predefined_non_ordered_location_group_reference: (
-        None | PredefinedNonOrderedLocationGroupVersionedReference
-    ) = field(
-        default=None,
+    predefined_non_ordered_location_group_reference: PredefinedNonOrderedLocationGroupVersionedReference = field(
         metadata={
             "name": "predefinedNonOrderedLocationGroupReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     non_ordered_location_group_by_reference_extension: None | ExtensionType = (
         field(

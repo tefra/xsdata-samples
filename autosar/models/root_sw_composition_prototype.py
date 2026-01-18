@@ -25,7 +25,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RootSwCompositionPrototype:
     """
     The RootSwCompositionPrototype represents the top-level-composition of
@@ -119,14 +119,13 @@ class RootSwCompositionPrototype:
     class Meta:
         name = "ROOT-SW-COMPOSITION-PROTOTYPE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | RootSwCompositionPrototype.ShortNameFragments
@@ -245,7 +244,7 @@ class RootSwCompositionPrototype:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -256,7 +255,7 @@ class RootSwCompositionPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -267,7 +266,7 @@ class RootSwCompositionPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CalibrationParameterValueSetRefs:
         calibration_parameter_value_set_ref: list[
             RootSwCompositionPrototype.CalibrationParameterValueSetRefs.CalibrationParameterValueSetRef
@@ -280,35 +279,32 @@ class RootSwCompositionPrototype:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CalibrationParameterValueSetRef(Ref):
-            dest: None | CalibrationParameterValueSetSubtypesEnum = field(
-                default=None,
+            dest: CalibrationParameterValueSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlatMapRef(Ref):
-        dest: None | FlatMapSubtypesEnum = field(
-            default=None,
+        dest: FlatMapSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SoftwareCompositionTref(Ref):
-        dest: None | CompositionSwComponentTypeSubtypesEnum = field(
-            default=None,
+        dest: CompositionSwComponentTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

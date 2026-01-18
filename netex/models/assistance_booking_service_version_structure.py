@@ -25,7 +25,7 @@ from .version_of_object_ref_structure import VersionOfObjectRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "AssistanceBookingService_VersionStructure"

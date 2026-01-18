@@ -7,7 +7,7 @@ from travelport.models.fare_remark import FareRemark
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareRemarkList:
     """
     The shared object list of FareInfos.

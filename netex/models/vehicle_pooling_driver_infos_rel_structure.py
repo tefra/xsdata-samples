@@ -9,7 +9,7 @@ from .vehicle_pooling_driver_info import VehiclePoolingDriverInfo
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehiclePoolingDriverInfosRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehiclePoolingDriverInfos_RelStructure"

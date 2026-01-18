@@ -13,7 +13,7 @@ from .rpt_execution_context_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoleBasedMcDataAssignment:
     """
     This meta-class allows to define links that specify logical
@@ -105,7 +105,7 @@ class RoleBasedMcDataAssignment:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExecutionContextRefs:
         execution_context_ref: list[
             RoleBasedMcDataAssignment.ExecutionContextRefs.ExecutionContextRef
@@ -118,18 +118,17 @@ class RoleBasedMcDataAssignment:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExecutionContextRef(Ref):
-            dest: None | RptExecutionContextSubtypesEnum = field(
-                default=None,
+            dest: RptExecutionContextSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McDataInstanceRefs:
         mc_data_instance_ref: list[
             RoleBasedMcDataAssignment.McDataInstanceRefs.McDataInstanceRef
@@ -142,13 +141,12 @@ class RoleBasedMcDataAssignment:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class McDataInstanceRef(Ref):
-            dest: None | McDataInstanceSubtypesEnum = field(
-                default=None,
+            dest: McDataInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

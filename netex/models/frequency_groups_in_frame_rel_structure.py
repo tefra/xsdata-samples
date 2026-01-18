@@ -10,7 +10,7 @@ from .rhythmical_journey_group import RhythmicalJourneyGroup
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FrequencyGroupsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "frequencyGroupsInFrame_RelStructure"

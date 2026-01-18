@@ -8,7 +8,7 @@ from sdmx_ml.models.obs_dimensions_code_type import ObsDimensionsCodeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class PayloadStructureType:
     """
     PayloadStructureType is an abstract base type used to define the
@@ -80,13 +80,12 @@ class PayloadStructureType:
             ),
         },
     )
-    structure_id: None | str = field(
-        default=None,
+    structure_id: str = field(
         metadata={
             "name": "structureID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     schema_url: None | str = field(
         default=None,
@@ -131,32 +130,29 @@ class PayloadStructureType:
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class ProvisionAgreement:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.registry\.ProvisionAgreement=.+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class StructureUsage:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.datastructure\.Dataflow=.+|.+\.metadatastructure\.Metadataflow=.+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Structure:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.datastructure\.DataStructure=.+|.+\.metadatastructure\.MetadataStructure=.+",
-            },
+            }
         )

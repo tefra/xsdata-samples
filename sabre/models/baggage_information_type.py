@@ -7,7 +7,7 @@ from sabre.models.allowance_unit import AllowanceUnit
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaggageInformationType:
     """
     Information about baggage.
@@ -22,17 +22,16 @@ class BaggageInformationType:
             "min_occurs": 1,
         },
     )
-    allowance: None | BaggageInformationType.Allowance = field(
-        default=None,
+    allowance: BaggageInformationType.Allowance = field(
         metadata={
             "name": "Allowance",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Segment:
         """
         Attributes:
@@ -40,16 +39,15 @@ class BaggageInformationType:
                 to.
         """
 
-        id: None | int = field(
-            default=None,
+        id: int = field(
             metadata={
                 "name": "Id",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Allowance:
         """
         Attributes:

@@ -19,7 +19,7 @@ from npo.models.member_ref_facet_type import MemberRefFacetType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MediaFacetsType:
     class Meta:
         name = "mediaFacetsType"

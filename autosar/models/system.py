@@ -35,7 +35,7 @@ from .system_mapping import SystemMapping
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class System:
     """
     @RESTRICT_TO_STANDARD:CP!
@@ -145,14 +145,13 @@ class System:
     class Meta:
         name = "SYSTEM"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | System.ShortNameFragments = field(
         default=None,
@@ -351,7 +350,7 @@ class System:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -362,7 +361,7 @@ class System:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -373,7 +372,7 @@ class System:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SystemDocumentations:
         chapter: list[Chapter] = field(
             default_factory=list,
@@ -384,7 +383,7 @@ class System:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClientIdDefinitionSetRefs:
         client_id_definition_set_ref: list[
             System.ClientIdDefinitionSetRefs.ClientIdDefinitionSetRef
@@ -397,18 +396,17 @@ class System:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ClientIdDefinitionSetRef(Ref):
-            dest: None | ClientIdDefinitionSetSubtypesEnum = field(
-                default=None,
+            dest: ClientIdDefinitionSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FibexElements:
         fibex_element_ref_conditional: list[FibexElementRefConditional] = (
             field(
@@ -421,7 +419,7 @@ class System:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InterpolationRoutineMappingSetRefs:
         interpolation_routine_mapping_set_ref: list[
             System.InterpolationRoutineMappingSetRefs.InterpolationRoutineMappingSetRef
@@ -434,18 +432,17 @@ class System:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class InterpolationRoutineMappingSetRef(Ref):
-            dest: None | InterpolationRoutineMappingSetSubtypesEnum = field(
-                default=None,
+            dest: InterpolationRoutineMappingSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class J1939SharedAddressClusters:
         j_1939_shared_address_cluster: list[J1939SharedAddressCluster] = field(
             default_factory=list,
@@ -456,7 +453,7 @@ class System:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Mappings:
         system_mapping: list[SystemMapping] = field(
             default_factory=list,
@@ -467,7 +464,7 @@ class System:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RootSoftwareCompositions:
         root_sw_composition_prototype: list[RootSwCompositionPrototype] = (
             field(
@@ -480,7 +477,7 @@ class System:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwClusters:
         cp_software_cluster_ref_conditional: list[
             CpSoftwareClusterRefConditional

@@ -8,7 +8,7 @@ from .variable_access_in_ecu_instance_ref import VariableAccessInEcuInstanceRef
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McDataAccessDetails:
     """
     This meta-class allows to attach detailed information about the usage
@@ -74,7 +74,7 @@ class McDataAccessDetails:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RteEventIrefs:
         rte_event_iref: list[RteEventInEcuInstanceRef] = field(
             default_factory=list,
@@ -85,7 +85,7 @@ class McDataAccessDetails:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VariableAccessIrefs:
         variable_access_iref: list[VariableAccessInEcuInstanceRef] = field(
             default_factory=list,

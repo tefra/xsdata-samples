@@ -13,7 +13,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataTypeMap:
     """
     This class represents the relationship between ApplicationDataType and
@@ -74,24 +74,22 @@ class DataTypeMap:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ApplicationDataTypeRef(Ref):
-        dest: None | ApplicationDataTypeSubtypesEnum = field(
-            default=None,
+        dest: ApplicationDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplementationDataTypeRef(Ref):
-        dest: None | AbstractImplementationDataTypeSubtypesEnum = field(
-            default=None,
+        dest: AbstractImplementationDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -8,7 +8,7 @@ from sabre.models.message_class_type import MessageClassType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WarningType(FreeTextType):
     """
     Standard way to indicate successful processing of an OTA message, but
@@ -46,13 +46,12 @@ class WarningType(FreeTextType):
         message_class: If present specify the message class.
     """
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     short_text: None | str = field(
         default=None,

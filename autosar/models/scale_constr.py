@@ -10,7 +10,7 @@ from .scale_constr_validity_enum_simple import ScaleConstrValidityEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScaleConstr:
     """
     This meta-class represents the ability to specify constraints as a list

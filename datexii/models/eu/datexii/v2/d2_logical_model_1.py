@@ -9,7 +9,7 @@ from datexii.models.eu.datexii.v2.payload_publication import PayloadPublication
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class D2LogicalModel1:
     """
     The DATEX II logical model comprising exchange, content payload and
@@ -19,13 +19,12 @@ class D2LogicalModel1:
     class Meta:
         name = "D2LogicalModel"
 
-    exchange: None | Exchange = field(
-        default=None,
+    exchange: Exchange = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     payload_publication: None | PayloadPublication = field(
         default=None,

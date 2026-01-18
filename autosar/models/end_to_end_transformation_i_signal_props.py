@@ -15,7 +15,7 @@ from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EndToEndTransformationISignalProps:
     """
     Holds all the ISignal specific attributes for the EndToEndTransformer.
@@ -111,7 +111,7 @@ class EndToEndTransformationISignalProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EndToEndTransformationISignalPropsVariants:
         end_to_end_transformation_i_signal_props_conditional: list[
             EndToEndTransformationISignalPropsConditional

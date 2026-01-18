@@ -23,7 +23,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConsistencyNeeds:
     """
     This meta-class represents the ability to define requirements on the
@@ -125,14 +125,13 @@ class ConsistencyNeeds:
     class Meta:
         name = "CONSISTENCY-NEEDS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ConsistencyNeeds.ShortNameFragments = field(
         default=None,
@@ -277,7 +276,7 @@ class ConsistencyNeeds:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -288,7 +287,7 @@ class ConsistencyNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -299,7 +298,7 @@ class ConsistencyNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -328,7 +327,7 @@ class ConsistencyNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DpgDoesNotRequireCoherencys:
         data_prototype_group: list[DataPrototypeGroup] = field(
             default_factory=list,
@@ -339,7 +338,7 @@ class ConsistencyNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DpgRequiresCoherencys:
         data_prototype_group: list[DataPrototypeGroup] = field(
             default_factory=list,
@@ -350,7 +349,7 @@ class ConsistencyNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RegDoesNotRequireStabilitys:
         runnable_entity_group: list[RunnableEntityGroup] = field(
             default_factory=list,
@@ -361,7 +360,7 @@ class ConsistencyNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RegRequiresStabilitys:
         runnable_entity_group: list[RunnableEntityGroup] = field(
             default_factory=list,

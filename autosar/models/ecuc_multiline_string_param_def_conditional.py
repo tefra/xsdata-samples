@@ -10,7 +10,7 @@ from .verbatim_string import VerbatimString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucMultilineStringParamDefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.

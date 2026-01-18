@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QueueAgentRecord:
     """
     The information related to a particular category.
@@ -30,60 +30,54 @@ class QueueAgentRecord:
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
-    universal_record_locator_code: None | str = field(
-        default=None,
+    universal_record_locator_code: str = field(
         metadata={
             "name": "UniversalRecordLocatorCode",
             "type": "Element",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
-    pseudo_city_code: None | str = field(
-        default=None,
+    pseudo_city_code: str = field(
         metadata={
             "name": "PseudoCityCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 10,
-        },
+        }
     )
-    queue_session_token: None | str = field(
-        default=None,
+    queue_session_token: str = field(
         metadata={
             "name": "QueueSessionToken",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    queue_number: None | str = field(
-        default=None,
+    queue_number: str = field(
         metadata={
             "name": "QueueNumber",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    lastupdated: None | str = field(
-        default=None,
+    lastupdated: str = field(
         metadata={
             "name": "Lastupdated",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        },
+        }
     )
-    target_branch: None | str = field(
-        default=None,
+    target_branch: str = field(
         metadata={
             "name": "TargetBranch",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        },
+        }
     )
     category: None | str = field(
         default=None,

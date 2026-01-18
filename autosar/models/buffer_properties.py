@@ -9,7 +9,7 @@ from .integer import Integer
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BufferProperties:
     """
     Configuration of the buffer properties the transformer needs to work.

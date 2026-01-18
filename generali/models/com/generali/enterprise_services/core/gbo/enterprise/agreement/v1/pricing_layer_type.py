@@ -17,7 +17,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricingLayerType(BaseIdentifiedComponentType):
     primary: None | bool = field(
         default=None,

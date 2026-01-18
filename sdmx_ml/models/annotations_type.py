@@ -7,7 +7,7 @@ from sdmx_ml.models.annotation_type import AnnotationType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AnnotationsType:
     """
     AnnotationsType provides for a list of annotations to be attached to

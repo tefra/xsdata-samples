@@ -14,7 +14,7 @@ from .verbatim_string import VerbatimString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HwAttributeValue:
     """
     This metaclass represents the ability to assign a hardware attribute
@@ -101,13 +101,12 @@ class HwAttributeValue:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwAttributeDefRef(Ref):
-        dest: None | HwAttributeDefSubtypesEnum = field(
-            default=None,
+        dest: HwAttributeDefSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

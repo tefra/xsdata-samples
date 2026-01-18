@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleFlowValue(DataValue):
     """
     A measured or calculated value of the flow rate of vehicles.
@@ -18,14 +18,13 @@ class VehicleFlowValue(DataValue):
     :ivar vehicle_flow_value_extension:
     """
 
-    vehicle_flow_rate: None | int = field(
-        default=None,
+    vehicle_flow_rate: int = field(
         metadata={
             "name": "vehicleFlowRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     vehicle_flow_value_extension: None | ExtensionType = field(
         default=None,

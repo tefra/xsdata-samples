@@ -22,7 +22,7 @@ from .supervision_checkpoint import SupervisionCheckpoint
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PlatformHealthManagementContribution:
     """
     This element defines a contribution to the Platform Health Management.
@@ -94,14 +94,13 @@ class PlatformHealthManagementContribution:
     class Meta:
         name = "PLATFORM-HEALTH-MANAGEMENT-CONTRIBUTION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | PlatformHealthManagementContribution.ShortNameFragments
@@ -234,7 +233,7 @@ class PlatformHealthManagementContribution:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -245,7 +244,7 @@ class PlatformHealthManagementContribution:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -256,7 +255,7 @@ class PlatformHealthManagementContribution:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Checkpoints:
         supervision_checkpoint: list[SupervisionCheckpoint] = field(
             default_factory=list,
@@ -267,7 +266,7 @@ class PlatformHealthManagementContribution:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LocalSupervisions:
         local_supervision: list[LocalSupervision] = field(
             default_factory=list,
@@ -278,7 +277,7 @@ class PlatformHealthManagementContribution:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GlobalSupervisions:
         global_supervision: list[GlobalSupervision] = field(
             default_factory=list,
@@ -289,7 +288,7 @@ class PlatformHealthManagementContribution:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HealthChannels:
         health_channel_external_status: list[HealthChannelExternalStatus] = (
             field(

@@ -9,7 +9,7 @@ from .driver_trip import DriverTrip
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DriverTripsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "driverTripsInFrame_RelStructure"

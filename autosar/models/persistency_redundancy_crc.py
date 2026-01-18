@@ -11,7 +11,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersistencyRedundancyCrc:
     """
     This meta-class formally describes the usage of a CRC for the

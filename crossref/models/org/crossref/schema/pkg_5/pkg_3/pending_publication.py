@@ -40,7 +40,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.titles import Titles
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PendingPublication:
     """
     Container for 'pending publication' metadata.
@@ -59,12 +59,11 @@ class PendingPublication:
             "type": "Element",
         },
     )
-    publication: None | Publication = field(
-        default=None,
+    publication: Publication = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     titles: None | Titles = field(
         default=None,
@@ -72,12 +71,11 @@ class PendingPublication:
             "type": "Element",
         },
     )
-    acceptance_date: None | AcceptanceDate = field(
-        default=None,
+    acceptance_date: AcceptanceDate = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     institution: list[Institution] = field(
         default_factory=list,
@@ -135,12 +133,11 @@ class PendingPublication:
             "namespace": "http://www.crossref.org/relations.xsd",
         },
     )
-    doi: None | Doi = field(
-        default=None,
+    doi: Doi = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     language: None | PendingPublicationLanguage = field(
         default=None,

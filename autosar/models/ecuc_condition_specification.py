@@ -9,7 +9,7 @@ from .ecuc_query import EcucQuery
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucConditionSpecification:
     """
     Allows to define existence dependencies based on the value of parameter
@@ -75,7 +75,7 @@ class EcucConditionSpecification:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucQuerys:
         ecuc_query: list[EcucQuery] = field(
             default_factory=list,

@@ -9,7 +9,7 @@ from .td_event_swc_internal_behavior_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventSwcInternalBehaviorTypeEnum:
     """
     This is used to describe the specific event type of a
@@ -31,11 +31,10 @@ class TdEventSwcInternalBehaviorTypeEnum:
     class Meta:
         name = "TD-EVENT-SWC-INTERNAL-BEHAVIOR-TYPE-ENUM"
 
-    value: None | TdEventSwcInternalBehaviorTypeEnumSimple = field(
-        default=None,
+    value: TdEventSwcInternalBehaviorTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

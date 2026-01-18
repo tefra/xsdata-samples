@@ -8,7 +8,7 @@ from .nmtoken_string import NmtokenString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EventObdReadinessGroup:
     """
     This meta-class represents the ability to define the value of attribute

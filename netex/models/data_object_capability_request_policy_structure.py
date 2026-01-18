@@ -9,7 +9,7 @@ from .capability_request_policy_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataObjectCapabilityRequestPolicyStructure(
     CapabilityRequestPolicyStructure
 ):

@@ -7,7 +7,7 @@ from .i_pdu_signal_processing_enum_simple import IPduSignalProcessingEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IPduSignalProcessingEnum:
     """
     Definition of signal processing modes.
@@ -28,11 +28,10 @@ class IPduSignalProcessingEnum:
     class Meta:
         name = "I-PDU-SIGNAL-PROCESSING-ENUM"
 
-    value: None | IPduSignalProcessingEnumSimple = field(
-        default=None,
+    value: IPduSignalProcessingEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

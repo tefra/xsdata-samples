@@ -28,7 +28,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DoIpInterface:
     """
     A logical interface over which the DoIP Node is able to communicate via
@@ -146,14 +146,13 @@ class DoIpInterface:
     class Meta:
         name = "DO-IP-INTERFACE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DoIpInterface.ShortNameFragments = field(
         default=None,
@@ -350,7 +349,7 @@ class DoIpInterface:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -361,7 +360,7 @@ class DoIpInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -372,7 +371,7 @@ class DoIpInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DoIpRoutingActivations:
         do_ip_routing_activation: list[DoIpRoutingActivation] = field(
             default_factory=list,
@@ -383,18 +382,17 @@ class DoIpInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DoipChannelCollectionRef(Ref):
-        dest: None | DoIpTpConfigSubtypesEnum = field(
-            default=None,
+        dest: DoIpTpConfigSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DoipConnectionRefs:
         doip_connection_ref: list[
             DoIpInterface.DoipConnectionRefs.DoipConnectionRef
@@ -407,18 +405,17 @@ class DoIpInterface:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DoipConnectionRef(Ref):
-            dest: None | SocketConnectionBundleSubtypesEnum = field(
-                default=None,
+            dest: SocketConnectionBundleSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SocketConnectionRefs:
         socket_connection_ref: list[
             DoIpInterface.SocketConnectionRefs.SocketConnectionRef
@@ -431,13 +428,12 @@ class DoIpInterface:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SocketConnectionRef(Ref):
-            dest: None | StaticSocketConnectionSubtypesEnum = field(
-                default=None,
+            dest: StaticSocketConnectionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

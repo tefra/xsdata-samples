@@ -8,7 +8,7 @@ from npo.models.standard_match_type import StandardMatchType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TextMatcherType:
     class Meta:
         name = "textMatcherType"

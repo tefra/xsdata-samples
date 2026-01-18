@@ -7,7 +7,7 @@ from sdmx_ml.models.xhtmltype import Xhtmltype
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class StructuredText(Xhtmltype):
     """
     StructuredText is a reusable element, used for providing a language

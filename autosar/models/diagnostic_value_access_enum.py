@@ -9,7 +9,7 @@ from .diagnostic_value_access_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticValueAccessEnum:
     """
     Defines the access of the configured diagnostic current values which
@@ -31,11 +31,10 @@ class DiagnosticValueAccessEnum:
     class Meta:
         name = "DIAGNOSTIC-VALUE-ACCESS-ENUM"
 
-    value: None | DiagnosticValueAccessEnumSimple = field(
-        default=None,
+    value: DiagnosticValueAccessEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

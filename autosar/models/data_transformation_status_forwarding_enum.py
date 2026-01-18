@@ -9,7 +9,7 @@ from .data_transformation_status_forwarding_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataTransformationStatusForwardingEnum:
     """
     This enumeration defines different ways how a RunnableEntity shall be
@@ -31,11 +31,10 @@ class DataTransformationStatusForwardingEnum:
     class Meta:
         name = "DATA-TRANSFORMATION-STATUS-FORWARDING-ENUM"
 
-    value: None | DataTransformationStatusForwardingEnumSimple = field(
-        default=None,
+    value: DataTransformationStatusForwardingEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

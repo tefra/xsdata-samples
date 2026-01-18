@@ -8,7 +8,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InitialSdDelayConfig:
     """
     This element is used to configure the offer behavior of the server and

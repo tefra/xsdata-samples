@@ -25,7 +25,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientServerOperation:
     """
     @RESTRICT_TO_STANDARD:CP:AP!
@@ -119,14 +119,13 @@ class ClientServerOperation:
     class Meta:
         name = "CLIENT-SERVER-OPERATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ClientServerOperation.ShortNameFragments = (
         field(
@@ -271,7 +270,7 @@ class ClientServerOperation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -282,7 +281,7 @@ class ClientServerOperation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -293,7 +292,7 @@ class ClientServerOperation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Arguments:
         argument_data_prototype: list[ArgumentDataPrototype] = field(
             default_factory=list,
@@ -304,7 +303,7 @@ class ClientServerOperation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PossibleApErrorRefs:
         possible_ap_error_ref: list[
             ClientServerOperation.PossibleApErrorRefs.PossibleApErrorRef
@@ -317,18 +316,17 @@ class ClientServerOperation:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PossibleApErrorRef(Ref):
-            dest: None | ApApplicationErrorSubtypesEnum = field(
-                default=None,
+            dest: ApApplicationErrorSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PossibleApErrorSetRefs:
         possible_ap_error_set_ref: list[
             ClientServerOperation.PossibleApErrorSetRefs.PossibleApErrorSetRef
@@ -341,18 +339,17 @@ class ClientServerOperation:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PossibleApErrorSetRef(Ref):
-            dest: None | ApApplicationErrorSetSubtypesEnum = field(
-                default=None,
+            dest: ApApplicationErrorSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PossibleErrorRefs:
         possible_error_ref: list[
             ClientServerOperation.PossibleErrorRefs.PossibleErrorRef
@@ -365,13 +362,12 @@ class ClientServerOperation:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PossibleErrorRef(Ref):
-            dest: None | ApplicationErrorSubtypesEnum = field(
-                default=None,
+            dest: ApplicationErrorSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

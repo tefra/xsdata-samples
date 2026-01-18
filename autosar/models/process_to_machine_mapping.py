@@ -26,7 +26,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProcessToMachineMapping:
     """
     This meta-class has the ability to associate a Process with a Machine.
@@ -104,14 +104,13 @@ class ProcessToMachineMapping:
     class Meta:
         name = "PROCESS-TO-MACHINE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ProcessToMachineMapping.ShortNameFragments = (
         field(
@@ -246,7 +245,7 @@ class ProcessToMachineMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -257,7 +256,7 @@ class ProcessToMachineMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -268,51 +267,47 @@ class ProcessToMachineMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DesignRef(Ref):
-        dest: None | ProcessDesignToMachineDesignMappingSubtypesEnum = field(
-            default=None,
+        dest: ProcessDesignToMachineDesignMappingSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MachineRef(Ref):
-        dest: None | MachineSubtypesEnum = field(
-            default=None,
+        dest: MachineSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NonOsModuleInstantiationRef(Ref):
-        dest: None | NonOsModuleInstantiationSubtypesEnum = field(
-            default=None,
+        dest: NonOsModuleInstantiationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProcessRef(Ref):
-        dest: None | ProcessSubtypesEnum = field(
-            default=None,
+        dest: ProcessSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShallNotRunOnRefs:
         shall_not_run_on_ref: list[
             ProcessToMachineMapping.ShallNotRunOnRefs.ShallNotRunOnRef
@@ -325,18 +320,17 @@ class ProcessToMachineMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ShallNotRunOnRef(Ref):
-            dest: None | ProcessorCoreSubtypesEnum = field(
-                default=None,
+            dest: ProcessorCoreSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShallRunOnRefs:
         shall_run_on_ref: list[
             ProcessToMachineMapping.ShallRunOnRefs.ShallRunOnRef
@@ -349,13 +343,12 @@ class ProcessToMachineMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ShallRunOnRef(Ref):
-            dest: None | ProcessorCoreSubtypesEnum = field(
-                default=None,
+            dest: ProcessorCoreSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

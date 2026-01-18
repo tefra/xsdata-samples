@@ -10,7 +10,7 @@ from .sw_generic_axis_param import SwGenericAxisParam
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwAxisGeneric:
     """
     This meta-class defines a generic axis.
@@ -86,18 +86,17 @@ class SwAxisGeneric:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwAxisTypeRef(Ref):
-        dest: None | SwAxisTypeSubtypesEnum = field(
-            default=None,
+        dest: SwAxisTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwGenericAxisParams:
         sw_generic_axis_param: list[SwGenericAxisParam] = field(
             default_factory=list,

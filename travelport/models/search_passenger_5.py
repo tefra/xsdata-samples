@@ -7,7 +7,7 @@ from travelport.models.type_passenger_type_5 import TypePassengerType5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SearchPassenger5(TypePassengerType5):
     """
     Passenger type with code and optional age information.

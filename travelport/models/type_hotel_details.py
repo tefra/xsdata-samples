@@ -10,7 +10,7 @@ from travelport.models.media_item_1 import MediaItem1
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeHotelDetails:
     """
     Hotel Details Type.
@@ -28,14 +28,13 @@ class TypeHotelDetails:
     class Meta:
         name = "typeHotelDetails"
 
-    hotel_property: None | HotelProperty = field(
-        default=None,
+    hotel_property: HotelProperty = field(
         metadata={
             "name": "HotelProperty",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        },
+        }
     )
     hotel_detail_item: list[HotelDetailItem] = field(
         default_factory=list,

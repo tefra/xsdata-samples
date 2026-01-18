@@ -7,7 +7,7 @@ from .time_sync_technology_enum_simple import TimeSyncTechnologyEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSyncTechnologyEnum:
     """
     Timesynchronization.
@@ -30,11 +30,10 @@ class TimeSyncTechnologyEnum:
     class Meta:
         name = "TIME-SYNC-TECHNOLOGY-ENUM"
 
-    value: None | TimeSyncTechnologyEnumSimple = field(
-        default=None,
+    value: TimeSyncTechnologyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

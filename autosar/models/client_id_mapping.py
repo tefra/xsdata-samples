@@ -8,7 +8,7 @@ from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientIdMapping:
     """
     In case of a server on one ECU with multiple clients on other ECUs, the
@@ -59,13 +59,12 @@ class ClientIdMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SystemSignalRef(Ref):
-        dest: None | SystemSignalSubtypesEnum = field(
-            default=None,
+        dest: SystemSignalSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

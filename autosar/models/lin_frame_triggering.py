@@ -23,7 +23,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinFrameTriggering:
     """
     LIN specific attributes to the FrameTriggering.
@@ -103,14 +103,13 @@ class LinFrameTriggering:
     class Meta:
         name = "LIN-FRAME-TRIGGERING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | LinFrameTriggering.ShortNameFragments = field(
         default=None,
@@ -239,7 +238,7 @@ class LinFrameTriggering:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -250,7 +249,7 @@ class LinFrameTriggering:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -261,7 +260,7 @@ class LinFrameTriggering:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FramePortRefs:
         frame_port_ref: list[LinFrameTriggering.FramePortRefs.FramePortRef] = (
             field(
@@ -274,29 +273,27 @@ class LinFrameTriggering:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FramePortRef(Ref):
-            dest: None | FramePortSubtypesEnum = field(
-                default=None,
+            dest: FramePortSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FrameRef(Ref):
-        dest: None | FrameSubtypesEnum = field(
-            default=None,
+        dest: FrameSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduTriggerings:
         pdu_triggering_ref_conditional: list[PduTriggeringRefConditional] = (
             field(

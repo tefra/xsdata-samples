@@ -9,7 +9,7 @@ from .destination_display import DestinationDisplay
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DestinationDisplaysInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "destinationDisplaysInFrame_RelStructure"

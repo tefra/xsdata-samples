@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RGBColour:
     """
     An RGB colour described by values for red, green and blue (0..255) as
@@ -21,32 +21,29 @@ class RGBColour:
     :ivar rgb_colour_extension:
     """
 
-    rgb_red_value: None | int = field(
-        default=None,
+    rgb_red_value: int = field(
         metadata={
             "name": "rgbRedValue",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    rgb_green_value: None | int = field(
-        default=None,
+    rgb_green_value: int = field(
         metadata={
             "name": "rgbGreenValue",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    rgb_blue_value: None | int = field(
-        default=None,
+    rgb_blue_value: int = field(
         metadata={
             "name": "rgbBlueValue",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     colour_name: None | MultilingualString = field(
         default=None,

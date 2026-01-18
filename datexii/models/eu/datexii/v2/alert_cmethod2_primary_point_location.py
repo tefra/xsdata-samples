@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlertCMethod2PrimaryPointLocation:
     """
     The point (called Primary point) which is either a single point or at
@@ -18,14 +18,13 @@ class AlertCMethod2PrimaryPointLocation:
     ALERT-C location table.
     """
 
-    alert_clocation: None | AlertCLocation = field(
-        default=None,
+    alert_clocation: AlertCLocation = field(
         metadata={
             "name": "alertCLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     alert_cmethod2_primary_point_location_extension: None | ExtensionType = (
         field(

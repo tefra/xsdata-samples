@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MetaData6:
     """
     Extra data to elaborate the parent element.
@@ -17,23 +17,21 @@ class MetaData6:
         name = "MetaData"
         namespace = "http://www.travelport.com/schema/common_v34_0"
 
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 10,
-        },
+        }
     )
-    value: None | str = field(
-        default=None,
+    value: str = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        },
+        }
     )

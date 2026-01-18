@@ -10,7 +10,7 @@ from sabre.models.stay_unit_type import StayUnitType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StayRestrictionsType:
     """
     Type defining Min and Max Stay Restrictions.
@@ -50,7 +50,7 @@ class StayRestrictionsType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MinimumStay:
         """
         Attributes:
@@ -96,7 +96,7 @@ class StayRestrictionsType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MaximumStay:
         """
         Attributes:

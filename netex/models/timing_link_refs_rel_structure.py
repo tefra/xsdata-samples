@@ -10,7 +10,7 @@ from .timing_link_ref_by_value import TimingLinkRefByValue
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimingLinkRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "timingLinkRefs_RelStructure"

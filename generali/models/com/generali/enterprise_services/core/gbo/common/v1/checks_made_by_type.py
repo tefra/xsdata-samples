@@ -9,7 +9,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_id
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChecksMadeByType(BaseIdentifiedComponentType):
     """
     The person or organisation that made the checks against the business

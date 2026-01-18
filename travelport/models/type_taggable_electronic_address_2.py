@@ -9,7 +9,7 @@ from travelport.models.type_electronic_address_2 import TypeElectronicAddress2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeTaggableElectronicAddress2(TypeElectronicAddress2):
     """
     Base type of an electronic address that is taggable.

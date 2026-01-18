@@ -5,32 +5,29 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PartyLocalIdType:
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "Id",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
             "required": True,
-        },
+        }
     )
-    sender: None | str = field(
-        default=None,
+    sender: str = field(
         metadata={
             "name": "Sender",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
             "required": True,
-        },
+        }
     )
-    party_type: None | str = field(
-        default=None,
+    party_type: str = field(
         metadata={
             "name": "PartyType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
             "required": True,
-        },
+        }
     )

@@ -9,21 +9,20 @@ from .topographic_place_ref import TopographicPlaceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TopographicPlaceDescriptorVersionedChildStructure(
     VersionedChildStructure
 ):
     class Meta:
         name = "TopographicPlaceDescriptor_VersionedChildStructure"
 
-    name: None | MultilingualString = field(
-        default=None,
+    name: MultilingualString = field(
         metadata={
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     short_name: None | MultilingualString = field(
         default=None,
@@ -44,16 +43,15 @@ class TopographicPlaceDescriptorVersionedChildStructure(
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Qualify:
-        qualifier_name: None | MultilingualString = field(
-            default=None,
+        qualifier_name: MultilingualString = field(
             metadata={
                 "name": "QualifierName",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
                 "required": True,
-            },
+            }
         )
         topographic_place_ref: None | TopographicPlaceRef = field(
             default=None,

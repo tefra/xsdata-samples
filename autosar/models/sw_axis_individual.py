@@ -19,7 +19,7 @@ from .unit_subtypes_enum import UnitSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwAxisIndividual:
     """
     This meta-class describes an axis integrated into a parameter (field
@@ -184,18 +184,17 @@ class SwAxisIndividual:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InputVariableTypeRef(Ref):
-        dest: None | ApplicationPrimitiveDataTypeSubtypesEnum = field(
-            default=None,
+        dest: ApplicationPrimitiveDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwVariableRefs:
         """
         :ivar autosar_variable: This represents the reference to a
@@ -230,46 +229,42 @@ class SwAxisIndividual:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class McDataInstanceVarRef(Ref):
-            dest: None | McDataInstanceSubtypesEnum = field(
-                default=None,
+            dest: McDataInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CompuMethodRef(Ref):
-        dest: None | CompuMethodSubtypesEnum = field(
-            default=None,
+        dest: CompuMethodSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnitRef(Ref):
-        dest: None | UnitSubtypesEnum = field(
-            default=None,
+        dest: UnitSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataConstrRef(Ref):
-        dest: None | DataConstrSubtypesEnum = field(
-            default=None,
+        dest: DataConstrSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

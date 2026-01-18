@@ -11,19 +11,18 @@ from .stop_assignment_version_structure import StopAssignmentVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexibleStopAssignmentVersionStructure(StopAssignmentVersionStructure):
     class Meta:
         name = "FlexibleStopAssignment_VersionStructure"
 
-    flexible_stop_place_ref: None | FlexibleStopPlaceRef = field(
-        default=None,
+    flexible_stop_place_ref: FlexibleStopPlaceRef = field(
         metadata={
             "name": "FlexibleStopPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     flexible_quay_ref: (
         None | HailAndRideAreaRef | FlexibleAreaRef | FlexibleQuayRef

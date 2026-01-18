@@ -7,7 +7,7 @@ from sdmx_ml.models.registration_type import RegistrationType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RegistrationEventType:
     """
     This provides the details of a data or metadata registration event for
@@ -17,12 +17,11 @@ class RegistrationEventType:
         data or metadata registration.
     """
 
-    registration: None | RegistrationType = field(
-        default=None,
+    registration: RegistrationType = field(
         metadata={
             "name": "Registration",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )

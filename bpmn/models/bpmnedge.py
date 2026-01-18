@@ -10,7 +10,7 @@ from .message_visible_kind import MessageVisibleKind
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/DI"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Bpmnedge(LabeledEdge):
     class Meta:
         name = "BPMNEdge"

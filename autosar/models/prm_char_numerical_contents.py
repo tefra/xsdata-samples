@@ -8,7 +8,7 @@ from .single_language_unit_names import SingleLanguageUnitNames
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrmCharNumericalContents:
     """
     This metaclass represents the fact that it is a numerical parameter.

@@ -8,7 +8,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MacMulticastConfiguration:
     """
     References a per cluster globally defined MAC-Multicast-Group.
@@ -55,13 +55,12 @@ class MacMulticastConfiguration:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MacMulticastGroupRef(Ref):
-        dest: None | MacMulticastGroupSubtypesEnum = field(
-            default=None,
+        dest: MacMulticastGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

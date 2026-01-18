@@ -7,7 +7,7 @@ from .bsw_execution_context_simple import BswExecutionContextSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswExecutionContext:
     """
     Specifies the execution context required or guaranteed for the call
@@ -29,11 +29,10 @@ class BswExecutionContext:
     class Meta:
         name = "BSW-EXECUTION-CONTEXT"
 
-    value: None | BswExecutionContextSimple = field(
-        default=None,
+    value: BswExecutionContextSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlertCMethod2SecondaryPointLocation:
     """
     The point (called Secondary point) which is at the upstream end of a
@@ -18,14 +18,13 @@ class AlertCMethod2SecondaryPointLocation:
     ALERT-C location table.
     """
 
-    alert_clocation: None | AlertCLocation = field(
-        default=None,
+    alert_clocation: AlertCLocation = field(
         metadata={
             "name": "alertCLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     alert_cmethod2_secondary_point_location_extension: None | ExtensionType = (
         field(

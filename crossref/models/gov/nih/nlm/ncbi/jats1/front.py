@@ -9,7 +9,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.notes import Notes
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Front:
     """
     <div> <h3>Front Matter</h3> </div>.
@@ -19,21 +19,19 @@ class Front:
         name = "front"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    journal_meta: None | JournalMeta = field(
-        default=None,
+    journal_meta: JournalMeta = field(
         metadata={
             "name": "journal-meta",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    article_meta: None | ArticleMeta = field(
-        default=None,
+    article_meta: ArticleMeta = field(
         metadata={
             "name": "article-meta",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     notes: None | Notes = field(
         default=None,

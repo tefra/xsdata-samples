@@ -9,7 +9,7 @@ from .default_value_application_strategy_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefaultValueApplicationStrategyEnum:
     """
     Enumeration that describes how to handle AUTOSAR defined default
@@ -35,11 +35,10 @@ class DefaultValueApplicationStrategyEnum:
     class Meta:
         name = "DEFAULT-VALUE-APPLICATION-STRATEGY-ENUM"
 
-    value: None | DefaultValueApplicationStrategyEnumSimple = field(
-        default=None,
+    value: DefaultValueApplicationStrategyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

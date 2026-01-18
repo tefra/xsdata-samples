@@ -9,7 +9,7 @@ from .place_ref import PlaceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PlaceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "placeRefs_RelStructure"

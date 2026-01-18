@@ -30,7 +30,7 @@ from .traceable_subtypes_enum import TraceableSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExecutionOrderConstraint:
     """
     This constraint is used to restrict the order of execution for a set of
@@ -143,14 +143,13 @@ class ExecutionOrderConstraint:
     class Meta:
         name = "EXECUTION-ORDER-CONSTRAINT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ExecutionOrderConstraint.ShortNameFragments
@@ -311,7 +310,7 @@ class ExecutionOrderConstraint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -322,7 +321,7 @@ class ExecutionOrderConstraint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -333,7 +332,7 @@ class ExecutionOrderConstraint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TraceRefs:
         trace_ref: list[ExecutionOrderConstraint.TraceRefs.TraceRef] = field(
             default_factory=list,
@@ -344,40 +343,37 @@ class ExecutionOrderConstraint:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TraceRef(Ref):
-            dest: None | TraceableSubtypesEnum = field(
-                default=None,
+            dest: TraceableSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingConditionRef(Ref):
-        dest: None | TimingConditionSubtypesEnum = field(
-            default=None,
+        dest: TimingConditionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BaseCompositionRef(Ref):
-        dest: None | CompositionSwComponentTypeSubtypesEnum = field(
-            default=None,
+        dest: CompositionSwComponentTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OrderedElements:
         eoc_event_ref: list[EocEventRef] = field(
             default_factory=list,

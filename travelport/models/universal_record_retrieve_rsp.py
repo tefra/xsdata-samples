@@ -8,7 +8,7 @@ from travelport.models.universal_record import UniversalRecord
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordRetrieveRsp(BaseRsp1):
     """
     Return a Universal Record.
@@ -24,13 +24,12 @@ class UniversalRecordRetrieveRsp(BaseRsp1):
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
-    universal_record: None | UniversalRecord = field(
-        default=None,
+    universal_record: UniversalRecord = field(
         metadata={
             "name": "UniversalRecord",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     updated: bool = field(
         default=False,

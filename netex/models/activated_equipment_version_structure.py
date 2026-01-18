@@ -12,7 +12,7 @@ from .type_of_activation_ref import TypeOfActivationRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ActivatedEquipmentVersionStructure(EquipmentVersionStructure):
     class Meta:
         name = "ActivatedEquipment_VersionStructure"

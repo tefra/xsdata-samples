@@ -10,7 +10,7 @@ from travelport.models.rate_match_indicator_type import RateMatchIndicatorType
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RateMatchIndicator:
     """
     "Match" Indicators for certain request parameters, e.g.
@@ -21,21 +21,19 @@ class RateMatchIndicator:
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
-    type_value: None | RateMatchIndicatorType = field(
-        default=None,
+    type_value: RateMatchIndicatorType = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    status: None | RateMatchIndicatorStatus = field(
-        default=None,
+    status: RateMatchIndicatorStatus = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     value: None | str = field(
         default=None,

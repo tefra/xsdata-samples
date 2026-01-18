@@ -29,7 +29,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Process:
     """
     This meta-class provides information required to execute the referenced
@@ -116,14 +116,13 @@ class Process:
     class Meta:
         name = "PROCESS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | Process.ShortNameFragments = field(
         default=None,
@@ -286,7 +285,7 @@ class Process:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -297,7 +296,7 @@ class Process:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -308,40 +307,37 @@ class Process:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DesignRef(Ref):
-        dest: None | ProcessDesignSubtypesEnum = field(
-            default=None,
+        dest: ProcessDesignSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DeterministicClientRef(Ref):
-        dest: None | DeterministicClientSubtypesEnum = field(
-            default=None,
+        dest: DeterministicClientSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExecutableRef(Ref):
-        dest: None | ExecutableSubtypesEnum = field(
-            default=None,
+        dest: ExecutableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecurityEventRefs:
         security_event_ref: list[
             Process.SecurityEventRefs.SecurityEventRef
@@ -354,18 +350,17 @@ class Process:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SecurityEventRef(Ref):
-            dest: None | SecurityEventDefinitionSubtypesEnum = field(
-                default=None,
+            dest: SecurityEventDefinitionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StateDependentStartupConfigs:
         state_dependent_startup_config: list[StateDependentStartupConfig] = (
             field(

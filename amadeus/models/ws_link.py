@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://wsdl.amadeus.com/2010/06/ws/Link_v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConsumerType:
     """
     Description of an end-user.
@@ -14,19 +14,18 @@ class ConsumerType:
         identify a client
     """
 
-    unique_id: None | str = field(
-        default=None,
+    unique_id: str = field(
         metadata={
             "name": "UniqueID",
             "type": "Element",
             "namespace": "http://wsdl.amadeus.com/2010/06/ws/Link_v1",
             "required": True,
             "max_length": 64,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReceiverType:
     """
     Description of the server.
@@ -35,19 +34,18 @@ class ReceiverType:
         identify a link
     """
 
-    server_id: None | str = field(
-        default=None,
+    server_id: str = field(
         metadata={
             "name": "ServerID",
             "type": "Element",
             "namespace": "http://wsdl.amadeus.com/2010/06/ws/Link_v1",
             "required": True,
             "max_length": 64,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransactionFlowLinkType:
     """
     A link to uniquely identify an end-user flow.
@@ -74,7 +72,7 @@ class TransactionFlowLinkType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransactionFlowLink(TransactionFlowLinkType):
     """
     A set of indicators to link a flow.

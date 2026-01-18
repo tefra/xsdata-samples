@@ -28,7 +28,7 @@ from .variable_data_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NvProvideComSpec:
     """
     Communication attributes of PPortPrototypes with respect to Nv data
@@ -95,7 +95,7 @@ class NvProvideComSpec:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RamBlockInitValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification
@@ -210,7 +210,7 @@ class NvProvideComSpec:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RomBlockInitValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification
@@ -325,13 +325,12 @@ class NvProvideComSpec:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VariableRef(Ref):
-        dest: None | VariableDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: VariableDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

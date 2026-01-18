@@ -14,7 +14,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Name:
     """
     <div> <h3>Name of Person (Structured)</h3> </div>.
@@ -28,7 +28,6 @@ class Name:
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     given_names: list[GivenNames] = field(
@@ -36,7 +35,6 @@ class Name:
         metadata={
             "name": "given-names",
             "type": "Element",
-            "min_occurs": 1,
             "max_occurs": 2,
             "sequence": 1,
         },

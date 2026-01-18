@@ -15,7 +15,7 @@ from .user_defined_transformation_i_signal_props_conditional import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UserDefinedTransformationISignalProps:
     """
     The UserDefinedTransformationISignalProps is used to specify ISignal
@@ -112,7 +112,7 @@ class UserDefinedTransformationISignalProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UserDefinedTransformationISignalPropsVariants:
         user_defined_transformation_i_signal_props_conditional: list[
             UserDefinedTransformationISignalPropsConditional

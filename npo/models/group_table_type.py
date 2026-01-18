@@ -7,7 +7,7 @@ from npo.models.group import Group
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupTableType:
     class Meta:
         name = "groupTableType"

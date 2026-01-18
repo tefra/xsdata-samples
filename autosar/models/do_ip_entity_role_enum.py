@@ -7,7 +7,7 @@ from .do_ip_entity_role_enum_simple import DoIpEntityRoleEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DoIpEntityRoleEnum:
     """
     DoIP role a network-node has.
@@ -28,11 +28,10 @@ class DoIpEntityRoleEnum:
     class Meta:
         name = "DO-IP-ENTITY-ROLE-ENUM"
 
-    value: None | DoIpEntityRoleEnumSimple = field(
-        default=None,
+    value: DoIpEntityRoleEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

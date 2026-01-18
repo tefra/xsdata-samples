@@ -8,7 +8,7 @@ from travelport.models.upsell_search_criteria import UpsellSearchCriteria
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirUpsellQualifySearchCriteria(UpsellSearchCriteria):
     """
     Search criteria for AirUpsellQualify.
@@ -25,14 +25,13 @@ class AirUpsellQualifySearchCriteria(UpsellSearchCriteria):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
     origin: None | str = field(
         default=None,

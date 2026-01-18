@@ -9,7 +9,7 @@ from ipxact.models.group_selector_multiple_group_selection_operator import (
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupSelector:
     """
     Specifies a set of group names used to select subsequent generators.
@@ -50,7 +50,7 @@ class GroupSelector:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Name:
         value: str = field(
             default="",

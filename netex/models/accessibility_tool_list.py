@@ -8,7 +8,7 @@ from .accessibility_tool_enumeration import AccessibilityToolEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessibilityToolList:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

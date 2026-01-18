@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.rgbcolour import RGBColour
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingStatusColourMapping:
     """
     Defines a pair of 'parkingSiteStatus' and a corresponding colour.
@@ -22,23 +22,21 @@ class ParkingStatusColourMapping:
     :ivar parking_status_colour_mapping_extension:
     """
 
-    parking_site_status: None | ParkingSiteStatusEnum = field(
-        default=None,
+    parking_site_status: ParkingSiteStatusEnum = field(
         metadata={
             "name": "parkingSiteStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    rgb_colour: None | RGBColour = field(
-        default=None,
+    rgb_colour: RGBColour = field(
         metadata={
             "name": "rgbColour",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     parking_status_colour_mapping_extension: None | ExtensionType = field(
         default=None,

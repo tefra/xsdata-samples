@@ -19,7 +19,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FileSetType:
     """
     :ivar name: Unique name
@@ -44,13 +44,12 @@ class FileSetType:
     class Meta:
         name = "fileSetType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -127,7 +126,7 @@ class FileSetType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Group:
         value: str = field(
             default="",
@@ -143,7 +142,7 @@ class FileSetType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Function:
         """
         :ivar entry_point: Optional name for the function.
@@ -176,14 +175,13 @@ class FileSetType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        file_ref: None | str = field(
-            default=None,
+        file_ref: str = field(
             metadata={
                 "name": "fileRef",
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 "required": True,
-            },
+            }
         )
         return_type: None | ReturnTypeType = field(
             default=None,
@@ -229,23 +227,22 @@ class FileSetType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Argument(NameValuePairType):
             """
             :ivar data_type: The data type of the argument as pertains
                 to the language. Example: "int", "double", "char *".
             """
 
-            data_type: None | DataTypeType = field(
-                default=None,
+            data_type: DataTypeType = field(
                 metadata={
                     "name": "dataType",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SourceFile:
             """
             :ivar source_name: Source file for the boot load.  Relative
@@ -255,23 +252,21 @@ class FileSetType:
             :ivar id:
             """
 
-            source_name: None | IpxactUri = field(
-                default=None,
+            source_name: IpxactUri = field(
                 metadata={
                     "name": "sourceName",
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     "required": True,
-                },
+                }
             )
-            file_type: None | FileType = field(
-                default=None,
+            file_type: FileType = field(
                 metadata={
                     "name": "fileType",
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     "required": True,
-                },
+                }
             )
             id: None | str = field(
                 default=None,

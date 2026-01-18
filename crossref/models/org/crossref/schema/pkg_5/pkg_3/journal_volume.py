@@ -14,7 +14,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.volume import Volume
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JournalVolume:
     """
     Container for the journal volume and DOI assigned to an entire journal
@@ -28,12 +28,11 @@ class JournalVolume:
         name = "journal_volume"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    volume: None | Volume = field(
-        default=None,
+    volume: Volume = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     publisher_item: None | PublisherItem = field(
         default=None,

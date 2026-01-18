@@ -7,7 +7,7 @@ from ipxact.models.string_expression import StringExpression
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PowerDomainLinks:
     """
     :ivar power_domain_link: A power domain link to one external power
@@ -27,7 +27,7 @@ class PowerDomainLinks:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PowerDomainLink:
         """
         :ivar external_power_domain_reference: Reference to a power
@@ -37,13 +37,12 @@ class PowerDomainLinks:
         :ivar id:
         """
 
-        external_power_domain_reference: None | StringExpression = field(
-            default=None,
+        external_power_domain_reference: StringExpression = field(
             metadata={
                 "name": "externalPowerDomainReference",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         internal_power_domain_reference: list[
             PowerDomainLinks.PowerDomainLink.InternalPowerDomainReference
@@ -63,7 +62,7 @@ class PowerDomainLinks:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class InternalPowerDomainReference:
             value: str = field(
                 default="",

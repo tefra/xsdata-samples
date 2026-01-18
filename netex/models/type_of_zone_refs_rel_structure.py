@@ -9,7 +9,7 @@ from .type_of_zone_ref import TypeOfZoneRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfZoneRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfZoneRefs_RelStructure"

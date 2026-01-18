@@ -14,7 +14,7 @@ from travelport.models.tour_code import TourCode
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirTicketingModifiers:
     """
     Modifiers used during ticketing.

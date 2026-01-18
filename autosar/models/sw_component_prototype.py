@@ -19,7 +19,7 @@ from .sw_component_type_subtypes_enum import SwComponentTypeSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwComponentPrototype:
     """
     Role of a software component within a composition.
@@ -84,14 +84,13 @@ class SwComponentPrototype:
     class Meta:
         name = "SW-COMPONENT-PROTOTYPE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SwComponentPrototype.ShortNameFragments = (
         field(
@@ -190,7 +189,7 @@ class SwComponentPrototype:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -201,7 +200,7 @@ class SwComponentPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -212,13 +211,12 @@ class SwComponentPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeTref(Ref):
-        dest: None | SwComponentTypeSubtypesEnum = field(
-            default=None,
+        dest: SwComponentTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

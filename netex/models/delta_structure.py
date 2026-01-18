@@ -12,7 +12,7 @@ from .simple_object_ref_structure import SimpleObjectRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeltaStructure:
     simple_object_ref: None | SimpleObjectRef = field(
         default=None,
@@ -30,14 +30,13 @@ class DeltaStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_version_ref: None | SimpleObjectRefStructure = field(
-        default=None,
+    to_version_ref: SimpleObjectRefStructure = field(
         metadata={
             "name": "ToVersionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     modification: None | ModificationEnumeration = field(
         default=None,

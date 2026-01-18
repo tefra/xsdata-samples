@@ -17,7 +17,7 @@ from .purchase_when_enumeration import PurchaseWhenEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexibleLineVersionStructure(LineVersionStructure):
     class Meta:
         name = "FlexibleLine_VersionStructure"

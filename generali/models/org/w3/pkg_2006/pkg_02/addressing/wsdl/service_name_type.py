@@ -6,13 +6,12 @@ from xml.etree.ElementTree import QName
 __NAMESPACE__ = "http://www.w3.org/2006/02/addressing/wsdl"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceNameType:
-    value: None | QName = field(
-        default=None,
+    value: QName = field(
         metadata={
             "required": True,
-        },
+        }
     )
     endpoint_name: None | str = field(
         default=None,

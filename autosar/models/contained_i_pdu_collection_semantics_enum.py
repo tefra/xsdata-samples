@@ -9,7 +9,7 @@ from .contained_i_pdu_collection_semantics_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContainedIPduCollectionSemanticsEnum:
     """
     Defines the collection semantics for ContainedIPdus.
@@ -30,11 +30,10 @@ class ContainedIPduCollectionSemanticsEnum:
     class Meta:
         name = "CONTAINED-I-PDU-COLLECTION-SEMANTICS-ENUM"
 
-    value: None | ContainedIPduCollectionSemanticsEnumSimple = field(
-        default=None,
+    value: ContainedIPduCollectionSemanticsEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

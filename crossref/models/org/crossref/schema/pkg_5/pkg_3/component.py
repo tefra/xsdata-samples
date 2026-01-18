@@ -26,7 +26,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.titles import Titles
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Component:
     """
     Container for component metadata.
@@ -89,12 +89,11 @@ class Component:
             "type": "Element",
         },
     )
-    parent_relation: None | ComponentParentRelation = field(
-        default=None,
+    parent_relation: ComponentParentRelation = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     reg_agency: None | str = field(
         default=None,

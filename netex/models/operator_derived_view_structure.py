@@ -10,7 +10,7 @@ from .operator_ref import OperatorRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OperatorDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Operator_DerivedViewStructure"

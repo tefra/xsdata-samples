@@ -7,7 +7,7 @@ from npo.models.location_type import LocationType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationsType:
     class Meta:
         name = "locationsType"

@@ -8,32 +8,29 @@ from .t_base_element import TBaseElement
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TInputOutputBinding(TBaseElement):
     class Meta:
         name = "tInputOutputBinding"
 
-    operation_ref: None | QName = field(
-        default=None,
+    operation_ref: QName = field(
         metadata={
             "name": "operationRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    input_data_ref: None | str = field(
-        default=None,
+    input_data_ref: str = field(
         metadata={
             "name": "inputDataRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    output_data_ref: None | str = field(
-        default=None,
+    output_data_ref: str = field(
         metadata={
             "name": "outputDataRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

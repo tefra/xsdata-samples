@@ -9,7 +9,7 @@ from .destination_display_derived_view_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DestinationDisplayView(DestinationDisplayDerivedViewStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

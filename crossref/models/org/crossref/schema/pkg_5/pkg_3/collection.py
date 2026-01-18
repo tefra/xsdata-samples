@@ -13,7 +13,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.item import Item
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Collection:
     """
     Container for item elements containing non-primary URIs associated with
@@ -45,12 +45,11 @@ class Collection:
             "type": "Element",
         },
     )
-    property: None | CollectionProperty = field(
-        default=None,
+    property: CollectionProperty = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     multi_resolution: None | CollectionMultiResolution = field(
         default=None,

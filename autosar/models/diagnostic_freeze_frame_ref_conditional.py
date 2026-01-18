@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticFreezeFrameRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -68,13 +68,12 @@ class DiagnosticFreezeFrameRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticFreezeFrameRef(Ref):
-        dest: None | DiagnosticFreezeFrameSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticFreezeFrameSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -26,7 +26,7 @@ from .udp_nm_cluster_coupling import UdpNmClusterCoupling
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NmConfig:
     """
     Contains the all configuration elements for AUTOSAR Nm.
@@ -99,14 +99,13 @@ class NmConfig:
     class Meta:
         name = "NM-CONFIG"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | NmConfig.ShortNameFragments = field(
         default=None,
@@ -219,7 +218,7 @@ class NmConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -230,7 +229,7 @@ class NmConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -241,7 +240,7 @@ class NmConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NmClusters:
         can_nm_cluster: list[CanNmCluster] = field(
             default_factory=list,
@@ -284,7 +283,7 @@ class NmConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NmClusterCouplings:
         can_nm_cluster_coupling: list[CanNmClusterCoupling] = field(
             default_factory=list,
@@ -311,7 +310,7 @@ class NmConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NmIfEcus:
         nm_ecu: list[NmEcu] = field(
             default_factory=list,

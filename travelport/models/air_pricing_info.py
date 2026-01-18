@@ -38,7 +38,7 @@ from travelport.models.yield_mod import Yield
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirPricingInfo:
     """
     Per traveler type pricing breakdown.
@@ -418,13 +418,12 @@ class AirPricingInfo:
             "white_space": "collapse",
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     command_key: None | str = field(
         default=None,
@@ -573,13 +572,12 @@ class AirPricingInfo:
             "type": "Attribute",
         },
     )
-    pricing_method: None | TypePricingMethod = field(
-        default=None,
+    pricing_method: TypePricingMethod = field(
         metadata={
             "name": "PricingMethod",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     checksum: None | str = field(
         default=None,

@@ -10,7 +10,7 @@ from .positive_integer import PositiveInteger
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEnvConditionFormula:
     """
     A DiagnosticEnvConditionFormula embodies the computation instruction
@@ -87,7 +87,7 @@ class DiagnosticEnvConditionFormula:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Parts:
         diagnostic_env_condition_formula: list[
             DiagnosticEnvConditionFormula

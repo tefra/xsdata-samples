@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Program(ProgramGbotype):
     class Meta:
         namespace = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"

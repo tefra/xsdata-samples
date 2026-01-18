@@ -18,7 +18,7 @@ from .tls_job_mapping import TlsJobMapping
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TlsDeployment:
     """
     The meta-class represents the ability to define a deployment of the TLS
@@ -86,14 +86,13 @@ class TlsDeployment:
     class Meta:
         name = "TLS-DEPLOYMENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TlsDeployment.ShortNameFragments = field(
         default=None,
@@ -192,7 +191,7 @@ class TlsDeployment:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -203,7 +202,7 @@ class TlsDeployment:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -214,7 +213,7 @@ class TlsDeployment:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PskIdentityToKeySlotMappings:
         psk_identity_to_key_slot_mapping: list[PskIdentityToKeySlotMapping] = (
             field(
@@ -227,7 +226,7 @@ class TlsDeployment:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TlsJobMappings:
         tls_job_mapping: list[TlsJobMapping] = field(
             default_factory=list,

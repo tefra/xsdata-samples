@@ -9,7 +9,7 @@ from .handle_termination_and_restart_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HandleTerminationAndRestartEnum:
     """
     Controls the behavior of an AtomicSwComponentType with respect to stop
@@ -31,11 +31,10 @@ class HandleTerminationAndRestartEnum:
     class Meta:
         name = "HANDLE-TERMINATION-AND-RESTART-ENUM"
 
-    value: None | HandleTerminationAndRestartEnumSimple = field(
-        default=None,
+    value: HandleTerminationAndRestartEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

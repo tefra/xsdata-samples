@@ -11,7 +11,7 @@ from .vehicle_type_preference import VehicleTypePreference
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleTypePreferencesRelStructure(
     StrictContainmentAggregationStructure
 ):

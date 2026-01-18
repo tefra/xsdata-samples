@@ -8,7 +8,7 @@ from travelport.models.vehicle_disclaimer import VehicleDisclaimer
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehiclePolicy:
     """
     Policy information provided by the Vehicle Supplier.

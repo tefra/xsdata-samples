@@ -10,7 +10,7 @@ from travelport.models.universal_record import UniversalRecord
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelCreateReservationRsp(BaseRsp1):
     """
     Parameters
@@ -40,7 +40,7 @@ class HotelCreateReservationRsp(BaseRsp1):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HotelRateChangedInfo:
         """
         Parameters
@@ -52,14 +52,13 @@ class HotelCreateReservationRsp(BaseRsp1):
             rules.Applicable for 1G, 1V, 1P
         """
 
-        hotel_property: None | HotelProperty = field(
-            default=None,
+        hotel_property: HotelProperty = field(
             metadata={
                 "name": "HotelProperty",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/hotel_v52_0",
                 "required": True,
-            },
+            }
         )
         hotel_rate_detail: None | HotelRateDetail = field(
             default=None,

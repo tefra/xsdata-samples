@@ -7,16 +7,15 @@ from .entity_structure import EntityStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CodespaceStructure(EntityStructure):
-    xmlns: None | str = field(
-        default=None,
+    xmlns: str = field(
         metadata={
             "name": "Xmlns",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     xmlns_url: None | str = field(
         default=None,

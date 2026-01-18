@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.situation_record import SituationRecord
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GenericSituationRecord(SituationRecord):
     """
     A generic SituationRecord for use when adding level B extensions at the
@@ -19,15 +19,14 @@ class GenericSituationRecord(SituationRecord):
     :ivar generic_situation_record_extension:
     """
 
-    generic_situation_record_name: None | str = field(
-        default=None,
+    generic_situation_record_name: str = field(
         metadata={
             "name": "genericSituationRecordName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
     generic_situation_record_extension: None | ExtensionType = field(
         default=None,

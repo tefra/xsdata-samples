@@ -22,7 +22,7 @@ from .system_subtypes_enum import SystemSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucValueCollection:
     """
     This represents the anchor point of the ECU configuration description.
@@ -93,14 +93,13 @@ class EcucValueCollection:
     class Meta:
         name = "ECUC-VALUE-COLLECTION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EcucValueCollection.ShortNameFragments = (
         field(
@@ -207,7 +206,7 @@ class EcucValueCollection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -218,7 +217,7 @@ class EcucValueCollection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -229,18 +228,17 @@ class EcucValueCollection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuExtractRef(Ref):
-        dest: None | SystemSubtypesEnum = field(
-            default=None,
+        dest: SystemSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucValues:
         ecuc_module_configuration_values_ref_conditional: list[
             EcucModuleConfigurationValuesRefConditional

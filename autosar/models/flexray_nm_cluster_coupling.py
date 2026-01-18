@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayNmClusterCoupling:
     """
     FlexRay attributes that are valid for each of the referenced (coupled)
@@ -98,7 +98,7 @@ class FlexrayNmClusterCoupling:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CoupledClusterRefs:
         coupled_cluster_ref: list[
             FlexrayNmClusterCoupling.CoupledClusterRefs.CoupledClusterRef
@@ -111,13 +111,12 @@ class FlexrayNmClusterCoupling:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CoupledClusterRef(Ref):
-            dest: None | FlexrayNmClusterSubtypesEnum = field(
-                default=None,
+            dest: FlexrayNmClusterSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

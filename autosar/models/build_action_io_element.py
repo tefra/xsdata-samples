@@ -16,7 +16,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BuildActionIoElement:
     """
     This meta-class represents the ability to specify the input/output
@@ -134,7 +134,7 @@ class BuildActionIoElement:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sdgs:
         sdg: list[Sdg] = field(
             default_factory=list,
@@ -145,13 +145,12 @@ class BuildActionIoElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucDefinitionRef(Ref):
-        dest: None | EcucDefinitionElementSubtypesEnum = field(
-            default=None,
+        dest: EcucDefinitionElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.roadworks import Roadworks
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MaintenanceWorks(Roadworks):
     """
     Roadworks involving the maintenance or installation of infrastructure.

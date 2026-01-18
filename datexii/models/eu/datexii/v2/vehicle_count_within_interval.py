@@ -16,7 +16,7 @@ from datexii.models.eu.datexii.v2.vehicle_count_value import VehicleCountValue
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleCountWithinInterval:
     """
     Gives incoming and/or outgoing vehicles and/or change of occupied
@@ -54,14 +54,13 @@ class VehicleCountWithinInterval:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_interval: None | float = field(
-        default=None,
+    measurement_interval: float = field(
         metadata={
             "name": "measurementInterval",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     number_of_incoming_vehicles: None | VehicleCountValue = field(
         default=None,

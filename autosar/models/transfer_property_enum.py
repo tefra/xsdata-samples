@@ -7,7 +7,7 @@ from .transfer_property_enum_simple import TransferPropertyEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransferPropertyEnum:
     """
     Transfer Properties of a Signal.
@@ -28,11 +28,10 @@ class TransferPropertyEnum:
     class Meta:
         name = "TRANSFER-PROPERTY-ENUM"
 
-    value: None | TransferPropertyEnumSimple = field(
-        default=None,
+    value: TransferPropertyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

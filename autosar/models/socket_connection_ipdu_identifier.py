@@ -14,7 +14,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SocketConnectionIpduIdentifier:
     """
     An Identifier is required in case of one port per ECU communication
@@ -135,29 +135,27 @@ class SocketConnectionIpduIdentifier:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduRef(Ref):
-        dest: None | PduSubtypesEnum = field(
-            default=None,
+        dest: PduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduTriggeringRef(Ref):
-        dest: None | PduTriggeringSubtypesEnum = field(
-            default=None,
+        dest: PduTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RoutingGroupRefs:
         routing_group_ref: list[
             SocketConnectionIpduIdentifier.RoutingGroupRefs.RoutingGroupRef
@@ -170,13 +168,12 @@ class SocketConnectionIpduIdentifier:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RoutingGroupRef(Ref):
-            dest: None | SoAdRoutingGroupSubtypesEnum = field(
-                default=None,
+            dest: SoAdRoutingGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

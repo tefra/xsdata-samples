@@ -17,7 +17,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswDirectCallPoint:
     """
     Represents a concrete point in the code from where a BswModuleEntry is
@@ -55,14 +55,13 @@ class BswDirectCallPoint:
     class Meta:
         name = "BSW-DIRECT-CALL-POINT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | BswDirectCallPoint.ShortNameFragments = field(
         default=None,
@@ -124,7 +123,7 @@ class BswDirectCallPoint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -135,7 +134,7 @@ class BswDirectCallPoint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextLimitationRefs:
         context_limitation_ref: list[
             BswDirectCallPoint.ContextLimitationRefs.ContextLimitationRef
@@ -148,35 +147,32 @@ class BswDirectCallPoint:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ContextLimitationRef(Ref):
-            dest: None | BswDistinguishedPartitionSubtypesEnum = field(
-                default=None,
+            dest: BswDistinguishedPartitionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CalledEntryRef(Ref):
-        dest: None | BswModuleEntrySubtypesEnum = field(
-            default=None,
+        dest: BswModuleEntrySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CalledFromWithinExclusiveAreaRef(Ref):
-        dest: None | ExclusiveAreaNestingOrderSubtypesEnum = field(
-            default=None,
+        dest: ExclusiveAreaNestingOrderSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

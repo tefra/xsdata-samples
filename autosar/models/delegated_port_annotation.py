@@ -10,7 +10,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DelegatedPortAnnotation:
     """
     Annotation to a "delegated port" to specify the Signal Fan In or Signal

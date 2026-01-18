@@ -7,7 +7,7 @@ from sdmx_ml.models.dataflow_type import DataflowType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataflowsType:
     """
     DataflowsType describes the structure of the data flows container.

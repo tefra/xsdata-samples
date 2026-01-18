@@ -7,7 +7,7 @@ from ipxact.models.clock_driver_type import ClockDriverType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClockDriver(ClockDriverType):
     """
     Describes a driven clock port.

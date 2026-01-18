@@ -9,7 +9,7 @@ from .online_service import OnlineService
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OnlineServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "onlineServices_RelStructure"

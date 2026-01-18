@@ -7,7 +7,7 @@ from travelport.models.type_taggable_element_1 import TypeTaggableElement1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TagDelete1:
     """
     Delete a tag from the specified element of the profile.
@@ -31,27 +31,24 @@ class TagDelete1:
         name = "TagDelete"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    element: None | TypeTaggableElement1 = field(
-        default=None,
+    element: TypeTaggableElement1 = field(
         metadata={
             "name": "Element",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    tag_id: None | str = field(
-        default=None,
+    tag_id: str = field(
         metadata={
             "name": "TagID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

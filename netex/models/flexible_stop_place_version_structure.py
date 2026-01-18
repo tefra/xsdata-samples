@@ -18,7 +18,7 @@ from .place_version_structure import PlaceVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
     class Meta:
         name = "FlexibleStopPlace_VersionStructure"
@@ -70,7 +70,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Areas:
         choice: Iterable[
             FlexibleArea

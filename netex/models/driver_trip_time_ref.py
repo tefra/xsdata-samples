@@ -7,7 +7,7 @@ from .driver_trip_time_ref_structure import DriverTripTimeRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DriverTripTimeRef(DriverTripTimeRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

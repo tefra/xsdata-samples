@@ -20,7 +20,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LiabilityType(RiskElementType):
     rating: None | CodeType = field(
         default=None,

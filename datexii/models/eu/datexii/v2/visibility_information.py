@@ -9,19 +9,18 @@ from datexii.models.eu.datexii.v2.weather_data import WeatherData
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VisibilityInformation(WeatherData):
     """
     Measurements of atmospheric visibility.
     """
 
-    visibility: None | Visibility = field(
-        default=None,
+    visibility: Visibility = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     visibility_information_extension: None | ExtensionType = field(
         default=None,

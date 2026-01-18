@@ -22,7 +22,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucDestinationUriDefSet:
     """
     This class represents a list of EcucDestinationUriDefs.
@@ -99,14 +99,13 @@ class EcucDestinationUriDefSet:
     class Meta:
         name = "ECUC-DESTINATION-URI-DEF-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | EcucDestinationUriDefSet.ShortNameFragments
@@ -225,7 +224,7 @@ class EcucDestinationUriDefSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -236,7 +235,7 @@ class EcucDestinationUriDefSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -247,7 +246,7 @@ class EcucDestinationUriDefSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -276,7 +275,7 @@ class EcucDestinationUriDefSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DestinationUriDefs:
         ecuc_destination_uri_def: list[EcucDestinationUriDef] = field(
             default_factory=list,

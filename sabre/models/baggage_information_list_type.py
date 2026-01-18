@@ -7,7 +7,7 @@ from sabre.models.baggage_information_type import BaggageInformationType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaggageInformationListType:
     """
     Baggage information list.

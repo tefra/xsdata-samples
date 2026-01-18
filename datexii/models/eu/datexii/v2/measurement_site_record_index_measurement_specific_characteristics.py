@@ -9,26 +9,22 @@ from datexii.models.eu.datexii.v2.measurement_specific_characteristics import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MeasurementSiteRecordIndexMeasurementSpecificCharacteristics:
     class Meta:
         name = "_MeasurementSiteRecordIndexMeasurementSpecificCharacteristics"
 
-    measurement_specific_characteristics: (
-        None | MeasurementSpecificCharacteristics
-    ) = field(
-        default=None,
+    measurement_specific_characteristics: MeasurementSpecificCharacteristics = field(
         metadata={
             "name": "measurementSpecificCharacteristics",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    index: None | int = field(
-        default=None,
+    index: int = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

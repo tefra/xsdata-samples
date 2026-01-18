@@ -7,7 +7,7 @@ from npo.models.program_type import ProgramType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Program(ProgramType):
     """
     This is the most used entity in POMS.

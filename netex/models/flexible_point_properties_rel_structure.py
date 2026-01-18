@@ -9,7 +9,7 @@ from .flexible_point_properties import FlexiblePointProperties
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexiblePointPropertiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "flexiblePointProperties_RelStructure"

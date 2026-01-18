@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CommunicationControllerMapping:
     """
     CommunicationControllerMapping specifies the CommunicationPeripheral
@@ -73,24 +73,22 @@ class CommunicationControllerMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommunicationControllerRef(Ref):
-        dest: None | CommunicationControllerSubtypesEnum = field(
-            default=None,
+        dest: CommunicationControllerSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwCommunicationControllerRef(Ref):
-        dest: None | HwElementSubtypesEnum = field(
-            default=None,
+        dest: HwElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

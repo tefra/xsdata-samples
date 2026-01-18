@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.validity_status_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Validity:
     """
     Specification of validity, either explicitly or by a validity time
@@ -29,14 +29,13 @@ class Validity:
     :ivar validity_extension:
     """
 
-    validity_status: None | ValidityStatusEnum = field(
-        default=None,
+    validity_status: ValidityStatusEnum = field(
         metadata={
             "name": "validityStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     overrunning: None | bool = field(
         default=None,
@@ -45,14 +44,13 @@ class Validity:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    validity_time_specification: None | OverallPeriod = field(
-        default=None,
+    validity_time_specification: OverallPeriod = field(
         metadata={
             "name": "validityTimeSpecification",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     validity_extension: None | ExtensionType = field(
         default=None,

@@ -18,7 +18,7 @@ from ubl.models.common.ubl_xmldsig_core_schema_2_1 import (
 __NAMESPACE__ = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AnyType:
     any_attributes: dict[str, str] = field(
         default_factory=dict,
@@ -37,28 +37,26 @@ class AnyType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CrlidentifierType:
     class Meta:
         name = "CRLIdentifierType"
 
-    issuer: None | str = field(
-        default=None,
+    issuer: str = field(
         metadata={
             "name": "Issuer",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
-    issue_time: None | XmlDateTime = field(
-        default=None,
+    issue_time: XmlDateTime = field(
         metadata={
             "name": "IssueTime",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
     number: None | int = field(
         default=None,
@@ -77,7 +75,7 @@ class CrlidentifierType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DocumentationReferencesType:
     documentation_reference: tuple[str, ...] = field(
         default_factory=tuple,
@@ -90,17 +88,16 @@ class DocumentationReferencesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class EncapsulatedPkidataType:
     class Meta:
         name = "EncapsulatedPKIDataType"
 
-    value: None | bytes = field(
-        default=None,
+    value: bytes = field(
         metadata={
             "required": True,
             "format": "base64",
-        },
+        }
     )
     id: None | str = field(
         default=None,
@@ -118,15 +115,14 @@ class EncapsulatedPkidataType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class IncludeType:
-    uri: None | str = field(
-        default=None,
+    uri: str = field(
         metadata={
             "name": "URI",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     referenced_data: None | bool = field(
         default=None,
@@ -137,7 +133,7 @@ class IncludeType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class IntegerListType:
     int_value: tuple[int, ...] = field(
         default_factory=tuple,
@@ -154,15 +150,14 @@ class QualifierType(Enum):
     OIDAS_URN = "OIDAsURN"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class QualifyingPropertiesReferenceType:
-    uri: None | str = field(
-        default=None,
+    uri: str = field(
         metadata={
             "name": "URI",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,
@@ -173,7 +168,7 @@ class QualifyingPropertiesReferenceType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ResponderIdtype:
     class Meta:
         name = "ResponderIDType"
@@ -197,7 +192,7 @@ class ResponderIdtype:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Spuri:
     class Meta:
         name = "SPURI"
@@ -211,7 +206,7 @@ class Spuri:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignatureProductionPlaceType:
     city: None | str = field(
         default=None,
@@ -247,27 +242,26 @@ class SignatureProductionPlaceType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SigningTime:
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
-    value: None | XmlDateTime = field(
-        default=None,
+    value: XmlDateTime = field(
         metadata={
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AnyModel(AnyType):
     class Meta:
         name = "Any"
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CrlvaluesType:
     class Meta:
         name = "CRLValuesType"
@@ -283,7 +277,7 @@ class CrlvaluesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CertificateValuesType:
     encapsulated_x509_certificate: tuple[EncapsulatedPkidataType, ...] = field(
         default_factory=tuple,
@@ -310,7 +304,7 @@ class CertificateValuesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CertifiedRolesListType:
     certified_role: tuple[EncapsulatedPkidataType, ...] = field(
         default_factory=tuple,
@@ -323,7 +317,7 @@ class CertifiedRolesListType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ClaimedRolesListType:
     claimed_role: tuple[AnyType, ...] = field(
         default_factory=tuple,
@@ -336,7 +330,7 @@ class ClaimedRolesListType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CommitmentTypeQualifiersListType:
     commitment_type_qualifier: tuple[AnyType, ...] = field(
         default_factory=tuple,
@@ -348,49 +342,46 @@ class CommitmentTypeQualifiersListType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CounterSignatureType:
-    signature: None | Signature = field(
-        default=None,
+    signature: Signature = field(
         metadata={
             "name": "Signature",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DigestAlgAndValueType:
-    digest_method: None | DigestMethod = field(
-        default=None,
+    digest_method: DigestMethod = field(
         metadata={
             "name": "DigestMethod",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        },
+        }
     )
-    digest_value: None | DigestValue = field(
-        default=None,
+    digest_value: DigestValue = field(
         metadata={
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class EncapsulatedPkidata(EncapsulatedPkidataType):
     class Meta:
         name = "EncapsulatedPKIData"
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class IdentifierType:
     value: str = field(
         default="",
@@ -407,56 +398,52 @@ class IdentifierType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Include(IncludeType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class NoticeReferenceType:
-    organization: None | str = field(
-        default=None,
+    organization: str = field(
         metadata={
             "name": "Organization",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
-    notice_numbers: None | IntegerListType = field(
-        default=None,
+    notice_numbers: IntegerListType = field(
         metadata={
             "name": "NoticeNumbers",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class OcspidentifierType:
     class Meta:
         name = "OCSPIdentifierType"
 
-    responder_id: None | ResponderIdtype = field(
-        default=None,
+    responder_id: ResponderIdtype = field(
         metadata={
             "name": "ResponderID",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
-    produced_at: None | XmlDateTime = field(
-        default=None,
+    produced_at: XmlDateTime = field(
         metadata={
             "name": "ProducedAt",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
     uri: None | str = field(
         default=None,
@@ -467,7 +454,7 @@ class OcspidentifierType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class OcspvaluesType:
     class Meta:
         name = "OCSPValuesType"
@@ -483,7 +470,7 @@ class OcspvaluesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class OtherCertStatusRefsType:
     other_ref: tuple[AnyType, ...] = field(
         default_factory=tuple,
@@ -496,7 +483,7 @@ class OtherCertStatusRefsType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class OtherCertStatusValuesType:
     other_value: tuple[AnyType, ...] = field(
         default_factory=tuple,
@@ -509,31 +496,29 @@ class OtherCertStatusValuesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class QualifyingPropertiesReference(QualifyingPropertiesReferenceType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ReferenceInfoType:
-    digest_method: None | DigestMethod = field(
-        default=None,
+    digest_method: DigestMethod = field(
         metadata={
             "name": "DigestMethod",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        },
+        }
     )
-    digest_value: None | DigestValue = field(
-        default=None,
+    digest_value: DigestValue = field(
         metadata={
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,
@@ -551,7 +536,7 @@ class ReferenceInfoType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SigPolicyQualifiersListType:
     sig_policy_qualifier: tuple[AnyType, ...] = field(
         default_factory=tuple,
@@ -564,13 +549,13 @@ class SigPolicyQualifiersListType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignatureProductionPlace(SignatureProductionPlaceType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UnsignedDataObjectPropertiesType:
     unsigned_data_object_property: tuple[AnyType, ...] = field(
         default_factory=tuple,
@@ -590,25 +575,24 @@ class UnsignedDataObjectPropertiesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AttrAuthoritiesCertValues(CertificateValuesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CrlrefType:
     class Meta:
         name = "CRLRefType"
 
-    digest_alg_and_value: None | DigestAlgAndValueType = field(
-        default=None,
+    digest_alg_and_value: DigestAlgAndValueType = field(
         metadata={
             "name": "DigestAlgAndValue",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
     crlidentifier: None | CrlidentifierType = field(
         default=None,
@@ -620,28 +604,26 @@ class CrlrefType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CertIdtype:
     class Meta:
         name = "CertIDType"
 
-    cert_digest: None | DigestAlgAndValueType = field(
-        default=None,
+    cert_digest: DigestAlgAndValueType = field(
         metadata={
             "name": "CertDigest",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
-    issuer_serial: None | X509IssuerSerialType = field(
-        default=None,
+    issuer_serial: X509IssuerSerialType = field(
         metadata={
             "name": "IssuerSerial",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
     uri: None | str = field(
         default=None,
@@ -652,31 +634,30 @@ class CertIdtype:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CertificateValues(CertificateValuesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CounterSignature(CounterSignatureType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class OcsprefType:
     class Meta:
         name = "OCSPRefType"
 
-    ocspidentifier: None | OcspidentifierType = field(
-        default=None,
+    ocspidentifier: OcspidentifierType = field(
         metadata={
             "name": "OCSPIdentifier",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
     digest_alg_and_value: None | DigestAlgAndValueType = field(
         default=None,
@@ -688,16 +669,15 @@ class OcsprefType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ObjectIdentifierType:
-    identifier: None | IdentifierType = field(
-        default=None,
+    identifier: IdentifierType = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
     description: None | str = field(
         default=None,
@@ -717,13 +697,13 @@ class ObjectIdentifierType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ReferenceInfo(ReferenceInfoType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RevocationValuesType:
     crlvalues: None | CrlvaluesType = field(
         default=None,
@@ -758,7 +738,7 @@ class RevocationValuesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SpuserNoticeType:
     class Meta:
         name = "SPUserNoticeType"
@@ -781,7 +761,7 @@ class SpuserNoticeType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignerRoleType:
     claimed_roles: None | ClaimedRolesListType = field(
         default=None,
@@ -801,19 +781,19 @@ class SignerRoleType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UnsignedDataObjectProperties(UnsignedDataObjectPropertiesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AttributeRevocationValues(RevocationValuesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CrlrefsType:
     class Meta:
         name = "CRLRefsType"
@@ -829,7 +809,7 @@ class CrlrefsType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CertIdlistType:
     class Meta:
         name = "CertIDListType"
@@ -845,16 +825,15 @@ class CertIdlistType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CommitmentTypeIndicationType:
-    commitment_type_id: None | ObjectIdentifierType = field(
-        default=None,
+    commitment_type_id: ObjectIdentifierType = field(
         metadata={
             "name": "CommitmentTypeId",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
     object_reference: tuple[str, ...] = field(
         default_factory=tuple,
@@ -884,7 +863,7 @@ class CommitmentTypeIndicationType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataObjectFormatType:
     description: None | str = field(
         default=None,
@@ -918,17 +897,16 @@ class DataObjectFormatType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    object_reference: None | str = field(
-        default=None,
+    object_reference: str = field(
         metadata={
             "name": "ObjectReference",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GenericTimeStampType:
     include: tuple[Include, ...] = field(
         default_factory=tuple,
@@ -979,7 +957,7 @@ class GenericTimeStampType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class OcsprefsType:
     class Meta:
         name = "OCSPRefsType"
@@ -995,35 +973,34 @@ class OcsprefsType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ObjectIdentifier(ObjectIdentifierType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RevocationValues(RevocationValuesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SpuserNotice(SpuserNoticeType):
     class Meta:
         name = "SPUserNotice"
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignaturePolicyIdType:
-    sig_policy_id: None | ObjectIdentifierType = field(
-        default=None,
+    sig_policy_id: ObjectIdentifierType = field(
         metadata={
             "name": "SigPolicyId",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
     transforms: None | Transforms = field(
         default=None,
@@ -1033,14 +1010,13 @@ class SignaturePolicyIdType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         },
     )
-    sig_policy_hash: None | DigestAlgAndValueType = field(
-        default=None,
+    sig_policy_hash: DigestAlgAndValueType = field(
         metadata={
             "name": "SigPolicyHash",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
     sig_policy_qualifiers: None | SigPolicyQualifiersListType = field(
         default=None,
@@ -1052,28 +1028,27 @@ class SignaturePolicyIdType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignerRole(SignerRoleType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CommitmentTypeIndication(CommitmentTypeIndicationType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CompleteCertificateRefsType:
-    cert_refs: None | CertIdlistType = field(
-        default=None,
+    cert_refs: CertIdlistType = field(
         metadata={
             "name": "CertRefs",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,
@@ -1084,7 +1059,7 @@ class CompleteCertificateRefsType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CompleteRevocationRefsType:
     crlrefs: None | CrlrefsType = field(
         default=None,
@@ -1119,13 +1094,13 @@ class CompleteRevocationRefsType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataObjectFormat(DataObjectFormatType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class OtherTimeStampType(GenericTimeStampType):
     include: Any = field(
         init=False,
@@ -1145,7 +1120,7 @@ class OtherTimeStampType(GenericTimeStampType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignaturePolicyIdentifierType:
     signature_policy_id: None | SignaturePolicyIdType = field(
         default=None,
@@ -1165,13 +1140,13 @@ class SignaturePolicyIdentifierType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SigningCertificate(CertIdlistType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class XadEstimeStampType(GenericTimeStampType):
     class Meta:
         name = "XAdESTimeStampType"
@@ -1185,79 +1160,79 @@ class XadEstimeStampType(GenericTimeStampType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AllDataObjectsTimeStamp(XadEstimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ArchiveTimeStamp(XadEstimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AttributeCertificateRefs(CompleteCertificateRefsType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AttributeRevocationRefs(CompleteRevocationRefsType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CompleteCertificateRefs(CompleteCertificateRefsType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CompleteRevocationRefs(CompleteRevocationRefsType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class IndividualDataObjectsTimeStamp(XadEstimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class OtherTimeStamp(OtherTimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RefsOnlyTimeStamp(XadEstimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SigAndRefsTimeStamp(XadEstimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignaturePolicyIdentifier(SignaturePolicyIdentifierType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignatureTimeStamp(XadEstimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignedDataObjectPropertiesType:
     data_object_format: tuple[DataObjectFormatType, ...] = field(
         default_factory=tuple,
@@ -1302,7 +1277,7 @@ class SignedDataObjectPropertiesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignedSignaturePropertiesType:
     signing_time: None | XmlDateTime = field(
         default=None,
@@ -1353,7 +1328,7 @@ class SignedSignaturePropertiesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UnsignedSignaturePropertiesType:
     counter_signature: tuple[CounterSignatureType, ...] = field(
         default_factory=tuple,
@@ -1477,20 +1452,20 @@ class UnsignedSignaturePropertiesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class XadEstimeStamp(XadEstimeStampType):
     class Meta:
         name = "XAdESTimeStamp"
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignedDataObjectProperties(SignedDataObjectPropertiesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignedPropertiesType:
     signed_signature_properties: None | SignedSignaturePropertiesType = field(
         default=None,
@@ -1519,13 +1494,13 @@ class SignedPropertiesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignedSignatureProperties(SignedSignaturePropertiesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UnsignedPropertiesType:
     unsigned_signature_properties: None | UnsignedSignaturePropertiesType = (
         field(
@@ -1556,13 +1531,13 @@ class UnsignedPropertiesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UnsignedSignatureProperties(UnsignedSignaturePropertiesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class QualifyingPropertiesType:
     signed_properties: None | SignedPropertiesType = field(
         default=None,
@@ -1580,13 +1555,12 @@ class QualifyingPropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    target: None | str = field(
-        default=None,
+    target: str = field(
         metadata={
             "name": "Target",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,
@@ -1597,19 +1571,19 @@ class QualifyingPropertiesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignedProperties(SignedPropertiesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UnsignedProperties(UnsignedPropertiesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class QualifyingProperties(QualifyingPropertiesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"

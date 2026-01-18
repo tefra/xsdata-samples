@@ -11,7 +11,7 @@ from travelport.models.type_product_3 import TypeProduct3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneralRemark3:
     """
     A textual remark container to hold any printable text. (max 512 chars).
@@ -53,13 +53,12 @@ class GeneralRemark3:
         name = "GeneralRemark"
         namespace = "http://www.travelport.com/schema/common_v33_0"
 
-    remark_data: None | str = field(
-        default=None,
+    remark_data: str = field(
         metadata={
             "name": "RemarkData",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     booking_traveler_ref: list[str] = field(
         default_factory=list,

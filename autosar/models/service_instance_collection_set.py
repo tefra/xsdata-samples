@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceInstanceCollectionSet:
     """
     Collection of ServiceInstances.
@@ -87,14 +87,13 @@ class ServiceInstanceCollectionSet:
     class Meta:
         name = "SERVICE-INSTANCE-COLLECTION-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ServiceInstanceCollectionSet.ShortNameFragments
@@ -195,7 +194,7 @@ class ServiceInstanceCollectionSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -206,7 +205,7 @@ class ServiceInstanceCollectionSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -217,7 +216,7 @@ class ServiceInstanceCollectionSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInstances:
         consumed_service_instance: list[ConsumedServiceInstance] = field(
             default_factory=list,

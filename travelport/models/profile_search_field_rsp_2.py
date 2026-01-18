@@ -9,7 +9,7 @@ from travelport.models.field_group_2 import FieldGroup2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileSearchFieldRsp2(BaseRsp5):
     """
     Response showing details of the requested field or field group.
@@ -47,11 +47,10 @@ class ProfileSearchFieldRsp2(BaseRsp5):
             "max_occurs": 999,
         },
     )
-    more_results: None | bool = field(
-        default=None,
+    more_results: bool = field(
         metadata={
             "name": "MoreResults",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

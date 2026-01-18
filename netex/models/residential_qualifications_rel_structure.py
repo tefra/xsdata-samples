@@ -10,7 +10,7 @@ from .residential_qualification_ref import ResidentialQualificationRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResidentialQualificationsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "residentialQualifications_RelStructure"

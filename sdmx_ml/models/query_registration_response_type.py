@@ -8,7 +8,7 @@ from sdmx_ml.models.status_message_type_2 import StatusMessageType2
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class QueryRegistrationResponseType:
     """
     QueryRegistrationResponseType describes the structure of a registration
@@ -25,14 +25,13 @@ class QueryRegistrationResponseType:
         registration the meets the conditions specified in the query.
     """
 
-    status_message: None | StatusMessageType2 = field(
-        default=None,
+    status_message: StatusMessageType2 = field(
         metadata={
             "name": "StatusMessage",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )
     query_result: tuple[QueryResultType, ...] = field(
         default_factory=tuple,

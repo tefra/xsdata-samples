@@ -7,19 +7,18 @@ from ipxact.models.group_selector import GroupSelector
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneratorSelectorType:
     class Meta:
         name = "generatorSelectorType"
 
-    group_selector: None | GroupSelector = field(
-        default=None,
+    group_selector: GroupSelector = field(
         metadata={
             "name": "groupSelector",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,

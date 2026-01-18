@@ -11,16 +11,15 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Risks:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    risk: None | Risk = field(
-        default=None,
+    risk: Risk = field(
         metadata={
             "name": "Risk",
             "type": "Element",
             "required": True,
-        },
+        }
     )

@@ -25,7 +25,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersistencyPortPrototypeToFileStorageMapping:
     """
     This meta-class represents the ability to define a mapping between a
@@ -96,14 +96,13 @@ class PersistencyPortPrototypeToFileStorageMapping:
     class Meta:
         name = "PERSISTENCY-PORT-PROTOTYPE-TO-FILE-STORAGE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | PersistencyPortPrototypeToFileStorageMapping.ShortNameFragments
@@ -224,7 +223,7 @@ class PersistencyPortPrototypeToFileStorageMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -235,7 +234,7 @@ class PersistencyPortPrototypeToFileStorageMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -246,24 +245,22 @@ class PersistencyPortPrototypeToFileStorageMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProcessRef(Ref):
-        dest: None | ProcessSubtypesEnum = field(
-            default=None,
+        dest: ProcessSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FileStorageRef(Ref):
-        dest: None | PersistencyFileStorageSubtypesEnum = field(
-            default=None,
+        dest: PersistencyFileStorageSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

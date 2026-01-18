@@ -15,19 +15,18 @@ from .time_demand_type_refs_rel_structure import TimeDemandTypeRefsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "JourneyFrequencyGroup_VersionStructure"
 
-    first_departure_time: None | XmlTime = field(
-        default=None,
+    first_departure_time: XmlTime = field(
         metadata={
             "name": "FirstDepartureTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     first_day_offset: None | int = field(
         default=None,

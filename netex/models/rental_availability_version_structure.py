@@ -8,19 +8,18 @@ from .parking_ref import ParkingRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RentalAvailabilityVersionStructure(LogEntryVersionStructure):
     class Meta:
         name = "RentalAvailability_VersionStructure"
 
-    parking_ref: None | ParkingRef = field(
-        default=None,
+    parking_ref: ParkingRef = field(
         metadata={
             "name": "ParkingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     is_operational: None | bool = field(
         default=None,

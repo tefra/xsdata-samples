@@ -7,7 +7,7 @@ from .multilingual_string import MultilingualString
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContactDetailsStructure:
     contact_person: None | MultilingualString = field(
         default=None,

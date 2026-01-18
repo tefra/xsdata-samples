@@ -11,7 +11,7 @@ from .someip_sd_client_service_instance_config_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipSdClientServiceInstanceConfigRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -69,13 +69,12 @@ class SomeipSdClientServiceInstanceConfigRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SomeipSdClientServiceInstanceConfigRef(Ref):
-        dest: None | SomeipSdClientServiceInstanceConfigSubtypesEnum = field(
-            default=None,
+        dest: SomeipSdClientServiceInstanceConfigSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

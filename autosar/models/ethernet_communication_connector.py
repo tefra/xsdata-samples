@@ -31,7 +31,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthernetCommunicationConnector:
     """
     Ethernet specific attributes to the CommunicationConnector.
@@ -139,14 +139,13 @@ class EthernetCommunicationConnector:
     class Meta:
         name = "ETHERNET-COMMUNICATION-CONNECTOR"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | EthernetCommunicationConnector.ShortNameFragments
@@ -367,7 +366,7 @@ class EthernetCommunicationConnector:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -378,7 +377,7 @@ class EthernetCommunicationConnector:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -389,18 +388,17 @@ class EthernetCommunicationConnector:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommControllerRef(Ref):
-        dest: None | CommunicationControllerSubtypesEnum = field(
-            default=None,
+        dest: CommunicationControllerSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuCommPortInstances:
         frame_port: list[FramePort] = field(
             default_factory=list,
@@ -427,18 +425,17 @@ class EthernetCommunicationConnector:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EthIpPropsRef(Ref):
-        dest: None | EthIpPropsSubtypesEnum = field(
-            default=None,
+        dest: EthIpPropsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NetworkEndpointRefs:
         network_endpoint_ref: list[
             EthernetCommunicationConnector.NetworkEndpointRefs.NetworkEndpointRef
@@ -451,24 +448,22 @@ class EthernetCommunicationConnector:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NetworkEndpointRef(Ref):
-            dest: None | NetworkEndpointSubtypesEnum = field(
-                default=None,
+            dest: NetworkEndpointSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnicastNetworkEndpointRef(Ref):
-        dest: None | NetworkEndpointSubtypesEnum = field(
-            default=None,
+        dest: NetworkEndpointSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

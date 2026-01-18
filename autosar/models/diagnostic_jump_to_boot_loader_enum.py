@@ -9,7 +9,7 @@ from .diagnostic_jump_to_boot_loader_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticJumpToBootLoaderEnum:
     """
     This enumeration contains the options for jumping to a boot loader.
@@ -30,11 +30,10 @@ class DiagnosticJumpToBootLoaderEnum:
     class Meta:
         name = "DIAGNOSTIC-JUMP-TO-BOOT-LOADER-ENUM"
 
-    value: None | DiagnosticJumpToBootLoaderEnumSimple = field(
-        default=None,
+    value: DiagnosticJumpToBootLoaderEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

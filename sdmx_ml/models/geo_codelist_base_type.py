@@ -8,7 +8,7 @@ from sdmx_ml.models.codelist_type import CodelistType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GeoCodelistBaseType(CodelistType):
     """
     GeoCodelistBaseType is an abstract base refinement of a codelist that

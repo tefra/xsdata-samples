@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HwElementRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -64,13 +64,12 @@ class HwElementRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwElementRef(Ref):
-        dest: None | HwElementSubtypesEnum = field(
-            default=None,
+        dest: HwElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

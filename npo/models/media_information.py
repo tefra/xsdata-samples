@@ -7,7 +7,7 @@ from npo.models.media_table_type import MediaTableType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MediaInformation(MediaTableType):
     """
     Base element only used when programs, groups and schedule information

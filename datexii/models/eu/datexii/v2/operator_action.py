@@ -14,7 +14,7 @@ from datexii.models.eu.datexii.v2.situation_record import SituationRecord
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OperatorAction(SituationRecord):
     """
     Actions that a traffic operator can decide to implement to prevent or

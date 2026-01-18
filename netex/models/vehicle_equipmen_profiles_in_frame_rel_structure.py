@@ -10,7 +10,7 @@ from .vehicle_equipment_profile import VehicleEquipmentProfile
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleEquipmenProfilesInFrameRelStructure(
     ContainmentAggregationStructure
 ):

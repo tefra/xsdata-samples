@@ -9,7 +9,7 @@ from crossref.models.org.crossref.clinicaltrials.clinical_trial_number import (
 __NAMESPACE__ = "http://www.crossref.org/clinicaltrials.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Program:
     """
     Accommodates deposit of linked clincal trials metadata.

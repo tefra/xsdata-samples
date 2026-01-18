@@ -9,7 +9,7 @@ from .purpose_of_grouping import PurposeOfGrouping
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PurposesOfGroupingInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "purposesOfGroupingInFrame_RelStructure"

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointOfSale5:
     """
     User can use this node to send a specific PCC to access fares allowed
@@ -31,25 +31,23 @@ class PointOfSale5:
         name = "PointOfSale"
         namespace = "http://www.travelport.com/schema/common_v34_0"
 
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
-    pseudo_city_code: None | str = field(
-        default=None,
+    pseudo_city_code: str = field(
         metadata={
             "name": "PseudoCityCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 10,
-        },
+        }
     )
     key: None | str = field(
         default=None,

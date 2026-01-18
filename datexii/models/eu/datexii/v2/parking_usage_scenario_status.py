@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.operation_status_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingUsageScenarioStatus:
     """
     The current status for this parking usage scenario.
@@ -20,14 +20,13 @@ class ParkingUsageScenarioStatus:
     :ivar parking_usage_scenario_status_extension:
     """
 
-    usage_scenario_operation_status: None | OperationStatusEnum = field(
-        default=None,
+    usage_scenario_operation_status: OperationStatusEnum = field(
         metadata={
             "name": "usageScenarioOperationStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     parking_usage_scenario_status_extension: None | ExtensionType = field(
         default=None,

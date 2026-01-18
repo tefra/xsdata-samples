@@ -12,7 +12,7 @@ from sabre.models.origin_destination_option_type import (
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirItineraryType:
     """
     Specifies the origin and destination of the traveler.
@@ -50,7 +50,7 @@ class AirItineraryType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OriginDestinationOptions:
         """
         Attributes:

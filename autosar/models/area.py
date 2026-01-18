@@ -8,7 +8,7 @@ from .area_enum_shape_simple import AreaEnumShapeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Area:
     """
     This element specifies a region in an image map.

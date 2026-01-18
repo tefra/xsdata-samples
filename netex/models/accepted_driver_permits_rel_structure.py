@@ -9,7 +9,7 @@ from .containment_aggregation_structure import ContainmentAggregationStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AcceptedDriverPermitsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "acceptedDriverPermits_RelStructure"

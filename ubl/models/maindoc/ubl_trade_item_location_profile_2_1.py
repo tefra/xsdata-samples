@@ -32,7 +32,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TradeItemLocationProfileType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -74,14 +74,13 @@ class TradeItemLocationProfileType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     copy_indicator: None | CopyIndicator = field(
         default=None,
@@ -99,14 +98,13 @@ class TradeItemLocationProfileType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -132,14 +130,13 @@ class TradeItemLocationProfileType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    period: None | Period = field(
-        default=None,
+    period: Period = field(
         metadata={
             "name": "Period",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
@@ -157,23 +154,21 @@ class TradeItemLocationProfileType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sender_party: None | SenderParty = field(
-        default=None,
+    sender_party: SenderParty = field(
         metadata={
             "name": "SenderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    receiver_party: None | ReceiverParty = field(
-        default=None,
+    receiver_party: ReceiverParty = field(
         metadata={
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     buyer_customer_party: None | BuyerCustomerParty = field(
         default=None,
@@ -202,7 +197,7 @@ class TradeItemLocationProfileType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TradeItemLocationProfile(TradeItemLocationProfileType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:TradeItemLocationProfile-2"

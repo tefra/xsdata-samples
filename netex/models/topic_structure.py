@@ -10,7 +10,7 @@ from .responsibility_role_assignment import ResponsibilityRoleAssignment
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TopicStructure:
     description: None | MultilingualString = field(
         default=None,

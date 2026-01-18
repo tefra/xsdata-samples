@@ -7,7 +7,7 @@ from travelport.models.type_element_status_6 import TypeElementStatus6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Xmlremark5:
     """
     A remark container to hold an XML document. (max 1024 chars) This will

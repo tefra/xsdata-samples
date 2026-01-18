@@ -7,7 +7,7 @@ from .dtc_kind_enum_simple import DtcKindEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DtcKindEnum:
     """
     This enumeration defines the possible kinds of diagnostic monitors
@@ -29,11 +29,10 @@ class DtcKindEnum:
     class Meta:
         name = "DTC-KIND-ENUM"
 
-    value: None | DtcKindEnumSimple = field(
-        default=None,
+    value: DtcKindEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

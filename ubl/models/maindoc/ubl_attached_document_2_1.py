@@ -32,7 +32,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AttachedDocumentType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -74,14 +74,13 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     uuid: None | Uuid = field(
         default=None,
@@ -91,14 +90,13 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -132,14 +130,13 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    parent_document_id: None | ParentDocumentId = field(
-        default=None,
+    parent_document_id: ParentDocumentId = field(
         metadata={
             "name": "ParentDocumentID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     parent_document_type_code: None | ParentDocumentTypeCode = field(
         default=None,
@@ -165,32 +162,29 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sender_party: None | SenderParty = field(
-        default=None,
+    sender_party: SenderParty = field(
         metadata={
             "name": "SenderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    receiver_party: None | ReceiverParty = field(
-        default=None,
+    receiver_party: ReceiverParty = field(
         metadata={
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    attachment: None | Attachment = field(
-        default=None,
+    attachment: Attachment = field(
         metadata={
             "name": "Attachment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     parent_document_line_reference: tuple[ParentDocumentLineReference, ...] = (
         field(
@@ -204,7 +198,7 @@ class AttachedDocumentType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AttachedDocument(AttachedDocumentType):
     class Meta:
         namespace = (

@@ -7,7 +7,7 @@ from npo.models.media_type_enum import MediaTypeEnum
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RecursiveMemberRef:
     class Meta:
         name = "recursiveMemberRef"

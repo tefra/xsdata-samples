@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecurityEventStateFilter:
     """
     This meta-class represents the configuration of a state filter for
@@ -102,14 +102,13 @@ class SecurityEventStateFilter:
     class Meta:
         name = "SECURITY-EVENT-STATE-FILTER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SecurityEventStateFilter.ShortNameFragments
@@ -212,7 +211,7 @@ class SecurityEventStateFilter:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -223,7 +222,7 @@ class SecurityEventStateFilter:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -234,7 +233,7 @@ class SecurityEventStateFilter:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlockIfStateActiveApIrefs:
         block_if_state_active_ap_iref: list[
             FunctionGroupStateInFunctionGroupSetInstanceRef
@@ -247,7 +246,7 @@ class SecurityEventStateFilter:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlockIfStateActiveCpRefs:
         block_if_state_active_cp_ref: list[
             SecurityEventStateFilter.BlockIfStateActiveCpRefs.BlockIfStateActiveCpRef
@@ -260,13 +259,12 @@ class SecurityEventStateFilter:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class BlockIfStateActiveCpRef(Ref):
-            dest: None | BlockStateSubtypesEnum = field(
-                default=None,
+            dest: BlockStateSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

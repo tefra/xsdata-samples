@@ -14,7 +14,7 @@ from .headway_interval_structure import HeadwayIntervalStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TargetPassingTimeVersionedChildStructure(
     DatedPassingTimeVersionedChildStructure
 ):
@@ -94,56 +94,50 @@ class TargetPassingTimeVersionedChildStructure(
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AimedArrivalTime:
-        value: None | XmlTime = field(
-            default=None,
+        value: XmlTime = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArrivalDayOffset:
-        value: None | int = field(
-            default=None,
+        value: int = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AimedDepartureTime:
-        value: None | XmlTime = field(
-            default=None,
+        value: XmlTime = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DepartureDayOffset:
-        value: None | int = field(
-            default=None,
+        value: int = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AimedNonstopPassingTime:
-        value: None | XmlTime = field(
-            default=None,
+        value: XmlTime = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PassingDayOffset:
-        value: None | int = field(
-            default=None,
+        value: int = field(
             metadata={
                 "required": True,
-            },
+            }
         )

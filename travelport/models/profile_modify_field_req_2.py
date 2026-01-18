@@ -9,7 +9,7 @@ from travelport.models.modify_field_group_2 import ModifyFieldGroup2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileModifyFieldReq2(BaseReq5):
     """
     Modifies a custom field or field group.

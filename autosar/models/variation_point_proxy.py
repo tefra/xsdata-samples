@@ -50,7 +50,7 @@ from .unlimited_integer_value_variation_point import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VariationPointProxy:
     """
     The VariationPointProxy represents variation points of the C/C++
@@ -132,14 +132,13 @@ class VariationPointProxy:
     class Meta:
         name = "VARIATION-POINT-PROXY"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | VariationPointProxy.ShortNameFragments = (
         field(
@@ -268,7 +267,7 @@ class VariationPointProxy:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -279,7 +278,7 @@ class VariationPointProxy:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -290,29 +289,27 @@ class VariationPointProxy:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplementationDataTypeRef(Ref):
-        dest: None | ImplementationDataTypeSubtypesEnum = field(
-            default=None,
+        dest: ImplementationDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PostBuildValueAccessRef(Ref):
-        dest: None | PostBuildVariantCriterionSubtypesEnum = field(
-            default=None,
+        dest: PostBuildVariantCriterionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PostBuildVariantConditions:
         post_build_variant_condition: list[PostBuildVariantCondition] = field(
             default_factory=list,
@@ -323,7 +320,7 @@ class VariationPointProxy:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ValueAccess:
         boolean_value_variation_point: None | BooleanValueVariationPoint = (
             field(

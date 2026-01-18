@@ -14,7 +14,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnumeratedValueType:
     """
     Enumerates specific values that can be assigned to the bit field.
@@ -37,13 +37,12 @@ class EnumeratedValueType:
     class Meta:
         name = "enumeratedValueType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -68,13 +67,12 @@ class EnumeratedValueType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    value: None | UnsignedBitVectorExpression = field(
-        default=None,
+    value: UnsignedBitVectorExpression = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     vendor_extensions: None | VendorExtensions = field(
         default=None,

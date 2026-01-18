@@ -7,7 +7,7 @@ from sdmx_ml.models.maintainable_query_type import MaintainableQueryType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MaintainableEventType:
     """
     MaintainableEventType provides a reference to a maintainable object's

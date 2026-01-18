@@ -76,7 +76,7 @@ from .wheelchair_vehicle_ref import WheelchairVehicleRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EquipmentPositionStructure(DataManagedObjectStructure):
     choice: (
         None

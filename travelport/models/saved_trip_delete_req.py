@@ -7,7 +7,7 @@ from travelport.models.base_req_1 import BaseReq1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SavedTripDeleteReq(BaseReq1):
     """
     Request to delete saved Trip.

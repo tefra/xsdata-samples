@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LimitsType:
     limit: list[LimitType] = field(
         default_factory=list,

@@ -8,19 +8,16 @@ from .vehicle_pooling_driver_info_ref import VehiclePoolingDriverInfoRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehiclePoolingDriverInfoRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "vehiclePoolingDriverInfoRefs_RelStructure"
 
-    vehicle_pooling_driver_info_ref: None | VehiclePoolingDriverInfoRef = (
-        field(
-            default=None,
-            metadata={
-                "name": "VehiclePoolingDriverInfoRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-                "required": True,
-            },
-        )
+    vehicle_pooling_driver_info_ref: VehiclePoolingDriverInfoRef = field(
+        metadata={
+            "name": "VehiclePoolingDriverInfoRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
     )

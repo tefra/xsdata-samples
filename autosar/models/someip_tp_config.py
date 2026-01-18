@@ -23,7 +23,7 @@ from .someip_tp_connection import SomeipTpConnection
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipTpConfig:
     """
     This element defines exactly one SOME/IP TP Configuration.
@@ -93,14 +93,13 @@ class SomeipTpConfig:
     class Meta:
         name = "SOMEIP-TP-CONFIG"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SomeipTpConfig.ShortNameFragments = field(
         default=None,
@@ -215,7 +214,7 @@ class SomeipTpConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -226,7 +225,7 @@ class SomeipTpConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -237,18 +236,17 @@ class SomeipTpConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommunicationClusterRef(Ref):
-        dest: None | CommunicationClusterSubtypesEnum = field(
-            default=None,
+        dest: CommunicationClusterSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpChannels:
         someip_tp_channel: list[SomeipTpChannel] = field(
             default_factory=list,
@@ -259,7 +257,7 @@ class SomeipTpConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpConnections:
         someip_tp_connection: list[SomeipTpConnection] = field(
             default_factory=list,

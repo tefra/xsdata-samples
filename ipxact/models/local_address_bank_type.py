@@ -19,7 +19,7 @@ from ipxact.models.volatile import Volatile
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocalAddressBankType:
     """
     Top level bank the specify an address.
@@ -49,13 +49,12 @@ class LocalAddressBankType:
     class Meta:
         name = "localAddressBankType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -88,14 +87,13 @@ class LocalAddressBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    base_address: None | BaseAddress = field(
-        default=None,
+    base_address: BaseAddress = field(
         metadata={
             "name": "baseAddress",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     address_block: list[BankedBlockType] = field(
         default_factory=list,
@@ -149,13 +147,12 @@ class LocalAddressBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bank_alignment: None | BankAlignmentType = field(
-        default=None,
+    bank_alignment: BankAlignmentType = field(
         metadata={
             "name": "bankAlignment",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,
@@ -165,7 +162,7 @@ class LocalAddressBankType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessHandles:
         access_handle: list[SimpleAccessHandle] = field(
             default_factory=list,

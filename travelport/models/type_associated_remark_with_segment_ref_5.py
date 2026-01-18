@@ -7,7 +7,7 @@ from travelport.models.type_associated_remark_5 import TypeAssociatedRemark5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeAssociatedRemarkWithSegmentRef5(TypeAssociatedRemark5):
     """
     A textual remark container to hold Associated itinerary remarks with

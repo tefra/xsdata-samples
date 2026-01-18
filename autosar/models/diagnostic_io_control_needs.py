@@ -24,7 +24,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticIoControlNeeds:
     """
     Specifies the general needs on the configuration of the Diagnostic
@@ -115,14 +115,13 @@ class DiagnosticIoControlNeeds:
     class Meta:
         name = "DIAGNOSTIC-IO-CONTROL-NEEDS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticIoControlNeeds.ShortNameFragments
@@ -269,7 +268,7 @@ class DiagnosticIoControlNeeds:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -280,7 +279,7 @@ class DiagnosticIoControlNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -291,7 +290,7 @@ class DiagnosticIoControlNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Audiences:
         """
         :ivar audience: This specifies the intended audience for the
@@ -309,13 +308,12 @@ class DiagnosticIoControlNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CurrentValueRef(Ref):
-        dest: None | DiagnosticValueNeedsSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticValueNeedsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

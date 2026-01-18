@@ -24,7 +24,7 @@ from .timing_description_event_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimingDescriptionEventChain:
     """
     An event chain describes the causal order for a set of functionally
@@ -100,14 +100,13 @@ class TimingDescriptionEventChain:
     class Meta:
         name = "TIMING-DESCRIPTION-EVENT-CHAIN"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | TimingDescriptionEventChain.ShortNameFragments
@@ -222,7 +221,7 @@ class TimingDescriptionEventChain:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -233,7 +232,7 @@ class TimingDescriptionEventChain:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -244,29 +243,27 @@ class TimingDescriptionEventChain:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StimulusRef(Ref):
-        dest: None | TimingDescriptionEventSubtypesEnum = field(
-            default=None,
+        dest: TimingDescriptionEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResponseRef(Ref):
-        dest: None | TimingDescriptionEventSubtypesEnum = field(
-            default=None,
+        dest: TimingDescriptionEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SegmentRefs:
         segment_ref: list[
             TimingDescriptionEventChain.SegmentRefs.SegmentRef
@@ -279,13 +276,12 @@ class TimingDescriptionEventChain:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SegmentRef(Ref):
-            dest: None | TimingDescriptionEventChainSubtypesEnum = field(
-                default=None,
+            dest: TimingDescriptionEventChainSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

@@ -9,7 +9,7 @@ from .traffic_control_point import TrafficControlPoint
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrafficControlPointsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "trafficControlPointsInFrame_RelStructure"

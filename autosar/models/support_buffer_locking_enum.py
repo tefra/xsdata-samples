@@ -7,7 +7,7 @@ from .support_buffer_locking_enum_simple import SupportBufferLockingEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SupportBufferLockingEnum:
     """
     This enumeration represents the ability to define the buffer locking
@@ -29,11 +29,10 @@ class SupportBufferLockingEnum:
     class Meta:
         name = "SUPPORT-BUFFER-LOCKING-ENUM"
 
-    value: None | SupportBufferLockingEnumSimple = field(
-        default=None,
+    value: SupportBufferLockingEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

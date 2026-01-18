@@ -13,7 +13,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticDataChangeTrigger:
     """
     This represents the ability to define a trigger based on the change of
@@ -72,13 +72,12 @@ class DiagnosticDataChangeTrigger:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataIdentifierRef(Ref):
-        dest: None | DiagnosticDataIdentifierSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticDataIdentifierSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

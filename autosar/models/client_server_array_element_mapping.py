@@ -18,7 +18,7 @@ from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientServerArrayElementMapping:
     """
     The ApplicationArrayElement may be a primitive one or a composite one.
@@ -102,7 +102,7 @@ class ClientServerArrayElementMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ComplexTypeMapping:
         client_server_array_type_mapping: (
             None | ClientServerArrayTypeMapping
@@ -125,19 +125,18 @@ class ClientServerArrayElementMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SystemSignalRef(Ref):
-        dest: None | SystemSignalSubtypesEnum = field(
-            default=None,
+        dest: SystemSignalSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientServerArrayTypeMapping:
     """
     If the ApplicationCompositeDataType is an Array, the "ArrayTypeMapping"
@@ -198,18 +197,17 @@ class ClientServerArrayTypeMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArgumentRef(Ref):
-        dest: None | ArgumentDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ArgumentDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArrayElementMappings:
         client_server_array_element_mapping: list[
             ClientServerArrayElementMapping
@@ -223,7 +221,7 @@ class ClientServerArrayTypeMapping:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientServerRecordElementMapping:
     """
     Mapping of a primitive record element to a SystemSignal.
@@ -327,18 +325,17 @@ class ClientServerRecordElementMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ApplicationRecordElementRef(Ref):
-        dest: None | ApplicationRecordElementSubtypesEnum = field(
-            default=None,
+        dest: ApplicationRecordElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ComplexTypeMapping:
         client_server_array_type_mapping: (
             None | ClientServerArrayTypeMapping
@@ -361,30 +358,28 @@ class ClientServerRecordElementMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplementationRecordElementRef(Ref):
-        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
-            default=None,
+        dest: ImplementationDataTypeElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SystemSignalRef(Ref):
-        dest: None | SystemSignalSubtypesEnum = field(
-            default=None,
+        dest: SystemSignalSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientServerRecordTypeMapping:
     """
     If the ApplicationCompositeDataType is a Record, the
@@ -445,18 +440,17 @@ class ClientServerRecordTypeMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArgumentRef(Ref):
-        dest: None | ArgumentDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ArgumentDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RecordElementMappings:
         client_server_record_element_mapping: list[
             ClientServerRecordElementMapping

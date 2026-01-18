@@ -7,7 +7,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResetTypeLinks:
     """
     A set of links between internal and external resetTypes defined in the
@@ -30,7 +30,7 @@ class ResetTypeLinks:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResetTypeLink:
         """
         :ivar external_reset_type_reference: Reference to a resetType
@@ -41,25 +41,19 @@ class ResetTypeLinks:
         :ivar id:
         """
 
-        external_reset_type_reference: (
-            None | ResetTypeLinks.ResetTypeLink.ExternalResetTypeReference
-        ) = field(
-            default=None,
+        external_reset_type_reference: ResetTypeLinks.ResetTypeLink.ExternalResetTypeReference = field(
             metadata={
                 "name": "externalResetTypeReference",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
-        reset_type_reference: (
-            None | ResetTypeLinks.ResetTypeLink.ResetTypeReference
-        ) = field(
-            default=None,
+        reset_type_reference: ResetTypeLinks.ResetTypeLink.ResetTypeReference = field(
             metadata={
                 "name": "resetTypeReference",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         vendor_extensions: None | VendorExtensions = field(
             default=None,
@@ -76,32 +70,30 @@ class ResetTypeLinks:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExternalResetTypeReference:
             """
             :ivar reset_type_ref: Reference to a specific resetType.
             """
 
-            reset_type_ref: None | str = field(
-                default=None,
+            reset_type_ref: str = field(
                 metadata={
                     "name": "resetTypeRef",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ResetTypeReference:
             """
             :ivar reset_type_ref: Reference to a specific resetType
             """
 
-            reset_type_ref: None | str = field(
-                default=None,
+            reset_type_ref: str = field(
                 metadata={
                     "name": "resetTypeRef",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

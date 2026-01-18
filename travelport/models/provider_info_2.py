@@ -7,7 +7,7 @@ from travelport.models.type_key_element_2 import TypeKeyElement2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProviderInfo2(TypeKeyElement2):
     """
     A representation of the Provider Information (e.g.
@@ -28,25 +28,23 @@ class ProviderInfo2(TypeKeyElement2):
         name = "ProviderInfo"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
-    pseudo_city_code: None | str = field(
-        default=None,
+    pseudo_city_code: str = field(
         metadata={
             "name": "PseudoCityCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 10,
-        },
+        }
     )
     iatacode: None | str = field(
         default=None,

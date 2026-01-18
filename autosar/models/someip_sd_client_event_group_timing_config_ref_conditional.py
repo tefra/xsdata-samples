@@ -11,7 +11,7 @@ from .someip_sd_client_event_group_timing_config_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipSdClientEventGroupTimingConfigRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -69,13 +69,12 @@ class SomeipSdClientEventGroupTimingConfigRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SomeipSdClientEventGroupTimingConfigRef(Ref):
-        dest: None | SomeipSdClientEventGroupTimingConfigSubtypesEnum = field(
-            default=None,
+        dest: SomeipSdClientEventGroupTimingConfigSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

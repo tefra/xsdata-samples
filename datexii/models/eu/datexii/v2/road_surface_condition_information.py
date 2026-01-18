@@ -14,7 +14,7 @@ from datexii.models.eu.datexii.v2.weather_related_road_condition_type_enum impor
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoadSurfaceConditionInformation(WeatherData):
     """
     Measurements of road surface conditions which are related to the
@@ -37,16 +37,15 @@ class RoadSurfaceConditionInformation(WeatherData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    road_surface_condition_measurements: (
-        None | RoadSurfaceConditionMeasurements
-    ) = field(
-        default=None,
-        metadata={
-            "name": "roadSurfaceConditionMeasurements",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    road_surface_condition_measurements: RoadSurfaceConditionMeasurements = (
+        field(
+            metadata={
+                "name": "roadSurfaceConditionMeasurements",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            }
+        )
     )
     road_surface_condition_information_extension: None | ExtensionType = field(
         default=None,

@@ -82,7 +82,7 @@ from .vehicle_types_in_frame_rel_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimetableVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "Timetable_VersionFrameStructure"

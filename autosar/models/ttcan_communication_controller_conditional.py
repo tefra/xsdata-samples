@@ -13,7 +13,7 @@ from .integer import Integer
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TtcanCommunicationControllerConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -171,7 +171,7 @@ class TtcanCommunicationControllerConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CanControllerAttributes:
         can_controller_configuration: None | CanControllerConfiguration = (
             field(

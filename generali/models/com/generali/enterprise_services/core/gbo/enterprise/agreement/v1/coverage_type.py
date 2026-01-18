@@ -59,7 +59,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoverageType:
     """
     :ivar limits:
@@ -109,14 +109,13 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    coverage_code: None | CodeType = field(
-        default=None,
+    coverage_code: CodeType = field(
         metadata={
             "name": "CoverageCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     clauses: None | ClausesType = field(
         default=None,
@@ -176,25 +175,23 @@ class CoverageType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExposureType(BaseIdentifiedComponentType):
-    annual_rate: None | AmountType = field(
-        default=None,
+    annual_rate: AmountType = field(
         metadata={
             "name": "AnnualRate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    estimated_value: None | AmountOrQuantityType = field(
-        default=None,
+    estimated_value: AmountOrQuantityType = field(
         metadata={
             "name": "EstimatedValue",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     premium: None | PremiumType = field(
         default=None,
@@ -212,14 +209,13 @@ class ExposureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    apply_rate_type: None | ExposureTypeApplyRateType = field(
-        default=None,
+    apply_rate_type: ExposureTypeApplyRateType = field(
         metadata={
             "name": "ApplyRateType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     unit: None | CodeDescriptionType = field(
         default=None,
@@ -287,7 +283,7 @@ class ExposureType(BaseIdentifiedComponentType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExposuresType:
     exposure: list[ExposureType] = field(
         default_factory=list,

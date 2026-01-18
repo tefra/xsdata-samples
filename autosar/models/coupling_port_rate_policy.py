@@ -15,7 +15,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CouplingPortRatePolicy:
     """
     Defines a rate policy on a CouplingPort.
@@ -103,7 +103,7 @@ class CouplingPortRatePolicy:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VLanRefs:
         v_lan_ref: list[CouplingPortRatePolicy.VLanRefs.VLanRef] = field(
             default_factory=list,
@@ -114,13 +114,12 @@ class CouplingPortRatePolicy:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class VLanRef(Ref):
-            dest: None | EthernetPhysicalChannelSubtypesEnum = field(
-                default=None,
+            dest: EthernetPhysicalChannelSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

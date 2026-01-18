@@ -8,7 +8,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiscoveryTechnology:
     """
     This element is deprecated and will be removed in future.

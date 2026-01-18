@@ -30,7 +30,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IpSecRule:
     """
     This element defines an IPsec rule that describes communication traffic
@@ -152,14 +152,13 @@ class IpSecRule:
     class Meta:
         name = "IP-SEC-RULE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | IpSecRule.ShortNameFragments = field(
         default=None,
@@ -376,7 +375,7 @@ class IpSecRule:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -387,7 +386,7 @@ class IpSecRule:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -398,7 +397,7 @@ class IpSecRule:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LocalCertificateRefs:
         local_certificate_ref: list[
             IpSecRule.LocalCertificateRefs.LocalCertificateRef
@@ -411,29 +410,27 @@ class IpSecRule:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class LocalCertificateRef(Ref):
-            dest: None | CryptoServiceCertificateSubtypesEnum = field(
-                default=None,
+            dest: CryptoServiceCertificateSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PreSharedKeyRef(Ref):
-        dest: None | CryptoServiceKeySubtypesEnum = field(
-            default=None,
+        dest: CryptoServiceKeySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RemoteCertificateRefs:
         remote_certificate_ref: list[
             IpSecRule.RemoteCertificateRefs.RemoteCertificateRef
@@ -446,18 +443,17 @@ class IpSecRule:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RemoteCertificateRef(Ref):
-            dest: None | CryptoServiceCertificateSubtypesEnum = field(
-                default=None,
+            dest: CryptoServiceCertificateSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RemoteIpAddressRefs:
         remote_ip_address_ref: list[
             IpSecRule.RemoteIpAddressRefs.RemoteIpAddressRef
@@ -470,13 +466,12 @@ class IpSecRule:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RemoteIpAddressRef(Ref):
-            dest: None | NetworkEndpointSubtypesEnum = field(
-                default=None,
+            dest: NetworkEndpointSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

@@ -46,7 +46,7 @@ from .water_submode import WaterSubmode
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StopPlaceVersionStructure(SiteVersionStructure):
     class Meta:
         name = "StopPlace_VersionStructure"

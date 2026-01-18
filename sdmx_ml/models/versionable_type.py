@@ -9,7 +9,7 @@ from sdmx_ml.models.nameable_type import NameableType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class VersionableType(NameableType):
     """
     VersionableType is an abstract base type for all versionable objects.

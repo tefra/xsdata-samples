@@ -7,7 +7,7 @@ from crossref.models.org.crossref.fundref.assertion import Assertion
 __NAMESPACE__ = "http://www.crossref.org/fundref.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Program:
     """
     FundRef documentation and examples: http://help.crossref.org/#fundref

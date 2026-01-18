@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticClearConditionGroup:
     """
     Clear condition group which includes one or several clear conditions.
@@ -88,14 +88,13 @@ class DiagnosticClearConditionGroup:
     class Meta:
         name = "DIAGNOSTIC-CLEAR-CONDITION-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticClearConditionGroup.ShortNameFragments
@@ -196,7 +195,7 @@ class DiagnosticClearConditionGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -207,7 +206,7 @@ class DiagnosticClearConditionGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -218,7 +217,7 @@ class DiagnosticClearConditionGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClearConditionRefs:
         clear_condition_ref: list[
             DiagnosticClearConditionGroup.ClearConditionRefs.ClearConditionRef
@@ -231,13 +230,12 @@ class DiagnosticClearConditionGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ClearConditionRef(Ref):
-            dest: None | DiagnosticClearConditionSubtypesEnum = field(
-                default=None,
+            dest: DiagnosticClearConditionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

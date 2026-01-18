@@ -7,6 +7,6 @@ from .link_sequence_ref_structure import LinkSequenceRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TripPatternRefStructure(LinkSequenceRefStructure):
     pass

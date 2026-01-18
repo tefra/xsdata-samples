@@ -7,7 +7,7 @@ from generali.models.org.w3.pkg_2005.pkg_08.addressing.action import Action
 __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProblemActionType:
     action: None | Action = field(
         default=None,

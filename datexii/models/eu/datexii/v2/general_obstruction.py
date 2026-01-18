@@ -14,7 +14,7 @@ from datexii.models.eu.datexii.v2.obstruction_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneralObstruction(Obstruction):
     """
     Any stationary or moving obstacle of a physical nature, other than of

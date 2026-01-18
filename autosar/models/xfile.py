@@ -11,7 +11,7 @@ from .url import Url
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Xfile:
     """
     This represents to reference an external file within a documentation.
@@ -45,14 +45,13 @@ class Xfile:
     class Meta:
         name = "XFILE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | Xfile.ShortNameFragments = field(
         default=None,
@@ -110,7 +109,7 @@ class Xfile:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,

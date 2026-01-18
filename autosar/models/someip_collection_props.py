@@ -8,7 +8,7 @@ from .udp_collection_trigger_enum import UdpCollectionTriggerEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipCollectionProps:
     """
     Collection of attributes that are configurable for an event that is

@@ -15,7 +15,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlertCMethod2Linear(AlertCLinear):
     """
     A linear section along a road between two points, Primary and
@@ -25,36 +25,29 @@ class AlertCMethod2Linear(AlertCLinear):
     Primary point is downstream of the Secondary point.
     """
 
-    alert_cdirection: None | AlertCDirection = field(
-        default=None,
+    alert_cdirection: AlertCDirection = field(
         metadata={
             "name": "alertCDirection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    alert_cmethod2_primary_point_location: (
-        None | AlertCMethod2PrimaryPointLocation
-    ) = field(
-        default=None,
+    alert_cmethod2_primary_point_location: AlertCMethod2PrimaryPointLocation = field(
         metadata={
             "name": "alertCMethod2PrimaryPointLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    alert_cmethod2_secondary_point_location: (
-        None | AlertCMethod2SecondaryPointLocation
-    ) = field(
-        default=None,
+    alert_cmethod2_secondary_point_location: AlertCMethod2SecondaryPointLocation = field(
         metadata={
             "name": "alertCMethod2SecondaryPointLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     alert_cmethod2_linear_extension: None | ExtensionType = field(
         default=None,

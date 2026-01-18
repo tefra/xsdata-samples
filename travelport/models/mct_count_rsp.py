@@ -8,7 +8,7 @@ from travelport.models.mct_count import MctCount
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MctCountRsp(BaseRsp1):
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"

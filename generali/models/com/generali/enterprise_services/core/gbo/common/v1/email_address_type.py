@@ -15,7 +15,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.email_a
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EmailAddressType:
     """
     <description xmlns="">A Email Address conforming to RFC5321 and
@@ -29,14 +29,13 @@ class EmailAddressType:
         peter.jackson</description>
     """
 
-    full_address_text: None | EmailAddressFullType = field(
-        default=None,
+    full_address_text: EmailAddressFullType = field(
         metadata={
             "name": "FullAddressText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )
     domain_part_text: None | EmailAddressDomainPartType = field(
         default=None,

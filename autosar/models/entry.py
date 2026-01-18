@@ -22,7 +22,7 @@ from .valign_enum_simple import ValignEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Entry:
     """
     This represents one particular table cell.

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MemoryMapRefType:
     """
     Base type for an element which references an memory map.
@@ -28,16 +28,15 @@ class MemoryMapRefType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    memory_map_ref: None | str = field(
-        default=None,
+    memory_map_ref: str = field(
         metadata={
             "name": "memoryMapRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeRef:
         """
         A reference to a mode.

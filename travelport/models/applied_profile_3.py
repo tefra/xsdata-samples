@@ -7,7 +7,7 @@ from travelport.models.type_element_status_4 import TypeElementStatus4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AppliedProfile3:
     """
     A simple container to specify the profiles that were applied to a

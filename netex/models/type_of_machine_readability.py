@@ -9,7 +9,7 @@ from .type_of_machine_readability_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfMachineReadability(TypeOfMachineReadabilityVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

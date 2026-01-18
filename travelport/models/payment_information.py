@@ -7,7 +7,7 @@ from travelport.models.type_payment_information import TypePaymentInformation
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentInformation(TypePaymentInformation):
     """
     The payment information for a vehicle reservation.

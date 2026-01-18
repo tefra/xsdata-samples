@@ -11,7 +11,7 @@ from travelport.models.booking_traveler_information_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceData2:
     """
     List of invoices only for 1G/1V.
@@ -48,13 +48,12 @@ class InvoiceData2:
             "type": "Attribute",
         },
     )
-    invoice_number: None | str = field(
-        default=None,
+    invoice_number: str = field(
         metadata={
             "name": "InvoiceNumber",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     issue_date: None | XmlDateTime = field(
         default=None,
@@ -63,11 +62,10 @@ class InvoiceData2:
             "type": "Attribute",
         },
     )
-    provider_reservation_info_ref: None | str = field(
-        default=None,
+    provider_reservation_info_ref: str = field(
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

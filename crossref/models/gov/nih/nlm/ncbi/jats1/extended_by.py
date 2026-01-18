@@ -9,7 +9,7 @@ from crossref.models.xlink.type_type import TypeType
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExtendedBy:
     """
     <div> <h3>Extended-by Model</h3> </div>.

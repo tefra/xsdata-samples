@@ -9,7 +9,7 @@ from .travel_document import TravelDocument
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelDocumentsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "travelDocumentsInFrame_RelStructure"

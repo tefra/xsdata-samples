@@ -7,7 +7,7 @@ from .catering_facility_enumeration import CateringFacilityEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CateringFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

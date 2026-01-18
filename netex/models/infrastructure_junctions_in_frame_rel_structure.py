@@ -11,7 +11,7 @@ from .wire_junction import WireJunction
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InfrastructureJunctionsInFrameRelStructure(
     ContainmentAggregationStructure
 ):

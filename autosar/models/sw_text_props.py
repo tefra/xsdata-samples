@@ -11,7 +11,7 @@ from .sw_base_type_subtypes_enum import SwBaseTypeSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwTextProps:
     """
     This meta-class expresses particular properties applicable to strings
@@ -100,13 +100,12 @@ class SwTextProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BaseTypeRef(Ref):
-        dest: None | SwBaseTypeSubtypesEnum = field(
-            default=None,
+        dest: SwBaseTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

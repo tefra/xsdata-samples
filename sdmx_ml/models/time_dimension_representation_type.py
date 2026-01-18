@@ -10,7 +10,7 @@ from sdmx_ml.models.simple_data_structure_representation_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TimeDimensionRepresentationType(SimpleDataStructureRepresentationType):
     """
     TimeDimensionRepresentationType defines the representation for the time

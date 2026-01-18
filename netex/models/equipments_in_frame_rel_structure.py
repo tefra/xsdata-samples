@@ -63,7 +63,7 @@ from .wheelchair_vehicle_equipment import WheelchairVehicleEquipment
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "equipmentsInFrame_RelStructure"

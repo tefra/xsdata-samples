@@ -7,7 +7,7 @@ from .rpt_execution_control_enum_simple import RptExecutionControlEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RptExecutionControlEnum:
     """
     Determines rapid prototyping preparation of an ExecutableEntity.
@@ -28,11 +28,10 @@ class RptExecutionControlEnum:
     class Meta:
         name = "RPT-EXECUTION-CONTROL-ENUM"
 
-    value: None | RptExecutionControlEnumSimple = field(
-        default=None,
+    value: RptExecutionControlEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

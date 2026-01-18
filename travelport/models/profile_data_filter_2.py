@@ -10,7 +10,7 @@ from travelport.models.profile_data_category_2 import ProfileDataCategory2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileDataFilter2:
     """
     Filters the data in the profile so that only the specified data is

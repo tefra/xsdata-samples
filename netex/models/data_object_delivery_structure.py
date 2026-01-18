@@ -12,7 +12,7 @@ from .extensions_2 import Extensions2
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataObjectDeliveryStructure(AbstractServiceDeliveryStructure):
     data_object_request: None | DataObjectRequest = field(
         default=None,

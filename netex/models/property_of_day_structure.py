@@ -19,7 +19,7 @@ from .week_of_month_enumeration import WeekOfMonthEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PropertyOfDayStructure:
     name: None | MultilingualString = field(
         default=None,
@@ -135,29 +135,26 @@ class PropertyOfDayStructure:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MonthOfYear:
-        value: None | XmlPeriod = field(
-            default=None,
+        value: XmlPeriod = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DayOfMonth:
-        value: None | XmlPeriod = field(
-            default=None,
+        value: XmlPeriod = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DayOfYear:
-        value: None | XmlPeriod = field(
-            default=None,
+        value: XmlPeriod = field(
             metadata={
                 "required": True,
-            },
+            }
         )

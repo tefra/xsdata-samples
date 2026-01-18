@@ -9,7 +9,7 @@ from ipxact.models.cell_strength_value_type import CellStrengthValueType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CellSpecification:
     """
     Used to provide a generic description of a technology library cell.
@@ -50,13 +50,12 @@ class CellSpecification:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CellFunction:
-        value: None | CellFunctionValueType = field(
-            default=None,
+        value: CellFunctionValueType = field(
             metadata={
                 "required": True,
-            },
+            }
         )
         other: None | str = field(
             default=None,

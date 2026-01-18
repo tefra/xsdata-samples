@@ -9,7 +9,7 @@ from sdmx_ml.models.metadata_provision_agreement_base_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataProvisionAgreementType(MetadataProvisionAgreementBaseType):
     """
     ProvisionAgreementType describes the structure of a provision
@@ -32,25 +32,23 @@ class MetadataProvisionAgreementType(MetadataProvisionAgreementBaseType):
         include wildcards for parts of the reference.
     """
 
-    metadataflow: None | str = field(
-        default=None,
+    metadataflow: str = field(
         metadata={
             "name": "Metadataflow",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r".+\.metadatastructure\.Metadataflow=.+",
-        },
+        }
     )
-    metadata_provider: None | str = field(
-        default=None,
+    metadata_provider: str = field(
         metadata={
             "name": "MetadataProvider",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r".+\.base\.MetadataProvider=.+:METADATA_PROVIDERS\(.+\).+",
-        },
+        }
     )
     target: tuple[str, ...] = field(
         default_factory=tuple,

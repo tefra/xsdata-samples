@@ -25,7 +25,7 @@ from travelport.models.type_travel_document_type_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeTravelDocumentHistory1(TypeKeyElement1):
     """
     History Element for Travel Document.

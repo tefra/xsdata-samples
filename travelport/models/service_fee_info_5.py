@@ -12,7 +12,7 @@ from travelport.models.type_status_5 import TypeStatus5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceFeeInfo5:
     """
     Travel Agency Service Fees (TASF) are charged by the agency through BSP
@@ -161,13 +161,12 @@ class ServiceFeeInfo5:
             "type": "Attribute",
         },
     )
-    base_amount: None | str = field(
-        default=None,
+    base_amount: str = field(
         metadata={
             "name": "BaseAmount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     taxes: None | str = field(
         default=None,

@@ -10,7 +10,7 @@ from travelport.models.type_element_status_6 import TypeElementStatus6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Email5:
     """
     Container for an email address with a type specifier (max 128 chars).
@@ -69,13 +69,12 @@ class Email5:
             "min_length": 1,
         },
     )
-    email_id: None | str = field(
-        default=None,
+    email_id: str = field(
         metadata={
             "name": "EmailID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     el_stat: None | TypeElementStatus6 = field(
         default=None,

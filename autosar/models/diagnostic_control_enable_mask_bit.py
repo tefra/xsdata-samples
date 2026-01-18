@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticControlEnableMaskBit:
     """
     This meta-class has the ability to represent one bit in the control
@@ -73,7 +73,7 @@ class DiagnosticControlEnableMaskBit:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ControlledDataElementRefs:
         controlled_data_element_ref: list[
             DiagnosticControlEnableMaskBit.ControlledDataElementRefs.ControlledDataElementRef
@@ -86,13 +86,12 @@ class DiagnosticControlEnableMaskBit:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ControlledDataElementRef(Ref):
-            dest: None | DiagnosticDataElementSubtypesEnum = field(
-                default=None,
+            dest: DiagnosticDataElementSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

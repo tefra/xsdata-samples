@@ -8,7 +8,7 @@ from .time_sync_technology_enum import TimeSyncTechnologyEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSyncClientConfiguration:
     """
     Defines the configuration of the time synchronisation client.
@@ -66,7 +66,7 @@ class TimeSyncClientConfiguration:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OrderedMasterList:
         ordered_master: list[OrderedMaster] = field(
             default_factory=list,

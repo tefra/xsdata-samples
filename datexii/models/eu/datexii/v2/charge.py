@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.time_period_of_day import TimePeriodOfDay
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Charge:
     """
     A particular charge for a specified interval belonging a charge band.
@@ -46,15 +46,14 @@ class Charge:
     :ivar charge_extension:
     """
 
-    charge: None | Decimal = field(
-        default=None,
+    charge: Decimal = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "total_digits": 8,
             "fraction_digits": 2,
-        },
+        }
     )
     charge_interval: None | float = field(
         default=None,

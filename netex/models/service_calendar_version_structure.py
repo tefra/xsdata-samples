@@ -17,7 +17,7 @@ from .operating_periods_rel_structure import OperatingPeriodsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceCalendarVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "ServiceCalendar_VersionStructure"

@@ -9,7 +9,7 @@ from .retail_consortium import RetailConsortium
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RetailConsortiumsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "retailConsortiumsInFrame_RelStructure"

@@ -10,7 +10,7 @@ from .destination_display_view import DestinationDisplayView
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DestinationDisplayViewsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "destinationDisplayViews_RelStructure"

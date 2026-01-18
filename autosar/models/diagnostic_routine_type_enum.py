@@ -9,7 +9,7 @@ from .diagnostic_routine_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticRoutineTypeEnum:
     """
     This enumerator specifies the different types of diagnostic routines.
@@ -30,11 +30,10 @@ class DiagnosticRoutineTypeEnum:
     class Meta:
         name = "DIAGNOSTIC-ROUTINE-TYPE-ENUM"
 
-    value: None | DiagnosticRoutineTypeEnumSimple = field(
-        default=None,
+    value: DiagnosticRoutineTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

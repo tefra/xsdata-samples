@@ -8,7 +8,7 @@ from travelport.models.type_update_action_2 import TypeUpdateAction2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModifyFieldGroup2:
     """
     Details of the field group and its child fields.
@@ -56,23 +56,21 @@ class ModifyFieldGroup2:
             "max_occurs": 999,
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     description: None | str = field(
         default=None,
@@ -111,13 +109,12 @@ class ModifyFieldGroup2:
             "type": "Attribute",
         },
     )
-    action: None | TypeUpdateAction2 = field(
-        default=None,
+    action: TypeUpdateAction2 = field(
         metadata={
             "name": "Action",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     force: bool = field(
         default=False,

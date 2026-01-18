@@ -10,7 +10,7 @@ from .onward_timing_link_derived_view_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OnwardTimingLinkView(OnwardTimingLinkDerivedViewStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

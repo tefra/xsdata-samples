@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Gateway:
     """
     A gateway is an ECU that is connected to two or more clusters
@@ -99,14 +99,13 @@ class Gateway:
     class Meta:
         name = "GATEWAY"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | Gateway.ShortNameFragments = field(
         default=None,
@@ -227,7 +226,7 @@ class Gateway:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -238,7 +237,7 @@ class Gateway:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -249,18 +248,17 @@ class Gateway:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuRef(Ref):
-        dest: None | EcuInstanceSubtypesEnum = field(
-            default=None,
+        dest: EcuInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FrameMappings:
         frame_mapping: list[FrameMapping] = field(
             default_factory=list,
@@ -271,7 +269,7 @@ class Gateway:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IPduMappings:
         i_pdu_mapping: list[IPduMapping] = field(
             default_factory=list,
@@ -282,7 +280,7 @@ class Gateway:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SignalMappings:
         i_signal_mapping: list[ISignalMapping] = field(
             default_factory=list,

@@ -10,7 +10,7 @@ from travelport.models.form_of_payment_5 import FormOfPayment5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseCreateWithFormOfPaymentReq4(BaseCreateReservationReq4):
     """
     Container for BaseCreateReservation along with Form Of Payment.

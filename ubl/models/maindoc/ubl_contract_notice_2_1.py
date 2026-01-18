@@ -33,7 +33,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ContractNoticeType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -99,14 +99,13 @@ class ContractNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contract_folder_id: None | ContractFolderId = field(
-        default=None,
+    contract_folder_id: ContractFolderId = field(
         metadata={
             "name": "ContractFolderID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_date: None | IssueDate = field(
         default=None,
@@ -164,14 +163,13 @@ class ContractNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contracting_party: None | ContractingParty = field(
-        default=None,
+    contracting_party: ContractingParty = field(
         metadata={
             "name": "ContractingParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     originator_customer_party: tuple[OriginatorCustomerParty, ...] = field(
         default_factory=tuple,
@@ -205,14 +203,13 @@ class ContractNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    procurement_project: None | ProcurementProject = field(
-        default=None,
+    procurement_project: ProcurementProject = field(
         metadata={
             "name": "ProcurementProject",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     procurement_project_lot: tuple[ProcurementProjectLot, ...] = field(
         default_factory=tuple,
@@ -224,7 +221,7 @@ class ContractNoticeType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ContractNotice(ContractNoticeType):
     class Meta:
         namespace = (

@@ -22,7 +22,7 @@ from .point_of_interest_space_version_structure_access_space_type import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointOfInterestSpaceVersionStructure(
     PointOfInterestComponentVersionStructure
 ):

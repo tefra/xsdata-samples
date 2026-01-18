@@ -9,7 +9,7 @@ from travelport.models.type_profile_type_3 import TypeProfileType3
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UimetaDataRetrieveRsp(BaseRsp2):
     """
     Service for Response to retrieve the settings by user in Profile
@@ -48,30 +48,27 @@ class UimetaDataRetrieveRsp(BaseRsp2):
             "max_occurs": 99,
         },
     )
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_type: None | TypeProfileType3 = field(
-        default=None,
+    profile_type: TypeProfileType3 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    meta_data_version: None | int = field(
-        default=None,
+    meta_data_version: int = field(
         metadata={
             "name": "MetaDataVersion",
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        },
+        }
     )
     description: None | str = field(
         default=None,

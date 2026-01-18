@@ -28,7 +28,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticSecurityAccess:
     """
     This represents an instance of the "Security Access" diagnostic
@@ -105,14 +105,13 @@ class DiagnosticSecurityAccess:
     class Meta:
         name = "DIAGNOSTIC-SECURITY-ACCESS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticSecurityAccess.ShortNameFragments
@@ -241,7 +240,7 @@ class DiagnosticSecurityAccess:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -252,7 +251,7 @@ class DiagnosticSecurityAccess:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -263,35 +262,32 @@ class DiagnosticSecurityAccess:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessPermissionRef(Ref):
-        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticAccessPermissionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecurityAccessClassRef(Ref):
-        dest: None | DiagnosticSecurityAccessClassSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticSecurityAccessClassSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecurityLevelRef(Ref):
-        dest: None | DiagnosticSecurityLevelSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticSecurityLevelSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

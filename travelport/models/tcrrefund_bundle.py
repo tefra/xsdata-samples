@@ -15,7 +15,7 @@ from travelport.models.waiver_code import WaiverCode
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TcrrefundBundle:
     """
     Bundle refund, pricing, and penalty information for a TCR reservation
@@ -41,13 +41,12 @@ class TcrrefundBundle:
         name = "TCRRefundBundle"
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_refund_info: None | AirRefundInfo = field(
-        default=None,
+    air_refund_info: AirRefundInfo = field(
         metadata={
             "name": "AirRefundInfo",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     waiver_code: None | WaiverCode = field(
         default=None,
@@ -89,21 +88,19 @@ class TcrrefundBundle:
             "max_occurs": 999,
         },
     )
-    tcrnumber: None | str = field(
-        default=None,
+    tcrnumber: str = field(
         metadata={
             "name": "TCRNumber",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    refund_type: None | TcrrefundBundleRefundType = field(
-        default=None,
+    refund_type: TcrrefundBundleRefundType = field(
         metadata={
             "name": "RefundType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     refund_access_code: None | str = field(
         default=None,

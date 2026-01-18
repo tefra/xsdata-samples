@@ -25,7 +25,7 @@ from .sw_systemconstant_value_set_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FmFeatureMapElement:
     """
     Defines value sets for system constants and postbuild variant
@@ -98,14 +98,13 @@ class FmFeatureMapElement:
     class Meta:
         name = "FM-FEATURE-MAP-ELEMENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | FmFeatureMapElement.ShortNameFragments = (
         field(
@@ -224,7 +223,7 @@ class FmFeatureMapElement:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -235,7 +234,7 @@ class FmFeatureMapElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -246,7 +245,7 @@ class FmFeatureMapElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Assertions:
         fm_feature_map_assertion: list[FmFeatureMapAssertion] = field(
             default_factory=list,
@@ -257,7 +256,7 @@ class FmFeatureMapElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Conditions:
         fm_feature_map_condition: list[FmFeatureMapCondition] = field(
             default_factory=list,
@@ -268,7 +267,7 @@ class FmFeatureMapElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PostBuildVariantCriterionValueSetRefs:
         post_build_variant_criterion_value_set_ref: list[
             FmFeatureMapElement.PostBuildVariantCriterionValueSetRefs.PostBuildVariantCriterionValueSetRef
@@ -281,18 +280,17 @@ class FmFeatureMapElement:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PostBuildVariantCriterionValueSetRef(Ref):
-            dest: None | PostBuildVariantCriterionValueSetSubtypesEnum = field(
-                default=None,
+            dest: PostBuildVariantCriterionValueSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwSystemconstantValueSetRefs:
         sw_systemconstant_value_set_ref: list[
             FmFeatureMapElement.SwSystemconstantValueSetRefs.SwSystemconstantValueSetRef
@@ -305,13 +303,12 @@ class FmFeatureMapElement:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SwSystemconstantValueSetRef(Ref):
-            dest: None | SwSystemconstantValueSetSubtypesEnum = field(
-                default=None,
+            dest: SwSystemconstantValueSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

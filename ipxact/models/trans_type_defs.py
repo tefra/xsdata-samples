@@ -7,7 +7,7 @@ from ipxact.models.trans_type_def import TransTypeDef
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransTypeDefs:
     """
     The group of transactional type definitions.

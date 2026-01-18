@@ -12,7 +12,7 @@ from travelport.models.tcrrefund_bundle import TcrrefundBundle
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirRefundReq(BaseReq1):
     """
     Request to refund an itinerary for the amount previously quoted.

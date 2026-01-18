@@ -7,7 +7,7 @@ from .auto_collect_enum_simple import AutoCollectEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AutoCollectEnum:
     """
     This enumerator defines the possible approaches to determine the final
@@ -29,11 +29,10 @@ class AutoCollectEnum:
     class Meta:
         name = "AUTO-COLLECT-ENUM"
 
-    value: None | AutoCollectEnumSimple = field(
-        default=None,
+    value: AutoCollectEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

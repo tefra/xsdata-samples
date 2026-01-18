@@ -15,7 +15,7 @@ from travelport.models.type_geo_political_area_type_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeAirPreferenceHistory2(TypeBasePreferenceHistory2):
     """
     Defines an air preference for a particular set of criteria (e.g. dates,

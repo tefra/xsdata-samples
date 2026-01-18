@@ -10,7 +10,7 @@ from .distance_matrix_element_ref import DistanceMatrixElementRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DistanceMatrixElementsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "distanceMatrixElements_RelStructure"

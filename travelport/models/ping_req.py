@@ -8,7 +8,7 @@ from travelport.models.payload import Payload
 __NAMESPACE__ = "http://www.travelport.com/schema/system_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PingReq(BaseReq3):
     """
     A simple request to test connectivity to the system without imposing

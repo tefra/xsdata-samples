@@ -9,7 +9,7 @@ from .sw_record_layout_subtypes_enum import SwRecordLayoutSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InterpolationRoutineMapping:
     """
     This meta-class provides a mapping between one record layout and its
@@ -77,7 +77,7 @@ class InterpolationRoutineMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InterpolationRoutines:
         interpolation_routine: list[InterpolationRoutine] = field(
             default_factory=list,
@@ -88,13 +88,12 @@ class InterpolationRoutineMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwRecordLayoutRef(Ref):
-        dest: None | SwRecordLayoutSubtypesEnum = field(
-            default=None,
+        dest: SwRecordLayoutSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

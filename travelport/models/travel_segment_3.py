@@ -7,7 +7,7 @@ from travelport.models.segment_3 import Segment3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelSegment3(Segment3):
     """
     Generic segment used to provide travel information that was not

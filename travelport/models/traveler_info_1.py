@@ -19,7 +19,7 @@ from travelport.models.type_account_type_profile_info_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelerInfo1(TypeAccountTypeProfileInfo1):
     """
     Traveler specific profile information.
@@ -264,23 +264,21 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "max_length": 128,
         },
     )
-    given_name: None | str = field(
-        default=None,
+    given_name: str = field(
         metadata={
             "name": "GivenName",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
-    surname: None | str = field(
-        default=None,
+    surname: str = field(
         metadata={
             "name": "Surname",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )

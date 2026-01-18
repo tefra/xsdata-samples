@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileTemplateSummary:
     """
     Brief summary containing a template's name and ID.
@@ -23,27 +23,24 @@ class ProfileTemplateSummary:
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    id: None | int = field(
-        default=None,
+    id: int = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    name: None | object = field(
-        default=None,
+    name: object = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | object = field(
-        default=None,
+    version: object = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

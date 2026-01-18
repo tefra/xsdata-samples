@@ -10,7 +10,7 @@ from travelport.models.name_1 import Name1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FindEmployeesOnFlightRsp(BaseRsp1):
     """
     Response to retrieve the number of employees in a flight.
@@ -30,7 +30,7 @@ class FindEmployeesOnFlightRsp(BaseRsp1):
         )
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EmployeesOnFlight:
         """
         Parameters
@@ -60,58 +60,52 @@ class FindEmployeesOnFlightRsp(BaseRsp1):
                 "max_occurs": 999,
             },
         )
-        universal_record_locator: None | str = field(
-            default=None,
+        universal_record_locator: str = field(
             metadata={
                 "name": "UniversalRecordLocator",
                 "type": "Attribute",
                 "required": True,
                 "min_length": 5,
                 "max_length": 8,
-            },
+            }
         )
-        destination: None | str = field(
-            default=None,
+        destination: str = field(
             metadata={
                 "name": "Destination",
                 "type": "Attribute",
                 "required": True,
                 "length": 3,
                 "white_space": "collapse",
-            },
+            }
         )
-        origin: None | str = field(
-            default=None,
+        origin: str = field(
             metadata={
                 "name": "Origin",
                 "type": "Attribute",
                 "required": True,
                 "length": 3,
                 "white_space": "collapse",
-            },
+            }
         )
-        departure_date: None | XmlDate = field(
-            default=None,
+        departure_date: XmlDate = field(
             metadata={
                 "name": "DepartureDate",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
-        flight_number: None | str = field(
-            default=None,
+        flight_number: str = field(
             metadata={
                 "name": "FlightNumber",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
-        carrier: None | str = field(
-            default=None,
+        carrier: str = field(
             metadata={
                 "name": "Carrier",
                 "type": "Attribute",
                 "required": True,
                 "length": 2,
-            },
+            }
         )

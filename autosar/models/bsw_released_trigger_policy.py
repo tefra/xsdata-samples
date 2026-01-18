@@ -10,7 +10,7 @@ from .trigger_subtypes_enum import TriggerSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswReleasedTriggerPolicy:
     """
     The Trigger for which the BSW Scheduler using this policy.
@@ -78,13 +78,12 @@ class BswReleasedTriggerPolicy:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReleasedTriggerRef(Ref):
-        dest: None | TriggerSubtypesEnum = field(
-            default=None,
+        dest: TriggerSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

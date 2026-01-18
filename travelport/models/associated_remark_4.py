@@ -9,7 +9,7 @@ from travelport.models.type_associated_remark_with_segment_ref_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/passive_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AssociatedRemark4(TypeAssociatedRemarkWithSegmentRef1):
     class Meta:
         name = "AssociatedRemark"

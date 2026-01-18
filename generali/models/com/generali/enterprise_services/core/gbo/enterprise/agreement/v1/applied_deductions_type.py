@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AppliedDeductionsType:
     applied_deduction: list[AppliedDeductionType] = field(
         default_factory=list,

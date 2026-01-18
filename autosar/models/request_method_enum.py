@@ -7,7 +7,7 @@ from .request_method_enum_simple import RequestMethodEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestMethodEnum:
     """
     Available request methods for HTTPs.
@@ -28,11 +28,10 @@ class RequestMethodEnum:
     class Meta:
         name = "REQUEST-METHOD-ENUM"
 
-    value: None | RequestMethodEnumSimple = field(
-        default=None,
+    value: RequestMethodEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -11,7 +11,7 @@ from travelport.models.tax_info import TaxInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TcrexchangeBundle:
     """
     Bundle exchange, pricing, and penalty information for one ticketless
@@ -35,14 +35,13 @@ class TcrexchangeBundle:
         name = "TCRExchangeBundle"
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_exchange_info: None | AirExchangeInfo1 = field(
-        default=None,
+    air_exchange_info: AirExchangeInfo1 = field(
         metadata={
             "name": "AirExchangeInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        },
+        }
     )
     air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
@@ -78,11 +77,10 @@ class TcrexchangeBundle:
             "max_occurs": 999,
         },
     )
-    tcrnumber: None | str = field(
-        default=None,
+    tcrnumber: str = field(
         metadata={
             "name": "TCRNumber",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

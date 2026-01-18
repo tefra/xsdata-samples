@@ -18,7 +18,7 @@ from .vehicle_type_ref import VehicleTypeRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "ParkingCapacity_VersionedChildStructure"

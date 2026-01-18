@@ -7,7 +7,7 @@ from .integer import Integer
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwBitRepresentation:
     """
     Description of the structure of a bit variable: Comprises of the

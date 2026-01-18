@@ -11,16 +11,15 @@ from .relationship_ref import RelationshipRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClassRelationshipInFrameStructure:
-    relationship_ref: None | RelationshipRef = field(
-        default=None,
+    relationship_ref: RelationshipRef = field(
         metadata={
             "name": "RelationshipRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     mandatory: None | MandatoryEnumeration = field(
         default=None,

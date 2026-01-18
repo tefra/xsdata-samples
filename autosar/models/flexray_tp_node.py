@@ -22,7 +22,7 @@ from .tp_address_subtypes_enum import TpAddressSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayTpNode:
     """
     TP Node (Sender or Receiver) provides the TP Address and the connection
@@ -95,14 +95,13 @@ class FlexrayTpNode:
     class Meta:
         name = "FLEXRAY-TP-NODE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | FlexrayTpNode.ShortNameFragments = field(
         default=None,
@@ -207,7 +206,7 @@ class FlexrayTpNode:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -218,7 +217,7 @@ class FlexrayTpNode:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -229,7 +228,7 @@ class FlexrayTpNode:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConnectorRefs:
         connector_ref: list[FlexrayTpNode.ConnectorRefs.ConnectorRef] = field(
             default_factory=list,
@@ -240,24 +239,22 @@ class FlexrayTpNode:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ConnectorRef(Ref):
-            dest: None | CommunicationConnectorSubtypesEnum = field(
-                default=None,
+            dest: CommunicationConnectorSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpAddressRef(Ref):
-        dest: None | TpAddressSubtypesEnum = field(
-            default=None,
+        dest: TpAddressSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

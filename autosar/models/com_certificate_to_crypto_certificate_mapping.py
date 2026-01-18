@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ComCertificateToCryptoCertificateMapping:
     """
     This meta-class maps the CryptoServiceCertificate defined in the COM
@@ -91,14 +91,13 @@ class ComCertificateToCryptoCertificateMapping:
     class Meta:
         name = "COM-CERTIFICATE-TO-CRYPTO-CERTIFICATE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ComCertificateToCryptoCertificateMapping.ShortNameFragments
@@ -212,7 +211,7 @@ class ComCertificateToCryptoCertificateMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -223,7 +222,7 @@ class ComCertificateToCryptoCertificateMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -234,24 +233,22 @@ class ComCertificateToCryptoCertificateMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CryptoCertificateRef(Ref):
-        dest: None | CryptoCertificateSubtypesEnum = field(
-            default=None,
+        dest: CryptoCertificateSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CryptoServiceCertificateRef(Ref):
-        dest: None | CryptoServiceCertificateSubtypesEnum = field(
-            default=None,
+        dest: CryptoServiceCertificateSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

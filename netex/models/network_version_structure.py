@@ -16,7 +16,7 @@ from .tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NetworkVersionStructure(GroupOfLinesVersionStructure):
     class Meta:
         name = "Network_VersionStructure"

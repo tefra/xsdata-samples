@@ -11,7 +11,7 @@ from travelport.models.type_element_status_3 import TypeElementStatus3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PhoneNumber3:
     """
     Consists of type (office, home, fax), location (city code), the country
@@ -91,15 +91,14 @@ class PhoneNumber3:
             "max_length": 10,
         },
     )
-    number: None | str = field(
-        default=None,
+    number: str = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 83,
-        },
+        }
     )
     extension: None | str = field(
         default=None,

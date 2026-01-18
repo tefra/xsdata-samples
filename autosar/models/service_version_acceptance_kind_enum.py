@@ -9,7 +9,7 @@ from .service_version_acceptance_kind_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceVersionAcceptanceKindEnum:
     """
     Defined the possible acceptance kinds for required service instances.
@@ -30,11 +30,10 @@ class ServiceVersionAcceptanceKindEnum:
     class Meta:
         name = "SERVICE-VERSION-ACCEPTANCE-KIND-ENUM"
 
-    value: None | ServiceVersionAcceptanceKindEnumSimple = field(
-        default=None,
+    value: ServiceVersionAcceptanceKindEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

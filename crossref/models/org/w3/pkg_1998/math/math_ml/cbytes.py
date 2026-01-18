@@ -5,14 +5,14 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.w3.org/1998/Math/MathML"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Cbytes:
     class Meta:
         name = "cbytes"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    value: None | bytes = field(
-        default=None,
+    value: bytes = field(
+        default=b"",
         metadata={
             "required": True,
             "format": "base64",

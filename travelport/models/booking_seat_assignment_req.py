@@ -10,7 +10,7 @@ from travelport.models.update_seats import UpdateSeats
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingSeatAssignmentReq(BookingBaseReq):
     """
     Used to request auto or specific seat assignments.

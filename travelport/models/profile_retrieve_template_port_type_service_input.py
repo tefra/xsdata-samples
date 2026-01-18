@@ -9,29 +9,25 @@ from travelport.models.profile_retrieve_template_req import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileRetrieveTemplatePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | ProfileRetrieveTemplatePortTypeServiceInput.Body = field(
-        default=None,
+    body: ProfileRetrieveTemplatePortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        profile_retrieve_template_req: None | ProfileRetrieveTemplateReq = (
-            field(
-                default=None,
-                metadata={
-                    "name": "ProfileRetrieveTemplateReq",
-                    "type": "Element",
-                    "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-                },
-            )
+        profile_retrieve_template_req: ProfileRetrieveTemplateReq = field(
+            metadata={
+                "name": "ProfileRetrieveTemplateReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
+            }
         )

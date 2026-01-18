@@ -7,7 +7,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GenericTp:
     """
     Content Model for a generic transport protocol.

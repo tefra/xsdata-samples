@@ -7,7 +7,7 @@ from npo.models.streaming_status_value import StreamingStatusValue
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StreamingStatus:
     class Meta:
         name = "streamingStatus"

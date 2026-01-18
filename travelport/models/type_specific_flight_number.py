@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeSpecificFlightNumber:
     """
     Specify exact flight number.
@@ -14,12 +14,11 @@ class TypeSpecificFlightNumber:
     class Meta:
         name = "typeSpecificFlightNumber"
 
-    flight_number: None | str = field(
-        default=None,
+    flight_number: str = field(
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        },
+        }
     )

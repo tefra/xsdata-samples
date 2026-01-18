@@ -9,7 +9,7 @@ from sabre.models.exchange_travel_preferences_tpa_extensions_type import (
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExchangeAirSearchPrefsType:
     """
     Attributes:

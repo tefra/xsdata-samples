@@ -31,7 +31,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswModeManagerErrorEvent:
     """
     This represents the ability to react on errors occurring during mode
@@ -111,14 +111,13 @@ class BswModeManagerErrorEvent:
     class Meta:
         name = "BSW-MODE-MANAGER-ERROR-EVENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | BswModeManagerErrorEvent.ShortNameFragments
@@ -257,7 +256,7 @@ class BswModeManagerErrorEvent:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -268,7 +267,7 @@ class BswModeManagerErrorEvent:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -279,18 +278,17 @@ class BswModeManagerErrorEvent:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ActivationReasonRepresentationRef(Ref):
-        dest: None | ExecutableEntityActivationReasonSubtypesEnum = field(
-            default=None,
+        dest: ExecutableEntityActivationReasonSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextLimitationRefs:
         context_limitation_ref: list[
             BswModeManagerErrorEvent.ContextLimitationRefs.ContextLimitationRef
@@ -303,18 +301,17 @@ class BswModeManagerErrorEvent:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ContextLimitationRef(Ref):
-            dest: None | BswDistinguishedPartitionSubtypesEnum = field(
-                default=None,
+            dest: BswDistinguishedPartitionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DisabledInModeIrefs:
         disabled_in_mode_iref: list[ModeInBswModuleDescriptionInstanceRef] = (
             field(
@@ -327,24 +324,22 @@ class BswModeManagerErrorEvent:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StartsOnEventRef(Ref):
-        dest: None | BswModuleEntitySubtypesEnum = field(
-            default=None,
+        dest: BswModuleEntitySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeGroupRef(Ref):
-        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

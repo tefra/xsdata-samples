@@ -8,7 +8,7 @@ from sdmx_ml.models.submitted_structure_type import SubmittedStructureType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SubmissionResultType:
     """
     SubmissionResultType provides the status of the structural object
@@ -26,21 +26,19 @@ class SubmissionResultType:
         or warning information.
     """
 
-    submitted_structure: None | SubmittedStructureType = field(
-        default=None,
+    submitted_structure: SubmittedStructureType = field(
         metadata={
             "name": "SubmittedStructure",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )
-    status_message: None | StatusMessageType2 = field(
-        default=None,
+    status_message: StatusMessageType2 = field(
         metadata={
             "name": "StatusMessage",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )

@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApApplicationErrorSet:
     """
     This meta-class acts as a reference target that represents an entire
@@ -90,14 +90,13 @@ class ApApplicationErrorSet:
     class Meta:
         name = "AP-APPLICATION-ERROR-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ApApplicationErrorSet.ShortNameFragments = (
         field(
@@ -198,7 +197,7 @@ class ApApplicationErrorSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -209,7 +208,7 @@ class ApApplicationErrorSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -220,7 +219,7 @@ class ApApplicationErrorSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ApApplicationErrorRefs:
         ap_application_error_ref: list[
             ApApplicationErrorSet.ApApplicationErrorRefs.ApApplicationErrorRef
@@ -233,13 +232,12 @@ class ApApplicationErrorSet:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ApApplicationErrorRef(Ref):
-            dest: None | ApApplicationErrorSubtypesEnum = field(
-                default=None,
+            dest: ApApplicationErrorSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

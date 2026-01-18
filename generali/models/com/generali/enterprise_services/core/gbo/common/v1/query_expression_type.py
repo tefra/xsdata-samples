@@ -12,7 +12,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.value_e
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QueryExpressionType:
     """
     <description xmlns="">A query expression that allows complex queries to

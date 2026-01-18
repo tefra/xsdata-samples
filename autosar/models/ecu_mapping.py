@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcuMapping:
     """
     ECUMapping allows to assign an ECU hardware type (defined in the ECU
@@ -95,14 +95,13 @@ class EcuMapping:
     class Meta:
         name = "ECU-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EcuMapping.ShortNameFragments = field(
         default=None,
@@ -223,7 +222,7 @@ class EcuMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -234,7 +233,7 @@ class EcuMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -245,7 +244,7 @@ class EcuMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommControllerMappings:
         communication_controller_mapping: list[
             CommunicationControllerMapping
@@ -258,29 +257,27 @@ class EcuMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuInstanceRef(Ref):
-        dest: None | EcuInstanceSubtypesEnum = field(
-            default=None,
+        dest: EcuInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuRef(Ref):
-        dest: None | HwElementSubtypesEnum = field(
-            default=None,
+        dest: HwElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwPortMappings:
         hw_port_mapping: list[HwPortMapping] = field(
             default_factory=list,

@@ -10,7 +10,7 @@ from travelport.models.type_profile_type_3 import TypeProfileType3
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileChildSummary1:
     """
     Parameters
@@ -40,31 +40,28 @@ class ProfileChildSummary1:
         name = "ProfileChildSummary"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_type: None | TypeProfileType3 = field(
-        default=None,
+    profile_type: TypeProfileType3 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     provisioning_code: None | str = field(
         default=None,
@@ -75,22 +72,20 @@ class ProfileChildSummary1:
             "max_length": 128,
         },
     )
-    status: None | TypeProfileEntityStatus1 = field(
-        default=None,
+    status: TypeProfileEntityStatus1 = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | int = field(
-        default=None,
+    version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        },
+        }
     )
     control: bool = field(
         default=False,

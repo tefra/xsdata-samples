@@ -9,7 +9,7 @@ from .group_of_sales_offer_packages import GroupOfSalesOfferPackages
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupsOfSalesOfferPackagesInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "groupsOfSalesOfferPackagesInFrame_RelStructure"

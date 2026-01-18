@@ -7,7 +7,7 @@ from travelport.models.connection_point_1 import ConnectionPoint1
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailLegModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
@@ -38,7 +38,7 @@ class RailLegModifiers:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PermittedConnectionPoints:
         connection_point: list[ConnectionPoint1] = field(
             default_factory=list,
@@ -51,7 +51,7 @@ class RailLegModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProhibitedConnectionPoints:
         connection_point: list[ConnectionPoint1] = field(
             default_factory=list,

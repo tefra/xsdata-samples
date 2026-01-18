@@ -9,7 +9,7 @@ from .route_point import RoutePoint
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoutePointsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "routePointsInFrame_RelStructure"

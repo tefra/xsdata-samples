@@ -8,7 +8,7 @@ from npo.models.term_search_type import TermSearchType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MediaSearchableTermFacetType(MediaFacetType):
     class Meta:
         name = "mediaSearchableTermFacetType"

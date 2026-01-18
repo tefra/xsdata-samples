@@ -17,7 +17,7 @@ from datexii.models.eu.datexii.v2.urgency_enum import UrgencyEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HeaderInformation:
     """
     Management information relating to the data contained within a
@@ -45,22 +45,20 @@ class HeaderInformation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    confidentiality: None | ConfidentialityValueEnum = field(
-        default=None,
+    confidentiality: ConfidentialityValueEnum = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    information_status: None | InformationStatusEnum = field(
-        default=None,
+    information_status: InformationStatusEnum = field(
         metadata={
             "name": "informationStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     urgency: None | UrgencyEnum = field(
         default=None,

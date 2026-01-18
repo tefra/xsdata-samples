@@ -24,7 +24,7 @@ from .symbol_props import SymbolProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RawDataStreamClientInterface:
     """
     This meta-class represents the necessary capabilities for raw data
@@ -121,14 +121,13 @@ class RawDataStreamClientInterface:
     class Meta:
         name = "RAW-DATA-STREAM-CLIENT-INTERFACE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | RawDataStreamClientInterface.ShortNameFragments
@@ -261,7 +260,7 @@ class RawDataStreamClientInterface:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -272,7 +271,7 @@ class RawDataStreamClientInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -283,7 +282,7 @@ class RawDataStreamClientInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -312,7 +311,7 @@ class RawDataStreamClientInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Namespaces:
         symbol_props: list[SymbolProps] = field(
             default_factory=list,

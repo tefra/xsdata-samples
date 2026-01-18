@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.referent import Referent
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinearElementByPoints(LinearElement):
     """
     A linear element along a single linear object defined by its start and
@@ -30,14 +30,13 @@ class LinearElementByPoints(LinearElement):
     :ivar linear_element_by_points_extension:
     """
 
-    start_point_of_linear_element: None | Referent = field(
-        default=None,
+    start_point_of_linear_element: Referent = field(
         metadata={
             "name": "startPointOfLinearElement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     intermediate_point_on_linear_element: list[
         IntermediatePointOnLinearElement
@@ -49,14 +48,13 @@ class LinearElementByPoints(LinearElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    end_point_of_linear_element: None | Referent = field(
-        default=None,
+    end_point_of_linear_element: Referent = field(
         metadata={
             "name": "endPointOfLinearElement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     linear_element_by_points_extension: None | ExtensionType = field(
         default=None,

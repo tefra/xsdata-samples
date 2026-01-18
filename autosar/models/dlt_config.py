@@ -9,7 +9,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DltConfig:
     """
     This element defines a Dlt configuration for a specific Ecu.
@@ -85,7 +85,7 @@ class DltConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DltLogChannels:
         dlt_log_channel: list[DltLogChannel] = field(
             default_factory=list,

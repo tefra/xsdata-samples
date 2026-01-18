@@ -12,7 +12,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_c
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QueryCriteriaType:
     """
     :ivar query_expression: <description xmlns="">A query expression
@@ -31,14 +31,13 @@ class QueryCriteriaType:
         default is Strict, i.e. match strings exactly.</description>
     """
 
-    query_expression: None | QueryCriteriaTypeQueryExpression = field(
-        default=None,
+    query_expression: QueryCriteriaTypeQueryExpression = field(
         metadata={
             "name": "QueryExpression",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )
     start_index: None | int = field(
         default=None,

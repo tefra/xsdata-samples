@@ -11,7 +11,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DdsEventQosProps:
     """
     Configuration properties of the Event using DDS as the underlying
@@ -68,13 +68,12 @@ class DdsEventQosProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventRef(Ref):
-        dest: None | ServiceEventDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceEventDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

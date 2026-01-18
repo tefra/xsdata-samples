@@ -10,7 +10,7 @@ from .output_detail_enumeration import OutputDetailEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NetworkFrameRequestPolicyStructure:
     maximum_number_of_elements: None | int = field(
         default=None,

@@ -8,7 +8,7 @@ from travelport.models.facility import Facility
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Row:
     """
     Identifies the row of in a seat map.
@@ -33,13 +33,12 @@ class Row:
             "max_occurs": 999,
         },
     )
-    number: None | int = field(
-        default=None,
+    number: int = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     search_traveler_ref: None | str = field(
         default=None,

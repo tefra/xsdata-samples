@@ -9,7 +9,7 @@ from .lighting_on_method_enumeration import LightingOnMethodEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PlaceLightingVersionStructure(AccessEquipmentVersionStructure):
     class Meta:
         name = "PlaceLighting_VersionStructure"

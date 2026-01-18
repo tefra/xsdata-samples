@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDuration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HeadwayIntervalStructure:
     scheduled_headway_interval: None | XmlDuration = field(
         default=None,

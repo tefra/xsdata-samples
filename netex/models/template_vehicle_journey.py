@@ -9,7 +9,7 @@ from .template_vehicle_journey_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TemplateVehicleJourney(TemplateVehicleJourneyVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

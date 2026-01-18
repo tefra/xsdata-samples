@@ -7,7 +7,7 @@ from .xml_space_enum_simple import XmlSpaceEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XmlSpaceEnum:
     """
     This enumerator specifies the fact that white-space shall be preserved.
@@ -28,11 +28,10 @@ class XmlSpaceEnum:
     class Meta:
         name = "XML-SPACE-ENUM"
 
-    value: None | XmlSpaceEnumSimple = field(
-        default=None,
+    value: XmlSpaceEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

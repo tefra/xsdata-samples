@@ -7,7 +7,7 @@ from travelport.models.type_element_status_5 import TypeElementStatus5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LoyaltyProgram4:
     """
     Parameters
@@ -41,14 +41,13 @@ class LoyaltyProgram4:
             "type": "Attribute",
         },
     )
-    supplier_code: None | str = field(
-        default=None,
+    supplier_code: str = field(
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
     alliance_level: None | str = field(
         default=None,

@@ -7,7 +7,7 @@ from .t_intermediate_throw_event import TIntermediateThrowEvent
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IntermediateThrowEvent(TIntermediateThrowEvent):
     class Meta:
         name = "intermediateThrowEvent"

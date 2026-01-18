@@ -7,7 +7,7 @@ from travelport.models.base_req_1 import BaseReq1
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GdsQueueAgentListReq(BaseReq1):
     """
     Use this request to list items stuck on the Queue.
@@ -21,13 +21,12 @@ class GdsQueueAgentListReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
-    agent_id: None | str = field(
-        default=None,
+    agent_id: str = field(
         metadata={
             "name": "AgentID",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 32,
-        },
+        }
     )

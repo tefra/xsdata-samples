@@ -7,7 +7,7 @@ from .key_usage_restriction_enum_simple import KeyUsageRestrictionEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class KeyUsageRestrictionEnum:
     """
     :ivar value:
@@ -26,11 +26,10 @@ class KeyUsageRestrictionEnum:
     class Meta:
         name = "KEY-USAGE-RESTRICTION-ENUM"
 
-    value: None | KeyUsageRestrictionEnumSimple = field(
-        default=None,
+    value: KeyUsageRestrictionEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

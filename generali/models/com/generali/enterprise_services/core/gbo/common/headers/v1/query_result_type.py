@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QueryResultType(BaseHeaderType):
     """
     <description xmlns="">A header providing meta-data about the result of
@@ -22,12 +22,11 @@ class QueryResultType(BaseHeaderType):
         response message.</description>
     """
 
-    total_count: None | int = field(
-        default=None,
+    total_count: int = field(
         metadata={
             "name": "TotalCount",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
             "required": True,
-        },
+        }
     )

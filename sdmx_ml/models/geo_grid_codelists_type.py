@@ -7,7 +7,7 @@ from sdmx_ml.models.geo_grid_codelist_type import GeoGridCodelistType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GeoGridCodelistsType:
     """
     GeoGridCodelistsType describes the structure of the codelists

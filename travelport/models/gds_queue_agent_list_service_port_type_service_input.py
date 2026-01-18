@@ -7,27 +7,25 @@ from travelport.models.gds_queue_agent_list_req import GdsQueueAgentListReq
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GdsQueueAgentListServicePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | GdsQueueAgentListServicePortTypeServiceInput.Body = field(
-        default=None,
+    body: GdsQueueAgentListServicePortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        gds_queue_agent_list_req: None | GdsQueueAgentListReq = field(
-            default=None,
+        gds_queue_agent_list_req: GdsQueueAgentListReq = field(
             metadata={
                 "name": "GdsQueueAgentListReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/gdsQueue_v52_0",
-            },
+            }
         )

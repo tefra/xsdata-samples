@@ -9,7 +9,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeRangeType:
     """
     The timeRange can be specified with the value attribute.
@@ -65,7 +65,7 @@ class TimeRangeType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tolerance:
         absolute_tolerance: None | AbsoluteTolerance = field(
             default=None,

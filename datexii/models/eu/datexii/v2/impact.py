@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.traffic_constriction_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Impact:
     """
     An assessment of the impact that an event or operator action defined by

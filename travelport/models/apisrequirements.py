@@ -7,7 +7,7 @@ from travelport.models.document import Document
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Apisrequirements:
     """
     Specific details for APIS Requirements.

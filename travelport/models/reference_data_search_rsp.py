@@ -7,7 +7,7 @@ from travelport.models.base_rsp_1 import BaseRsp1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceDataSearchRsp(BaseRsp1):
     """
     Response the sought reference data item.
@@ -89,16 +89,15 @@ class ReferenceDataSearchRsp(BaseRsp1):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Airport:
-        code: None | str = field(
-            default=None,
+        code: str = field(
             metadata={
                 "name": "Code",
                 "type": "Attribute",
                 "required": True,
                 "length": 3,
-            },
+            }
         )
         name: None | str = field(
             default=None,
@@ -125,16 +124,15 @@ class ReferenceDataSearchRsp(BaseRsp1):
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Carrier:
-        code: None | str = field(
-            default=None,
+        code: str = field(
             metadata={
                 "name": "Code",
                 "type": "Attribute",
                 "required": True,
                 "length": 2,
-            },
+            }
         )
         name: None | str = field(
             default=None,
@@ -151,25 +149,23 @@ class ReferenceDataSearchRsp(BaseRsp1):
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class City:
-        code: None | str = field(
-            default=None,
+        code: str = field(
             metadata={
                 "name": "Code",
                 "type": "Attribute",
                 "required": True,
                 "length": 3,
                 "white_space": "collapse",
-            },
+            }
         )
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "name": "Name",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         state_code: None | str = field(
             default=None,
@@ -187,16 +183,15 @@ class ReferenceDataSearchRsp(BaseRsp1):
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Country:
-        code: None | str = field(
-            default=None,
+        code: str = field(
             metadata={
                 "name": "Code",
                 "type": "Attribute",
                 "required": True,
                 "length": 2,
-            },
+            }
         )
         name: None | str = field(
             default=None,
@@ -236,24 +231,22 @@ class ReferenceDataSearchRsp(BaseRsp1):
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Currency:
-        code: None | str = field(
-            default=None,
+        code: str = field(
             metadata={
                 "name": "Code",
                 "type": "Attribute",
                 "required": True,
                 "length": 3,
-            },
+            }
         )
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "name": "Name",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         decimal: None | str = field(
             default=None,
@@ -263,15 +256,14 @@ class ReferenceDataSearchRsp(BaseRsp1):
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Equipment:
-        code: None | str = field(
-            default=None,
+        code: str = field(
             metadata={
                 "name": "Code",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         description: None | str = field(
             default=None,
@@ -281,37 +273,34 @@ class ReferenceDataSearchRsp(BaseRsp1):
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PassengerType:
-        code: None | str = field(
-            default=None,
+        code: str = field(
             metadata={
                 "name": "Code",
                 "type": "Attribute",
                 "required": True,
                 "min_length": 3,
                 "max_length": 5,
-            },
+            }
         )
-        description: None | str = field(
-            default=None,
+        description: str = field(
             metadata={
                 "name": "Description",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class State:
-        code: None | str = field(
-            default=None,
+        code: str = field(
             metadata={
                 "name": "Code",
                 "type": "Attribute",
                 "required": True,
                 "max_length": 6,
-            },
+            }
         )
         name: None | str = field(
             default=None,
@@ -320,33 +309,30 @@ class ReferenceDataSearchRsp(BaseRsp1):
                 "type": "Attribute",
             },
         )
-        country_code: None | str = field(
-            default=None,
+        country_code: str = field(
             metadata={
                 "name": "CountryCode",
                 "type": "Attribute",
                 "required": True,
                 "length": 2,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SsrType:
-        code: None | str = field(
-            default=None,
+        code: str = field(
             metadata={
                 "name": "Code",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
-        description: None | str = field(
-            default=None,
+        description: str = field(
             metadata={
                 "name": "Description",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         providers: None | str = field(
             default=None,
@@ -355,21 +341,19 @@ class ReferenceDataSearchRsp(BaseRsp1):
                 "type": "Attribute",
             },
         )
-        level: None | str = field(
-            default=None,
+        level: str = field(
             metadata={
                 "name": "Level",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
-        free_text_required: None | str = field(
-            default=None,
+        free_text_required: str = field(
             metadata={
                 "name": "FreeTextRequired",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         pattern: None | str = field(
             default=None,

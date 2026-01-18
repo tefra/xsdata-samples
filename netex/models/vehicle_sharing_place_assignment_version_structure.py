@@ -21,7 +21,7 @@ from .vehicle_sharing_service_ref import VehicleSharingServiceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleSharingPlaceAssignmentVersionStructure(
     VehicleServicePlaceAssignmentVersionStructure
 ):
@@ -68,16 +68,13 @@ class VehicleSharingPlaceAssignmentVersionStructure(
             ),
         },
     )
-    vehicle_sharing_parking_area_ref: None | VehicleSharingParkingAreaRef = (
-        field(
-            default=None,
-            metadata={
-                "name": "VehicleSharingParkingAreaRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-                "required": True,
-            },
-        )
+    vehicle_sharing_parking_area_ref: VehicleSharingParkingAreaRef = field(
+        metadata={
+            "name": "VehicleSharingParkingAreaRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
     )
     parking_bay_ref_or_vehicle_sharing_parking_bay_ref: (
         None

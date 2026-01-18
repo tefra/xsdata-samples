@@ -8,7 +8,7 @@ from travelport.models.type_masked_1 import TypeMasked1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelerIdentityInformation1(TypeKeyElement1):
     """
     An additional means to identify or verify a travelers profile when then

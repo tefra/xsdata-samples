@@ -10,7 +10,7 @@ from .interchange_rule_ref import InterchangeRuleRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InterchangeRulesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "interchangeRules_RelStructure"

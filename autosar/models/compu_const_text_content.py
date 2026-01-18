@@ -7,7 +7,7 @@ from .verbatim_string import VerbatimString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompuConstTextContent:
     """
     This meta-class represents the textual content of a scale.

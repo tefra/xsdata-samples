@@ -11,20 +11,19 @@ from sdmx_ml.models.metadata_set_type import MetadataSetType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GenericMetadataType:
     """
     GenericMetadataType defines the contents of a generic metadata message.
     """
 
-    header: None | GenericMetadataHeaderType = field(
-        default=None,
+    header: GenericMetadataHeaderType = field(
         metadata={
             "name": "Header",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
             "required": True,
-        },
+        }
     )
     metadata_set: tuple[MetadataSetType, ...] = field(
         default_factory=tuple,

@@ -24,7 +24,7 @@ from .symbol_props import SymbolProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecurityEventReportInterface:
     """
     This meta-class provides the ability to define a PortInterface for the
@@ -115,14 +115,13 @@ class SecurityEventReportInterface:
     class Meta:
         name = "SECURITY-EVENT-REPORT-INTERFACE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SecurityEventReportInterface.ShortNameFragments
@@ -255,7 +254,7 @@ class SecurityEventReportInterface:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -266,7 +265,7 @@ class SecurityEventReportInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -277,7 +276,7 @@ class SecurityEventReportInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -306,7 +305,7 @@ class SecurityEventReportInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Namespaces:
         symbol_props: list[SymbolProps] = field(
             default_factory=list,

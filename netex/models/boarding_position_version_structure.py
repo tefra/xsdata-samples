@@ -10,7 +10,7 @@ from .stop_place_space_version_structure import StopPlaceSpaceVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BoardingPositionVersionStructure(StopPlaceSpaceVersionStructure):
     class Meta:
         name = "BoardingPosition_VersionStructure"

@@ -8,7 +8,7 @@ from travelport.models.service_fee_info_1 import ServiceFeeInfo1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgencyServiceFeeCreateRsp(BaseRsp1):
     """
     Agency Service Fee issued through BSP or Airline Reporting Corporation

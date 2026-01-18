@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WireTypeDef:
     """
     Definition of a single wire type defintion that can relate to multiple
@@ -57,7 +57,7 @@ class WireTypeDef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeName:
         """
         :ivar value:
@@ -79,7 +79,7 @@ class WireTypeDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeDefinition:
         value: str = field(
             default="",
@@ -95,7 +95,7 @@ class WireTypeDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ViewRef:
         value: str = field(
             default="",

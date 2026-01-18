@@ -8,7 +8,7 @@ from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SequenceCounterMapping:
     """
     The purpose of sequence counters is to map a response to the correct
@@ -58,13 +58,12 @@ class SequenceCounterMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SystemSignalRef(Ref):
-        dest: None | SystemSignalSubtypesEnum = field(
-            default=None,
+        dest: SystemSignalSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

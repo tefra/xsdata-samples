@@ -7,7 +7,7 @@ from travelport.models.type_element_status_4 import TypeElementStatus4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CommissionRemark3:
     """
     Identifies the agency commision remarks.
@@ -96,7 +96,7 @@ class CommissionRemark3:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProviderReservationLevel:
         """
         Parameters
@@ -132,7 +132,7 @@ class CommissionRemark3:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PassengerTypeLevel:
         """
         Parameters
@@ -146,15 +146,14 @@ class CommissionRemark3:
             Commission cap for the Airline.
         """
 
-        traveler_type: None | str = field(
-            default=None,
+        traveler_type: str = field(
             metadata={
                 "name": "TravelerType",
                 "type": "Attribute",
                 "required": True,
                 "min_length": 3,
                 "max_length": 5,
-            },
+            }
         )
         amount: None | str = field(
             default=None,

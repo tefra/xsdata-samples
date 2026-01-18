@@ -30,7 +30,7 @@ from .strong_revision_label_string import StrongRevisionLabelString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoftwarePackage:
     """
     This meta-class represents the ability to formalize the content of a
@@ -127,14 +127,13 @@ class SoftwarePackage:
     class Meta:
         name = "SOFTWARE-PACKAGE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SoftwarePackage.ShortNameFragments = field(
         default=None,
@@ -329,7 +328,7 @@ class SoftwarePackage:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -340,7 +339,7 @@ class SoftwarePackage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -351,18 +350,17 @@ class SoftwarePackage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PackagerSignatureRef(Ref):
-        dest: None | CryptoServiceCertificateSubtypesEnum = field(
-            default=None,
+        dest: CryptoServiceCertificateSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PreActivateIrefs:
         pre_activate_iref: list[
             FunctionGroupStateInFunctionGroupSetInstanceRef
@@ -375,18 +373,17 @@ class SoftwarePackage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SoftwareClusterRef(Ref):
-        dest: None | SoftwareClusterSubtypesEnum = field(
-            default=None,
+        dest: SoftwareClusterSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VerifyIrefs:
         verify_iref: list[FunctionGroupStateInFunctionGroupSetInstanceRef] = (
             field(

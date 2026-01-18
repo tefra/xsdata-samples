@@ -10,47 +10,41 @@ from travelport.models.session_context import SessionContext
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingAirExchangeQuotePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: None | BookingAirExchangeQuotePortTypeServiceInput.Header = field(
-        default=None,
+    header: BookingAirExchangeQuotePortTypeServiceInput.Header = field(
         metadata={
             "name": "Header",
             "type": "Element",
-        },
+        }
     )
-    body: None | BookingAirExchangeQuotePortTypeServiceInput.Body = field(
-        default=None,
+    body: BookingAirExchangeQuotePortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Header:
-        session_context: None | SessionContext = field(
-            default=None,
+        session_context: SessionContext = field(
             metadata={
                 "name": "SessionContext",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        booking_air_exchange_quote_req: None | BookingAirExchangeQuoteReq = (
-            field(
-                default=None,
-                metadata={
-                    "name": "BookingAirExchangeQuoteReq",
-                    "type": "Element",
-                    "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
-                },
-            )
+        booking_air_exchange_quote_req: BookingAirExchangeQuoteReq = field(
+            metadata={
+                "name": "BookingAirExchangeQuoteReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
+            }
         )

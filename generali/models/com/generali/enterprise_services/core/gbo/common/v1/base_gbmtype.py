@@ -5,7 +5,7 @@ from dataclasses import dataclass
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseGbmtype:
     """
     <description xmlns="">The base type of the business

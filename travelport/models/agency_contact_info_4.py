@@ -7,7 +7,7 @@ from travelport.models.phone_number_5 import PhoneNumber5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgencyContactInfo4:
     """
     Generic agency contact information container.

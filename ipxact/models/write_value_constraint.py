@@ -7,7 +7,7 @@ from ipxact.models.write_value_constraint_type import WriteValueConstraintType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WriteValueConstraint(WriteValueConstraintType):
     """
     The legal values that may be written to a field.

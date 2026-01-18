@@ -9,7 +9,7 @@ from .ecuc_destination_uri_nesting_contract_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucDestinationUriNestingContractEnum:
     """
     EcucDestinationUriNestingContractEnum is used to determine what is
@@ -31,11 +31,10 @@ class EcucDestinationUriNestingContractEnum:
     class Meta:
         name = "ECUC-DESTINATION-URI-NESTING-CONTRACT-ENUM"
 
-    value: None | EcucDestinationUriNestingContractEnumSimple = field(
-        default=None,
+    value: EcucDestinationUriNestingContractEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

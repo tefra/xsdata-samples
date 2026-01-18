@@ -8,19 +8,18 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransactionalPowerConstraintType:
     class Meta:
         name = "transactionalPowerConstraintType"
 
-    power_domain_ref: None | PowerDomainRef = field(
-        default=None,
+    power_domain_ref: PowerDomainRef = field(
         metadata={
             "name": "powerDomainRef",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     vendor_extensions: None | VendorExtensions = field(
         default=None,

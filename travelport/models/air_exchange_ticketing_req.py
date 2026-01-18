@@ -19,7 +19,7 @@ from travelport.models.waiver_code import WaiverCode
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeTicketingReq(BaseReq1):
     """
     Request to ticket an exchanged itinerary.
@@ -55,22 +55,20 @@ class AirExchangeTicketingReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_reservation_locator_code: None | AirReservationLocatorCode = field(
-        default=None,
+    air_reservation_locator_code: AirReservationLocatorCode = field(
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    ticket_number: None | TicketNumber1 = field(
-        default=None,
+    ticket_number: TicketNumber1 = field(
         metadata={
             "name": "TicketNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        },
+        }
     )
     ticketing_modifiers_ref: list[TypeTicketingModifiersRef] = field(
         default_factory=list,

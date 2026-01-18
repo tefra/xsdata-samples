@@ -9,7 +9,7 @@ from travelport.models.mct_search import MctSearch
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MctLookupReq(BaseReq1):
     """
     Search for MCT time values.

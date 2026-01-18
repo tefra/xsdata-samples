@@ -15,7 +15,7 @@ from ipxact.models.write_value_constraint import WriteValueConstraint
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FieldAccessPolicyDefinitions:
     class Meta:
         name = "fieldAccessPolicyDefinitions"
@@ -32,7 +32,7 @@ class FieldAccessPolicyDefinitions:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FieldAccessPolicyDefinition:
         """
         :ivar name: Unique name
@@ -48,12 +48,11 @@ class FieldAccessPolicyDefinitions:
         :ivar id:
         """
 
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         display_name: None | DisplayName = field(
             default=None,

@@ -7,7 +7,7 @@ from npo.models.page_relation_search_type import PageRelationSearchType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PageRelationSearchListType:
     class Meta:
         name = "pageRelationSearchListType"

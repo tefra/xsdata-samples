@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthernetWakeupSleepOnDatalineConfigSet:
     """
     This meta-class is the main element that aggregates different config
@@ -88,14 +88,13 @@ class EthernetWakeupSleepOnDatalineConfigSet:
     class Meta:
         name = "ETHERNET-WAKEUP-SLEEP-ON-DATALINE-CONFIG-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | EthernetWakeupSleepOnDatalineConfigSet.ShortNameFragments
@@ -199,7 +198,7 @@ class EthernetWakeupSleepOnDatalineConfigSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -210,7 +209,7 @@ class EthernetWakeupSleepOnDatalineConfigSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -221,7 +220,7 @@ class EthernetWakeupSleepOnDatalineConfigSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EthernetWakeupSleepOnDatalineConfigs:
         ethernet_wakeup_sleep_on_dataline_config: list[
             EthernetWakeupSleepOnDatalineConfig

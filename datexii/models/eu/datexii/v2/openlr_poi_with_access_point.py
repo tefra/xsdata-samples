@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.point_coordinates import PointCoordinates
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenlrPoiWithAccessPoint(OpenlrBasePointLocation):
     """
     Point along line with access is a point location which is defined by a
@@ -22,14 +22,13 @@ class OpenlrPoiWithAccessPoint(OpenlrBasePointLocation):
     :ivar openlr_poi_with_access_point_extension:
     """
 
-    openlr_coordinate: None | PointCoordinates = field(
-        default=None,
+    openlr_coordinate: PointCoordinates = field(
         metadata={
             "name": "openlrCoordinate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     openlr_poi_with_access_point_extension: None | ExtensionType = field(
         default=None,

@@ -13,7 +13,7 @@ from travelport.models.type_geo_political_area_type_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirPreference1(TypeBasePreference1):
     """
     Defines an air preference for a particular set of criteria (e.g. dates,

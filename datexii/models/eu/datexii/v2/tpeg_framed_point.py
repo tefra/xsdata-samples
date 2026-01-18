@@ -15,7 +15,7 @@ from datexii.models.eu.datexii.v2.tpeg_point_location import TpegPointLocation
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TpegFramedPoint(TpegPointLocation):
     """
     A point on the road network which is framed between two other points on
@@ -32,42 +32,36 @@ class TpegFramedPoint(TpegPointLocation):
     :ivar tpeg_framed_point_extension:
     """
 
-    tpeg_framed_point_location_type: (
-        None | TpegLoc01FramedPointLocationSubtypeEnum
-    ) = field(
-        default=None,
+    tpeg_framed_point_location_type: TpegLoc01FramedPointLocationSubtypeEnum = field(
         metadata={
             "name": "tpegFramedPointLocationType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    framed_point: None | TpegNonJunctionPoint = field(
-        default=None,
+    framed_point: TpegNonJunctionPoint = field(
         metadata={
             "name": "framedPoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    to: None | TpegPoint = field(
-        default=None,
+    to: TpegPoint = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    from_value: None | TpegPoint = field(
-        default=None,
+    from_value: TpegPoint = field(
         metadata={
             "name": "from",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     tpeg_framed_point_extension: None | ExtensionType = field(
         default=None,

@@ -7,7 +7,7 @@ from crossref.models.xlink.locator_type import LocatorType
 __NAMESPACE__ = "http://www.w3.org/1999/xlink"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Locator(LocatorType):
     class Meta:
         name = "locator"

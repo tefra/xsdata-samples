@@ -10,7 +10,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinErrorResponse:
     """
     Each slave node shall publish a one bit signal, named response_error,
@@ -87,24 +87,22 @@ class LinErrorResponse:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FrameTriggeringRef(Ref):
-        dest: None | LinFrameTriggeringSubtypesEnum = field(
-            default=None,
+        dest: LinFrameTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResponseErrorRef(Ref):
-        dest: None | ISignalTriggeringSubtypesEnum = field(
-            default=None,
+        dest: ISignalTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

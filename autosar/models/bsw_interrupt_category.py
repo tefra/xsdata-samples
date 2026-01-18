@@ -7,7 +7,7 @@ from .bsw_interrupt_category_simple import BswInterruptCategorySimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswInterruptCategory:
     """
     Category of the interrupt service.
@@ -28,11 +28,10 @@ class BswInterruptCategory:
     class Meta:
         name = "BSW-INTERRUPT-CATEGORY"
 
-    value: None | BswInterruptCategorySimple = field(
-        default=None,
+    value: BswInterruptCategorySimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -18,7 +18,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IdsDesign:
     """
     This meta-class represents the root element of a SecurityExtract file
@@ -90,14 +90,13 @@ class IdsDesign:
     class Meta:
         name = "IDS-DESIGN"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | IdsDesign.ShortNameFragments = field(
         default=None,
@@ -194,7 +193,7 @@ class IdsDesign:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -205,7 +204,7 @@ class IdsDesign:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -216,7 +215,7 @@ class IdsDesign:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Elements:
         ids_common_element_ref_conditional: list[
             IdsCommonElementRefConditional

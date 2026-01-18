@@ -24,7 +24,7 @@ from sabre.models.vccinformation_type import VccinformationType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareType:
     """
     Holds a base fare, tax, total and currency information on a price.
@@ -50,14 +50,13 @@ class FareType:
         negotiated_fare_code: Code used to identify the private fare.
     """
 
-    base_fare: None | CurrencyAmountType = field(
-        default=None,
+    base_fare: CurrencyAmountType = field(
         metadata={
             "name": "BaseFare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     non_refundable_base_fare: None | CurrencyAmountType = field(
         default=None,
@@ -123,14 +122,13 @@ class FareType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    total_fare: None | CurrencyAmountType = field(
-        default=None,
+    total_fare: CurrencyAmountType = field(
         metadata={
             "name": "TotalFare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     reissue_info_list: None | FareType.ReissueInfoList = field(
         default=None,
@@ -171,7 +169,7 @@ class FareType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EquivFare(CurrencyAmountType):
         """
         Attributes:
@@ -187,7 +185,7 @@ class FareType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Taxes:
         """
         Attributes:
@@ -234,7 +232,7 @@ class FareType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareComponentsTaxes:
             fare_component_taxes: list[FareComponentTaxesType] = field(
                 default_factory=list,
@@ -247,7 +245,7 @@ class FareType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class LegsTaxes:
             leg_taxes: list[FareType.Taxes.LegsTaxes.LegTaxes] = field(
                 default_factory=list,
@@ -260,7 +258,7 @@ class FareType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class LegTaxes:
                 """
                 Attributes:
@@ -286,7 +284,7 @@ class FareType:
                     },
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Fees:
         """
         Attributes:
@@ -305,7 +303,7 @@ class FareType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Obfees:
         """
         Attributes:
@@ -330,7 +328,7 @@ class FareType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReissueInfoList:
         """
         Attributes:
@@ -347,7 +345,7 @@ class FareType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PenaltiesInfo:
         """
         Attributes:
@@ -364,7 +362,7 @@ class FareType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Penalty:
             """
             Attributes:
@@ -458,7 +456,7 @@ class FareType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Cat16TextOnly:
                 """
                 Attributes:
@@ -466,8 +464,7 @@ class FareType:
                     fare_component_id: Fare component Id
                 """
 
-                fare_basis_code: None | str = field(
-                    default=None,
+                fare_basis_code: str = field(
                     metadata={
                         "name": "FareBasisCode",
                         "type": "Attribute",
@@ -475,18 +472,17 @@ class FareType:
                         "min_length": 1,
                         "max_length": 15,
                         "pattern": r"[A-Z0-9]+(/[A-Z0-9]+)?",
-                    },
+                    }
                 )
-                fare_component_id: None | int = field(
-                    default=None,
+                fare_component_id: int = field(
                     metadata={
                         "name": "FareComponentID",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpaExtensions:
         """
         Attributes:
@@ -559,7 +555,7 @@ class FareType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Legs:
             """
             Attributes:
@@ -576,7 +572,7 @@ class FareType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Leg:
                 """
                 Attributes:
@@ -596,14 +592,13 @@ class FareType:
                         "N" - unknown status.
                 """
 
-                base_fare: None | CurrencyAmountType = field(
-                    default=None,
+                base_fare: CurrencyAmountType = field(
                     metadata={
                         "name": "BaseFare",
                         "type": "Element",
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                         "required": True,
-                    },
+                    }
                 )
                 equiv_fare: (
                     None | FareType.TpaExtensions.Legs.Leg.EquivFare
@@ -623,14 +618,13 @@ class FareType:
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                     },
                 )
-                total_fare: None | CurrencyAmountType = field(
-                    default=None,
+                total_fare: CurrencyAmountType = field(
                     metadata={
                         "name": "TotalFare",
                         "type": "Element",
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                         "required": True,
-                    },
+                    }
                 )
                 total_mileage: (
                     None | FareType.TpaExtensions.Legs.Leg.TotalMileage
@@ -657,7 +651,7 @@ class FareType:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class EquivFare(CurrencyAmountType):
                     """
                     Attributes:
@@ -674,35 +668,33 @@ class FareType:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class Taxes:
                     """
                     Attributes:
                         tax: Any individual tax applied to the fare
                     """
 
-                    tax: None | AirTaxType = field(
-                        default=None,
+                    tax: AirTaxType = field(
                         metadata={
                             "name": "Tax",
                             "type": "Element",
                             "namespace": "http://www.opentravel.org/OTA/2003/05",
                             "required": True,
-                        },
+                        }
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class TotalMileage:
-                    amount: None | object = field(
-                        default=None,
+                    amount: object = field(
                         metadata={
                             "name": "Amount",
                             "type": "Attribute",
                             "required": True,
-                        },
+                        }
                     )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareComponents:
             """
             Attributes:
@@ -722,7 +714,7 @@ class FareType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FareComponent:
                 """
                 Attributes:
@@ -850,7 +842,7 @@ class FareType:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class EquivFare(CurrencyAmountType):
                     """
                     Attributes:
@@ -867,24 +859,23 @@ class FareType:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class Taxes:
                     """
                     Attributes:
                         tax: Any individual tax applied to the fare
                     """
 
-                    tax: None | AirTaxType = field(
-                        default=None,
+                    tax: AirTaxType = field(
                         metadata={
                             "name": "Tax",
                             "type": "Element",
                             "namespace": "http://www.opentravel.org/OTA/2003/05",
                             "required": True,
-                        },
+                        }
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class Segment:
                     """
                     Attributes:
@@ -894,24 +885,22 @@ class FareType:
                             OriginDestinationOption of current itinerary
                     """
 
-                    leg_index: None | int = field(
-                        default=None,
+                    leg_index: int = field(
                         metadata={
                             "name": "LegIndex",
                             "type": "Attribute",
                             "required": True,
-                        },
+                        }
                     )
-                    flight_index: None | int = field(
-                        default=None,
+                    flight_index: int = field(
                         metadata={
                             "name": "FlightIndex",
                             "type": "Attribute",
                             "required": True,
-                        },
+                        }
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class HandlingMarkupDetail:
                     """
                     Attributes:
@@ -981,7 +970,7 @@ class FareType:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FareRetailerRule:
                     """
                     Attributes:
@@ -990,26 +979,24 @@ class FareType:
                         code:
                     """
 
-                    transaction_type: None | str = field(
-                        default=None,
+                    transaction_type: str = field(
                         metadata={
                             "name": "TransactionType",
                             "type": "Attribute",
                             "required": True,
                             "pattern": r"[0-9A-Za-z]+",
-                        },
+                        }
                     )
-                    code: None | str = field(
-                        default=None,
+                    code: str = field(
                         metadata={
                             "name": "Code",
                             "type": "Attribute",
                             "required": True,
                             "pattern": r"[0-9A-Za-z]{2,20}",
-                        },
+                        }
                     )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SellingFareDataList:
             selling_fare_data: list[SellingFareDataType] = field(
                 default_factory=list,
@@ -1021,7 +1008,7 @@ class FareType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CommissionData:
             """
             Attributes:

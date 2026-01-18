@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticDataIdentifierSet:
     """
     This represents the ability to define a list of
@@ -88,14 +88,13 @@ class DiagnosticDataIdentifierSet:
     class Meta:
         name = "DIAGNOSTIC-DATA-IDENTIFIER-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticDataIdentifierSet.ShortNameFragments
@@ -196,7 +195,7 @@ class DiagnosticDataIdentifierSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -207,7 +206,7 @@ class DiagnosticDataIdentifierSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -218,7 +217,7 @@ class DiagnosticDataIdentifierSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataIdentifierRefs:
         data_identifier_ref: list[
             DiagnosticDataIdentifierSet.DataIdentifierRefs.DataIdentifierRef
@@ -231,13 +230,12 @@ class DiagnosticDataIdentifierSet:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DataIdentifierRef(Ref):
-            dest: None | DiagnosticDataIdentifierSubtypesEnum = field(
-                default=None,
+            dest: DiagnosticDataIdentifierSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

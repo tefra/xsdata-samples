@@ -8,7 +8,7 @@ from travelport.models.vehicle_upsell_qualify import VehicleUpsellQualify
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleUpsellRule:
     """
     Binds an VehicleUpsellQualify and VehicleUpsellOffer.

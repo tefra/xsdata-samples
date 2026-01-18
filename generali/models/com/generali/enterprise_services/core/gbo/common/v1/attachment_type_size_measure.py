@@ -12,16 +12,15 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.simple_
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttachmentTypeSizeMeasure(MeasureType):
     class Meta:
         global_type = False
 
-    unit_code: None | SimpleUomAmountOfInformationCodeType = field(
-        default=None,
+    unit_code: SimpleUomAmountOfInformationCodeType = field(
         metadata={
             "name": "unitCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -97,7 +97,7 @@ from .warning_indicator_requested_bit_needs import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswServiceDependency:
     """
     Specialization of ServiceDependency in the context of an
@@ -215,7 +215,7 @@ class BswServiceDependency:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AssignedDataTypes:
         role_based_data_type_assignment: list[RoleBasedDataTypeAssignment] = (
             field(
@@ -228,7 +228,7 @@ class BswServiceDependency:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AssignedDatas:
         role_based_data_assignment: list[RoleBasedDataAssignment] = field(
             default_factory=list,
@@ -239,7 +239,7 @@ class BswServiceDependency:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AssignedEntryRoles:
         role_based_bsw_module_entry_assignment: list[
             RoleBasedBswModuleEntryAssignment
@@ -252,7 +252,7 @@ class BswServiceDependency:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceNeeds:
         bsw_mgr_needs: None | BswMgrNeeds = field(
             default=None,

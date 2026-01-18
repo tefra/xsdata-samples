@@ -12,7 +12,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomMeta:
     """
     <div> <h3>Custom Metadata</h3> </div>.
@@ -22,21 +22,19 @@ class CustomMeta:
         name = "custom-meta"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    meta_name: None | MetaName = field(
-        default=None,
+    meta_name: MetaName = field(
         metadata={
             "name": "meta-name",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    meta_value: None | MetaValue = field(
-        default=None,
+    meta_value: MetaValue = field(
         metadata={
             "name": "meta-value",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     assigning_authority: None | str = field(
         default=None,

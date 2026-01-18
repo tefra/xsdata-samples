@@ -12,7 +12,7 @@ from .vehicle_journey_ref_structure import VehicleJourneyRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceJourneyInterchangeVersionStructure(InterchangeVersionStructure):
     class Meta:
         name = "ServiceJourneyInterchange_VersionStructure"
@@ -49,23 +49,21 @@ class ServiceJourneyInterchangeVersionStructure(InterchangeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_journey_ref: None | VehicleJourneyRefStructure = field(
-        default=None,
+    from_journey_ref: VehicleJourneyRefStructure = field(
         metadata={
             "name": "FromJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    to_journey_ref: None | VehicleJourneyRefStructure = field(
-        default=None,
+    to_journey_ref: VehicleJourneyRefStructure = field(
         metadata={
             "name": "ToJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     service_journey_pattern_interchange_ref: (
         None | ServiceJourneyPatternInterchangeRef

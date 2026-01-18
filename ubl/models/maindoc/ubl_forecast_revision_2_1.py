@@ -34,7 +34,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ForecastRevisionType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -76,14 +76,13 @@ class ForecastRevisionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     copy_indicator: None | CopyIndicator = field(
         default=None,
@@ -101,14 +100,13 @@ class ForecastRevisionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -126,14 +124,13 @@ class ForecastRevisionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    sequence_number_id: None | SequenceNumberId = field(
-        default=None,
+    sequence_number_id: SequenceNumberId = field(
         metadata={
             "name": "SequenceNumberID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     revision_status_code: None | RevisionStatusCode = field(
         default=None,
@@ -151,14 +148,13 @@ class ForecastRevisionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    forecast_period: None | ForecastPeriod = field(
-        default=None,
+    forecast_period: ForecastPeriod = field(
         metadata={
             "name": "ForecastPeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     original_document_reference: tuple[OriginalDocumentReference, ...] = field(
         default_factory=tuple,
@@ -176,23 +172,21 @@ class ForecastRevisionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sender_party: None | SenderParty = field(
-        default=None,
+    sender_party: SenderParty = field(
         metadata={
             "name": "SenderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    receiver_party: None | ReceiverParty = field(
-        default=None,
+    receiver_party: ReceiverParty = field(
         metadata={
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     buyer_customer_party: None | BuyerCustomerParty = field(
         default=None,
@@ -221,7 +215,7 @@ class ForecastRevisionType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ForecastRevision(ForecastRevisionType):
     class Meta:
         namespace = (

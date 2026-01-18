@@ -7,7 +7,7 @@ from ipxact.models.qualified_expression import QualifiedExpression
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefaultValue(QualifiedExpression):
     """
     Default value for a wire port.

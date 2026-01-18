@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticConnectionRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -68,13 +68,12 @@ class DiagnosticConnectionRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticConnectionRef(Ref):
-        dest: None | DiagnosticConnectionSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticConnectionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DoIpInstantiation:
     """
     This meta-class defines the attributes for the DoIP configuration on a
@@ -114,14 +114,13 @@ class DoIpInstantiation:
     class Meta:
         name = "DO-IP-INSTANTIATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DoIpInstantiation.ShortNameFragments = field(
         default=None,
@@ -276,7 +275,7 @@ class DoIpInstantiation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -287,7 +286,7 @@ class DoIpInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -298,7 +297,7 @@ class DoIpInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NetworkInterfaces:
         do_ip_network_configuration: list[DoIpNetworkConfiguration] = field(
             default_factory=list,
@@ -309,7 +308,7 @@ class DoIpInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequestConfigurations:
         do_ip_request_configuration: list[DoIpRequestConfiguration] = field(
             default_factory=list,

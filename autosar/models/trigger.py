@@ -19,7 +19,7 @@ from .sw_impl_policy_enum import SwImplPolicyEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Trigger:
     """
     A trigger which is provided (i.e. released) or required (i.e. used to
@@ -88,14 +88,13 @@ class Trigger:
     class Meta:
         name = "TRIGGER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | Trigger.ShortNameFragments = field(
         default=None,
@@ -200,7 +199,7 @@ class Trigger:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -211,7 +210,7 @@ class Trigger:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

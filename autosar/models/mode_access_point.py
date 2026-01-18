@@ -14,7 +14,7 @@ from .r_mode_group_in_atomic_swc_instance_ref import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModeAccessPoint:
     """
     A ModeAccessPoint is required by a RunnableEntity owned by a Mode
@@ -88,7 +88,7 @@ class ModeAccessPoint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeGroupIref:
         p_mode_group_in_atomic_swc_instance_ref: (
             None | PModeGroupInAtomicSwcInstanceRef

@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.tpeg_point_descriptor import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TpegIlcPointDescriptor(TpegPointDescriptor):
     """
     A descriptor for describing a junction by defining the intersecting
@@ -25,16 +25,15 @@ class TpegIlcPointDescriptor(TpegPointDescriptor):
     :ivar tpeg_ilc_point_descriptor_extension:
     """
 
-    tpeg_ilc_point_descriptor_type: (
-        None | TpegLoc03IlcPointDescriptorSubtypeEnum
-    ) = field(
-        default=None,
-        metadata={
-            "name": "tpegIlcPointDescriptorType",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    tpeg_ilc_point_descriptor_type: TpegLoc03IlcPointDescriptorSubtypeEnum = (
+        field(
+            metadata={
+                "name": "tpegIlcPointDescriptorType",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            }
+        )
     )
     tpeg_ilc_point_descriptor_extension: None | ExtensionType = field(
         default=None,

@@ -7,7 +7,7 @@ from .specification_document_scope import SpecificationDocumentScope
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecificationScope:
     """
     Specification of the relevant subset of Autosar specifications.
@@ -56,7 +56,7 @@ class SpecificationScope:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SpecificationDocumentScopes:
         specification_document_scope: list[SpecificationDocumentScope] = field(
             default_factory=list,

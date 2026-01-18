@@ -12,7 +12,7 @@ from travelport.models.air_upsell_qualify_search_criteria import (
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirUpsellSearchCriteria:
     """
     Search criteria for AirUpsell.
@@ -30,13 +30,10 @@ class AirUpsellSearchCriteria:
             },
         )
     )
-    air_upsell_qualify_search_criteria: (
-        None | AirUpsellQualifySearchCriteria
-    ) = field(
-        default=None,
+    air_upsell_qualify_search_criteria: AirUpsellQualifySearchCriteria = field(
         metadata={
             "name": "AirUpsellQualifySearchCriteria",
             "type": "Element",
             "required": True,
-        },
+        }
     )

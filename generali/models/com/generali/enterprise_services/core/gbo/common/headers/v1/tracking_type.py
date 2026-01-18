@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrackingType(BaseHeaderType):
     """
     <description xmlns="">Holds in-flight tracking
@@ -28,21 +28,19 @@ class TrackingType(BaseHeaderType):
         boundary.</description>
     """
 
-    tracking_id: None | str = field(
-        default=None,
+    tracking_id: str = field(
         metadata={
             "name": "TrackingID",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
             "required": True,
-        },
+        }
     )
-    conversation_id: None | str = field(
-        default=None,
+    conversation_id: str = field(
         metadata={
             "name": "ConversationID",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
             "required": True,
-        },
+        }
     )

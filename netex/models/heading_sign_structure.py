@@ -16,16 +16,15 @@ from .transport_submode import TransportSubmode
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HeadingSignStructure(SignEquipmentVersionStructure):
-    place_name: None | MultilingualString = field(
-        default=None,
+    place_name: MultilingualString = field(
         metadata={
             "name": "PlaceName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     line_ref: None | FlexibleLineRef | LineRef = field(
         default=None,

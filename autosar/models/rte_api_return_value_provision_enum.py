@@ -9,7 +9,7 @@ from .rte_api_return_value_provision_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RteApiReturnValueProvisionEnum:
     """
     This meta-class provides values to control how return values from RTE
@@ -31,11 +31,10 @@ class RteApiReturnValueProvisionEnum:
     class Meta:
         name = "RTE-API-RETURN-VALUE-PROVISION-ENUM"
 
-    value: None | RteApiReturnValueProvisionEnumSimple = field(
-        default=None,
+    value: RteApiReturnValueProvisionEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

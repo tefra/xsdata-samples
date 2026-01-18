@@ -10,7 +10,7 @@ from .path_link_ref_by_value import PathLinkRefByValue
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PathLinkRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "pathLinkRefs_RelStructure"

@@ -12,7 +12,7 @@ from .file_info_comment import FileInfoComment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Autosar:
     """
     Root element of an AUTOSAR description, also the root element in
@@ -89,7 +89,7 @@ class Autosar:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArPackages:
         ar_package: list[ArPackage] = field(
             default_factory=list,

@@ -7,7 +7,7 @@ from .graphic_notation_enum_simple import GraphicNotationEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GraphicNotationEnum:
     """
     This enumerator specifies the various notations (finally file types)
@@ -29,11 +29,10 @@ class GraphicNotationEnum:
     class Meta:
         name = "GRAPHIC-NOTATION-ENUM"
 
-    value: None | GraphicNotationEnumSimple = field(
-        default=None,
+    value: GraphicNotationEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

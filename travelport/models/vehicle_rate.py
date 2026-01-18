@@ -26,7 +26,7 @@ from travelport.models.vehicle_rate_required_payment import (
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleRate:
     """
     Rate summary.

@@ -7,7 +7,7 @@ from sdmx_ml.models.structure_usage_type import StructureUsageType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataflowBaseType(StructureUsageType):
     """
     MetadataflowBaseType is an abstract base type that serves as the basis

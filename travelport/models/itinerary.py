@@ -8,7 +8,7 @@ from travelport.models.type_itinerary_option import TypeItineraryOption
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Itinerary:
     """
     Allows an agency to select the itinenary option for ticket.

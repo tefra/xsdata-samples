@@ -8,7 +8,7 @@ from .error_code_structure import ErrorCodeStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParametersIgnoredErrorStructure(ErrorCodeStructure):
     parameter_name: Iterable[str] = field(
         default_factory=list,

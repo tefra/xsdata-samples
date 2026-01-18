@@ -7,7 +7,7 @@ from travelport.models.saved_trip_activity_type import SavedTripActivityType
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SavedTripActivity:
     """
     This element ties together related objects for a saved trip.
@@ -284,275 +284,250 @@ class SavedTripActivity:
             "max_occurs": 999,
         },
     )
-    type_value: None | SavedTripActivityType = field(
-        default=None,
+    type_value: SavedTripActivityType = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BookingTravelerRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SearchPassengerRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PointOfSaleRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccountingRemarkRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GeneralRemarkRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AirPricingModifierRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AirPricingSolutionRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VehicleSearchModifiersRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VehicleDateLocationRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SpecialEquipmentRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VehicleSpecialRequestRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PaymentInformationRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DeliveryAddressRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CollectionAddressRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlightArrivalInformationRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VehicleRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VendorLocationRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HotelPropertyRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HotelStayRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HotelRulesModifiersRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HotelDetailsModifiersRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HotelRateDetailRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PromotionCodeRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RailPricingSolutionRef:
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

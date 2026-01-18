@@ -13,7 +13,7 @@ from .text_table_mapping import TextTableMapping
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataPrototypeMapping:
     """
     Defines the mapping of two particular VariableDataPrototypes,
@@ -150,51 +150,47 @@ class DataPrototypeMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FirstDataPrototypeRef(Ref):
-        dest: None | AutosarDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: AutosarDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FirstToSecondDataTransformationRef(Ref):
-        dest: None | DataTransformationSubtypesEnum = field(
-            default=None,
+        dest: DataTransformationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecondDataPrototypeRef(Ref):
-        dest: None | AutosarDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: AutosarDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecondToFirstDataTransformationRef(Ref):
-        dest: None | DataTransformationSubtypesEnum = field(
-            default=None,
+        dest: DataTransformationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SubElementMappings:
         sub_element_mapping: list[SubElementMapping] = field(
             default_factory=list,
@@ -205,7 +201,7 @@ class DataPrototypeMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TextTableMappings:
         text_table_mapping: list[TextTableMapping] = field(
             default_factory=list,

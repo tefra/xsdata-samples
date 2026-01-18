@@ -7,7 +7,7 @@ from .remoting_technology_enum_simple import RemotingTechnologyEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RemotingTechnologyEnum:
     """
     Remoting technology identifier.
@@ -28,11 +28,10 @@ class RemotingTechnologyEnum:
     class Meta:
         name = "REMOTING-TECHNOLOGY-ENUM"
 
-    value: None | RemotingTechnologyEnumSimple = field(
-        default=None,
+    value: RemotingTechnologyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -8,7 +8,7 @@ from travelport.models.vehicle_upsell_qualify import VehicleUpsellQualify
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleUpsellAdd:
     """
     Add command for adding VehicleUpsellQualify,VehicleUpsellOffer.
@@ -17,13 +17,12 @@ class VehicleUpsellAdd:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    vehicle_upsell_qualify: None | VehicleUpsellQualify = field(
-        default=None,
+    vehicle_upsell_qualify: VehicleUpsellQualify = field(
         metadata={
             "name": "VehicleUpsellQualify",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     vehicle_upsell_offer: None | VehicleUpsellOffer = field(
         default=None,

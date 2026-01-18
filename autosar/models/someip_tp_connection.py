@@ -10,7 +10,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipTpConnection:
     """
     A connection identifies the sender and the receiver of this particular
@@ -89,35 +89,32 @@ class SomeipTpConnection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpChannelRef(Ref):
-        dest: None | SomeipTpChannelSubtypesEnum = field(
-            default=None,
+        dest: SomeipTpChannelSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpSduRef(Ref):
-        dest: None | PduTriggeringSubtypesEnum = field(
-            default=None,
+        dest: PduTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransportPduRef(Ref):
-        dest: None | PduTriggeringSubtypesEnum = field(
-            default=None,
+        dest: PduTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

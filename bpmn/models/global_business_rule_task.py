@@ -7,7 +7,7 @@ from .t_global_business_rule_task import TGlobalBusinessRuleTask
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GlobalBusinessRuleTask(TGlobalBusinessRuleTask):
     class Meta:
         name = "globalBusinessRuleTask"

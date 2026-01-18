@@ -17,7 +17,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organi
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganisationGbotype:
     """
     - <xs:description
@@ -84,14 +84,13 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    primary_address: None | AddressType = field(
-        default=None,
+    primary_address: AddressType = field(
         metadata={
             "name": "PrimaryAddress",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
             "required": True,
-        },
+        }
     )
     gen_global_ultimate_guns: None | str = field(
         default=None,

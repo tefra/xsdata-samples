@@ -10,7 +10,7 @@ from travelport.models.type_element_status_6 import TypeElementStatus6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Guarantee5:
     """
     Payment Guarantee Guarantee, Deposit.
@@ -58,13 +58,12 @@ class Guarantee5:
             "type": "Element",
         },
     )
-    type_value: None | GuaranteeType10 = field(
-        default=None,
+    type_value: GuaranteeType10 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     key: None | str = field(
         default=None,

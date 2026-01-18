@@ -27,7 +27,7 @@ from .trigger_i_pdu_send_condition import TriggerIPduSendCondition
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PduTriggering:
     """
     The PduTriggering describes on which channel the IPdu is transmitted.
@@ -120,14 +120,13 @@ class PduTriggering:
     class Meta:
         name = "PDU-TRIGGERING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | PduTriggering.ShortNameFragments = field(
         default=None,
@@ -260,7 +259,7 @@ class PduTriggering:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -271,7 +270,7 @@ class PduTriggering:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -282,7 +281,7 @@ class PduTriggering:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IPduPortRefs:
         i_pdu_port_ref: list[PduTriggering.IPduPortRefs.IPduPortRef] = field(
             default_factory=list,
@@ -293,29 +292,27 @@ class PduTriggering:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class IPduPortRef(Ref):
-            dest: None | IPduPortSubtypesEnum = field(
-                default=None,
+            dest: IPduPortSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IPduRef(Ref):
-        dest: None | PduSubtypesEnum = field(
-            default=None,
+        dest: PduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalTriggerings:
         i_signal_triggering_ref_conditional: list[
             ISignalTriggeringRefConditional
@@ -328,18 +325,17 @@ class PduTriggering:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecOcCryptoMappingRef(Ref):
-        dest: None | SecOcCryptoServiceMappingSubtypesEnum = field(
-            default=None,
+        dest: SecOcCryptoServiceMappingSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TriggerIPduSendConditions:
         trigger_i_pdu_send_condition: list[TriggerIPduSendCondition] = field(
             default_factory=list,

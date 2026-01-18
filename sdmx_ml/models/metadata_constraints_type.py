@@ -7,7 +7,7 @@ from sdmx_ml.models.metadata_constraint_type import MetadataConstraintType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataConstraintsType:
     """
     MetadataConstraintsType describes the structure of the metadata

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GenreType1:
     class Meta:
         name = "genreType"
@@ -17,11 +17,10 @@ class GenreType1:
             "namespace": "urn:vpro:media:2009",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
             "pattern": r"3(\.[0-9]+)+",
-        },
+        }
     )

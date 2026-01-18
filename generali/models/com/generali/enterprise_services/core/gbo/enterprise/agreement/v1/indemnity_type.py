@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndemnityType:
     limit: None | AmountType = field(
         default=None,

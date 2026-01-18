@@ -30,7 +30,7 @@ from .vehicle_journey_ref_structure import VehicleJourneyRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyMeetingVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "JourneyMeeting_VersionStructure"
@@ -51,23 +51,21 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_journey_ref: None | VehicleJourneyRefStructure = field(
-        default=None,
+    from_journey_ref: VehicleJourneyRefStructure = field(
         metadata={
             "name": "FromJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    to_journey_ref: None | VehicleJourneyRefStructure = field(
-        default=None,
+    to_journey_ref: VehicleJourneyRefStructure = field(
         metadata={
             "name": "ToJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     from_point_in_journey_pattern_ref: (
         None | PointInJourneyPatternRefStructure

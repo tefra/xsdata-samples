@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.traffic_view_record import TrafficViewRecord
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinearTrafficView:
     """
     An identifiable instance of a linear traffic view at a single point in
@@ -25,16 +25,13 @@ class LinearTrafficView:
     :ivar id:
     """
 
-    linear_predefined_location_reference: (
-        None | PredefinedLocationVersionedReference
-    ) = field(
-        default=None,
+    linear_predefined_location_reference: PredefinedLocationVersionedReference = field(
         metadata={
             "name": "linearPredefinedLocationReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     traffic_view_record: list[TrafficViewRecord] = field(
         default_factory=list,
@@ -53,10 +50,9 @@ class LinearTrafficView:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

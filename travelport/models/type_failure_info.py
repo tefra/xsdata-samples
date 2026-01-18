@@ -5,24 +5,22 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeFailureInfo:
     class Meta:
         name = "typeFailureInfo"
 
-    code: None | int = field(
-        default=None,
+    code: int = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    message: None | str = field(
-        default=None,
+    message: str = field(
         metadata={
             "name": "Message",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

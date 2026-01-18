@@ -11,7 +11,7 @@ from travelport.models.type_profile_info_2 import TypeProfileInfo2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BranchGroupInfo2(TypeProfileInfo2):
     """
     Branch group specific profile information.
@@ -78,25 +78,23 @@ class BranchGroupInfo2(TypeProfileInfo2):
             "max_occurs": 999,
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
-    branch_group_code: None | str = field(
-        default=None,
+    branch_group_code: str = field(
         metadata={
             "name": "BranchGroupCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        },
+        }
     )
     profile_sync_to: None | bool = field(
         default=None,

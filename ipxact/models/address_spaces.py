@@ -20,7 +20,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddressSpaces:
     """
     If this component is a bus initiator, this lists all the address spaces
@@ -43,7 +43,7 @@ class AddressSpaces:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AddressSpace:
         """
         :ivar name: Unique name
@@ -73,12 +73,11 @@ class AddressSpaces:
         :ivar id:
         """
 
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         display_name: None | DisplayName = field(
             default=None,
@@ -100,19 +99,17 @@ class AddressSpaces:
                 "type": "Element",
             },
         )
-        range: None | UnsignedPositiveLongintExpression = field(
-            default=None,
+        range: UnsignedPositiveLongintExpression = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
-        width: None | UnsignedPositiveIntExpression = field(
-            default=None,
+        width: UnsignedPositiveIntExpression = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         segments: None | AddressSpaces.AddressSpace.Segments = field(
             default=None,
@@ -155,7 +152,7 @@ class AddressSpaces:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Segments:
             """
             :ivar segment: Address segment withing an addressSpace
@@ -169,7 +166,7 @@ class AddressSpaces:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Segment:
                 """
                 :ivar name: Unique name
@@ -185,12 +182,11 @@ class AddressSpaces:
                 :ivar id:
                 """
 
-                name: None | str = field(
-                    default=None,
+                name: str = field(
                     metadata={
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 display_name: None | DisplayName = field(
                     default=None,
@@ -212,20 +208,18 @@ class AddressSpaces:
                         "type": "Element",
                     },
                 )
-                address_offset: None | UnsignedLongintExpression = field(
-                    default=None,
+                address_offset: UnsignedLongintExpression = field(
                     metadata={
                         "name": "addressOffset",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
-                range: None | UnsignedPositiveLongintExpression = field(
-                    default=None,
+                range: UnsignedPositiveLongintExpression = field(
                     metadata={
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 vendor_extensions: None | VendorExtensions = field(
                     default=None,

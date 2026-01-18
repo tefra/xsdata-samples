@@ -11,7 +11,7 @@ from travelport.models.type_result_message_1 import TypeResultMessage1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirPricePoint:
     """
     The container which holds the Non Solutioned result.
@@ -103,13 +103,12 @@ class AirPricePoint:
             "max_occurs": 999,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     total_price: None | str = field(
         default=None,

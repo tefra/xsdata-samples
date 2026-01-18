@@ -9,7 +9,7 @@ from .t_root_element import TRootElement
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TInterface(TRootElement):
     class Meta:
         name = "tInterface"
@@ -22,12 +22,11 @@ class TInterface(TRootElement):
             "min_occurs": 1,
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     implementation_ref: None | QName = field(
         default=None,

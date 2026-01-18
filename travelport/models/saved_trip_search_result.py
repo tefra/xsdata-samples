@@ -10,7 +10,7 @@ from travelport.models.type_saved_trip_product_info import (
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SavedTripSearchResult:
     """
     Container for SavedTrp that match the search criteria.
@@ -52,23 +52,21 @@ class SavedTripSearchResult:
             "type": "Attribute",
         },
     )
-    saved_trip_name: None | str = field(
-        default=None,
+    saved_trip_name: str = field(
         metadata={
             "name": "SavedTripName",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    locator_code: None | str = field(
-        default=None,
+    locator_code: str = field(
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
     universal_record_locator_code: None | str = field(
         default=None,
@@ -80,7 +78,7 @@ class SavedTripSearchResult:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProductInfo(TypeSavedTripProductInfo):
         name: list[Name1] = field(
             default_factory=list,

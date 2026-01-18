@@ -9,7 +9,7 @@ from sdmx_ml.models.measure import Measure
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MeasureListType(ComponentListType):
     """
     MeasureListType describes the structure of the measure descriptor for a

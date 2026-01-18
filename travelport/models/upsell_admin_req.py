@@ -10,7 +10,7 @@ from travelport.models.vehicle_upsell_criteria import VehicleUpsellCriteria
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UpsellAdminReq(BaseReq1):
     """
     Request to add/delete/update qualify/offer.

@@ -10,7 +10,7 @@ from travelport.models.type_proprietary_data_history_proprietary_data_type_1 imp
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeProprietaryDataHistory1(TypeKeyElement1):
     """
     History Element for Proprietary Data.

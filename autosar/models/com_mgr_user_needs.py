@@ -17,7 +17,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ComMgrUserNeeds:
     """
     Specifies the abstract needs on the configuration of the Communication
@@ -82,14 +82,13 @@ class ComMgrUserNeeds:
     class Meta:
         name = "COM-MGR-USER-NEEDS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ComMgrUserNeeds.ShortNameFragments = field(
         default=None,
@@ -178,7 +177,7 @@ class ComMgrUserNeeds:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -189,7 +188,7 @@ class ComMgrUserNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

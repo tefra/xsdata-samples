@@ -9,7 +9,7 @@ from .service_request_structure import ServiceRequestStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceRequest(ServiceRequestStructure):
     class Meta:
         namespace = "http://www.siri.org.uk/siri"

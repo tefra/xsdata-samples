@@ -7,7 +7,7 @@ from .rpt_access_enum import RptAccessEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RptSwPrototypingAccess:
     """
     Describes the accessibility of data and modes by the rapid prototyping

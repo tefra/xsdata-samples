@@ -7,7 +7,7 @@ from .argument_direction_enum_simple import ArgumentDirectionEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ArgumentDirectionEnum:
     """
     Use cases: * Arguments in ClientServerOperation can have different
@@ -33,11 +33,10 @@ class ArgumentDirectionEnum:
     class Meta:
         name = "ARGUMENT-DIRECTION-ENUM"
 
-    value: None | ArgumentDirectionEnumSimple = field(
-        default=None,
+    value: ArgumentDirectionEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

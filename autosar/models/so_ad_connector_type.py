@@ -7,7 +7,7 @@ from .so_ad_connector_type_simple import SoAdConnectorTypeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoAdConnectorType:
     """
     Availability of protocol plug-ins.
@@ -30,11 +30,10 @@ class SoAdConnectorType:
     class Meta:
         name = "SO-AD-CONNECTOR-TYPE"
 
-    value: None | SoAdConnectorTypeSimple = field(
-        default=None,
+    value: SoAdConnectorTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

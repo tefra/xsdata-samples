@@ -12,7 +12,7 @@ from crossref.models.org.crossref.access_indicators.license_ref import (
 __NAMESPACE__ = "http://www.crossref.org/AccessIndicators.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Program:
     """
     Accommodates deposit of license metadata.

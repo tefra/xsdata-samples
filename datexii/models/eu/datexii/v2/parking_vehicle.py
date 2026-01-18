@@ -14,7 +14,7 @@ from datexii.models.eu.datexii.v2.vehicle import Vehicle
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingVehicle:
     """
     Information about one individual parking vehicle.
@@ -37,14 +37,13 @@ class ParkingVehicle:
     :ivar version:
     """
 
-    parking_record_reference: None | ParkingRecordVersionedReference = field(
-        default=None,
+    parking_record_reference: ParkingRecordVersionedReference = field(
         metadata={
             "name": "parkingRecordReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     parking_space_reference: None | str = field(
         default=None,
@@ -72,13 +71,12 @@ class ParkingVehicle:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle: None | Vehicle = field(
-        default=None,
+    vehicle: Vehicle = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     individual_charge: None | IndividualCharge = field(
         default=None,
@@ -104,17 +102,15 @@ class ParkingVehicle:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.location_descriptor_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SupplementaryPositionalDescription:
     """
     A collection of supplementary positional information which improves the

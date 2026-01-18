@@ -10,7 +10,7 @@ from travelport.models.type_segment_ref_2 import TypeSegmentRef2
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SegmentSelect:
     """
     To be used to pass the selected segment.

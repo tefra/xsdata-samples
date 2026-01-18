@@ -15,7 +15,7 @@ from travelport.models.service_data_6 import ServiceData6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceRuleType6:
     """
     Contains the rules for applying service rules.
@@ -83,16 +83,15 @@ class ServiceRuleType6:
             "max_occurs": 99,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ApplicationRules:
         """
         Parameters
@@ -152,7 +151,7 @@ class ServiceRuleType6:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ApplicationLevel:
         """
         Parameters
@@ -203,7 +202,7 @@ class ServiceRuleType6:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ApplicationLimits:
             """
             Parameters
@@ -225,7 +224,7 @@ class ServiceRuleType6:
                 )
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModifyRules:
         """
         Parameters
@@ -266,7 +265,7 @@ class ServiceRuleType6:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ModifyRule:
             """
             Parameters
@@ -289,13 +288,12 @@ class ServiceRuleType6:
                 which is mapped to Other
             """
 
-            modification: None | ModificationType6 = field(
-                default=None,
+            modification: ModificationType6 = field(
                 metadata={
                     "name": "Modification",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
             automatically_applied_on_add: bool = field(
                 default=False,
@@ -333,7 +331,7 @@ class ServiceRuleType6:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecondaryTypeRules:
         """
         Parameters
@@ -356,7 +354,7 @@ class ServiceRuleType6:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SecondaryTypeRule:
             """
             Parameters
@@ -378,11 +376,10 @@ class ServiceRuleType6:
                     },
                 )
             )
-            secondary_type: None | str = field(
-                default=None,
+            secondary_type: str = field(
                 metadata={
                     "name": "SecondaryType",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

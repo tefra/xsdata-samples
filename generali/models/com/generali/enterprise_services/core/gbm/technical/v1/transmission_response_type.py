@@ -9,21 +9,20 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gb
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbm/technical/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransmissionResponseType(BaseGbmtype):
     """
     <description xmlns="">The definition of the response message that
     supports retrieve of a agreement</description>.
     """
 
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/technical/v1",
             "required": True,
-        },
+        }
     )
     error_message: None | str = field(
         default=None,

@@ -13,7 +13,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MemoryRemapDefinitionType:
     """
     Map of address space blocks on a target bus interface in a specific
@@ -36,13 +36,12 @@ class MemoryRemapDefinitionType:
     class Meta:
         name = "memoryRemapDefinitionType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -117,7 +116,7 @@ class MemoryRemapDefinitionType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RemapDefinitionRef:
         value: str = field(
             default="",
@@ -125,16 +124,15 @@ class MemoryRemapDefinitionType:
                 "required": True,
             },
         )
-        type_definitions: None | str = field(
-            default=None,
+        type_definitions: str = field(
             metadata={
                 "name": "typeDefinitions",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Bank(BankedDefinitionBankType):
         vendor_extensions: None | VendorExtensions = field(
             default=None,

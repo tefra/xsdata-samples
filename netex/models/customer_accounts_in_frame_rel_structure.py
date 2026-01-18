@@ -9,7 +9,7 @@ from .frame_containment_structure import FrameContainmentStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerAccountsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "customerAccountsInFrame_RelStructure"

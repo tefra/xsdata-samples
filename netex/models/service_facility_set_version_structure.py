@@ -20,7 +20,7 @@ from .vehicle_access_facility_list import VehicleAccessFacilityList
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
     class Meta:
         name = "ServiceFacilitySet_VersionStructure"

@@ -11,7 +11,7 @@ from .referrable_subtypes_enum import ReferrableSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceBase:
     """
     This meta-class establishes a basis for relative references.
@@ -134,7 +134,7 @@ class ReferenceBase:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GlobalInPackageRefs:
         global_in_package_ref: list[
             ReferenceBase.GlobalInPackageRefs.GlobalInPackageRef
@@ -147,18 +147,17 @@ class ReferenceBase:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class GlobalInPackageRef(Ref):
-            dest: None | ArPackageSubtypesEnum = field(
-                default=None,
+            dest: ArPackageSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GlobalElements:
         """
         :ivar global_element: This attribute represents a meta-class for
@@ -175,13 +174,12 @@ class ReferenceBase:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PackageRef(Ref):
-        dest: None | ArPackageSubtypesEnum = field(
-            default=None,
+        dest: ArPackageSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

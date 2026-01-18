@@ -16,7 +16,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneratorType:
     """
     Types of generators.
@@ -52,13 +52,12 @@ class GeneratorType:
     class Meta:
         name = "generatorType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -121,14 +120,13 @@ class GeneratorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    generator_exe: None | IpxactUri = field(
-        default=None,
+    generator_exe: IpxactUri = field(
         metadata={
             "name": "generatorExe",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     vendor_extensions: None | VendorExtensions = field(
         default=None,
@@ -152,13 +150,12 @@ class GeneratorType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ApiType:
-        value: None | ApiType = field(
-            default=None,
+        value: ApiType = field(
             metadata={
                 "required": True,
-            },
+            }
         )
         id: None | str = field(
             default=None,
@@ -168,7 +165,7 @@ class GeneratorType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransportMethods:
         """
         :ivar transport_method: Defines a SOAP transport protocol other
@@ -177,16 +174,13 @@ class GeneratorType:
         :ivar id:
         """
 
-        transport_method: (
-            None | GeneratorType.TransportMethods.TransportMethod
-        ) = field(
-            default=None,
+        transport_method: GeneratorType.TransportMethods.TransportMethod = field(
             metadata={
                 "name": "transportMethod",
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 "required": True,
-            },
+            }
         )
         id: None | str = field(
             default=None,
@@ -196,13 +190,12 @@ class GeneratorType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TransportMethod:
-            value: None | TransportMethodType = field(
-                default=None,
+            value: TransportMethodType = field(
                 metadata={
                     "required": True,
-                },
+                }
             )
             id: None | str = field(
                 default=None,

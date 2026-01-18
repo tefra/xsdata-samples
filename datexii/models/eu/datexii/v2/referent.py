@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.referent_type_enum import ReferentTypeEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Referent:
     """
     A referent on a linear object that has a known location such as a node,
@@ -26,15 +26,14 @@ class Referent:
     :ivar referent_extension:
     """
 
-    referent_identifier: None | str = field(
-        default=None,
+    referent_identifier: str = field(
         metadata={
             "name": "referentIdentifier",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
     referent_name: None | str = field(
         default=None,
@@ -45,14 +44,13 @@ class Referent:
             "max_length": 1024,
         },
     )
-    referent_type: None | ReferentTypeEnum = field(
-        default=None,
+    referent_type: ReferentTypeEnum = field(
         metadata={
             "name": "referentType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     referent_description: None | MultilingualString = field(
         default=None,

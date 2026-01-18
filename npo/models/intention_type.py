@@ -8,7 +8,7 @@ from npo.models.owner_type_enum import OwnerTypeEnum
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IntentionType:
     class Meta:
         name = "intentionType"

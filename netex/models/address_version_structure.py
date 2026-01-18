@@ -9,7 +9,7 @@ from .place_version_structure import PlaceVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddressVersionStructure(PlaceVersionStructure):
     class Meta:
         name = "Address_VersionStructure"

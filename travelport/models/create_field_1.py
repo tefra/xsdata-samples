@@ -15,7 +15,7 @@ from travelport.models.type_string_restriction_1 import TypeStringRestriction1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreateField1:
     """
     Specify any existing fields that belong to this group.
@@ -118,15 +118,14 @@ class CreateField1:
             "type": "Element",
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     description: None | str = field(
         default=None,
@@ -137,13 +136,12 @@ class CreateField1:
             "max_length": 255,
         },
     )
-    type_value: None | TypeCustomFieldDataFormat1 = field(
-        default=None,
+    type_value: TypeCustomFieldDataFormat1 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     encrypted: bool = field(
         default=False,

@@ -17,7 +17,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContactPersonType(BaseIdentifiedComponentType):
     """
     <description xmlns=""/>.
@@ -28,14 +28,13 @@ class ContactPersonType(BaseIdentifiedComponentType):
         points for the contact person.</description>
     """
 
-    individual: None | IndividualActorType = field(
-        default=None,
+    individual: IndividualActorType = field(
         metadata={
             "name": "Individual",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
-        },
+        }
     )
     contact_points: None | ContactPersonTypeContactPoints = field(
         default=None,

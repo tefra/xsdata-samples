@@ -7,7 +7,7 @@ from ipxact.models.unsigned_longint_expression import UnsignedLongintExpression
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseAddress(UnsignedLongintExpression):
     """
     Base of an address block, bank or address space.

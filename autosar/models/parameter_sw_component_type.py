@@ -34,7 +34,7 @@ from .unit_group_subtypes_enum import UnitGroupSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParameterSwComponentType:
     """
     The ParameterSwComponentType defines parameters and characteristic
@@ -146,14 +146,13 @@ class ParameterSwComponentType:
     class Meta:
         name = "PARAMETER-SW-COMPONENT-TYPE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ParameterSwComponentType.ShortNameFragments
@@ -336,7 +335,7 @@ class ParameterSwComponentType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -347,7 +346,7 @@ class ParameterSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -358,7 +357,7 @@ class ParameterSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -387,7 +386,7 @@ class ParameterSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwComponentDocumentations:
         sw_component_documentation: list[SwComponentDocumentation] = field(
             default_factory=list,
@@ -398,7 +397,7 @@ class ParameterSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConsistencyNeedss:
         consistency_needs: list[ConsistencyNeeds] = field(
             default_factory=list,
@@ -409,7 +408,7 @@ class ParameterSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ports:
         p_port_prototype: list[PPortPrototype] = field(
             default_factory=list,
@@ -436,7 +435,7 @@ class ParameterSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortGroups:
         port_group: list[PortGroup] = field(
             default_factory=list,
@@ -447,7 +446,7 @@ class ParameterSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnitGroupRefs:
         unit_group_ref: list[
             ParameterSwComponentType.UnitGroupRefs.UnitGroupRef
@@ -460,18 +459,17 @@ class ParameterSwComponentType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UnitGroupRef(Ref):
-            dest: None | UnitGroupSubtypesEnum = field(
-                default=None,
+            dest: UnitGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConstantMappingRefs:
         constant_mapping_ref: list[
             ParameterSwComponentType.ConstantMappingRefs.ConstantMappingRef
@@ -484,18 +482,17 @@ class ParameterSwComponentType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ConstantMappingRef(Ref):
-            dest: None | ConstantSpecificationMappingSetSubtypesEnum = field(
-                default=None,
+            dest: ConstantSpecificationMappingSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataTypeMappingRefs:
         data_type_mapping_ref: list[
             ParameterSwComponentType.DataTypeMappingRefs.DataTypeMappingRef
@@ -508,18 +505,17 @@ class ParameterSwComponentType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DataTypeMappingRef(Ref):
-            dest: None | DataTypeMappingSetSubtypesEnum = field(
-                default=None,
+            dest: DataTypeMappingSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InstantiationDataDefPropss:
         instantiation_data_def_props: list[InstantiationDataDefProps] = field(
             default_factory=list,

@@ -9,7 +9,7 @@ from travelport.models.agent_action_action_type_4 import AgentActionActionType4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgentAction4:
     """
     Depending on context, this will represent information about which agent
@@ -40,39 +40,35 @@ class AgentAction4:
         name = "AgentAction"
         namespace = "http://www.travelport.com/schema/common_v37_0"
 
-    action_type: None | AgentActionActionType4 = field(
-        default=None,
+    action_type: AgentActionActionType4 = field(
         metadata={
             "name": "ActionType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    agent_code: None | str = field(
-        default=None,
+    agent_code: str = field(
         metadata={
             "name": "AgentCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    branch_code: None | str = field(
-        default=None,
+    branch_code: str = field(
         metadata={
             "name": "BranchCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        },
+        }
     )
-    agency_code: None | str = field(
-        default=None,
+    agency_code: str = field(
         metadata={
             "name": "AgencyCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     agent_sine: None | str = field(
         default=None,
@@ -81,13 +77,12 @@ class AgentAction4:
             "type": "Attribute",
         },
     )
-    event_time: None | XmlDateTime = field(
-        default=None,
+    event_time: XmlDateTime = field(
         metadata={
             "name": "EventTime",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     agent_override: None | str = field(
         default=None,

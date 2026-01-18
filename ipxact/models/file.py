@@ -13,7 +13,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class File:
     """
     IP-XACT reference to a file or directory.
@@ -51,12 +51,11 @@ class File:
         name = "file"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: None | IpxactUri = field(
-        default=None,
+    name: IpxactUri = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     file_type: list[FileType] = field(
         default_factory=list,
@@ -155,7 +154,7 @@ class File:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IsIncludeFile:
         """
         :ivar value:
@@ -163,11 +162,10 @@ class File:
             that are needed in top file
         """
 
-        value: None | bool = field(
-            default=None,
+        value: bool = field(
             metadata={
                 "required": True,
-            },
+            }
         )
         external_declarations: bool = field(
             default=False,
@@ -177,7 +175,7 @@ class File:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LogicalName:
         """
         :ivar value:
@@ -198,7 +196,7 @@ class File:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExportedName:
         value: str = field(
             default="",
@@ -214,7 +212,7 @@ class File:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BuildCommand:
         """
         :ivar command: Command used to build this file.
@@ -258,7 +256,7 @@ class File:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Flags(StringExpression):
             """
             :ivar append: "true" indicates that the flags shall be
@@ -273,7 +271,7 @@ class File:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImageType:
         value: str = field(
             default="",

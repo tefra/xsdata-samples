@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.parking_equipment_or_service_facility import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Equipment(ParkingEquipmentOrServiceFacility):
     """
     One type of equipment, that is available on the parking site.
@@ -23,14 +23,13 @@ class Equipment(ParkingEquipmentOrServiceFacility):
     :ivar equipment_extension:
     """
 
-    equipment_type: None | EquipmentTypeEnum = field(
-        default=None,
+    equipment_type: EquipmentTypeEnum = field(
         metadata={
             "name": "equipmentType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     electric_charging: None | ElectricCharging = field(
         default=None,

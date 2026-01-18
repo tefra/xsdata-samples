@@ -13,7 +13,7 @@ from travelport.models.hotel_stay import HotelStay
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelRulesReq(BaseReq1):
     """
     Retrieves hotel rules using hotel property code, chain code and hotel
@@ -48,7 +48,7 @@ class HotelRulesReq(BaseReq1):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HotelRulesLookup:
         """
         Parameters
@@ -66,21 +66,19 @@ class HotelRulesReq(BaseReq1):
             Applicable for 1p.
         """
 
-        hotel_property: None | HotelProperty = field(
-            default=None,
+        hotel_property: HotelProperty = field(
             metadata={
                 "name": "HotelProperty",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
-        hotel_stay: None | HotelStay = field(
-            default=None,
+        hotel_stay: HotelStay = field(
             metadata={
                 "name": "HotelStay",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         hotel_rules_modifiers: None | HotelRulesModifiers = field(
             default=None,
@@ -89,21 +87,19 @@ class HotelRulesReq(BaseReq1):
                 "type": "Element",
             },
         )
-        rate_plan_type: None | str = field(
-            default=None,
+        rate_plan_type: str = field(
             metadata={
                 "name": "RatePlanType",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
-        base: None | str = field(
-            default=None,
+        base: str = field(
             metadata={
                 "name": "Base",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         rules_detail_reqd: None | HotelRulesLookupRulesDetailReqd = field(
             default=None,

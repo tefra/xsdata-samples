@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationRateValue(DataValue):
     """
     A measured or calculated value of the application rate of a substance.
@@ -18,14 +18,13 @@ class ApplicationRateValue(DataValue):
     :ivar application_rate_value_extension:
     """
 
-    application_rate: None | float = field(
-        default=None,
+    application_rate: float = field(
         metadata={
             "name": "applicationRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     application_rate_value_extension: None | ExtensionType = field(
         default=None,

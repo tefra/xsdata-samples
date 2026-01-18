@@ -15,7 +15,7 @@ from .transport_type_version_structure import TransportTypeVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SimpleVehicleTypeVersionStructure(TransportTypeVersionStructure):
     class Meta:
         name = "SimpleVehicleType_VersionStructure"

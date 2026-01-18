@@ -7,7 +7,7 @@ from travelport.models.distance_units_3 import DistanceUnits3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Distance3:
     """
     Container to encapsulate the a distance value with its unit of measure.
@@ -32,13 +32,12 @@ class Distance3:
             "length": 2,
         },
     )
-    value: None | int = field(
-        default=None,
+    value: int = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     direction: None | str = field(
         default=None,

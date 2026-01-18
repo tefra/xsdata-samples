@@ -9,7 +9,7 @@ from .time_demand_type_assignment import TimeDemandTypeAssignment
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeDemandTypeAssignmentsInFrameRelStructure(
     ContainmentAggregationStructure
 ):

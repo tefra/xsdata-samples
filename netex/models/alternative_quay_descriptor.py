@@ -10,7 +10,7 @@ from .alternative_quay_descriptor_versioned_child_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlternativeQuayDescriptor(
     AlternativeQuayDescriptorVersionedChildStructure
 ):
@@ -38,11 +38,10 @@ class AlternativeQuayDescriptor(
             "type": "Ignore",
         },
     )
-    type_of_name: None | str = field(
-        default=None,
+    type_of_name: str = field(
         metadata={
             "name": "TypeOfName",
             "type": "Element",
             "required": True,
-        },
+        }
     )

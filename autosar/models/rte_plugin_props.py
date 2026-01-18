@@ -8,7 +8,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RtePluginProps:
     """
     The properties of a communication graph with respect to the utilization
@@ -73,24 +73,22 @@ class RtePluginProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AssociatedCrossSwClusterComRtePluginRef(Ref):
-        dest: None | EcucContainerValueSubtypesEnum = field(
-            default=None,
+        dest: EcucContainerValueSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AssociatedRtePluginRef(Ref):
-        dest: None | EcucContainerValueSubtypesEnum = field(
-            default=None,
+        dest: EcucContainerValueSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

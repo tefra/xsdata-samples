@@ -22,7 +22,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AliveSupervision:
     """
     Defines an AliveSupervision for one checkpoint.
@@ -99,14 +99,13 @@ class AliveSupervision:
     class Meta:
         name = "ALIVE-SUPERVISION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | AliveSupervision.ShortNameFragments = field(
         default=None,
@@ -227,7 +226,7 @@ class AliveSupervision:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -238,7 +237,7 @@ class AliveSupervision:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -249,13 +248,12 @@ class AliveSupervision:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CheckpointRef(Ref):
-        dest: None | SupervisionCheckpointSubtypesEnum = field(
-            default=None,
+        dest: SupervisionCheckpointSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -9,7 +9,7 @@ from .crypto_service_key_generation_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CryptoServiceKeyGenerationEnum:
     """
     This enumeration shall be taken to express the handling of a crypto key
@@ -32,11 +32,10 @@ class CryptoServiceKeyGenerationEnum:
     class Meta:
         name = "CRYPTO-SERVICE-KEY-GENERATION-ENUM"
 
-    value: None | CryptoServiceKeyGenerationEnumSimple = field(
-        default=None,
+    value: CryptoServiceKeyGenerationEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -7,7 +7,7 @@ from .ipv_4_address_source_enum_simple import Ipv4AddressSourceEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ipv4AddressSourceEnum:
     """
     Defines how the node obtains its IPv4-Address.
@@ -28,11 +28,10 @@ class Ipv4AddressSourceEnum:
     class Meta:
         name = "IPV-4-ADDRESS-SOURCE-ENUM"
 
-    value: None | Ipv4AddressSourceEnumSimple = field(
-        default=None,
+    value: Ipv4AddressSourceEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

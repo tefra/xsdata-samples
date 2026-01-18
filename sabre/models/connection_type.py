@@ -11,7 +11,7 @@ from sabre.models.request_location_type import RequestLocationType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConnectionType:
     """
     To specify connection locations, preference level for each, min
@@ -30,7 +30,7 @@ class ConnectionType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConnectionLocation(RequestLocationType):
         """
         Attributes:

@@ -7,7 +7,7 @@ from sdmx_ml.models.attribute_list_type import AttributeListType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AttributeList(AttributeListType):
     """
     AttributeList describes the attribute descriptor for the data structure

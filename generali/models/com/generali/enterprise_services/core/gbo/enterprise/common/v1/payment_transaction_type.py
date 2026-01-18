@@ -17,7 +17,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentTransactionType(BaseReferenceComponentType):
     payment_date: None | DateTimeType = field(
         default=None,

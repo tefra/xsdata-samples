@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.vms_unit_record import VmsUnitRecord
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsUnitTable:
     """
     A versioned VMS Unit Table comprising a number of data records, each
@@ -49,17 +49,15 @@ class VmsUnitTable:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

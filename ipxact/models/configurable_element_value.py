@@ -7,7 +7,7 @@ from ipxact.models.complex_base_expression import ComplexBaseExpression
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConfigurableElementValue(ComplexBaseExpression):
     """
     Describes the content of a configurable element.
@@ -24,13 +24,12 @@ class ConfigurableElementValue(ComplexBaseExpression):
         name = "configurableElementValue"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    reference_id: None | str = field(
-        default=None,
+    reference_id: str = field(
         metadata={
             "name": "referenceId",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,

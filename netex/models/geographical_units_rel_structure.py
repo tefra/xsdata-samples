@@ -10,7 +10,7 @@ from .geographical_unit_ref import GeographicalUnitRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeographicalUnitsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "geographicalUnits_RelStructure"

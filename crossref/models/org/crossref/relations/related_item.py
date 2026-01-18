@@ -13,7 +13,7 @@ from crossref.models.org.crossref.relations.intra_work_relation import (
 __NAMESPACE__ = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RelatedItem:
     class Meta:
         name = "related_item"

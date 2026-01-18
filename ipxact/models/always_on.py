@@ -7,7 +7,7 @@ from ipxact.models.unsigned_bit_expression import UnsignedBitExpression
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlwaysOn(UnsignedBitExpression):
     """
     Boolean value.

@@ -9,6 +9,6 @@ from .passenger_information_request_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TripPlanRequestRefStructure(PassengerInformationRequestRefStructure):
     pass

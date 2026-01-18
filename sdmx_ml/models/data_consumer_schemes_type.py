@@ -7,7 +7,7 @@ from sdmx_ml.models.data_consumer_scheme_type import DataConsumerSchemeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataConsumerSchemesType:
     """
     DataConsumerSchemesType describes the structure of the data consumer

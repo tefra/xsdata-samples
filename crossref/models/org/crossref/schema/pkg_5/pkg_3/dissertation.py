@@ -57,7 +57,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.titles import Titles
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Dissertation:
     """
     dissertation is the top level element for deposit of metadata about one
@@ -80,12 +80,11 @@ class Dissertation:
             "type": "Element",
         },
     )
-    titles: None | Titles = field(
-        default=None,
+    titles: Titles = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     abstract: list[Abstract] = field(
         default_factory=list,
@@ -171,12 +170,11 @@ class Dissertation:
             "type": "Element",
         },
     )
-    doi_data: None | DoiData = field(
-        default=None,
+    doi_data: DoiData = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     citation_list: None | CitationList = field(
         default=None,

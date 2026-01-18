@@ -18,7 +18,7 @@ from .coct_mt710000_uv01 import CoctMt710000Uv01Place
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt070000Uv01LocatedEntity:
     class Meta:
         name = "COCT_MT070000UV01.LocatedEntity"
@@ -99,11 +99,10 @@ class CoctMt070000Uv01LocatedEntity:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassLocatedEntity = field(
-        default=None,
+    class_code: RoleClassLocatedEntity = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

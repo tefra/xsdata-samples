@@ -9,7 +9,7 @@ from .td_event_bsw_module_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventBswModuleTypeEnum:
     """
     This is used to describe the specific event type of a TDEventBswModule.
@@ -30,11 +30,10 @@ class TdEventBswModuleTypeEnum:
     class Meta:
         name = "TD-EVENT-BSW-MODULE-TYPE-ENUM"
 
-    value: None | TdEventBswModuleTypeEnumSimple = field(
-        default=None,
+    value: TdEventBswModuleTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

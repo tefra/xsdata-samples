@@ -9,7 +9,7 @@ from travelport.models.air_upsell_update import AirUpsellUpdate
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirUpsellCriteria:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"

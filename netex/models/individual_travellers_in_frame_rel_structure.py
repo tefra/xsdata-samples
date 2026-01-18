@@ -9,7 +9,7 @@ from .individual_traveller import IndividualTraveller
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndividualTravellersInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "individualTravellersInFrame_RelStructure"

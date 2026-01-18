@@ -9,7 +9,7 @@ from .diagnostic_type_of_freeze_frame_record_numeration_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticTypeOfFreezeFrameRecordNumerationEnum:
     """
     FreezeFrame record numeration type.
@@ -30,13 +30,10 @@ class DiagnosticTypeOfFreezeFrameRecordNumerationEnum:
     class Meta:
         name = "DIAGNOSTIC-TYPE-OF-FREEZE-FRAME-RECORD-NUMERATION-ENUM"
 
-    value: None | DiagnosticTypeOfFreezeFrameRecordNumerationEnumSimple = (
-        field(
-            default=None,
-            metadata={
-                "required": True,
-            },
-        )
+    value: DiagnosticTypeOfFreezeFrameRecordNumerationEnumSimple = field(
+        metadata={
+            "required": True,
+        }
     )
     s: None | str = field(
         default=None,

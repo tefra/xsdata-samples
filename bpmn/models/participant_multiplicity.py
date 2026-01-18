@@ -7,7 +7,7 @@ from .t_participant_multiplicity import TParticipantMultiplicity
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParticipantMultiplicity(TParticipantMultiplicity):
     class Meta:
         name = "participantMultiplicity"

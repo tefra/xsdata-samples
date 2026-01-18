@@ -19,7 +19,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DltMessage:
     """
     This element defines a DltMessage.
@@ -90,14 +90,13 @@ class DltMessage:
     class Meta:
         name = "DLT-MESSAGE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DltMessage.ShortNameFragments = field(
         default=None,
@@ -218,7 +217,7 @@ class DltMessage:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -229,7 +228,7 @@ class DltMessage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -240,7 +239,7 @@ class DltMessage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DltArguments:
         dlt_argument: list[DltArgument] = field(
             default_factory=list,

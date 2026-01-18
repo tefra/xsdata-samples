@@ -7,7 +7,7 @@ from ipxact.models.indirect_interface_type import IndirectInterfaceType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndirectInterface(IndirectInterfaceType):
     """
     Describes one of the bus interfaces supported by this component.

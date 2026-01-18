@@ -9,7 +9,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessPolicies:
     class Meta:
         name = "accessPolicies"
@@ -24,7 +24,7 @@ class AccessPolicies:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessPolicy:
         mode_ref: list[ModeRef] = field(
             default_factory=list,

@@ -21,7 +21,7 @@ from .tls_crypto_cipher_suite import TlsCryptoCipherSuite
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TlsSecureComProps:
     """
     Configuration of the Transport Layer Security protocol (TLS).
@@ -90,14 +90,13 @@ class TlsSecureComProps:
     class Meta:
         name = "TLS-SECURE-COM-PROPS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TlsSecureComProps.ShortNameFragments = field(
         default=None,
@@ -194,7 +193,7 @@ class TlsSecureComProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -205,7 +204,7 @@ class TlsSecureComProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -216,7 +215,7 @@ class TlsSecureComProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class KeyExchangeRefs:
         key_exchange_ref: list[
             TlsSecureComProps.KeyExchangeRefs.KeyExchangeRef
@@ -229,18 +228,17 @@ class TlsSecureComProps:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class KeyExchangeRef(Ref):
-            dest: None | CryptoServicePrimitiveSubtypesEnum = field(
-                default=None,
+            dest: CryptoServicePrimitiveSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TlsCipherSuites:
         tls_crypto_cipher_suite: list[TlsCryptoCipherSuite] = field(
             default_factory=list,

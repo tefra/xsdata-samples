@@ -9,36 +9,31 @@ from travelport.models.single_profile_migration_req_1 import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SingleProfileMigrationPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: None | object = field(
-        default=None,
+    header: object = field(
         metadata={
             "name": "Header",
             "type": "Element",
-        },
+        }
     )
-    body: None | SingleProfileMigrationPortTypeServiceInput.Body = field(
-        default=None,
+    body: SingleProfileMigrationPortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        single_profile_migration_req: None | SingleProfileMigrationReq1 = (
-            field(
-                default=None,
-                metadata={
-                    "name": "SingleProfileMigrationReq",
-                    "type": "Element",
-                    "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-                },
-            )
+        single_profile_migration_req: SingleProfileMigrationReq1 = field(
+            metadata={
+                "name": "SingleProfileMigrationReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
+            }
         )

@@ -12,7 +12,7 @@ from travelport.models.type_journey_direction import TypeJourneyDirection
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailJourney:
     """
     Captures all journey-related data.
@@ -143,13 +143,12 @@ class RailJourney:
             "max_occurs": 999,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     origin: None | str = field(
         default=None,
@@ -169,13 +168,12 @@ class RailJourney:
             "white_space": "collapse",
         },
     )
-    departure_time: None | str = field(
-        default=None,
+    departure_time: str = field(
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     arrival_time: None | str = field(
         default=None,

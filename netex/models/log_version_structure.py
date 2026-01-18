@@ -10,7 +10,7 @@ from .log_entries_rel_structure import LogEntriesRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LogVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "Log_VersionStructure"

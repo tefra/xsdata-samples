@@ -33,7 +33,7 @@ from .symbol_props import SymbolProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersistencyFileStorageInterface:
     """
     This meta-class provides the ability to implement a PortInterface for
@@ -140,14 +140,13 @@ class PersistencyFileStorageInterface:
     class Meta:
         name = "PERSISTENCY-FILE-STORAGE-INTERFACE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | PersistencyFileStorageInterface.ShortNameFragments
@@ -332,7 +331,7 @@ class PersistencyFileStorageInterface:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -343,7 +342,7 @@ class PersistencyFileStorageInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -354,7 +353,7 @@ class PersistencyFileStorageInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -383,7 +382,7 @@ class PersistencyFileStorageInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Namespaces:
         symbol_props: list[SymbolProps] = field(
             default_factory=list,
@@ -394,7 +393,7 @@ class PersistencyFileStorageInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RedundancyHandlings:
         persistency_redundancy_crc: list[PersistencyRedundancyCrc] = field(
             default_factory=list,
@@ -423,7 +422,7 @@ class PersistencyFileStorageInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FileElements:
         persistency_file_element: list[PersistencyFileElement] = field(
             default_factory=list,

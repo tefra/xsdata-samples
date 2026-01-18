@@ -23,16 +23,15 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TotalPremiumType:
-    warranty_applies_after_days: None | NumericType = field(
-        default=None,
+    warranty_applies_after_days: NumericType = field(
         metadata={
             "name": "WarrantyAppliesAfterDays",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     ppwbasis: None | WarrantyEnum = field(
         default=None,
@@ -50,14 +49,13 @@ class TotalPremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    currency: None | CodeType = field(
-        default=None,
+    currency: CodeType = field(
         metadata={
             "name": "Currency",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     premiums: None | TotalPremiumTypePremiums = field(
         default=None,

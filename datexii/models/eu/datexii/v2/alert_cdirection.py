@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlertCDirection:
     """
     The direction of traffic flow along the road to which the information
@@ -30,14 +30,13 @@ class AlertCDirection:
     :ivar alert_cdirection_extension:
     """
 
-    alert_cdirection_coded: None | AlertCDirectionEnum = field(
-        default=None,
+    alert_cdirection_coded: AlertCDirectionEnum = field(
         metadata={
             "name": "alertCDirectionCoded",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     alert_cdirection_named: None | MultilingualString = field(
         default=None,

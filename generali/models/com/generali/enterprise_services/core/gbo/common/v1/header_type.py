@@ -15,7 +15,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.header_
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HeaderType:
     """
     The header is mandatory for all messages and provides information that

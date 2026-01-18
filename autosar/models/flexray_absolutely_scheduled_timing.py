@@ -9,7 +9,7 @@ from .positive_integer import PositiveInteger
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayAbsolutelyScheduledTiming:
     """
     Each frame in FlexRay is identified by its slot id and communication
@@ -80,7 +80,7 @@ class FlexrayAbsolutelyScheduledTiming:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommunicationCycle:
         cycle_counter: None | CycleCounter = field(
             default=None,

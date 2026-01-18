@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InterfaceMapping:
     """
     This meta-class collects the mappings of elements of a single
@@ -99,14 +99,13 @@ class InterfaceMapping:
     class Meta:
         name = "INTERFACE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | InterfaceMapping.ShortNameFragments = field(
         default=None,
@@ -229,7 +228,7 @@ class InterfaceMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -240,7 +239,7 @@ class InterfaceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -251,7 +250,7 @@ class InterfaceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventMappings:
         event_mapping: list[EventMapping] = field(
             default_factory=list,
@@ -262,7 +261,7 @@ class InterfaceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FieldMappings:
         field_mapping: list[FieldMapping] = field(
             default_factory=list,
@@ -273,7 +272,7 @@ class InterfaceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FireAndForgetMappings:
         fire_and_forget_mapping: list[FireAndForgetMapping] = field(
             default_factory=list,
@@ -284,7 +283,7 @@ class InterfaceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MethodMappings:
         method_mapping: list[MethodMapping] = field(
             default_factory=list,

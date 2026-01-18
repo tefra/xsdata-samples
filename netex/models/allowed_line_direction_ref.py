@@ -9,7 +9,7 @@ from .allowed_line_direction_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AllowedLineDirectionRef(AllowedLineDirectionRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

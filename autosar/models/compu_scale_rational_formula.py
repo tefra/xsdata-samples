@@ -7,7 +7,7 @@ from .compu_rational_coeffs import CompuRationalCoeffs
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompuScaleRationalFormula:
     """
     This meta-class represents the fact that the computation in this scale

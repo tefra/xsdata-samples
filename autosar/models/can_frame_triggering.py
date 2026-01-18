@@ -29,7 +29,7 @@ from .ttcan_absolutely_scheduled_timing import TtcanAbsolutelyScheduledTiming
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanFrameTriggering:
     """
     CAN specific attributes to the FrameTriggering.
@@ -129,14 +129,13 @@ class CanFrameTriggering:
     class Meta:
         name = "CAN-FRAME-TRIGGERING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | CanFrameTriggering.ShortNameFragments = field(
         default=None,
@@ -331,7 +330,7 @@ class CanFrameTriggering:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -342,7 +341,7 @@ class CanFrameTriggering:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -353,7 +352,7 @@ class CanFrameTriggering:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FramePortRefs:
         frame_port_ref: list[CanFrameTriggering.FramePortRefs.FramePortRef] = (
             field(
@@ -366,29 +365,27 @@ class CanFrameTriggering:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FramePortRef(Ref):
-            dest: None | FramePortSubtypesEnum = field(
-                default=None,
+            dest: FramePortSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FrameRef(Ref):
-        dest: None | FrameSubtypesEnum = field(
-            default=None,
+        dest: FrameSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduTriggerings:
         pdu_triggering_ref_conditional: list[PduTriggeringRefConditional] = (
             field(
@@ -401,7 +398,7 @@ class CanFrameTriggering:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AbsolutelyScheduledTimings:
         ttcan_absolutely_scheduled_timing: list[
             TtcanAbsolutelyScheduledTiming

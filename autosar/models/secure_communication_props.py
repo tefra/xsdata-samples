@@ -9,7 +9,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecureCommunicationProps:
     """
     This meta-class contains configuration settings that are specific for

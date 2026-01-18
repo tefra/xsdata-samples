@@ -9,7 +9,7 @@ from .reserved_space_facility_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReservedSpaceFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

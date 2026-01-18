@@ -8,7 +8,7 @@ from .point_1 import Point1
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointPropertyType:
     point: None | Point1 = field(
         default=None,

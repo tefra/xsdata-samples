@@ -22,7 +22,7 @@ from .someip_sd_server_event_group_timing_config_ref_conditional import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EventHandler:
     """
     This element represents an event group as part of the Provided Service
@@ -84,14 +84,13 @@ class EventHandler:
     class Meta:
         name = "EVENT-HANDLER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EventHandler.ShortNameFragments = field(
         default=None,
@@ -207,7 +206,7 @@ class EventHandler:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -218,18 +217,17 @@ class EventHandler:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ApplicationEndpointRef(Ref):
-        dest: None | ApplicationEndpointSubtypesEnum = field(
-            default=None,
+        dest: ApplicationEndpointSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConsumedEventGroupRefs:
         consumed_event_group_ref: list[
             EventHandler.ConsumedEventGroupRefs.ConsumedEventGroupRef
@@ -242,18 +240,17 @@ class EventHandler:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ConsumedEventGroupRef(Ref):
-            dest: None | ConsumedEventGroupSubtypesEnum = field(
-                default=None,
+            dest: ConsumedEventGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventMulticastAddresss:
         application_endpoint_ref_conditional: list[
             ApplicationEndpointRefConditional
@@ -266,7 +263,7 @@ class EventHandler:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduActivationRoutingGroups:
         pdu_activation_routing_group: list[PduActivationRoutingGroup] = field(
             default_factory=list,
@@ -277,7 +274,7 @@ class EventHandler:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RoutingGroupRefs:
         routing_group_ref: list[
             EventHandler.RoutingGroupRefs.RoutingGroupRef
@@ -290,18 +287,17 @@ class EventHandler:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RoutingGroupRef(Ref):
-            dest: None | SoAdRoutingGroupSubtypesEnum = field(
-                default=None,
+            dest: SoAdRoutingGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SdServerEgTimingConfigs:
         someip_sd_server_event_group_timing_config_ref_conditional: list[
             SomeipSdServerEventGroupTimingConfigRefConditional

@@ -19,7 +19,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthernetWakeupSleepOnDatalineConfig:
     """
     EthernetWakeupSleepOnDatalineConfigSet is the main element that
@@ -136,14 +136,13 @@ class EthernetWakeupSleepOnDatalineConfig:
     class Meta:
         name = "ETHERNET-WAKEUP-SLEEP-ON-DATALINE-CONFIG"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | EthernetWakeupSleepOnDatalineConfig.ShortNameFragments
@@ -316,7 +315,7 @@ class EthernetWakeupSleepOnDatalineConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -327,7 +326,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

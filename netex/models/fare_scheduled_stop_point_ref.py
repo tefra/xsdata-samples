@@ -9,7 +9,7 @@ from .fare_scheduled_stop_point_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareScheduledStopPointRef(FareScheduledStopPointRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

@@ -9,7 +9,7 @@ from .show_resource_alias_name_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShowResourceAliasNameEnum:
     """
     This enumerator specifies if the alias names of the reference target
@@ -31,11 +31,10 @@ class ShowResourceAliasNameEnum:
     class Meta:
         name = "SHOW-RESOURCE-ALIAS-NAME-ENUM"
 
-    value: None | ShowResourceAliasNameEnumSimple = field(
-        default=None,
+    value: ShowResourceAliasNameEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

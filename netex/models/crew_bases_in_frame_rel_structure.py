@@ -9,7 +9,7 @@ from .crew_base import CrewBase
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CrewBasesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "crewBasesInFrame_RelStructure"

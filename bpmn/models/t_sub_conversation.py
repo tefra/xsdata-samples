@@ -10,7 +10,7 @@ from .t_conversation_node import TConversationNode
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TSubConversation(TConversationNode):
     class Meta:
         name = "tSubConversation"
@@ -48,7 +48,7 @@ class TSubConversation(TConversationNode):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubConversation(TSubConversation):
     class Meta:
         name = "subConversation"

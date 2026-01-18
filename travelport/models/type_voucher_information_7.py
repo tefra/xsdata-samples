@@ -7,7 +7,7 @@ from travelport.models.type_voucher_type_7 import TypeVoucherType7
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeVoucherInformation7:
     """
     Information pertaining to the payment of a Vehicle Rental.
@@ -32,13 +32,12 @@ class TypeVoucherInformation7:
     class Meta:
         name = "typeVoucherInformation"
 
-    voucher_type: None | TypeVoucherType7 = field(
-        default=None,
+    voucher_type: TypeVoucherType7 = field(
         metadata={
             "name": "VoucherType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     amount: None | str = field(
         default=None,

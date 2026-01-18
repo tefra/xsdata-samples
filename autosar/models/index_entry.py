@@ -8,7 +8,7 @@ from .supscript import Supscript
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndexEntry:
     """
     This class represents an index entry.
@@ -65,10 +65,10 @@ class IndexEntry:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(Supscript):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(Supscript):
         pass

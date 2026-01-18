@@ -10,7 +10,7 @@ from travelport.models.type_profile_type_3 import TypeProfileType3
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileParentSearchSummary1:
     """
     A quick summary of a profile's parent.
@@ -39,21 +39,19 @@ class ProfileParentSearchSummary1:
         name = "ProfileParentSearchSummary"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_type: None | TypeProfileType3 = field(
-        default=None,
+    profile_type: TypeProfileType3 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     provisioning_code: None | str = field(
         default=None,
@@ -64,32 +62,29 @@ class ProfileParentSearchSummary1:
             "max_length": 25,
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
-    version: None | int = field(
-        default=None,
+    version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        },
+        }
     )
-    status: None | TypeProfileEntityStatus1 = field(
-        default=None,
+    status: TypeProfileEntityStatus1 = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     immediate_parent_ref: None | str = field(
         default=None,

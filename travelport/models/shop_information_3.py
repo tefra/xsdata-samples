@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShopInformation3:
     """
     Shopping Information required for File Finishing.
@@ -64,7 +64,7 @@ class ShopInformation3:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SearchRequest:
         """
         Parameters
@@ -113,7 +113,7 @@ class ShopInformation3:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlightsOffered:
         """
         Parameters

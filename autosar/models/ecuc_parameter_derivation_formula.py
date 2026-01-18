@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucParameterDerivationFormula:
     """
     This formula is intended to specify how an ecu parameter can be derived
@@ -71,24 +71,22 @@ class EcucParameterDerivationFormula:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucQueryRef(Ref):
-        dest: None | EcucQuerySubtypesEnum = field(
-            default=None,
+        dest: EcucQuerySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucQueryStringRef(Ref):
-        dest: None | EcucQuerySubtypesEnum = field(
-            default=None,
+        dest: EcucQuerySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

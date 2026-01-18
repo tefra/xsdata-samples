@@ -8,7 +8,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TagWithOptionalValue:
     """
     A tagged value is a combination of a tag (key) and a value that gives

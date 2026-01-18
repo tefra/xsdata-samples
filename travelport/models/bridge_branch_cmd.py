@@ -8,7 +8,7 @@ from travelport.models.bridge_branch_delete import BridgeBranchDelete
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BridgeBranchCmd:
     """
     Command to add or remove a Bridge Branch assignment.

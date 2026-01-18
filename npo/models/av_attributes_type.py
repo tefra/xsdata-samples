@@ -9,7 +9,7 @@ from npo.models.video_attributes_type import VideoAttributesType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvAttributesType:
     class Meta:
         name = "avAttributesType"

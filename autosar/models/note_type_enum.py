@@ -7,7 +7,7 @@ from .note_type_enum_simple import NoteTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NoteTypeEnum:
     """
     This enumerator specifies the type of the note.
@@ -30,11 +30,10 @@ class NoteTypeEnum:
     class Meta:
         name = "NOTE-TYPE-ENUM"
 
-    value: None | NoteTypeEnumSimple = field(
-        default=None,
+    value: NoteTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

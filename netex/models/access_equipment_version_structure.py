@@ -9,7 +9,7 @@ from .place_equipment_version_structure import PlaceEquipmentVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
     class Meta:
         name = "AccessEquipment_VersionStructure"

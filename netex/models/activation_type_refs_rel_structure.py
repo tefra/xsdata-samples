@@ -9,7 +9,7 @@ from .type_of_activation_ref import TypeOfActivationRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ActivationTypeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "activationTypeRefs_RelStructure"

@@ -7,7 +7,7 @@ from travelport.models.custom_field import CustomField
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomFieldGroup:
     """
     Defines the structure of a new field group, which can be based on
@@ -69,23 +69,21 @@ class CustomFieldGroup:
             "max_occurs": 999,
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     display_order: None | int = field(
         default=None,

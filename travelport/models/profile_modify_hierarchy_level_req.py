@@ -8,7 +8,7 @@ from travelport.models.type_profile_type_7 import TypeProfileType7
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileModifyHierarchyLevelReq(BaseReq5):
     """
     Request to modify an existing level within an agency or account
@@ -36,21 +36,19 @@ class ProfileModifyHierarchyLevelReq(BaseReq5):
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    hierarchy_level_id: None | str = field(
-        default=None,
+    hierarchy_level_id: str = field(
         metadata={
             "name": "HierarchyLevelID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_type: None | TypeProfileType7 = field(
-        default=None,
+    profile_type: TypeProfileType7 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     name: None | str = field(
         default=None,

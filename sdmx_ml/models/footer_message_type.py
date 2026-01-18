@@ -10,7 +10,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class FooterMessageType(CodedStatusMessageType):
     """
     FooterMessageType defines the structure of a message that is contained

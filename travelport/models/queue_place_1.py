@@ -7,7 +7,7 @@ from travelport.models.queue_selector_1 import QueueSelector1
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QueuePlace1:
     """
     Allow queue placement of a PNR at the time of booking to be used for

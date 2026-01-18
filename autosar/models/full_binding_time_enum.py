@@ -7,7 +7,7 @@ from .full_binding_time_enum_simple import FullBindingTimeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FullBindingTimeEnum:
     """
     This enumeration specifies the BindingTimes that can be used in AUTOSAR
@@ -29,11 +29,10 @@ class FullBindingTimeEnum:
     class Meta:
         name = "FULL-BINDING-TIME-ENUM"
 
-    value: None | FullBindingTimeEnumSimple = field(
-        default=None,
+    value: FullBindingTimeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

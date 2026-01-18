@@ -10,7 +10,7 @@ from travelport.models.hotel_property_with_media_items import (
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelMediaLinksRsp(BaseRsp1):
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"

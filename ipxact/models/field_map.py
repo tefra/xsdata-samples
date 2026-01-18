@@ -16,7 +16,7 @@ from ipxact.models.sub_port_reference import SubPortReference
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FieldMap:
     """
     Maps slices of this port to component field slices.
@@ -32,13 +32,12 @@ class FieldMap:
         name = "fieldMap"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    field_slice: None | FieldMap.FieldSlice = field(
-        default=None,
+    field_slice: FieldMap.FieldSlice = field(
         metadata={
             "name": "fieldSlice",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     sub_port_reference: list[SubPortReference] = field(
         default_factory=list,
@@ -69,7 +68,7 @@ class FieldMap:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FieldSlice:
         address_space_ref: None | FieldMap.FieldSlice.AddressSpaceRef = field(
             default=None,
@@ -99,13 +98,12 @@ class FieldMap:
                 "type": "Element",
             },
         )
-        address_block_ref: None | AddressBlockRef = field(
-            default=None,
+        address_block_ref: AddressBlockRef = field(
             metadata={
                 "name": "addressBlockRef",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         register_file_ref: list[RegisterFileRef] = field(
             default_factory=list,
@@ -114,13 +112,12 @@ class FieldMap:
                 "type": "Element",
             },
         )
-        register_ref: None | RegisterRef = field(
-            default=None,
+        register_ref: RegisterRef = field(
             metadata={
                 "name": "registerRef",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         alternate_register_ref: None | AlternateRegisterRef = field(
             default=None,
@@ -129,13 +126,12 @@ class FieldMap:
                 "type": "Element",
             },
         )
-        field_ref: None | FieldRef = field(
-            default=None,
+        field_ref: FieldRef = field(
             metadata={
                 "name": "fieldRef",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         range: None | Range = field(
             default=None,
@@ -144,29 +140,27 @@ class FieldMap:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AddressSpaceRef:
-            address_space_ref: None | str = field(
-                default=None,
+            address_space_ref: str = field(
                 metadata={
                     "name": "addressSpaceRef",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MemoryMapRef:
-            memory_map_ref: None | str = field(
-                default=None,
+            memory_map_ref: str = field(
                 metadata={
                     "name": "memoryMapRef",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeRef:
         value: str = field(
             default="",
@@ -174,12 +168,11 @@ class FieldMap:
                 "required": True,
             },
         )
-        priority: None | int = field(
-            default=None,
+        priority: int = field(
             metadata={
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         id: None | str = field(
             default=None,

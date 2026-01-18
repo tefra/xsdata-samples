@@ -10,7 +10,7 @@ from .taxi_rank_ref import TaxiRankRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StopPlacesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "stopPlaces_RelStructure"

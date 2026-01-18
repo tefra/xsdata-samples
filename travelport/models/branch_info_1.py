@@ -12,7 +12,7 @@ from travelport.models.type_profile_info_1 import TypeProfileInfo1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BranchInfo1(TypeProfileInfo1):
     """
     Information relating to Branch.
@@ -93,51 +93,46 @@ class BranchInfo1(TypeProfileInfo1):
             "type": "Element",
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
-    geo_city_code: None | str = field(
-        default=None,
+    geo_city_code: str = field(
         metadata={
             "name": "GeoCityCode",
             "type": "Attribute",
             "required": True,
             "max_length": 10,
-        },
+        }
     )
-    control: None | bool = field(
-        default=None,
+    control: bool = field(
         metadata={
             "name": "Control",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    branch_code: None | str = field(
-        default=None,
+    branch_code: str = field(
         metadata={
             "name": "BranchCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        },
+        }
     )
-    currency: None | str = field(
-        default=None,
+    currency: str = field(
         metadata={
             "name": "Currency",
             "type": "Attribute",
             "required": True,
             "length": 3,
-        },
+        }
     )
     profile_sync_to: None | bool = field(
         default=None,

@@ -9,7 +9,7 @@ from travelport.models.type_custom_field_and_group_delete_ref_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomFieldGroupDelete(TypeCustomFieldAndGroupDeleteRef2):
     """
     Removes a Custom Field Group from a Template.

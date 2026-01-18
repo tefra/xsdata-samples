@@ -9,7 +9,7 @@ from .parking_tariff import ParkingTariff
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingTariffsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingTariffsInFrame_RelStructure"

@@ -23,7 +23,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DoIpTpConfig:
     """
     This element defines exactly one DoIpTp Configuration that is used to
@@ -97,14 +97,13 @@ class DoIpTpConfig:
     class Meta:
         name = "DO-IP-TP-CONFIG"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DoIpTpConfig.ShortNameFragments = field(
         default=None,
@@ -219,7 +218,7 @@ class DoIpTpConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -230,7 +229,7 @@ class DoIpTpConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -241,18 +240,17 @@ class DoIpTpConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommunicationClusterRef(Ref):
-        dest: None | CommunicationClusterSubtypesEnum = field(
-            default=None,
+        dest: CommunicationClusterSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DoIpLogicAddresss:
         do_ip_logic_address: list[DoIpLogicAddress] = field(
             default_factory=list,
@@ -263,7 +261,7 @@ class DoIpTpConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpConnections:
         do_ip_tp_connection: list[DoIpTpConnection] = field(
             default_factory=list,

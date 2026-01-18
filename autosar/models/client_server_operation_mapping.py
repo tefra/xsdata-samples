@@ -12,7 +12,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientServerOperationMapping:
     """
     Defines the mapping of two particular ClientServerOperations in context
@@ -99,7 +99,7 @@ class ClientServerOperationMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArgumentMappings:
         data_prototype_mapping: list[DataPrototypeMapping] = field(
             default_factory=list,
@@ -110,35 +110,32 @@ class ClientServerOperationMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FirstOperationRef(Ref):
-        dest: None | ClientServerOperationSubtypesEnum = field(
-            default=None,
+        dest: ClientServerOperationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FirstToSecondDataTransformationRef(Ref):
-        dest: None | DataTransformationSubtypesEnum = field(
-            default=None,
+        dest: DataTransformationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecondOperationRef(Ref):
-        dest: None | ClientServerOperationSubtypesEnum = field(
-            default=None,
+        dest: ClientServerOperationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

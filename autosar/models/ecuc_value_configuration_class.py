@@ -8,7 +8,7 @@ from .ecuc_configuration_variant_enum import EcucConfigurationVariantEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucValueConfigurationClass:
     """
     Specifies the ValueConfigurationClass of a parameter/reference for each

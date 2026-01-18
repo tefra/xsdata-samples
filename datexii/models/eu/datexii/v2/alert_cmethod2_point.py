@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlertCMethod2Point(AlertCPoint):
     """
     A single point on the road network defined by reference to a point in a
@@ -20,25 +20,21 @@ class AlertCMethod2Point(AlertCPoint):
     direction of traffic flow.
     """
 
-    alert_cdirection: None | AlertCDirection = field(
-        default=None,
+    alert_cdirection: AlertCDirection = field(
         metadata={
             "name": "alertCDirection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    alert_cmethod2_primary_point_location: (
-        None | AlertCMethod2PrimaryPointLocation
-    ) = field(
-        default=None,
+    alert_cmethod2_primary_point_location: AlertCMethod2PrimaryPointLocation = field(
         metadata={
             "name": "alertCMethod2PrimaryPointLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     alert_cmethod2_point_extension: None | ExtensionType = field(
         default=None,

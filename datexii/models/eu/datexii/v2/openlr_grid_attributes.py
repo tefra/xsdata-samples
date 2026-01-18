@@ -7,7 +7,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenlrGridAttributes:
     """
     attributes required for the grid method.
@@ -19,23 +19,21 @@ class OpenlrGridAttributes:
     :ivar openlr_grid_attributes_extension:
     """
 
-    openlr_num_columns: None | int = field(
-        default=None,
+    openlr_num_columns: int = field(
         metadata={
             "name": "openlrNumColumns",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    openlr_num_rows: None | int = field(
-        default=None,
+    openlr_num_rows: int = field(
         metadata={
             "name": "openlrNumRows",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     openlr_grid_attributes_extension: None | ExtensionType = field(
         default=None,

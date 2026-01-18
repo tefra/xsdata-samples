@@ -19,7 +19,7 @@ from .sales_offer_package_element_ref import SalesOfferPackageElementRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerPurchasePackageElementVersionStructure(
     PriceableObjectVersionStructure
 ):

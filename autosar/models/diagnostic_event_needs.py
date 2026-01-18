@@ -31,7 +31,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEventNeeds:
     """
     Specifies the abstract needs on the configuration of the Diagnostic
@@ -157,14 +157,13 @@ class DiagnosticEventNeeds:
     class Meta:
         name = "DIAGNOSTIC-EVENT-NEEDS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DiagnosticEventNeeds.ShortNameFragments = (
         field(
@@ -371,7 +370,7 @@ class DiagnosticEventNeeds:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -382,7 +381,7 @@ class DiagnosticEventNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -393,7 +392,7 @@ class DiagnosticEventNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Audiences:
         """
         :ivar audience: This specifies the intended audience for the
@@ -411,7 +410,7 @@ class DiagnosticEventNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DeferringFidRefs:
         deferring_fid_ref: list[
             DiagnosticEventNeeds.DeferringFidRefs.DeferringFidRef
@@ -424,18 +423,17 @@ class DiagnosticEventNeeds:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DeferringFidRef(Ref):
-            dest: None | FunctionInhibitionNeedsSubtypesEnum = field(
-                default=None,
+            dest: FunctionInhibitionNeedsSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagEventDebounceAlgorithm:
         diag_event_debounce_counter_based: (
             None | DiagEventDebounceCounterBased
@@ -468,18 +466,17 @@ class DiagnosticEventNeeds:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InhibitingFidRef(Ref):
-        dest: None | FunctionInhibitionNeedsSubtypesEnum = field(
-            default=None,
+        dest: FunctionInhibitionNeedsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InhibitingSecondaryFidRefs:
         inhibiting_secondary_fid_ref: list[
             DiagnosticEventNeeds.InhibitingSecondaryFidRefs.InhibitingSecondaryFidRef
@@ -492,13 +489,12 @@ class DiagnosticEventNeeds:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class InhibitingSecondaryFidRef(Ref):
-            dest: None | FunctionInhibitionNeedsSubtypesEnum = field(
-                default=None,
+            dest: FunctionInhibitionNeedsSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

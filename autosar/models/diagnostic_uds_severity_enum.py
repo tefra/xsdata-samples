@@ -9,7 +9,7 @@ from .diagnostic_uds_severity_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticUdsSeverityEnum:
     """
     Severity types for a DTC according to ISO 14229-1.
@@ -30,11 +30,10 @@ class DiagnosticUdsSeverityEnum:
     class Meta:
         name = "DIAGNOSTIC-UDS-SEVERITY-ENUM"
 
-    value: None | DiagnosticUdsSeverityEnumSimple = field(
-        default=None,
+    value: DiagnosticUdsSeverityEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

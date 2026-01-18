@@ -23,7 +23,7 @@ from datexii.models.eu.datexii.v2.vms_type_enum import VmsTypeEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsRecord:
     """
     A sub-record in the VMS Unit table defining the characteristics of a

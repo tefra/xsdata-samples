@@ -10,7 +10,7 @@ from travelport.models.type_vehicle_transmission import TypeVehicleTransmission
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleDetail:
     """
     Make, model, etc information about the available vehicles.
@@ -58,13 +58,12 @@ class VehicleDetail:
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     supplier_code: None | str = field(
         default=None,
@@ -94,45 +93,40 @@ class VehicleDetail:
             "type": "Attribute",
         },
     )
-    class_value: None | TypeVehicleClass = field(
-        default=None,
+    class_value: TypeVehicleClass = field(
         metadata={
             "name": "Class",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    category: None | TypeVehicleCategory = field(
-        default=None,
+    category: TypeVehicleCategory = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    air_conditioning: None | bool = field(
-        default=None,
+    air_conditioning: bool = field(
         metadata={
             "name": "AirConditioning",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    transmission: None | TypeVehicleTransmission = field(
-        default=None,
+    transmission: TypeVehicleTransmission = field(
         metadata={
             "name": "Transmission",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    make_model: None | str = field(
-        default=None,
+    make_model: str = field(
         metadata={
             "name": "MakeModel",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     fuel_type: None | TypeFuel = field(
         default=None,

@@ -9,7 +9,7 @@ from .course_of_journeys_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CourseOfJourneys(CourseOfJourneysVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

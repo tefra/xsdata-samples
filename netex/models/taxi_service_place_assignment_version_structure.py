@@ -18,21 +18,20 @@ from .vehicle_sharing_parking_bay_ref import VehicleSharingParkingBayRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxiServicePlaceAssignmentVersionStructure(
     VehicleServicePlaceAssignmentVersionStructure
 ):
     class Meta:
         name = "TaxiServicePlaceAssignment_VersionStructure"
 
-    taxi_service_ref: None | TaxiServiceRef = field(
-        default=None,
+    taxi_service_ref: TaxiServiceRef = field(
         metadata={
             "name": "TaxiServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     taxi_parking_area_ref: None | TaxiParkingAreaRef = field(
         default=None,

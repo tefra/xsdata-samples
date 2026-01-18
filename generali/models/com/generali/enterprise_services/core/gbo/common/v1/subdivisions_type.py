@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubdivisionsType:
     subdivision: list[SubDivisionType] = field(
         default_factory=list,
@@ -17,7 +17,7 @@ class SubdivisionsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubDivisionType:
     subdivision_code: None | str = field(
         default=None,

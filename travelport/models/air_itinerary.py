@@ -9,7 +9,7 @@ from travelport.models.host_token_1 import HostToken1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirItinerary:
     """
     A container for an Air only travel itinerary.

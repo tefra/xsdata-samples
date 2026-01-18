@@ -14,7 +14,7 @@ from .sw_calibration_access_enum import SwCalibrationAccessEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwCalprmAxis:
     """
     This element specifies an individual input parameter axis (abscissa).
@@ -121,13 +121,12 @@ class SwCalprmAxis:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BaseTypeRef(Ref):
-        dest: None | SwBaseTypeSubtypesEnum = field(
-            default=None,
+        dest: SwBaseTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

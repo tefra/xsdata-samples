@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContactsInvolvement:
     contact: list[ContactInvolvement] = field(
         default_factory=list,

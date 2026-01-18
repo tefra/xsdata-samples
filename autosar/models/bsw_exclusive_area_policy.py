@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswExclusiveAreaPolicy:
     """
     The ExclusiveArea for which the BSW Scheduler using this policy.
@@ -89,13 +89,12 @@ class BswExclusiveAreaPolicy:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExclusiveAreaRef(Ref):
-        dest: None | ExclusiveAreaSubtypesEnum = field(
-            default=None,
+        dest: ExclusiveAreaSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

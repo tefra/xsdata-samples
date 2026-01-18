@@ -8,7 +8,7 @@ from ipxact.models.right import Right
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExtendedVectorsType:
     """
     :ivar vector: Left and right ranges of the vector.
@@ -26,23 +26,21 @@ class ExtendedVectorsType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Vector:
-        left: None | Left = field(
-            default=None,
+        left: Left = field(
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 "required": True,
-            },
+            }
         )
-        right: None | Right = field(
-            default=None,
+        right: Right = field(
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 "required": True,
-            },
+            }
         )
         vector_id: None | str = field(
             default=None,

@@ -7,7 +7,7 @@ from travelport.models.leg import Leg
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlternateRoute:
     """
     Information about this Alternate Route component.
@@ -25,11 +25,10 @@ class AlternateRoute:
             "max_occurs": 999,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

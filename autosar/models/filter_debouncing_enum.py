@@ -7,7 +7,7 @@ from .filter_debouncing_enum_simple import FilterDebouncingEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FilterDebouncingEnum:
     """
     This enumeration defines possible values for the filter debouncing
@@ -29,11 +29,10 @@ class FilterDebouncingEnum:
     class Meta:
         name = "FILTER-DEBOUNCING-ENUM"
 
-    value: None | FilterDebouncingEnumSimple = field(
-        default=None,
+    value: FilterDebouncingEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -13,7 +13,7 @@ from travelport.models.request_reference_data_item import (
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceDataRetrieveReq(BaseReq1):
     """
     Request to retrieve code, name and description for a specific reference
@@ -56,13 +56,12 @@ class ReferenceDataRetrieveReq(BaseReq1):
             "type": "Element",
         },
     )
-    type_code: None | str = field(
-        default=None,
+    type_code: str = field(
         metadata={
             "name": "TypeCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        },
+        }
     )

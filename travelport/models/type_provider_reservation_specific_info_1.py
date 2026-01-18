@@ -10,7 +10,7 @@ from travelport.models.provider_reservation_info_ref_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeProviderReservationSpecificInfo1:
     """
     Parameters

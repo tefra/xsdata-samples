@@ -13,7 +13,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.corresp import Corresp
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuthorNotes:
     """
     <div> <h3>Author Note Group</h3> </div>.

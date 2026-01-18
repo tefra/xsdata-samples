@@ -22,7 +22,7 @@ from .variable_data_prototype_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IoHwAbstractionServerAnnotation:
     """
     The IoHwAbstractionServerAnnotation will only be used from a sensor- or
@@ -194,46 +194,42 @@ class IoHwAbstractionServerAnnotation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArgumentRef(Ref):
-        dest: None | ArgumentDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ArgumentDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataElementRef(Ref):
-        dest: None | VariableDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: VariableDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FailureMonitoringRef(Ref):
-        dest: None | PortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: PortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TriggerRef(Ref):
-        dest: None | TriggerSubtypesEnum = field(
-            default=None,
+        dest: TriggerSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

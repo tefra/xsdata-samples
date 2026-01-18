@@ -7,7 +7,7 @@ from travelport.models.tax_1 import Tax1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LandCharges:
     """
     Prints non-air charges on a document.

@@ -9,7 +9,7 @@ from .diagnostic_significance_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticSignificanceEnum:
     """
     Significance level of a diagnostic event.
@@ -30,11 +30,10 @@ class DiagnosticSignificanceEnum:
     class Meta:
         name = "DIAGNOSTIC-SIGNIFICANCE-ENUM"
 
-    value: None | DiagnosticSignificanceEnumSimple = field(
-        default=None,
+    value: DiagnosticSignificanceEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

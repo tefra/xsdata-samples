@@ -32,16 +32,15 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LimitType(BaseIdentifiedComponentType):
-    value: None | ValueType = field(
-        default=None,
+    value: ValueType = field(
         metadata={
             "name": "Value",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     maximum: None | AmountType = field(
         default=None,
@@ -59,14 +58,13 @@ class LimitType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    basis: None | CodeDescriptionType = field(
-        default=None,
+    basis: CodeDescriptionType = field(
         metadata={
             "name": "Basis",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     time_specification: None | NumericType = field(
         default=None,
@@ -84,23 +82,21 @@ class LimitType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    value_applies_to: None | CodeDescriptionType = field(
-        default=None,
+    value_applies_to: CodeDescriptionType = field(
         metadata={
             "name": "ValueAppliesTo",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    type_value: None | LimitTypeType = field(
-        default=None,
+    type_value: LimitTypeType = field(
         metadata={
             "name": "Type",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     indemnity: None | IndemnityType = field(
         default=None,

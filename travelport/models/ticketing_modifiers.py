@@ -34,7 +34,7 @@ from travelport.models.type_ticket_modifier_value_type import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TicketingModifiers:
     """
     A container to identify individual ticketing modifiers.
@@ -412,7 +412,7 @@ class TicketingModifiers:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BulkTicket(TypeBulkTicketModifierType):
         """
         Parameters

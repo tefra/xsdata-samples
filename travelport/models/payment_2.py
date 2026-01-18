@@ -8,7 +8,7 @@ from travelport.models.type_element_status_3 import TypeElementStatus3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Payment2:
     """
     Payment information - must be used in conjunction with credit card
@@ -54,21 +54,19 @@ class Payment2:
             "type": "Attribute",
         },
     )
-    type_value: None | PaymentType2 = field(
-        default=None,
+    type_value: PaymentType2 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    form_of_payment_ref: None | str = field(
-        default=None,
+    form_of_payment_ref: str = field(
         metadata={
             "name": "FormOfPaymentRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     booking_traveler_ref: None | str = field(
         default=None,
@@ -77,13 +75,12 @@ class Payment2:
             "type": "Attribute",
         },
     )
-    amount: None | str = field(
-        default=None,
+    amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     amount_type: None | str = field(
         default=None,

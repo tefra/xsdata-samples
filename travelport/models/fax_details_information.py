@@ -8,7 +8,7 @@ from travelport.models.fax_details import FaxDetails
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FaxDetailsInformation:
     """
     Container to send Fax details Information for ticketing.
@@ -32,11 +32,10 @@ class FaxDetailsInformation:
             "max_occurs": 999,
         },
     )
-    fax_details: None | FaxDetails = field(
-        default=None,
+    fax_details: FaxDetails = field(
         metadata={
             "name": "FaxDetails",
             "type": "Element",
             "required": True,
-        },
+        }
     )

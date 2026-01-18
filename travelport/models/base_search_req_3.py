@@ -8,7 +8,7 @@ from travelport.models.next_result_reference_3 import NextResultReference3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseSearchReq3(BaseReq3):
     class Meta:
         name = "BaseSearchReq"

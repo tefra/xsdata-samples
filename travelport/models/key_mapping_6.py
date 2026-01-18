@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class KeyMapping6:
     """
     Element for which mapping key sent in the request is different from the
@@ -25,27 +25,24 @@ class KeyMapping6:
         name = "KeyMapping"
         namespace = "http://www.travelport.com/schema/common_v38_0"
 
-    element_name: None | str = field(
-        default=None,
+    element_name: str = field(
         metadata={
             "name": "ElementName",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    original_key: None | str = field(
-        default=None,
+    original_key: str = field(
         metadata={
             "name": "OriginalKey",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    new_key: None | str = field(
-        default=None,
+    new_key: str = field(
         metadata={
             "name": "NewKey",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

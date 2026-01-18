@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.vms_pictogram_display_area_pictogram_sequencin
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsPictogramDisplayArea:
     """
     An area on a VMS used for the display of pictograms and associated

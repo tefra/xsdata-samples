@@ -12,7 +12,7 @@ from travelport.models.type_status_6 import TypeStatus6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceFeeInfo6:
     """
     Travel Agency Service Fees (TASF) are charged by the agency through BSP

@@ -11,16 +11,15 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LineOfBusinessType:
-    line_of_business: None | LineOfBusinessDetailType = field(
-        default=None,
+    line_of_business: LineOfBusinessDetailType = field(
         metadata={
             "name": "LineOfBusiness",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
-        },
+        }
     )
     sub_line_of_business: None | LineOfBusinessDetailType = field(
         default=None,

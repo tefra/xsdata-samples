@@ -10,7 +10,7 @@ from travelport.models.rail_solution_changed_info_reason_code import (
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailSolutionChangedInfo:
     """
     If RetainReservation is None, this will contain the new values returned
@@ -26,19 +26,17 @@ class RailSolutionChangedInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
-    rail_pricing_solution: None | RailPricingSolution = field(
-        default=None,
+    rail_pricing_solution: RailPricingSolution = field(
         metadata={
             "name": "RailPricingSolution",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    reason_code: None | RailSolutionChangedInfoReasonCode = field(
-        default=None,
+    reason_code: RailSolutionChangedInfoReasonCode = field(
         metadata={
             "name": "ReasonCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

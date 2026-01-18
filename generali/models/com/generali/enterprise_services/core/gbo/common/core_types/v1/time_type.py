@@ -9,7 +9,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeType:
     """
     <ns1:DictionaryEntryName
@@ -23,9 +23,8 @@ class TimeType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Time</ns1:PrimitiveType>.
     """
 
-    value: None | XmlTime = field(
-        default=None,
+    value: XmlTime = field(
         metadata={
             "required": True,
-        },
+        }
     )

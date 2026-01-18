@@ -7,7 +7,7 @@ from travelport.models.type_field_ref_2 import TypeFieldRef2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeCommonEditableField2(TypeFieldRef2):
     """
     Base type of common attributes that can be edited for a field or field

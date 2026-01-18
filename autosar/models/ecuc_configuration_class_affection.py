@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucConfigurationClassAffection:
     """
     Specifies in the "VendorSpecificModuleDefinition" whether changes on
@@ -72,7 +72,7 @@ class EcucConfigurationClassAffection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AffectedRefs:
         affected_ref: list[
             EcucConfigurationClassAffection.AffectedRefs.AffectedRef
@@ -85,13 +85,12 @@ class EcucConfigurationClassAffection:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AffectedRef(Ref):
-            dest: None | EcucCommonAttributesSubtypesEnum = field(
-                default=None,
+            dest: EcucCommonAttributesSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

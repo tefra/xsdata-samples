@@ -16,7 +16,7 @@ from travelport.models.provider_reservation_info_ref_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/cruise_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CruiseReservation(BaseReservation1):
     """
     The parent container for all cruise booking data.

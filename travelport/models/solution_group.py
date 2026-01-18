@@ -10,7 +10,7 @@ from travelport.models.type_trip_type import TypeTripType
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SolutionGroup:
     """
     Specifies the trip type and diversity of all or a subset of the result
@@ -97,13 +97,12 @@ class SolutionGroup:
             "type": "Attribute",
         },
     )
-    trip_type: None | TypeTripType = field(
-        default=None,
+    trip_type: TypeTripType = field(
         metadata={
             "name": "TripType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     diversification: None | TypeDiversity = field(
         default=None,
@@ -128,7 +127,7 @@ class SolutionGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PermittedAccountCodes:
         account_code: list[AccountCode1] = field(
             default_factory=list,
@@ -141,7 +140,7 @@ class SolutionGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PreferredAccountCodes:
         account_code: list[AccountCode1] = field(
             default_factory=list,
@@ -154,7 +153,7 @@ class SolutionGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProhibitedAccountCodes:
         account_code: list[AccountCode1] = field(
             default_factory=list,
@@ -167,7 +166,7 @@ class SolutionGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PermittedPointOfSales:
         point_of_sale: list[PointOfSale1] = field(
             default_factory=list,
@@ -180,7 +179,7 @@ class SolutionGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProhibitedPointOfSales:
         point_of_sale: list[PointOfSale1] = field(
             default_factory=list,

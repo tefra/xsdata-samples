@@ -8,7 +8,7 @@ from .multidimensional_time import MultidimensionalTime
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConfidenceInterval:
     """
     Additionally to the list of measured distances of event occurrences, a

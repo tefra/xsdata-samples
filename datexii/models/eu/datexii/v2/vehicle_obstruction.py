@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.vehicle_obstruction_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleObstruction(Obstruction):
     """
     An obstruction on the road caused by one or more vehicles.
@@ -23,14 +23,13 @@ class VehicleObstruction(Obstruction):
     :ivar vehicle_obstruction_extension:
     """
 
-    vehicle_obstruction_type: None | VehicleObstructionTypeEnum = field(
-        default=None,
+    vehicle_obstruction_type: VehicleObstructionTypeEnum = field(
         metadata={
             "name": "vehicleObstructionType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     obstructing_vehicle: list[Vehicle] = field(
         default_factory=list,

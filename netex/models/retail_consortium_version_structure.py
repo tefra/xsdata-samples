@@ -12,7 +12,7 @@ from .whitelist_refs_rel_structure import WhitelistRefsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RetailConsortiumVersionStructure(OrganisationVersionStructure):
     class Meta:
         name = "RetailConsortium_VersionStructure"

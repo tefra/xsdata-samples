@@ -8,7 +8,7 @@ from travelport.models.saved_trip_search_result import SavedTripSearchResult
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SavedTripSearchRsp(BaseRsp1):
     """
     Response containing summary information of savedTrip.

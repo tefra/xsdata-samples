@@ -17,52 +17,47 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClaimType:
-    claim_number: None | str = field(
-        default=None,
+    claim_number: str = field(
         metadata={
             "name": "ClaimNumber",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    policy_number: None | str = field(
-        default=None,
+    policy_number: str = field(
         metadata={
             "name": "PolicyNumber",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    source: None | str = field(
-        default=None,
+    source: str = field(
         metadata={
             "name": "Source",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    contact: None | str = field(
-        default=None,
+    contact: str = field(
         metadata={
             "name": "Contact",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     interest: None | str = field(
         default=None,
@@ -72,23 +67,21 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    date_open: None | DateTimeType = field(
-        default=None,
+    date_open: DateTimeType = field(
         metadata={
             "name": "DateOpen",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    date_last_transaction: None | DateTimeType = field(
-        default=None,
+    date_last_transaction: DateTimeType = field(
         metadata={
             "name": "DateLastTransaction",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     date_of_loss: None | DateTimeType = field(
         default=None,
@@ -106,23 +99,21 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    date_last_updated: None | DateTimeType = field(
-        default=None,
+    date_last_updated: DateTimeType = field(
         metadata={
             "name": "DateLastUpdated",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    last_update_by: None | str = field(
-        default=None,
+    last_update_by: str = field(
         metadata={
             "name": "LastUpdateBy",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     adjuster: None | str = field(
         default=None,
@@ -172,41 +163,37 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    currency: None | str = field(
-        default=None,
+    currency: str = field(
         metadata={
             "name": "Currency",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    deductibles: None | AmountType = field(
-        default=None,
+    deductibles: AmountType = field(
         metadata={
             "name": "Deductibles",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    paid_claim: None | AmountType = field(
-        default=None,
+    paid_claim: AmountType = field(
         metadata={
             "name": "PaidClaim",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    paid_vendor_fee: None | AmountType = field(
-        default=None,
+    paid_vendor_fee: AmountType = field(
         metadata={
             "name": "PaidVendorFee",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     recovery_reserve: None | AmountType = field(
         default=None,
@@ -216,23 +203,21 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    claim_reserve: None | AmountType = field(
-        default=None,
+    claim_reserve: AmountType = field(
         metadata={
             "name": "ClaimReserve",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    vendor_fee_reserve: None | AmountType = field(
-        default=None,
+    vendor_fee_reserve: AmountType = field(
         metadata={
             "name": "VendorFeeReserve",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     total_incurred: None | AmountType = field(
         default=None,

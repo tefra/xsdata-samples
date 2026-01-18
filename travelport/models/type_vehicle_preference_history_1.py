@@ -11,7 +11,7 @@ from travelport.models.type_base_preference_history_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeVehiclePreferenceHistory1(TypeBasePreferenceHistory1):
     """
     Defines avehicle preference for a particular set of criteria (e.g.

@@ -7,7 +7,7 @@ from .t_resource_parameter_binding import TResourceParameterBinding
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResourceParameterBinding(TResourceParameterBinding):
     class Meta:
         name = "resourceParameterBinding"

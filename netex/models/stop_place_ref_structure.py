@@ -7,6 +7,6 @@ from .site_ref_structure import SiteRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StopPlaceRefStructure(SiteRefStructure):
     pass

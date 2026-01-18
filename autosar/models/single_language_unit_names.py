@@ -8,7 +8,7 @@ from .supscript import Supscript
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SingleLanguageUnitNames:
     """
     This represents the ability to express a display name.
@@ -65,10 +65,10 @@ class SingleLanguageUnitNames:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(Supscript):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(Supscript):
         pass

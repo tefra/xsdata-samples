@@ -7,7 +7,7 @@ from ipxact.models.instance_generator_type import InstanceGeneratorType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ComponentGenerator(InstanceGeneratorType):
     """
     Specifies a set of component generators.

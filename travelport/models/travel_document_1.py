@@ -25,7 +25,7 @@ from travelport.models.type_travel_document_type_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelDocument1(TypeKeyTaggedElement1):
     """
     Information about travel-related documents (e.g., passports, driver's
@@ -108,13 +108,12 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Element",
         },
     )
-    type_value: None | TypeTravelDocumentType1 = field(
-        default=None,
+    type_value: TypeTravelDocumentType1 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     document_number: None | str = field(
         default=None,

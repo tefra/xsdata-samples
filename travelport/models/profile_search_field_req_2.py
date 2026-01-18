@@ -10,7 +10,7 @@ from travelport.models.profile_search_modifiers_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileSearchFieldReq2(BaseReq5):
     """
     Request to retrieve the fields and field groups owned by a specified
@@ -35,11 +35,10 @@ class ProfileSearchFieldReq2(BaseReq5):
             "type": "Element",
         },
     )
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

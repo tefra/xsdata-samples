@@ -7,7 +7,7 @@ from travelport.models.type_element_status_1 import TypeElementStatus1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Emdcoupon:
     """
     The coupon information for the EMD issued.
@@ -66,21 +66,19 @@ class Emdcoupon:
         name = "EMDCoupon"
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    number: None | int = field(
-        default=None,
+    number: int = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     svc_description: None | str = field(
         default=None,
@@ -96,14 +94,13 @@ class Emdcoupon:
             "type": "Attribute",
         },
     )
-    rfic: None | str = field(
-        default=None,
+    rfic: str = field(
         metadata={
             "name": "RFIC",
             "type": "Attribute",
             "required": True,
             "length": 1,
-        },
+        }
     )
     rfisc: None | str = field(
         default=None,

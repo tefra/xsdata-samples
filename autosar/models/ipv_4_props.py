@@ -9,7 +9,7 @@ from .ipv_4_fragmentation_props import Ipv4FragmentationProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ipv4Props:
     """
     This meta-class specifies the configuration options for IPv4.

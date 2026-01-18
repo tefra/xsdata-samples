@@ -7,7 +7,7 @@ from travelport.models.base_req_3 import BaseReq3
 __NAMESPACE__ = "http://www.travelport.com/schema/system_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExternalCacheAccessReq(BaseReq3):
     """
     This is to delete/retrieve an entry from external cache.
@@ -41,16 +41,15 @@ class ExternalCacheAccessReq(BaseReq3):
             "max_occurs": 999,
         },
     )
-    cache_name: None | str = field(
-        default=None,
+    cache_name: str = field(
         metadata={
             "name": "CacheName",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RetrieveEntry:
         """
         Parameters
@@ -59,16 +58,15 @@ class ExternalCacheAccessReq(BaseReq3):
             Cache entry key
         """
 
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DeleteEntry:
         """
         Parameters
@@ -77,11 +75,10 @@ class ExternalCacheAccessReq(BaseReq3):
             Cache entry key
         """
 
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

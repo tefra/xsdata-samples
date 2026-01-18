@@ -8,7 +8,7 @@ from travelport.models.profile_history_2 import ProfileHistory2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileRetrieveHistoryRsp2(BaseRsp5):
     """
     Response with the profile history filtered as specified in the request.
@@ -25,19 +25,17 @@ class ProfileRetrieveHistoryRsp2(BaseRsp5):
         name = "ProfileRetrieveHistoryRsp"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    profile_history: None | ProfileHistory2 = field(
-        default=None,
+    profile_history: ProfileHistory2 = field(
         metadata={
             "name": "ProfileHistory",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    more_results: None | bool = field(
-        default=None,
+    more_results: bool = field(
         metadata={
             "name": "MoreResults",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

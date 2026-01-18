@@ -7,7 +7,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProgramRespAppDataType:
     any_element: list[object] = field(
         default_factory=list,

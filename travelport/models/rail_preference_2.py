@@ -25,7 +25,7 @@ from travelport.models.type_rail_ticket_fulfillment_option_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailPreference2(TypeBasePreference2):
     """
     Defines a preference for a particular set of criteria for rail (e.g.,

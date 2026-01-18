@@ -9,7 +9,7 @@ from travelport.models.type_profile_link_relationship_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileLinkAdd2:
     """
     Add a new link between this profile and the specific profile.
@@ -26,19 +26,17 @@ class ProfileLinkAdd2:
         name = "ProfileLinkAdd"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    traveler_id: None | int = field(
-        default=None,
+    traveler_id: int = field(
         metadata={
             "name": "TravelerID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    relationship: None | TypeProfileLinkRelationship2 = field(
-        default=None,
+    relationship: TypeProfileLinkRelationship2 = field(
         metadata={
             "name": "Relationship",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

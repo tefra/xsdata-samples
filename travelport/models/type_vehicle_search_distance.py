@@ -7,7 +7,7 @@ from travelport.models.type_distance import TypeDistance
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeVehicleSearchDistance:
     """
     Parameters
@@ -50,12 +50,11 @@ class TypeVehicleSearchDistance:
             "max_inclusive": 999,
         },
     )
-    max_distance: None | int = field(
-        default=None,
+    max_distance: int = field(
         metadata={
             "name": "MaxDistance",
             "type": "Attribute",
             "required": True,
             "max_inclusive": 999,
-        },
+        }
     )

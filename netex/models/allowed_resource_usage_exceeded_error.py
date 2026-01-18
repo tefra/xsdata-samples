@@ -9,7 +9,7 @@ from .allowed_resource_usage_exceeded_error_structure import (
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AllowedResourceUsageExceededError(
     AllowedResourceUsageExceededErrorStructure
 ):

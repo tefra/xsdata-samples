@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.parking_route_details_versioned_reference impo
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingRouteByReference(ParkingRoute):
     """
     A route defined by a reference to an earlier specified route.
@@ -20,16 +20,13 @@ class ParkingRouteByReference(ParkingRoute):
     :ivar parking_route_by_reference_extension:
     """
 
-    parking_route_reference: None | ParkingRouteDetailsVersionedReference = (
-        field(
-            default=None,
-            metadata={
-                "name": "parkingRouteReference",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
-            },
-        )
+    parking_route_reference: ParkingRouteDetailsVersionedReference = field(
+        metadata={
+            "name": "parkingRouteReference",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
+        }
     )
     parking_route_by_reference_extension: None | ExtensionType = field(
         default=None,

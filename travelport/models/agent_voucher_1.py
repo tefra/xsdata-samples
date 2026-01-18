@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgentVoucher1:
     """
     Agent Voucher Form of Payments.
@@ -15,11 +15,10 @@ class AgentVoucher1:
         name = "AgentVoucher"
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
-    number: None | str = field(
-        default=None,
+    number: str = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

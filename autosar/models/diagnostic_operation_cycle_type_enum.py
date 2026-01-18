@@ -9,7 +9,7 @@ from .diagnostic_operation_cycle_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticOperationCycleTypeEnum:
     """
     Operation cycles types used to identify certain Operation cycles with a
@@ -31,11 +31,10 @@ class DiagnosticOperationCycleTypeEnum:
     class Meta:
         name = "DIAGNOSTIC-OPERATION-CYCLE-TYPE-ENUM"
 
-    value: None | DiagnosticOperationCycleTypeEnumSimple = field(
-        default=None,
+    value: DiagnosticOperationCycleTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

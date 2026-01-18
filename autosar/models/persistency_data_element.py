@@ -22,7 +22,7 @@ from .sw_data_def_props import SwDataDefProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersistencyDataElement:
     """
     This meta-class represents the ability to formally specify a piece of
@@ -94,14 +94,13 @@ class PersistencyDataElement:
     class Meta:
         name = "PERSISTENCY-DATA-ELEMENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | PersistencyDataElement.ShortNameFragments = (
         field(
@@ -208,7 +207,7 @@ class PersistencyDataElement:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -219,7 +218,7 @@ class PersistencyDataElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -230,13 +229,12 @@ class PersistencyDataElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeTref(Ref):
-        dest: None | AutosarDataTypeSubtypesEnum = field(
-            default=None,
+        dest: AutosarDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

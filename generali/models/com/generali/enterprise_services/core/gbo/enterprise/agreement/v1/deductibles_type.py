@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeductiblesType:
     deductible: list[DeductibleType] = field(
         default_factory=list,

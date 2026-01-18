@@ -8,7 +8,7 @@ from sdmx_ml.models.transition_base_type import TransitionBaseType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TransitionType(TransitionBaseType):
     """
     TransitionType describes the details of a transition, which is an
@@ -26,15 +26,14 @@ class TransitionType(TransitionBaseType):
         for the transition within the process.
     """
 
-    target_step: None | str = field(
-        default=None,
+    target_step: str = field(
         metadata={
             "name": "TargetStep",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r"[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*",
-        },
+        }
     )
     condition: tuple[TextType, ...] = field(
         default_factory=tuple,

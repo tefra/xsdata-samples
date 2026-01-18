@@ -17,7 +17,7 @@ from .travel_agent import TravelAgent
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "organisationsInFrame_RelStructure"

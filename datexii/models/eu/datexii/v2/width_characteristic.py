@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WidthCharacteristic:
     """
     Width characteristic of a vehicle.
@@ -22,23 +22,21 @@ class WidthCharacteristic:
     :ivar width_characteristic_extension:
     """
 
-    comparison_operator: None | ComparisonOperatorEnum = field(
-        default=None,
+    comparison_operator: ComparisonOperatorEnum = field(
         metadata={
             "name": "comparisonOperator",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    vehicle_width: None | float = field(
-        default=None,
+    vehicle_width: float = field(
         metadata={
             "name": "vehicleWidth",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     width_characteristic_extension: None | ExtensionType = field(
         default=None,

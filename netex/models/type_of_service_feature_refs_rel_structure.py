@@ -9,7 +9,7 @@ from .type_of_service_feature_ref import TypeOfServiceFeatureRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfServiceFeatureRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfServiceFeatureRefs_RelStructure"

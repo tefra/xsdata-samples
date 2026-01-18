@@ -24,7 +24,7 @@ from ipxact.models.volatile import Volatile
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RegisterFile:
     """
     A structure of registers and register files.
@@ -59,12 +59,11 @@ class RegisterFile:
         name = "registerFile"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -99,13 +98,12 @@ class RegisterFile:
             "type": "Element",
         },
     )
-    address_offset: None | UnsignedLongintExpression = field(
-        default=None,
+    address_offset: UnsignedLongintExpression = field(
         metadata={
             "name": "addressOffset",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     register_file_definition_ref: (
         None | RegisterFile.RegisterFileDefinitionRef
@@ -170,7 +168,7 @@ class RegisterFile:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessHandles:
         access_handle: list[SimpleAccessHandle] = field(
             default_factory=list,
@@ -181,7 +179,7 @@ class RegisterFile:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RegisterFileDefinitionRef:
         value: str = field(
             default="",
@@ -189,16 +187,15 @@ class RegisterFile:
                 "required": True,
             },
         )
-        type_definitions: None | str = field(
-            default=None,
+        type_definitions: str = field(
             metadata={
                 "name": "typeDefinitions",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Register:
         """
         :ivar name: Unique name
@@ -226,12 +223,11 @@ class RegisterFile:
         :ivar id:
         """
 
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         display_name: None | DisplayName = field(
             default=None,
@@ -266,13 +262,12 @@ class RegisterFile:
                 "type": "Element",
             },
         )
-        address_offset: None | UnsignedLongintExpression = field(
-            default=None,
+        address_offset: UnsignedLongintExpression = field(
             metadata={
                 "name": "addressOffset",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         register_definition_ref: (
             None | RegisterFile.Register.RegisterDefinitionRef
@@ -344,7 +339,7 @@ class RegisterFile:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AccessHandles:
             access_handle: list[SimpleAccessHandle] = field(
                 default_factory=list,
@@ -355,7 +350,7 @@ class RegisterFile:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RegisterDefinitionRef:
             value: str = field(
                 default="",
@@ -363,11 +358,10 @@ class RegisterFile:
                     "required": True,
                 },
             )
-            type_definitions: None | str = field(
-                default=None,
+            type_definitions: str = field(
                 metadata={
                     "name": "typeDefinitions",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

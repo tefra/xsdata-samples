@@ -17,7 +17,7 @@ from .vehicle_sharing_service_ref import VehicleSharingServiceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleAccessCredentialsAssignmentVersionStructure(
     AssignmentVersionStructure1
 ):
@@ -97,12 +97,11 @@ class VehicleAccessCredentialsAssignmentVersionStructure(
             ),
         },
     )
-    service_access_code_ref: None | ServiceAccessCodeRef = field(
-        default=None,
+    service_access_code_ref: ServiceAccessCodeRef = field(
         metadata={
             "name": "ServiceAccessCodeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

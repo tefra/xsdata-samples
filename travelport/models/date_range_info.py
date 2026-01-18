@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateRangeInfo:
     """
     The information related to date range .
@@ -24,13 +24,12 @@ class DateRangeInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
-    date_range: None | str = field(
-        default=None,
+    date_range: str = field(
         metadata={
             "name": "DateRange",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     title: None | str = field(
         default=None,
@@ -39,11 +38,10 @@ class DateRangeInfo:
             "type": "Attribute",
         },
     )
-    count: None | int = field(
-        default=None,
+    count: int = field(
         metadata={
             "name": "Count",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

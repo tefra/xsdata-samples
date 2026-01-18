@@ -9,7 +9,7 @@ from .related_organisation_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RelatedOrganisation(RelatedOrganisationVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

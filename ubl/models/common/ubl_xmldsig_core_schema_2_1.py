@@ -5,15 +5,14 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CanonicalizationMethodType:
-    algorithm: None | str = field(
-        default=None,
+    algorithm: str = field(
         metadata={
             "name": "Algorithm",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     content: tuple[object, ...] = field(
         default_factory=tuple,
@@ -25,7 +24,7 @@ class CanonicalizationMethodType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DsakeyValueType:
     class Meta:
         name = "DSAKeyValueType"
@@ -57,15 +56,14 @@ class DsakeyValueType:
             "format": "base64",
         },
     )
-    y: None | bytes = field(
-        default=None,
+    y: bytes = field(
         metadata={
             "name": "Y",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
             "format": "base64",
-        },
+        }
     )
     j: None | bytes = field(
         default=None,
@@ -96,15 +94,14 @@ class DsakeyValueType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DigestMethodType:
-    algorithm: None | str = field(
-        default=None,
+    algorithm: str = field(
         metadata={
             "name": "Algorithm",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     content: tuple[object, ...] = field(
         default_factory=tuple,
@@ -116,21 +113,20 @@ class DigestMethodType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DigestValue:
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
-    value: None | bytes = field(
-        default=None,
+    value: bytes = field(
         metadata={
             "required": True,
             "format": "base64",
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class KeyName:
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
@@ -143,7 +139,7 @@ class KeyName:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MgmtData:
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
@@ -156,7 +152,7 @@ class MgmtData:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ObjectType:
     id: None | str = field(
         default=None,
@@ -189,20 +185,19 @@ class ObjectType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class PgpdataType:
     class Meta:
         name = "PGPDataType"
 
-    pgpkey_id: None | bytes = field(
-        default=None,
+    pgpkey_id: bytes = field(
         metadata={
             "name": "PGPKeyID",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
             "format": "base64",
-        },
+        }
     )
     pgpkey_packet: tuple[bytes, ...] = field(
         default_factory=tuple,
@@ -223,34 +218,32 @@ class PgpdataType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RsakeyValueType:
     class Meta:
         name = "RSAKeyValueType"
 
-    modulus: None | bytes = field(
-        default=None,
+    modulus: bytes = field(
         metadata={
             "name": "Modulus",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
             "format": "base64",
-        },
+        }
     )
-    exponent: None | bytes = field(
-        default=None,
+    exponent: bytes = field(
         metadata={
             "name": "Exponent",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
             "format": "base64",
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SpkidataType:
     class Meta:
         name = "SPKIDataType"
@@ -276,15 +269,14 @@ class SpkidataType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignatureMethodType:
-    algorithm: None | str = field(
-        default=None,
+    algorithm: str = field(
         metadata={
             "name": "Algorithm",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     content: tuple[object, ...] = field(
         default_factory=tuple,
@@ -303,15 +295,14 @@ class SignatureMethodType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignaturePropertyType:
-    target: None | str = field(
-        default=None,
+    target: str = field(
         metadata={
             "name": "Target",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,
@@ -330,14 +321,13 @@ class SignaturePropertyType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignatureValueType:
-    value: None | bytes = field(
-        default=None,
+    value: bytes = field(
         metadata={
             "required": True,
             "format": "base64",
-        },
+        }
     )
     id: None | str = field(
         default=None,
@@ -348,15 +338,14 @@ class SignatureValueType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TransformType:
-    algorithm: None | str = field(
-        default=None,
+    algorithm: str = field(
         metadata={
             "name": "Algorithm",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     content: tuple[object, ...] = field(
         default_factory=tuple,
@@ -375,99 +364,97 @@ class TransformType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class X509IssuerSerialType:
-    x509_issuer_name: None | str = field(
-        default=None,
+    x509_issuer_name: str = field(
         metadata={
             "name": "X509IssuerName",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        },
+        }
     )
-    x509_serial_number: None | int = field(
-        default=None,
+    x509_serial_number: int = field(
         metadata={
             "name": "X509SerialNumber",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CanonicalizationMethod(CanonicalizationMethodType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DsakeyValue(DsakeyValueType):
     class Meta:
         name = "DSAKeyValue"
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DigestMethod(DigestMethodType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Object(ObjectType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Pgpdata(PgpdataType):
     class Meta:
         name = "PGPData"
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RsakeyValue(RsakeyValueType):
     class Meta:
         name = "RSAKeyValue"
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Spkidata(SpkidataType):
     class Meta:
         name = "SPKIData"
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignatureMethod(SignatureMethodType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignatureProperty(SignaturePropertyType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignatureValue(SignatureValueType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Transform(TransformType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class X509DataType:
     x509_issuer_serial: tuple[X509IssuerSerialType, ...] = field(
         default_factory=tuple,
@@ -527,7 +514,7 @@ class X509DataType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class KeyValueType:
     content: tuple[object, ...] = field(
         default_factory=tuple,
@@ -551,7 +538,7 @@ class KeyValueType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignaturePropertiesType:
     signature_property: tuple[SignatureProperty, ...] = field(
         default_factory=tuple,
@@ -571,7 +558,7 @@ class SignaturePropertiesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TransformsType:
     transform: tuple[Transform, ...] = field(
         default_factory=tuple,
@@ -584,31 +571,31 @@ class TransformsType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class X509Data(X509DataType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class KeyValue(KeyValueType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignatureProperties(SignaturePropertiesType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Transforms(TransformsType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ReferenceType:
     transforms: None | Transforms = field(
         default=None,
@@ -618,23 +605,21 @@ class ReferenceType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         },
     )
-    digest_method: None | DigestMethod = field(
-        default=None,
+    digest_method: DigestMethod = field(
         metadata={
             "name": "DigestMethod",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        },
+        }
     )
-    digest_value: None | DigestValue = field(
-        default=None,
+    digest_value: DigestValue = field(
         metadata={
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,
@@ -659,7 +644,7 @@ class ReferenceType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RetrievalMethodType:
     transforms: None | Transforms = field(
         default=None,
@@ -685,19 +670,19 @@ class RetrievalMethodType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Reference(ReferenceType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RetrievalMethod(RetrievalMethodType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class KeyInfoType:
     id: None | str = field(
         default=None,
@@ -753,7 +738,7 @@ class KeyInfoType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ManifestType:
     reference: tuple[Reference, ...] = field(
         default_factory=tuple,
@@ -773,25 +758,23 @@ class ManifestType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignedInfoType:
-    canonicalization_method: None | CanonicalizationMethod = field(
-        default=None,
+    canonicalization_method: CanonicalizationMethod = field(
         metadata={
             "name": "CanonicalizationMethod",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        },
+        }
     )
-    signature_method: None | SignatureMethod = field(
-        default=None,
+    signature_method: SignatureMethod = field(
         metadata={
             "name": "SignatureMethod",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        },
+        }
     )
     reference: tuple[Reference, ...] = field(
         default_factory=tuple,
@@ -811,43 +794,41 @@ class SignedInfoType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class KeyInfo(KeyInfoType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Manifest(ManifestType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignedInfo(SignedInfoType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SignatureType:
-    signed_info: None | SignedInfo = field(
-        default=None,
+    signed_info: SignedInfo = field(
         metadata={
             "name": "SignedInfo",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        },
+        }
     )
-    signature_value: None | SignatureValue = field(
-        default=None,
+    signature_value: SignatureValue = field(
         metadata={
             "name": "SignatureValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        },
+        }
     )
     key_info: None | KeyInfo = field(
         default=None,
@@ -874,7 +855,7 @@ class SignatureType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Signature(SignatureType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"

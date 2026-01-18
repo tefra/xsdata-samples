@@ -9,7 +9,7 @@ from .service_journey_interchange_derived_view_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceJourneyInterchangeView(
     ServiceJourneyInterchangeDerivedViewStructure
 ):

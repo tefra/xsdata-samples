@@ -13,7 +13,7 @@ from .relief_point_ref import ReliefPointRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CrewBaseVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "CrewBase_VersionStructure"

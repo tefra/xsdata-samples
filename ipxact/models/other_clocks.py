@@ -7,7 +7,7 @@ from ipxact.models.other_clock_driver import OtherClockDriver
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherClocks:
     """
     List of clocks associated with the component that are not associated

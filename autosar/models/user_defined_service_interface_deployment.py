@@ -27,7 +27,7 @@ from .user_defined_method_deployment import UserDefinedMethodDeployment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UserDefinedServiceInterfaceDeployment:
     """
     UserDefined configuration settings for a ServiceInterface.
@@ -102,14 +102,13 @@ class UserDefinedServiceInterfaceDeployment:
     class Meta:
         name = "USER-DEFINED-SERVICE-INTERFACE-DEPLOYMENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | UserDefinedServiceInterfaceDeployment.ShortNameFragments
@@ -242,7 +241,7 @@ class UserDefinedServiceInterfaceDeployment:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -253,7 +252,7 @@ class UserDefinedServiceInterfaceDeployment:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -264,7 +263,7 @@ class UserDefinedServiceInterfaceDeployment:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventDeployments:
         dds_event_deployment: list[DdsEventDeployment] = field(
             default_factory=list,
@@ -293,7 +292,7 @@ class UserDefinedServiceInterfaceDeployment:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FieldDeployments:
         dds_field_deployment: list[DdsFieldDeployment] = field(
             default_factory=list,
@@ -322,7 +321,7 @@ class UserDefinedServiceInterfaceDeployment:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MethodDeployments:
         someip_method_deployment: list[SomeipMethodDeployment] = field(
             default_factory=list,
@@ -343,13 +342,12 @@ class UserDefinedServiceInterfaceDeployment:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInterfaceRef(Ref):
-        dest: None | ServiceInterfaceSubtypesEnum = field(
-            default=None,
+        dest: ServiceInterfaceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

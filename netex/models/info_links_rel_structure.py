@@ -8,7 +8,7 @@ from .info_link import InfoLink
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InfoLinksRelStructure:
     class Meta:
         name = "infoLinks_RelStructure"

@@ -7,7 +7,7 @@ from .l_enum_simple import LEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LEnum:
     """
     This denotes the possible language designators according to the two
@@ -29,11 +29,10 @@ class LEnum:
     class Meta:
         name = "L-ENUM"
 
-    value: None | LEnumSimple = field(
-        default=None,
+    value: LEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

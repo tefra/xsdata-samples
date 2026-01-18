@@ -20,7 +20,7 @@ from .swc_implementation_subtypes_enum import SwcImplementationSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwcToImplMapping:
     """
     Map instances of an AtomicSwComponentType to a specific Implementation.
@@ -94,14 +94,13 @@ class SwcToImplMapping:
     class Meta:
         name = "SWC-TO-IMPL-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SwcToImplMapping.ShortNameFragments = field(
         default=None,
@@ -208,7 +207,7 @@ class SwcToImplMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -219,7 +218,7 @@ class SwcToImplMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -230,18 +229,17 @@ class SwcToImplMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ComponentImplementationRef(Ref):
-        dest: None | SwcImplementationSubtypesEnum = field(
-            default=None,
+        dest: SwcImplementationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ComponentIrefs:
         component_iref: list[ComponentInSystemInstanceRef] = field(
             default_factory=list,

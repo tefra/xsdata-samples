@@ -15,7 +15,7 @@ from .vehicle_stopping_place_ref import VehicleStoppingPlaceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleStoppingPositionVersionStructure(
     StopPlaceComponentVersionStructure
 ):

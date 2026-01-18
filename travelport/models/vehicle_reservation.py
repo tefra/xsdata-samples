@@ -26,7 +26,7 @@ from travelport.models.vehicle_special_request import VehicleSpecialRequest
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleReservation(BaseReservation1):
     """
     Parameters
@@ -108,21 +108,19 @@ class VehicleReservation(BaseReservation1):
             "max_occurs": 999,
         },
     )
-    vehicle_date_location: None | VehicleDateLocation = field(
-        default=None,
+    vehicle_date_location: VehicleDateLocation = field(
         metadata={
             "name": "VehicleDateLocation",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    vehicle: None | Vehicle = field(
-        default=None,
+    vehicle: Vehicle = field(
         metadata={
             "name": "Vehicle",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     special_equipment: list[SpecialEquipment1] = field(
         default_factory=list,
@@ -209,13 +207,12 @@ class VehicleReservation(BaseReservation1):
             "max_occurs": 999,
         },
     )
-    supplier_code: None | str = field(
-        default=None,
+    supplier_code: str = field(
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     booking_confirmation: None | str = field(
         default=None,
@@ -224,13 +221,12 @@ class VehicleReservation(BaseReservation1):
             "type": "Attribute",
         },
     )
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     provider_reservation_info_ref: None | str = field(
         default=None,

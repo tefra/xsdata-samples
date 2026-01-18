@@ -7,6 +7,6 @@ from .passenger_equipment_ref_structure import PassengerEquipmentRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassengerSafetyEquipmentRefStructure(PassengerEquipmentRefStructure):
     pass

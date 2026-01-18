@@ -13,7 +13,7 @@ from travelport.models.type_profile_type_7 import TypeProfileType7
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileSearchReq2(BaseReq5):
     """
     Request to search for profiles of a specified type, within a specified
@@ -67,13 +67,12 @@ class ProfileSearchReq2(BaseReq5):
             "type": "Element",
         },
     )
-    profile_type: None | TypeProfileType7 = field(
-        default=None,
+    profile_type: TypeProfileType7 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     profile_parent_id: None | object = field(
         default=None,

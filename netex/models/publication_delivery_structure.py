@@ -12,25 +12,23 @@ from .publication_request_structure import PublicationRequestStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PublicationDeliveryStructure:
-    publication_timestamp: None | XmlDateTime = field(
-        default=None,
+    publication_timestamp: XmlDateTime = field(
         metadata={
             "name": "PublicationTimestamp",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    participant_ref: None | ParticipantRef = field(
-        default=None,
+    participant_ref: ParticipantRef = field(
         metadata={
             "name": "ParticipantRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     publication_request: None | PublicationRequestStructure = field(
         default=None,

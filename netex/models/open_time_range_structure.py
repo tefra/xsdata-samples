@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlTime
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenTimeRangeStructure:
     start_time: None | XmlTime = field(
         default=None,

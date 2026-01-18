@@ -7,7 +7,7 @@ from travelport.models.type_error_info_1 import TypeErrorInfo1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordErrorInfo(TypeErrorInfo1):
     """
     Parameters
@@ -21,21 +21,19 @@ class UniversalRecordErrorInfo(TypeErrorInfo1):
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
-    locator_code: None | str = field(
-        default=None,
+    locator_code: str = field(
         metadata={
             "name": "LocatorCode",
             "type": "Element",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
-    version: None | int = field(
-        default=None,
+    version: int = field(
         metadata={
             "name": "Version",
             "type": "Element",
             "required": True,
-        },
+        }
     )

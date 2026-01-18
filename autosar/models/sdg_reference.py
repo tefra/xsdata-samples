@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SdgReference:
     """
     Describes an attribute of a SdgClass which is used on the definition
@@ -99,14 +99,13 @@ class SdgReference:
     class Meta:
         name = "SDG-REFERENCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SdgReference.ShortNameFragments = field(
         default=None,
@@ -219,7 +218,7 @@ class SdgReference:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -230,7 +229,7 @@ class SdgReference:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -241,13 +240,12 @@ class SdgReference:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DestSdgRef(Ref):
-        dest: None | SdgClassSubtypesEnum = field(
-            default=None,
+        dest: SdgClassSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

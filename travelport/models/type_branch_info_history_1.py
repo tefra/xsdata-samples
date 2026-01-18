@@ -10,7 +10,7 @@ from travelport.models.type_provider_info_history_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeBranchInfoHistory1(TypeProfileInfo1):
     """
     History Element for Branch Info.

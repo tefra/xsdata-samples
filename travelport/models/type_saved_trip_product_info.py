@@ -7,7 +7,7 @@ from travelport.models.type_product_1 import TypeProduct1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeSavedTripProductInfo:
     """
     Information on the product type and its provider.
@@ -25,27 +25,24 @@ class TypeSavedTripProductInfo:
     class Meta:
         name = "typeSavedTripProductInfo"
 
-    product_type: None | TypeProduct1 = field(
-        default=None,
+    product_type: TypeProduct1 = field(
         metadata={
             "name": "ProductType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    vendor_code: None | str = field(
-        default=None,
+    vendor_code: str = field(
         metadata={
             "name": "VendorCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

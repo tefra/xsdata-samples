@@ -18,7 +18,7 @@ from .travel_agent_ref import TravelAgentRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganisationRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "organisationRefs_RelStructure"

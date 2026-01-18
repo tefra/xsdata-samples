@@ -8,7 +8,7 @@ from npo.models.media_relation_search_type import MediaRelationSearchType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MediaRelationFacetType(ExtendedMediaFacetType):
     class Meta:
         name = "mediaRelationFacetType"

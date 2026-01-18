@@ -19,7 +19,7 @@ from .udp_props import UdpProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthTcpIpProps:
     """
     @RESTRICT_TO_STANDARD:CP!
@@ -90,14 +90,13 @@ class EthTcpIpProps:
     class Meta:
         name = "ETH-TCP-IP-PROPS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EthTcpIpProps.ShortNameFragments = field(
         default=None,
@@ -202,7 +201,7 @@ class EthTcpIpProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -213,7 +212,7 @@ class EthTcpIpProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

@@ -7,7 +7,7 @@ from travelport.models.company_name import CompanyName
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrePayId:
     """
     Pre pay unique identifier , example Flight Pass Number.
@@ -33,15 +33,14 @@ class PrePayId:
             "type": "Element",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "Id",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 36,
-        },
+        }
     )
     type_value: None | str = field(
         default=None,

@@ -18,7 +18,7 @@ from .ttcan_cluster_conditional import TtcanClusterConditional
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TtcanCluster:
     """
     TTCAN bus specific cluster attributes.
@@ -84,14 +84,13 @@ class TtcanCluster:
     class Meta:
         name = "TTCAN-CLUSTER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TtcanCluster.ShortNameFragments = field(
         default=None,
@@ -188,7 +187,7 @@ class TtcanCluster:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -199,7 +198,7 @@ class TtcanCluster:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -210,7 +209,7 @@ class TtcanCluster:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TtcanClusterVariants:
         ttcan_cluster_conditional: list[TtcanClusterConditional] = field(
             default_factory=list,

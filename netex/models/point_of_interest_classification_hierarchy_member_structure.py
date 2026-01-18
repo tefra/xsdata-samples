@@ -11,7 +11,7 @@ from .point_of_interest_hierarchy_ref import PointOfInterestHierarchyRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointOfInterestClassificationHierarchyMemberStructure(
     VersionedChildStructure
 ):
@@ -25,25 +25,21 @@ class PointOfInterestClassificationHierarchyMemberStructure(
             },
         )
     )
-    parent_classification_ref: (
-        None | PointOfInterestClassificationRefStructure
-    ) = field(
-        default=None,
-        metadata={
-            "name": "ParentClassificationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
-        },
+    parent_classification_ref: PointOfInterestClassificationRefStructure = (
+        field(
+            metadata={
+                "name": "ParentClassificationRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "required": True,
+            }
+        )
     )
-    point_of_interest_classification_ref: (
-        None | PointOfInterestClassificationRefStructure
-    ) = field(
-        default=None,
+    point_of_interest_classification_ref: PointOfInterestClassificationRefStructure = field(
         metadata={
             "name": "PointOfInterestClassificationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

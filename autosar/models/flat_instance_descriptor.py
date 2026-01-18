@@ -20,7 +20,7 @@ from .sw_data_def_props import SwDataDefProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlatInstanceDescriptor:
     """
     Represents exactly one node (e.g. a component instance or data element)
@@ -129,14 +129,13 @@ class FlatInstanceDescriptor:
     class Meta:
         name = "FLAT-INSTANCE-DESCRIPTOR"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | FlatInstanceDescriptor.ShortNameFragments = (
         field(
@@ -267,7 +266,7 @@ class FlatInstanceDescriptor:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -278,7 +277,7 @@ class FlatInstanceDescriptor:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

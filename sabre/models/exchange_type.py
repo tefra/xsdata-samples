@@ -17,7 +17,7 @@ from sabre.models.traveler_info_summary_type import TravelerInfoSummaryType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExchangeType:
     """
     Attributes:
@@ -37,23 +37,21 @@ class ExchangeType:
         bypass_advance_purchase_option: Bypass Advance Purchase Option
     """
 
-    fare: None | ExchangeFareType = field(
-        default=None,
+    fare: ExchangeFareType = field(
         metadata={
             "name": "Fare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    pos: None | ExchangePostype = field(
-        default=None,
+    pos: ExchangePostype = field(
         metadata={
             "name": "POS",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     origin_destination_information: list[
         ExchangeOriginDestinationInformationType
@@ -82,14 +80,13 @@ class ExchangeType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    traveler_info_summary: None | TravelerInfoSummaryType = field(
-        default=None,
+    traveler_info_summary: TravelerInfoSummaryType = field(
         metadata={
             "name": "TravelerInfoSummary",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     tpa_extensions: None | ExchangeTpaExtensionsType = field(
         default=None,
@@ -99,14 +96,13 @@ class ExchangeType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    original_tkt_issue_date_time: None | str = field(
-        default=None,
+    original_tkt_issue_date_time: str = field(
         metadata={
             "name": "OriginalTktIssueDateTime",
             "type": "Attribute",
             "required": True,
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?",
-        },
+        }
     )
     exchanged_tkt_issue_date_time: None | str = field(
         default=None,

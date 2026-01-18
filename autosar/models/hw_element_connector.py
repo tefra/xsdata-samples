@@ -17,7 +17,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HwElementConnector:
     """
     This meta-class represents the ability to connect two hardware
@@ -151,7 +151,7 @@ class HwElementConnector:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwElementRefs:
         hw_element_ref: list[HwElementConnector.HwElementRefs.HwElementRef] = (
             field(
@@ -165,18 +165,17 @@ class HwElementConnector:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class HwElementRef(Ref):
-            dest: None | HwElementSubtypesEnum = field(
-                default=None,
+            dest: HwElementSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwPinGroupConnections:
         hw_pin_group_connector: list[HwPinGroupConnector] = field(
             default_factory=list,
@@ -187,7 +186,7 @@ class HwElementConnector:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwPinConnections:
         hw_pin_connector: list[HwPinConnector] = field(
             default_factory=list,

@@ -9,7 +9,7 @@ from .duty_part import DutyPart
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DutyPartsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dutyPartsInFrame_RelStructure"

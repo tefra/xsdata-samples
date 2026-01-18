@@ -9,7 +9,7 @@ from .route_link import RouteLink
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RouteLinksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "routeLinksInFrame_RelStructure"

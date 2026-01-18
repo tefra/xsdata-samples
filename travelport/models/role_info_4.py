@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoleInfo4:
     """
     Container to specify the role of the agent.
@@ -26,23 +26,21 @@ class RoleInfo4:
         name = "RoleInfo"
         namespace = "http://www.travelport.com/schema/common_v37_0"
 
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "Id",
             "type": "Attribute",
             "required": True,
             "max_length": 19,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "max_length": 128,
-        },
+        }
     )
     source: None | str = field(
         default=None,

@@ -14,7 +14,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SaveConfigurationEntry:
     """
     This service is used to notify a slave node to store its configuration.
@@ -109,24 +109,22 @@ class SaveConfigurationEntry:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AssignedControllerRef(Ref):
-        dest: None | LinSlaveSubtypesEnum = field(
-            default=None,
+        dest: LinSlaveSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AssignedLinSlaveConfigRef(Ref):
-        dest: None | LinSlaveConfigIdentSubtypesEnum = field(
-            default=None,
+        dest: LinSlaveConfigIdentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

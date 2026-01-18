@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExtensionsType:
     extension: list[ExtensionType] = field(
         default_factory=list,

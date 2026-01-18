@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.location_contained_in_itinerary import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItineraryByIndexedLocations(Itinerary):
     """
     Multiple physically separate locations arranged as an ordered set that

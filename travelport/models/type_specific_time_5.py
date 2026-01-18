@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeSpecificTime5:
     """
     Specify exact times.
@@ -17,11 +17,10 @@ class TypeSpecificTime5:
     class Meta:
         name = "typeSpecificTime"
 
-    time: None | str = field(
-        default=None,
+    time: str = field(
         metadata={
             "name": "Time",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from .customer_ref_structure import CustomerRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerRef(CustomerRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

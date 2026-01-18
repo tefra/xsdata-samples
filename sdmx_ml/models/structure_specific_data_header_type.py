@@ -11,7 +11,7 @@ from sdmx_ml.models.structure_specific_data_structure_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class StructureSpecificDataHeaderType(BaseHeaderType):
     """
     StructureSpecificDataHeaderType defines the header structure for a

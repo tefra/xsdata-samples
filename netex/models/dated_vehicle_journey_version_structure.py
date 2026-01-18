@@ -21,7 +21,7 @@ from .vehicle_journey_version_structure import VehicleJourneyVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DatedVehicleJourneyVersionStructure(VehicleJourneyVersionStructure):
     class Meta:
         name = "DatedVehicleJourney_VersionStructure"
@@ -84,14 +84,13 @@ class DatedVehicleJourneyVersionStructure(VehicleJourneyVersionStructure):
             ),
         },
     )
-    operating_day_ref: None | OperatingDayRef = field(
-        default=None,
+    operating_day_ref: OperatingDayRef = field(
         metadata={
             "name": "OperatingDayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     external_dated_vehicle_journey_ref: None | ExternalObjectRefStructure = (
         field(

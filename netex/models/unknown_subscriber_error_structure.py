@@ -8,7 +8,7 @@ from .participant_ref_structure import ParticipantRefStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UnknownSubscriberErrorStructure(ErrorCodeStructure):
     subscriber_ref: None | ParticipantRefStructure = field(
         default=None,

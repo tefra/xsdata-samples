@@ -8,7 +8,7 @@ from travelport.models.reference_data_item import ReferenceDataItem
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceDataRetrieveRsp(BaseRsp1):
     """
     Response to retrieve code, name and description for a specific
@@ -26,11 +26,10 @@ class ReferenceDataRetrieveRsp(BaseRsp1):
             "max_occurs": 999,
         },
     )
-    more_results: None | bool = field(
-        default=None,
+    more_results: bool = field(
         metadata={
             "name": "MoreResults",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

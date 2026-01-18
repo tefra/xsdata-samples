@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SeriesType(AnnotableType):
     """
     <ns1:p

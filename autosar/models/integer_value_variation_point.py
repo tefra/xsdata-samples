@@ -10,7 +10,7 @@ from .sw_systemconst_subtypes_enum import SwSystemconstSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IntegerValueVariationPoint:
     """
     This class represents an attribute value variation point for Integer
@@ -118,24 +118,22 @@ class IntegerValueVariationPoint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SyscStringRef(Ref):
-        dest: None | SwSystemconstSubtypesEnum = field(
-            default=None,
+        dest: SwSystemconstSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SyscRef(Ref):
-        dest: None | SwSystemconstSubtypesEnum = field(
-            default=None,
+        dest: SwSystemconstSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.parking_site import ParkingSite
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InterUrbanParkingSite(ParkingSite):
     """
     A parking site in an interurban context.
@@ -22,16 +22,15 @@ class InterUrbanParkingSite(ParkingSite):
     :ivar inter_urban_parking_site_extension:
     """
 
-    inter_urban_parking_site_location: (
-        None | InterUrbanParkingSiteLocationEnum
-    ) = field(
-        default=None,
-        metadata={
-            "name": "interUrbanParkingSiteLocation",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    inter_urban_parking_site_location: InterUrbanParkingSiteLocationEnum = (
+        field(
+            metadata={
+                "name": "interUrbanParkingSiteLocation",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            }
+        )
     )
     inter_urban_parking_site_extension: None | ExtensionType = field(
         default=None,

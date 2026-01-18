@@ -8,7 +8,7 @@ from .event_controlled_timing import EventControlledTiming
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransmissionModeTiming:
     """
     If the COM Transmission Mode is false the timing is aggregated by the

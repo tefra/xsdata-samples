@@ -9,7 +9,7 @@ from .department import Department
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DepartmentsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "departmentsInFrame_RelStructure"

@@ -9,7 +9,7 @@ from .software_package_action_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoftwarePackageActionTypeEnum:
     """
     This enumeration provides a choice of possible actions for the handling
@@ -31,11 +31,10 @@ class SoftwarePackageActionTypeEnum:
     class Meta:
         name = "SOFTWARE-PACKAGE-ACTION-TYPE-ENUM"
 
-    value: None | SoftwarePackageActionTypeEnumSimple = field(
-        default=None,
+    value: SoftwarePackageActionTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

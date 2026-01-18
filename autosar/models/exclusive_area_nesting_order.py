@@ -11,7 +11,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExclusiveAreaNestingOrder:
     """
     This meta-class represents the ability to define a nesting order of
@@ -44,14 +44,13 @@ class ExclusiveAreaNestingOrder:
     class Meta:
         name = "EXCLUSIVE-AREA-NESTING-ORDER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ExclusiveAreaNestingOrder.ShortNameFragments
@@ -97,7 +96,7 @@ class ExclusiveAreaNestingOrder:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -108,7 +107,7 @@ class ExclusiveAreaNestingOrder:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExclusiveAreaRefs:
         exclusive_area_ref: list[
             ExclusiveAreaNestingOrder.ExclusiveAreaRefs.ExclusiveAreaRef
@@ -121,13 +120,12 @@ class ExclusiveAreaNestingOrder:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExclusiveAreaRef(Ref):
-            dest: None | ExclusiveAreaSubtypesEnum = field(
-                default=None,
+            dest: ExclusiveAreaSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

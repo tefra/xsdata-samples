@@ -8,7 +8,7 @@ from sdmx_ml.models.usage_type import UsageType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MeasureType(MeasureBaseType):
     """
     MeasureType defines the structure of a measure descriptor.

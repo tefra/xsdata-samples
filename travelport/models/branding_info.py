@@ -12,7 +12,7 @@ from travelport.models.type_segment_ref_1 import TypeSegmentRef1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BrandingInfo:
     """
     Branding information for the Ancillary Service.
@@ -129,13 +129,12 @@ class BrandingInfo:
             "type": "Attribute",
         },
     )
-    commercial_name: None | str = field(
-        default=None,
+    commercial_name: str = field(
         metadata={
             "name": "CommercialName",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     chargeable: None | str = field(
         default=None,

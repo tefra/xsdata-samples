@@ -5,30 +5,27 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TImport:
     class Meta:
         name = "tImport"
 
-    namespace: None | str = field(
-        default=None,
+    namespace: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    location: None | str = field(
-        default=None,
+    location: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    import_type: None | str = field(
-        default=None,
+    import_type: str = field(
         metadata={
             "name": "importType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

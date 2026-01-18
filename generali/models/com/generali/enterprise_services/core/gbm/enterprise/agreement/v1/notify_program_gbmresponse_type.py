@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NotifyProgramGbmresponseType(BaseGbmtype):
     """
     <description xmlns="">The definition of the response message that
@@ -21,14 +21,13 @@ class NotifyProgramGbmresponseType(BaseGbmtype):
     class Meta:
         name = "NotifyProgramGBMResponseType"
 
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     error_message: None | str = field(
         default=None,

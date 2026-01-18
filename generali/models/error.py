@@ -5,25 +5,23 @@ from dataclasses import dataclass, field
 from xsdata.models.datatype import XmlDateTime
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Error:
-    timestamp: None | XmlDateTime = field(
-        default=None,
+    timestamp: XmlDateTime = field(
         metadata={
             "name": "Timestamp",
             "type": "Element",
             "namespace": "",
             "required": True,
-        },
+        }
     )
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Element",
             "namespace": "",
             "required": True,
-        },
+        }
     )
     message: None | str = field(
         default=None,

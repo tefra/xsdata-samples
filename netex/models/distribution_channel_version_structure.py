@@ -32,7 +32,7 @@ from .type_of_value_version_structure import TypeOfValueVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "DistributionChannel_VersionStructure"

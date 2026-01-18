@@ -9,7 +9,7 @@ from travelport.models.leg_price import LegPrice
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExpertSolution:
     """
     Information about Expert Solution Route component retrieved from
@@ -39,13 +39,12 @@ class ExpertSolution:
             "max_occurs": 999,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     total_price: None | str = field(
         default=None,
@@ -61,11 +60,10 @@ class ExpertSolution:
             "type": "Attribute",
         },
     )
-    created_date: None | XmlDate = field(
-        default=None,
+    created_date: XmlDate = field(
         metadata={
             "name": "CreatedDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -8,7 +8,7 @@ from travelport.models.name_1 import Name1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TicketFailureInfo:
     """
     Will be optionally returned as part of AirTicketingRsp if one or all
@@ -39,22 +39,20 @@ class TicketFailureInfo:
             "max_occurs": 999,
         },
     )
-    name: None | Name1 = field(
-        default=None,
+    name: Name1 = field(
         metadata={
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        },
+        }
     )
-    code: None | int = field(
-        default=None,
+    code: int = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     message: None | str = field(
         default=None,
@@ -63,11 +61,10 @@ class TicketFailureInfo:
             "type": "Attribute",
         },
     )
-    booking_traveler_ref: None | str = field(
-        default=None,
+    booking_traveler_ref: str = field(
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -11,7 +11,7 @@ from .time_demand_type_ref import TimeDemandTypeRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeadRunCallPartStructure:
     time: None | XmlTime = field(
         default=None,

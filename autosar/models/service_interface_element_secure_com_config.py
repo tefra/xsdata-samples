@@ -27,7 +27,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceInterfaceElementSecureComConfig:
     """
     This element allows to secure the communication of the referenced
@@ -110,14 +110,13 @@ class ServiceInterfaceElementSecureComConfig:
     class Meta:
         name = "SERVICE-INTERFACE-ELEMENT-SECURE-COM-CONFIG"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ServiceInterfaceElementSecureComConfig.ShortNameFragments
@@ -296,7 +295,7 @@ class ServiceInterfaceElementSecureComConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -307,7 +306,7 @@ class ServiceInterfaceElementSecureComConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -318,90 +317,82 @@ class ServiceInterfaceElementSecureComConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventRef(Ref):
-        dest: None | ServiceEventDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceEventDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FieldNotifierRef(Ref):
-        dest: None | ServiceFieldDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceFieldDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GetterCallRef(Ref):
-        dest: None | ServiceFieldDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceFieldDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GetterReturnRef(Ref):
-        dest: None | ServiceFieldDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceFieldDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MethodCallRef(Ref):
-        dest: None | ServiceMethodDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceMethodDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MethodReturnRef(Ref):
-        dest: None | ServiceMethodDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceMethodDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SetterCallRef(Ref):
-        dest: None | ServiceFieldDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceFieldDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SetterReturnRef(Ref):
-        dest: None | ServiceFieldDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceFieldDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

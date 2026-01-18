@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GetProgramGbmresponse(GetProgramGbmresponseType):
     """
     <description xmlns="">The definition of the response message that

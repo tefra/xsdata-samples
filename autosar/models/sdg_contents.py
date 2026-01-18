@@ -14,7 +14,7 @@ from .sdf import Sdf
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SdgContents:
     """
     This meta-class represents the possible contents of a special data
@@ -105,13 +105,12 @@ class SdgContents:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SdxRef(Ref):
-        dest: None | ReferrableSubtypesEnum = field(
-            default=None,
+        dest: ReferrableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

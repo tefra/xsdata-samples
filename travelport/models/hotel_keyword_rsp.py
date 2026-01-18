@@ -9,7 +9,7 @@ from travelport.models.marketing_information_1 import MarketingInformation1
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelKeywordRsp(BaseRsp1):
     """
     Response showing keyword details of a given hotel chain or property.

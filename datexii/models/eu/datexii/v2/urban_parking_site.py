@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.urban_parking_site_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UrbanParkingSite(ParkingSite):
     """
     A parking site in an urban context.
@@ -24,14 +24,13 @@ class UrbanParkingSite(ParkingSite):
     :ivar urban_parking_site_extension:
     """
 
-    urban_parking_site_type: None | UrbanParkingSiteTypeEnum = field(
-        default=None,
+    urban_parking_site_type: UrbanParkingSiteTypeEnum = field(
         metadata={
             "name": "urbanParkingSiteType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     parking_zone: None | MultilingualString = field(
         default=None,

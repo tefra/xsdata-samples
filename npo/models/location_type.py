@@ -13,19 +13,18 @@ from npo.models.workflow_enum_type import WorkflowEnumType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationType:
     class Meta:
         name = "locationType"
 
-    program_url: None | str = field(
-        default=None,
+    program_url: str = field(
         metadata={
             "name": "programUrl",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "required": True,
-        },
+        }
     )
     av_attributes: None | AvAttributesType = field(
         default=None,
@@ -69,12 +68,11 @@ class LocationType:
             "type": "Attribute",
         },
     )
-    owner: None | OwnerTypeEnum = field(
-        default=None,
+    owner: OwnerTypeEnum = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     urn: None | str = field(
         default=None,

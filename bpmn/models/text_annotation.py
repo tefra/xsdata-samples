@@ -7,7 +7,7 @@ from .t_text_annotation import TTextAnnotation
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TextAnnotation(TTextAnnotation):
     class Meta:
         name = "textAnnotation"

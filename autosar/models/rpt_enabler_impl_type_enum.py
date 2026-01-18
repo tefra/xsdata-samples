@@ -7,7 +7,7 @@ from .rpt_enabler_impl_type_enum_simple import RptEnablerImplTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RptEnablerImplTypeEnum:
     """
     Describes the required / implemented usage of enabler flags for data
@@ -29,11 +29,10 @@ class RptEnablerImplTypeEnum:
     class Meta:
         name = "RPT-ENABLER-IMPL-TYPE-ENUM"
 
-    value: None | RptEnablerImplTypeEnumSimple = field(
-        default=None,
+    value: RptEnablerImplTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

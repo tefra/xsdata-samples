@@ -14,7 +14,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthernetCommunicationControllerConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -164,7 +164,7 @@ class EthernetCommunicationControllerConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CouplingPorts:
         coupling_port: list[CouplingPort] = field(
             default_factory=list,

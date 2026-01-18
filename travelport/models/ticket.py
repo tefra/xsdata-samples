@@ -12,7 +12,7 @@ from travelport.models.type_ticket_status import TypeTicketStatus
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ticket:
     """
     The ticket that resulted from an air booking.
@@ -79,14 +79,13 @@ class Ticket:
             "type": "Attribute",
         },
     )
-    ticket_number: None | str = field(
-        default=None,
+    ticket_number: str = field(
         metadata={
             "name": "TicketNumber",
             "type": "Attribute",
             "required": True,
             "length": 13,
-        },
+        }
     )
     ticket_status: None | TypeTicketStatus = field(
         default=None,

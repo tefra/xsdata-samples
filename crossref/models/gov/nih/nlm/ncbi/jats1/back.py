@@ -18,7 +18,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.notes import Notes
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Back:
     """
     <div> <h3>Back Matter</h3> </div>.

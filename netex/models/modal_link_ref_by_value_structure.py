@@ -8,7 +8,7 @@ from .vehicle_mode import VehicleMode
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModalLinkRefByValueStructure(LinkRefByValueStructure):
     vehicle_mode: None | VehicleMode = field(
         default=None,

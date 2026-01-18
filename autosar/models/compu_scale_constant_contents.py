@@ -7,7 +7,7 @@ from .compu_const import CompuConst
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompuScaleConstantContents:
     """
     This meta-class represents the fact that a particular scale of the

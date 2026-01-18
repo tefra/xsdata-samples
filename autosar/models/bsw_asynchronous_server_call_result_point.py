@@ -16,7 +16,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswAsynchronousServerCallResultPoint:
     """
     The callback point for an BswAsynchronousServerCallPoint i.e. the point
@@ -49,14 +49,13 @@ class BswAsynchronousServerCallResultPoint:
     class Meta:
         name = "BSW-ASYNCHRONOUS-SERVER-CALL-RESULT-POINT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | BswAsynchronousServerCallResultPoint.ShortNameFragments
@@ -113,7 +112,7 @@ class BswAsynchronousServerCallResultPoint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -124,7 +123,7 @@ class BswAsynchronousServerCallResultPoint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextLimitationRefs:
         context_limitation_ref: list[
             BswAsynchronousServerCallResultPoint.ContextLimitationRefs.ContextLimitationRef
@@ -137,24 +136,22 @@ class BswAsynchronousServerCallResultPoint:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ContextLimitationRef(Ref):
-            dest: None | BswDistinguishedPartitionSubtypesEnum = field(
-                default=None,
+            dest: BswDistinguishedPartitionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AsynchronousServerCallPointRef(Ref):
-        dest: None | BswAsynchronousServerCallPointSubtypesEnum = field(
-            default=None,
+        dest: BswAsynchronousServerCallPointSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

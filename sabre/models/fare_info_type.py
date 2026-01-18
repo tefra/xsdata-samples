@@ -9,7 +9,7 @@ from sabre.models.rule_info_type import RuleInfoType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareInfoType:
     """
     Rules for this priced option.
@@ -35,8 +35,7 @@ class FareInfoType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    fare_reference: None | str = field(
-        default=None,
+    fare_reference: str = field(
         metadata={
             "name": "FareReference",
             "type": "Element",
@@ -44,16 +43,15 @@ class FareInfoType:
             "required": True,
             "min_length": 1,
             "max_length": 8,
-        },
+        }
     )
-    rule_info: None | RuleInfoType = field(
-        default=None,
+    rule_info: RuleInfoType = field(
         metadata={
             "name": "RuleInfo",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     marketing_airline: list[CompanyNameType] = field(
         default_factory=list,
@@ -63,23 +61,21 @@ class FareInfoType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    departure_airport: None | ResponseLocationType = field(
-        default=None,
+    departure_airport: ResponseLocationType = field(
         metadata={
             "name": "DepartureAirport",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    arrival_airport: None | ResponseLocationType = field(
-        default=None,
+    arrival_airport: ResponseLocationType = field(
         metadata={
             "name": "ArrivalAirport",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     negotiated_fare: bool = field(
         default=False,

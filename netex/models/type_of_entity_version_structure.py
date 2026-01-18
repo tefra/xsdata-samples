@@ -7,7 +7,7 @@ from .type_of_value_version_structure import TypeOfValueVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfEntityVersionStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "TypeOfEntity_VersionStructure"

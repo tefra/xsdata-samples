@@ -7,15 +7,14 @@ from ipxact.models.access_type import AccessType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Access:
     class Meta:
         name = "access"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: None | AccessType = field(
-        default=None,
+    value: AccessType = field(
         metadata={
             "required": True,
-        },
+        }
     )

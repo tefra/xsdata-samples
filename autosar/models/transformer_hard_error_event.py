@@ -32,7 +32,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransformerHardErrorEvent:
     """
     The event is raised when data are received which should trigger a
@@ -114,14 +114,13 @@ class TransformerHardErrorEvent:
     class Meta:
         name = "TRANSFORMER-HARD-ERROR-EVENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | TransformerHardErrorEvent.ShortNameFragments
@@ -266,7 +265,7 @@ class TransformerHardErrorEvent:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -277,7 +276,7 @@ class TransformerHardErrorEvent:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -288,18 +287,17 @@ class TransformerHardErrorEvent:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ActivationReasonRepresentationRef(Ref):
-        dest: None | ExecutableEntityActivationReasonSubtypesEnum = field(
-            default=None,
+        dest: ExecutableEntityActivationReasonSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DisabledModeIrefs:
         disabled_mode_iref: list[RModeInAtomicSwcInstanceRef] = field(
             default_factory=list,
@@ -310,13 +308,12 @@ class TransformerHardErrorEvent:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StartOnEventRef(Ref):
-        dest: None | RunnableEntitySubtypesEnum = field(
-            default=None,
+        dest: RunnableEntitySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

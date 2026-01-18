@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IdsmProperties:
     """
     This meta-class provides the ability to aggregate filters for security
@@ -90,14 +90,13 @@ class IdsmProperties:
     class Meta:
         name = "IDSM-PROPERTIES"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | IdsmProperties.ShortNameFragments = field(
         default=None,
@@ -206,7 +205,7 @@ class IdsmProperties:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -217,7 +216,7 @@ class IdsmProperties:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -228,7 +227,7 @@ class IdsmProperties:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RateLimitationFilters:
         idsm_rate_limitation: list[IdsmRateLimitation] = field(
             default_factory=list,
@@ -239,7 +238,7 @@ class IdsmProperties:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TrafficLimitationFilters:
         idsm_traffic_limitation: list[IdsmTrafficLimitation] = field(
             default_factory=list,

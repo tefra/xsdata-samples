@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeCustomFieldAndGroupDeleteRef2:
     """
     A reference to an endpoint.
@@ -19,11 +19,10 @@ class TypeCustomFieldAndGroupDeleteRef2:
     class Meta:
         name = "typeCustomFieldAndGroupDeleteRef"
 
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

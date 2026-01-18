@@ -18,7 +18,7 @@ from .xref_target import XrefTarget
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LOverviewParagraph:
     """
     MixedContentForOverviewParagraph in one particular language.
@@ -64,13 +64,12 @@ class LOverviewParagraph:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    l: None | LEnumSimple = field(
-        default=None,
+    l: LEnumSimple = field(
         metadata={
             "name": "L",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     blueprint_value: None | str = field(
         default=None,
@@ -140,21 +139,20 @@ class LOverviewParagraph:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TraceRef(Ref):
-        dest: None | TraceableSubtypesEnum = field(
-            default=None,
+        dest: TraceableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(Supscript):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(Supscript):
         pass

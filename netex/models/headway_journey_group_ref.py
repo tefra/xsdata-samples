@@ -9,7 +9,7 @@ from .headway_journey_group_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HeadwayJourneyGroupRef(HeadwayJourneyGroupRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

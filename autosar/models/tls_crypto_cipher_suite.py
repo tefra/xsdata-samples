@@ -27,7 +27,7 @@ from .tls_version_enum import TlsVersionEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TlsCryptoCipherSuite:
     """
     This meta-class represents a cipher suite for describing cryptographic
@@ -112,14 +112,13 @@ class TlsCryptoCipherSuite:
     class Meta:
         name = "TLS-CRYPTO-CIPHER-SUITE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TlsCryptoCipherSuite.ShortNameFragments = (
         field(
@@ -266,7 +265,7 @@ class TlsCryptoCipherSuite:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -277,7 +276,7 @@ class TlsCryptoCipherSuite:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -288,40 +287,37 @@ class TlsCryptoCipherSuite:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AuthenticationRef(Ref):
-        dest: None | CryptoServicePrimitiveSubtypesEnum = field(
-            default=None,
+        dest: CryptoServicePrimitiveSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CertificateRef(Ref):
-        dest: None | CryptoServiceCertificateSubtypesEnum = field(
-            default=None,
+        dest: CryptoServiceCertificateSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EncryptionRef(Ref):
-        dest: None | CryptoServicePrimitiveSubtypesEnum = field(
-            default=None,
+        dest: CryptoServicePrimitiveSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class KeyExchangeRefs:
         key_exchange_ref: list[
             TlsCryptoCipherSuite.KeyExchangeRefs.KeyExchangeRef
@@ -334,24 +330,22 @@ class TlsCryptoCipherSuite:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class KeyExchangeRef(Ref):
-            dest: None | CryptoServicePrimitiveSubtypesEnum = field(
-                default=None,
+            dest: CryptoServicePrimitiveSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PreSharedKeyRef(Ref):
-        dest: None | CryptoServiceKeySubtypesEnum = field(
-            default=None,
+        dest: CryptoServiceKeySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

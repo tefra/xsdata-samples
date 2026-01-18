@@ -14,7 +14,7 @@ from travelport.models.requested_hotel_details import RequestedHotelDetails
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelDetailsRsp(BaseRsp1):
     """
     Response showing details of a given hotel property.

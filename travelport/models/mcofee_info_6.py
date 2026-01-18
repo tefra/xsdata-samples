@@ -9,7 +9,7 @@ from travelport.models.mcofee_info_fee_applies_to_ind_6 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McofeeInfo6:
     """
     Information related to the PTA/TOD (Prepaid Ticket Advice / Ticket on

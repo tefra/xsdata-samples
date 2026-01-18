@@ -12,7 +12,7 @@ from .port_interface_element_in_implementation_datatype_ref import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataPrototypeInServiceInterfaceRef:
     """
     This meta-class represents the ability to refer to an AUTOSAR

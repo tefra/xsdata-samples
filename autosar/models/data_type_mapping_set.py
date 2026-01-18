@@ -23,7 +23,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataTypeMappingSet:
     """
     This class represents a list of mappings between ApplicationDataTypes
@@ -107,14 +107,13 @@ class DataTypeMappingSet:
     class Meta:
         name = "DATA-TYPE-MAPPING-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DataTypeMappingSet.ShortNameFragments = field(
         default=None,
@@ -237,7 +236,7 @@ class DataTypeMappingSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -248,7 +247,7 @@ class DataTypeMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -259,7 +258,7 @@ class DataTypeMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -288,7 +287,7 @@ class DataTypeMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataTypeMaps:
         data_type_map: list[DataTypeMap] = field(
             default_factory=list,
@@ -299,7 +298,7 @@ class DataTypeMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeRequestTypeMaps:
         mode_request_type_map: list[ModeRequestTypeMap] = field(
             default_factory=list,

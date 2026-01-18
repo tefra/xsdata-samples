@@ -13,7 +13,7 @@ from ipxact.models.unsigned_int_expression import UnsignedIntExpression
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConstraintSet:
     """
     Defines constraints that apply to a component port.
@@ -111,7 +111,7 @@ class ConstraintSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Vector:
         """
         :ivar left: The optional elements left and right can be used to
@@ -120,17 +120,15 @@ class ConstraintSet:
             select a bit-slice of a vector.
         """
 
-        left: None | UnsignedIntExpression = field(
-            default=None,
+        left: UnsignedIntExpression = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
-        right: None | UnsignedIntExpression = field(
-            default=None,
+        right: UnsignedIntExpression = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )

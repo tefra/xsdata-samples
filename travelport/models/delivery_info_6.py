@@ -13,7 +13,7 @@ from travelport.models.type_structured_address_7 import TypeStructuredAddress7
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeliveryInfo6:
     """
     Container to encapsulate all delivery related information.

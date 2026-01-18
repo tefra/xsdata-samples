@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticProvidedDataMapping:
     """
     This represents the ability to define the nature of a data access for a
@@ -93,14 +93,13 @@ class DiagnosticProvidedDataMapping:
     class Meta:
         name = "DIAGNOSTIC-PROVIDED-DATA-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticProvidedDataMapping.ShortNameFragments
@@ -209,7 +208,7 @@ class DiagnosticProvidedDataMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -220,7 +219,7 @@ class DiagnosticProvidedDataMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -231,13 +230,12 @@ class DiagnosticProvidedDataMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataElementRef(Ref):
-        dest: None | DiagnosticDataElementSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticDataElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

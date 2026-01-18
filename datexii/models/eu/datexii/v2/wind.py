@@ -14,7 +14,7 @@ from datexii.models.eu.datexii.v2.speed_value import SpeedValue
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Wind:
     """
     Wind conditions on the road.

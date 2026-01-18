@@ -11,7 +11,7 @@ from travelport.models.queue_selector_1 import QueueSelector1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingEndReq(BookingBaseReq):
     """
     Ends the session.
@@ -30,13 +30,12 @@ class BookingEndReq(BookingBaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
-    session_activity: None | BookingEndReqSessionActivity = field(
-        default=None,
+    session_activity: BookingEndReqSessionActivity = field(
         metadata={
             "name": "SessionActivity",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     queue_selector: list[QueueSelector1] = field(
         default_factory=list,

@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.public_holiday_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PublicHoliday:
     """
     Specification of the public holiday type in a specific country or
@@ -33,13 +33,12 @@ class PublicHoliday:
     :ivar public_holiday_extension:
     """
 
-    country: None | CountryEnum = field(
-        default=None,
+    country: CountryEnum = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     country_subdivision: None | str = field(
         default=None,
@@ -57,14 +56,13 @@ class PublicHoliday:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    public_holiday_type: None | PublicHolidayTypeEnum = field(
-        default=None,
+    public_holiday_type: PublicHolidayTypeEnum = field(
         metadata={
             "name": "publicHolidayType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     public_holiday_name: None | MultilingualString = field(
         default=None,

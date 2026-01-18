@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipSdClientServiceInstanceConfig:
     """
     Client specific settings that are relevant for the configuration of
@@ -88,14 +88,13 @@ class SomeipSdClientServiceInstanceConfig:
     class Meta:
         name = "SOMEIP-SD-CLIENT-SERVICE-INSTANCE-CONFIG"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SomeipSdClientServiceInstanceConfig.ShortNameFragments
@@ -204,7 +203,7 @@ class SomeipSdClientServiceInstanceConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -215,7 +214,7 @@ class SomeipSdClientServiceInstanceConfig:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

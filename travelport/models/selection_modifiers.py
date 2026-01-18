@@ -7,7 +7,7 @@ from travelport.models.air_segment_ref import AirSegmentRef
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SelectionModifiers:
     """
     Modifiers supported for selection of services during EMD Issuance.

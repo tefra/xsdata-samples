@@ -34,7 +34,7 @@ from .coct_mt090100_uv01 import CoctMt090100Uv01AssignedPerson
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt060000Uv01Entity:
     class Meta:
         name = "COCT_MT060000UV01.Entity"
@@ -84,13 +84,12 @@ class CoctMt060000Uv01Entity:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassRoot = field(
-        default=None,
+    class_code: EntityClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -103,7 +102,7 @@ class CoctMt060000Uv01Entity:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt060000Uv01Escort:
     class Meta:
         name = "COCT_MT060000UV01.Escort"
@@ -140,13 +139,12 @@ class CoctMt060000Uv01Escort:
         },
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -166,7 +164,7 @@ class CoctMt060000Uv01Escort:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt060000Uv01Location:
     class Meta:
         name = "COCT_MT060000UV01.Location"
@@ -196,13 +194,12 @@ class CoctMt060000Uv01Location:
         },
     )
     located_entity: None | CoctMt070000Uv01LocatedEntity = field(
-        default=None,
         metadata={
             "name": "locatedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -211,17 +208,16 @@ class CoctMt060000Uv01Location:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetLocation = field(
-        default=None,
+    type_code: ParticipationTargetLocation = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt060000Uv01Performer:
     class Meta:
         name = "COCT_MT060000UV01.Performer"
@@ -258,13 +254,12 @@ class CoctMt060000Uv01Performer:
         },
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -273,17 +268,16 @@ class CoctMt060000Uv01Performer:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationPhysicalPerformer = field(
-        default=None,
+    type_code: ParticipationPhysicalPerformer = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt060000Uv01RoleTransport:
     class Meta:
         name = "COCT_MT060000UV01.RoleTransport"
@@ -329,25 +323,23 @@ class CoctMt060000Uv01RoleTransport:
         },
     )
     class_code: (
-        None
-        | RoleClassMutualRelationship
+        RoleClassMutualRelationship
         | RoleClassPassive
         | str
         | RoleClassOntological
         | RoleClassPartitive
         | RoleClassRootValue
     ) = field(
-        default=None,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt060000Uv01Subject:
     class Meta:
         name = "COCT_MT060000UV01.Subject"
@@ -377,13 +369,12 @@ class CoctMt060000Uv01Subject:
         },
     )
     role_transport: None | CoctMt060000Uv01RoleTransport = field(
-        default=None,
         metadata={
             "name": "roleTransport",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -392,17 +383,16 @@ class CoctMt060000Uv01Subject:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetSubject = field(
-        default=None,
+    type_code: ParticipationTargetSubject = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt060000Uv01Transportation:
     class Meta:
         name = "COCT_MT060000UV01.Transportation"
@@ -533,11 +523,10 @@ class CoctMt060000Uv01Transportation:
             "required": True,
         },
     )
-    mood_code: None | XActMoodIntentEvent = field(
-        default=None,
+    mood_code: XActMoodIntentEvent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

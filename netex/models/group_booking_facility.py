@@ -7,7 +7,7 @@ from .group_booking_enumeration import GroupBookingEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupBookingFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

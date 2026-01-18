@@ -18,7 +18,7 @@ from .timing_point_ref import TimingPointRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyWaitTimeVersionedChildStructure(
     JourneyTimingVersionedChildStructure
 ):
@@ -77,12 +77,11 @@ class JourneyWaitTimeVersionedChildStructure(
             ),
         },
     )
-    wait_time: None | XmlDuration = field(
-        default=None,
+    wait_time: XmlDuration = field(
         metadata={
             "name": "WaitTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

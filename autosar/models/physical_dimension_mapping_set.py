@@ -18,7 +18,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PhysicalDimensionMappingSet:
     """
     This class represents a container for a list of mappings between
@@ -86,14 +86,13 @@ class PhysicalDimensionMappingSet:
     class Meta:
         name = "PHYSICAL-DIMENSION-MAPPING-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | PhysicalDimensionMappingSet.ShortNameFragments
@@ -194,7 +193,7 @@ class PhysicalDimensionMappingSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -205,7 +204,7 @@ class PhysicalDimensionMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -216,7 +215,7 @@ class PhysicalDimensionMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PhysicalDimensionMappings:
         physical_dimension_mapping: list[PhysicalDimensionMapping] = field(
             default_factory=list,

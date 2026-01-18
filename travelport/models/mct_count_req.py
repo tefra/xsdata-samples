@@ -8,7 +8,7 @@ from travelport.models.mct_search import MctSearch
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MctCountReq(BaseReq1):
     """
     Determine how many MCT exceptions exist for the search criteria.
@@ -17,11 +17,10 @@ class MctCountReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    mct_search: None | MctSearch = field(
-        default=None,
+    mct_search: MctSearch = field(
         metadata={
             "name": "MctSearch",
             "type": "Element",
             "required": True,
-        },
+        }
     )

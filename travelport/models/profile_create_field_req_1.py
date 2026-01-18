@@ -9,7 +9,7 @@ from travelport.models.create_field_group_1 import CreateFieldGroup1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileCreateFieldReq1(BaseReq2):
     """
     Creates one or multiple custom fields and/or field groups.
@@ -44,11 +44,10 @@ class ProfileCreateFieldReq1(BaseReq2):
             "type": "Element",
         },
     )
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

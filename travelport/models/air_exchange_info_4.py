@@ -10,7 +10,7 @@ from travelport.models.type_tax_info_4 import TypeTaxInfo4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeInfo4:
     """
     Provides results of a exchange quote.
@@ -105,13 +105,12 @@ class AirExchangeInfo4:
             "max_occurs": 999,
         },
     )
-    exchange_amount: None | str = field(
-        default=None,
+    exchange_amount: str = field(
         metadata={
             "name": "ExchangeAmount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     base_fare: None | str = field(
         default=None,
@@ -254,7 +253,7 @@ class AirExchangeInfo4:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TotalPenaltyTaxInfo:
         penalty_tax_info: list[TypeTax4] = field(
             default_factory=list,
@@ -272,7 +271,7 @@ class AirExchangeInfo4:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TicketFeeInfo:
         base: None | str = field(
             default=None,

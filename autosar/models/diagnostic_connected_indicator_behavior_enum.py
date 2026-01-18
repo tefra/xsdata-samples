@@ -9,7 +9,7 @@ from .diagnostic_connected_indicator_behavior_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticConnectedIndicatorBehaviorEnum:
     """
     Behavior of the indicator.
@@ -30,11 +30,10 @@ class DiagnosticConnectedIndicatorBehaviorEnum:
     class Meta:
         name = "DIAGNOSTIC-CONNECTED-INDICATOR-BEHAVIOR-ENUM"
 
-    value: None | DiagnosticConnectedIndicatorBehaviorEnumSimple = field(
-        default=None,
+    value: DiagnosticConnectedIndicatorBehaviorEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

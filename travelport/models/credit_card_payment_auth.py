@@ -8,7 +8,7 @@ from travelport.models.form_of_payment_ref_1 import FormOfPaymentRef1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreditCardPaymentAuth:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
@@ -38,19 +38,17 @@ class CreditCardPaymentAuth:
             "max_length": 5,
         },
     )
-    amount: None | str = field(
-        default=None,
+    amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    perform_avs: None | bool = field(
-        default=None,
+    perform_avs: bool = field(
         metadata={
             "name": "PerformAVS",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

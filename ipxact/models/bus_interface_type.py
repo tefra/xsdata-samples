@@ -30,7 +30,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BusInterfaceType:
     """
     Type definition for a busInterface in a component.
@@ -89,13 +89,12 @@ class BusInterfaceType:
     class Meta:
         name = "busInterfaceType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -120,14 +119,13 @@ class BusInterfaceType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bus_type: None | ConfigurableLibraryRefType = field(
-        default=None,
+    bus_type: ConfigurableLibraryRefType = field(
         metadata={
             "name": "busType",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     abstraction_types: None | AbstractionTypes = field(
         default=None,
@@ -250,7 +248,7 @@ class BusInterfaceType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Initiator:
         """
         :ivar address_space_ref: If this initiator connects to an
@@ -269,7 +267,7 @@ class BusInterfaceType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AddressSpaceRef(AddrSpaceRefType):
             """
             :ivar base_address: Base of an address space.
@@ -295,7 +293,7 @@ class BusInterfaceType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ModeRef:
                 """
                 A reference to a mode.
@@ -315,7 +313,7 @@ class BusInterfaceType:
                     },
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Target:
         """
         :ivar memory_map_ref:
@@ -354,7 +352,7 @@ class BusInterfaceType:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FileSetRefGroup:
             """
             :ivar group: Abritray name assigned to the collections of
@@ -386,18 +384,17 @@ class BusInterfaceType:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class System:
-        group: None | Group = field(
-            default=None,
+        group: Group = field(
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MirroredTarget:
         """
         :ivar base_addresses: Represents a set of remap base addresses.
@@ -414,7 +411,7 @@ class BusInterfaceType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class BaseAddresses:
             """
             :ivar remap_addresses:
@@ -434,16 +431,15 @@ class BusInterfaceType:
                     "min_occurs": 1,
                 },
             )
-            range: None | UnsignedPositiveLongintExpression = field(
-                default=None,
+            range: UnsignedPositiveLongintExpression = field(
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     "required": True,
-                },
+                }
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class RemapAddresses:
                 """
                 :ivar remap_address: Base of an address block, expressed
@@ -454,14 +450,13 @@ class BusInterfaceType:
                 :ivar id:
                 """
 
-                remap_address: None | UnsignedLongintExpression = field(
-                    default=None,
+                remap_address: UnsignedLongintExpression = field(
                     metadata={
                         "name": "remapAddress",
                         "type": "Element",
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                         "required": True,
-                    },
+                    }
                 )
                 mode_ref: list[ModeRef] = field(
                     default_factory=list,
@@ -479,18 +474,17 @@ class BusInterfaceType:
                     },
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MirroredSystem:
-        group: None | Group = field(
-            default=None,
+        group: Group = field(
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Monitor:
         """
         :ivar group: Indicates which system interface is being
@@ -506,11 +500,10 @@ class BusInterfaceType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        interface_mode: None | MonitorInterfaceMode = field(
-            default=None,
+        interface_mode: MonitorInterfaceMode = field(
             metadata={
                 "name": "interfaceMode",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

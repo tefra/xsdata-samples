@@ -8,7 +8,7 @@ from .type_of_facility_version_structure import TypeOfFacilityVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfFacility(TypeOfFacilityVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

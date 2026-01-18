@@ -7,6 +7,6 @@ from .link_in_sequence_ref_structure import LinkInSequenceRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinkInJourneyPatternRefStructure(LinkInSequenceRefStructure):
     pass

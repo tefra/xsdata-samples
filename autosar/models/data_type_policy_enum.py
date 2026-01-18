@@ -7,7 +7,7 @@ from .data_type_policy_enum_simple import DataTypePolicyEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataTypePolicyEnum:
     """
     This class lists the supported DataTypePolicies.
@@ -28,11 +28,10 @@ class DataTypePolicyEnum:
     class Meta:
         name = "DATA-TYPE-POLICY-ENUM"
 
-    value: None | DataTypePolicyEnumSimple = field(
-        default=None,
+    value: DataTypePolicyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

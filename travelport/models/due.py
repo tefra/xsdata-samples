@@ -5,7 +5,7 @@ from dataclasses import dataclass
 __NAMESPACE__ = "http://www.travelport.com/schema/cruise_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Due:
     """
     Due balance Amount on Booking.

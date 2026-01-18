@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HealthChannelExternalReportedStatus:
     """
     This element defines a health channel representing the status of an
@@ -68,13 +68,12 @@ class HealthChannelExternalReportedStatus:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StatusRef(Ref):
-        dest: None | PhmHealthChannelStatusSubtypesEnum = field(
-            default=None,
+        dest: PhmHealthChannelStatusSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

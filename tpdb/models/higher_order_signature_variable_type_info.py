@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from tpdb.models.var_declaration import VarDeclaration
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HigherOrderSignatureVariableTypeInfo:
     class Meta:
         global_type = False

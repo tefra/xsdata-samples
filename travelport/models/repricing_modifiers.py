@@ -19,7 +19,7 @@ from travelport.models.type_price_class_of_service import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepricingModifiers:
     """
     Used for rapid reprice to provide additional options for the reprice.
@@ -265,7 +265,7 @@ class RepricingModifiers:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OverrideCurrency:
         currency_code: None | str = field(
             default=None,

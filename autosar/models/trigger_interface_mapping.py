@@ -22,7 +22,7 @@ from .trigger_mapping import TriggerMapping
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TriggerInterfaceMapping:
     """
     Defines the mapping of unequal named Triggers in context of two
@@ -100,14 +100,13 @@ class TriggerInterfaceMapping:
     class Meta:
         name = "TRIGGER-INTERFACE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TriggerInterfaceMapping.ShortNameFragments = (
         field(
@@ -222,7 +221,7 @@ class TriggerInterfaceMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -233,7 +232,7 @@ class TriggerInterfaceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -244,7 +243,7 @@ class TriggerInterfaceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -273,7 +272,7 @@ class TriggerInterfaceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TriggerMappings:
         trigger_mapping: list[TriggerMapping] = field(
             default_factory=list,

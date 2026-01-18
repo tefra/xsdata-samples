@@ -8,7 +8,7 @@ from sdmx_ml.models.component_type import ComponentType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GroupDimensionBaseType(ComponentType):
     """
     GroupDimensionBaseType is an abstract base type which refines the base

@@ -65,7 +65,7 @@ from .coct_mt960000_uv05 import CoctMt960000Uv05Position
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02AdministrativeObservation:
     class Meta:
         name = "PRPA_MT201310UV02.AdministrativeObservation"
@@ -101,13 +101,12 @@ class PrpaMt201310Uv02AdministrativeObservation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     status_code: None | Cs = field(
         default=None,
@@ -125,13 +124,12 @@ class PrpaMt201310Uv02AdministrativeObservation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | AnyType = field(
-        default=None,
+    value: AnyType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -140,13 +138,12 @@ class PrpaMt201310Uv02AdministrativeObservation:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassObservation = field(
-        default=None,
+    class_code: ActClassObservation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -158,7 +155,7 @@ class PrpaMt201310Uv02AdministrativeObservation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02CareGiver:
     class Meta:
         name = "PRPA_MT201310UV02.CareGiver"
@@ -232,13 +229,12 @@ class PrpaMt201310Uv02CareGiver:
         },
     )
     care_giver_person: None | CoctMt030207UvPerson = field(
-        default=None,
         metadata={
             "name": "careGiverPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -274,7 +270,7 @@ class PrpaMt201310Uv02CareGiver:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02ContactParty:
     class Meta:
         name = "PRPA_MT201310UV02.ContactParty"
@@ -373,13 +369,12 @@ class PrpaMt201310Uv02ContactParty:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassContact = field(
-        default=None,
+    class_code: RoleClassContact = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     negation_ind: None | str = field(
         default=None,
@@ -391,7 +386,7 @@ class PrpaMt201310Uv02ContactParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02CoveredParty:
     class Meta:
         name = "PRPA_MT201310UV02.CoveredParty"
@@ -436,13 +431,12 @@ class PrpaMt201310Uv02CoveredParty:
         },
     )
     coverage_record: None | CoctMt510000Uv06CoverageRecord = field(
-        default=None,
         metadata={
             "name": "coverageRecord",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -462,7 +456,7 @@ class PrpaMt201310Uv02CoveredParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02Employee:
     class Meta:
         name = "PRPA_MT201310UV02.Employee"
@@ -553,13 +547,12 @@ class PrpaMt201310Uv02Employee:
         },
     )
     employer_organization: None | CoctMt150007UvOrganization = field(
-        default=None,
         metadata={
             "name": "employerOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -568,13 +561,12 @@ class PrpaMt201310Uv02Employee:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassEmployee = field(
-        default=None,
+    class_code: RoleClassEmployee = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     negation_ind: None | str = field(
         default=None,
@@ -586,7 +578,7 @@ class PrpaMt201310Uv02Employee:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02Group:
     class Meta:
         name = "PRPA_MT201310UV02.Group"
@@ -680,13 +672,12 @@ class PrpaMt201310Uv02Group:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassOrganization = field(
-        default=None,
+    class_code: EntityClassOrganization = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -698,7 +689,7 @@ class PrpaMt201310Uv02Group:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02Guardian:
     class Meta:
         name = "PRPA_MT201310UV02.Guardian"
@@ -832,7 +823,7 @@ class PrpaMt201310Uv02Guardian:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02LanguageCommunication:
     class Meta:
         name = "PRPA_MT201310UV02.LanguageCommunication"
@@ -861,14 +852,13 @@ class PrpaMt201310Uv02LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: None | Ce = field(
-        default=None,
+    language_code: Ce = field(
         metadata={
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     mode_code: None | Ce = field(
         default=None,
@@ -903,7 +893,7 @@ class PrpaMt201310Uv02LanguageCommunication:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02Nation:
     class Meta:
         name = "PRPA_MT201310UV02.Nation"
@@ -932,13 +922,12 @@ class PrpaMt201310Uv02Nation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     name: None | OnExplicit = field(
         default=None,
@@ -972,7 +961,7 @@ class PrpaMt201310Uv02Nation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02OtherIds:
     class Meta:
         name = "PRPA_MT201310UV02.OtherIDs"
@@ -1026,13 +1015,12 @@ class PrpaMt201310Uv02OtherIds:
         },
     )
     scoping_organization: None | CoctMt150002Uv01Organization = field(
-        default=None,
         metadata={
             "name": "scopingOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1042,25 +1030,23 @@ class PrpaMt201310Uv02OtherIds:
         },
     )
     class_code: (
-        None
-        | RoleClassMutualRelationship
+        RoleClassMutualRelationship
         | RoleClassPassive
         | str
         | RoleClassOntological
         | RoleClassPartitive
         | RoleClassRootValue
     ) = field(
-        default=None,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02PersonalRelationship:
     class Meta:
         name = "PRPA_MT201310UV02.PersonalRelationship"
@@ -1096,13 +1082,12 @@ class PrpaMt201310Uv02PersonalRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Ce = field(
-        default=None,
+    code: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     addr: list[AdExplicit] = field(
         default_factory=list,
@@ -1194,7 +1179,7 @@ class PrpaMt201310Uv02PersonalRelationship:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02QueryMatchObservation:
     class Meta:
         name = "PRPA_MT201310UV02.QueryMatchObservation"
@@ -1223,21 +1208,19 @@ class PrpaMt201310Uv02QueryMatchObservation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    value: None | AnyType = field(
-        default=None,
+    value: AnyType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1246,13 +1229,12 @@ class PrpaMt201310Uv02QueryMatchObservation:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassObservation = field(
-        default=None,
+    class_code: ActClassObservation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -1265,7 +1247,7 @@ class PrpaMt201310Uv02QueryMatchObservation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02Student:
     class Meta:
         name = "PRPA_MT201310UV02.Student"
@@ -1374,7 +1356,7 @@ class PrpaMt201310Uv02Student:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02Subject2:
     class Meta:
         name = "PRPA_MT201310UV02.Subject2"
@@ -1404,12 +1386,11 @@ class PrpaMt201310Uv02Subject2:
         },
     )
     position: None | CoctMt960000Uv05Position = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1418,17 +1399,16 @@ class PrpaMt201310Uv02Subject2:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetSubject = field(
-        default=None,
+    type_code: ParticipationTargetSubject = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02Subject3:
     class Meta:
         name = "PRPA_MT201310UV02.Subject3"
@@ -1457,14 +1437,13 @@ class PrpaMt201310Uv02Subject3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    care_provision: None | CoctMt820000UvCareProvision = field(
-        default=None,
+    care_provision: CoctMt820000UvCareProvision = field(
         metadata={
             "name": "careProvision",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1473,17 +1452,16 @@ class PrpaMt201310Uv02Subject3:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetSubject = field(
-        default=None,
+    type_code: ParticipationTargetSubject = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02BirthPlace:
     class Meta:
         name = "PRPA_MT201310UV02.BirthPlace"
@@ -1570,7 +1548,7 @@ class PrpaMt201310Uv02BirthPlace:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02Citizen:
     class Meta:
         name = "PRPA_MT201310UV02.Citizen"
@@ -1614,14 +1592,13 @@ class PrpaMt201310Uv02Citizen:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    political_nation: None | PrpaMt201310Uv02Nation = field(
-        default=None,
+    political_nation: PrpaMt201310Uv02Nation = field(
         metadata={
             "name": "politicalNation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1657,7 +1634,7 @@ class PrpaMt201310Uv02Citizen:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02Member:
     class Meta:
         name = "PRPA_MT201310UV02.Member"
@@ -1717,12 +1694,11 @@ class PrpaMt201310Uv02Member:
         },
     )
     group: None | PrpaMt201310Uv02Group = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1759,7 +1735,7 @@ class PrpaMt201310Uv02Member:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02PatientOfOtherProvider:
     class Meta:
         name = "PRPA_MT201310UV02.PatientOfOtherProvider"
@@ -1788,14 +1764,13 @@ class PrpaMt201310Uv02PatientOfOtherProvider:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject_of: None | PrpaMt201310Uv02Subject3 = field(
-        default=None,
+    subject_of: PrpaMt201310Uv02Subject3 = field(
         metadata={
             "name": "subjectOf",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1832,7 +1807,7 @@ class PrpaMt201310Uv02PatientOfOtherProvider:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02Subject:
     class Meta:
         name = "PRPA_MT201310UV02.Subject"
@@ -1863,13 +1838,12 @@ class PrpaMt201310Uv02Subject:
     )
     query_match_observation: None | PrpaMt201310Uv02QueryMatchObservation = (
         field(
-            default=None,
             metadata={
                 "name": "queryMatchObservation",
                 "type": "Element",
                 "namespace": "urn:hl7-org:v3",
                 "nillable": True,
-            },
+            }
         )
     )
     null_flavor: None | NullFlavor = field(
@@ -1889,7 +1863,7 @@ class PrpaMt201310Uv02Subject:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02Subject4:
     class Meta:
         name = "PRPA_MT201310UV02.Subject4"
@@ -1921,13 +1895,12 @@ class PrpaMt201310Uv02Subject4:
     administrative_observation: (
         None | PrpaMt201310Uv02AdministrativeObservation
     ) = field(
-        default=None,
         metadata={
             "name": "administrativeObservation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1936,17 +1909,16 @@ class PrpaMt201310Uv02Subject4:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetSubject = field(
-        default=None,
+    type_code: ParticipationTargetSubject = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02NonPersonLivingSubject:
     class Meta:
         name = "PRPA_MT201310UV02.NonPersonLivingSubject"
@@ -2195,13 +2167,12 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassNonPersonLivingSubject = field(
-        default=None,
+    class_code: EntityClassNonPersonLivingSubject = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -2213,7 +2184,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02Person:
     class Meta:
         name = "PRPA_MT201310UV02.Person"
@@ -2535,7 +2506,7 @@ class PrpaMt201310Uv02Person:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201310Uv02Patient:
     class Meta:
         name = "PRPA_MT201310UV02.Patient"
@@ -2586,14 +2557,13 @@ class PrpaMt201310Uv02Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     effective_time: None | IvlTsExplicit = field(
         default=None,

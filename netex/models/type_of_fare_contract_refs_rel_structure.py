@@ -9,7 +9,7 @@ from .type_of_fare_contract_ref import TypeOfFareContractRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfFareContractRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfFareContractRefs_RelStructure"

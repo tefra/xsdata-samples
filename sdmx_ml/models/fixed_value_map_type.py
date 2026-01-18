@@ -8,7 +8,7 @@ from sdmx_ml.models.annotable_type import AnnotableType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class FixedValueMapType(AnnotableType):
     """
     FixedValueMapType defines the structure for providing a fixed value for
@@ -47,22 +47,20 @@ class FixedValueMapType(AnnotableType):
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Source:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Target:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )

@@ -28,7 +28,7 @@ from ipxact.models.volatile import Volatile
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddressBlockType:
     """
     Top level address block that specify an address.
@@ -71,13 +71,12 @@ class AddressBlockType:
     class Meta:
         name = "addressBlockType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -117,14 +116,13 @@ class AddressBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    base_address: None | BaseAddress = field(
-        default=None,
+    base_address: BaseAddress = field(
         metadata={
             "name": "baseAddress",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     address_block_definition_ref: (
         None | AddressBlockType.AddressBlockDefinitionRef
@@ -225,7 +223,7 @@ class AddressBlockType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessHandles:
         access_handle: list[SlicedAccessHandle] = field(
             default_factory=list,
@@ -237,7 +235,7 @@ class AddressBlockType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AddressBlockDefinitionRef:
         value: str = field(
             default="",
@@ -245,16 +243,15 @@ class AddressBlockType:
                 "required": True,
             },
         )
-        type_definitions: None | str = field(
-            default=None,
+        type_definitions: str = field(
             metadata={
                 "name": "typeDefinitions",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Register:
         """
         :ivar name: Unique name
@@ -282,13 +279,12 @@ class AddressBlockType:
         :ivar id:
         """
 
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 "required": True,
-            },
+            }
         )
         display_name: None | DisplayName = field(
             default=None,
@@ -328,14 +324,13 @@ class AddressBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        address_offset: None | UnsignedLongintExpression = field(
-            default=None,
+        address_offset: UnsignedLongintExpression = field(
             metadata={
                 "name": "addressOffset",
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 "required": True,
-            },
+            }
         )
         register_definition_ref: (
             None | AddressBlockType.Register.RegisterDefinitionRef
@@ -416,7 +411,7 @@ class AddressBlockType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AccessHandles:
             access_handle: list[SimpleAccessHandle] = field(
                 default_factory=list,
@@ -428,7 +423,7 @@ class AddressBlockType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RegisterDefinitionRef:
             value: str = field(
                 default="",
@@ -436,11 +431,10 @@ class AddressBlockType:
                     "required": True,
                 },
             )
-            type_definitions: None | str = field(
-                default=None,
+            type_definitions: str = field(
                 metadata={
                     "name": "typeDefinitions",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

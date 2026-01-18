@@ -19,7 +19,7 @@ from .unit_subtypes_enum import UnitSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UnitGroup:
     """
     This meta-class represents the ability to specify a logical grouping of
@@ -98,14 +98,13 @@ class UnitGroup:
     class Meta:
         name = "UNIT-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | UnitGroup.ShortNameFragments = field(
         default=None,
@@ -202,7 +201,7 @@ class UnitGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -213,7 +212,7 @@ class UnitGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -224,7 +223,7 @@ class UnitGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnitRefs:
         unit_ref: list[UnitGroup.UnitRefs.UnitRef] = field(
             default_factory=list,
@@ -235,13 +234,12 @@ class UnitGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UnitRef(Ref):
-            dest: None | UnitSubtypesEnum = field(
-                default=None,
+            dest: UnitSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

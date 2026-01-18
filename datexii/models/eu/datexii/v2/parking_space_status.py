@@ -9,7 +9,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingSpaceStatus:
     """
     Status (occupied or closed) for a single parking space which was
@@ -33,14 +33,13 @@ class ParkingSpaceStatus:
     :ivar parking_space_status_extension:
     """
 
-    parking_space_occupied: None | bool = field(
-        default=None,
+    parking_space_occupied: bool = field(
         metadata={
             "name": "parkingSpaceOccupied",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     parking_space_closed: None | bool = field(
         default=None,

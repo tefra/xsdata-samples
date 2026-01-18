@@ -74,7 +74,7 @@ from .type_of_journey_pattern_ref import TypeOfJourneyPatternRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SectionsInSequenceRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "sectionsInSequence_RelStructure"
@@ -90,7 +90,7 @@ class SectionsInSequenceRelStructure(StrictContainmentAggregationStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinkSequenceVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "LinkSequence_VersionStructure"
@@ -160,7 +160,7 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "JourneyPattern_VersionStructure"
@@ -311,7 +311,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SectionVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "Section_VersionStructure"
@@ -341,7 +341,7 @@ class SectionVersionStructure(LinkSequenceVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CommonSectionVersionStructure(SectionVersionStructure):
     class Meta:
         name = "CommonSection_VersionStructure"
@@ -370,7 +370,7 @@ class CommonSectionVersionStructure(SectionVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneralSectionVersionStructure(SectionVersionStructure):
     class Meta:
         name = "GeneralSection_VersionStructure"
@@ -393,13 +393,13 @@ class GeneralSectionVersionStructure(SectionVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyPattern(JourneyPatternVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LineSectionVersionStructure(SectionVersionStructure):
     class Meta:
         name = "LineSection_VersionStructure"
@@ -494,13 +494,13 @@ class LineSectionVersionStructure(SectionVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CommonSection(CommonSectionVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareSectionVersionStructure(GeneralSectionVersionStructure):
     class Meta:
         name = "FareSection_VersionStructure"
@@ -563,25 +563,25 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneralSection(GeneralSectionVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LineSection(LineSectionVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareSection(FareSectionVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SectionInSequenceVersionedChildStructure(
     LinkInLinkSequenceVersionedChildStructure
 ):
@@ -660,7 +660,7 @@ class SectionInSequenceVersionedChildStructure(
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SectionInSequence(SectionInSequenceVersionedChildStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

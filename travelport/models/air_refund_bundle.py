@@ -13,7 +13,7 @@ from travelport.models.waiver_code import WaiverCode
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirRefundBundle:
     """
     Bundle refund, pricing, and penalty information for one ticket number
@@ -35,13 +35,12 @@ class AirRefundBundle:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_refund_info: None | AirRefundInfo = field(
-        default=None,
+    air_refund_info: AirRefundInfo = field(
         metadata={
             "name": "AirRefundInfo",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     name: list[Name1] = field(
         default_factory=list,

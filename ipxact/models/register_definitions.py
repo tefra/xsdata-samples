@@ -16,7 +16,7 @@ from ipxact.models.volatile import Volatile
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RegisterDefinitions:
     class Meta:
         name = "registerDefinitions"
@@ -31,7 +31,7 @@ class RegisterDefinitions:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RegisterDefinition:
         """
         :ivar name: Unique name
@@ -50,12 +50,11 @@ class RegisterDefinitions:
         :ivar id:
         """
 
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         display_name: None | DisplayName = field(
             default=None,
@@ -84,12 +83,11 @@ class RegisterDefinitions:
                 "type": "Element",
             },
         )
-        size: None | UnsignedPositiveIntExpression = field(
-            default=None,
+        size: UnsignedPositiveIntExpression = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         volatile: None | Volatile = field(
             default=None,

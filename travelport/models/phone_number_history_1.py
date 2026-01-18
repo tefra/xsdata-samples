@@ -12,7 +12,7 @@ from travelport.models.provider_reservation_info_ref_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PhoneNumberHistory1:
     """
     Consists of type (office, home, fax), location (city code), the country

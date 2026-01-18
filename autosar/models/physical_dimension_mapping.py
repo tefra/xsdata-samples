@@ -8,7 +8,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PhysicalDimensionMapping:
     """
     This class represents a specific mapping between two
@@ -69,24 +69,22 @@ class PhysicalDimensionMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FirstPhysicalDimensionRef(Ref):
-        dest: None | PhysicalDimensionSubtypesEnum = field(
-            default=None,
+        dest: PhysicalDimensionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecondPhysicalDimensionRef(Ref):
-        dest: None | PhysicalDimensionSubtypesEnum = field(
-            default=None,
+        dest: PhysicalDimensionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

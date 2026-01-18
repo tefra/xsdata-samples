@@ -8,7 +8,7 @@ from travelport.models.vehicle_with_media_items import VehicleWithMediaItems
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleMediaLinksRsp(BaseRsp1):
     """
     Response for vehicle image search results.

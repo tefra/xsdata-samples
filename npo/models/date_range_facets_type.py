@@ -9,7 +9,7 @@ from npo.models.date_range_preset_type_enum import DateRangePresetTypeEnum
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateRangeFacetsType(AbstractFacetType):
     class Meta:
         name = "dateRangeFacetsType"

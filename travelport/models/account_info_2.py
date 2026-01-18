@@ -13,7 +13,7 @@ from travelport.models.type_account_type_profile_info_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccountInfo2(TypeAccountTypeProfileInfo2):
     """
     Account specific profile information.
@@ -70,15 +70,14 @@ class AccountInfo2(TypeAccountTypeProfileInfo2):
             "max_occurs": 999,
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     local_language_name: None | str = field(
         default=None,

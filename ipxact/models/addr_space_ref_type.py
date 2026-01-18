@@ -7,7 +7,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddrSpaceRefType:
     """
     Base type for an element which references an address space.
@@ -31,13 +31,12 @@ class AddrSpaceRefType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    address_space_ref: None | str = field(
-        default=None,
+    address_space_ref: str = field(
         metadata={
             "name": "addressSpaceRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,

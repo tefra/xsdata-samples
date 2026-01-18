@@ -11,7 +11,7 @@ from sdmx_ml.models.time_data_type import TimeDataType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TimeTextFormatType(SimpleComponentTextFormatType):
     """
     TimeTextFormat is a restricted version of the

@@ -35,7 +35,7 @@ from .symbol_props import SymbolProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomCppImplementationDataType:
     """
     This meta-class represents the way to specify a data type definition
@@ -132,14 +132,13 @@ class CustomCppImplementationDataType:
     class Meta:
         name = "CUSTOM-CPP-IMPLEMENTATION-DATA-TYPE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | CustomCppImplementationDataType.ShortNameFragments
@@ -316,7 +315,7 @@ class CustomCppImplementationDataType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -327,7 +326,7 @@ class CustomCppImplementationDataType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -338,7 +337,7 @@ class CustomCppImplementationDataType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -367,7 +366,7 @@ class CustomCppImplementationDataType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Namespaces:
         symbol_props: list[SymbolProps] = field(
             default_factory=list,
@@ -378,7 +377,7 @@ class CustomCppImplementationDataType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SubElements:
         cpp_implementation_data_type_element: list[
             CppImplementationDataTypeElement
@@ -391,7 +390,7 @@ class CustomCppImplementationDataType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TemplateArguments:
         cpp_template_argument: list[CppTemplateArgument] = field(
             default_factory=list,
@@ -402,13 +401,12 @@ class CustomCppImplementationDataType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeReferenceRef(Ref):
-        dest: None | CppImplementationDataTypeSubtypesEnum = field(
-            default=None,
+        dest: CppImplementationDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

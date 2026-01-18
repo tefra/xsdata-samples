@@ -7,7 +7,7 @@ from travelport.models.type_remark_1 import TypeRemark1
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Postscript1(TypeRemark1):
     """
     Postscript Notes.

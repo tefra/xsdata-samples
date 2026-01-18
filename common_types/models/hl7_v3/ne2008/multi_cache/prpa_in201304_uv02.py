@@ -62,7 +62,7 @@ from .prpa_mt201303_uv02 import PrpaMt201303Uv02Patient
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaIn201304Uv02MfmiMt700701Uv01Subject2:
     class Meta:
         name = "PRPA_IN201304UV02.MFMI_MT700701UV01.Subject2"
@@ -92,12 +92,11 @@ class PrpaIn201304Uv02MfmiMt700701Uv01Subject2:
         },
     )
     patient: None | PrpaMt201303Uv02Patient = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -106,17 +105,16 @@ class PrpaIn201304Uv02MfmiMt700701Uv01Subject2:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetSubject = field(
-        default=None,
+    type_code: ParticipationTargetSubject = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaIn201304Uv02MfmiMt700701Uv01RegistrationEvent:
     class Meta:
         name = "PRPA_IN201304UV02.MFMI_MT700701UV01.RegistrationEvent"
@@ -152,14 +150,13 @@ class PrpaIn201304Uv02MfmiMt700701Uv01RegistrationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     effective_time: None | IvlTsExplicit = field(
         default=None,
@@ -169,13 +166,12 @@ class PrpaIn201304Uv02MfmiMt700701Uv01RegistrationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject1: None | PrpaIn201304Uv02MfmiMt700701Uv01Subject2 = field(
-        default=None,
+    subject1: PrpaIn201304Uv02MfmiMt700701Uv01Subject2 = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     author: None | MfmiMt700701Uv01Author2 = field(
         default=None,
@@ -186,12 +182,11 @@ class PrpaIn201304Uv02MfmiMt700701Uv01RegistrationEvent:
         },
     )
     custodian: None | MfmiMt700701Uv01Custodian = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     in_fulfillment_of: list[MfmiMt700701Uv01InFulfillmentOf] = field(
         default_factory=list,
@@ -246,7 +241,7 @@ class PrpaIn201304Uv02MfmiMt700701Uv01RegistrationEvent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaIn201304Uv02MfmiMt700701Uv01Subject1:
     class Meta:
         name = "PRPA_IN201304UV02.MFMI_MT700701UV01.Subject1"
@@ -278,13 +273,12 @@ class PrpaIn201304Uv02MfmiMt700701Uv01Subject1:
     registration_event: (
         None | PrpaIn201304Uv02MfmiMt700701Uv01RegistrationEvent
     ) = field(
-        default=None,
         metadata={
             "name": "registrationEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -333,7 +327,7 @@ class PrpaIn201304Uv02MfmiMt700701Uv01Subject1:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaIn201304Uv02MfmiMt700701Uv01ControlActProcess:
     class Meta:
         name = "PRPA_IN201304UV02.MFMI_MT700701UV01.ControlActProcess"
@@ -475,25 +469,23 @@ class PrpaIn201304Uv02MfmiMt700701Uv01ControlActProcess:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassControlAct = field(
-        default=None,
+    class_code: ActClassControlAct = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | XActMoodIntentEvent = field(
-        default=None,
+    mood_code: XActMoodIntentEvent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaIn201304Uv02McciMt000100Uv01Message:
     class Meta:
         name = "PRPA_IN201304UV02.MCCI_MT000100UV01.Message"
@@ -522,22 +514,20 @@ class PrpaIn201304Uv02McciMt000100Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    creation_time: None | TsExplicit = field(
-        default=None,
+    creation_time: TsExplicit = field(
         metadata={
             "name": "creationTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     security_text: None | St = field(
         default=None,
@@ -555,14 +545,13 @@ class PrpaIn201304Uv02McciMt000100Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    interaction_id: None | Ii = field(
-        default=None,
+    interaction_id: Ii = field(
         metadata={
             "name": "interactionId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     profile_id: list[Ii] = field(
         default_factory=list,
@@ -572,32 +561,29 @@ class PrpaIn201304Uv02McciMt000100Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    processing_code: None | Cs = field(
-        default=None,
+    processing_code: Cs = field(
         metadata={
             "name": "processingCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    processing_mode_code: None | Cs = field(
-        default=None,
+    processing_mode_code: Cs = field(
         metadata={
             "name": "processingModeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    accept_ack_code: None | Cs = field(
-        default=None,
+    accept_ack_code: Cs = field(
         metadata={
             "name": "acceptAckCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     sequence_number: None | Int = field(
         default=None,
@@ -632,13 +618,12 @@ class PrpaIn201304Uv02McciMt000100Uv01Message:
             "nillable": True,
         },
     )
-    sender: None | McciMt000100Uv01Sender = field(
-        default=None,
+    sender: McciMt000100Uv01Sender = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     attention_line: list[McciMt000100Uv01AttentionLine] = field(
         default_factory=list,
@@ -649,16 +634,15 @@ class PrpaIn201304Uv02McciMt000100Uv01Message:
             "nillable": True,
         },
     )
-    control_act_process: (
-        None | PrpaIn201304Uv02MfmiMt700701Uv01ControlActProcess
-    ) = field(
-        default=None,
-        metadata={
-            "name": "controlActProcess",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
+    control_act_process: PrpaIn201304Uv02MfmiMt700701Uv01ControlActProcess = (
+        field(
+            metadata={
+                "name": "controlActProcess",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "required": True,
+            }
+        )
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -669,7 +653,7 @@ class PrpaIn201304Uv02McciMt000100Uv01Message:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaIn201304Uv02(PrpaIn201304Uv02McciMt000100Uv01Message):
     class Meta:
         name = "PRPA_IN201304UV02"

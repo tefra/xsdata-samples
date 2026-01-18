@@ -9,7 +9,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExternalPortReference:
     """
     :ivar sub_port_reference:
@@ -45,15 +45,14 @@ class ExternalPortReference:
             "type": "Element",
         },
     )
-    port_ref: None | str = field(
-        default=None,
+    port_ref: str = field(
         metadata={
             "name": "portRef",
             "type": "Attribute",
             "required": True,
             "white_space": "collapse",
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
-        },
+        }
     )
     id: None | str = field(
         default=None,

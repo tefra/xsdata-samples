@@ -9,7 +9,7 @@ from .sw_variable_access_impl_policy_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwVariableAccessImplPolicyEnum:
     """
     Detailed access policy for variables, for which data consistency is
@@ -31,11 +31,10 @@ class SwVariableAccessImplPolicyEnum:
     class Meta:
         name = "SW-VARIABLE-ACCESS-IMPL-POLICY-ENUM"
 
-    value: None | SwVariableAccessImplPolicyEnumSimple = field(
-        default=None,
+    value: SwVariableAccessImplPolicyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

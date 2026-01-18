@@ -11,7 +11,7 @@ from sdmx_ml.models.structure_specific_data_header_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class StructureSpecificDataType:
     """
     StructureSpecificDataType defines the structure of the structure
@@ -25,14 +25,13 @@ class StructureSpecificDataType:
     are not known.
     """
 
-    header: None | StructureSpecificDataHeaderType = field(
-        default=None,
+    header: StructureSpecificDataHeaderType = field(
         metadata={
             "name": "Header",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
             "required": True,
-        },
+        }
     )
     data_set: tuple[DataSetType, ...] = field(
         default_factory=tuple,

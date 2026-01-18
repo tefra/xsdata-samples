@@ -12,7 +12,7 @@ from sdmx_ml.models.usage_type import UsageType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AttributeType2(AttributeBaseType):
     """
     AttributeType describes the structure of a data attribute, which is
@@ -57,14 +57,13 @@ class AttributeType2(AttributeBaseType):
             "pattern": r".+\.conceptscheme\.Concept=.+",
         },
     )
-    attribute_relationship: None | AttributeRelationshipType = field(
-        default=None,
+    attribute_relationship: AttributeRelationshipType = field(
         metadata={
             "name": "AttributeRelationship",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
     measure_relationship: None | MeasureRelationshipType = field(
         default=None,

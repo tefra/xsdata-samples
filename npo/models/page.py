@@ -7,7 +7,7 @@ from npo.models.page_type import PageType
 __NAMESPACE__ = "urn:vpro:pages:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Page(PageType):
     class Meta:
         name = "page"

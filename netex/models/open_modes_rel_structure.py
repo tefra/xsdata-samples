@@ -9,7 +9,7 @@ from .open_transport_mode import OpenTransportMode
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenModesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "openModesRelStructure"

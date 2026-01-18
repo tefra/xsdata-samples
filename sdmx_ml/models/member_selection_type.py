@@ -10,7 +10,7 @@ from sdmx_ml.models.time_range_value_type import TimeRangeValueType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MemberSelectionType:
     """
     MemberSelectionType is an abstract base type which is used to provide a
@@ -57,13 +57,12 @@ class MemberSelectionType:
             ),
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
             "pattern": r"[A-Za-z][A-Za-z0-9_\-]*(\.[A-Za-z][A-Za-z0-9_\-]*)*",
-        },
+        }
     )
     include: bool = field(
         default=True,

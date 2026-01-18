@@ -24,7 +24,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class E2EProfileConfiguration:
     """
     This element holds E2E profile specific configuration settings.
@@ -122,14 +122,13 @@ class E2EProfileConfiguration:
     class Meta:
         name = "E-2-E-PROFILE-CONFIGURATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | E2EProfileConfiguration.ShortNameFragments = (
         field(
@@ -326,7 +325,7 @@ class E2EProfileConfiguration:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -337,7 +336,7 @@ class E2EProfileConfiguration:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -348,13 +347,12 @@ class E2EProfileConfiguration:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class E2EProfileCompatibilityPropsRef(Ref):
-        dest: None | E2EProfileCompatibilityPropsSubtypesEnum = field(
-            default=None,
+        dest: E2EProfileCompatibilityPropsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

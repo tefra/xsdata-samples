@@ -9,7 +9,7 @@ from sdmx_ml.models.simple_key_value_type import SimpleKeyValueType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataKeyValueType(MemberSelectionType):
     """
     DataKeyValueType is a type for providing a dimension value for the

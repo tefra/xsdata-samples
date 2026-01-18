@@ -23,7 +23,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ISignalIPduGroup:
     """
     The AUTOSAR COM Layer is able to start and to stop sending and
@@ -105,14 +105,13 @@ class ISignalIPduGroup:
     class Meta:
         name = "I-SIGNAL-I-PDU-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ISignalIPduGroup.ShortNameFragments = field(
         default=None,
@@ -243,7 +242,7 @@ class ISignalIPduGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -254,7 +253,7 @@ class ISignalIPduGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -265,7 +264,7 @@ class ISignalIPduGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContainedISignalIPduGroupRefs:
         contained_i_signal_i_pdu_group_ref: list[
             ISignalIPduGroup.ContainedISignalIPduGroupRefs.ContainedISignalIPduGroupRef
@@ -278,18 +277,17 @@ class ISignalIPduGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ContainedISignalIPduGroupRef(Ref):
-            dest: None | ISignalIPduGroupSubtypesEnum = field(
-                default=None,
+            dest: ISignalIPduGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalIPdus:
         i_signal_i_pdu_ref_conditional: list[ISignalIPduRefConditional] = (
             field(
@@ -302,7 +300,7 @@ class ISignalIPduGroup:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NmPdus:
         nm_pdu_ref_conditional: list[NmPduRefConditional] = field(
             default_factory=list,

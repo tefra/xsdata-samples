@@ -7,7 +7,7 @@ from .limitation_status_enumeration import LimitationStatusEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LevelAccessIntoVehicle:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

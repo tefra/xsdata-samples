@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganisationReferenceTypeSender(CodeType):
     class Meta:
         global_type = False

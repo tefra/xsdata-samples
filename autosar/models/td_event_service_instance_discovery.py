@@ -25,7 +25,7 @@ from .td_event_service_instance_discovery_type_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventServiceInstanceDiscovery:
     """
     This is used to describe timing description events related to different
@@ -96,14 +96,13 @@ class TdEventServiceInstanceDiscovery:
     class Meta:
         name = "TD-EVENT-SERVICE-INSTANCE-DISCOVERY"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | TdEventServiceInstanceDiscovery.ShortNameFragments
@@ -223,7 +222,7 @@ class TdEventServiceInstanceDiscovery:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -234,7 +233,7 @@ class TdEventServiceInstanceDiscovery:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -245,13 +244,12 @@ class TdEventServiceInstanceDiscovery:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInstanceToPortPrototypeMappingRef(Ref):
-        dest: None | ServiceInstanceToPortPrototypeMappingSubtypesEnum = field(
-            default=None,
+        dest: ServiceInstanceToPortPrototypeMappingSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

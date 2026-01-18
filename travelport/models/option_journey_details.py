@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlTime
 __NAMESPACE__ = "http://www.travelport.com/schema/cruise_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OptionJourneyDetails:
     """
     Contains PickUp Return Details for that Cruise Feature/Option Service.

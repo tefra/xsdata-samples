@@ -16,7 +16,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubArticle:
     """
     <div> <h3>Sub-Article</h3> </div>.

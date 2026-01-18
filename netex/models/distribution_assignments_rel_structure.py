@@ -10,7 +10,7 @@ from .distribution_assignment_ref import DistributionAssignmentRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DistributionAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "distributionAssignments_RelStructure"

@@ -14,7 +14,7 @@ from datexii.models.eu.datexii.v2.person_category_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneralNetworkManagement(NetworkManagement):
     """
     Network management action that is instigated either manually or
@@ -30,16 +30,13 @@ class GeneralNetworkManagement(NetworkManagement):
     :ivar general_network_management_extension:
     """
 
-    general_network_management_type: (
-        None | GeneralNetworkManagementTypeEnum
-    ) = field(
-        default=None,
+    general_network_management_type: GeneralNetworkManagementTypeEnum = field(
         metadata={
             "name": "generalNetworkManagementType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     traffic_manually_directed_by: None | PersonCategoryEnum = field(
         default=None,

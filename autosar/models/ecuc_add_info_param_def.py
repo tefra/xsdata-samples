@@ -36,7 +36,7 @@ from .traceable_subtypes_enum import TraceableSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucAddInfoParamDef:
     """
     Configuration Parameter Definition for the specification of formatted
@@ -175,14 +175,13 @@ class EcucAddInfoParamDef:
     class Meta:
         name = "ECUC-ADD-INFO-PARAM-DEF"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EcucAddInfoParamDef.ShortNameFragments = (
         field(
@@ -421,7 +420,7 @@ class EcucAddInfoParamDef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -432,7 +431,7 @@ class EcucAddInfoParamDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -443,18 +442,17 @@ class EcucAddInfoParamDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RelatedTraceItemRef(Ref):
-        dest: None | TraceableSubtypesEnum = field(
-            default=None,
+        dest: TraceableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucValidationConds:
         ecuc_validation_condition: list[EcucValidationCondition] = field(
             default_factory=list,
@@ -465,7 +463,7 @@ class EcucAddInfoParamDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplementationConfigClasses:
         ecuc_implementation_configuration_class: list[
             EcucImplementationConfigurationClass
@@ -478,7 +476,7 @@ class EcucAddInfoParamDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MultiplicityConfigClasses:
         ecuc_multiplicity_configuration_class: list[
             EcucMultiplicityConfigurationClass
@@ -491,7 +489,7 @@ class EcucAddInfoParamDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ValueConfigClasses:
         ecuc_value_configuration_class: list[EcucValueConfigurationClass] = (
             field(

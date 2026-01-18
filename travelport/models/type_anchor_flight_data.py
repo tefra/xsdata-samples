@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeAnchorFlightData:
     """
     To support Anchor flight search contain the anchor flight details.
@@ -25,23 +25,21 @@ class TypeAnchorFlightData:
     class Meta:
         name = "typeAnchorFlightData"
 
-    airline_code: None | str = field(
-        default=None,
+    airline_code: str = field(
         metadata={
             "name": "AirlineCode",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
-    flight_number: None | str = field(
-        default=None,
+    flight_number: str = field(
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        },
+        }
     )
     connection_indicator: None | bool = field(
         default=None,

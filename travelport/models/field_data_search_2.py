@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FieldDataSearch2:
     """
     Specifies a search term and value (wildcards permitted), to search
@@ -47,14 +47,13 @@ class FieldDataSearch2:
             "max_length": 255,
         },
     )
-    value: None | str = field(
-        default=None,
+    value: str = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
-        },
+        }
     )
     field_group_id: None | str = field(
         default=None,

@@ -5,7 +5,7 @@ from dataclasses import dataclass
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomProfileInformation6:
     """
     Custom Profile Field Data required for File Finishing.

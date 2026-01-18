@@ -7,7 +7,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseHeaderType:
     """
     <description xmlns="">The base type for the SOAP message

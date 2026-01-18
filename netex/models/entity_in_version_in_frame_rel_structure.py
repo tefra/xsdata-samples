@@ -583,7 +583,7 @@ from .zone_ref import ZoneRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EntityInVersionInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "entityInVersionInFrame_RelStructure"

@@ -9,7 +9,7 @@ from .sales_offer_package_element_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SalesOfferPackageElementRef(SalesOfferPackageElementRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

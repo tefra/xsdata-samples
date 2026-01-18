@@ -13,7 +13,7 @@ from .place_version_structure import PlaceVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexibleQuayVersionStructure(PlaceVersionStructure):
     class Meta:
         name = "FlexibleQuay_VersionStructure"

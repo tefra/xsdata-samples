@@ -7,7 +7,7 @@ from .e_enum_simple import EEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EEnum:
     """
     This specifies the possible kinds of emphasis as proposal how to render
@@ -32,11 +32,10 @@ class EEnum:
     class Meta:
         name = "E-ENUM"
 
-    value: None | EEnumSimple = field(
-        default=None,
+    value: EEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

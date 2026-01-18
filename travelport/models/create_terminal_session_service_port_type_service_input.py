@@ -9,27 +9,25 @@ from travelport.models.create_terminal_session_req import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreateTerminalSessionServicePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | CreateTerminalSessionServicePortTypeServiceInput.Body = field(
-        default=None,
+    body: CreateTerminalSessionServicePortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        create_terminal_session_req: None | CreateTerminalSessionReq = field(
-            default=None,
+        create_terminal_session_req: CreateTerminalSessionReq = field(
             metadata={
                 "name": "CreateTerminalSessionReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/terminal_v33_0",
-            },
+            }
         )

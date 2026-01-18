@@ -7,7 +7,7 @@ from .topic_1 import Topic1
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MsrQueryResultTopic1:
     """
     This metaclass represents the ability to express the result of a query

@@ -9,7 +9,7 @@ from travelport.models.air_price_result import AirPriceResult
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirUpsellSearchReq(AirBaseReq):
     """
     Request to search for Upsell Offers based on the Itinerary.
@@ -26,13 +26,12 @@ class AirUpsellSearchReq(AirBaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_itinerary: None | AirItinerary = field(
-        default=None,
+    air_itinerary: AirItinerary = field(
         metadata={
             "name": "AirItinerary",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     air_price_result: list[AirPriceResult] = field(
         default_factory=list,

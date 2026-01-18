@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.tpeg_point import TpegPoint
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TpegNonJunctionPoint(TpegPoint):
     """
     A point on the road network which is not a road junction point.
@@ -25,14 +25,13 @@ class TpegNonJunctionPoint(TpegPoint):
     :ivar tpeg_non_junction_point_extension:
     """
 
-    point_coordinates: None | PointCoordinates = field(
-        default=None,
+    point_coordinates: PointCoordinates = field(
         metadata={
             "name": "pointCoordinates",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     name: list[TpegOtherPointDescriptor] = field(
         default_factory=list,

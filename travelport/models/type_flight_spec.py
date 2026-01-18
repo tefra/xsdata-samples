@@ -10,7 +10,7 @@ from travelport.models.type_specific_flight_number import (
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeFlightSpec:
     """
     Specifies flight number as either specific flight number or a flight

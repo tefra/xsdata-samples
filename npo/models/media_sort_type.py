@@ -8,16 +8,15 @@ from npo.models.order_type_enum import OrderTypeEnum
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MediaSortType:
     class Meta:
         name = "mediaSortType"
 
-    value: None | MediaSortTypeEnum = field(
-        default=None,
+    value: MediaSortTypeEnum = field(
         metadata={
             "required": True,
-        },
+        }
     )
     order: None | OrderTypeEnum = field(
         default=None,

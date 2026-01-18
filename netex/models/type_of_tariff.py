@@ -7,7 +7,7 @@ from .type_of_tariff_value_structure import TypeOfTariffValueStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfTariff(TypeOfTariffValueStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

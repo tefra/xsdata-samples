@@ -12,7 +12,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.timestamp import Timestamp
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DoiData:
     """
     The container for elements related directly to a DOI.
@@ -22,12 +22,11 @@ class DoiData:
         name = "doi_data"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    doi: None | Doi = field(
-        default=None,
+    doi: Doi = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     timestamp: None | Timestamp = field(
         default=None,
@@ -35,12 +34,11 @@ class DoiData:
             "type": "Element",
         },
     )
-    resource: None | Resource = field(
-        default=None,
+    resource: Resource = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     collection: list[Collection] = field(
         default_factory=list,

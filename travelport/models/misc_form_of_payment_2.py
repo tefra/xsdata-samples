@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlPeriod
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MiscFormOfPayment2:
     """
     Miscellaneous Form of Payments.
@@ -68,13 +68,12 @@ class MiscFormOfPayment2:
             "type": "Attribute",
         },
     )
-    category: None | str = field(
-        default=None,
+    category: str = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     acceptance_override: None | bool = field(
         default=None,

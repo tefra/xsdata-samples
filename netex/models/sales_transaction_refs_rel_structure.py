@@ -9,7 +9,7 @@ from .sales_transaction_ref import SalesTransactionRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SalesTransactionRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "salesTransactionRefs_RelStructure"

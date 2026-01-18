@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Auxdata6:
     class Meta:
         name = "Auxdata"
@@ -21,21 +21,19 @@ class Auxdata6:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Entry:
-        reason: None | str = field(
-            default=None,
+        reason: str = field(
             metadata={
                 "name": "Reason",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
-        description: None | str = field(
-            default=None,
+        description: str = field(
             metadata={
                 "name": "Description",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )

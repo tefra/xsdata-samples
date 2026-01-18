@@ -42,7 +42,7 @@ from travelport.models.vendor_location_1 import VendorLocation1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SavedTrip:
     """
     SavedTrip holds a draft Itinerary/booking which can be used at later
@@ -439,15 +439,14 @@ class SavedTrip:
             "max_length": 8,
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        },
+        }
     )
     create_date: None | XmlDateTime = field(
         default=None,
@@ -470,13 +469,12 @@ class SavedTrip:
             "type": "Attribute",
         },
     )
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     created_by_agent: None | str = field(
         default=None,

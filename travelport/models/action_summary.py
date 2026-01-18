@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ActionSummary:
     """
     Action Summary.
@@ -30,23 +30,21 @@ class ActionSummary:
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    id: None | int = field(
-        default=None,
+    id: int = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     description: None | str = field(
         default=None,
@@ -57,27 +55,24 @@ class ActionSummary:
             "max_length": 255,
         },
     )
-    consuming_system: None | str = field(
-        default=None,
+    consuming_system: str = field(
         metadata={
             "name": "ConsumingSystem",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    target_service: None | str = field(
-        default=None,
+    target_service: str = field(
         metadata={
             "name": "TargetService",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_action_code: None | str = field(
-        default=None,
+    profile_action_code: str = field(
         metadata={
             "name": "ProfileActionCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

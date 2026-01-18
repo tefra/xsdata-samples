@@ -9,7 +9,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.prefix_language import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Prefix:
     class Meta:
         name = "prefix"

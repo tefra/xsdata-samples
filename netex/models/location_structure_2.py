@@ -8,7 +8,7 @@ from .pos import Pos
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationStructure2:
     class Meta:
         name = "LocationStructure"

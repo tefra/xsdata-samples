@@ -15,7 +15,7 @@ from datexii.models.eu.datexii.v2.parking_site import ParkingSite
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupOfParkingSites(ParkingRecord):
     """
     A logical composition of parking sites with aggregated properties (e.g.

@@ -22,7 +22,7 @@ from travelport.models.whole_number_restriction_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeCustomField2:
     """
     Base representation of a custom field.
@@ -117,23 +117,21 @@ class TypeCustomField2:
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     description: None | str = field(
         default=None,
@@ -144,13 +142,12 @@ class TypeCustomField2:
             "max_length": 255,
         },
     )
-    type_value: None | TypeCustomFieldDataFormat2 = field(
-        default=None,
+    type_value: TypeCustomFieldDataFormat2 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     encrypted: bool = field(
         default=False,

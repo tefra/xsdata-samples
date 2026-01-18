@@ -7,7 +7,7 @@ from travelport.models.name_6 import Name6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassengerInfo6:
     """
     Booking Traveler information tied to invoice.

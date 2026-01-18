@@ -7,7 +7,7 @@ from .nm_coordinator_role_enum_simple import NmCoordinatorRoleEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NmCoordinatorRoleEnum:
     """
     Supported NmCoordinator roles.
@@ -28,11 +28,10 @@ class NmCoordinatorRoleEnum:
     class Meta:
         name = "NM-COORDINATOR-ROLE-ENUM"
 
-    value: None | NmCoordinatorRoleEnumSimple = field(
-        default=None,
+    value: NmCoordinatorRoleEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -9,7 +9,7 @@ from .onboard_stay_versioned_chlld_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OnboardStay(OnboardStayVersionedChlldStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

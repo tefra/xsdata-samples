@@ -25,7 +25,7 @@ from travelport.models.type_purchase_window import TypePurchaseWindow
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OptionalService1:
     """
     Parameters
@@ -334,15 +334,14 @@ class OptionalService1:
             "type": "Attribute",
         },
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     confirmation: None | str = field(
         default=None,

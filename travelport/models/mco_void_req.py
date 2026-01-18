@@ -8,7 +8,7 @@ from travelport.models.general_remark_1 import GeneralRemark1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McoVoidReq(BaseReq1):
     """
     Void an MCO (of any type).
@@ -33,13 +33,12 @@ class McoVoidReq(BaseReq1):
             "max_occurs": 999,
         },
     )
-    number: None | str = field(
-        default=None,
+    number: str = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     return_mco: bool = field(
         default=False,

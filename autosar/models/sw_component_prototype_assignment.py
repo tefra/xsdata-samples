@@ -8,7 +8,7 @@ from .component_in_system_instance_ref import ComponentInSystemInstanceRef
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwComponentPrototypeAssignment:
     """
     This meta-class is only required to allow for the variant modeling of

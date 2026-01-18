@@ -12,7 +12,7 @@ from crossref.models.org.crossref.relations.intra_work_relation_relationship_typ
 __NAMESPACE__ = "http://www.crossref.org/relations.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IntraWorkRelation:
     """
     :ivar relationship_type: Used to define relations between items that
@@ -32,21 +32,19 @@ class IntraWorkRelation:
         name = "intra_work_relation"
         namespace = "http://www.crossref.org/relations.xsd"
 
-    relationship_type: None | IntraWorkRelationRelationshipType = field(
-        default=None,
+    relationship_type: IntraWorkRelationRelationshipType = field(
         metadata={
             "name": "relationship-type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    identifier_type: None | IntraWorkRelationIdentifierType = field(
-        default=None,
+    identifier_type: IntraWorkRelationIdentifierType = field(
         metadata={
             "name": "identifier-type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     namespace: None | str = field(
         default=None,

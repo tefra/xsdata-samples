@@ -19,7 +19,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CouplingPortDetails:
     """
     Defines details of a CouplingPort.
@@ -126,7 +126,7 @@ class CouplingPortDetails:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CouplingPortStructuralElements:
         coupling_port_fifo: list[CouplingPortFifo] = field(
             default_factory=list,
@@ -153,7 +153,7 @@ class CouplingPortDetails:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EthernetPriorityRegenerations:
         ethernet_priority_regeneration: list[EthernetPriorityRegeneration] = (
             field(
@@ -167,7 +167,7 @@ class CouplingPortDetails:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EthernetTrafficClassAssignments:
         coupling_port_traffic_class_assignment: list[
             CouplingPortTrafficClassAssignment
@@ -181,18 +181,17 @@ class CouplingPortDetails:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LastEgressSchedulerRef(Ref):
-        dest: None | CouplingPortSchedulerSubtypesEnum = field(
-            default=None,
+        dest: CouplingPortSchedulerSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RatePolicys:
         coupling_port_rate_policy: list[CouplingPortRatePolicy] = field(
             default_factory=list,

@@ -7,24 +7,22 @@ from datexii.models.eu.datexii.v2.predefined_location import PredefinedLocation
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PredefinedItineraryIndexPredefinedLocation:
     class Meta:
         name = "_PredefinedItineraryIndexPredefinedLocation"
 
-    predefined_location: None | PredefinedLocation = field(
-        default=None,
+    predefined_location: PredefinedLocation = field(
         metadata={
             "name": "predefinedLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    index: None | int = field(
-        default=None,
+    index: int = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -8,7 +8,7 @@ from travelport.models.type_key_element_2 import TypeKeyElement2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeAddress2(TypeKeyElement2):
     """
     Profile Address.
@@ -88,13 +88,12 @@ class TypeAddress2(TypeKeyElement2):
             "max_length": 12,
         },
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )

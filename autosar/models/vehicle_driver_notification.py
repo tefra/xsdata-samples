@@ -8,7 +8,7 @@ from .vehicle_driver_notification_enum import VehicleDriverNotificationEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleDriverNotification:
     """
     This meta-class provides the ability to configure a notification of the

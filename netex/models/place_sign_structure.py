@@ -9,16 +9,15 @@ from .sign_equipment_version_structure import SignEquipmentVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PlaceSignStructure(SignEquipmentVersionStructure):
-    place_name: None | MultilingualString = field(
-        default=None,
+    place_name: MultilingualString = field(
         metadata={
             "name": "PlaceName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     place_ref: None | PlaceRef = field(
         default=None,

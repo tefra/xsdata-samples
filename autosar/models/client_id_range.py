@@ -7,7 +7,7 @@ from .limit import Limit
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientIdRange:
     """
     With this element it is possible to restrict the Client Identifier of

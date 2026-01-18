@@ -9,7 +9,7 @@ from .parking_ref import ParkingRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "parkingRefs_RelStructure"

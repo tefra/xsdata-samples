@@ -7,7 +7,7 @@ from travelport.models.auxdata_3 import Auxdata3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeErrorInfo3:
     """
     Container for error data when there is an application error.
@@ -16,50 +16,45 @@ class TypeErrorInfo3:
     class Meta:
         name = "typeErrorInfo"
 
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
             "required": True,
-        },
+        }
     )
-    service: None | str = field(
-        default=None,
+    service: str = field(
         metadata={
             "name": "Service",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
             "required": True,
-        },
+        }
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
             "required": True,
-        },
+        }
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
             "required": True,
-        },
+        }
     )
-    transaction_id: None | str = field(
-        default=None,
+    transaction_id: str = field(
         metadata={
             "name": "TransactionId",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
             "required": True,
-        },
+        }
     )
     trace_id: None | str = field(
         default=None,

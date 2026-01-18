@@ -7,7 +7,7 @@ from travelport.models.discount_card_1 import DiscountCard1
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailFareComponent:
     """
     Contains fare and discount information for each passenger type.
@@ -38,13 +38,12 @@ class RailFareComponent:
             "max_occurs": 5,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     amount: None | str = field(
         default=None,
@@ -84,7 +83,7 @@ class RailFareComponent:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Discount:
         discount_card: list[DiscountCard1] = field(
             default_factory=list,

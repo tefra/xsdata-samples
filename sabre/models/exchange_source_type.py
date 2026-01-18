@@ -7,7 +7,7 @@ from sabre.models.source_booking_channel_type import SourceBookingChannelType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExchangeSourceType:
     """
     Attributes:
@@ -234,33 +234,30 @@ class ExchangeSourceType:
             "type": "Attribute",
         },
     )
-    agent_city: None | str = field(
-        default=None,
+    agent_city: str = field(
         metadata={
             "name": "AgentCity",
             "type": "Attribute",
             "required": True,
             "pattern": r"[a-zA-Z]{3}",
-        },
+        }
     )
-    main_travel_agency_pcc: None | str = field(
-        default=None,
+    main_travel_agency_pcc: str = field(
         metadata={
             "name": "MainTravelAgencyPCC",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 16,
-        },
+        }
     )
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "pattern": r"[0-9A-Z]{2,3}",
-        },
+        }
     )
     host_carrier: None | str = field(
         default=None,

@@ -9,7 +9,7 @@ from travelport.models.type_vehicle_location import TypeVehicleLocation
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypePickupDateLocation:
     """
     A complexType for the pickup date, location, and location type.
@@ -29,13 +29,12 @@ class TypePickupDateLocation:
     class Meta:
         name = "typePickupDateLocation"
 
-    date: None | XmlDate = field(
-        default=None,
+    date: XmlDate = field(
         metadata={
             "name": "Date",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     location: None | str = field(
         default=None,

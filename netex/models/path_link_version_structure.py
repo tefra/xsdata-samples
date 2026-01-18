@@ -30,28 +30,26 @@ from .transition_enumeration import TransitionEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PathLinkVersionStructure(LinkVersionStructure):
     class Meta:
         name = "PathLink_VersionStructure"
 
-    from_value: None | PathLinkEndStructure = field(
-        default=None,
+    from_value: PathLinkEndStructure = field(
         metadata={
             "name": "From",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    to: None | PathLinkEndStructure = field(
-        default=None,
+    to: PathLinkEndStructure = field(
         metadata={
             "name": "To",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     description: None | MultilingualString = field(
         default=None,

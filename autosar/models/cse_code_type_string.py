@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CseCodeTypeString:
     """
     This primitive represents an ASAM CSE (Codes for Scaling Units) based
@@ -29,11 +29,10 @@ class CseCodeTypeString:
     class Meta:
         name = "CSE-CODE-TYPE-STRING"
 
-    value: None | int = field(
-        default=None,
+    value: int = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

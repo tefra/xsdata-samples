@@ -7,7 +7,7 @@ from .t_base_element_with_mixed_content import TBaseElementWithMixedContent
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TExpression(TBaseElementWithMixedContent):
     class Meta:
         name = "tExpression"

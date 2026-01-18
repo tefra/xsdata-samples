@@ -12,7 +12,7 @@ from travelport.models.type_fare_rule_type import TypeFareRuleType
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirRepriceReq(AirBaseReq):
     """
     Request to reprice a solution.
@@ -28,13 +28,12 @@ class AirRepriceReq(AirBaseReq):
             "type": "Element",
         },
     )
-    air_pricing_solution: None | AirPricingSolution = field(
-        default=None,
+    air_pricing_solution: AirPricingSolution = field(
         metadata={
             "name": "AirPricingSolution",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     fare_rule_type: TypeFareRuleType = field(
         default=TypeFareRuleType.NONE,

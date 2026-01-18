@@ -7,7 +7,7 @@ from .t_end_point import TEndPoint
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EndPoint(TEndPoint):
     class Meta:
         name = "endPoint"

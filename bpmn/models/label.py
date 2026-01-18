@@ -8,7 +8,7 @@ from .node import Node
 __NAMESPACE__ = "http://www.omg.org/spec/DD/20100524/DI"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Label(Node):
     class Meta:
         namespace = "http://www.omg.org/spec/DD/20100524/DI"

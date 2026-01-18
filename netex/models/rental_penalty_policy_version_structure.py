@@ -10,7 +10,7 @@ from .usage_parameter_version_structure import UsageParameterVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RentalPenaltyPolicyVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "RentalPenaltyPolicy_VersionStructure"

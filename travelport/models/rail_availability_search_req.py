@@ -13,7 +13,7 @@ from travelport.models.type_response_type import TypeResponseType
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailAvailabilitySearchReq(BaseReq1):
     """
     Queries the host for availability.

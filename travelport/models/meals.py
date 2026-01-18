@@ -7,7 +7,7 @@ from travelport.models.type_meal_service import TypeMealService
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Meals:
     """
     Available Meal Service.
@@ -16,9 +16,8 @@ class Meals:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    value: None | TypeMealService = field(
-        default=None,
+    value: TypeMealService = field(
         metadata={
             "required": True,
-        },
+        }
     )

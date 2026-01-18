@@ -7,7 +7,7 @@ from .ecuc_affection_enum_simple import EcucAffectionEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucAffectionEnum:
     """
     Possible affections used by the EcucConfigurationClassAffection.
@@ -30,11 +30,10 @@ class EcucAffectionEnum:
     class Meta:
         name = "ECUC-AFFECTION-ENUM"
 
-    value: None | EcucAffectionEnumSimple = field(
-        default=None,
+    value: EcucAffectionEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -9,7 +9,7 @@ from .point_of_interest import PointOfInterest
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointsOfInterestInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pointsOfInterestInFrame_RelStructure"

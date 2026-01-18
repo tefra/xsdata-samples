@@ -373,7 +373,7 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.xor import Xor
 __NAMESPACE__ = "http://www.w3.org/1998/Math/MathML"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Piecewise:
     class Meta:
         name = "piecewise"
@@ -451,7 +451,7 @@ class Piecewise:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Cerror:
     class Meta:
         name = "cerror"
@@ -1340,7 +1340,7 @@ class Cerror:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CiContent:
     class Meta:
         name = "ci.content"
@@ -1507,7 +1507,7 @@ class CiContent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CnContent:
     class Meta:
         name = "cn.content"
@@ -1679,7 +1679,7 @@ class CnContent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CsymbolContent:
     class Meta:
         name = "csymbol.content"
@@ -1846,7 +1846,7 @@ class CsymbolContent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ci(CiContent):
     class Meta:
         name = "ci"
@@ -1919,7 +1919,7 @@ class Ci(CiContent):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Cn(CnContent):
     class Meta:
         name = "cn"
@@ -1998,7 +1998,7 @@ class Cn(CnContent):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Csymbol(CsymbolContent):
     class Meta:
         name = "csymbol"
@@ -2077,7 +2077,7 @@ class Csymbol(CsymbolContent):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplyContent:
     class Meta:
         name = "apply.content"
@@ -3113,7 +3113,7 @@ class ApplyContent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Bvar:
     class Meta:
         name = "bvar"
@@ -3183,7 +3183,7 @@ class Bvar:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         ci: None | Ci = field(
             default=None,
@@ -3282,7 +3282,7 @@ class Bvar:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Apply(ApplyContent):
     class Meta:
         name = "apply"
@@ -3335,13 +3335,13 @@ class Apply(ApplyContent):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BindContent(ApplyContent):
     class Meta:
         name = "bind.content"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Bind(BindContent):
     class Meta:
         name = "bind"
@@ -3394,7 +3394,7 @@ class Bind(BindContent):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Condition:
     class Meta:
         name = "condition"
@@ -4237,7 +4237,7 @@ class Condition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Domainofapplication:
     class Meta:
         name = "domainofapplication"
@@ -5080,7 +5080,7 @@ class Domainofapplication:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Lowlimit:
     class Meta:
         name = "lowlimit"
@@ -5923,7 +5923,7 @@ class Lowlimit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Reln:
     class Meta:
         name = "reln"
@@ -6766,7 +6766,7 @@ class Reln:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Uplimit:
     class Meta:
         name = "uplimit"
@@ -7609,7 +7609,7 @@ class Uplimit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Fn:
     class Meta:
         name = "fn"
@@ -8452,7 +8452,7 @@ class Fn:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Declare:
     class Meta:
         name = "declare"
@@ -9333,7 +9333,7 @@ class Declare:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Set:
     class Meta:
         name = "set"
@@ -10271,7 +10271,7 @@ class Set:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class List:
     class Meta:
         name = "list"
@@ -11208,7 +11208,7 @@ class List:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ImpliedMrow:
     apply: list[Apply] = field(
         default_factory=list,
@@ -12394,7 +12394,7 @@ class ImpliedMrow:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -13666,7 +13666,7 @@ class ImpliedMrow:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Degree:
     class Meta:
         name = "degree"
@@ -14509,7 +14509,7 @@ class Degree:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Logbase:
     class Meta:
         name = "logbase"
@@ -15352,7 +15352,7 @@ class Logbase:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Momentabout:
     class Meta:
         name = "momentabout"
@@ -16195,7 +16195,7 @@ class Momentabout:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Otherwise:
     class Meta:
         name = "otherwise"
@@ -17096,7 +17096,7 @@ class Otherwise:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Piece:
     class Meta:
         name = "piece"
@@ -17106,7 +17106,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17115,7 +17114,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17124,7 +17122,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17133,7 +17130,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17142,7 +17138,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17151,7 +17146,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17160,7 +17154,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17169,7 +17162,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17178,7 +17170,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17187,7 +17178,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17309,7 +17299,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17318,7 +17307,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17327,7 +17315,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17336,7 +17323,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17345,7 +17331,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17354,7 +17339,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17363,7 +17347,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17372,7 +17355,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17381,7 +17363,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17390,7 +17371,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17399,7 +17379,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17408,7 +17387,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17417,7 +17395,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17426,7 +17403,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -17435,7 +17411,6 @@ class Piece:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -18298,7 +18273,7 @@ class Piece:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Menclose(ImpliedMrow):
     class Meta:
         name = "menclose"
@@ -18371,7 +18346,7 @@ class Menclose(ImpliedMrow):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Merror(ImpliedMrow):
     class Meta:
         name = "merror"
@@ -18438,7 +18413,7 @@ class Merror(ImpliedMrow):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mpadded(ImpliedMrow):
     class Meta:
         name = "mpadded"
@@ -18540,7 +18515,7 @@ class Mpadded(ImpliedMrow):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mphantom(ImpliedMrow):
     class Meta:
         name = "mphantom"
@@ -18607,7 +18582,7 @@ class Mphantom(ImpliedMrow):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Msqrt(ImpliedMrow):
     class Meta:
         name = "msqrt"
@@ -18674,7 +18649,7 @@ class Msqrt(ImpliedMrow):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mstyle(ImpliedMrow):
     class Meta:
         name = "mstyle"
@@ -19354,7 +19329,7 @@ class Mstyle(ImpliedMrow):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mrow:
     class Meta:
         name = "mrow"
@@ -20441,7 +20416,7 @@ class Mrow:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -21543,7 +21518,7 @@ class Mrow:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mfrac:
     class Meta:
         name = "mfrac"
@@ -21553,7 +21528,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21562,7 +21536,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21571,7 +21544,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21580,7 +21552,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21589,7 +21560,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21598,7 +21568,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21607,7 +21576,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21616,7 +21584,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21625,7 +21592,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21634,7 +21600,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21756,7 +21721,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21765,7 +21729,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21774,7 +21737,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21783,7 +21745,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21792,7 +21753,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21801,7 +21761,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21810,7 +21769,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21819,7 +21777,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21828,7 +21785,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21837,7 +21793,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21846,7 +21801,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21855,7 +21809,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21864,7 +21817,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21873,7 +21825,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -21882,7 +21833,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -22921,7 +22871,6 @@ class Mfrac:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -23011,7 +22960,7 @@ class Mfrac:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -24113,7 +24062,7 @@ class Mfrac:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mroot:
     class Meta:
         name = "mroot"
@@ -24123,7 +24072,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24132,7 +24080,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24141,7 +24088,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24150,7 +24096,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24159,7 +24104,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24168,7 +24112,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24177,7 +24120,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24186,7 +24128,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24195,7 +24136,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24204,7 +24144,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24326,7 +24265,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24335,7 +24273,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24344,7 +24281,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24353,7 +24289,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24362,7 +24297,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24371,7 +24305,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24380,7 +24313,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24389,7 +24321,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24398,7 +24329,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24407,7 +24337,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24416,7 +24345,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24425,7 +24353,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24434,7 +24361,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24443,7 +24369,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -24452,7 +24377,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -25491,7 +25415,6 @@ class Mroot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -25556,7 +25479,7 @@ class Mroot:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -26658,7 +26581,7 @@ class Mroot:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mfenced:
     class Meta:
         name = "mfenced"
@@ -27757,7 +27680,7 @@ class Mfenced:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -28859,7 +28782,7 @@ class Mfenced:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Msub:
     class Meta:
         name = "msub"
@@ -28869,7 +28792,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -28878,7 +28800,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -28887,7 +28808,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -28896,7 +28816,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -28905,7 +28824,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -28914,7 +28832,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -28923,7 +28840,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -28932,7 +28848,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -28941,7 +28856,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -28950,7 +28864,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29072,7 +28985,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29081,7 +28993,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29090,7 +29001,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29099,7 +29009,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29108,7 +29017,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29117,7 +29025,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29126,7 +29033,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29135,7 +29041,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29144,7 +29049,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29153,7 +29057,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29162,7 +29065,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29171,7 +29073,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29180,7 +29081,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29189,7 +29089,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -29198,7 +29097,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -30237,7 +30135,6 @@ class Msub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -30309,7 +30206,7 @@ class Msub:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -31411,7 +31308,7 @@ class Msub:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Msup:
     class Meta:
         name = "msup"
@@ -31421,7 +31318,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31430,7 +31326,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31439,7 +31334,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31448,7 +31342,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31457,7 +31350,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31466,7 +31358,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31475,7 +31366,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31484,7 +31374,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31493,7 +31382,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31502,7 +31390,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31624,7 +31511,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31633,7 +31519,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31642,7 +31527,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31651,7 +31535,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31660,7 +31543,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31669,7 +31551,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31678,7 +31559,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31687,7 +31567,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31696,7 +31575,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31705,7 +31583,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31714,7 +31591,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31723,7 +31599,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31732,7 +31607,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31741,7 +31615,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -31750,7 +31623,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -32789,7 +32661,6 @@ class Msup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -32861,7 +32732,7 @@ class Msup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -33963,7 +33834,7 @@ class Msup:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Msubsup:
     class Meta:
         name = "msubsup"
@@ -33973,7 +33844,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -33982,7 +33852,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -33991,7 +33860,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34000,7 +33868,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34009,7 +33876,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34018,7 +33884,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34027,7 +33892,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34036,7 +33900,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34045,7 +33908,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34054,7 +33916,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34176,7 +34037,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34185,7 +34045,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34194,7 +34053,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34203,7 +34061,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34212,7 +34069,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34221,7 +34077,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34230,7 +34085,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34239,7 +34093,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34248,7 +34101,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34257,7 +34109,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34266,7 +34117,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34275,7 +34125,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34284,7 +34133,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34293,7 +34141,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -34302,7 +34149,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -35341,7 +35187,6 @@ class Msubsup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -35420,7 +35265,7 @@ class Msubsup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -36522,7 +36367,7 @@ class Msubsup:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Munder:
     class Meta:
         name = "munder"
@@ -36532,7 +36377,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36541,7 +36385,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36550,7 +36393,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36559,7 +36401,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36568,7 +36409,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36577,7 +36417,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36586,7 +36425,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36595,7 +36433,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36604,7 +36441,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36613,7 +36449,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36735,7 +36570,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36744,7 +36578,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36753,7 +36586,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36762,7 +36594,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36771,7 +36602,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36780,7 +36610,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36789,7 +36618,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36798,7 +36626,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36807,7 +36634,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36816,7 +36642,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36825,7 +36650,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36834,7 +36658,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36843,7 +36666,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36852,7 +36674,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -36861,7 +36682,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -37900,7 +37720,6 @@ class Munder:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -37977,7 +37796,7 @@ class Munder:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -39079,7 +38898,7 @@ class Munder:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mover:
     class Meta:
         name = "mover"
@@ -39089,7 +38908,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39098,7 +38916,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39107,7 +38924,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39116,7 +38932,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39125,7 +38940,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39134,7 +38948,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39143,7 +38956,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39152,7 +38964,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39161,7 +38972,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39170,7 +38980,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39292,7 +39101,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39301,7 +39109,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39310,7 +39117,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39319,7 +39125,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39328,7 +39133,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39337,7 +39141,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39346,7 +39149,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39355,7 +39157,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39364,7 +39165,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39373,7 +39173,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39382,7 +39181,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39391,7 +39189,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39400,7 +39197,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39409,7 +39205,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -39418,7 +39213,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -40457,7 +40251,6 @@ class Mover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -40534,7 +40327,7 @@ class Mover:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -41636,7 +41429,7 @@ class Mover:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Munderover:
     class Meta:
         name = "munderover"
@@ -41646,7 +41439,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41655,7 +41447,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41664,7 +41455,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41673,7 +41463,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41682,7 +41471,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41691,7 +41479,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41700,7 +41487,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41709,7 +41495,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41718,7 +41503,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41727,7 +41511,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41849,7 +41632,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41858,7 +41640,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41867,7 +41648,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41876,7 +41656,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41885,7 +41664,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41894,7 +41672,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41903,7 +41680,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41912,7 +41688,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41921,7 +41696,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41930,7 +41704,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41939,7 +41712,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41948,7 +41720,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41957,7 +41728,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41966,7 +41736,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -41975,7 +41744,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -43014,7 +42782,6 @@ class Munderover:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "max_occurs": 3,
             "sequence": 1,
         },
@@ -43097,7 +42864,7 @@ class Munderover:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -44199,7 +43966,7 @@ class Munderover:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mmultiscripts:
     class Meta:
         name = "mmultiscripts"
@@ -45306,7 +45073,7 @@ class Mmultiscripts:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -46408,7 +46175,7 @@ class Mmultiscripts:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mstack:
     class Meta:
         name = "mstack"
@@ -47539,7 +47306,7 @@ class Mstack:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -48641,7 +48408,7 @@ class Mstack:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mlongdiv:
     class Meta:
         name = "mlongdiv"
@@ -48651,7 +48418,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48659,7 +48425,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48667,7 +48432,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48675,7 +48439,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48683,7 +48446,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48691,7 +48453,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48699,7 +48460,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48707,7 +48467,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48715,7 +48474,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48723,7 +48481,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48830,7 +48587,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48838,7 +48594,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48846,7 +48601,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48854,7 +48608,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48862,7 +48615,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48870,7 +48622,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48878,7 +48629,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48886,7 +48636,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48894,7 +48643,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48902,7 +48650,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48910,7 +48657,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48918,7 +48664,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48926,7 +48671,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48934,7 +48678,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -48942,7 +48685,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -49852,7 +49594,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -49860,7 +49601,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -49868,7 +49608,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -49876,7 +49615,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -49884,7 +49622,6 @@ class Mlongdiv:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 3,
             "sequence": 1,
         },
     )
@@ -49966,7 +49703,7 @@ class Mlongdiv:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -51068,7 +50805,7 @@ class Mlongdiv:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Maction:
     class Meta:
         name = "maction"
@@ -52148,12 +51885,11 @@ class Maction:
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    actiontype: None | object = field(
-        default=None,
+    actiontype: object = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     selection: None | int = field(
         default=None,
@@ -52162,7 +51898,7 @@ class Maction:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -53264,7 +53000,7 @@ class Maction:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mscarry:
     class Meta:
         name = "mscarry"
@@ -54364,7 +54100,7 @@ class Mscarry:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -55466,7 +55202,7 @@ class Mscarry:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Msrow:
     class Meta:
         name = "msrow"
@@ -56559,7 +56295,7 @@ class Msrow:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -57661,7 +57397,7 @@ class Msrow:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mscarries:
     class Meta:
         name = "mscarries"
@@ -58779,7 +58515,7 @@ class Mscarries:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,
@@ -59881,7 +59617,7 @@ class Mscarries:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Msgroup:
     class Meta:
         name = "msgroup"
@@ -60998,7 +60734,7 @@ class Msgroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Semantics:
         apply: None | Apply = field(
             default=None,

@@ -18,7 +18,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractorPortType:
     """
     A port description, giving a name and an access type for high level
@@ -42,15 +42,14 @@ class AbstractorPortType:
     class Meta:
         name = "abstractorPortType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
             "white_space": "collapse",
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,

@@ -13,7 +13,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PerInstanceMemorySize:
     """
     Resources needed by the allocation of PerInstanceMemory for each SWC
@@ -98,13 +98,12 @@ class PerInstanceMemorySize:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PerInstanceMemoryRef(Ref):
-        dest: None | PerInstanceMemorySubtypesEnum = field(
-            default=None,
+        dest: PerInstanceMemorySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

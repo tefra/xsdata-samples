@@ -7,7 +7,7 @@ from .numerical_value import NumericalValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrmCharMinTypMax:
     """
     This metaclass represents the characteristics of a parameter as

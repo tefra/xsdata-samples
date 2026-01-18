@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UbldocumentSignaturesType:
     class Meta:
         name = "UBLDocumentSignaturesType"
@@ -27,7 +27,7 @@ class UbldocumentSignaturesType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UbldocumentSignatures(UbldocumentSignaturesType):
     class Meta:
         name = "UBLDocumentSignatures"

@@ -8,7 +8,7 @@ from sdmx_ml.models.result_type import ResultType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class QueryResultType:
     """
     QueryResultType describes the structure of a query result for a single
@@ -48,19 +48,18 @@ class QueryResultType:
             ),
         },
     )
-    time_series_match: None | bool = field(
-        default=None,
+    time_series_match: bool = field(
         metadata={
             "name": "timeSeriesMatch",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class DataResult(ResultType):
         pass
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class MetadataResult(ResultType):
         pass

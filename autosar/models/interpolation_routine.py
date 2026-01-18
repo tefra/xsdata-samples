@@ -10,7 +10,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InterpolationRoutine:
     """
     This represents an interpolation routine taken to evaluate the contents
@@ -84,13 +84,12 @@ class InterpolationRoutine:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InterpolationRoutineRef(Ref):
-        dest: None | BswModuleEntrySubtypesEnum = field(
-            default=None,
+        dest: BswModuleEntrySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

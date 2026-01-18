@@ -9,7 +9,7 @@ from .flexible_service_properties import FlexibleServiceProperties
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexibleServicePropertiesInFrameRelStructure(
     ContainmentAggregationStructure
 ):

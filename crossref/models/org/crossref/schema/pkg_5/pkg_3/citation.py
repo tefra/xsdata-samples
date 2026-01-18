@@ -9,7 +9,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.citation_t import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Citation(CitationT):
     """
     citation is used to deposit each reference in the reference list of the
@@ -23,13 +23,12 @@ class Citation(CitationT):
         name = "citation"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
             "white_space": "collapse",
-        },
+        }
     )

@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HwPin:
     """
     This meta-class represents the possibility to describe a hardware pin.
@@ -98,14 +98,13 @@ class HwPin:
     class Meta:
         name = "HW-PIN"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | HwPin.ShortNameFragments = field(
         default=None,
@@ -226,7 +225,7 @@ class HwPin:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -237,7 +236,7 @@ class HwPin:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -248,18 +247,17 @@ class HwPin:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwTypeRef(Ref):
-        dest: None | HwTypeSubtypesEnum = field(
-            default=None,
+        dest: HwTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwCategoryRefs:
         hw_category_ref: list[HwPin.HwCategoryRefs.HwCategoryRef] = field(
             default_factory=list,
@@ -270,18 +268,17 @@ class HwPin:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class HwCategoryRef(Ref):
-            dest: None | HwCategorySubtypesEnum = field(
-                default=None,
+            dest: HwCategorySubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwAttributeValues:
         hw_attribute_value: list[HwAttributeValue] = field(
             default_factory=list,

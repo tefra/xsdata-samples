@@ -7,7 +7,7 @@ from travelport.models.tax_info import TaxInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuditData:
     """
     Container for Pricing Audit Data.For providers 1P.

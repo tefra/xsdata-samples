@@ -7,7 +7,7 @@ from ipxact.models.indices import Indices
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RegisterRef:
     class Meta:
         name = "registerRef"
@@ -19,11 +19,10 @@ class RegisterRef:
             "type": "Element",
         },
     )
-    register_ref: None | str = field(
-        default=None,
+    register_ref: str = field(
         metadata={
             "name": "registerRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

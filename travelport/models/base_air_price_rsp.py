@@ -9,7 +9,7 @@ from travelport.models.base_rsp_1 import BaseRsp1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseAirPriceRsp(BaseRsp1):
     """
     Parameters
@@ -20,14 +20,13 @@ class BaseAirPriceRsp(BaseRsp1):
         Provider: 1G,1V,1P,ACH.
     """
 
-    air_itinerary: None | AirItinerary = field(
-        default=None,
+    air_itinerary: AirItinerary = field(
         metadata={
             "name": "AirItinerary",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "required": True,
-        },
+        }
     )
     air_price_result: list[AirPriceResult] = field(
         default_factory=list,

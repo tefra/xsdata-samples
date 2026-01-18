@@ -10,7 +10,7 @@ from travelport.models.provider_reservation_detail_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EmdretrieveReq(BaseReq1):
     """
     Electronic Miscellaneous Document retrieve request.Supported providers
@@ -44,7 +44,7 @@ class EmdretrieveReq(BaseReq1):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ListRetrieve:
         """
         Parameters
@@ -54,17 +54,16 @@ class EmdretrieveReq(BaseReq1):
             EMDs associated with it.
         """
 
-        provider_reservation_detail: None | ProviderReservationDetail1 = field(
-            default=None,
+        provider_reservation_detail: ProviderReservationDetail1 = field(
             metadata={
                 "name": "ProviderReservationDetail",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DetailRetrieve:
         """
         Parameters
@@ -89,12 +88,11 @@ class EmdretrieveReq(BaseReq1):
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
             },
         )
-        emdnumber: None | str = field(
-            default=None,
+        emdnumber: str = field(
             metadata={
                 "name": "EMDNumber",
                 "type": "Element",
                 "required": True,
                 "length": 13,
-            },
+            }
         )

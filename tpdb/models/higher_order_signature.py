@@ -10,7 +10,7 @@ from tpdb.models.higher_order_signature_variable_type_info import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HigherOrderSignature:
     """
     :ivar variable_type_info: type for free variables
@@ -28,13 +28,12 @@ class HigherOrderSignature:
             "type": "Element",
         },
     )
-    function_symbol_type_info: (
-        None | HigherOrderSignatureFunctionSymbolTypeInfo
-    ) = field(
-        default=None,
-        metadata={
-            "name": "functionSymbolTypeInfo",
-            "type": "Element",
-            "required": True,
-        },
+    function_symbol_type_info: HigherOrderSignatureFunctionSymbolTypeInfo = (
+        field(
+            metadata={
+                "name": "functionSymbolTypeInfo",
+                "type": "Element",
+                "required": True,
+            }
+        )
     )

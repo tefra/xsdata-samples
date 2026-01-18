@@ -9,7 +9,7 @@ from .month_validity_offset_versioned_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MonthValidityOffset(MonthValidityOffsetVersionedStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

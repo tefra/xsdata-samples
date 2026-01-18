@@ -8,7 +8,7 @@ from .positive_integer import PositiveInteger
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FrGlobalTimeDomainProps:
     """
     Enables the definition of Flexray GlobalTime specific properties.
@@ -72,7 +72,7 @@ class FrGlobalTimeDomainProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OfsDataIdLists:
         """
         :ivar ofs_data_id_list: The DataIDList for OFS messages to
@@ -89,7 +89,7 @@ class FrGlobalTimeDomainProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SyncDataIdLists:
         """
         :ivar sync_data_id_list: The DataIDList for SYNC messages to

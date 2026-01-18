@@ -12,7 +12,7 @@ from sabre.models.response_location_type import ResponseLocationType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookFlightSegmentType:
     """
     Container for the flight segment data plus the MarriageGrp.
@@ -57,23 +57,21 @@ class BookFlightSegmentType:
         elapsed_time: Elapsed segment trip time.
     """
 
-    departure_airport: None | AirportInformationType = field(
-        default=None,
+    departure_airport: AirportInformationType = field(
         metadata={
             "name": "DepartureAirport",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    arrival_airport: None | AirportInformationType = field(
-        default=None,
+    arrival_airport: AirportInformationType = field(
         metadata={
             "name": "ArrivalAirport",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     operating_airline: None | OperatingAirlineType = field(
         default=None,
@@ -162,13 +160,12 @@ class BookFlightSegmentType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    departure_date_time: None | str = field(
-        default=None,
+    departure_date_time: str = field(
         metadata={
             "name": "DepartureDateTime",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     arrival_date_time: None | str = field(
         default=None,
@@ -248,7 +245,7 @@ class BookFlightSegmentType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StopAirports:
         """
         Attributes:
@@ -267,7 +264,7 @@ class BookFlightSegmentType:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class StopAirport(ResponseLocationType):
             """
             Attributes:
@@ -324,7 +321,7 @@ class BookFlightSegmentType:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DepartureTimeZone:
         gmtoffset: None | float = field(
             default=None,
@@ -334,7 +331,7 @@ class BookFlightSegmentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArrivalTimeZone:
         gmtoffset: None | float = field(
             default=None,
@@ -344,7 +341,7 @@ class BookFlightSegmentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OnTimePerformance:
         level: None | str = field(
             default=None,
@@ -361,7 +358,7 @@ class BookFlightSegmentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpaExtensions:
         e_ticket: None | BookFlightSegmentType.TpaExtensions.ETicket = field(
             default=None,
@@ -390,7 +387,7 @@ class BookFlightSegmentType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ETicket:
             ind: None | bool = field(
                 default=None,
@@ -400,7 +397,7 @@ class BookFlightSegmentType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DataElement:
             subject_to_government_approval: None | bool = field(
                 default=None,
@@ -410,7 +407,7 @@ class BookFlightSegmentType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Message:
             type_value: None | str = field(
                 default=None,

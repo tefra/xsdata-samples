@@ -7,7 +7,7 @@ from tpdb.models.constructor_based import ConstructorBased
 from tpdb.models.full import Full
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Startterm:
     class Meta:
         name = "startterm"

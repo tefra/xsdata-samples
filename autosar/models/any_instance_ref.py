@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AnyInstanceRef:
     """
     Describes a reference to any instance in an AUTOSAR model.
@@ -77,24 +77,22 @@ class AnyInstanceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextElementRef(Ref):
-        dest: None | AtpFeatureSubtypesEnum = field(
-            default=None,
+        dest: AtpFeatureSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetRef(Ref):
-        dest: None | AtpFeatureSubtypesEnum = field(
-            default=None,
+        dest: AtpFeatureSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

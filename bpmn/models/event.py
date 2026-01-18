@@ -7,7 +7,7 @@ from .t_event import TEvent
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Event(TEvent):
     class Meta:
         name = "event"

@@ -11,7 +11,7 @@ from travelport.models.type_structured_address_1 import TypeStructuredAddress1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrePayCustomer:
     """
     Detailed customer information for searching pre pay profiles.

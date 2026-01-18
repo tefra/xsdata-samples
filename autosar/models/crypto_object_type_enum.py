@@ -7,7 +7,7 @@ from .crypto_object_type_enum_simple import CryptoObjectTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CryptoObjectTypeEnum:
     """
     Enumeration of all types of crypto objects, i.e. types of content that
@@ -29,11 +29,10 @@ class CryptoObjectTypeEnum:
     class Meta:
         name = "CRYPTO-OBJECT-TYPE-ENUM"
 
-    value: None | CryptoObjectTypeEnumSimple = field(
-        default=None,
+    value: CryptoObjectTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -12,7 +12,7 @@ from .timing_link_ref import TimingLinkRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceLinkInJourneyPatternVersionedChildStructure(
     LinkInLinkSequenceVersionedChildStructure
 ):
@@ -35,12 +35,11 @@ class ServiceLinkInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_link_ref: None | ServiceLinkRef = field(
-        default=None,
+    service_link_ref: ServiceLinkRef = field(
         metadata={
             "name": "ServiceLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

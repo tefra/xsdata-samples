@@ -8,7 +8,7 @@ from travelport.models.currency_conversion import CurrencyConversion
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CurrencyConversionRsp(BaseRsp1):
     """
     The response to the CurrencyConversionReq.

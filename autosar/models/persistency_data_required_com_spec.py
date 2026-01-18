@@ -28,7 +28,7 @@ from .text_value_specification import TextValueSpecification
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersistencyDataRequiredComSpec:
     """
     This meta-class represents the ability to define port-specific
@@ -90,18 +90,17 @@ class PersistencyDataRequiredComSpec:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataElementRef(Ref):
-        dest: None | PersistencyDataElementSubtypesEnum = field(
-            default=None,
+        dest: PersistencyDataElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InitValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification

@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConsumedServiceInstanceRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -68,13 +68,12 @@ class ConsumedServiceInstanceRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConsumedServiceInstanceRef(Ref):
-        dest: None | ConsumedServiceInstanceSubtypesEnum = field(
-            default=None,
+        dest: ConsumedServiceInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

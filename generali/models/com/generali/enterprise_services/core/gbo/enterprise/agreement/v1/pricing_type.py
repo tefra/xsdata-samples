@@ -26,7 +26,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricingType:
     involvement_type: None | str = field(
         default=None,

@@ -9,7 +9,7 @@ from .abstract_functional_service_request_structure import (
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractFunctionalServiceRequest(
     AbstractFunctionalServiceRequestStructure
 ):

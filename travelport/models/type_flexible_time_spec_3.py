@@ -7,7 +7,7 @@ from travelport.models.type_time_spec_3 import TypeTimeSpec3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeFlexibleTimeSpec3(TypeTimeSpec3):
     """
     A type which can be used for flexible date/time specification -extends
@@ -31,7 +31,7 @@ class TypeFlexibleTimeSpec3(TypeTimeSpec3):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SearchExtraDays:
         """
         Parameters

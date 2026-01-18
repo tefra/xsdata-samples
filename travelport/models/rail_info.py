@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailInfo:
     """
     Container for rail-related information required for retrieving a rail
@@ -77,13 +77,12 @@ class RailInfo:
             "white_space": "collapse",
         },
     )
-    departure_time: None | str = field(
-        default=None,
+    departure_time: str = field(
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     arrival_time: None | str = field(
         default=None,
@@ -92,33 +91,30 @@ class RailInfo:
             "type": "Attribute",
         },
     )
-    train_number: None | str = field(
-        default=None,
+    train_number: str = field(
         metadata={
             "name": "TrainNumber",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 8,
-        },
+        }
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
-    supplier_code: None | str = field(
-        default=None,
+    supplier_code: str = field(
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        },
+        }
     )

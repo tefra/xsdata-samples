@@ -5,14 +5,13 @@ from dataclasses import dataclass, field
 from xsdata.models.datatype import XmlDate
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Date:
     class Meta:
         name = "date"
 
-    value: None | XmlDate = field(
-        default=None,
+    value: XmlDate = field(
         metadata={
             "required": True,
-        },
+        }
     )

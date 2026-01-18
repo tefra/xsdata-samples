@@ -7,7 +7,7 @@ from .i_psec_header_type_enum_simple import IPsecHeaderTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IPsecHeaderTypeEnum:
     """
     IPsec Header Type options.
@@ -28,11 +28,10 @@ class IPsecHeaderTypeEnum:
     class Meta:
         name = "I-PSEC-HEADER-TYPE-ENUM"
 
-    value: None | IPsecHeaderTypeEnumSimple = field(
-        default=None,
+    value: IPsecHeaderTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

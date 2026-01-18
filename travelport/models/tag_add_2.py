@@ -7,7 +7,7 @@ from travelport.models.type_taggable_element_2 import TypeTaggableElement2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TagAdd2:
     """
     Add a tag to the specified element of the profile.
@@ -30,27 +30,24 @@ class TagAdd2:
         name = "TagAdd"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    element: None | TypeTaggableElement2 = field(
-        default=None,
+    element: TypeTaggableElement2 = field(
         metadata={
             "name": "Element",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    tag_id: None | str = field(
-        default=None,
+    tag_id: str = field(
         metadata={
             "name": "TagID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

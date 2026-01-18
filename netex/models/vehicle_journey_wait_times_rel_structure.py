@@ -11,7 +11,7 @@ from .vehicle_journey_wait_time import VehicleJourneyWaitTime
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleJourneyWaitTimesRelStructure(
     StrictContainmentAggregationStructure
 ):

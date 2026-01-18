@@ -9,7 +9,7 @@ from .software_package_activation_action_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoftwarePackageActivationActionEnum:
     """
     This enumeration provides a choice of possible actions to be executed
@@ -31,11 +31,10 @@ class SoftwarePackageActivationActionEnum:
     class Meta:
         name = "SOFTWARE-PACKAGE-ACTIVATION-ACTION-ENUM"
 
-    value: None | SoftwarePackageActivationActionEnumSimple = field(
-        default=None,
+    value: SoftwarePackageActivationActionEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

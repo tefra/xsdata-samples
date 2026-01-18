@@ -15,7 +15,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Design:
     """
     Root element for a platform design.
@@ -43,33 +43,29 @@ class Design:
         name = "design"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    vendor: None | str = field(
-        default=None,
+    vendor: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    library: None | str = field(
-        default=None,
+    library: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     display_name: None | str = field(
         default=None,

@@ -7,7 +7,7 @@ from .admin_data import Sdg
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FileInfoComment:
     """
     This class supports StructuredComment to provide auxiliary information
@@ -55,7 +55,7 @@ class FileInfoComment:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sdgs:
         sdg: list[Sdg] = field(
             default_factory=list,

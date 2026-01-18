@@ -7,7 +7,7 @@ from travelport.models.carrier_code import CarrierCode
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CarrierList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -21,11 +21,10 @@ class CarrierList:
             "max_occurs": 6,
         },
     )
-    include_carrier: None | bool = field(
-        default=None,
+    include_carrier: bool = field(
         metadata={
             "name": "IncludeCarrier",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from .can_frame_tx_behavior_enum_simple import CanFrameTxBehaviorEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanFrameTxBehaviorEnum:
     """
     Defines different CAN protocols for frame transmission behavior.
@@ -28,11 +28,10 @@ class CanFrameTxBehaviorEnum:
     class Meta:
         name = "CAN-FRAME-TX-BEHAVIOR-ENUM"
 
-    value: None | CanFrameTxBehaviorEnumSimple = field(
-        default=None,
+    value: CanFrameTxBehaviorEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

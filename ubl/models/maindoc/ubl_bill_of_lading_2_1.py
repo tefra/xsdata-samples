@@ -37,7 +37,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:BillOfLading-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class BillOfLadingType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -79,14 +79,13 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     carrier_assigned_id: None | CarrierAssignedId = field(
         default=None,
@@ -258,7 +257,7 @@ class BillOfLadingType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class BillOfLading(BillOfLadingType):
     class Meta:
         namespace = (

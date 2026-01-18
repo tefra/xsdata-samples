@@ -10,7 +10,7 @@ from travelport.models.type_vehicle_charge_type import TypeVehicleChargeType
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeVehicleCharge:
     """
     Charges associated with a vehicle rental.
@@ -59,13 +59,12 @@ class TypeVehicleCharge:
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
         },
     )
-    category: None | str = field(
-        default=None,
+    category: str = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     name: None | str = field(
         default=None,

@@ -17,7 +17,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipTransformationProps:
     """
     The class SOMEIPTransformationProps specifies SOME/IP specific
@@ -96,14 +96,13 @@ class SomeipTransformationProps:
     class Meta:
         name = "SOMEIP-TRANSFORMATION-PROPS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SomeipTransformationProps.ShortNameFragments
@@ -226,7 +225,7 @@ class SomeipTransformationProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -237,7 +236,7 @@ class SomeipTransformationProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

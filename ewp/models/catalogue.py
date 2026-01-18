@@ -43,7 +43,7 @@ class OtherHeiIdValue(Enum):
     ERASMUS_CHARTER = "erasmus-charter"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApisImplemented:
     """
     This section describes all APIs implemented by a particular EWP host.
@@ -79,7 +79,7 @@ class ApisImplemented:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Empty:
     """
     Just a reusable empty element type, with no content nor attributes.
@@ -91,7 +91,7 @@ class Empty:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MultilineString:
     """
     This is very similar to a regular xs:string, but whenever this type is
@@ -116,7 +116,7 @@ class MultilineString:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdminEmail:
     """
     Address of a developer (or server administrator) who may be contacted
@@ -140,7 +140,7 @@ class AdminEmail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherHeiId:
     """
     :ivar value:
@@ -158,17 +158,16 @@ class OtherHeiId:
             "required": True,
         },
     )
-    type_value: None | OtherHeiIdValue = field(
-        default=None,
+    type_value: OtherHeiIdValue = field(
         metadata={
             "name": "type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HttpwithOptionalLang:
     """
     An absolute URL (might be either HTTP or HTTPS) with an optional
@@ -206,7 +205,7 @@ class HttpwithOptionalLang:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MultilineStringWithOptionalLang(MultilineString):
     """
     A multiline string (as defined in the MultilineString) with an optional
@@ -231,7 +230,7 @@ class MultilineStringWithOptionalLang(MultilineString):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StringWithOptionalLang:
     """
     A string with an optional (but RECOMMENDED) xml:lang attribute.
@@ -270,7 +269,7 @@ class StringWithOptionalLang:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdminNotes(MultilineString):
     """
     Additional information provided by administrators and/or developers.
@@ -285,7 +284,7 @@ class AdminNotes(MultilineString):
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Hei:
     """
     Briefly describes a single Higher Education Institution (HEI).
@@ -335,16 +334,15 @@ class Hei:
             "min_occurs": 1,
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ManifestApiEntryBase:
     """
     A common base type for children of the `apis-implemented` element of
@@ -399,17 +397,16 @@ class ManifestApiEntryBase:
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
         },
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
             "pattern": r"[0-9]+\.[0-9]+\.[0-9]+",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ErrorResponse:
     """
     A generic envelope for all kinds of errors.
@@ -446,13 +443,12 @@ class ErrorResponse:
         name = "error-response"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    developer_message: None | MultilineString = field(
-        default=None,
+    developer_message: MultilineString = field(
         metadata={
             "name": "developer-message",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     user_message: list[MultilineStringWithOptionalLang] = field(
         default_factory=list,
@@ -463,7 +459,7 @@ class ErrorResponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SuccessUserMessage(MultilineStringWithOptionalLang):
     """
     This element is sometimes added to regular HTTP 200 responses.
@@ -492,7 +488,7 @@ class SuccessUserMessage(MultilineStringWithOptionalLang):
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Host:
     """
     Defines a single EWP Host.
@@ -617,7 +613,7 @@ class Host:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InstitutionsCovered:
         hei: list[Hei] = field(
             default_factory=list,
@@ -627,7 +623,7 @@ class Host:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClientCredentialsInUse:
         """
         :ivar certificate: Base64-encoded X.509 certificate used by the
@@ -660,7 +656,7 @@ class Host:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServerCredentialsInUse:
         """
         :ivar rsa_public_key: Base64-encoded RSA public key used by the
@@ -681,7 +677,7 @@ class Host:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Catalogue:
     """
     The EWP Registry catalogue response.
@@ -717,12 +713,11 @@ class Catalogue:
             "min_occurs": 1,
         },
     )
-    institutions: None | Catalogue.Institutions = field(
-        default=None,
+    institutions: Catalogue.Institutions = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     binaries: None | Catalogue.Binaries = field(
         default=None,
@@ -731,7 +726,7 @@ class Catalogue:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Host:
         """
         :ivar admin_email:
@@ -822,7 +817,7 @@ class Catalogue:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class InstitutionsCovered:
             """
             :ivar hei_id: SCHAC identifier of the HEI. If you don't use
@@ -839,7 +834,7 @@ class Catalogue:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ClientCredentialsInUse:
             """
             :ivar certificate: Identifies a client certificate with
@@ -886,39 +881,37 @@ class Catalogue:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Certificate:
                 """
                 :ivar sha_256: Certificate's SHA-256 digest (in HEX).
                 """
 
-                sha_256: None | str = field(
-                    default=None,
+                sha_256: str = field(
                     metadata={
                         "name": "sha-256",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9a-f]{64}",
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class RsaPublicKey:
                 """
                 :ivar sha_256: Public key's SHA-256 digest (in HEX).
                 """
 
-                sha_256: None | str = field(
-                    default=None,
+                sha_256: str = field(
                     metadata={
                         "name": "sha-256",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9a-f]{64}",
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ServerCredentialsInUse:
             """
             :ivar rsa_public_key: Identifies an RSA key-pair which has
@@ -950,23 +943,22 @@ class Catalogue:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class RsaPublicKey:
                 """
                 :ivar sha_256: Public key's SHA-256 digest (in HEX).
                 """
 
-                sha_256: None | str = field(
-                    default=None,
+                sha_256: str = field(
                     metadata={
                         "name": "sha-256",
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9a-f]{64}",
-                    },
+                    }
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Institutions:
         hei: list[Hei] = field(
             default_factory=list,
@@ -975,7 +967,7 @@ class Catalogue:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Binaries:
         """
         :ivar rsa_public_key: Contains base64-encoded binary content of
@@ -990,7 +982,7 @@ class Catalogue:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RsaPublicKey:
             """
             :ivar value:
@@ -1003,25 +995,24 @@ class Catalogue:
                 matching by humans when debugging XML).
             """
 
-            value: None | bytes = field(
-                default=None,
+            value: bytes = field(
+                default=b"",
                 metadata={
                     "required": True,
                     "format": "base64",
                 },
             )
-            sha_256: None | str = field(
-                default=None,
+            sha_256: str = field(
                 metadata={
                     "name": "sha-256",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[0-9a-f]{64}",
-                },
+                }
             )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Manifest:
     """
     EWP Discovery Manifest.

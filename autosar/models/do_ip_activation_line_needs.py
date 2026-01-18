@@ -16,7 +16,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DoIpActivationLineNeeds:
     """
     A DoIP entity needs to be informed when an external tester is attached
@@ -83,14 +83,13 @@ class DoIpActivationLineNeeds:
     class Meta:
         name = "DO-IP-ACTIVATION-LINE-NEEDS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DoIpActivationLineNeeds.ShortNameFragments = (
         field(
@@ -173,7 +172,7 @@ class DoIpActivationLineNeeds:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -184,7 +183,7 @@ class DoIpActivationLineNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

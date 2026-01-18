@@ -28,7 +28,7 @@ from .text_value_specification import TextValueSpecification
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParameterRequireComSpec:
     """
     "Communication" specification that applies to parameters on the
@@ -85,7 +85,7 @@ class ParameterRequireComSpec:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InitValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification
@@ -200,13 +200,12 @@ class ParameterRequireComSpec:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ParameterRef(Ref):
-        dest: None | ParameterDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ParameterDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

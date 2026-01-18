@@ -28,7 +28,7 @@ from travelport.models.travel_compliance_data_1 import TravelComplianceData1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirUpdate:
     """
     Parameters
@@ -220,15 +220,14 @@ class AirUpdate:
             "max_occurs": 999,
         },
     )
-    reservation_locator_code: None | str = field(
-        default=None,
+    reservation_locator_code: str = field(
         metadata={
             "name": "ReservationLocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
     booking_traveler_ref: None | str = field(
         default=None,

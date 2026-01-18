@@ -18,7 +18,7 @@ from travelport.models.type_tcrstatus import TypeTcrstatus
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Tcr:
     """
     Information related to Ticketless carriers.
@@ -155,29 +155,26 @@ class Tcr:
             "max_occurs": 999,
         },
     )
-    tcrnumber: None | str = field(
-        default=None,
+    tcrnumber: str = field(
         metadata={
             "name": "TCRNumber",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    status: None | TypeTcrstatus = field(
-        default=None,
+    status: TypeTcrstatus = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    modified_date: None | str = field(
-        default=None,
+    modified_date: str = field(
         metadata={
             "name": "ModifiedDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     confirmed_date: None | str = field(
         default=None,
@@ -186,80 +183,71 @@ class Tcr:
             "type": "Attribute",
         },
     )
-    base_price: None | str = field(
-        default=None,
+    base_price: str = field(
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    taxes: None | str = field(
-        default=None,
+    taxes: str = field(
         metadata={
             "name": "Taxes",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    fees: None | str = field(
-        default=None,
+    fees: str = field(
         metadata={
             "name": "Fees",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    refundable: None | bool = field(
-        default=None,
+    refundable: bool = field(
         metadata={
             "name": "Refundable",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    exchangeable: None | bool = field(
-        default=None,
+    exchangeable: bool = field(
         metadata={
             "name": "Exchangeable",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    voidable: None | bool = field(
-        default=None,
+    voidable: bool = field(
         metadata={
             "name": "Voidable",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    modifiable: None | bool = field(
-        default=None,
+    modifiable: bool = field(
         metadata={
             "name": "Modifiable",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
-    provider_locator_code: None | str = field(
-        default=None,
+    provider_locator_code: str = field(
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        },
+        }
     )
     supplier_code: None | str = field(
         default=None,

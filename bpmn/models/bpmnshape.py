@@ -10,7 +10,7 @@ from .participant_band_kind import ParticipantBandKind
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/DI"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Bpmnshape(LabeledShape):
     class Meta:
         name = "BPMNShape"

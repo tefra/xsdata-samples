@@ -8,7 +8,7 @@ from .nil_reason_enumeration_value import NilReasonEnumerationValue
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MultiSurfacePropertyType:
     multi_surface: None | MultiSurface = field(
         default=None,

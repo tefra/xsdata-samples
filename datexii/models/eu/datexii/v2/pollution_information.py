@@ -9,7 +9,7 @@ from datexii.models.eu.datexii.v2.weather_data import WeatherData
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PollutionInformation(WeatherData):
     """
     Measurements of atmospheric pollution.

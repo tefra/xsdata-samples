@@ -7,7 +7,7 @@ from .operation_cycle_type_enum_simple import OperationCycleTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OperationCycleTypeEnum:
     """
     The possible values of the operation cycles types for the Dem.
@@ -28,11 +28,10 @@ class OperationCycleTypeEnum:
     class Meta:
         name = "OPERATION-CYCLE-TYPE-ENUM"
 
-    value: None | OperationCycleTypeEnumSimple = field(
-        default=None,
+    value: OperationCycleTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

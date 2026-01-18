@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareRuleKey:
     """
     The Fare Rule requested using a Key.
@@ -33,21 +33,19 @@ class FareRuleKey:
             "white_space": "collapse",
         },
     )
-    fare_info_ref: None | str = field(
-        default=None,
+    fare_info_ref: str = field(
         metadata={
             "name": "FareInfoRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )

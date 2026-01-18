@@ -30,7 +30,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ProductActivityType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -72,14 +72,13 @@ class ProductActivityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     copy_indicator: None | CopyIndicator = field(
         default=None,
@@ -97,14 +96,13 @@ class ProductActivityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -130,14 +128,13 @@ class ProductActivityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    activity_period: None | ActivityPeriod = field(
-        default=None,
+    activity_period: ActivityPeriod = field(
         metadata={
             "name": "ActivityPeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
@@ -155,23 +152,21 @@ class ProductActivityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sender_party: None | SenderParty = field(
-        default=None,
+    sender_party: SenderParty = field(
         metadata={
             "name": "SenderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    receiver_party: None | ReceiverParty = field(
-        default=None,
+    receiver_party: ReceiverParty = field(
         metadata={
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     supply_chain_activity_data_line: tuple[
         SupplyChainActivityDataLine, ...
@@ -186,7 +181,7 @@ class ProductActivityType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ProductActivity(ProductActivityType):
     class Meta:
         namespace = (

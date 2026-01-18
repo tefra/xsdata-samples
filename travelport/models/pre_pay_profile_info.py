@@ -11,7 +11,7 @@ from travelport.models.pre_pay_id import PrePayId
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrePayProfileInfo:
     """
     PrePay Profile associated with the customer.
@@ -45,13 +45,12 @@ class PrePayProfileInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    pre_pay_id: None | PrePayId = field(
-        default=None,
+    pre_pay_id: PrePayId = field(
         metadata={
             "name": "PrePayId",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     pre_pay_customer: None | PrePayCustomer = field(
         default=None,

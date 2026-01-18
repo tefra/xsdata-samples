@@ -19,7 +19,7 @@ from travelport.models.specific_seat_assignment import SpecificSeatAssignment
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirMerchandisingFulfillmentReq(BaseReq1):
     """
     This will fulfill the merchandised items as specified in the request.
@@ -82,14 +82,13 @@ class AirMerchandisingFulfillmentReq(BaseReq1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    air_solution: None | AirSolution = field(
-        default=None,
+    air_solution: AirSolution = field(
         metadata={
             "name": "AirSolution",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "required": True,
-        },
+        }
     )
     credit_card: None | CreditCard1 = field(
         default=None,

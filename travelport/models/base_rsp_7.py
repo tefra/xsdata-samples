@@ -7,7 +7,7 @@ from travelport.models.response_message_7 import ResponseMessage7
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseRsp7:
     """
     The base type for all responses.

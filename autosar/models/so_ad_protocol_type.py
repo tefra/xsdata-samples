@@ -7,7 +7,7 @@ from .so_ad_protocol_type_simple import SoAdProtocolTypeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoAdProtocolType:
     """
     Transport Protocols above IP.
@@ -28,11 +28,10 @@ class SoAdProtocolType:
     class Meta:
         name = "SO-AD-PROTOCOL-TYPE"
 
-    value: None | SoAdProtocolTypeSimple = field(
-        default=None,
+    value: SoAdProtocolTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

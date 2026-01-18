@@ -12,7 +12,7 @@ from .response_status import ResponseStatus
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubscriptionResponseStructure(ResponseEndpointStructure):
     response_status: Iterable[ResponseStatus] = field(
         default_factory=list,

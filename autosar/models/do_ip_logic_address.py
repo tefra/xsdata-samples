@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DoIpLogicAddress:
     """
     The logical DoIP address.
@@ -84,14 +84,13 @@ class DoIpLogicAddress:
     class Meta:
         name = "DO-IP-LOGIC-ADDRESS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DoIpLogicAddress.ShortNameFragments = field(
         default=None,
@@ -190,7 +189,7 @@ class DoIpLogicAddress:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -201,7 +200,7 @@ class DoIpLogicAddress:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -212,7 +211,7 @@ class DoIpLogicAddress:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DoIpLogicAddressProps:
         do_ip_logic_target_address_props: (
             None | DoIpLogicTargetAddressProps

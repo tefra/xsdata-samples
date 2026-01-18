@@ -9,7 +9,7 @@ from travelport.models.type_general_reference_3 import TypeGeneralReference3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SupplierLocator3:
     """
     Locator code on the host carrier system.
@@ -41,22 +41,20 @@ class SupplierLocator3:
             "max_occurs": 999,
         },
     )
-    supplier_code: None | str = field(
-        default=None,
+    supplier_code: str = field(
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
-    supplier_locator_code: None | str = field(
-        default=None,
+    supplier_locator_code: str = field(
         metadata={
             "name": "SupplierLocatorCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     provider_reservation_info_ref: None | str = field(
         default=None,

@@ -8,26 +8,24 @@ from .transfer_version_structure import TransferVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessVersionStructure(TransferVersionStructure):
     class Meta:
         name = "Access_VersionStructure"
 
-    from_value: None | AccessEndStructure = field(
-        default=None,
+    from_value: AccessEndStructure = field(
         metadata={
             "name": "From",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    to: None | AccessEndStructure = field(
-        default=None,
+    to: AccessEndStructure = field(
         metadata={
             "name": "To",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

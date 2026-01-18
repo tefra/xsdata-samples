@@ -8,7 +8,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SupportDescription:
     """
     <div> <h3>Support Description</h3> </div>.
@@ -22,7 +22,6 @@ class SupportDescription:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     id: None | str = field(

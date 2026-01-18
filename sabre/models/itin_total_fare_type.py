@@ -8,7 +8,7 @@ from sabre.models.fare_type import FareType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItinTotalFareType(FareType):
     """
     Attributes:
@@ -51,40 +51,37 @@ class ItinTotalFareType(FareType):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Extras:
-        amount: None | object = field(
-            default=None,
+        amount: object = field(
             metadata={
                 "name": "Amount",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TotalWithExtras:
-        amount: None | object = field(
-            default=None,
+        amount: object = field(
             metadata={
                 "name": "Amount",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TotalMileage:
-        amount: None | object = field(
-            default=None,
+        amount: object = field(
             metadata={
                 "name": "Amount",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceFee:
         """
         Attributes:
@@ -92,21 +89,19 @@ class ItinTotalFareType(FareType):
             tax_amount: Service Fee Tax
         """
 
-        amount: None | Decimal = field(
-            default=None,
+        amount: Decimal = field(
             metadata={
                 "name": "Amount",
                 "type": "Attribute",
                 "required": True,
                 "fraction_digits": 3,
-            },
+            }
         )
-        tax_amount: None | Decimal = field(
-            default=None,
+        tax_amount: Decimal = field(
             metadata={
                 "name": "TaxAmount",
                 "type": "Attribute",
                 "required": True,
                 "fraction_digits": 3,
-            },
+            }
         )

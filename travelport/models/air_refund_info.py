@@ -8,7 +8,7 @@ from travelport.models.refund_remark_1 import RefundRemark1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirRefundInfo:
     """
     Provides results of a refund quote.

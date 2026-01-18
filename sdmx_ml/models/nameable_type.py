@@ -9,7 +9,7 @@ from sdmx_ml.models.name import Name
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class NameableType(IdentifiableType):
     """
     NameableType is an abstract base type for all nameable objects.

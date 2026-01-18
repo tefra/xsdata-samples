@@ -35,7 +35,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:Waybill-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class WaybillType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -77,14 +77,13 @@ class WaybillType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     carrier_assigned_id: None | CarrierAssignedId = field(
         default=None,
@@ -198,14 +197,13 @@ class WaybillType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    shipment: None | Shipment = field(
-        default=None,
+    shipment: Shipment = field(
         metadata={
             "name": "Shipment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     document_reference: tuple[DocumentReference, ...] = field(
         default_factory=tuple,
@@ -241,7 +239,7 @@ class WaybillType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Waybill(WaybillType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:Waybill-2"

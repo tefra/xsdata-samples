@@ -8,45 +8,41 @@ from travelport.models.session_context import SessionContext
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingTravelerPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: None | BookingTravelerPortTypeServiceInput.Header = field(
-        default=None,
+    header: BookingTravelerPortTypeServiceInput.Header = field(
         metadata={
             "name": "Header",
             "type": "Element",
-        },
+        }
     )
-    body: None | BookingTravelerPortTypeServiceInput.Body = field(
-        default=None,
+    body: BookingTravelerPortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Header:
-        session_context: None | SessionContext = field(
-            default=None,
+        session_context: SessionContext = field(
             metadata={
                 "name": "SessionContext",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        booking_traveler_req: None | BookingTravelerReq = field(
-            default=None,
+        booking_traveler_req: BookingTravelerReq = field(
             metadata={
                 "name": "BookingTravelerReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
-            },
+            }
         )

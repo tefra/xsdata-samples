@@ -20,7 +20,7 @@ from .timing_point_ref import TimingPointRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyPatternHeadwayVersionedChildStructure(
     JourneyHeadwayVersionedChildStructure
 ):

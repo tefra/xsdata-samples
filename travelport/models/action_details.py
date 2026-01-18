@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate, XmlTime
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ActionDetails:
     """
     Information related to the storing of the fare: Agent, Date and Action

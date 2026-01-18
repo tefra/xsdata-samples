@@ -9,7 +9,7 @@ from travelport.models.hotel_upsell_update import HotelUpsellUpdate
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelUpsellCriteria:
     """
     Wraps all Upsell Admin commands related to Hotel.

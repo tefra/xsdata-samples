@@ -8,7 +8,7 @@ from travelport.models.hotel_upsell_qualify import HotelUpsellQualify
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelUpsellAdd:
     """
     Add command for adding HotelUpsellQualify,HotelUpsellOffer.
@@ -17,13 +17,12 @@ class HotelUpsellAdd:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    hotel_upsell_qualify: None | HotelUpsellQualify = field(
-        default=None,
+    hotel_upsell_qualify: HotelUpsellQualify = field(
         metadata={
             "name": "HotelUpsellQualify",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     hotel_upsell_offer: None | HotelUpsellOffer = field(
         default=None,

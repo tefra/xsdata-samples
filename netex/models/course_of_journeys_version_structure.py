@@ -16,7 +16,7 @@ from .train_block_ref import TrainBlockRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "CourseOfJourneys_VersionStructure"

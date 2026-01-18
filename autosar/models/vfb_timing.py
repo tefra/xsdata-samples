@@ -63,7 +63,7 @@ from .timing_extension_resource import TimingExtensionResource
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VfbTiming:
     """
     A model element used to define timing descriptions and constraints at
@@ -161,14 +161,13 @@ class VfbTiming:
     class Meta:
         name = "VFB-TIMING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | VfbTiming.ShortNameFragments = field(
         default=None,
@@ -321,7 +320,7 @@ class VfbTiming:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -332,7 +331,7 @@ class VfbTiming:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -343,7 +342,7 @@ class VfbTiming:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -372,7 +371,7 @@ class VfbTiming:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingConditions:
         timing_condition: list[TimingCondition] = field(
             default_factory=list,
@@ -383,7 +382,7 @@ class VfbTiming:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingDescriptions:
         td_event_bsw_internal_behavior: list[TdEventBswInternalBehavior] = (
             field(
@@ -582,7 +581,7 @@ class VfbTiming:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingGuarantees:
         age_constraint: list[AgeConstraint] = field(
             default_factory=list,
@@ -689,7 +688,7 @@ class VfbTiming:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingRequirements:
         age_constraint: list[AgeConstraint] = field(
             default_factory=list,
@@ -796,13 +795,12 @@ class VfbTiming:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ComponentRef(Ref):
-        dest: None | SwComponentTypeSubtypesEnum = field(
-            default=None,
+        dest: SwComponentTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

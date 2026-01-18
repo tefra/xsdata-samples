@@ -8,7 +8,7 @@ from travelport.models.type_action_ref import TypeActionRef
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileRetrieveActionReq(BaseReq5):
     """
     Retrieves details of specific Action(s).

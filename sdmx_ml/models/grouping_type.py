@@ -11,7 +11,7 @@ from sdmx_ml.models.metadata_attribute_list import MetadataAttributeList
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GroupingType:
     """
     GroupType is an abstract base type for specific structure groupings.

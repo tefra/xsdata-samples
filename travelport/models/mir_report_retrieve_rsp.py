@@ -7,7 +7,7 @@ from travelport.models.base_rsp_1 import BaseRsp1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MirReportRetrieveRsp(BaseRsp1):
     """
     Carries the report payload.
@@ -16,11 +16,10 @@ class MirReportRetrieveRsp(BaseRsp1):
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    report: None | str = field(
-        default=None,
+    report: str = field(
         metadata={
             "name": "Report",
             "type": "Element",
             "required": True,
-        },
+        }
     )

@@ -10,7 +10,7 @@ from .sections_in_sequence_rel_structure import LineSection
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LineSectionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "lineSections_RelStructure"

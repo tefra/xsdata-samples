@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Arcpayment:
     """
     ARC form of payment.ACH Only.
@@ -22,14 +22,13 @@ class Arcpayment:
         name = "ARCPayment"
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
-    arcidentifier: None | str = field(
-        default=None,
+    arcidentifier: str = field(
         metadata={
             "name": "ARCIdentifier",
             "type": "Attribute",
             "required": True,
             "max_length": 128,
-        },
+        }
     )
     arcpassword: None | str = field(
         default=None,

@@ -10,7 +10,7 @@ from .sw_systemconst_subtypes_enum import SwSystemconstSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConditionByFormula:
     """
     This class represents a condition which is computed based on system
@@ -82,24 +82,22 @@ class ConditionByFormula:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SyscStringRef(Ref):
-        dest: None | SwSystemconstSubtypesEnum = field(
-            default=None,
+        dest: SwSystemconstSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SyscRef(Ref):
-        dest: None | SwSystemconstSubtypesEnum = field(
-            default=None,
+        dest: SwSystemconstSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

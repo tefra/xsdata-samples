@@ -10,7 +10,7 @@ from .t_base_element import TBaseElement
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TResourceParameterBinding(TBaseElement):
     class Meta:
         name = "tResourceParameterBinding"
@@ -30,11 +30,10 @@ class TResourceParameterBinding(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    parameter_ref: None | QName = field(
-        default=None,
+    parameter_ref: QName = field(
         metadata={
             "name": "parameterRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

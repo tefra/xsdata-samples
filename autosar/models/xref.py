@@ -23,7 +23,7 @@ from .single_language_long_name import SingleLanguageLongName
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Xref:
     """
     This represents a cross-reference within documentation.
@@ -181,13 +181,12 @@ class Xref:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReferrableRef(Ref):
-        dest: None | ReferrableSubtypesEnum = field(
-            default=None,
+        dest: ReferrableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

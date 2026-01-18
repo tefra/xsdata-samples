@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdditionalFareQualifierDetailsTypeI:
     """
     To specify the fare basis and ticket designator codes.
@@ -60,7 +60,7 @@ class AdditionalFareQualifierDetailsTypeI:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdditionalProductDetailsType:
     """
     :ivar equipment_type: Type of aircraft
@@ -112,26 +112,25 @@ class AdditionalProductDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationErrorInformationType:
     """
     :ivar error: The code assigned by the receiver of a message for
         identification of a data validation error condition.
     """
 
-    error: None | str = field(
-        default=None,
+    error: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "min_length": 1,
             "max_length": 4,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributeInformationType:
     """
     To identify the type of attribute and the attribute.
@@ -162,7 +161,7 @@ class AttributeInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributeInformationTypeU:
     """
     To identify the type of attribute and the attribute.
@@ -171,8 +170,7 @@ class AttributeInformationTypeU:
     :ivar attribute_description: Attribute description
     """
 
-    attribute_type: None | str = field(
-        default=None,
+    attribute_type: str = field(
         metadata={
             "name": "attributeType",
             "type": "Element",
@@ -180,7 +178,7 @@ class AttributeInformationTypeU:
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        },
+        }
     )
     attribute_description: None | str = field(
         default=None,
@@ -194,7 +192,7 @@ class AttributeInformationTypeU:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributeInformationType97181C:
     """
     To identify the type of attribute and the attribute.
@@ -206,8 +204,7 @@ class AttributeInformationType97181C:
     class Meta:
         name = "AttributeInformationType_97181C"
 
-    attribute_type: None | str = field(
-        default=None,
+    attribute_type: str = field(
         metadata={
             "name": "attributeType",
             "type": "Element",
@@ -215,7 +212,7 @@ class AttributeInformationType97181C:
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        },
+        }
     )
     attribute_description: None | str = field(
         default=None,
@@ -229,7 +226,7 @@ class AttributeInformationType97181C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaggageDetailsType:
     """
     To specify the number and weight of baggage.
@@ -270,7 +267,7 @@ class BaggageDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BagtagDetailsType:
     """
     To identify baggage by company identification, serial numbers, and
@@ -299,7 +296,7 @@ class BagtagDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BucketInformationType:
     """
     :ivar number: Number
@@ -326,22 +323,21 @@ class BucketInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CabinInformationType:
     """
     :ivar service: Identify the features associated to the cabin/class
     :ivar cabin: Cabin code designator
     """
 
-    service: None | str = field(
-        default=None,
+    service: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        },
+        }
     )
     cabin: list[str] = field(
         default_factory=list,
@@ -355,7 +351,7 @@ class CabinInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CabinProductDetailsType:
     """
     :ivar rbd: Reservation booking designator - RBD
@@ -364,15 +360,14 @@ class CabinProductDetailsType:
     :ivar avl_status: Availibility status : posting level
     """
 
-    rbd: None | str = field(
-        default=None,
+    rbd: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "min_length": 1,
             "max_length": 1,
-        },
+        }
     )
     booking_modifier: None | str = field(
         default=None,
@@ -405,7 +400,7 @@ class CabinProductDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CabinProductDetailsType195516C:
     """
     :ivar rbd: Reservation booking designator - RBD
@@ -445,8 +440,7 @@ class CabinProductDetailsType195516C:
             "max_length": 1,
         },
     )
-    avl_status: None | str = field(
-        default=None,
+    avl_status: str = field(
         metadata={
             "name": "avlStatus",
             "type": "Element",
@@ -454,11 +448,11 @@ class CabinProductDetailsType195516C:
             "required": True,
             "min_length": 0,
             "max_length": 3,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CabinProductDetailsType205138C:
     """
     :ivar rbd: Reservation booking designator - RBD
@@ -470,15 +464,14 @@ class CabinProductDetailsType205138C:
     class Meta:
         name = "CabinProductDetailsType_205138C"
 
-    rbd: None | str = field(
-        default=None,
+    rbd: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "min_length": 1,
             "max_length": 1,
-        },
+        }
     )
     booking_modifier: None | str = field(
         default=None,
@@ -509,7 +502,7 @@ class CabinProductDetailsType205138C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CabinProductDetailsType229142C:
     """
     :ivar rbd: Reservation booking designator - RBD
@@ -520,15 +513,14 @@ class CabinProductDetailsType229142C:
     class Meta:
         name = "CabinProductDetailsType_229142C"
 
-    rbd: None | str = field(
-        default=None,
+    rbd: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "min_length": 1,
             "max_length": 1,
-        },
+        }
     )
     cabin: None | str = field(
         default=None,
@@ -550,7 +542,7 @@ class CabinProductDetailsType229142C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CategoryDescriptionType:
     """
     :ivar number: Category number from ATPCO naming conventions (C05 for
@@ -560,14 +552,13 @@ class CategoryDescriptionType:
         restrictions...)
     """
 
-    number: None | str = field(
-        default=None,
+    number: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{1,3}",
-        },
+        }
     )
     code: None | str = field(
         default=None,
@@ -580,22 +571,21 @@ class CategoryDescriptionType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClassInformationType:
     """
     :ivar service: Identify the features associated to the cabin/class
     :ivar rbd: Class designator
     """
 
-    service: None | str = field(
-        default=None,
+    service: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        },
+        }
     )
     rbd: list[str] = field(
         default_factory=list,
@@ -609,7 +599,7 @@ class ClassInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CodedAttributeInformationType:
     """
     Convey coded key and corresponding value.
@@ -618,8 +608,7 @@ class CodedAttributeInformationType:
     :ivar attribute_description: Fee Id Number
     """
 
-    attribute_type: None | str = field(
-        default=None,
+    attribute_type: str = field(
         metadata={
             "name": "attributeType",
             "type": "Element",
@@ -627,7 +616,7 @@ class CodedAttributeInformationType:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        },
+        }
     )
     attribute_description: None | str = field(
         default=None,
@@ -641,7 +630,7 @@ class CodedAttributeInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CodedAttributeInformationType270108C:
     """
     Convey coded key and corresponding value.
@@ -653,8 +642,7 @@ class CodedAttributeInformationType270108C:
     class Meta:
         name = "CodedAttributeInformationType_270108C"
 
-    attribute_type: None | str = field(
-        default=None,
+    attribute_type: str = field(
         metadata={
             "name": "attributeType",
             "type": "Element",
@@ -662,7 +650,7 @@ class CodedAttributeInformationType270108C:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        },
+        }
     )
     attribute_description: None | str = field(
         default=None,
@@ -676,7 +664,7 @@ class CodedAttributeInformationType270108C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompanyIdentificationTextType:
     """
     Compagny identification text.
@@ -706,7 +694,7 @@ class CompanyIdentificationTextType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompanyIdentificationType:
     """
     :ivar marketing_carrier: Marketing carrier
@@ -714,8 +702,7 @@ class CompanyIdentificationType:
     :ivar alliance: airline alliance code
     """
 
-    marketing_carrier: None | str = field(
-        default=None,
+    marketing_carrier: str = field(
         metadata={
             "name": "marketingCarrier",
             "type": "Element",
@@ -723,7 +710,7 @@ class CompanyIdentificationType:
             "required": True,
             "min_length": 2,
             "max_length": 3,
-        },
+        }
     )
     operating_carrier: None | str = field(
         default=None,
@@ -746,7 +733,7 @@ class CompanyIdentificationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompanyIdentificationTypeI:
     """
     Code or name to identify a company and any associated companies.
@@ -788,7 +775,7 @@ class CompanyIdentificationTypeI:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompanyRoleIdentificationType:
     """
     To indicate commercial agreements related to the service being
@@ -830,7 +817,7 @@ class CompanyRoleIdentificationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompanyRoleIdentificationType120771C:
     """
     To indicate commercial agreements related to the service being
@@ -864,7 +851,7 @@ class CompanyRoleIdentificationType120771C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConversionRateDetailsTypeI:
     """
     :ivar conversion_type: Conversion type
@@ -902,7 +889,7 @@ class ConversionRateDetailsTypeI:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConversionRateDetailsTypeI179848C:
     """
     :ivar conversion_type: Conversion type
@@ -926,15 +913,14 @@ class ConversionRateDetailsTypeI179848C:
             "max_length": 3,
         },
     )
-    currency: None | str = field(
-        default=None,
+    currency: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        },
+        }
     )
     rate: None | str = field(
         default=None,
@@ -967,7 +953,7 @@ class ConversionRateDetailsTypeI179848C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CriteriaDetailsType:
     """
     Criteria details : weights/parameters list.
@@ -997,7 +983,7 @@ class CriteriaDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataInformationType:
     """
     To identify specific data and a quantity related to the data.
@@ -1016,7 +1002,7 @@ class DataInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataTypeInformationType:
     """
     To identify the type of data to be sent and to qualify the data when
@@ -1027,8 +1013,7 @@ class DataTypeInformationType:
         is automated
     """
 
-    sub_type: None | str = field(
-        default=None,
+    sub_type: str = field(
         metadata={
             "name": "subType",
             "type": "Element",
@@ -1036,7 +1021,7 @@ class DataTypeInformationType:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        },
+        }
     )
     option: None | str = field(
         default=None,
@@ -1049,7 +1034,7 @@ class DataTypeInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateAndTimeDetailsType:
     """
     :ivar date_qualifier: Date time period qualifier
@@ -1108,7 +1093,7 @@ class DateAndTimeDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateAndTimeDetailsType256192C:
     """
     To provide date and time details relative to flight movements.
@@ -1159,7 +1144,7 @@ class DateAndTimeDetailsType256192C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateTimePeriodDetailsTypeI:
     """
     To indicate period of applicability.
@@ -1168,15 +1153,14 @@ class DateTimePeriodDetailsTypeI:
     :ivar value: Value
     """
 
-    qualifier: None | str = field(
-        default=None,
+    qualifier: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        },
+        }
     )
     value: None | str = field(
         default=None,
@@ -1189,7 +1173,7 @@ class DateTimePeriodDetailsTypeI:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiscountPenaltyInformationType:
     """
     To indicate the discounts and penalties by fare type.
@@ -1200,8 +1184,7 @@ class DiscountPenaltyInformationType:
     :ivar percentage: Percentage
     """
 
-    fare_qualifier: None | str = field(
-        default=None,
+    fare_qualifier: str = field(
         metadata={
             "name": "fareQualifier",
             "type": "Element",
@@ -1209,7 +1192,7 @@ class DiscountPenaltyInformationType:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        },
+        }
     )
     rate_category: None | str = field(
         default=None,
@@ -1237,7 +1220,7 @@ class DiscountPenaltyInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiscountPenaltyMonetaryInformationType:
     """
     To specify the type of discount and penalty information, the monetary
@@ -1290,7 +1273,7 @@ class DiscountPenaltyMonetaryInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DummySegmentTypeI:
     """
     To serve the purpose of a mandatory segment at the beginning of a group
@@ -1298,7 +1281,7 @@ class DummySegmentTypeI:
     """
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareCalculationCodeDetailsType:
     """
     To specify fare calculation information.
@@ -1355,7 +1338,7 @@ class FareCalculationCodeDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareCategoryCodesTypeI:
     """
     To designate non-system specific combinations of fare types.
@@ -1364,8 +1347,7 @@ class FareCategoryCodesTypeI:
     :ivar other_fare_type: Other fare type
     """
 
-    fare_type: None | str = field(
-        default=None,
+    fare_type: str = field(
         metadata={
             "name": "fareType",
             "type": "Element",
@@ -1373,7 +1355,7 @@ class FareCategoryCodesTypeI:
             "required": True,
             "min_length": 1,
             "max_length": 20,
-        },
+        }
     )
     other_fare_type: list[str] = field(
         default_factory=list,
@@ -1388,7 +1370,7 @@ class FareCategoryCodesTypeI:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareDetailsType:
     """
     To specify the fare type and related information.
@@ -1408,7 +1390,7 @@ class FareDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareDetailsTypeI:
     """
     To specify the fare type and related information.
@@ -1456,7 +1438,7 @@ class FareDetailsTypeI:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareDetailsType193037C:
     """
     :ivar qualifier: Qualifier
@@ -1504,7 +1486,7 @@ class FareDetailsType193037C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareFamilyDetailsType:
     """
     NEW FARE SEARCH.
@@ -1512,8 +1494,7 @@ class FareFamilyDetailsType:
     :ivar commercial_family: Commercial fare Family Short name
     """
 
-    commercial_family: None | str = field(
-        default=None,
+    commercial_family: str = field(
         metadata={
             "name": "commercialFamily",
             "type": "Element",
@@ -1521,11 +1502,11 @@ class FareFamilyDetailsType:
             "required": True,
             "min_length": 1,
             "max_length": 10,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareInformationTypeI:
     """
     To specify fare details.
@@ -1554,7 +1535,7 @@ class FareInformationTypeI:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareProductDetailsType:
     """
     :ivar fare_basis: Fare basis code
@@ -1572,7 +1553,7 @@ class FareProductDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareProductDetailsType248552C:
     """
     :ivar fare_basis: Fare basis code
@@ -1616,7 +1597,7 @@ class FareProductDetailsType248552C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareTypeGroupingInformationType:
     """
     :ivar pricing_group: Pricing Group
@@ -1634,7 +1615,7 @@ class FareTypeGroupingInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FreeTextQualificationType:
     """
     :ivar text_subject_qualifier: Type of message
@@ -1642,8 +1623,7 @@ class FreeTextQualificationType:
         (e.g. type of OSI or free text, canned message value)
     """
 
-    text_subject_qualifier: None | str = field(
-        default=None,
+    text_subject_qualifier: str = field(
         metadata={
             "name": "textSubjectQualifier",
             "type": "Element",
@@ -1651,7 +1631,7 @@ class FreeTextQualificationType:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        },
+        }
     )
     information_type: None | str = field(
         default=None,
@@ -1665,7 +1645,7 @@ class FreeTextQualificationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FreeTextQualificationTypeI:
     """
     To specify the type, purpose, and language of free text and whether any
@@ -1674,8 +1654,7 @@ class FreeTextQualificationTypeI:
     :ivar text_subject_qualifier: Text subject qualifier
     """
 
-    text_subject_qualifier: None | str = field(
-        default=None,
+    text_subject_qualifier: str = field(
         metadata={
             "name": "textSubjectQualifier",
             "type": "Element",
@@ -1683,11 +1662,11 @@ class FreeTextQualificationTypeI:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FreeTextQualificationType120769C:
     """
     :ivar text_subject_qualifier: Type of message
@@ -1700,8 +1679,7 @@ class FreeTextQualificationType120769C:
     class Meta:
         name = "FreeTextQualificationType_120769C"
 
-    text_subject_qualifier: None | str = field(
-        default=None,
+    text_subject_qualifier: str = field(
         metadata={
             "name": "textSubjectQualifier",
             "type": "Element",
@@ -1709,7 +1687,7 @@ class FreeTextQualificationType120769C:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        },
+        }
     )
     information_type: None | str = field(
         default=None,
@@ -1732,7 +1710,7 @@ class FreeTextQualificationType120769C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FrequentTravellerIdentificationType:
     """
     :ivar carrier: Carrier where the FQTV is registered.
@@ -1781,7 +1759,7 @@ class FrequentTravellerIdentificationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemNumberIdentificationType:
     """
     Goods identification for a specified source.
@@ -1832,7 +1810,7 @@ class ItemNumberIdentificationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemNumberIdentificationType191597C:
     """
     :ivar number: Item number.
@@ -1863,7 +1841,7 @@ class ItemNumberIdentificationType191597C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemNumberIdentificationType192331C:
     """
     Goods identification for a specified source.
@@ -1917,7 +1895,7 @@ class ItemNumberIdentificationType192331C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemNumberIdentificationType234878C:
     """
     Goods identification for a specified source.
@@ -1949,7 +1927,7 @@ class ItemNumberIdentificationType234878C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemNumberIdentificationType248537C:
     """
     Goods identification for a specified source.
@@ -1969,7 +1947,7 @@ class ItemNumberIdentificationType248537C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemReferencesAndVersionsType:
     """
     Exchange and link unique identifiers.
@@ -1999,7 +1977,7 @@ class ItemReferencesAndVersionsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemReferencesAndVersionsType78536S:
     """
     Exchange and link unique identifiers.
@@ -2032,7 +2010,7 @@ class ItemReferencesAndVersionsType78536S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemReferencesAndVersionsType78564S:
     """
     Exchange and link unique identifiers.
@@ -2065,7 +2043,7 @@ class ItemReferencesAndVersionsType78564S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItineraryDetailsType:
     """
     Forces arrival or departure to/from the same city or airport option.
@@ -2076,8 +2054,7 @@ class ItineraryDetailsType:
     :ivar segment_number: Requested segment number
     """
 
-    airport_city_qualifier: None | str = field(
-        default=None,
+    airport_city_qualifier: str = field(
         metadata={
             "name": "airportCityQualifier",
             "type": "Element",
@@ -2085,21 +2062,20 @@ class ItineraryDetailsType:
             "required": True,
             "min_length": 1,
             "max_length": 1,
-        },
+        }
     )
-    segment_number: None | str = field(
-        default=None,
+    segment_number: str = field(
         metadata={
             "name": "segmentNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{1,3}",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationIdentificationDetailsType:
     """
     :ivar location_id: 3 characters ATA/IATA airport/city code
@@ -2108,8 +2084,7 @@ class LocationIdentificationDetailsType:
     :ivar terminal: Terminal information
     """
 
-    location_id: None | str = field(
-        default=None,
+    location_id: str = field(
         metadata={
             "name": "locationId",
             "type": "Element",
@@ -2117,7 +2092,7 @@ class LocationIdentificationDetailsType:
             "required": True,
             "min_length": 3,
             "max_length": 5,
-        },
+        }
     )
     airport_city_qualifier: None | str = field(
         default=None,
@@ -2140,7 +2115,7 @@ class LocationIdentificationDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MiniRulesDetailsType:
     """
     :ivar interpretation: Coded text (period or day)
@@ -2168,7 +2143,7 @@ class MiniRulesDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MiniRulesIndicatorType:
     """
     :ivar rule_indicator: See rule indicator and free form text
@@ -2188,7 +2163,7 @@ class MiniRulesIndicatorType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MiniRulesType:
     """
     To specify the restrictions.
@@ -2196,19 +2171,18 @@ class MiniRulesType:
     :ivar category: Categoty of restriction: PTC, Max Adv Pur, Days, ...
     """
 
-    category: None | str = field(
-        default=None,
+    category: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MonetaryInformationDetailsType:
     """
     :ivar amount_type: To specify amount and percentage.
@@ -2226,13 +2200,12 @@ class MonetaryInformationDetailsType:
             "max_length": 3,
         },
     )
-    amount: None | Decimal = field(
-        default=None,
+    amount: Decimal = field(
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        },
+        }
     )
     currency: None | str = field(
         default=None,
@@ -2245,7 +2218,7 @@ class MonetaryInformationDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MonetaryInformationDetailsTypeI:
     """
     To specify the type of monetary amount, the amount, and the currency
@@ -2256,8 +2229,7 @@ class MonetaryInformationDetailsTypeI:
     :ivar currency: Currency
     """
 
-    type_qualifier: None | str = field(
-        default=None,
+    type_qualifier: str = field(
         metadata={
             "name": "typeQualifier",
             "type": "Element",
@@ -2265,7 +2237,7 @@ class MonetaryInformationDetailsTypeI:
             "required": True,
             "min_length": 1,
             "max_length": 6,
-        },
+        }
     )
     amount: None | str = field(
         default=None,
@@ -2287,7 +2259,7 @@ class MonetaryInformationDetailsTypeI:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MonetaryInformationDetailsType245528C:
     """
     To specify the type of monetary amount, the amount, and the currency
@@ -2302,8 +2274,7 @@ class MonetaryInformationDetailsType245528C:
     class Meta:
         name = "MonetaryInformationDetailsType_245528C"
 
-    type_qualifier: None | str = field(
-        default=None,
+    type_qualifier: str = field(
         metadata={
             "name": "typeQualifier",
             "type": "Element",
@@ -2311,7 +2282,7 @@ class MonetaryInformationDetailsType245528C:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        },
+        }
     )
     amount: None | Decimal = field(
         default=None,
@@ -2340,7 +2311,7 @@ class MonetaryInformationDetailsType245528C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OnTimePerformanceType:
     """
     :ivar date_time_period: Date time period
@@ -2376,7 +2347,7 @@ class OnTimePerformanceType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginAndDestinationRequestType134833S:
     """
     To convey information regarding Requested Segments.
@@ -2387,19 +2358,18 @@ class OriginAndDestinationRequestType134833S:
     class Meta:
         name = "OriginAndDestinationRequestType_134833S"
 
-    seg_ref: None | str = field(
-        default=None,
+    seg_ref: str = field(
         metadata={
             "name": "segRef",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{1,2}",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginatorIdentificationDetailsTypeI:
     """
     To identify a user.
@@ -2451,7 +2421,7 @@ class OriginatorIdentificationDetailsTypeI:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricingTicketingInformationType:
     """
     To specify indicators related to pricing and ticketing.
@@ -2473,7 +2443,7 @@ class PricingTicketingInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricingTicketingSubsequentType:
     """
     To convey additional information related to a ticket.
@@ -2495,7 +2465,7 @@ class PricingTicketingSubsequentType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProcessingInformationType:
     """
     To identify the action to be taken and the selection criteria.
@@ -2537,7 +2507,7 @@ class ProcessingInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductDateTimeType:
     """
     :ivar date_of_departure: Departure date
@@ -2548,15 +2518,14 @@ class ProductDateTimeType:
         if different from 0
     """
 
-    date_of_departure: None | str = field(
-        default=None,
+    date_of_departure: str = field(
         metadata={
             "name": "dateOfDeparture",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])[0-9]{2}",
-        },
+        }
     )
     time_of_departure: None | str = field(
         default=None,
@@ -2596,21 +2565,20 @@ class ProductDateTimeType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductDetailsType:
     """
     To specify availability and additional services for a product class.
     """
 
-    designator: None | str = field(
-        default=None,
+    designator: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "min_length": 1,
             "max_length": 17,
-        },
+        }
     )
     availability_status: None | str = field(
         default=None,
@@ -2644,7 +2612,7 @@ class ProductDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductFacilitiesType:
     """
     Level of access.
@@ -2724,7 +2692,7 @@ class ProductFacilitiesType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductTypeDetailsType:
     """
     To specify additional characteristics of a product or service.
@@ -2746,7 +2714,7 @@ class ProductTypeDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductTypeDetailsType205137C:
     """
     To specify additional characteristics of a product or service.
@@ -2770,7 +2738,7 @@ class ProductTypeDetailsType205137C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProposedSegmentDetailsType:
     """
     :ivar ref: Flight proposal reference
@@ -2798,7 +2766,7 @@ class ProposedSegmentDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceType:
     """
     To specify which number in a sequence of references and/or the
@@ -2839,7 +2807,7 @@ class ReferenceType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferencingDetailsType:
     """
     :ivar ref_qualifier: Reference qualifier
@@ -2856,19 +2824,18 @@ class ReferencingDetailsType:
             "max_length": 3,
         },
     )
-    ref_number: None | str = field(
-        default=None,
+    ref_number: str = field(
         metadata={
             "name": "refNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{0,3}",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferencingDetailsType191583C:
     """
     Referencing details.
@@ -2890,19 +2857,18 @@ class ReferencingDetailsType191583C:
             "max_length": 3,
         },
     )
-    ref_number: None | str = field(
-        default=None,
+    ref_number: str = field(
         metadata={
             "name": "refNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{0,6}",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferencingDetailsType195561C:
     """
     Referencing details.
@@ -2924,19 +2890,18 @@ class ReferencingDetailsType195561C:
             "max_length": 3,
         },
     )
-    ref_number: None | str = field(
-        default=None,
+    ref_number: str = field(
         metadata={
             "name": "refNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{0,3}",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferencingDetailsType234704C:
     """
     To provide reference identification.
@@ -2969,7 +2934,7 @@ class ReferencingDetailsType234704C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SegmentRepetitionControlDetailsTypeI:
     """
     Information about the number of selection segments to be processed.
@@ -2997,7 +2962,7 @@ class SegmentRepetitionControlDetailsTypeI:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SelectionDetailsInformationType:
     """
     To specify a selected option and associated information.
@@ -3006,8 +2971,7 @@ class SelectionDetailsInformationType:
     :ivar option_information: Carrier fee status
     """
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Element",
@@ -3015,7 +2979,7 @@ class SelectionDetailsInformationType:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        },
+        }
     )
     option_information: None | str = field(
         default=None,
@@ -3029,7 +2993,7 @@ class SelectionDetailsInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SequenceInformationTypeU:
     """
     Identification of a sequence and source for sequencing.
@@ -3038,15 +3002,14 @@ class SequenceInformationTypeU:
     :ivar identification_code: Identification code
     """
 
-    number: None | str = field(
-        default=None,
+    number: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "min_length": 1,
             "max_length": 10,
-        },
+        }
     )
     identification_code: None | str = field(
         default=None,
@@ -3060,7 +3023,7 @@ class SequenceInformationTypeU:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServicesReferences:
     """
     :ivar reference: Reference of the service
@@ -3098,7 +3061,7 @@ class ServicesReferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecialRequirementsDataDetailsType:
     """
     Special requirements data details.
@@ -3119,7 +3082,7 @@ class SpecialRequirementsDataDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecialRequirementsTypeDetailsType:
     """
     :ivar service_classification: To specify the Service Classification
@@ -3134,8 +3097,7 @@ class SpecialRequirementsTypeDetailsType:
     :ivar service_free_text: Free Text attached to the Service.
     """
 
-    service_classification: None | str = field(
-        default=None,
+    service_classification: str = field(
         metadata={
             "name": "serviceClassification",
             "type": "Element",
@@ -3143,7 +3105,7 @@ class SpecialRequirementsTypeDetailsType:
             "required": True,
             "min_length": 1,
             "max_length": 4,
-        },
+        }
     )
     service_status: None | str = field(
         default=None,
@@ -3207,7 +3169,7 @@ class SpecialRequirementsTypeDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecificTravellerDetailsType:
     """
     To specify additional details about a particular traveller.
@@ -3227,7 +3189,7 @@ class SpecificTravellerDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StatusDetailsType:
     """
     :ivar advisory_type_info: Advisory type information, Fare Server
@@ -3275,7 +3237,7 @@ class StatusDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StatusDetailsType256255C:
     """
     To specify a status, the action to be taken, and an additional
@@ -3309,7 +3271,7 @@ class StatusDetailsType256255C:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxDetailsType:
     """
     To specify a rate, type of tax, and currency code.
@@ -3372,7 +3334,7 @@ class TaxDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravellerDetailsType:
     """
     :ivar ref: Direct reference of passenger assigned by requesting
@@ -3399,7 +3361,7 @@ class TravellerDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ActionDetailsType:
     """
     To specify the action that should be taken on a selected reference
@@ -3428,7 +3390,7 @@ class ActionDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationErrorInformationType78543S:
     """
     To identify the type of application error within a message.
@@ -3439,18 +3401,17 @@ class ApplicationErrorInformationType78543S:
     class Meta:
         name = "ApplicationErrorInformationType_78543S"
 
-    application_error_detail: None | ApplicationErrorInformationType = field(
-        default=None,
+    application_error_detail: ApplicationErrorInformationType = field(
         metadata={
             "name": "applicationErrorDetail",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributeType:
     """
     Used to have tag value without code list for tag.
@@ -3481,7 +3442,7 @@ class AttributeType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributeTypeU:
     """
     :ivar attribute_function: provides the function of the attribute
@@ -3498,18 +3459,17 @@ class AttributeTypeU:
             "max_length": 3,
         },
     )
-    attribute_details: None | AttributeInformationTypeU = field(
-        default=None,
+    attribute_details: AttributeInformationTypeU = field(
         metadata={
             "name": "attributeDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributeType78561S:
     """
     Used to have tag value without code list for tag.
@@ -3531,7 +3491,7 @@ class AttributeType78561S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CategDescrType:
     """
     To identify an ATPCO Fare Category.
@@ -3540,14 +3500,13 @@ class CategDescrType:
     :ivar process_indicator: Category processing indicator
     """
 
-    description_info: None | CategoryDescriptionType = field(
-        default=None,
+    description_info: CategoryDescriptionType = field(
         metadata={
             "name": "descriptionInfo",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        },
+        }
     )
     process_indicator: None | str = field(
         default=None,
@@ -3561,7 +3520,7 @@ class CategDescrType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CodedAttributeType:
     """
     Used to have tag value without code list for tag.
@@ -3581,7 +3540,7 @@ class CodedAttributeType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CommercialAgreementsType:
     """
     To specify commercial agreements between two or more companies related
@@ -3610,7 +3569,7 @@ class CommercialAgreementsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConversionRateTypeI:
     """
     To specify conversion rate details.
@@ -3631,7 +3590,7 @@ class ConversionRateTypeI:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConversionRateTypeI78562S:
     """
     To specify conversion rate details.
@@ -3654,7 +3613,7 @@ class ConversionRateTypeI78562S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateAndTimeInformationType:
     """
     not the standard only used in fare quote message.
@@ -3674,7 +3633,7 @@ class DateAndTimeInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateAndTimeInformationType182345S:
     """
     To convey information regarding estimated or actual dates and times of
@@ -3697,7 +3656,7 @@ class DateAndTimeInformationType182345S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiscountAndPenaltyInformationType:
     """
     To specify information about discounts and penalties.
@@ -3727,7 +3686,7 @@ class DiscountAndPenaltyInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExcessBaggageType:
     """
     :ivar baggage_details: Baggage details
@@ -3753,7 +3712,7 @@ class ExcessBaggageType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareFamilyType:
     """
     NEW FARE SEACH.
@@ -3769,15 +3728,14 @@ class FareFamilyType:
     :ivar services: Reference to the services details
     """
 
-    ref_number: None | str = field(
-        default=None,
+    ref_number: str = field(
         metadata={
             "name": "refNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{1,3}",
-        },
+        }
     )
     fare_familyname: None | str = field(
         default=None,
@@ -3843,7 +3801,7 @@ class FareFamilyType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareInformationType:
     """
     :ivar value_qualifier: Value Qualifier
@@ -3909,7 +3867,7 @@ class FareInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareInformationType80868S:
     """
     To specify fare details.
@@ -3930,7 +3888,7 @@ class FareInformationType80868S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareQualifierDetailsType:
     """
     To specify the details which qualify a fare.
@@ -3989,7 +3947,7 @@ class FareQualifierDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightCharacteristicsType:
     """
     Convey flight characteristics.
@@ -4019,7 +3977,7 @@ class FlightCharacteristicsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightProductInformationType:
     """
     To specify flight product information details.
@@ -4047,7 +4005,7 @@ class FlightProductInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightProductInformationType141442S:
     """
     To specify flight product information details.
@@ -4078,7 +4036,7 @@ class FlightProductInformationType141442S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightProductInformationType161491S:
     """
     To specify flight product information details.
@@ -4108,7 +4066,7 @@ class FlightProductInformationType161491S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightProductInformationType176659S:
     """
     To specify flight product information details.
@@ -4170,7 +4128,7 @@ class FlightProductInformationType176659S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightServicesType:
     """
     Convey services for cabin or class.
@@ -4180,8 +4138,7 @@ class FlightServicesType:
     :ivar class_info:
     """
 
-    service_type: None | str = field(
-        default=None,
+    service_type: str = field(
         metadata={
             "name": "serviceType",
             "type": "Element",
@@ -4189,7 +4146,7 @@ class FlightServicesType:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        },
+        }
     )
     cabin_info: list[CabinInformationType] = field(
         default_factory=list,
@@ -4211,7 +4168,7 @@ class FlightServicesType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FrequentTravellerIdentificationCodeType:
     """
     To specify frequent traveler information.
@@ -4233,7 +4190,7 @@ class FrequentTravellerIdentificationCodeType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HeaderInformationTypeI:
     """
     To specify header information applicable to the entire message.
@@ -4286,7 +4243,7 @@ class HeaderInformationTypeI:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InteractiveFreeTextType:
     """
     To provide free form or coded text information.
@@ -4315,7 +4272,7 @@ class InteractiveFreeTextType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InteractiveFreeTextType78534S:
     """
     To provide free form or coded text information.
@@ -4347,7 +4304,7 @@ class InteractiveFreeTextType78534S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InteractiveFreeTextType78544S:
     """
     To provide free form or coded text information.
@@ -4379,7 +4336,7 @@ class InteractiveFreeTextType78544S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InteractiveFreeTextType78559S:
     """
     To provide free form or coded text information.
@@ -4411,7 +4368,7 @@ class InteractiveFreeTextType78559S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemNumberType:
     """
     To specify an item number.
@@ -4419,18 +4376,17 @@ class ItemNumberType:
     :ivar item_number: Item number details
     """
 
-    item_number: None | ItemNumberIdentificationType192331C = field(
-        default=None,
+    item_number: ItemNumberIdentificationType192331C = field(
         metadata={
             "name": "itemNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemNumberType161497S:
     """
     To specify item numbers.
@@ -4470,7 +4426,7 @@ class ItemNumberType161497S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemNumberType166130S:
     """
     To specify an item number.
@@ -4493,7 +4449,7 @@ class ItemNumberType166130S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemNumberType176648S:
     """
     To specify an item number.
@@ -4514,7 +4470,7 @@ class ItemNumberType176648S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemNumberType80866S:
     """
     To specify an item number.
@@ -4525,18 +4481,17 @@ class ItemNumberType80866S:
     class Meta:
         name = "ItemNumberType_80866S"
 
-    item_number_details: None | ItemNumberIdentificationType = field(
-        default=None,
+    item_number_details: ItemNumberIdentificationType = field(
         metadata={
             "name": "itemNumberDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MiniRulesType78547S:
     """
     To specify the restrictions.
@@ -4561,15 +4516,14 @@ class MiniRulesType78547S:
             "max_length": 6,
         },
     )
-    category: None | str = field(
-        default=None,
+    category: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "min_length": 0,
             "max_length": 3,
-        },
+        }
     )
     indicator: None | MiniRulesIndicatorType = field(
         default=None,
@@ -4589,7 +4543,7 @@ class MiniRulesType78547S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MonetaryInformationType:
     """
     To specify monetary information details.
@@ -4608,7 +4562,7 @@ class MonetaryInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MonetaryInformationTypeI:
     """
     To convey monetary amounts, rates and percentages.
@@ -4628,7 +4582,7 @@ class MonetaryInformationTypeI:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MonetaryInformationType174241S:
     """
     To convey monetary amounts, rates and percentages.
@@ -4637,14 +4591,13 @@ class MonetaryInformationType174241S:
     class Meta:
         name = "MonetaryInformationType_174241S"
 
-    monetary_details: None | MonetaryInformationDetailsType245528C = field(
-        default=None,
+    monetary_details: MonetaryInformationDetailsType245528C = field(
         metadata={
             "name": "monetaryDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        },
+        }
     )
     other_monetary_details: list[MonetaryInformationDetailsType245528C] = (
         field(
@@ -4659,7 +4612,7 @@ class MonetaryInformationType174241S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MonetaryInformationType185955S:
     """
     To specify monetary information details.
@@ -4682,7 +4635,7 @@ class MonetaryInformationType185955S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MonetaryInformationType193024S:
     """
     To specify monetary information details.
@@ -4704,7 +4657,7 @@ class MonetaryInformationType193024S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginAndDestinationRequestType:
     """
     To convey information regarding Requested Segments.
@@ -4714,15 +4667,14 @@ class OriginAndDestinationRequestType:
         same airport/city
     """
 
-    seg_ref: None | str = field(
-        default=None,
+    seg_ref: str = field(
         metadata={
             "name": "segRef",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{1,2}",
-        },
+        }
     )
     location_forcing: list[ItineraryDetailsType] = field(
         default_factory=list,
@@ -4735,7 +4687,7 @@ class OriginAndDestinationRequestType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricingTicketingSubsequentType193023S:
     """
     To convey additional information related to a ticket.
@@ -4751,8 +4703,7 @@ class PricingTicketingSubsequentType193023S:
     class Meta:
         name = "PricingTicketingSubsequentType_193023S"
 
-    pax_fare_num: None | str = field(
-        default=None,
+    pax_fare_num: str = field(
         metadata={
             "name": "paxFareNum",
             "type": "Element",
@@ -4760,16 +4711,15 @@ class PricingTicketingSubsequentType193023S:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        },
+        }
     )
-    total_fare_amount: None | Decimal = field(
-        default=None,
+    total_fare_amount: Decimal = field(
         metadata={
             "name": "totalFareAmount",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        },
+        }
     )
     total_tax_amount: None | Decimal = field(
         default=None,
@@ -4807,7 +4757,7 @@ class PricingTicketingSubsequentType193023S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductInformationType:
     """
     To specify details related to routing status of a product.
@@ -4839,7 +4789,7 @@ class ProductInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProposedSegmentType:
     """
     To specify the parameters used for product quality.
@@ -4881,7 +4831,7 @@ class ProposedSegmentType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceInfoType:
     """
     To provide specific reference identification for a traveller.
@@ -4900,7 +4850,7 @@ class ReferenceInfoType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceInfoType133176S:
     """
     To specify an association between references given to travelers, to
@@ -4923,7 +4873,7 @@ class ReferenceInfoType133176S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceInfoType134839S:
     """
     To provide specific reference identification for a traveller.
@@ -4945,7 +4895,7 @@ class ReferenceInfoType134839S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceInfoType134840S:
     """
     To provide specific reference identification for a traveller.
@@ -4967,7 +4917,7 @@ class ReferenceInfoType134840S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceInfoType165972S:
     """
     To provide specific Hotel reference identification.
@@ -4989,7 +4939,7 @@ class ReferenceInfoType165972S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceInfoType176658S:
     """
     To specify an association between references given to travelers, to
@@ -5012,7 +4962,7 @@ class ReferenceInfoType176658S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SegmentRepetitionControlTypeI:
     """
     To indicate the number of segment group repetitions.
@@ -5033,7 +4983,7 @@ class SegmentRepetitionControlTypeI:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SelectionDetailsType:
     """
     To specify the details for making a selection.
@@ -5041,18 +4991,17 @@ class SelectionDetailsType:
     :ivar carrier_fee_details: Carrier fees options
     """
 
-    carrier_fee_details: None | SelectionDetailsInformationType = field(
-        default=None,
+    carrier_fee_details: SelectionDetailsInformationType = field(
         metadata={
             "name": "carrierFeeDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SequenceDetailsTypeU:
     """
     To provide details relating to the sequence.
@@ -5070,7 +5019,7 @@ class SequenceDetailsTypeU:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecialRequirementsDetailsType:
     """
     To specify special requests or service s information relating to a
@@ -5081,16 +5030,13 @@ class SpecialRequirementsDetailsType:
     :ivar seat_details: Seat details
     """
 
-    service_requirements_info: None | SpecialRequirementsTypeDetailsType = (
-        field(
-            default=None,
-            metadata={
-                "name": "serviceRequirementsInfo",
-                "type": "Element",
-                "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-                "required": True,
-            },
-        )
+    service_requirements_info: SpecialRequirementsTypeDetailsType = field(
+        metadata={
+            "name": "serviceRequirementsInfo",
+            "type": "Element",
+            "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
+            "required": True,
+        }
     )
     seat_details: list[SpecialRequirementsDataDetailsType] = field(
         default_factory=list,
@@ -5103,7 +5049,7 @@ class SpecialRequirementsDetailsType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecificDataInformationType:
     """
     To specify miscellaneous data by first identifying the type of data to
@@ -5113,14 +5059,13 @@ class SpecificDataInformationType:
     :ivar data_information: Data information
     """
 
-    data_type_information: None | DataTypeInformationType = field(
-        default=None,
+    data_type_information: DataTypeInformationType = field(
         metadata={
             "name": "dataTypeInformation",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        },
+        }
     )
     data_information: list[DataInformationType] = field(
         default_factory=list,
@@ -5133,7 +5078,7 @@ class SpecificDataInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecificTravellerType:
     """
     To specify additional details about a particular traveller.
@@ -5152,7 +5097,7 @@ class SpecificTravellerType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StatusType:
     """
     To advise the requester system the status of the reply.
@@ -5171,7 +5116,7 @@ class StatusType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StatusType182386S:
     """
     To advise the requester system the status of the reply.
@@ -5194,7 +5139,7 @@ class StatusType182386S:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxType:
     """
     To specify details relating to tax(es).
@@ -5224,7 +5169,7 @@ class TaxType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportIdentifierType:
     """
     To specify the transport service(s) which is /are to be updated or
@@ -5243,7 +5188,7 @@ class TransportIdentifierType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelProductType:
     """
     Contains flight travel (date, time, flight number,...) and posting
@@ -5258,14 +5203,13 @@ class TravelProductType:
     :ivar attribute_details: Attribute details
     """
 
-    product_date_time: None | ProductDateTimeType = field(
-        default=None,
+    product_date_time: ProductDateTimeType = field(
         metadata={
             "name": "productDateTime",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        },
+        }
     )
     location: list[LocationIdentificationDetailsType] = field(
         default_factory=list,
@@ -5321,7 +5265,7 @@ class TravelProductType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravellerReferenceInformationType:
     """
     To specify traveller/personal details.
@@ -5350,7 +5294,7 @@ class TravellerReferenceInformationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UserIdentificationType:
     """
     User Identification.
@@ -5392,7 +5336,7 @@ class UserIdentificationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValueSearchCriteriaType:
     """
     To specify Criteria with list of parameters.
@@ -5427,7 +5371,7 @@ class ValueSearchCriteriaType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareMasterPricerTravelBoardSearchReply:
     """
     Master Pricer Travel Board Search Reply Flex Pricer Flex Pricer.
@@ -5628,22 +5572,19 @@ class FareMasterPricerTravelBoardSearchReply:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ErrorMessage:
         """
         :ivar application_error: Application error details.
         :ivar error_message_text: Type of error message and free text
         """
 
-        application_error: None | ApplicationErrorInformationType78543S = (
-            field(
-                default=None,
-                metadata={
-                    "name": "applicationError",
-                    "type": "Element",
-                    "required": True,
-                },
-            )
+        application_error: ApplicationErrorInformationType78543S = field(
+            metadata={
+                "name": "applicationError",
+                "type": "Element",
+                "required": True,
+            }
         )
         error_message_text: None | InteractiveFreeTextType78544S = field(
             default=None,
@@ -5653,20 +5594,19 @@ class FareMasterPricerTravelBoardSearchReply:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AmountInfoForAllPax:
         """
         :ivar itinerary_amounts: Itinerary amounts for all passengers
         :ivar amounts_per_sgt: Amounts information per segment
         """
 
-        itinerary_amounts: None | MonetaryInformationType = field(
-            default=None,
+        itinerary_amounts: MonetaryInformationType = field(
             metadata={
                 "name": "itineraryAmounts",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         amounts_per_sgt: list[
             FareMasterPricerTravelBoardSearchReply.AmountInfoForAllPax.AmountsPerSgt
@@ -5679,7 +5619,7 @@ class FareMasterPricerTravelBoardSearchReply:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AmountsPerSgt:
             """
             :ivar sgt_ref: Requested segment reference
@@ -5687,13 +5627,12 @@ class FareMasterPricerTravelBoardSearchReply:
                 amount, non refundable taxes amount
             """
 
-            sgt_ref: None | ReferenceInfoType133176S = field(
-                default=None,
+            sgt_ref: ReferenceInfoType133176S = field(
                 metadata={
                     "name": "sgtRef",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             amounts: None | MonetaryInformationType = field(
                 default=None,
@@ -5702,7 +5641,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AmountInfoPerPax:
         """
         :ivar pax_ref: Passenger references
@@ -5711,13 +5650,12 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar amounts_per_sgt: Amounts per segment
         """
 
-        pax_ref: None | SpecificTravellerType = field(
-            default=None,
+        pax_ref: SpecificTravellerType = field(
             metadata={
                 "name": "paxRef",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         pax_attributes: None | FareInformationType80868S = field(
             default=None,
@@ -5726,13 +5664,12 @@ class FareMasterPricerTravelBoardSearchReply:
                 "type": "Element",
             },
         )
-        itinerary_amounts: None | MonetaryInformationType = field(
-            default=None,
+        itinerary_amounts: MonetaryInformationType = field(
             metadata={
                 "name": "itineraryAmounts",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         amounts_per_sgt: list[
             FareMasterPricerTravelBoardSearchReply.AmountInfoPerPax.AmountsPerSgt
@@ -5745,7 +5682,7 @@ class FareMasterPricerTravelBoardSearchReply:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AmountsPerSgt:
             """
             :ivar sgt_ref: Requested segment reference
@@ -5753,13 +5690,12 @@ class FareMasterPricerTravelBoardSearchReply:
                 amount, non refundable taxes amount
             """
 
-            sgt_ref: None | ReferenceInfoType133176S = field(
-                default=None,
+            sgt_ref: ReferenceInfoType133176S = field(
                 metadata={
                     "name": "sgtRef",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             amounts: None | MonetaryInformationType = field(
                 default=None,
@@ -5768,7 +5704,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FeeDetails:
         """
         :ivar fee_reference: Fee/Reduction Reference number.
@@ -5778,13 +5714,12 @@ class FareMasterPricerTravelBoardSearchReply:
             details
         """
 
-        fee_reference: None | ItemReferencesAndVersionsType78564S = field(
-            default=None,
+        fee_reference: ItemReferencesAndVersionsType78564S = field(
             metadata={
                 "name": "feeReference",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         fee_information: None | DiscountAndPenaltyInformationType = field(
             default=None,
@@ -5808,33 +5743,29 @@ class FareMasterPricerTravelBoardSearchReply:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OfficeIdDetails:
         """
         :ivar office_id_information: Office Id Information
         :ivar office_id_reference: Office Id Reference Number
         """
 
-        office_id_information: None | UserIdentificationType = field(
-            default=None,
+        office_id_information: UserIdentificationType = field(
             metadata={
                 "name": "officeIdInformation",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
-        office_id_reference: None | ItemReferencesAndVersionsType78536S = (
-            field(
-                default=None,
-                metadata={
-                    "name": "officeIdReference",
-                    "type": "Element",
-                    "required": True,
-                },
-            )
+        office_id_reference: ItemReferencesAndVersionsType78536S = field(
+            metadata={
+                "name": "officeIdReference",
+                "type": "Element",
+                "required": True,
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlightIndex:
         """
         :ivar requested_segment_ref: Indicates references and details
@@ -5842,13 +5773,12 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar group_of_flights: List of flights per requested segment
         """
 
-        requested_segment_ref: None | OriginAndDestinationRequestType = field(
-            default=None,
+        requested_segment_ref: OriginAndDestinationRequestType = field(
             metadata={
                 "name": "requestedSegmentRef",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         group_of_flights: list[
             FareMasterPricerTravelBoardSearchReply.FlightIndex.GroupOfFlights
@@ -5862,7 +5792,7 @@ class FareMasterPricerTravelBoardSearchReply:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class GroupOfFlights:
             """
             :ivar prop_flight_gr_detail: To indicate parameters for
@@ -5870,13 +5800,12 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar flight_details: List of flight per Elapse Flying time
             """
 
-            prop_flight_gr_detail: None | ProposedSegmentType = field(
-                default=None,
+            prop_flight_gr_detail: ProposedSegmentType = field(
                 metadata={
                     "name": "propFlightGrDetail",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             flight_details: list[
                 FareMasterPricerTravelBoardSearchReply.FlightIndex.GroupOfFlights.FlightDetails
@@ -5890,7 +5819,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FlightDetails:
                 """
                 :ivar flight_information: Specification of details on
@@ -5907,13 +5836,12 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar flight_services: Flight Services by cabin/rbd
                 """
 
-                flight_information: None | TravelProductType = field(
-                    default=None,
+                flight_information: TravelProductType = field(
                     metadata={
                         "name": "flightInformation",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 avl_info: list[FlightProductInformationType141442S] = field(
                     default_factory=list,
@@ -5963,7 +5891,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     },
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Recommendation:
         """
         :ivar item_number: Specification of the item number
@@ -5981,13 +5909,12 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar specific_rec_details: Specific recommendation details
         """
 
-        item_number: None | ItemNumberType161497S = field(
-            default=None,
+        item_number: ItemNumberType161497S = field(
             metadata={
                 "name": "itemNumber",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         warning_message: list[InteractiveFreeTextType78544S] = field(
             default_factory=list,
@@ -6004,13 +5931,12 @@ class FareMasterPricerTravelBoardSearchReply:
                 "type": "Element",
             },
         )
-        rec_price_info: None | MonetaryInformationType193024S = field(
-            default=None,
+        rec_price_info: MonetaryInformationType193024S = field(
             metadata={
                 "name": "recPriceInfo",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         mini_rule: list[MiniRulesType78547S] = field(
             default_factory=list,
@@ -6060,7 +5986,7 @@ class FareMasterPricerTravelBoardSearchReply:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RecommandationSegmentsFareDetails:
             """
             :ivar recommendation_seg_ref: Reference and details about
@@ -6069,15 +5995,12 @@ class FareMasterPricerTravelBoardSearchReply:
                 segment.
             """
 
-            recommendation_seg_ref: None | OriginAndDestinationRequestType = (
-                field(
-                    default=None,
-                    metadata={
-                        "name": "recommendationSegRef",
-                        "type": "Element",
-                        "required": True,
-                    },
-                )
+            recommendation_seg_ref: OriginAndDestinationRequestType = field(
+                metadata={
+                    "name": "recommendationSegRef",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             segment_monetary_information: None | MonetaryInformationType = (
                 field(
@@ -6089,7 +6012,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 )
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PaxFareProduct:
             """
             :ivar pax_fare_detail: Passenger Fare Details.
@@ -6103,15 +6026,12 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar fare_details: Fare details by Requested segment number
             """
 
-            pax_fare_detail: None | PricingTicketingSubsequentType193023S = (
-                field(
-                    default=None,
-                    metadata={
-                        "name": "paxFareDetail",
-                        "type": "Element",
-                        "required": True,
-                    },
-                )
+            pax_fare_detail: PricingTicketingSubsequentType193023S = field(
+                metadata={
+                    "name": "paxFareDetail",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             fee_ref: None | ReferenceInfoType134839S = field(
                 default=None,
@@ -6157,7 +6077,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Fare:
                 """
                 :ivar pricing_message: Last Date to Ticket, Penalties
@@ -6165,13 +6085,12 @@ class FareMasterPricerTravelBoardSearchReply:
                     Surcharges...
                 """
 
-                pricing_message: None | InteractiveFreeTextType78559S = field(
-                    default=None,
+                pricing_message: InteractiveFreeTextType78559S = field(
                     metadata={
                         "name": "pricingMessage",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 monetary_information: None | MonetaryInformationType185955S = (
                     field(
@@ -6183,7 +6102,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     )
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FareDetails:
                 """
                 :ivar segment_ref: Reference of the Requested Segment
@@ -6194,13 +6113,12 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar maj_cabin: Majority Cabin Info
                 """
 
-                segment_ref: None | OriginAndDestinationRequestType = field(
-                    default=None,
+                segment_ref: OriginAndDestinationRequestType = field(
                     metadata={
                         "name": "segmentRef",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 group_of_fares: list[
                     FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct.FareDetails.GroupOfFares
@@ -6230,7 +6148,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class GroupOfFares:
                     """
                     :ivar product_information: Contains details of
@@ -6243,15 +6161,12 @@ class FareMasterPricerTravelBoardSearchReply:
                         for each Fare Component
                     """
 
-                    product_information: (
-                        None | FlightProductInformationType176659S
-                    ) = field(
-                        default=None,
+                    product_information: FlightProductInformationType176659S = field(
                         metadata={
                             "name": "productInformation",
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
                     fare_calculation_code_details: list[
                         FareCalculationCodeDetailsType
@@ -6278,7 +6193,7 @@ class FareMasterPricerTravelBoardSearchReply:
                         },
                     )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SpecificRecDetails:
             """
             :ivar specific_rec_item: Recommendation details
@@ -6286,13 +6201,12 @@ class FareMasterPricerTravelBoardSearchReply:
                 details
             """
 
-            specific_rec_item: None | ItemReferencesAndVersionsType = field(
-                default=None,
+            specific_rec_item: ItemReferencesAndVersionsType = field(
                 metadata={
                     "name": "specificRecItem",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             specific_product_details: list[
                 FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails
@@ -6305,7 +6219,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class SpecificProductDetails:
                 """
                 :ivar product_references: Product details
@@ -6313,15 +6227,12 @@ class FareMasterPricerTravelBoardSearchReply:
                     requested segments.
                 """
 
-                product_references: None | PricingTicketingSubsequentType = (
-                    field(
-                        default=None,
-                        metadata={
-                            "name": "productReferences",
-                            "type": "Element",
-                            "required": True,
-                        },
-                    )
+                product_references: PricingTicketingSubsequentType = field(
+                    metadata={
+                        "name": "productReferences",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 fare_context_details: list[
                     FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails.FareContextDetails
@@ -6334,7 +6245,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FareContextDetails:
                     """
                     :ivar requested_segment_info: Reference of requested
@@ -6343,15 +6254,12 @@ class FareMasterPricerTravelBoardSearchReply:
                         details
                     """
 
-                    requested_segment_info: (
-                        None | OriginAndDestinationRequestType134833S
-                    ) = field(
-                        default=None,
+                    requested_segment_info: OriginAndDestinationRequestType134833S = field(
                         metadata={
                             "name": "requestedSegmentInfo",
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
                     cnx_context_details: list[
                         FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails.FareContextDetails.CnxContextDetails
@@ -6364,25 +6272,22 @@ class FareMasterPricerTravelBoardSearchReply:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class CnxContextDetails:
                         """
                         :ivar fare_cnx_info: Fare connection context
                             details
                         """
 
-                        fare_cnx_info: None | FlightProductInformationType = (
-                            field(
-                                default=None,
-                                metadata={
-                                    "name": "fareCnxInfo",
-                                    "type": "Element",
-                                    "required": True,
-                                },
-                            )
+                        fare_cnx_info: FlightProductInformationType = field(
+                            metadata={
+                                "name": "fareCnxInfo",
+                                "type": "Element",
+                                "required": True,
+                            }
                         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OtherSolutions:
         """
         :ivar reference: Reference to the current solution
@@ -6391,12 +6296,11 @@ class FareMasterPricerTravelBoardSearchReply:
             info, amount ...)
         """
 
-        reference: None | SequenceDetailsTypeU = field(
-            default=None,
+        reference: SequenceDetailsTypeU = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         amt_group: list[
             FareMasterPricerTravelBoardSearchReply.OtherSolutions.AmtGroup
@@ -6419,7 +6323,7 @@ class FareMasterPricerTravelBoardSearchReply:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AmtGroup:
             """
             :ivar ref: reference to the current amount (per bound, per
@@ -6427,12 +6331,11 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar amount: Amount Description
             """
 
-            ref: None | ReferenceInfoType165972S = field(
-                default=None,
+            ref: ReferenceInfoType165972S = field(
                 metadata={
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             amount: None | MonetaryInformationTypeI = field(
                 default=None,
@@ -6441,7 +6344,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PsgInfo:
             """
             :ivar ref: passenger reference
@@ -6452,12 +6355,11 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar attribute: Additional Information
             """
 
-            ref: None | SegmentRepetitionControlTypeI = field(
-                default=None,
+            ref: SegmentRepetitionControlTypeI = field(
                 metadata={
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             description: None | FareInformationTypeI = field(
                 default=None,
@@ -6494,45 +6396,42 @@ class FareMasterPricerTravelBoardSearchReply:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class WarningInfo:
         """
         :ivar global_message_marker: Dummy Segment
         :ivar global_message: Informative free text information
         """
 
-        global_message_marker: None | DummySegmentTypeI = field(
-            default=None,
+        global_message_marker: DummySegmentTypeI = field(
             metadata={
                 "name": "globalMessageMarker",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
-        global_message: None | InteractiveFreeTextType78534S = field(
-            default=None,
+        global_message: InteractiveFreeTextType78534S = field(
             metadata={
                 "name": "globalMessage",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GlobalInformation:
         """
         :ivar attributes: Coded attributes
         """
 
-        attributes: None | CodedAttributeType = field(
-            default=None,
+        attributes: CodedAttributeType = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceFeesGrp:
         """
         :ivar service_type_info: Service fee type (OC)
@@ -6547,13 +6446,12 @@ class FareMasterPricerTravelBoardSearchReply:
             group
         """
 
-        service_type_info: None | SelectionDetailsType = field(
-            default=None,
+        service_type_info: SelectionDetailsType = field(
             metadata={
                 "name": "serviceTypeInfo",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         service_fee_ref_grp: list[
             FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeRefGrp
@@ -6575,13 +6473,12 @@ class FareMasterPricerTravelBoardSearchReply:
                 "max_occurs": 100000,
             },
         )
-        global_message_marker: None | DummySegmentTypeI = field(
-            default=None,
+        global_message_marker: DummySegmentTypeI = field(
             metadata={
                 "name": "globalMessageMarker",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         service_fee_info_grp: list[
             FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp
@@ -6614,22 +6511,21 @@ class FareMasterPricerTravelBoardSearchReply:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ServiceFeeRefGrp:
             """
             :ivar ref_info: Reference of service fee global information
             """
 
-            ref_info: None | ReferenceInfoType = field(
-                default=None,
+            ref_info: ReferenceInfoType = field(
                 metadata={
                     "name": "refInfo",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ServiceCoverageInfoGrp:
             """
             :ivar item_number_info: Item reference number for service
@@ -6638,13 +6534,12 @@ class FareMasterPricerTravelBoardSearchReply:
                 group
             """
 
-            item_number_info: None | ItemNumberType = field(
-                default=None,
+            item_number_info: ItemNumberType = field(
                 metadata={
                     "name": "itemNumberInfo",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             service_cov_info_grp: list[
                 FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceCoverageInfoGrp.ServiceCovInfoGrp
@@ -6657,7 +6552,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ServiceCovInfoGrp:
                 """
                 :ivar pax_ref_info: Passenger reference number
@@ -6668,13 +6563,12 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar ref_info: Service reference number
                 """
 
-                pax_ref_info: None | SpecificTravellerType = field(
-                    default=None,
+                pax_ref_info: SpecificTravellerType = field(
                     metadata={
                         "name": "paxRefInfo",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 coverage_per_flights_info: list[ActionDetailsType] = field(
                     default_factory=list,
@@ -6699,20 +6593,19 @@ class FareMasterPricerTravelBoardSearchReply:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ServiceFeeInfoGrp:
             """
             :ivar item_number_info: Item number details
             :ivar service_details_grp: Service fee informations
             """
 
-            item_number_info: None | ItemNumberType = field(
-                default=None,
+            item_number_info: ItemNumberType = field(
                 metadata={
                     "name": "itemNumberInfo",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             service_details_grp: list[
                 FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp.ServiceDetailsGrp
@@ -6725,7 +6618,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ServiceDetailsGrp:
                 """
                 :ivar ref_info: Service reference number
@@ -6733,13 +6626,12 @@ class FareMasterPricerTravelBoardSearchReply:
                     information
                 """
 
-                ref_info: None | ReferenceInfoType134840S = field(
-                    default=None,
+                ref_info: ReferenceInfoType134840S = field(
                     metadata={
                         "name": "refInfo",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 service_matched_info_group: list[
                     FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp.ServiceDetailsGrp.ServiceMatchedInfoGroup
@@ -6752,7 +6644,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class ServiceMatchedInfoGroup:
                     """
                     :ivar pax_ref_info: Reference on pax number
@@ -6761,13 +6653,12 @@ class FareMasterPricerTravelBoardSearchReply:
                     :ivar amount_info: Informative Service amount
                     """
 
-                    pax_ref_info: None | SpecificTravellerType = field(
-                        default=None,
+                    pax_ref_info: SpecificTravellerType = field(
                         metadata={
                             "name": "paxRefInfo",
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
                     pricing_info: None | FareInformationType80868S = field(
                         default=None,
@@ -6784,7 +6675,7 @@ class FareMasterPricerTravelBoardSearchReply:
                         },
                     )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ServiceDetailsGrp:
             """
             :ivar service_option_info: Service sub-code and options
@@ -6792,13 +6683,12 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar fee_description_grp: Fee description
             """
 
-            service_option_info: None | SpecificDataInformationType = field(
-                default=None,
+            service_option_info: SpecificDataInformationType = field(
                 metadata={
                     "name": "serviceOptionInfo",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             fee_description_grp: (
                 None
@@ -6811,7 +6701,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FeeDescriptionGrp:
                 """
                 :ivar item_number_info: Specification of the item number
@@ -6822,13 +6712,12 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar commercial_name: Commercial name
                 """
 
-                item_number_info: None | ItemNumberType80866S = field(
-                    default=None,
+                item_number_info: ItemNumberType80866S = field(
                     metadata={
                         "name": "itemNumberInfo",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 service_attributes_info: None | AttributeType = field(
                     default=None,
@@ -6854,7 +6743,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     },
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FreeBagAllowanceGrp:
             """
             :ivar free_bag_allownce_info: Free baggage allownce
@@ -6862,13 +6751,12 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar item_number_info: Item number information
             """
 
-            free_bag_allownce_info: None | ExcessBaggageType = field(
-                default=None,
+            free_bag_allownce_info: ExcessBaggageType = field(
                 metadata={
                     "name": "freeBagAllownceInfo",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             item_number_info: None | ItemNumberType166130S = field(
                 default=None,
@@ -6878,14 +6766,13 @@ class FareMasterPricerTravelBoardSearchReply:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MnrGrp:
-        mnr: None | MiniRulesType = field(
-            default=None,
+        mnr: MiniRulesType = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         mnr_details: list[
             FareMasterPricerTravelBoardSearchReply.MnrGrp.MnrDetails
@@ -6898,7 +6785,7 @@ class FareMasterPricerTravelBoardSearchReply:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MnrDetails:
             """
             :ivar mnr_ref:
@@ -6906,13 +6793,12 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar cat_grp: Categories
             """
 
-            mnr_ref: None | ItemNumberType176648S = field(
-                default=None,
+            mnr_ref: ItemNumberType176648S = field(
                 metadata={
                     "name": "mnrRef",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             date_info: list[DateAndTimeInformationType182345S] = field(
                 default_factory=list,
@@ -6933,7 +6819,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class CatGrp:
                 """
                 :ivar cat_info: Category information
@@ -6941,13 +6827,12 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar status_info: Status information
                 """
 
-                cat_info: None | CategDescrType = field(
-                    default=None,
+                cat_info: CategDescrType = field(
                     metadata={
                         "name": "catInfo",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 mon_info: None | MonetaryInformationType174241S = field(
                     default=None,

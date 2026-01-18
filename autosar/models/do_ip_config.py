@@ -8,7 +8,7 @@ from .do_ip_logic_address import DoIpLogicAddress
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DoIpConfig:
     """
     This element defines the DoIp configuration for a specific Ecu.
@@ -67,7 +67,7 @@ class DoIpConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DoipInterfaces:
         do_ip_interface: list[DoIpInterface] = field(
             default_factory=list,

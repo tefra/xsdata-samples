@@ -9,7 +9,7 @@ from travelport.models.type_profile_search_criteria_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgencyGroupCriteria2(TypeProfileSearchCriteria2):
     """
     Agency Group search modifiers.

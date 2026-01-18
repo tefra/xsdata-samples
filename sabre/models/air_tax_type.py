@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirTaxType:
     """
     Defines the data fields available for air tax.
@@ -42,15 +42,14 @@ class AirTaxType:
             "required": True,
         },
     )
-    tax_code: None | str = field(
-        default=None,
+    tax_code: str = field(
         metadata={
             "name": "TaxCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 16,
-        },
+        }
     )
     amount: None | Decimal = field(
         default=None,

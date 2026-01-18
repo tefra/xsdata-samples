@@ -27,7 +27,7 @@ from .variable_data_prototype import VariableDataPrototype
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SenderReceiverInterface:
     """
     A sender/receiver interface declares a number of data elements to be
@@ -124,14 +124,13 @@ class SenderReceiverInterface:
     class Meta:
         name = "SENDER-RECEIVER-INTERFACE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SenderReceiverInterface.ShortNameFragments = (
         field(
@@ -290,7 +289,7 @@ class SenderReceiverInterface:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -301,7 +300,7 @@ class SenderReceiverInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -312,7 +311,7 @@ class SenderReceiverInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -341,7 +340,7 @@ class SenderReceiverInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Namespaces:
         symbol_props: list[SymbolProps] = field(
             default_factory=list,
@@ -352,7 +351,7 @@ class SenderReceiverInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataElements:
         variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
@@ -363,7 +362,7 @@ class SenderReceiverInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InvalidationPolicys:
         invalidation_policy: list[InvalidationPolicy] = field(
             default_factory=list,
@@ -374,7 +373,7 @@ class SenderReceiverInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MetaDataItemSets:
         meta_data_item_set: list[MetaDataItemSet] = field(
             default_factory=list,

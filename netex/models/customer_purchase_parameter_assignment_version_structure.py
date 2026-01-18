@@ -13,7 +13,7 @@ from .vehicle_pooling_driver_info_ref import VehiclePoolingDriverInfoRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerPurchaseParameterAssignmentVersionStructure(
     ValidityParameterAssignmentVersionStructure
 ):

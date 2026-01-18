@@ -13,7 +13,7 @@ from travelport.models.vendor import Vendor
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleLocationReq(BaseReq1):
     """
     Used to request a list of vendors for a location (airport or city
@@ -45,13 +45,12 @@ class VehicleLocationReq(BaseReq1):
             "max_occurs": 3,
         },
     )
-    pickup_date_location: None | TypePickupDateLocation = field(
-        default=None,
+    pickup_date_location: TypePickupDateLocation = field(
         metadata={
             "name": "PickupDateLocation",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     reference_point: None | ReferencePoint1 = field(
         default=None,

@@ -7,7 +7,7 @@ from .memory_section_type_simple import MemorySectionTypeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MemorySectionType:
     """
     Enumeration to specify the essential nature of the data which can be
@@ -30,11 +30,10 @@ class MemorySectionType:
     class Meta:
         name = "MEMORY-SECTION-TYPE"
 
-    value: None | MemorySectionTypeSimple = field(
-        default=None,
+    value: MemorySectionTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

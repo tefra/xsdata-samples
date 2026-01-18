@@ -19,7 +19,7 @@ from .sw_impl_policy_enum import SwImplPolicyEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InternalTriggeringPoint:
     """
     If a RunnableEntity owns an InternalTriggeringPoint it is entitled to
@@ -90,14 +90,13 @@ class InternalTriggeringPoint:
     class Meta:
         name = "INTERNAL-TRIGGERING-POINT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | InternalTriggeringPoint.ShortNameFragments = (
         field(
@@ -204,7 +203,7 @@ class InternalTriggeringPoint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -215,7 +214,7 @@ class InternalTriggeringPoint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

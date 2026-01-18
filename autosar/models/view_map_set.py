@@ -18,7 +18,7 @@ from .view_map import ViewMap
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ViewMapSet:
     """
     Collection of ViewMaps that are used to establish relationships between
@@ -84,14 +84,13 @@ class ViewMapSet:
     class Meta:
         name = "VIEW-MAP-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ViewMapSet.ShortNameFragments = field(
         default=None,
@@ -188,7 +187,7 @@ class ViewMapSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -199,7 +198,7 @@ class ViewMapSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -210,7 +209,7 @@ class ViewMapSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ViewMaps:
         view_map: list[ViewMap] = field(
             default_factory=list,

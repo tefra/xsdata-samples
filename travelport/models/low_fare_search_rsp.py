@@ -8,7 +8,7 @@ from travelport.models.brand_list import BrandList
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LowFareSearchRsp(AirSearchRsp):
     """
     Low Fare Search Response.
@@ -30,12 +30,11 @@ class LowFareSearchRsp(AirSearchRsp):
             "type": "Element",
         },
     )
-    currency_type: None | str = field(
-        default=None,
+    currency_type: str = field(
         metadata={
             "name": "CurrencyType",
             "type": "Attribute",
             "required": True,
             "length": 3,
-        },
+        }
     )

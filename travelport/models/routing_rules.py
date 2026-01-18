@@ -7,7 +7,7 @@ from travelport.models.direction_info_direction import DirectionInfoDirection
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoutingRules:
     """
     Rules related to routing.
@@ -25,7 +25,7 @@ class RoutingRules:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Routing:
         direction_info: list[RoutingRules.Routing.DirectionInfo] = field(
             default_factory=list,
@@ -57,7 +57,7 @@ class RoutingRules:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DirectionInfo:
             location_code: None | str = field(
                 default=None,

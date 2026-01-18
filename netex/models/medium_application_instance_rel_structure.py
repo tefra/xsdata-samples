@@ -9,7 +9,7 @@ from .medium_application_instance import MediumApplicationInstance
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MediumApplicationInstanceRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "mediumApplicationInstance_RelStructure"

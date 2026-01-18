@@ -12,7 +12,7 @@ from .type_of_notice_ref import TypeOfNoticeRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "NoticeAssignment_DerivedViewStructure"

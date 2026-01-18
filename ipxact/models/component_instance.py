@@ -15,7 +15,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ComponentInstance:
     """
     Component instance element.
@@ -39,13 +39,12 @@ class ComponentInstance:
         name = "componentInstance"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    instance_name: None | InstanceName = field(
-        default=None,
+    instance_name: InstanceName = field(
         metadata={
             "name": "instanceName",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -67,13 +66,12 @@ class ComponentInstance:
             "type": "Element",
         },
     )
-    component_ref: None | ConfigurableLibraryRefType = field(
-        default=None,
+    component_ref: ConfigurableLibraryRefType = field(
         metadata={
             "name": "componentRef",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     power_domain_links: None | PowerDomainLinks = field(
         default=None,

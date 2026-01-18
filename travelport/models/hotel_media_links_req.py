@@ -10,7 +10,7 @@ from travelport.models.type_requested_image_size import TypeRequestedImageSize
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelMediaLinksReq(BaseReq1):
     """
     Retrieves all image links from the Galileo Web Services Image Viewer

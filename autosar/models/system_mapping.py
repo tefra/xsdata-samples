@@ -65,7 +65,7 @@ from .trigger_to_signal_mapping import TriggerToSignalMapping
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SystemMapping:
     """
     @RESTRICT_TO_STANDARD:CP!
@@ -200,14 +200,13 @@ class SystemMapping:
     class Meta:
         name = "SYSTEM-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SystemMapping.ShortNameFragments = field(
         default=None,
@@ -450,7 +449,7 @@ class SystemMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -461,7 +460,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -472,7 +471,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ApplicationPartitionToEcuPartitionMappings:
         application_partition_to_ecu_partition_mapping: list[
             ApplicationPartitionToEcuPartitionMapping
@@ -485,7 +484,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ComManagementMappings:
         com_management_mapping: list[ComManagementMapping] = field(
             default_factory=list,
@@ -496,7 +495,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CryptoServiceMappings:
         sec_oc_crypto_service_mapping: list[SecOcCryptoServiceMapping] = field(
             default_factory=list,
@@ -515,7 +514,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataMappings:
         client_server_to_signal_group_mapping: list[
             ClientServerToSignalGroupMapping
@@ -576,7 +575,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuResourceMappings:
         ecu_mapping: list[EcuMapping] = field(
             default_factory=list,
@@ -587,7 +586,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class J1939ControllerApplicationToJ1939NmNodeMappings:
         j_1939_controller_application_to_j_1939_nm_node_mapping: list[
             J1939ControllerApplicationToJ1939NmNodeMapping
@@ -600,7 +599,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MappingConstraints:
         component_clustering: list[ComponentClustering] = field(
             default_factory=list,
@@ -627,7 +626,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PncMappings:
         pnc_mapping: list[PncMapping] = field(
             default_factory=list,
@@ -638,7 +637,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortElementToComResourceMappings:
         port_element_to_communication_resource_mapping: list[
             PortElementToCommunicationResourceMapping
@@ -651,7 +650,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResourceEstimations:
         ecu_resource_estimation: list[EcuResourceEstimation] = field(
             default_factory=list,
@@ -662,7 +661,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResourceToApplicationPartitionMappings:
         cp_software_cluster_resource_to_application_partition_mapping: list[
             CpSoftwareClusterResourceToApplicationPartitionMapping
@@ -675,7 +674,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SignalPathConstraints:
         common_signal_path: list[CommonSignalPath] = field(
             default_factory=list,
@@ -710,7 +709,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SoftwareClusterToResourceMappings:
         cp_software_cluster_to_resource_mapping: list[
             CpSoftwareClusterToResourceMapping
@@ -723,7 +722,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwClusterMappings:
         cp_software_cluster_to_ecu_instance_mapping: list[
             CpSoftwareClusterToEcuInstanceMapping
@@ -736,7 +735,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwImplMappings:
         swc_to_impl_mapping: list[SwcToImplMapping] = field(
             default_factory=list,
@@ -747,7 +746,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwMappings:
         swc_to_ecu_mapping: list[SwcToEcuMapping] = field(
             default_factory=list,
@@ -758,7 +757,7 @@ class SystemMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwcToApplicationPartitionMappings:
         swc_to_application_partition_mapping: list[
             SwcToApplicationPartitionMapping

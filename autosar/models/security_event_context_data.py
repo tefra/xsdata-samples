@@ -7,7 +7,7 @@ from .admin_data import VariationPoint
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecurityEventContextData:
     """
     This meta-class represents the possibility that context data can be

@@ -29,7 +29,7 @@ from .sw_data_def_props import SwDataDefProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationArrayElement:
     """
     Describes the properties of the elements of an application array data
@@ -106,14 +106,13 @@ class ApplicationArrayElement:
     class Meta:
         name = "APPLICATION-ARRAY-ELEMENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ApplicationArrayElement.ShortNameFragments = (
         field(
@@ -246,7 +245,7 @@ class ApplicationArrayElement:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -257,7 +256,7 @@ class ApplicationArrayElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -268,24 +267,22 @@ class ApplicationArrayElement:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeTref(Ref):
-        dest: None | ApplicationDataTypeSubtypesEnum = field(
-            default=None,
+        dest: ApplicationDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IndexDataTypeRef(Ref):
-        dest: None | ApplicationPrimitiveDataTypeSubtypesEnum = field(
-            default=None,
+        dest: ApplicationPrimitiveDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

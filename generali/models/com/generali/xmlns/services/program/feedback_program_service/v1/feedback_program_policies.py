@@ -14,80 +14,71 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FeedbackProgramPolicies:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    action: None | str = field(
-        default=None,
+    action: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    schema_location: None | str = field(
-        default=None,
+    schema_location: str = field(
         metadata={
             "name": "schemaLocation",
             "type": "Attribute",
             "namespace": "http://www.w3.org/2001/XMLSchema-instance",
             "required": True,
-        },
+        }
     )
-    consumer_id: None | str = field(
-        default=None,
+    consumer_id: str = field(
         metadata={
             "name": "ConsumerID",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    transmission_id: None | str = field(
-        default=None,
+    transmission_id: str = field(
         metadata={
             "name": "TransmissionID",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    program_id: None | str = field(
-        default=None,
+    program_id: str = field(
         metadata={
             "name": "ProgramID",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    local_program_id: None | str = field(
-        default=None,
+    local_program_id: str = field(
         metadata={
             "name": "LocalProgramID",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    policies: None | Policies = field(
-        default=None,
+    policies: Policies = field(
         metadata={
             "name": "Policies",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    errors: None | Errors = field(
-        default=None,
+    errors: Errors = field(
         metadata={
             "name": "Errors",
             "type": "Element",
             "required": True,
-        },
+        }
     )

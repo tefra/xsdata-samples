@@ -7,7 +7,7 @@ from travelport.models.queue_selector_1 import QueueSelector1
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QueuePseudoCitySelector:
     """
     Need to specify the PseudoCityCode and Queue details.

@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClausesType:
     clause: list[ClauseType] = field(
         default_factory=list,

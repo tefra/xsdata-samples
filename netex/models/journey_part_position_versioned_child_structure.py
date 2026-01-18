@@ -11,7 +11,7 @@ from .scheduled_stop_point_ref import ScheduledStopPointRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "JourneyPartPosition_VersionedChildStructure"
@@ -44,14 +44,13 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    position_in_train: None | int = field(
-        default=None,
+    position_in_train: int = field(
         metadata={
             "name": "PositionInTrain",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     order: None | int = field(
         default=None,

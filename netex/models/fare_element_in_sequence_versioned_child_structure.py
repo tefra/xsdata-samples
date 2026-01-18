@@ -8,7 +8,7 @@ from .multilingual_string import MultilingualString
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareElementInSequenceVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FareElementInSequence_VersionedChildStructure"

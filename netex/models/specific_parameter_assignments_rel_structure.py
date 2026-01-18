@@ -15,7 +15,7 @@ from .validity_parameter_assignment_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecificParameterAssignmentsRelStructure(
     ContainmentAggregationStructure
 ):
@@ -35,7 +35,7 @@ class SpecificParameterAssignmentsRelStructure(
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecificParameterAssignmentVersionStructure(
     ValidityParameterAssignmentVersionStructure
 ):
@@ -91,7 +91,7 @@ class SpecificParameterAssignmentVersionStructure(
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecificParameterAssignment(SpecificParameterAssignmentVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

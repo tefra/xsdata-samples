@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BrandModifiers:
     """
     Used to specify the level of branding requested.
@@ -36,7 +36,7 @@ class BrandModifiers:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FareFamilyDisplay:
         """
         Parameters
@@ -51,22 +51,20 @@ class BrandModifiers:
             fare in a fare family display.
         """
 
-        modifier_type: None | str = field(
-            default=None,
+        modifier_type: str = field(
             metadata={
                 "name": "ModifierType",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BasicDetailsOnly:
-        return_basic_details: None | bool = field(
-            default=None,
+        return_basic_details: bool = field(
             metadata={
                 "name": "ReturnBasicDetails",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

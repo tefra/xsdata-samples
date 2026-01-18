@@ -11,7 +11,7 @@ from .timing_link_ref import TimingLinkRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinkInJourneyPatternVersionedChildStructure(
     LinkInLinkSequenceVersionedChildStructure
 ):

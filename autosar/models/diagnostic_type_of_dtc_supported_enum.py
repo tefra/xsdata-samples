@@ -9,7 +9,7 @@ from .diagnostic_type_of_dtc_supported_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticTypeOfDtcSupportedEnum:
     """
     Supported Dtc Types.
@@ -30,11 +30,10 @@ class DiagnosticTypeOfDtcSupportedEnum:
     class Meta:
         name = "DIAGNOSTIC-TYPE-OF-DTC-SUPPORTED-ENUM"
 
-    value: None | DiagnosticTypeOfDtcSupportedEnumSimple = field(
-        default=None,
+    value: DiagnosticTypeOfDtcSupportedEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

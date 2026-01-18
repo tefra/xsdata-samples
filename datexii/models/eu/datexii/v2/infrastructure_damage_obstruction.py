@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.obstruction import Obstruction
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InfrastructureDamageObstruction(Obstruction):
     """
     An obstruction on the road resulting from the failure or damage of
@@ -23,14 +23,13 @@ class InfrastructureDamageObstruction(Obstruction):
     :ivar infrastructure_damage_obstruction_extension:
     """
 
-    infrastructure_damage_type: None | InfrastructureDamageTypeEnum = field(
-        default=None,
+    infrastructure_damage_type: InfrastructureDamageTypeEnum = field(
         metadata={
             "name": "infrastructureDamageType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     infrastructure_damage_obstruction_extension: None | ExtensionType = field(
         default=None,

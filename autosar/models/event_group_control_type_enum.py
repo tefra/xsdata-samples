@@ -9,7 +9,7 @@ from .event_group_control_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EventGroupControlTypeEnum:
     """
     Types of a RoutingGroups for the event communication.
@@ -30,11 +30,10 @@ class EventGroupControlTypeEnum:
     class Meta:
         name = "EVENT-GROUP-CONTROL-TYPE-ENUM"
 
-    value: None | EventGroupControlTypeEnumSimple = field(
-        default=None,
+    value: EventGroupControlTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

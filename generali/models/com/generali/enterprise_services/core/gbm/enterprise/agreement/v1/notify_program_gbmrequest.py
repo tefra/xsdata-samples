@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NotifyProgramGbmrequest(NotifyProgramGbmrequestType):
     """
     <description xmlns="">The definition of the request message that

@@ -62,7 +62,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.titles import Titles
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContentItem:
     """
     A segment of a book, report, or standard for which a DOI is being
@@ -174,12 +174,11 @@ class ContentItem:
             "type": "Element",
         },
     )
-    doi_data: None | DoiData = field(
-        default=None,
+    doi_data: DoiData = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     citation_list: None | CitationList = field(
         default=None,
@@ -193,12 +192,11 @@ class ContentItem:
             "type": "Element",
         },
     )
-    component_type: None | ContentItemComponentType = field(
-        default=None,
+    component_type: ContentItemComponentType = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     level_sequence_number: int = field(
         default=1,

@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricingInterestType(BaseIdentifiedComponentType):
     amount_types: None | PricingInterestTypeAmountTypes = field(
         default=None,

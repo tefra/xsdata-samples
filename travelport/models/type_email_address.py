@@ -8,19 +8,18 @@ from travelport.models.simple_name_1 import SimpleName1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeEmailAddress:
     class Meta:
         name = "typeEmailAddress"
 
-    email: None | Email1 = field(
-        default=None,
+    email: Email1 = field(
         metadata={
             "name": "Email",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        },
+        }
     )
     simple_name: None | SimpleName1 = field(
         default=None,

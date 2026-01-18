@@ -24,7 +24,7 @@ from sabre.models.unique_id_type import UniqueIdType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirTravelerType:
     """
     Information about the person traveling.
@@ -68,14 +68,13 @@ class AirTravelerType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    person_name: None | PersonNameType = field(
-        default=None,
+    person_name: PersonNameType = field(
         metadata={
             "name": "PersonName",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     telephone: list[TelephoneType] = field(
         default_factory=list,
@@ -130,14 +129,13 @@ class AirTravelerType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    traveler_ref_number: None | TravelerRefNumberType = field(
-        default=None,
+    traveler_ref_number: TravelerRefNumberType = field(
         metadata={
             "name": "TravelerRefNumber",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     flight_segment_rphs: None | AirTravelerType.FlightSegmentRphs = field(
         default=None,
@@ -183,14 +181,13 @@ class AirTravelerType:
             "pattern": r"[a-zA-Z]{3}",
         },
     )
-    passenger_type_code: None | str = field(
-        default=None,
+    passenger_type_code: str = field(
         metadata={
             "name": "PassengerTypeCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[a-zA-Z]{3}",
-        },
+        }
     )
     accompanied_by_infant: None | bool = field(
         default=None,
@@ -200,19 +197,18 @@ class AirTravelerType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProfileRef:
-        unique_id: None | UniqueIdType = field(
-            default=None,
+        unique_id: UniqueIdType = field(
             metadata={
                 "name": "UniqueID",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlightSegmentRphs:
         """
         Attributes:

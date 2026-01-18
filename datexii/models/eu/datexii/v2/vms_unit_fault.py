@@ -9,7 +9,7 @@ from datexii.models.eu.datexii.v2.vms_fault_enum import VmsFaultEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsUnitFault(Fault):
     """
     Details of the fault which is being reported for the specified variable
@@ -20,14 +20,13 @@ class VmsUnitFault(Fault):
     :ivar vms_unit_fault_extension:
     """
 
-    vms_unit_fault: None | VmsFaultEnum = field(
-        default=None,
+    vms_unit_fault: VmsFaultEnum = field(
         metadata={
             "name": "vmsUnitFault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     vms_unit_fault_extension: None | ExtensionType = field(
         default=None,

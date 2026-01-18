@@ -46,7 +46,7 @@ from .verbatim_string import VerbatimString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdminData:
     """
     AdminData represents the ability to express administrative information
@@ -144,7 +144,7 @@ class AdminData:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DocRevisions:
         doc_revision: list[DocRevision] = field(
             default_factory=list,
@@ -155,7 +155,7 @@ class AdminData:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sdgs:
         sdg: list[Sdg] = field(
             default_factory=list,
@@ -167,7 +167,7 @@ class AdminData:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Annotation:
     """
     This is a plain annotation which does not have further formal data.
@@ -234,7 +234,7 @@ class Annotation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BlueprintFormula:
     """
     This class express the extension of the Formula Language to provide
@@ -307,52 +307,48 @@ class BlueprintFormula:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SyscStringRef(Ref):
-        dest: None | SwSystemconstSubtypesEnum = field(
-            default=None,
+        dest: SwSystemconstSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SyscRef(Ref):
-        dest: None | SwSystemconstSubtypesEnum = field(
-            default=None,
+        dest: SwSystemconstSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucQueryRef(Ref):
-        dest: None | EcucQuerySubtypesEnum = field(
-            default=None,
+        dest: EcucQuerySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucRef(Ref):
-        dest: None | EcucDefinitionElementSubtypesEnum = field(
-            default=None,
+        dest: EcucDefinitionElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BlueprintGenerator:
     """
     This class express the Extended Language to generate blueprint
@@ -411,7 +407,7 @@ class BlueprintGenerator:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefItem:
     """
     This represents an entry in a definition list.
@@ -459,14 +455,13 @@ class DefItem:
     class Meta:
         name = "DEF-ITEM"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DefItem.ShortNameFragments = field(
         default=None,
@@ -553,7 +548,7 @@ class DefItem:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -565,7 +560,7 @@ class DefItem:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferrableRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -620,19 +615,18 @@ class ReferrableRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReferrableRef(Ref):
-        dest: None | ReferrableSubtypesEnum = field(
-            default=None,
+        dest: ReferrableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefList:
     """
     This meta-class represents the ability to express a list of
@@ -736,7 +730,7 @@ class DefList:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Sdg:
     """
     Sdg (SpecialDataGroup) is a generic model which can be used to keep
@@ -874,30 +868,28 @@ class Sdg:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SdgCaptionRef(Ref):
-        dest: None | SdgCaptionSubtypesEnum = field(
-            default=None,
+        dest: SdgCaptionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SdxRef(Ref):
-        dest: None | ReferrableSubtypesEnum = field(
-            default=None,
+        dest: ReferrableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DocumentationBlock:
     """
     This class represents a documentation block.
@@ -1064,7 +1056,7 @@ class DocumentationBlock:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MsrQueryP2:
     """
     This meta-class represents the ability to express a query which yields
@@ -1121,7 +1113,7 @@ class MsrQueryP2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VariationPoint:
     """
     This meta-class represents the ability to express a "structural
@@ -1260,7 +1252,7 @@ class VariationPoint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PostBuildVariantConditions:
         post_build_variant_condition: list[PostBuildVariantCondition] = field(
             default_factory=list,
@@ -1272,7 +1264,7 @@ class VariationPoint:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MultiLanguageParagraph:
     """
     This is the content model of a multilingual paragraph in a
@@ -1383,7 +1375,7 @@ class MultiLanguageParagraph:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MultiLanguageVerbatim:
     """
     This class represents multilingual Verbatim.
@@ -1524,7 +1516,7 @@ class MultiLanguageVerbatim:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StructuredReq:
     """
     This represents a structured requirement.
@@ -1636,14 +1628,13 @@ class StructuredReq:
     class Meta:
         name = "STRUCTURED-REQ"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | StructuredReq.ShortNameFragments = field(
         default=None,
@@ -1876,7 +1867,7 @@ class StructuredReq:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -1887,7 +1878,7 @@ class StructuredReq:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -1898,7 +1889,7 @@ class StructuredReq:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TraceRefs:
         trace_ref: list[StructuredReq.TraceRefs.TraceRef] = field(
             default_factory=list,
@@ -1909,18 +1900,17 @@ class StructuredReq:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TraceRef(Ref):
-            dest: None | TraceableSubtypesEnum = field(
-                default=None,
+            dest: TraceableSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AppliesToDependencies:
         """
         :ivar applies_to: This attribute represents the platform the
@@ -1936,7 +1926,7 @@ class StructuredReq:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TestedItemRefs:
         tested_item_ref: list[StructuredReq.TestedItemRefs.TestedItemRef] = (
             field(
@@ -1949,19 +1939,18 @@ class StructuredReq:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TestedItemRef(Ref):
-            dest: None | TraceableSubtypesEnum = field(
-                default=None,
+            dest: TraceableSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MlFigure:
     """
     This metaclass represents the ability to embed a figure.
@@ -2116,7 +2105,7 @@ class MlFigure:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MlFormula:
     """
     This meta-class represents the ability to express a formula in a
@@ -2260,7 +2249,7 @@ class MlFormula:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Item:
     """
     This meta-class represents one particular item in a list.
@@ -2476,7 +2465,7 @@ class Item:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class List:
     """
     This meta-class represents the ability to express a list.
@@ -2589,7 +2578,7 @@ class List:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LabeledItem:
     """
     this represents an item of a labeled list.
@@ -2825,7 +2814,7 @@ class LabeledItem:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LabeledList:
     """
     This meta-class represents a labeled list, in which items have a label
@@ -2941,7 +2930,7 @@ class LabeledList:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Note:
     """
     This represents a note in a documentation, which may be used to
@@ -3181,7 +3170,7 @@ class Note:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TraceableText:
     """
     This meta-class represents the ability to denote a traceable text item
@@ -3305,14 +3294,13 @@ class TraceableText:
     class Meta:
         name = "TRACEABLE-TEXT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TraceableText.ShortNameFragments = field(
         default=None,
@@ -3527,7 +3515,7 @@ class TraceableText:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -3538,7 +3526,7 @@ class TraceableText:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -3549,7 +3537,7 @@ class TraceableText:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TraceRefs:
         trace_ref: list[TraceableText.TraceRefs.TraceRef] = field(
             default_factory=list,
@@ -3560,13 +3548,12 @@ class TraceableText:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TraceRef(Ref):
-            dest: None | TraceableSubtypesEnum = field(
-                default=None,
+            dest: TraceableSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

@@ -8,7 +8,7 @@ from ipxact.models.monitor_interconnection import MonitorInterconnection
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Interconnections:
     """
     Connections between internal sub components.

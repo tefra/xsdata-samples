@@ -23,7 +23,7 @@ from .traceable_subtypes_enum import TraceableSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DocumentElementScope:
     """
     Specifies if a specification element such as a requirement,
@@ -106,14 +106,13 @@ class DocumentElementScope:
     class Meta:
         name = "DOCUMENT-ELEMENT-SCOPE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DocumentElementScope.ShortNameFragments = (
         field(
@@ -230,7 +229,7 @@ class DocumentElementScope:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -241,7 +240,7 @@ class DocumentElementScope:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -252,18 +251,17 @@ class DocumentElementScope:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CustomDocumentElementRef(Ref):
-        dest: None | TraceableSubtypesEnum = field(
-            default=None,
+        dest: TraceableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TailoringRefs:
         tailoring_ref: list[
             DocumentElementScope.TailoringRefs.TailoringRef
@@ -276,13 +274,12 @@ class DocumentElementScope:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TailoringRef(Ref):
-            dest: None | DataFormatElementReferenceSubtypesEnum = field(
-                default=None,
+            dest: DataFormatElementReferenceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

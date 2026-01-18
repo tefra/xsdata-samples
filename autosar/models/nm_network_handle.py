@@ -13,7 +13,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NmNetworkHandle:
     """
     Group of partialNetworks and/or VLANs that can be controlled
@@ -43,14 +43,13 @@ class NmNetworkHandle:
     class Meta:
         name = "NM-NETWORK-HANDLE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | NmNetworkHandle.ShortNameFragments = field(
         default=None,
@@ -92,7 +91,7 @@ class NmNetworkHandle:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -103,7 +102,7 @@ class NmNetworkHandle:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PartialNetworkRefs:
         partial_network_ref: list[
             NmNetworkHandle.PartialNetworkRefs.PartialNetworkRef
@@ -116,18 +115,17 @@ class NmNetworkHandle:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PartialNetworkRef(Ref):
-            dest: None | PncMappingIdentSubtypesEnum = field(
-                default=None,
+            dest: PncMappingIdentSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VlanRefs:
         vlan_ref: list[NmNetworkHandle.VlanRefs.VlanRef] = field(
             default_factory=list,
@@ -138,13 +136,12 @@ class NmNetworkHandle:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class VlanRef(Ref):
-            dest: None | EthernetCommunicationConnectorSubtypesEnum = field(
-                default=None,
+            dest: EthernetCommunicationConnectorSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

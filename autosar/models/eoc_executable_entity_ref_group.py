@@ -27,7 +27,7 @@ from .timing_description_event_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EocExecutableEntityRefGroup:
     """
     This is used to specify a group (composite) consisting of Execution
@@ -110,14 +110,13 @@ class EocExecutableEntityRefGroup:
     class Meta:
         name = "EOC-EXECUTABLE-ENTITY-REF-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | EocExecutableEntityRefGroup.ShortNameFragments
@@ -264,7 +263,7 @@ class EocExecutableEntityRefGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -275,7 +274,7 @@ class EocExecutableEntityRefGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -286,7 +285,7 @@ class EocExecutableEntityRefGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DirectSuccessorRefs:
         direct_successor_ref: list[
             EocExecutableEntityRefGroup.DirectSuccessorRefs.DirectSuccessorRef
@@ -299,18 +298,17 @@ class EocExecutableEntityRefGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DirectSuccessorRef(Ref):
-            dest: None | EocExecutableEntityRefAbstractSubtypesEnum = field(
-                default=None,
+            dest: EocExecutableEntityRefAbstractSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LetIntervalRefs:
         let_interval_ref: list[
             EocExecutableEntityRefGroup.LetIntervalRefs.LetIntervalRef
@@ -323,18 +321,17 @@ class EocExecutableEntityRefGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class LetIntervalRef(Ref):
-            dest: None | TimingDescriptionEventChainSubtypesEnum = field(
-                default=None,
+            dest: TimingDescriptionEventChainSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NestedElementRefs:
         nested_element_ref: list[
             EocExecutableEntityRefGroup.NestedElementRefs.NestedElementRef
@@ -347,18 +344,17 @@ class EocExecutableEntityRefGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class NestedElementRef(Ref):
-            dest: None | EocExecutableEntityRefAbstractSubtypesEnum = field(
-                default=None,
+            dest: EocExecutableEntityRefAbstractSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SuccessorRefs:
         successor_ref: list[
             EocExecutableEntityRefGroup.SuccessorRefs.SuccessorRef
@@ -371,24 +367,22 @@ class EocExecutableEntityRefGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SuccessorRef(Ref):
-            dest: None | EocExecutableEntityRefAbstractSubtypesEnum = field(
-                default=None,
+            dest: EocExecutableEntityRefAbstractSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TriggeringEventRef(Ref):
-        dest: None | TimingDescriptionEventSubtypesEnum = field(
-            default=None,
+        dest: TimingDescriptionEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -32,7 +32,7 @@ from travelport.models.type_hotel_rate_description import (
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelReservation(BaseReservation1):
     """
     The complete Hotel Reservation.
@@ -132,13 +132,12 @@ class HotelReservation(BaseReservation1):
             "max_occurs": 999,
         },
     )
-    hotel_property: None | HotelProperty = field(
-        default=None,
+    hotel_property: HotelProperty = field(
         metadata={
             "name": "HotelProperty",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     hotel_rate_detail: list[HotelRateDetail] = field(
         default_factory=list,
@@ -149,13 +148,12 @@ class HotelReservation(BaseReservation1):
             "max_occurs": 99,
         },
     )
-    hotel_stay: None | HotelStay = field(
-        default=None,
+    hotel_stay: HotelStay = field(
         metadata={
             "name": "HotelStay",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     hotel_special_request: None | HotelSpecialRequest = field(
         default=None,
@@ -259,13 +257,12 @@ class HotelReservation(BaseReservation1):
             "type": "Element",
         },
     )
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     booking_confirmation: None | str = field(
         default=None,
@@ -311,7 +308,7 @@ class HotelReservation(BaseReservation1):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TotalReservationPrice:
         """
         Parameters
@@ -348,7 +345,7 @@ class HotelReservation(BaseReservation1):
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AdaptedRoomGuestAllocation:
         """
         Parameters

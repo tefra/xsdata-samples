@@ -23,7 +23,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SignalBasedFieldToISignalTriggeringMapping:
     """
     This meta-class defines the mapping of a ServiceInterface field to
@@ -110,14 +110,13 @@ class SignalBasedFieldToISignalTriggeringMapping:
     class Meta:
         name = "SIGNAL-BASED-FIELD-TO-I-SIGNAL-TRIGGERING-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SignalBasedFieldToISignalTriggeringMapping.ShortNameFragments
@@ -279,7 +278,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -290,7 +289,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -301,57 +300,52 @@ class SignalBasedFieldToISignalTriggeringMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GetterCallSignalRef(Ref):
-        dest: None | ISignalTriggeringSubtypesEnum = field(
-            default=None,
+        dest: ISignalTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GetterReturnSignalRef(Ref):
-        dest: None | ISignalTriggeringSubtypesEnum = field(
-            default=None,
+        dest: ISignalTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NotifierSignalTriggeringRef(Ref):
-        dest: None | ISignalTriggeringSubtypesEnum = field(
-            default=None,
+        dest: ISignalTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SetterCallSignalRef(Ref):
-        dest: None | ISignalTriggeringSubtypesEnum = field(
-            default=None,
+        dest: ISignalTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SetterReturnSignalRef(Ref):
-        dest: None | ISignalTriggeringSubtypesEnum = field(
-            default=None,
+        dest: ISignalTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

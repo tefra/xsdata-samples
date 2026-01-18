@@ -7,7 +7,7 @@ from .t_standard_loop_characteristics import TStandardLoopCharacteristics
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StandardLoopCharacteristics(TStandardLoopCharacteristics):
     class Meta:
         name = "standardLoopCharacteristics"

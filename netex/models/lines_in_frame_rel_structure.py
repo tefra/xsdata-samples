@@ -10,7 +10,7 @@ from .line import Line
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "linesInFrame_RelStructure"

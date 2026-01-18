@@ -7,7 +7,7 @@ from .resolution_policy_enum_simple import ResolutionPolicyEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResolutionPolicyEnum:
     """
     This specifies if the content of the xref element follow a dedicated
@@ -29,11 +29,10 @@ class ResolutionPolicyEnum:
     class Meta:
         name = "RESOLUTION-POLICY-ENUM"
 
-    value: None | ResolutionPolicyEnumSimple = field(
-        default=None,
+    value: ResolutionPolicyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BuildActionManifestRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -68,13 +68,12 @@ class BuildActionManifestRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BuildActionManifestRef(Ref):
-        dest: None | BuildActionManifestSubtypesEnum = field(
-            default=None,
+        dest: BuildActionManifestSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

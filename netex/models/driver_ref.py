@@ -7,7 +7,7 @@ from .driver_ref_structure import DriverRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DriverRef(DriverRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

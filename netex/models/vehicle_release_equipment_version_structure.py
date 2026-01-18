@@ -10,7 +10,7 @@ from .locking_mechanism_enumeration import LockingMechanismEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleReleaseEquipmentVersionStructure(
     InstalledEquipmentVersionStructure
 ):

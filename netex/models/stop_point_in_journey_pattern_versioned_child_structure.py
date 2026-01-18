@@ -33,7 +33,7 @@ from .vias_rel_structure import ViasRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StopPointInJourneyPatternVersionedChildStructure(
     PointInLinkSequenceVersionedChildStructure
 ):

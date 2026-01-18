@@ -21,7 +21,7 @@ from .coct_mt150007_uv import CoctMt150007UvOrganization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090108UvPerson:
     class Meta:
         name = "COCT_MT090108UV.Person"
@@ -85,7 +85,7 @@ class CoctMt090108UvPerson:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090108UvAssignedPerson:
     class Meta:
         name = "COCT_MT090108UV.AssignedPerson"

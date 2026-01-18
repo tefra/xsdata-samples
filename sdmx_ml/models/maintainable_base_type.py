@@ -7,7 +7,7 @@ from sdmx_ml.models.versionable_type import VersionableType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MaintainableBaseType(VersionableType):
     """
     MaintainableBaseType is an abstract type that only serves the purpose
@@ -17,11 +17,10 @@ class MaintainableBaseType(VersionableType):
     the id attribute.
     """
 
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
             "pattern": r"[A-Za-z0-9_@$\-]+",
-        },
+        }
     )

@@ -26,7 +26,7 @@ from .time_base_resource_subtypes_enum import TimeBaseResourceSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSyncPortPrototypeToTimeBaseMapping:
     """
     This meta-class provides the ability to map a PortPrototype typed by a
@@ -102,14 +102,13 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
     class Meta:
         name = "TIME-SYNC-PORT-PROTOTYPE-TO-TIME-BASE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | TimeSyncPortPrototypeToTimeBaseMapping.ShortNameFragments
@@ -242,7 +241,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -253,7 +252,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -264,24 +263,22 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProcessRef(Ref):
-        dest: None | ProcessSubtypesEnum = field(
-            default=None,
+        dest: ProcessSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimeBaseResourceRef(Ref):
-        dest: None | TimeBaseResourceSubtypesEnum = field(
-            default=None,
+        dest: TimeBaseResourceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

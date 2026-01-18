@@ -9,7 +9,7 @@ from .customer_purchase_package_element_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerPurchasePackageElement(
     CustomerPurchasePackageElementVersionStructure
 ):

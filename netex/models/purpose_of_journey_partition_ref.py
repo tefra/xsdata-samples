@@ -9,7 +9,7 @@ from .purpose_of_journey_partition_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PurposeOfJourneyPartitionRef(PurposeOfJourneyPartitionRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

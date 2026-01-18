@@ -9,7 +9,7 @@ from .point_on_link import PointOnLink
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointsOnLinkInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pointsOnLinkInFrame_RelStructure"

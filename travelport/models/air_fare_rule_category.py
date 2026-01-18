@@ -9,7 +9,7 @@ from travelport.models.type_fare_rule_category_code import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirFareRuleCategory:
     """
     A collection of fare rule category codes.

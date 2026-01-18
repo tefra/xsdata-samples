@@ -7,7 +7,7 @@ from .secured_pdu_header_enum_simple import SecuredPduHeaderEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecuredPduHeaderEnum:
     """
     Defines the header which will be inserted into the SecuredIPdu.
@@ -28,11 +28,10 @@ class SecuredPduHeaderEnum:
     class Meta:
         name = "SECURED-PDU-HEADER-ENUM"
 
-    value: None | SecuredPduHeaderEnumSimple = field(
-        default=None,
+    value: SecuredPduHeaderEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

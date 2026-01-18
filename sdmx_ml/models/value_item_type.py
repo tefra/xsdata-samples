@@ -9,7 +9,7 @@ from sdmx_ml.models.name import Name
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ValueItemType(AnnotableType):
     """
     ValueItemType defines the structure of a value item.
@@ -35,10 +35,9 @@ class ValueItemType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

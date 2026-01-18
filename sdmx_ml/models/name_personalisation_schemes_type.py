@@ -9,7 +9,7 @@ from sdmx_ml.models.name_personalisation_scheme_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class NamePersonalisationSchemesType:
     """
     NamePersonalisationSchemesType describes the structure of the name

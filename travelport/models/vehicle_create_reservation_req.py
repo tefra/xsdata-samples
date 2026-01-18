@@ -29,7 +29,7 @@ from travelport.models.vehicle_special_request import VehicleSpecialRequest
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
     """
     Parameters

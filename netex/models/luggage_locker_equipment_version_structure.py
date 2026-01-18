@@ -10,7 +10,7 @@ from .site_equipment_version_structure import SiteEquipmentVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LuggageLockerEquipmentVersionStructure(SiteEquipmentVersionStructure):
     class Meta:
         name = "LuggageLockerEquipment_VersionStructure"

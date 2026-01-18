@@ -12,7 +12,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoleBasedDataAssignment:
     """
     This class specifies an assignment of a role to a particular data
@@ -125,13 +125,12 @@ class RoleBasedDataAssignment:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UsedPimRef(Ref):
-        dest: None | PerInstanceMemorySubtypesEnum = field(
-            default=None,
+        dest: PerInstanceMemorySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

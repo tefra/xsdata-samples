@@ -14,239 +14,219 @@ from ..common.nhinc_common import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201301UvproxyRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201301UVProxyRequestType"
 
-    prpa_in201301_uv02: None | PrpaIn201301Uv02 = field(
-        default=None,
+    prpa_in201301_uv02: PrpaIn201301Uv02 = field(
         metadata={
             "name": "PRPA_IN201301UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    assertion: None | AssertionType = field(
-        default=None,
+    assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    nhin_target_system: None | NhinTargetSystemType = field(
-        default=None,
+    nhin_target_system: NhinTargetSystemType = field(
         metadata={
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201301UvproxySecuredRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201301UVProxySecuredRequestType"
 
-    prpa_in201301_uv02: None | PrpaIn201301Uv02 = field(
-        default=None,
+    prpa_in201301_uv02: PrpaIn201301Uv02 = field(
         metadata={
             "name": "PRPA_IN201301UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    nhin_target_system: None | NhinTargetSystemType = field(
-        default=None,
+    nhin_target_system: NhinTargetSystemType = field(
         metadata={
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201302UvproxyRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201302UVProxyRequestType"
 
-    prpa_in201302_uv02: None | PrpaIn201302Uv02 = field(
-        default=None,
+    prpa_in201302_uv02: PrpaIn201302Uv02 = field(
         metadata={
             "name": "PRPA_IN201302UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    assertion: None | AssertionType = field(
-        default=None,
+    assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    nhin_target_system: None | NhinTargetSystemType = field(
-        default=None,
+    nhin_target_system: NhinTargetSystemType = field(
         metadata={
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201302UvproxySecuredRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201302UVProxySecuredRequestType"
 
-    prpa_in201302_uv02: None | PrpaIn201302Uv02 = field(
-        default=None,
+    prpa_in201302_uv02: PrpaIn201302Uv02 = field(
         metadata={
             "name": "PRPA_IN201302UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    nhin_target_system: None | NhinTargetSystemType = field(
-        default=None,
+    nhin_target_system: NhinTargetSystemType = field(
         metadata={
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201304UvproxyRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201304UVProxyRequestType"
 
-    prpa_in201304_uv02: None | PrpaIn201304Uv02 = field(
-        default=None,
+    prpa_in201304_uv02: PrpaIn201304Uv02 = field(
         metadata={
             "name": "PRPA_IN201304UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    assertion: None | AssertionType = field(
-        default=None,
+    assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    nhin_target_system: None | NhinTargetSystemType = field(
-        default=None,
+    nhin_target_system: NhinTargetSystemType = field(
         metadata={
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201304UvproxySecuredRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201304UVProxySecuredRequestType"
 
-    prpa_in201304_uv02: None | PrpaIn201304Uv02 = field(
-        default=None,
+    prpa_in201304_uv02: PrpaIn201304Uv02 = field(
         metadata={
             "name": "PRPA_IN201304UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    nhin_target_system: None | NhinTargetSystemType = field(
-        default=None,
+    nhin_target_system: NhinTargetSystemType = field(
         metadata={
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201309UvproxyRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201309UVProxyRequestType"
 
-    prpa_in201309_uv02: None | PrpaIn201309Uv02 = field(
-        default=None,
+    prpa_in201309_uv02: PrpaIn201309Uv02 = field(
         metadata={
             "name": "PRPA_IN201309UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    assertion: None | AssertionType = field(
-        default=None,
+    assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    nhin_target_system: None | NhinTargetSystemType = field(
-        default=None,
+    nhin_target_system: NhinTargetSystemType = field(
         metadata={
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201309UvproxySecuredRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201309UVProxySecuredRequestType"
 
-    prpa_in201309_uv02: None | PrpaIn201309Uv02 = field(
-        default=None,
+    prpa_in201309_uv02: PrpaIn201309Uv02 = field(
         metadata={
             "name": "PRPA_IN201309UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    nhin_target_system: None | NhinTargetSystemType = field(
-        default=None,
+    nhin_target_system: NhinTargetSystemType = field(
         metadata={
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201301UvproxyRequest(
     PixconsumerPrpaIn201301UvproxyRequestType
 ):
@@ -255,7 +235,7 @@ class PixconsumerPrpaIn201301UvproxyRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201301UvproxySecuredRequest(
     PixconsumerPrpaIn201301UvproxySecuredRequestType
 ):
@@ -264,7 +244,7 @@ class PixconsumerPrpaIn201301UvproxySecuredRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201302UvproxyRequest(
     PixconsumerPrpaIn201302UvproxyRequestType
 ):
@@ -273,7 +253,7 @@ class PixconsumerPrpaIn201302UvproxyRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201302UvproxySecuredRequest(
     PixconsumerPrpaIn201302UvproxySecuredRequestType
 ):
@@ -282,7 +262,7 @@ class PixconsumerPrpaIn201302UvproxySecuredRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201304UvproxyRequest(
     PixconsumerPrpaIn201304UvproxyRequestType
 ):
@@ -291,7 +271,7 @@ class PixconsumerPrpaIn201304UvproxyRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201304UvproxySecuredRequest(
     PixconsumerPrpaIn201304UvproxySecuredRequestType
 ):
@@ -300,7 +280,7 @@ class PixconsumerPrpaIn201304UvproxySecuredRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201309UvproxyRequest(
     PixconsumerPrpaIn201309UvproxyRequestType
 ):
@@ -309,7 +289,7 @@ class PixconsumerPrpaIn201309UvproxyRequest(
         namespace = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PixconsumerPrpaIn201309UvproxySecuredRequest(
     PixconsumerPrpaIn201309UvproxySecuredRequestType
 ):

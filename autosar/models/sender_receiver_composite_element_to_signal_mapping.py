@@ -25,7 +25,7 @@ from .variable_data_prototype_in_system_instance_ref import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SenderReceiverCompositeElementToSignalMapping:
     """
     Mapping of an Variable Data Prototype which is aggregated within a
@@ -168,7 +168,7 @@ class SenderReceiverCompositeElementToSignalMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventGroupRefs:
         event_group_ref: list[
             SenderReceiverCompositeElementToSignalMapping.EventGroupRefs.EventGroupRef
@@ -181,18 +181,17 @@ class SenderReceiverCompositeElementToSignalMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EventGroupRef(Ref):
-            dest: None | ConsumedEventGroupSubtypesEnum = field(
-                default=None,
+            dest: ConsumedEventGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventHandlerRefs:
         event_handler_ref: list[
             SenderReceiverCompositeElementToSignalMapping.EventHandlerRefs.EventHandlerRef
@@ -205,18 +204,17 @@ class SenderReceiverCompositeElementToSignalMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EventHandlerRef(Ref):
-            dest: None | EventHandlerSubtypesEnum = field(
-                default=None,
+            dest: EventHandlerSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInstanceRefs:
         service_instance_ref: list[
             SenderReceiverCompositeElementToSignalMapping.ServiceInstanceRefs.ServiceInstanceRef
@@ -229,29 +227,27 @@ class SenderReceiverCompositeElementToSignalMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ServiceInstanceRef(Ref):
-            dest: None | AbstractServiceInstanceSubtypesEnum = field(
-                default=None,
+            dest: AbstractServiceInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SystemSignalRef(Ref):
-        dest: None | SystemSignalSubtypesEnum = field(
-            default=None,
+        dest: SystemSignalSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeMapping:
         sender_rec_array_type_mapping: None | SenderRecArrayTypeMapping = (
             field(

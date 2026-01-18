@@ -11,7 +11,7 @@ from .referrable_subtypes_enum import ReferrableSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LifeCycleInfo:
     """
     LifeCycleInfo describes the life cycle state of an element together
@@ -116,29 +116,27 @@ class LifeCycleInfo:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LcObjectRef(Ref):
-        dest: None | ReferrableSubtypesEnum = field(
-            default=None,
+        dest: ReferrableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LcStateRef(Ref):
-        dest: None | LifeCycleStateSubtypesEnum = field(
-            default=None,
+        dest: LifeCycleStateSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UseInsteadRefs:
         use_instead_ref: list[LifeCycleInfo.UseInsteadRefs.UseInsteadRef] = (
             field(
@@ -151,13 +149,12 @@ class LifeCycleInfo:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UseInsteadRef(Ref):
-            dest: None | ReferrableSubtypesEnum = field(
-                default=None,
+            dest: ReferrableSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

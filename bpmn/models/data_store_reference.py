@@ -7,7 +7,7 @@ from .t_data_store_reference import TDataStoreReference
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataStoreReference(TDataStoreReference):
     class Meta:
         name = "dataStoreReference"

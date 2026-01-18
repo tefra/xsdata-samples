@@ -23,7 +23,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecOcCryptoServiceMapping:
     """
     This meta-class has the ability to represent a crypto service mapping
@@ -95,14 +95,13 @@ class SecOcCryptoServiceMapping:
     class Meta:
         name = "SEC-OC-CRYPTO-SERVICE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SecOcCryptoServiceMapping.ShortNameFragments
@@ -223,7 +222,7 @@ class SecOcCryptoServiceMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -234,7 +233,7 @@ class SecOcCryptoServiceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -245,35 +244,32 @@ class SecOcCryptoServiceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AuthenticationRef(Ref):
-        dest: None | CryptoServicePrimitiveSubtypesEnum = field(
-            default=None,
+        dest: CryptoServicePrimitiveSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CryptoServiceKeyRef(Ref):
-        dest: None | CryptoServiceKeySubtypesEnum = field(
-            default=None,
+        dest: CryptoServiceKeySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CryptoServiceQueueRef(Ref):
-        dest: None | CryptoServiceQueueSubtypesEnum = field(
-            default=None,
+        dest: CryptoServiceQueueSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

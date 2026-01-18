@@ -7,7 +7,7 @@ from ipxact.models.slice_type import SliceType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SlicesType:
     """
     Each slice specifies the HDL path for part of the parent IP-XACT

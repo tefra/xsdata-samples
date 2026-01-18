@@ -7,7 +7,7 @@ from .ethernet_mac_layer_type_enum_simple import EthernetMacLayerTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthernetMacLayerTypeEnum:
     """
     Specifies MAC (Media Access Control) Layer types.
@@ -28,11 +28,10 @@ class EthernetMacLayerTypeEnum:
     class Meta:
         name = "ETHERNET-MAC-LAYER-TYPE-ENUM"
 
-    value: None | EthernetMacLayerTypeEnumSimple = field(
-        default=None,
+    value: EthernetMacLayerTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

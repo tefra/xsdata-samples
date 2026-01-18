@@ -10,7 +10,7 @@ from .hail_and_ride_area_ref import HailAndRideAreaRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HailAndRideAreasRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "hailAndRideAreas_RelStructure"

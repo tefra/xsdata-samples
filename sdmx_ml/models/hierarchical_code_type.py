@@ -9,7 +9,7 @@ from sdmx_ml.models.hierarchical_code_base_type import HierarchicalCodeBaseType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class HierarchicalCodeType(HierarchicalCodeBaseType):
     """
     HierarchicalCodeType describes the structure of a hierarchical code.
@@ -43,15 +43,14 @@ class HierarchicalCodeType(HierarchicalCodeBaseType):
         be used to track the historicity of codes changing over time.
     """
 
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r".+\.codelist\.Code=.+",
-        },
+        }
     )
     hierarchical_code: tuple[HierarchicalCodeType, ...] = field(
         default_factory=tuple,

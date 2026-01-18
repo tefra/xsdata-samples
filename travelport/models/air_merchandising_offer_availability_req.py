@@ -16,7 +16,7 @@ from travelport.models.offer_availability_modifiers import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirMerchandisingOfferAvailabilityReq(BaseReq1):
     """
     Check with the supplier whether or not the reservation or air solution

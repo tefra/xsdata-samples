@@ -7,7 +7,7 @@ from travelport.models.type_taggable_phone_1 import TypeTaggablePhone1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Phone1(TypeTaggablePhone1):
     """
     Profile Phone Number.

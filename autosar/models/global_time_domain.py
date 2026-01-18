@@ -42,7 +42,7 @@ from .user_defined_global_time_slave import UserDefinedGlobalTimeSlave
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GlobalTimeDomain:
     """
     This represents the ability to define a global time domain.
@@ -175,14 +175,13 @@ class GlobalTimeDomain:
     class Meta:
         name = "GLOBAL-TIME-DOMAIN"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | GlobalTimeDomain.ShortNameFragments = field(
         default=None,
@@ -443,7 +442,7 @@ class GlobalTimeDomain:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -454,7 +453,7 @@ class GlobalTimeDomain:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -465,7 +464,7 @@ class GlobalTimeDomain:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommunicationClusterRefs:
         communication_cluster_ref: list[
             GlobalTimeDomain.CommunicationClusterRefs.CommunicationClusterRef
@@ -478,18 +477,17 @@ class GlobalTimeDomain:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CommunicationClusterRef(Ref):
-            dest: None | CommunicationClusterSubtypesEnum = field(
-                default=None,
+            dest: CommunicationClusterSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Gateways:
         global_time_gateway: list[GlobalTimeGateway] = field(
             default_factory=list,
@@ -500,7 +498,7 @@ class GlobalTimeDomain:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GlobalTimeDomainPropertys:
         can_global_time_domain_props: list[CanGlobalTimeDomainProps] = field(
             default_factory=list,
@@ -527,7 +525,7 @@ class GlobalTimeDomain:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GlobalTimeDomainProps:
         can_global_time_domain_props: None | CanGlobalTimeDomainProps = field(
             default=None,
@@ -554,7 +552,7 @@ class GlobalTimeDomain:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GlobalTimeMasters:
         global_time_can_master: list[GlobalTimeCanMaster] = field(
             default_factory=list,
@@ -591,29 +589,27 @@ class GlobalTimeDomain:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GlobalTimePduRef(Ref):
-        dest: None | GeneralPurposePduSubtypesEnum = field(
-            default=None,
+        dest: GeneralPurposePduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GlobalTimePduTriggeringRef(Ref):
-        dest: None | PduTriggeringSubtypesEnum = field(
-            default=None,
+        dest: PduTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GlobalTimeSubDomains:
         global_time_domain_ref_conditional: list[
             GlobalTimeDomainRefConditional
@@ -626,7 +622,7 @@ class GlobalTimeDomain:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Master:
         global_time_can_master: None | GlobalTimeCanMaster = field(
             default=None,
@@ -663,18 +659,17 @@ class GlobalTimeDomain:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OffsetTimeDomainRef(Ref):
-        dest: None | GlobalTimeDomainSubtypesEnum = field(
-            default=None,
+        dest: GlobalTimeDomainSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduTriggerings:
         pdu_triggering_ref_conditional: list[PduTriggeringRefConditional] = (
             field(
@@ -687,7 +682,7 @@ class GlobalTimeDomain:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Slaves:
         global_time_can_slave: list[GlobalTimeCanSlave] = field(
             default_factory=list,
@@ -724,7 +719,7 @@ class GlobalTimeDomain:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SubDomainRefs:
         sub_domain_ref: list[GlobalTimeDomain.SubDomainRefs.SubDomainRef] = (
             field(
@@ -737,13 +732,12 @@ class GlobalTimeDomain:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SubDomainRef(Ref):
-            dest: None | GlobalTimeDomainSubtypesEnum = field(
-                default=None,
+            dest: GlobalTimeDomainSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

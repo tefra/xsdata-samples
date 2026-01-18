@@ -8,7 +8,7 @@ from sabre.models.message_class_type import MessageClassType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ErrorType(FreeTextType):
     """
     Standard way to indicate that an error occurred during the processing
@@ -51,13 +51,12 @@ class ErrorType(FreeTextType):
             systems that cannot maintain the original message.
     """
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     short_text: None | str = field(
         default=None,

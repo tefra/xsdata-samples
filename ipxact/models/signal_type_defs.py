@@ -7,7 +7,7 @@ from ipxact.models.signal_type_def import SignalTypeDef
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SignalTypeDefs:
     """
     The group of signal type definitions.

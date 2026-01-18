@@ -17,7 +17,7 @@ from .unknown_subscription_error import UnknownSubscriptionError
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TerminationResponseStatusStructure:
     response_timestamp: None | ResponseTimestamp = field(
         default=None,
@@ -59,14 +59,13 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    status: None | Status = field(
-        default=None,
+    status: Status = field(
         metadata={
             "name": "Status",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        },
+        }
     )
     error_condition: (
         None | TerminationResponseStatusStructure.ErrorCondition
@@ -79,7 +78,7 @@ class TerminationResponseStatusStructure:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ErrorCondition:
         choice: (
             None

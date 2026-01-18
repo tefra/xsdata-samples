@@ -7,7 +7,7 @@ from .build_type_enum_simple import BuildTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BuildTypeEnum:
     """
     This enumeration defines the possible buildTypes a software module may
@@ -29,11 +29,10 @@ class BuildTypeEnum:
     class Meta:
         name = "BUILD-TYPE-ENUM"
 
-    value: None | BuildTypeEnumSimple = field(
-        default=None,
+    value: BuildTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

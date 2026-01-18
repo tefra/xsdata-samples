@@ -8,7 +8,7 @@ from travelport.models.type_error_info_5 import TypeErrorInfo5
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FieldModifyErrorInfo(TypeErrorInfo5):
     """
     When field or field groups cannot be modified, we see the templates

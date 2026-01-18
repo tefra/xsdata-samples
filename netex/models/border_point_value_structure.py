@@ -10,7 +10,7 @@ from .timing_point_version_structure import TimingPointVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BorderPointValueStructure(TimingPointVersionStructure):
     class Meta:
         name = "BorderPoint_ValueStructure"

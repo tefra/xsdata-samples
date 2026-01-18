@@ -20,7 +20,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PerilStructureType(BaseIdentifiedComponentType):
     limits: None | LimitsType = field(
         default=None,
@@ -38,14 +38,13 @@ class PerilStructureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    peril: None | PerilType = field(
-        default=None,
+    peril: PerilType = field(
         metadata={
             "name": "Peril",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     worldwide_flag: None | str = field(
         default=None,

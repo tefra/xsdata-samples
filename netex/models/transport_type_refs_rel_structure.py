@@ -13,7 +13,7 @@ from .vehicle_type_ref import VehicleTypeRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportTypeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "transportTypeRefs_RelStructure"

@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.special_day_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecialDay:
     """
     Specification of a special day, for example schoolDay, electionDay, ...
@@ -32,23 +32,21 @@ class SpecialDay:
     :ivar special_day_extension:
     """
 
-    intersect_with_applicable_days: None | bool = field(
-        default=None,
+    intersect_with_applicable_days: bool = field(
         metadata={
             "name": "intersectWithApplicableDays",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    special_day_type: None | SpecialDayTypeEnum = field(
-        default=None,
+    special_day_type: SpecialDayTypeEnum = field(
         metadata={
             "name": "specialDayType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     special_day_name: None | MultilingualString = field(
         default=None,

@@ -28,7 +28,7 @@ from .used_in_refs_rel_structure import UsedInRefsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "StandardFareTable_VersionStructure"
@@ -159,14 +159,13 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    second_class_single: None | Decimal = field(
-        default=None,
+    second_class_single: Decimal = field(
         metadata={
             "name": "SecondClassSingle",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     first_class_return: None | Decimal = field(
         default=None,

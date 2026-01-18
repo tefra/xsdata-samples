@@ -14,7 +14,7 @@ from travelport.models.traveler_information_4 import TravelerInformation4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FileFinishingInfo4:
     """
     Misc Data required for File Finishing.

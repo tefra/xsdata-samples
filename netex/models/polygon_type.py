@@ -10,7 +10,7 @@ from .interior import Interior
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PolygonType(AbstractSurfaceType):
     exterior: None | Exterior = field(
         default=None,

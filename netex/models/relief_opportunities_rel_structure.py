@@ -10,7 +10,7 @@ from .relief_opportunity_ref import ReliefOpportunityRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReliefOpportunitiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "reliefOpportunities_RelStructure"

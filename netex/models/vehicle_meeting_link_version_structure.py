@@ -10,26 +10,24 @@ from .vehicle_meeting_point_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleMeetingLinkVersionStructure(LinkVersionStructure):
     class Meta:
         name = "VehicleMeetingLink_VersionStructure"
 
-    from_point_ref: None | VehicleMeetingPointRefStructure = field(
-        default=None,
+    from_point_ref: VehicleMeetingPointRefStructure = field(
         metadata={
             "name": "FromPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    to_point_ref: None | VehicleMeetingPointRefStructure = field(
-        default=None,
+    to_point_ref: VehicleMeetingPointRefStructure = field(
         metadata={
             "name": "ToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

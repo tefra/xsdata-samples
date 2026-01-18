@@ -7,7 +7,7 @@ from .tp_port import TpPort
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UdpTp:
     """
     Content Model for UDP configuration.

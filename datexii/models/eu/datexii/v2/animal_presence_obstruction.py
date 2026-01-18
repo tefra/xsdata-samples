@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.obstruction import Obstruction
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AnimalPresenceObstruction(Obstruction):
     """
     An obstruction on the road resulting from the presence of animals.
@@ -30,14 +30,13 @@ class AnimalPresenceObstruction(Obstruction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    animal_presence_type: None | AnimalPresenceTypeEnum = field(
-        default=None,
+    animal_presence_type: AnimalPresenceTypeEnum = field(
         metadata={
             "name": "animalPresenceType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     animal_presence_obstruction_extension: None | ExtensionType = field(
         default=None,

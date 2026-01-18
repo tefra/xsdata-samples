@@ -8,7 +8,7 @@ from travelport.models.rail_refund_info import RailRefundInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailRefundQuoteRsp(BaseRsp1):
     """
     Returns rail refund information.

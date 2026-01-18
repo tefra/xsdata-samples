@@ -7,7 +7,7 @@ from travelport.models.base_rsp_1 import BaseRsp1
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GdsQueueRemoveRsp(BaseRsp1):
     """
     An empty response indicates success.

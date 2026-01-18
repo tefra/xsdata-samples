@@ -10,7 +10,7 @@ from .course_of_journeys_ref import CourseOfJourneysRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoursesOfJourneysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "coursesOfJourneys_RelStructure"

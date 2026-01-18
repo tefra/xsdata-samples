@@ -8,7 +8,7 @@ from travelport.models.type_element_status_7 import TypeElementStatus7
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailSeatAssignment6:
     """
     Identifies the seat assignment for a passenger on RailSegment.
@@ -50,23 +50,21 @@ class RailSeatAssignment6:
             "type": "Attribute",
         },
     )
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
             "length": 2,
             "white_space": "collapse",
-        },
+        }
     )
-    seat: None | str = field(
-        default=None,
+    seat: str = field(
         metadata={
             "name": "Seat",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     rail_segment_ref: None | str = field(
         default=None,

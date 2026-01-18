@@ -7,7 +7,7 @@ from sdmx_ml.models.structures import Structures
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class StructuralEventType:
     """
     StructuralEventType provides the details of a structure event,
@@ -19,12 +19,11 @@ class StructuralEventType:
         the one changed object.
     """
 
-    structures: None | Structures = field(
-        default=None,
+    structures: Structures = field(
         metadata={
             "name": "Structures",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )

@@ -12,7 +12,7 @@ from .value_list import ValueList
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RuleBasedAxisCont:
     """
     This represents the values for the axis of a compound primitive (curve,
@@ -107,13 +107,12 @@ class RuleBasedAxisCont:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnitRef(Ref):
-        dest: None | UnitSubtypesEnum = field(
-            default=None,
+        dest: UnitSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

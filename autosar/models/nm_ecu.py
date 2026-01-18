@@ -26,7 +26,7 @@ from .udp_nm_ecu import UdpNmEcu
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NmEcu:
     """
     ECU on which NM is running.
@@ -127,14 +127,13 @@ class NmEcu:
     class Meta:
         name = "NM-ECU"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | NmEcu.ShortNameFragments = field(
         default=None,
@@ -351,7 +350,7 @@ class NmEcu:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -362,7 +361,7 @@ class NmEcu:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -373,7 +372,7 @@ class NmEcu:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BusDependentNmEcus:
         can_nm_ecu: list[CanNmEcu] = field(
             default_factory=list,
@@ -408,7 +407,7 @@ class NmEcu:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BusSpecificNmEcu:
         can_nm_ecu: None | CanNmEcu = field(
             default=None,
@@ -443,13 +442,12 @@ class NmEcu:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuInstanceRef(Ref):
-        dest: None | EcuInstanceSubtypesEnum = field(
-            default=None,
+        dest: EcuInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

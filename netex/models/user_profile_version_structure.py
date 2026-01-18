@@ -22,7 +22,7 @@ from .user_type_enumeration import UserTypeEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UserProfileVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "UserProfile_VersionStructure"

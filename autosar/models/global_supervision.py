@@ -20,7 +20,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GlobalSupervision:
     """
     This element defines a collection of LocalSupervisions in order to
@@ -90,14 +90,13 @@ class GlobalSupervision:
     class Meta:
         name = "GLOBAL-SUPERVISION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | GlobalSupervision.ShortNameFragments = field(
         default=None,
@@ -204,7 +203,7 @@ class GlobalSupervision:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -215,7 +214,7 @@ class GlobalSupervision:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -226,7 +225,7 @@ class GlobalSupervision:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LocalSupervisionRefs:
         local_supervision_ref: list[
             GlobalSupervision.LocalSupervisionRefs.LocalSupervisionRef
@@ -239,13 +238,12 @@ class GlobalSupervision:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class LocalSupervisionRef(Ref):
-            dest: None | LocalSupervisionSubtypesEnum = field(
-                default=None,
+            dest: LocalSupervisionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

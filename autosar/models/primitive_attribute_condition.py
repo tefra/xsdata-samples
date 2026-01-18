@@ -14,7 +14,7 @@ from .regular_expression import RegularExpression
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrimitiveAttributeCondition:
     """
     The PrimitiveAttributeCondition evaluates to true, if the referenced
@@ -143,13 +143,12 @@ class PrimitiveAttributeCondition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AttributeRef(Ref):
-        dest: None | PrimitiveAttributeTailoringSubtypesEnum = field(
-            default=None,
+        dest: PrimitiveAttributeTailoringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

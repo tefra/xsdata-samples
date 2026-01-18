@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.tpeg_point import TpegPoint
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TpegLinearLocation:
     """
     A linear section along a single road defined between two points on the
@@ -27,42 +27,36 @@ class TpegLinearLocation:
     :ivar tpeg_linear_location_extension:
     """
 
-    tpeg_direction: None | DirectionEnum = field(
-        default=None,
+    tpeg_direction: DirectionEnum = field(
         metadata={
             "name": "tpegDirection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    tpeg_linear_location_type: None | TpegLoc01LinearLocationSubtypeEnum = (
-        field(
-            default=None,
-            metadata={
-                "name": "tpegLinearLocationType",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
-            },
-        )
+    tpeg_linear_location_type: TpegLoc01LinearLocationSubtypeEnum = field(
+        metadata={
+            "name": "tpegLinearLocationType",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
+        }
     )
-    to: None | TpegPoint = field(
-        default=None,
+    to: TpegPoint = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    from_value: None | TpegPoint = field(
-        default=None,
+    from_value: TpegPoint = field(
         metadata={
             "name": "from",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     tpeg_linear_location_extension: None | ExtensionType = field(
         default=None,

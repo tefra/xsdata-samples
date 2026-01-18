@@ -7,7 +7,7 @@ from travelport.models.discount_card_1 import DiscountCard1
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailPricingModifiers:
     """
     Search flexibiity criteria .

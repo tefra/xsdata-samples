@@ -9,7 +9,7 @@ from .diagnostic_response_to_ecu_reset_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticResponseToEcuResetEnum:
     """
     :ivar value:
@@ -28,11 +28,10 @@ class DiagnosticResponseToEcuResetEnum:
     class Meta:
         name = "DIAGNOSTIC-RESPONSE-TO-ECU-RESET-ENUM"
 
-    value: None | DiagnosticResponseToEcuResetEnumSimple = field(
-        default=None,
+    value: DiagnosticResponseToEcuResetEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -7,7 +7,7 @@ from .show_resource_type_enum_simple import ShowResourceTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShowResourceTypeEnum:
     """
     This enumerator specifies if the type (e.g. derived from the class) of
@@ -29,11 +29,10 @@ class ShowResourceTypeEnum:
     class Meta:
         name = "SHOW-RESOURCE-TYPE-ENUM"
 
-    value: None | ShowResourceTypeEnumSimple = field(
-        default=None,
+    value: ShowResourceTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

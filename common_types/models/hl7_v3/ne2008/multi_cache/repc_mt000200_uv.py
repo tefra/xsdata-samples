@@ -94,7 +94,7 @@ from .repc_mt000300_uv01 import RepcMt000300Uv01Concern
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvAuthor:
     class Meta:
         name = "REPC_MT000200UV.Author"
@@ -131,31 +131,28 @@ class RepcMt000200UvAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: None | TsExplicit = field(
-        default=None,
+    time: TsExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    mode_code: None | Ce = field(
-        default=None,
+    mode_code: Ce = field(
         metadata={
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    signature_code: None | Ce = field(
-        default=None,
+    signature_code: Ce = field(
         metadata={
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     signature_text: None | EdExplicit = field(
         default=None,
@@ -207,7 +204,7 @@ class RepcMt000200UvAuthor:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvAuthor6:
     class Meta:
         name = "REPC_MT000200UV.Author6"
@@ -244,31 +241,28 @@ class RepcMt000200UvAuthor6:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: None | TsExplicit = field(
-        default=None,
+    time: TsExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    mode_code: None | Ce = field(
-        default=None,
+    mode_code: Ce = field(
         metadata={
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    signature_code: None | Ce = field(
-        default=None,
+    signature_code: Ce = field(
         metadata={
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     signature_text: None | EdExplicit = field(
         default=None,
@@ -279,13 +273,12 @@ class RepcMt000200UvAuthor6:
         },
     )
     assigned_party: None | CoctMt090400UvAssignedParty = field(
-        default=None,
         metadata={
             "name": "assignedParty",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -312,7 +305,7 @@ class RepcMt000200UvAuthor6:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvComponent2:
     class Meta:
         name = "REPC_MT000200UV.Component2"
@@ -350,12 +343,11 @@ class RepcMt000200UvComponent2:
         },
     )
     guideline: None | RepcMt000200UvGuideline = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -364,13 +356,12 @@ class RepcMt000200UvComponent2:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipHasComponent = field(
-        default=None,
+    type_code: ActRelationshipHasComponent = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: None | ContextControl = field(
         default=None,
@@ -389,7 +380,7 @@ class RepcMt000200UvComponent2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvCriterion:
     class Meta:
         name = "REPC_MT000200UV.Criterion"
@@ -432,22 +423,20 @@ class RepcMt000200UvCriterion:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | AnyType = field(
-        default=None,
+    value: AnyType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    interpretation_code: None | Ce = field(
-        default=None,
+    interpretation_code: Ce = field(
         metadata={
             "name": "interpretationCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     precondition: list[RepcMt000200UvPrecondition2] = field(
         default_factory=list,
@@ -464,13 +453,12 @@ class RepcMt000200UvCriterion:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassObservation = field(
-        default=None,
+    class_code: ActClassObservation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -491,7 +479,7 @@ class RepcMt000200UvCriterion:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvCriterionGroup:
     class Meta:
         name = "REPC_MT000200UV.CriterionGroup"
@@ -527,13 +515,12 @@ class RepcMt000200UvCriterionGroup:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -546,7 +533,7 @@ class RepcMt000200UvCriterionGroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvDataEnterer:
     class Meta:
         name = "REPC_MT000200UV.DataEnterer"
@@ -607,13 +594,12 @@ class RepcMt000200UvDataEnterer:
         },
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -640,7 +626,7 @@ class RepcMt000200UvDataEnterer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvInFulfillmentOf:
     class Meta:
         name = "REPC_MT000200UV.InFulfillmentOf"
@@ -744,13 +730,12 @@ class RepcMt000200UvInFulfillmentOf:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipFulfills = field(
-        default=None,
+    type_code: ActRelationshipFulfills = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
@@ -769,7 +754,7 @@ class RepcMt000200UvInFulfillmentOf:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvMaterialKind2:
     class Meta:
         name = "REPC_MT000200UV.MaterialKind2"
@@ -819,25 +804,23 @@ class RepcMt000200UvMaterialKind2:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassMaterial = field(
-        default=None,
+    class_code: EntityClassMaterial = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    determiner_code: None | EntityDeterminerDetermined = field(
-        default=None,
+    determiner_code: EntityDeterminerDetermined = field(
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvObservationGoal:
     class Meta:
         name = "REPC_MT000200UV.ObservationGoal"
@@ -866,30 +849,27 @@ class RepcMt000200UvObservationGoal:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    effective_time: None | IvlTsExplicit = field(
-        default=None,
+    effective_time: IvlTsExplicit = field(
         metadata={
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    value: None | AnyType = field(
-        default=None,
+    value: AnyType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -898,13 +878,12 @@ class RepcMt000200UvObservationGoal:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassObservation = field(
-        default=None,
+    class_code: ActClassObservation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -917,7 +896,7 @@ class RepcMt000200UvObservationGoal:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvParticipant:
     class Meta:
         name = "REPC_MT000200UV.Participant"
@@ -963,13 +942,12 @@ class RepcMt000200UvParticipant:
         },
     )
     assigned_party: None | CoctMt090400UvAssignedParty = field(
-        default=None,
         metadata={
             "name": "assignedParty",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -978,13 +956,12 @@ class RepcMt000200UvParticipant:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationParticipation = field(
-        default=None,
+    type_code: ParticipationParticipation = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: None | ContextControl = field(
         default=None,
@@ -995,7 +972,7 @@ class RepcMt000200UvParticipant:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvPerformer:
     class Meta:
         name = "REPC_MT000200UV.Performer"
@@ -1048,13 +1025,12 @@ class RepcMt000200UvPerformer:
         },
     )
     assigned_party: None | CoctMt090400UvAssignedParty = field(
-        default=None,
         metadata={
             "name": "assignedParty",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1063,13 +1039,12 @@ class RepcMt000200UvPerformer:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationPhysicalPerformer = field(
-        default=None,
+    type_code: ParticipationPhysicalPerformer = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
@@ -1080,7 +1055,7 @@ class RepcMt000200UvPerformer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvPerformer2:
     class Meta:
         name = "REPC_MT000200UV.Performer2"
@@ -1117,13 +1092,12 @@ class RepcMt000200UvPerformer2:
         },
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1132,13 +1106,12 @@ class RepcMt000200UvPerformer2:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationPhysicalPerformer = field(
-        default=None,
+    type_code: ParticipationPhysicalPerformer = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
@@ -1149,7 +1122,7 @@ class RepcMt000200UvPerformer2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvReason2:
     class Meta:
         name = "REPC_MT000200UV.Reason2"
@@ -1179,12 +1152,11 @@ class RepcMt000200UvReason2:
         },
     )
     concern: None | RepcMt000300Uv01Concern = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1193,13 +1165,12 @@ class RepcMt000200UvReason2:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipReason = field(
-        default=None,
+    type_code: ActRelationshipReason = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
@@ -1218,7 +1189,7 @@ class RepcMt000200UvReason2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvVerifier:
     class Meta:
         name = "REPC_MT000200UV.Verifier"
@@ -1287,13 +1258,12 @@ class RepcMt000200UvVerifier:
         },
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
-        default=None,
         metadata={
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1302,13 +1272,12 @@ class RepcMt000200UvVerifier:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationVerifier = field(
-        default=None,
+    type_code: ParticipationVerifier = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
@@ -1319,7 +1288,7 @@ class RepcMt000200UvVerifier:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvAnnotation:
     class Meta:
         name = "REPC_MT000200UV.Annotation"
@@ -1348,22 +1317,20 @@ class RepcMt000200UvAnnotation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: None | St = field(
-        default=None,
+    text: St = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     author: list[RepcMt000200UvAuthor6] = field(
         default_factory=list,
@@ -1380,13 +1347,12 @@ class RepcMt000200UvAnnotation:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -1399,7 +1365,7 @@ class RepcMt000200UvAnnotation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvConditions:
     class Meta:
         name = "REPC_MT000200UV.Conditions"
@@ -1468,13 +1434,12 @@ class RepcMt000200UvConditions:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipConditional = field(
-        default=None,
+    type_code: ActRelationshipConditional = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.ON,
@@ -1493,7 +1458,7 @@ class RepcMt000200UvConditions:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvFinalGoal:
     class Meta:
         name = "REPC_MT000200UV.FinalGoal"
@@ -1523,13 +1488,12 @@ class RepcMt000200UvFinalGoal:
         },
     )
     observation_goal: None | RepcMt000200UvObservationGoal = field(
-        default=None,
         metadata={
             "name": "observationGoal",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1585,7 +1549,7 @@ class RepcMt000200UvFinalGoal:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvGoal:
     class Meta:
         name = "REPC_MT000200UV.Goal"
@@ -1615,13 +1579,12 @@ class RepcMt000200UvGoal:
         },
     )
     observation_goal: None | RepcMt000200UvObservationGoal = field(
-        default=None,
         metadata={
             "name": "observationGoal",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1677,7 +1640,7 @@ class RepcMt000200UvGoal:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvMaterialPart:
     class Meta:
         name = "REPC_MT000200UV.MaterialPart"
@@ -1706,14 +1669,13 @@ class RepcMt000200UvMaterialPart:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    part_material_kind: None | RepcMt000200UvMaterialKind2 = field(
-        default=None,
+    part_material_kind: RepcMt000200UvMaterialKind2 = field(
         metadata={
             "name": "partMaterialKind",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1722,17 +1684,16 @@ class RepcMt000200UvMaterialPart:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassPartitive = field(
-        default=None,
+    class_code: RoleClassPartitive = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvPatientInstructions:
     class Meta:
         name = "REPC_MT000200UV.PatientInstructions"
@@ -1805,13 +1766,12 @@ class RepcMt000200UvPatientInstructions:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassProcedure = field(
-        default=None,
+    class_code: ActClassProcedure = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -1824,7 +1784,7 @@ class RepcMt000200UvPatientInstructions:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvPlannedReview:
     class Meta:
         name = "REPC_MT000200UV.PlannedReview"
@@ -1885,17 +1845,16 @@ class RepcMt000200UvPlannedReview:
             "required": True,
         },
     )
-    mood_code: None | ActMoodIntent = field(
-        default=None,
+    mood_code: ActMoodIntent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvPrecondition2:
     class Meta:
         name = "REPC_MT000200UV.Precondition2"
@@ -1941,12 +1900,11 @@ class RepcMt000200UvPrecondition2:
         },
     )
     criterion: None | RepcMt000200UvCriterion = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2002,7 +1960,7 @@ class RepcMt000200UvPrecondition2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvComponent:
     class Meta:
         name = "REPC_MT000200UV.Component"
@@ -2032,13 +1990,12 @@ class RepcMt000200UvComponent:
         },
     )
     patient_instructions: None | RepcMt000200UvPatientInstructions = field(
-        default=None,
         metadata={
             "name": "patientInstructions",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2047,13 +2004,12 @@ class RepcMt000200UvComponent:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipHasComponent = field(
-        default=None,
+    type_code: ActRelationshipHasComponent = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
@@ -2072,7 +2028,7 @@ class RepcMt000200UvComponent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvMaterialKind:
     class Meta:
         name = "REPC_MT000200UV.MaterialKind"
@@ -2131,25 +2087,23 @@ class RepcMt000200UvMaterialKind:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassMaterial = field(
-        default=None,
+    class_code: EntityClassMaterial = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    determiner_code: None | EntityDeterminerDetermined = field(
-        default=None,
+    determiner_code: EntityDeterminerDetermined = field(
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvSubject:
     class Meta:
         name = "REPC_MT000200UV.Subject"
@@ -2179,13 +2133,12 @@ class RepcMt000200UvSubject:
         },
     )
     planned_review: None | RepcMt000200UvPlannedReview = field(
-        default=None,
         metadata={
             "name": "plannedReview",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2241,7 +2194,7 @@ class RepcMt000200UvSubject:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvSubject2:
     class Meta:
         name = "REPC_MT000200UV.Subject2"
@@ -2271,12 +2224,11 @@ class RepcMt000200UvSubject2:
         },
     )
     annotation: None | RepcMt000200UvAnnotation = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2332,7 +2284,7 @@ class RepcMt000200UvSubject2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvActDefinition:
     class Meta:
         name = "REPC_MT000200UV.ActDefinition"
@@ -2369,13 +2321,12 @@ class RepcMt000200UvActDefinition:
             "min_occurs": 1,
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     text: None | EdExplicit = field(
         default=None,
@@ -2489,13 +2440,12 @@ class RepcMt000200UvActDefinition:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -2516,7 +2466,7 @@ class RepcMt000200UvActDefinition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvAdministerableMaterial:
     class Meta:
         name = "REPC_MT000200UV.AdministerableMaterial"
@@ -2545,14 +2495,13 @@ class RepcMt000200UvAdministerableMaterial:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    administerable_material_kind: None | RepcMt000200UvMaterialKind = field(
-        default=None,
+    administerable_material_kind: RepcMt000200UvMaterialKind = field(
         metadata={
             "name": "administerableMaterialKind",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2589,7 +2538,7 @@ class RepcMt000200UvAdministerableMaterial:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvEncounterDefinition:
     class Meta:
         name = "REPC_MT000200UV.EncounterDefinition"
@@ -2749,7 +2698,7 @@ class RepcMt000200UvEncounterDefinition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvObservationDefinition:
     class Meta:
         name = "REPC_MT000200UV.ObservationDefinition"
@@ -2786,13 +2735,12 @@ class RepcMt000200UvObservationDefinition:
             "min_occurs": 1,
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     derivation_expr: None | St = field(
         default=None,
@@ -2945,13 +2893,12 @@ class RepcMt000200UvObservationDefinition:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassObservation = field(
-        default=None,
+    class_code: ActClassObservation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -2964,7 +2911,7 @@ class RepcMt000200UvObservationDefinition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvProcedureDefinition:
     class Meta:
         name = "REPC_MT000200UV.ProcedureDefinition"
@@ -3144,13 +3091,12 @@ class RepcMt000200UvProcedureDefinition:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassProcedure = field(
-        default=None,
+    class_code: ActClassProcedure = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -3171,7 +3117,7 @@ class RepcMt000200UvProcedureDefinition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvSupplyEvent:
     class Meta:
         name = "REPC_MT000200UV.SupplyEvent"
@@ -3264,13 +3210,12 @@ class RepcMt000200UvSupplyEvent:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassSupply = field(
-        default=None,
+    class_code: ActClassSupply = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -3291,7 +3236,7 @@ class RepcMt000200UvSupplyEvent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvConsumable:
     class Meta:
         name = "REPC_MT000200UV.Consumable"
@@ -3362,7 +3307,7 @@ class RepcMt000200UvConsumable:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvSubstanceAdministrationDefinition:
     class Meta:
         name = "REPC_MT000200UV.SubstanceAdministrationDefinition"
@@ -3509,13 +3454,12 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    consumable: None | RepcMt000200UvConsumable = field(
-        default=None,
+    consumable: RepcMt000200UvConsumable = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     goal: list[RepcMt000200UvGoal] = field(
         default_factory=list,
@@ -3594,7 +3538,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvComponent13:
     class Meta:
         name = "REPC_MT000200UV.Component13"
@@ -3694,13 +3638,12 @@ class RepcMt000200UvComponent13:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipHasComponent = field(
-        default=None,
+    type_code: ActRelationshipHasComponent = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: None | ContextControl = field(
         default=None,
@@ -3719,7 +3662,7 @@ class RepcMt000200UvComponent13:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvInFulfillmentOf2:
     class Meta:
         name = "REPC_MT000200UV.InFulfillmentOf2"
@@ -3811,13 +3754,12 @@ class RepcMt000200UvInFulfillmentOf2:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipFulfills = field(
-        default=None,
+    type_code: ActRelationshipFulfills = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.ON,
@@ -3836,7 +3778,7 @@ class RepcMt000200UvInFulfillmentOf2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvActIntent:
     class Meta:
         name = "REPC_MT000200UV.ActIntent"
@@ -3873,13 +3815,12 @@ class RepcMt000200UvActIntent:
             "min_occurs": 1,
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     text: None | EdExplicit = field(
         default=None,
@@ -4035,21 +3976,19 @@ class RepcMt000200UvActIntent:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | ActMoodIntent = field(
-        default=None,
+    mood_code: ActMoodIntent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     negation_ind: None | str = field(
         default=None,
@@ -4061,7 +4000,7 @@ class RepcMt000200UvActIntent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvGuideline:
     class Meta:
         name = "REPC_MT000200UV.Guideline"
@@ -4209,13 +4148,12 @@ class RepcMt000200UvGuideline:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassCareProvision = field(
-        default=None,
+    class_code: ActClassCareProvision = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -4228,7 +4166,7 @@ class RepcMt000200UvGuideline:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvComponent3:
     class Meta:
         name = "REPC_MT000200UV.Component3"
@@ -4319,13 +4257,12 @@ class RepcMt000200UvComponent3:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipHasComponent = field(
-        default=None,
+    type_code: ActRelationshipHasComponent = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
@@ -4352,7 +4289,7 @@ class RepcMt000200UvComponent3:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvComponent4:
     class Meta:
         name = "REPC_MT000200UV.Component4"
@@ -4443,13 +4380,12 @@ class RepcMt000200UvComponent4:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipHasComponent = field(
-        default=None,
+    type_code: ActRelationshipHasComponent = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
@@ -4476,7 +4412,7 @@ class RepcMt000200UvComponent4:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvDefinition1:
     class Meta:
         name = "REPC_MT000200UV.Definition1"
@@ -4506,12 +4442,11 @@ class RepcMt000200UvDefinition1:
         },
     )
     guideline: None | RepcMt000200UvGuideline = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -4567,7 +4502,7 @@ class RepcMt000200UvDefinition1:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvEncounterIntent:
     class Meta:
         name = "REPC_MT000200UV.EncounterIntent"
@@ -4758,17 +4693,16 @@ class RepcMt000200UvEncounterIntent:
             "required": True,
         },
     )
-    mood_code: None | ActMoodIntent = field(
-        default=None,
+    mood_code: ActMoodIntent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvObservationIntent:
     class Meta:
         name = "REPC_MT000200UV.ObservationIntent"
@@ -4805,13 +4739,12 @@ class RepcMt000200UvObservationIntent:
             "min_occurs": 1,
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     derivation_expr: None | St = field(
         default=None,
@@ -5006,25 +4939,23 @@ class RepcMt000200UvObservationIntent:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassObservation = field(
-        default=None,
+    class_code: ActClassObservation = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | ActMoodIntent = field(
-        default=None,
+    mood_code: ActMoodIntent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvProcedureIntent:
     class Meta:
         name = "REPC_MT000200UV.ProcedureIntent"
@@ -5246,21 +5177,19 @@ class RepcMt000200UvProcedureIntent:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassProcedure = field(
-        default=None,
+    class_code: ActClassProcedure = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | ActMoodIntent = field(
-        default=None,
+    mood_code: ActMoodIntent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     negation_ind: None | str = field(
         default=None,
@@ -5272,7 +5201,7 @@ class RepcMt000200UvProcedureIntent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvSubstanceAdministrationIntent:
     class Meta:
         name = "REPC_MT000200UV.SubstanceAdministrationIntent"
@@ -5419,13 +5348,12 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    consumable: None | RepcMt000200UvConsumable = field(
-        default=None,
+    consumable: RepcMt000200UvConsumable = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     performer: list[RepcMt000200UvPerformer2] = field(
         default_factory=list,
@@ -5527,13 +5455,12 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "required": True,
         },
     )
-    mood_code: None | ActMoodIntent = field(
-        default=None,
+    mood_code: ActMoodIntent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     negation_ind: None | str = field(
         default=None,
@@ -5545,7 +5472,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvComponent10:
     class Meta:
         name = "REPC_MT000200UV.Component10"
@@ -5636,13 +5563,12 @@ class RepcMt000200UvComponent10:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipHasComponent = field(
-        default=None,
+    type_code: ActRelationshipHasComponent = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: None | ContextControl = field(
         default=None,
@@ -5651,14 +5577,13 @@ class RepcMt000200UvComponent10:
             "type": "Attribute",
         },
     )
-    context_conduction_ind: None | str = field(
-        default=None,
+    context_conduction_ind: str = field(
         metadata={
             "name": "contextConductionInd",
             "type": "Attribute",
             "required": True,
             "pattern": r"true|false",
-        },
+        }
     )
     negation_ind: None | str = field(
         default=None,
@@ -5670,7 +5595,7 @@ class RepcMt000200UvComponent10:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvCarePlan:
     class Meta:
         name = "REPC_MT000200UV.CarePlan"
@@ -5858,25 +5783,23 @@ class RepcMt000200UvCarePlan:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassCareProvision = field(
-        default=None,
+    class_code: ActClassCareProvision = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | ActMoodIntent = field(
-        default=None,
+    mood_code: ActMoodIntent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000200UvComponent7:
     class Meta:
         name = "REPC_MT000200UV.Component7"
@@ -5914,13 +5837,12 @@ class RepcMt000200UvComponent7:
         },
     )
     care_plan: None | RepcMt000200UvCarePlan = field(
-        default=None,
         metadata={
             "name": "carePlan",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -5929,13 +5851,12 @@ class RepcMt000200UvComponent7:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipHasComponent = field(
-        default=None,
+    type_code: ActRelationshipHasComponent = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_control_code: None | ContextControl = field(
         default=None,
@@ -5944,12 +5865,11 @@ class RepcMt000200UvComponent7:
             "type": "Attribute",
         },
     )
-    context_conduction_ind: None | str = field(
-        default=None,
+    context_conduction_ind: str = field(
         metadata={
             "name": "contextConductionInd",
             "type": "Attribute",
             "required": True,
             "pattern": r"true|false",
-        },
+        }
     )

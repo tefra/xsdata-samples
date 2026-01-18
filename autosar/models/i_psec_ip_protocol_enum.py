@@ -7,7 +7,7 @@ from .i_psec_ip_protocol_enum_simple import IPsecIpProtocolEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IPsecIpProtocolEnum:
     """
     Definition of supported TcpIp protocols that are supported in Security
@@ -29,11 +29,10 @@ class IPsecIpProtocolEnum:
     class Meta:
         name = "I-PSEC-IP-PROTOCOL-ENUM"
 
-    value: None | IPsecIpProtocolEnumSimple = field(
-        default=None,
+    value: IPsecIpProtocolEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

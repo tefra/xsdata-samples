@@ -13,7 +13,7 @@ from .status import Status
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractDiscoveryDeliveryStructure(ResponseStructure):
     status: None | Status = field(
         default=None,

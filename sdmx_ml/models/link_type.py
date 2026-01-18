@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class LinkType:
     """
     :ivar rel: The type of object that is being linked to.
@@ -16,19 +16,17 @@ class LinkType:
         metadata).
     """
 
-    rel: None | str = field(
-        default=None,
+    rel: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    url: None | str = field(
-        default=None,
+    url: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     urn: None | str = field(
         default=None,

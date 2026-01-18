@@ -20,7 +20,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BusMirrorChannelMappingUserDefined:
     """
     This element defines the bus mirroring between a CAN, LIN or FlexRay
@@ -101,14 +101,13 @@ class BusMirrorChannelMappingUserDefined:
     class Meta:
         name = "BUS-MIRROR-CHANNEL-MAPPING-USER-DEFINED"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | BusMirrorChannelMappingUserDefined.ShortNameFragments
@@ -233,7 +232,7 @@ class BusMirrorChannelMappingUserDefined:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -244,7 +243,7 @@ class BusMirrorChannelMappingUserDefined:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -255,7 +254,7 @@ class BusMirrorChannelMappingUserDefined:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetPduTriggerings:
         pdu_triggering_ref_conditional: list[PduTriggeringRefConditional] = (
             field(

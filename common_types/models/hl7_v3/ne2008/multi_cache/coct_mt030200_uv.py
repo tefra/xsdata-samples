@@ -46,7 +46,7 @@ from .coct_mt710000_uv01 import CoctMt710000Uv01Place
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030200UvBirthPlace:
     class Meta:
         name = "COCT_MT030200UV.BirthPlace"
@@ -76,12 +76,11 @@ class CoctMt030200UvBirthPlace:
         },
     )
     birthplace: None | CoctMt710000Uv01Place = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -118,7 +117,7 @@ class CoctMt030200UvBirthPlace:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030200UvCitizen:
     class Meta:
         name = "COCT_MT030200UV.Citizen"
@@ -163,13 +162,12 @@ class CoctMt030200UvCitizen:
         },
     )
     political_organization: None | CoctMt150000Uv02Organization = field(
-        default=None,
         metadata={
             "name": "politicalOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -206,7 +204,7 @@ class CoctMt030200UvCitizen:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030200UvContactParty:
     class Meta:
         name = "COCT_MT030200UV.ContactParty"
@@ -305,17 +303,16 @@ class CoctMt030200UvContactParty:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassContact = field(
-        default=None,
+    class_code: RoleClassContact = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030200UvEmployment:
     class Meta:
         name = "COCT_MT030200UV.Employment"
@@ -421,13 +418,12 @@ class CoctMt030200UvEmployment:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassEmployee = field(
-        default=None,
+    class_code: RoleClassEmployee = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     negation_ind: None | str = field(
         default=None,
@@ -439,7 +435,7 @@ class CoctMt030200UvEmployment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030200UvEntity:
     class Meta:
         name = "COCT_MT030200UV.Entity"
@@ -519,13 +515,12 @@ class CoctMt030200UvEntity:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassRoot = field(
-        default=None,
+    class_code: EntityClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -538,7 +533,7 @@ class CoctMt030200UvEntity:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030200UvGuarantor:
     class Meta:
         name = "COCT_MT030200UV.Guarantor"
@@ -657,7 +652,7 @@ class CoctMt030200UvGuarantor:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030200UvGuardian:
     class Meta:
         name = "COCT_MT030200UV.Guardian"
@@ -784,7 +779,7 @@ class CoctMt030200UvGuardian:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030200UvLanguageCommunication:
     class Meta:
         name = "COCT_MT030200UV.LanguageCommunication"
@@ -813,14 +808,13 @@ class CoctMt030200UvLanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: None | Ce = field(
-        default=None,
+    language_code: Ce = field(
         metadata={
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     mode_code: None | Ce = field(
         default=None,
@@ -855,7 +849,7 @@ class CoctMt030200UvLanguageCommunication:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030200UvOtherIds:
     class Meta:
         name = "COCT_MT030200UV.OtherIDs"
@@ -909,25 +903,23 @@ class CoctMt030200UvOtherIds:
         },
     )
     class_code: (
-        None
-        | RoleClassMutualRelationship
+        RoleClassMutualRelationship
         | RoleClassPassive
         | str
         | RoleClassOntological
         | RoleClassPartitive
         | RoleClassRootValue
     ) = field(
-        default=None,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030200UvStudent:
     class Meta:
         name = "COCT_MT030200UV.Student"
@@ -1037,7 +1029,7 @@ class CoctMt030200UvStudent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030200UvMember:
     class Meta:
         name = "COCT_MT030200UV.Member"
@@ -1097,13 +1089,12 @@ class CoctMt030200UvMember:
         },
     )
     group_entity: None | CoctMt030200UvEntity = field(
-        default=None,
         metadata={
             "name": "groupEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1140,7 +1131,7 @@ class CoctMt030200UvMember:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030200UvPerson:
     class Meta:
         name = "COCT_MT030200UV.Person"

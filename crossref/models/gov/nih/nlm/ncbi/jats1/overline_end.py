@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OverlineEnd:
     """
     <div> <h3>Overline End</h3> </div>.
@@ -21,12 +21,11 @@ class OverlineEnd:
             "type": "Attribute",
         },
     )
-    rid: None | str = field(
-        default=None,
+    rid: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     specific_use: None | str = field(
         default=None,

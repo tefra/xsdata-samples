@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.supplementary_positional_description import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NetworkLocation(Location):
     """
     The specification of a location on a network (as a point or a linear

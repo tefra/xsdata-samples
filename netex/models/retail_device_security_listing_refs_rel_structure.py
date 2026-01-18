@@ -9,7 +9,7 @@ from .retail_device_security_listing_ref import RetailDeviceSecurityListingRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RetailDeviceSecurityListingRefsRelStructure(
     OneToManyRelationshipStructure
 ):

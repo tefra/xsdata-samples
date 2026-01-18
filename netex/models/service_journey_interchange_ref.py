@@ -9,7 +9,7 @@ from .service_journey_interchange_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceJourneyInterchangeRef(ServiceJourneyInterchangeRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

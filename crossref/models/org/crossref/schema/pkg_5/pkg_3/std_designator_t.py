@@ -15,18 +15,17 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_variant_form import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StdDesignatorT:
     class Meta:
         name = "std_designator_t"
 
-    std_designator: None | StdDesignator = field(
-        default=None,
+    std_designator: StdDesignator = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
             "required": True,
-        },
+        }
     )
     std_alt_script: list[StdAltScript] = field(
         default_factory=list,

@@ -7,7 +7,7 @@ from .coupling_element_enum_simple import CouplingElementEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CouplingElementEnum:
     """
     Identifies the Coupling type.
@@ -28,11 +28,10 @@ class CouplingElementEnum:
     class Meta:
         name = "COUPLING-ELEMENT-ENUM"
 
-    value: None | CouplingElementEnumSimple = field(
-        default=None,
+    value: CouplingElementEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

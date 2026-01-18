@@ -7,7 +7,7 @@ from travelport.models.booking_code import BookingCode
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PreferredBookingCodes:
     """
     This is the container to specify all preferred booking codes.

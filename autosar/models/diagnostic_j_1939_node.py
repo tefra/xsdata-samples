@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticJ1939Node:
     """
     This meta-class represents the diagnostic configuration of a J1939 Nm
@@ -87,14 +87,13 @@ class DiagnosticJ1939Node:
     class Meta:
         name = "DIAGNOSTIC-J-1939-NODE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DiagnosticJ1939Node.ShortNameFragments = (
         field(
@@ -193,7 +192,7 @@ class DiagnosticJ1939Node:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -204,7 +203,7 @@ class DiagnosticJ1939Node:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -215,13 +214,12 @@ class DiagnosticJ1939Node:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NmNodeRef(Ref):
-        dest: None | J1939NmNodeSubtypesEnum = field(
-            default=None,
+        dest: J1939NmNodeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

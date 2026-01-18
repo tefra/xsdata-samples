@@ -37,7 +37,7 @@ from .traceable_subtypes_enum import TraceableSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucLinkerSymbolDef:
     """
     Configuration parameter type for Linker Symbol Names like those used to
@@ -178,14 +178,13 @@ class EcucLinkerSymbolDef:
     class Meta:
         name = "ECUC-LINKER-SYMBOL-DEF"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EcucLinkerSymbolDef.ShortNameFragments = (
         field(
@@ -434,7 +433,7 @@ class EcucLinkerSymbolDef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -445,7 +444,7 @@ class EcucLinkerSymbolDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -456,18 +455,17 @@ class EcucLinkerSymbolDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RelatedTraceItemRef(Ref):
-        dest: None | TraceableSubtypesEnum = field(
-            default=None,
+        dest: TraceableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucValidationConds:
         ecuc_validation_condition: list[EcucValidationCondition] = field(
             default_factory=list,
@@ -478,7 +476,7 @@ class EcucLinkerSymbolDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplementationConfigClasses:
         ecuc_implementation_configuration_class: list[
             EcucImplementationConfigurationClass
@@ -491,7 +489,7 @@ class EcucLinkerSymbolDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MultiplicityConfigClasses:
         ecuc_multiplicity_configuration_class: list[
             EcucMultiplicityConfigurationClass
@@ -504,7 +502,7 @@ class EcucLinkerSymbolDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ValueConfigClasses:
         ecuc_value_configuration_class: list[EcucValueConfigurationClass] = (
             field(
@@ -517,7 +515,7 @@ class EcucLinkerSymbolDef:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucLinkerSymbolDefVariants:
         ecuc_linker_symbol_def_conditional: list[
             EcucLinkerSymbolDefConditional

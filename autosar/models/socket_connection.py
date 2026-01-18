@@ -32,7 +32,7 @@ from .tp_connection_ident import TpConnectionIdent
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SocketConnection:
     """
     The SoAd serves as a (De)Multiplexer between different PDU sources and
@@ -360,84 +360,77 @@ class SocketConnection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AllowedIPv6ExtHeadersRef(Ref):
-        dest: None | IPv6ExtHeaderFilterListSubtypesEnum = field(
-            default=None,
+        dest: IPv6ExtHeaderFilterListSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AllowedTcpOptionsRef(Ref):
-        dest: None | TcpOptionFilterListSubtypesEnum = field(
-            default=None,
+        dest: TcpOptionFilterListSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClientPortRef(Ref):
-        dest: None | SocketAddressSubtypesEnum = field(
-            default=None,
+        dest: SocketAddressSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DoIpSourceAddressRef(Ref):
-        dest: None | LogicAddressSubtypesEnum = field(
-            default=None,
+        dest: LogicAddressSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DoIpTargetAddressRef(Ref):
-        dest: None | LogicAddressSubtypesEnum = field(
-            default=None,
+        dest: LogicAddressSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LocalPortRef(Ref):
-        dest: None | SocketAddressSubtypesEnum = field(
-            default=None,
+        dest: SocketAddressSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NPduRef(Ref):
-        dest: None | NPduSubtypesEnum = field(
-            default=None,
+        dest: NPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Pdus:
         socket_connection_ipdu_identifier: list[
             SocketConnectionIpduIdentifier
@@ -450,13 +443,12 @@ class SocketConnection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RemotePortRef(Ref):
-        dest: None | SocketAddressSubtypesEnum = field(
-            default=None,
+        dest: SocketAddressSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -32,7 +32,7 @@ from .type_of_payment_method_refs_rel_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingVersionStructure(SiteVersionStructure):
     class Meta:
         name = "Parking_VersionStructure"

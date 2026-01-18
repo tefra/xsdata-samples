@@ -25,7 +25,7 @@ from travelport.models.united_nations_2 import UnitedNations2
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeFormOfPaymentType1(TypeKeyTaggedElement1):
     """
     Parameters

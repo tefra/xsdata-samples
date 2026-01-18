@@ -7,7 +7,7 @@ from travelport.models.type_taggable_address_2 import TypeTaggableAddress2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlternateContactAddress2(TypeTaggableAddress2):
     """
     Alternate contact address.
@@ -22,11 +22,10 @@ class AlternateContactAddress2(TypeTaggableAddress2):
         name = "AlternateContactAddress"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    alternate_contact_ref: None | str = field(
-        default=None,
+    alternate_contact_ref: str = field(
         metadata={
             "name": "AlternateContactRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from .transfer_ref_structure import TransferRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransferRef(TransferRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

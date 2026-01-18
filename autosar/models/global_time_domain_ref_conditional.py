@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GlobalTimeDomainRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -66,13 +66,12 @@ class GlobalTimeDomainRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GlobalTimeDomainRef(Ref):
-        dest: None | GlobalTimeDomainSubtypesEnum = field(
-            default=None,
+        dest: GlobalTimeDomainSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

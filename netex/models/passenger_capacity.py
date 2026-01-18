@@ -7,15 +7,14 @@ from .passenger_capacity_structure import PassengerCapacityStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassengerCapacity(PassengerCapacityStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

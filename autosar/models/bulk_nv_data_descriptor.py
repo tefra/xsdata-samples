@@ -19,7 +19,7 @@ from .variable_data_prototype import VariableDataPrototype
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BulkNvDataDescriptor:
     """
     This meta-class represents one bulk NV Data Block that is read-only for
@@ -97,14 +97,13 @@ class BulkNvDataDescriptor:
     class Meta:
         name = "BULK-NV-DATA-DESCRIPTOR"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | BulkNvDataDescriptor.ShortNameFragments = (
         field(
@@ -213,7 +212,7 @@ class BulkNvDataDescriptor:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -224,7 +223,7 @@ class BulkNvDataDescriptor:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -235,7 +234,7 @@ class BulkNvDataDescriptor:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NvBlockDataMappings:
         nv_block_data_mapping: list[NvBlockDataMapping] = field(
             default_factory=list,

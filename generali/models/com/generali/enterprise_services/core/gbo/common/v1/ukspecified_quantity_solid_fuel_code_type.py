@@ -9,7 +9,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.core_types
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UkspecifiedQuantitySolidFuelCodeType(CodeType):
     """
     A codelist restricting a code to the set that can be sold in the UK for

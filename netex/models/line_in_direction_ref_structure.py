@@ -10,7 +10,7 @@ from .line_ref import LineRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LineInDirectionRefStructure:
     class Meta:
         name = "LineInDirectionRef_Structure"

@@ -7,7 +7,7 @@ from sdmx_ml.models.registry_interface_type import RegistryInterfaceType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RegistryInterface(RegistryInterfaceType):
     """
     RegistryInterface is used to conduct all interactions with the SDMX

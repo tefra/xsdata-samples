@@ -25,7 +25,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticRequestVehicleInfo:
     """
     This meta-class represents the ability to model an instance of the OBD
@@ -100,14 +100,13 @@ class DiagnosticRequestVehicleInfo:
     class Meta:
         name = "DIAGNOSTIC-REQUEST-VEHICLE-INFO"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticRequestVehicleInfo.ShortNameFragments
@@ -226,7 +225,7 @@ class DiagnosticRequestVehicleInfo:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -237,7 +236,7 @@ class DiagnosticRequestVehicleInfo:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -248,35 +247,32 @@ class DiagnosticRequestVehicleInfo:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessPermissionRef(Ref):
-        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticAccessPermissionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InfoTypeRef(Ref):
-        dest: None | DiagnosticInfoTypeSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticInfoTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequestVehicleInformationClassRef(Ref):
-        dest: None | DiagnosticRequestVehicleInfoClassSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticRequestVehicleInfoClassSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -9,7 +9,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortAccessHandle:
     """
     :ivar view_ref: A list of views this accessHandle is applicable to.
@@ -43,13 +43,12 @@ class PortAccessHandle:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    slices: None | PortSlicesType = field(
-        default=None,
+    slices: PortSlicesType = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     vendor_extensions: None | VendorExtensions = field(
         default=None,
@@ -73,7 +72,7 @@ class PortAccessHandle:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ViewRef:
         value: str = field(
             default="",
@@ -89,7 +88,7 @@ class PortAccessHandle:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Indices:
         """
         :ivar index: An index into the IP-XACT object.
@@ -104,7 +103,7 @@ class PortAccessHandle:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Index(UnsignedIntExpression):
             id: None | str = field(
                 default=None,

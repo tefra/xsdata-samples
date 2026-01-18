@@ -9,7 +9,7 @@ from .mc_function_data_ref_set_conditional import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McFunctionDataRefSet:
     """
     Refers to a set of data assigned to an McFunction in a particular role.
@@ -64,7 +64,7 @@ class McFunctionDataRefSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McFunctionDataRefSetVariants:
         mc_function_data_ref_set_conditional: list[
             McFunctionDataRefSetConditional

@@ -7,7 +7,7 @@ from sdmx_ml.models.maintainable_base_type import MaintainableBaseType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MaintainableType(MaintainableBaseType):
     """
     MaintainableType is an abstract base type for all maintainable objects.
@@ -39,14 +39,13 @@ class MaintainableType(MaintainableBaseType):
         service which will return the referenced object.
     """
 
-    agency_id: None | str = field(
-        default=None,
+    agency_id: str = field(
         metadata={
             "name": "agencyID",
             "type": "Attribute",
             "required": True,
             "pattern": r"[A-Za-z][A-Za-z0-9_\-]*(\.[A-Za-z][A-Za-z0-9_\-]*)*",
-        },
+        }
     )
     is_external_reference: bool = field(
         default=False,

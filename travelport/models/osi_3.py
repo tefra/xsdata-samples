@@ -7,7 +7,7 @@ from travelport.models.type_element_status_4 import TypeElementStatus4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Osi3:
     """
     Other Service information sent to the carriers during air bookings.
@@ -44,14 +44,13 @@ class Osi3:
             "type": "Attribute",
         },
     )
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
     code: None | str = field(
         default=None,
@@ -61,14 +60,13 @@ class Osi3:
             "max_length": 4,
         },
     )
-    text: None | str = field(
-        default=None,
+    text: str = field(
         metadata={
             "name": "Text",
             "type": "Attribute",
             "required": True,
             "max_length": 256,
-        },
+        }
     )
     provider_reservation_info_ref: None | str = field(
         default=None,

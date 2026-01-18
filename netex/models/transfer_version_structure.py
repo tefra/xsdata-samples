@@ -12,7 +12,7 @@ from .type_of_transfer_ref import TypeOfTransferRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransferVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Transfer_VersionStructure"

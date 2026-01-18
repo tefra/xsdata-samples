@@ -7,7 +7,7 @@ from travelport.models.base_rsp_5 import BaseRsp5
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileModifyTagsRsp2(BaseRsp5):
     """
     Response with the modified tags.
@@ -27,7 +27,7 @@ class ProfileModifyTagsRsp2(BaseRsp5):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tag:
         """
         Parameters
@@ -46,15 +46,14 @@ class ProfileModifyTagsRsp2(BaseRsp5):
             The agency that owns the tag
         """
 
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "name": "Name",
                 "type": "Attribute",
                 "required": True,
                 "min_length": 1,
                 "max_length": 128,
-            },
+            }
         )
         label: None | str = field(
             default=None,
@@ -81,19 +80,17 @@ class ProfileModifyTagsRsp2(BaseRsp5):
                 "type": "Attribute",
             },
         )
-        id: None | str = field(
-            default=None,
+        id: str = field(
             metadata={
                 "name": "ID",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
-        agency_id: None | int = field(
-            default=None,
+        agency_id: int = field(
             metadata={
                 "name": "AgencyID",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

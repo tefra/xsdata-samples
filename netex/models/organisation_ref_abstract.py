@@ -7,7 +7,7 @@ from .organisation_ref_structure import OrganisationRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganisationRefAbstract(OrganisationRefStructure):
     class Meta:
         name = "OrganisationRef_"

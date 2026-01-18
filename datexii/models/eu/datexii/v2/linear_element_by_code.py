@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.linear_element import LinearElement
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinearElementByCode(LinearElement):
     """
     A linear element along a single linear object defined by its identifier
@@ -22,15 +22,14 @@ class LinearElementByCode(LinearElement):
     :ivar linear_element_by_code_extension:
     """
 
-    linear_element_identifier: None | str = field(
-        default=None,
+    linear_element_identifier: str = field(
         metadata={
             "name": "linearElementIdentifier",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
     linear_element_by_code_extension: None | ExtensionType = field(
         default=None,

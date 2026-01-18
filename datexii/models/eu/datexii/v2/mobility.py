@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.mobility_enum import MobilityEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mobility:
     """
     An indication of whether the associated instance of a SituationRecord
@@ -20,14 +20,13 @@ class Mobility:
     :ivar mobility_extension:
     """
 
-    mobility_type: None | MobilityEnum = field(
-        default=None,
+    mobility_type: MobilityEnum = field(
         metadata={
             "name": "mobilityType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     mobility_extension: None | ExtensionType = field(
         default=None,

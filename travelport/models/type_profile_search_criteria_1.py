@@ -14,7 +14,7 @@ from travelport.models.type_search_phone_1 import TypeSearchPhone1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeProfileSearchCriteria1:
     """
     Basic search criteria.

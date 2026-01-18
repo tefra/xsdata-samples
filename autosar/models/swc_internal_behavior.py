@@ -59,7 +59,7 @@ from .variation_point_proxy import VariationPointProxy
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwcInternalBehavior:
     """
     The SwcInternalBehavior of an AtomicSwComponentType describes the
@@ -294,14 +294,13 @@ class SwcInternalBehavior:
     class Meta:
         name = "SWC-INTERNAL-BEHAVIOR"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SwcInternalBehavior.ShortNameFragments = (
         field(
@@ -604,7 +603,7 @@ class SwcInternalBehavior:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -615,7 +614,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -626,7 +625,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConstantMemorys:
         parameter_data_prototype: list[ParameterDataPrototype] = field(
             default_factory=list,
@@ -637,7 +636,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConstantValueMappingRefs:
         constant_value_mapping_ref: list[
             SwcInternalBehavior.ConstantValueMappingRefs.ConstantValueMappingRef
@@ -650,18 +649,17 @@ class SwcInternalBehavior:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ConstantValueMappingRef(Ref):
-            dest: None | ConstantSpecificationMappingSetSubtypesEnum = field(
-                default=None,
+            dest: ConstantSpecificationMappingSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataTypeMappingRefs:
         data_type_mapping_ref: list[
             SwcInternalBehavior.DataTypeMappingRefs.DataTypeMappingRef
@@ -674,18 +672,17 @@ class SwcInternalBehavior:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DataTypeMappingRef(Ref):
-            dest: None | DataTypeMappingSetSubtypesEnum = field(
-                default=None,
+            dest: DataTypeMappingSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExclusiveAreas:
         exclusive_area: list[ExclusiveArea] = field(
             default_factory=list,
@@ -696,7 +693,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExclusiveAreaNestingOrders:
         exclusive_area_nesting_order: list[ExclusiveAreaNestingOrder] = field(
             default_factory=list,
@@ -707,7 +704,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StaticMemorys:
         variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
@@ -718,7 +715,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArTypedPerInstanceMemorys:
         variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
@@ -729,7 +726,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Events:
         asynchronous_server_call_returns_event: list[
             AsynchronousServerCallReturnsEvent
@@ -866,7 +863,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExclusiveAreaPolicys:
         swc_exclusive_area_policy: list[SwcExclusiveAreaPolicy] = field(
             default_factory=list,
@@ -877,7 +874,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExplicitInterRunnableVariables:
         variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
@@ -888,7 +885,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplicitInterRunnableVariables:
         variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
@@ -899,7 +896,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IncludedDataTypeSets:
         included_data_type_set: list[IncludedDataTypeSet] = field(
             default_factory=list,
@@ -910,7 +907,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IncludedModeDeclarationGroupSets:
         included_mode_declaration_group_set: list[
             IncludedModeDeclarationGroupSet
@@ -923,7 +920,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InstantiationDataDefPropss:
         instantiation_data_def_props: list[InstantiationDataDefProps] = field(
             default_factory=list,
@@ -934,7 +931,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PerInstanceMemorys:
         per_instance_memory: list[PerInstanceMemory] = field(
             default_factory=list,
@@ -945,7 +942,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PerInstanceParameters:
         parameter_data_prototype: list[ParameterDataPrototype] = field(
             default_factory=list,
@@ -956,7 +953,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortApiOptions:
         port_api_option: list[PortApiOption] = field(
             default_factory=list,
@@ -967,7 +964,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Runnables:
         runnable_entity: list[RunnableEntity] = field(
             default_factory=list,
@@ -978,7 +975,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceDependencys:
         swc_service_dependency: list[SwcServiceDependency] = field(
             default_factory=list,
@@ -989,7 +986,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SharedParameters:
         parameter_data_prototype: list[ParameterDataPrototype] = field(
             default_factory=list,
@@ -1000,7 +997,7 @@ class SwcInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VariationPointProxys:
         variation_point_proxy: list[VariationPointProxy] = field(
             default_factory=list,

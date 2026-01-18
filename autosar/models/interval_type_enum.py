@@ -7,7 +7,7 @@ from .interval_type_enum_simple import IntervalTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IntervalTypeEnum:
     """
     This enumerator specifies the type of an interval.
@@ -28,11 +28,10 @@ class IntervalTypeEnum:
     class Meta:
         name = "INTERVAL-TYPE-ENUM"
 
-    value: None | IntervalTypeEnumSimple = field(
-        default=None,
+    value: IntervalTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

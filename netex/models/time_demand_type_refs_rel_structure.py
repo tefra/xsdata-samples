@@ -9,7 +9,7 @@ from .time_demand_type_ref import TimeDemandTypeRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeDemandTypeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "timeDemandTypeRefs_RelStructure"

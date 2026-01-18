@@ -50,7 +50,7 @@ from travelport.models.vehicle_preference_2 import VehiclePreference2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileDataUpdate2:
     """
     Update some basic information of the profile.

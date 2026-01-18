@@ -24,7 +24,7 @@ from ..core.voc import NullFlavor
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02LivingSubjectAdministrativeGender:
     class Meta:
         name = "PRPA_MT201306UV02.LivingSubjectAdministrativeGender"
@@ -61,14 +61,13 @@ class PrpaMt201306Uv02LivingSubjectAdministrativeGender:
             "min_occurs": 1,
         },
     )
-    semantics_text: None | StExplicit = field(
-        default=None,
+    semantics_text: StExplicit = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -79,7 +78,7 @@ class PrpaMt201306Uv02LivingSubjectAdministrativeGender:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02LivingSubjectBirthPlaceAddress:
     class Meta:
         name = "PRPA_MT201306UV02.LivingSubjectBirthPlaceAddress"
@@ -116,14 +115,13 @@ class PrpaMt201306Uv02LivingSubjectBirthPlaceAddress:
             "min_occurs": 1,
         },
     )
-    semantics_text: None | StExplicit = field(
-        default=None,
+    semantics_text: StExplicit = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -134,7 +132,7 @@ class PrpaMt201306Uv02LivingSubjectBirthPlaceAddress:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02LivingSubjectBirthPlaceName:
     class Meta:
         name = "PRPA_MT201306UV02.LivingSubjectBirthPlaceName"
@@ -171,14 +169,13 @@ class PrpaMt201306Uv02LivingSubjectBirthPlaceName:
             "min_occurs": 1,
         },
     )
-    semantics_text: None | StExplicit = field(
-        default=None,
+    semantics_text: StExplicit = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -189,7 +186,7 @@ class PrpaMt201306Uv02LivingSubjectBirthPlaceName:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02LivingSubjectBirthTime:
     class Meta:
         name = "PRPA_MT201306UV02.LivingSubjectBirthTime"
@@ -226,14 +223,13 @@ class PrpaMt201306Uv02LivingSubjectBirthTime:
             "min_occurs": 1,
         },
     )
-    semantics_text: None | StExplicit = field(
-        default=None,
+    semantics_text: StExplicit = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -244,7 +240,7 @@ class PrpaMt201306Uv02LivingSubjectBirthTime:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02LivingSubjectDeceasedTime:
     class Meta:
         name = "PRPA_MT201306UV02.LivingSubjectDeceasedTime"
@@ -281,14 +277,13 @@ class PrpaMt201306Uv02LivingSubjectDeceasedTime:
             "min_occurs": 1,
         },
     )
-    semantics_text: None | St = field(
-        default=None,
+    semantics_text: St = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -299,7 +294,7 @@ class PrpaMt201306Uv02LivingSubjectDeceasedTime:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02LivingSubjectId:
     class Meta:
         name = "PRPA_MT201306UV02.LivingSubjectId"
@@ -336,14 +331,13 @@ class PrpaMt201306Uv02LivingSubjectId:
             "min_occurs": 1,
         },
     )
-    semantics_text: None | StExplicit = field(
-        default=None,
+    semantics_text: StExplicit = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -354,7 +348,7 @@ class PrpaMt201306Uv02LivingSubjectId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02LivingSubjectName:
     class Meta:
         name = "PRPA_MT201306UV02.LivingSubjectName"
@@ -391,14 +385,13 @@ class PrpaMt201306Uv02LivingSubjectName:
             "min_occurs": 1,
         },
     )
-    semantics_text: None | StExplicit = field(
-        default=None,
+    semantics_text: StExplicit = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -409,7 +402,7 @@ class PrpaMt201306Uv02LivingSubjectName:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02MatchAlgorithm:
     class Meta:
         name = "PRPA_MT201306UV02.MatchAlgorithm"
@@ -438,22 +431,20 @@ class PrpaMt201306Uv02MatchAlgorithm:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | StExplicit = field(
-        default=None,
+    value: StExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    semantics_text: None | StExplicit = field(
-        default=None,
+    semantics_text: StExplicit = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -464,7 +455,7 @@ class PrpaMt201306Uv02MatchAlgorithm:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02MatchWeight:
     class Meta:
         name = "PRPA_MT201306UV02.MatchWeight"
@@ -493,22 +484,20 @@ class PrpaMt201306Uv02MatchWeight:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | AnyType = field(
-        default=None,
+    value: AnyType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    semantics_text: None | St = field(
-        default=None,
+    semantics_text: St = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -519,7 +508,7 @@ class PrpaMt201306Uv02MatchWeight:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02MinimumDegreeMatch:
     class Meta:
         name = "PRPA_MT201306UV02.MinimumDegreeMatch"
@@ -548,22 +537,20 @@ class PrpaMt201306Uv02MinimumDegreeMatch:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | Int = field(
-        default=None,
+    value: Int = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    semantics_text: None | StExplicit = field(
-        default=None,
+    semantics_text: StExplicit = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -574,7 +561,7 @@ class PrpaMt201306Uv02MinimumDegreeMatch:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02MothersMaidenName:
     class Meta:
         name = "PRPA_MT201306UV02.MothersMaidenName"
@@ -611,14 +598,13 @@ class PrpaMt201306Uv02MothersMaidenName:
             "min_occurs": 1,
         },
     )
-    semantics_text: None | StExplicit = field(
-        default=None,
+    semantics_text: StExplicit = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -629,7 +615,7 @@ class PrpaMt201306Uv02MothersMaidenName:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02OtherIdsScopingOrganization:
     class Meta:
         name = "PRPA_MT201306UV02.OtherIDsScopingOrganization"
@@ -666,14 +652,13 @@ class PrpaMt201306Uv02OtherIdsScopingOrganization:
             "min_occurs": 1,
         },
     )
-    semantics_text: None | St = field(
-        default=None,
+    semantics_text: St = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -684,7 +669,7 @@ class PrpaMt201306Uv02OtherIdsScopingOrganization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02PatientAddress:
     class Meta:
         name = "PRPA_MT201306UV02.PatientAddress"
@@ -721,14 +706,13 @@ class PrpaMt201306Uv02PatientAddress:
             "min_occurs": 1,
         },
     )
-    semantics_text: None | StExplicit = field(
-        default=None,
+    semantics_text: StExplicit = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -739,7 +723,7 @@ class PrpaMt201306Uv02PatientAddress:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02PatientStatusCode:
     class Meta:
         name = "PRPA_MT201306UV02.PatientStatusCode"
@@ -768,22 +752,20 @@ class PrpaMt201306Uv02PatientStatusCode:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: None | Cv = field(
-        default=None,
+    value: Cv = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    semantics_text: None | St = field(
-        default=None,
+    semantics_text: St = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -794,7 +776,7 @@ class PrpaMt201306Uv02PatientStatusCode:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02PatientTelecom:
     class Meta:
         name = "PRPA_MT201306UV02.PatientTelecom"
@@ -831,14 +813,13 @@ class PrpaMt201306Uv02PatientTelecom:
             "min_occurs": 1,
         },
     )
-    semantics_text: None | StExplicit = field(
-        default=None,
+    semantics_text: StExplicit = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -849,7 +830,7 @@ class PrpaMt201306Uv02PatientTelecom:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02PrincipalCareProviderId:
     class Meta:
         name = "PRPA_MT201306UV02.PrincipalCareProviderId"
@@ -903,7 +884,7 @@ class PrpaMt201306Uv02PrincipalCareProviderId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02PrincipalCareProvisionId:
     class Meta:
         name = "PRPA_MT201306UV02.PrincipalCareProvisionId"
@@ -940,14 +921,13 @@ class PrpaMt201306Uv02PrincipalCareProvisionId:
             "min_occurs": 1,
         },
     )
-    semantics_text: None | StExplicit = field(
-        default=None,
+    semantics_text: StExplicit = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -958,7 +938,7 @@ class PrpaMt201306Uv02PrincipalCareProvisionId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02SortControl:
     class Meta:
         name = "PRPA_MT201306UV02.SortControl"
@@ -1020,7 +1000,7 @@ class PrpaMt201306Uv02SortControl:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02MatchCriterionList:
     class Meta:
         name = "PRPA_MT201306UV02.MatchCriterionList"
@@ -1092,7 +1072,7 @@ class PrpaMt201306Uv02MatchCriterionList:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02ParameterList:
     class Meta:
         name = "PRPA_MT201306UV02.ParameterList"
@@ -1279,7 +1259,7 @@ class PrpaMt201306Uv02ParameterList:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201306Uv02QueryByParameter:
     class Meta:
         name = "PRPA_MT201306UV02.QueryByParameter"
@@ -1308,23 +1288,21 @@ class PrpaMt201306Uv02QueryByParameter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    query_id: None | Ii = field(
-        default=None,
+    query_id: Ii = field(
         metadata={
             "name": "queryId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     modify_code: None | Cs = field(
         default=None,
@@ -1391,14 +1369,13 @@ class PrpaMt201306Uv02QueryByParameter:
             "nillable": True,
         },
     )
-    parameter_list: None | PrpaMt201306Uv02ParameterList = field(
-        default=None,
+    parameter_list: PrpaMt201306Uv02ParameterList = field(
         metadata={
             "name": "parameterList",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     sort_control: list[PrpaMt201306Uv02SortControl] = field(
         default_factory=list,

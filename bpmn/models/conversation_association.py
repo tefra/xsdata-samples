@@ -7,7 +7,7 @@ from .t_conversation_association import TConversationAssociation
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConversationAssociation(TConversationAssociation):
     class Meta:
         name = "conversationAssociation"

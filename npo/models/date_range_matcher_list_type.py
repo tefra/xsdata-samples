@@ -8,7 +8,7 @@ from npo.models.matcher_list import MatcherList
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateRangeMatcherListType(MatcherList):
     class Meta:
         name = "dateRangeMatcherListType"

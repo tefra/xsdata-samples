@@ -7,7 +7,7 @@ from sdmx_ml.models.subscription_request_type import SubscriptionRequestType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SubmitSubscriptionsRequestType:
     """
     SubmitSubscriptionsRequestType defines the payload of a request message

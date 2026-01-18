@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransmissionModeCondition:
     """
     Possibility to attach a condition to each signal within an I-PDU.
@@ -72,13 +72,12 @@ class TransmissionModeCondition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalInIPduRef(Ref):
-        dest: None | ISignalToIPduMappingSubtypesEnum = field(
-            default=None,
+        dest: ISignalToIPduMappingSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

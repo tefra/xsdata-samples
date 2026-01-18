@@ -10,7 +10,7 @@ from .route_ref import RouteRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoutesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "routes_RelStructure"

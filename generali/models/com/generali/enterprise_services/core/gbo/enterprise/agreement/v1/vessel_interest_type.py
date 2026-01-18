@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VesselInterestType:
     template_name: None | str = field(
         default=None,

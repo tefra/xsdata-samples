@@ -9,7 +9,7 @@ from .customer_security_listing_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerSecurityListingRef(CustomerSecurityListingRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

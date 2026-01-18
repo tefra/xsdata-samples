@@ -24,7 +24,7 @@ from datexii.models.eu.datexii.v2.parking_payment_mode_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TariffsAndPayment:
     """
     A table of charges under various conditions, primary used for parking.

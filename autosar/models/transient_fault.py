@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransientFault:
     """
     The reported failure is classified as runtime error.
@@ -87,14 +87,13 @@ class TransientFault:
     class Meta:
         name = "TRANSIENT-FAULT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TransientFault.ShortNameFragments = field(
         default=None,
@@ -201,7 +200,7 @@ class TransientFault:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -212,7 +211,7 @@ class TransientFault:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -223,7 +222,7 @@ class TransientFault:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PossibleErrorReactions:
         possible_error_reaction: list[PossibleErrorReaction] = field(
             default_factory=list,

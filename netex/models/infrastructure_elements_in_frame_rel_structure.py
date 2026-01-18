@@ -11,7 +11,7 @@ from .wire_element import WireElement
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InfrastructureElementsInFrameRelStructure(
     ContainmentAggregationStructure
 ):

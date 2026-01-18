@@ -7,7 +7,7 @@ from travelport.models.response_message_type_5 import ResponseMessageType5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResponseMessage5:
     """
     A simple textual fare note.
@@ -34,13 +34,12 @@ class ResponseMessage5:
             "required": True,
         },
     )
-    code: None | int = field(
-        default=None,
+    code: int = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     type_value: None | ResponseMessageType5 = field(
         default=None,

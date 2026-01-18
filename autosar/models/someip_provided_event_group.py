@@ -24,7 +24,7 @@ from .someip_sd_server_event_group_timing_config_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipProvidedEventGroup:
     """
     The meta-class represents the ability to configure ServiceInstance
@@ -112,14 +112,13 @@ class SomeipProvidedEventGroup:
     class Meta:
         name = "SOMEIP-PROVIDED-EVENT-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SomeipProvidedEventGroup.ShortNameFragments
@@ -252,7 +251,7 @@ class SomeipProvidedEventGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -263,7 +262,7 @@ class SomeipProvidedEventGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -274,24 +273,22 @@ class SomeipProvidedEventGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventGroupRef(Ref):
-        dest: None | SomeipEventGroupSubtypesEnum = field(
-            default=None,
+        dest: SomeipEventGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SdServerEventGroupTimingConfigRef(Ref):
-        dest: None | SomeipSdServerEventGroupTimingConfigSubtypesEnum = field(
-            default=None,
+        dest: SomeipSdServerEventGroupTimingConfigSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

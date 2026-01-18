@@ -14,7 +14,7 @@ from .positive_integer import PositiveInteger
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthGlobalTimeDomainProps:
     """
     Enables the definition of Ethernet Global Time specific properties.
@@ -122,7 +122,7 @@ class EthGlobalTimeDomainProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FupDataIdLists:
         """
         :ivar fup_data_id_list: The DataIDList for FUP messages to
@@ -139,7 +139,7 @@ class EthGlobalTimeDomainProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ManagedCouplingPorts:
         eth_global_time_managed_coupling_port: list[
             EthGlobalTimeManagedCouplingPort

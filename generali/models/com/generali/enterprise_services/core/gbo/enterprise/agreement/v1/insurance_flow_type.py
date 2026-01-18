@@ -26,25 +26,23 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InsuranceFlowType(OrganisationInvolvementType):
-    sequence_number: None | NumericType = field(
-        default=None,
+    sequence_number: NumericType = field(
         metadata={
             "name": "SequenceNumber",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    risk_share: None | PercentType = field(
-        default=None,
+    risk_share: PercentType = field(
         metadata={
             "name": "RiskShare",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     cedants: None | InsuranceFlowTypeCedants = field(
         default=None,

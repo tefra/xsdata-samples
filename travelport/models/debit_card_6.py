@@ -7,7 +7,7 @@ from travelport.models.type_payment_card_7 import TypePaymentCard7
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DebitCard6(TypePaymentCard7):
     """
     Container for all debit card information.

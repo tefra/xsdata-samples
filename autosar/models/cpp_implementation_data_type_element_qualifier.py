@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CppImplementationDataTypeElementQualifier:
     """
     This element qualifies the typeReference of the
@@ -71,13 +71,12 @@ class CppImplementationDataTypeElementQualifier:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeReferenceRef(Ref):
-        dest: None | CppImplementationDataTypeSubtypesEnum = field(
-            default=None,
+        dest: CppImplementationDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

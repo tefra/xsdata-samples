@@ -7,7 +7,7 @@ from .can_tp_channel_mode_type_simple import CanTpChannelModeTypeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanTpChannelModeType:
     """
     The CAN Transport Layer supports half and full duplex channel modes.
@@ -28,11 +28,10 @@ class CanTpChannelModeType:
     class Meta:
         name = "CAN-TP-CHANNEL-MODE-TYPE"
 
-    value: None | CanTpChannelModeTypeSimple = field(
-        default=None,
+    value: CanTpChannelModeTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

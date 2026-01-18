@@ -18,7 +18,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinSlave:
     """
     Describing the properties of the referring ecu as a LIN slave.
@@ -84,14 +84,13 @@ class LinSlave:
     class Meta:
         name = "LIN-SLAVE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | LinSlave.ShortNameFragments = field(
         default=None,
@@ -188,7 +187,7 @@ class LinSlave:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -199,7 +198,7 @@ class LinSlave:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -210,7 +209,7 @@ class LinSlave:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LinSlaveVariants:
         lin_slave_conditional: list[LinSlaveConditional] = field(
             default_factory=list,

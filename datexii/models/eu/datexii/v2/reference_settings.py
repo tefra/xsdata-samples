@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.traffic_status_enum import TrafficStatusEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceSettings:
     """
     Specification of the default value for traffic status on a group of

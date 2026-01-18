@@ -12,7 +12,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayCommunicationControllerConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -444,7 +444,7 @@ class FlexrayCommunicationControllerConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlexrayFifos:
         flexray_fifo_configuration: list[FlexrayFifoConfiguration] = field(
             default_factory=list,

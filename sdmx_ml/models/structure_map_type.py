@@ -14,7 +14,7 @@ from sdmx_ml.models.structure_map_base_type import StructureMapBaseType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class StructureMapType(StructureMapBaseType):
     """
     StructureMapType defines the structure for mapping components of one
@@ -51,25 +51,23 @@ class StructureMapType(StructureMapBaseType):
         source or target component in the mapping.
     """
 
-    source: None | str = field(
-        default=None,
+    source: str = field(
         metadata={
             "name": "Source",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r".+\.datastructure\.DataStructure=.+|.+\.datastructure\.Dataflow=.+|.+\.metadatastructure\.MetadataStructure=.+|.+\.metadatastructure\.Metadataflow=.+",
-        },
+        }
     )
-    target: None | str = field(
-        default=None,
+    target: str = field(
         metadata={
             "name": "Target",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
             "pattern": r".+\.datastructure\.DataStructure=.+|.+\.datastructure\.Dataflow=.+|.+\.metadatastructure\.MetadataStructure=.+|.+\.metadatastructure\.Metadataflow=.+",
-        },
+        }
     )
     epoch_map: tuple[EpochMapType, ...] = field(
         default_factory=tuple,

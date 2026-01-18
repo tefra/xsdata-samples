@@ -10,7 +10,7 @@ from .vehicle_pooling_type_enumeration import VehiclePoolingTypeEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehiclePoolingModeOfOperationValueStructure(
     AlternativeModeOfOperationValueStructure
 ):

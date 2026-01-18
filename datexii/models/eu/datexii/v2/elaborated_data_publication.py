@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.reference_settings import ReferenceSettings
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ElaboratedDataPublication(PayloadPublication):
     """
     A publication containing one or more elaborated data sets.
@@ -57,14 +57,13 @@ class ElaboratedDataPublication(PayloadPublication):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    header_information: None | HeaderInformation = field(
-        default=None,
+    header_information: HeaderInformation = field(
         metadata={
             "name": "headerInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     reference_settings: None | ReferenceSettings = field(
         default=None,

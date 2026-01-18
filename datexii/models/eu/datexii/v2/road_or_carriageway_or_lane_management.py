@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.road_or_carriageway_or_lane_management_type_en
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoadOrCarriagewayOrLaneManagement(NetworkManagement):
     """
     Road, carriageway or lane management action that is instigated by the
@@ -25,16 +25,13 @@ class RoadOrCarriagewayOrLaneManagement(NetworkManagement):
     :ivar road_or_carriageway_or_lane_management_extension:
     """
 
-    road_or_carriageway_or_lane_management_type: (
-        None | RoadOrCarriagewayOrLaneManagementTypeEnum
-    ) = field(
-        default=None,
+    road_or_carriageway_or_lane_management_type: RoadOrCarriagewayOrLaneManagementTypeEnum = field(
         metadata={
             "name": "roadOrCarriagewayOrLaneManagementType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     minimum_car_occupancy: None | int = field(
         default=None,

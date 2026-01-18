@@ -13,7 +13,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DesignInstantiationType:
     """
     Design instantiation type.
@@ -31,13 +31,12 @@ class DesignInstantiationType:
     class Meta:
         name = "designInstantiationType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -62,14 +61,13 @@ class DesignInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    design_ref: None | ConfigurableLibraryRefType = field(
-        default=None,
+    design_ref: ConfigurableLibraryRefType = field(
         metadata={
             "name": "designRef",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     vendor_extensions: None | VendorExtensions = field(
         default=None,

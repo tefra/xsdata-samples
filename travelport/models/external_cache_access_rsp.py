@@ -7,7 +7,7 @@ from travelport.models.base_rsp_3 import BaseRsp3
 __NAMESPACE__ = "http://www.travelport.com/schema/system_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExternalCacheAccessRsp(BaseRsp3):
     """
     The response to the CurrencyConversionReq.
@@ -25,7 +25,7 @@ class ExternalCacheAccessRsp(BaseRsp3):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CacheEntry:
         """
         Parameters
@@ -41,11 +41,10 @@ class ExternalCacheAccessRsp(BaseRsp3):
                 "required": True,
             },
         )
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

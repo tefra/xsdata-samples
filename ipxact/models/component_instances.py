@@ -7,7 +7,7 @@ from ipxact.models.component_instance import ComponentInstance
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ComponentInstances:
     """
     Sub instances of internal components.

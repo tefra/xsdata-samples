@@ -50,7 +50,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.volume import Volume
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookSetMetadata:
     """
     A container for all information that applies to an individual volume of
@@ -61,12 +61,11 @@ class BookSetMetadata:
         name = "book_set_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    set_metadata: None | SetMetadata = field(
-        default=None,
+    set_metadata: SetMetadata = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     contributors: None | Contributors = field(
         default=None,
@@ -91,7 +90,6 @@ class BookSetMetadata:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -123,12 +121,11 @@ class BookSetMetadata:
             "type": "Element",
         },
     )
-    publisher: None | Publisher = field(
-        default=None,
+    publisher: Publisher = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     publisher_item: None | PublisherItem = field(
         default=None,

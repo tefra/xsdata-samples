@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwCalprmRefProxy:
     """
     Wrapper class for different kinds of references to a calibration
@@ -70,13 +70,12 @@ class SwCalprmRefProxy:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McDataInstanceRef(Ref):
-        dest: None | McDataInstanceSubtypesEnum = field(
-            default=None,
+        dest: McDataInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -8,7 +8,7 @@ from sdmx_ml.models.simple_component_value_type import SimpleComponentValueType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SimpleKeyValueType(SimpleComponentValueType):
     """
     SimpleKeyValueType derives from the SimpleValueType, but does not allow

@@ -9,7 +9,7 @@ from sdmx_ml.models.queryable_data_source_type_1 import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class QueryableDataSourceType2(QueryableDataSourceType1):
     """
     QueryableDataSourceType describes a queryable data source, and add a

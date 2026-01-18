@@ -7,7 +7,7 @@ from .check_status_request_structure import CheckStatusRequestStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CheckStatusRequest(CheckStatusRequestStructure):
     class Meta:
         namespace = "http://www.siri.org.uk/siri"

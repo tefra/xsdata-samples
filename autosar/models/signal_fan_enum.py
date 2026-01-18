@@ -7,7 +7,7 @@ from .signal_fan_enum_simple import SignalFanEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SignalFanEnum:
     """
     Signal Fan inside the Composition Component Type.
@@ -28,11 +28,10 @@ class SignalFanEnum:
     class Meta:
         name = "SIGNAL-FAN-ENUM"
 
-    value: None | SignalFanEnumSimple = field(
-        default=None,
+    value: SignalFanEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

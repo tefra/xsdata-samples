@@ -10,7 +10,7 @@ from .vehicle_model_profile_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
     class Meta:
         name = "CarModelProfile_VersionStructure"

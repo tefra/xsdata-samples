@@ -22,7 +22,7 @@ from travelport.models.ticket_number_1 import TicketNumber1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeReq(BaseReq1):
     """
     Request to exchange an itinerary.
@@ -68,13 +68,12 @@ class AirExchangeReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_reservation_locator_code: None | AirReservationLocatorCode = field(
-        default=None,
+    air_reservation_locator_code: AirReservationLocatorCode = field(
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     ticket_number: list[TicketNumber1] = field(
         default_factory=list,

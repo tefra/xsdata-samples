@@ -8,7 +8,7 @@ from npo.models.topic_type import TopicType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TopicsType:
     class Meta:
         name = "topicsType"

@@ -26,7 +26,7 @@ from .type_of_organisation_part_ref import TypeOfOrganisationPartRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganisationPartVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "OrganisationPart_VersionStructure"

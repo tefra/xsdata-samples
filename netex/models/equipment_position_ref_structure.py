@@ -7,6 +7,6 @@ from .place_ref_structure import PlaceRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EquipmentPositionRefStructure(PlaceRefStructure):
     pass

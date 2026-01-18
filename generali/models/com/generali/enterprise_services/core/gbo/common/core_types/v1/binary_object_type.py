@@ -7,7 +7,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BinaryObjectType:
     """
     <ns1:UniqueID
@@ -73,8 +73,8 @@ class BinaryObjectType:
         xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">string</ns1:PrimitiveType>
     """
 
-    value: None | bytes = field(
-        default=None,
+    value: bytes = field(
+        default=b"",
         metadata={
             "required": True,
             "format": "base64",

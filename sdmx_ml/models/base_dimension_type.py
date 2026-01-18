@@ -7,7 +7,7 @@ from sdmx_ml.models.base_dimension_base_type import BaseDimensionBaseType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class BaseDimensionType(BaseDimensionBaseType):
     """
     BaseDimensionType is an abstract base type which defines the basic

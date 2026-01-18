@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.site_measurements import SiteMeasurements
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MeasuredDataPublication(PayloadPublication):
     """
     A publication containing one or more measurement data sets, each set
@@ -26,25 +26,21 @@ class MeasuredDataPublication(PayloadPublication):
     :ivar measured_data_publication_extension:
     """
 
-    measurement_site_table_reference: (
-        None | MeasurementSiteTableVersionedReference
-    ) = field(
-        default=None,
+    measurement_site_table_reference: MeasurementSiteTableVersionedReference = field(
         metadata={
             "name": "measurementSiteTableReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    header_information: None | HeaderInformation = field(
-        default=None,
+    header_information: HeaderInformation = field(
         metadata={
             "name": "headerInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     site_measurements: list[SiteMeasurements] = field(
         default_factory=list,

@@ -10,7 +10,7 @@ from .personal_operation_type_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersonalModeOfOperationValueStructure(ModeOfOperationValueStructure):
     class Meta:
         name = "PersonalModeOfOperation_ValueStructure"

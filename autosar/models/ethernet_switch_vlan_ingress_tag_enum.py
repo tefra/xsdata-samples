@@ -9,7 +9,7 @@ from .ethernet_switch_vlan_ingress_tag_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthernetSwitchVlanIngressTagEnum:
     """
     Defines the possible tagging behavior at an ingress port.
@@ -30,11 +30,10 @@ class EthernetSwitchVlanIngressTagEnum:
     class Meta:
         name = "ETHERNET-SWITCH-VLAN-INGRESS-TAG-ENUM"
 
-    value: None | EthernetSwitchVlanIngressTagEnumSimple = field(
-        default=None,
+    value: EthernetSwitchVlanIngressTagEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

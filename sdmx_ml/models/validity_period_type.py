@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ValidityPeriodType:
     """
     ValidityPeriodType specifies inclusive start and end-dates for the
@@ -19,21 +19,19 @@ class ValidityPeriodType:
         subscription.
     """
 
-    start_date: None | XmlDate = field(
-        default=None,
+    start_date: XmlDate = field(
         metadata={
             "name": "StartDate",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )
-    end_date: None | XmlDate = field(
-        default=None,
+    end_date: XmlDate = field(
         metadata={
             "name": "EndDate",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )

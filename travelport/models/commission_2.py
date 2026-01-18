@@ -7,7 +7,7 @@ from travelport.models.type_trinary import TypeTrinary
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Commission2:
     """
     Parameters

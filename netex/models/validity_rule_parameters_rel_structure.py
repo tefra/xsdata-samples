@@ -9,7 +9,7 @@ from .entity_in_version_structure import ValidityRuleParameterVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidityRuleParametersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "validityRuleParameters_RelStructure"

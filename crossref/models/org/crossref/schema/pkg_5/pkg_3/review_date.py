@@ -9,7 +9,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.year import Year
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReviewDate:
     """
     The date a review was published to a repository.
@@ -19,24 +19,21 @@ class ReviewDate:
         name = "review_date"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    month: None | Month = field(
-        default=None,
+    month: Month = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    day: None | Day = field(
-        default=None,
+    day: Day = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    year: None | Year = field(
-        default=None,
+    year: Year = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )

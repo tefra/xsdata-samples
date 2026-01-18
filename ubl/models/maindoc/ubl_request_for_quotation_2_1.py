@@ -38,7 +38,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RequestForQuotationType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -104,23 +104,21 @@ class RequestForQuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
-    issue_time: None | IssueTime = field(
-        default=None,
+    issue_time: IssueTime = field(
         metadata={
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     submission_due_date: None | SubmissionDueDate = field(
         default=None,
@@ -196,14 +194,13 @@ class RequestForQuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: None | SellerSupplierParty = field(
-        default=None,
+    seller_supplier_party: SellerSupplierParty = field(
         metadata={
             "name": "SellerSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     buyer_customer_party: None | BuyerCustomerParty = field(
         default=None,
@@ -256,7 +253,7 @@ class RequestForQuotationType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RequestForQuotation(RequestForQuotationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:RequestForQuotation-2"

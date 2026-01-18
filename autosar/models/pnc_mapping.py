@@ -30,7 +30,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PncMapping:
     """
     @RESTRICT_TO_STANDARD:CP!
@@ -290,7 +290,7 @@ class PncMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DynamicPncMappingPduGroupRefs:
         dynamic_pnc_mapping_pdu_group_ref: list[
             PncMapping.DynamicPncMappingPduGroupRefs.DynamicPncMappingPduGroupRef
@@ -303,18 +303,17 @@ class PncMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DynamicPncMappingPduGroupRef(Ref):
-            dest: None | ISignalIPduGroupSubtypesEnum = field(
-                default=None,
+            dest: ISignalIPduGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PhysicalChannelRefs:
         physical_channel_ref: list[
             PncMapping.PhysicalChannelRefs.PhysicalChannelRef
@@ -327,18 +326,17 @@ class PncMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PhysicalChannelRef(Ref):
-            dest: None | PhysicalChannelSubtypesEnum = field(
-                default=None,
+            dest: PhysicalChannelSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PncConsumedProvidedServiceInstanceGroups:
         consumed_provided_service_instance_group_ref_conditional: list[
             ConsumedProvidedServiceInstanceGroupRefConditional
@@ -351,7 +349,7 @@ class PncMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PncGroupRefs:
         pnc_group_ref: list[PncMapping.PncGroupRefs.PncGroupRef] = field(
             default_factory=list,
@@ -362,18 +360,17 @@ class PncMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PncGroupRef(Ref):
-            dest: None | ISignalIPduGroupSubtypesEnum = field(
-                default=None,
+            dest: ISignalIPduGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PncPdurGroupRefs:
         pnc_pdur_group_ref: list[
             PncMapping.PncPdurGroupRefs.PncPdurGroupRef
@@ -386,18 +383,17 @@ class PncMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PncPdurGroupRef(Ref):
-            dest: None | PdurIPduGroupSubtypesEnum = field(
-                default=None,
+            dest: PdurIPduGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RelevantForDynamicPncMappingRefs:
         relevant_for_dynamic_pnc_mapping_ref: list[
             PncMapping.RelevantForDynamicPncMappingRefs.RelevantForDynamicPncMappingRef
@@ -410,18 +406,17 @@ class PncMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RelevantForDynamicPncMappingRef(Ref):
-            dest: None | EcuInstanceSubtypesEnum = field(
-                default=None,
+            dest: EcuInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInstanceRefs:
         service_instance_ref: list[
             PncMapping.ServiceInstanceRefs.ServiceInstanceRef
@@ -434,18 +429,17 @@ class PncMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ServiceInstanceRef(Ref):
-            dest: None | AdaptivePlatformServiceInstanceSubtypesEnum = field(
-                default=None,
+            dest: AdaptivePlatformServiceInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VfcIrefs:
         vfc_iref: list[PortGroupInSystemInstanceRef] = field(
             default_factory=list,
@@ -456,7 +450,7 @@ class PncMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class WakeupFrameRefs:
         wakeup_frame_ref: list[PncMapping.WakeupFrameRefs.WakeupFrameRef] = (
             field(
@@ -469,13 +463,12 @@ class PncMapping:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class WakeupFrameRef(Ref):
-            dest: None | FrameTriggeringSubtypesEnum = field(
-                default=None,
+            dest: FrameTriggeringSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

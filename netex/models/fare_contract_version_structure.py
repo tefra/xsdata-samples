@@ -16,7 +16,7 @@ from .type_of_fare_contract_ref import TypeOfFareContractRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareContractVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "FareContract_VersionStructure"

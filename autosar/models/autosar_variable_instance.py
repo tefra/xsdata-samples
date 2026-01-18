@@ -18,7 +18,7 @@ from .variable_in_component_instance_ref import VariableInComponentInstanceRef
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AutosarVariableInstance:
     """
     This class represents a reference to a variable instance within
@@ -91,14 +91,13 @@ class AutosarVariableInstance:
     class Meta:
         name = "AUTOSAR-VARIABLE-INSTANCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | AutosarVariableInstance.ShortNameFragments = (
         field(
@@ -197,7 +196,7 @@ class AutosarVariableInstance:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -208,7 +207,7 @@ class AutosarVariableInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

@@ -9,7 +9,7 @@ from .environment_capture_to_reporting_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnvironmentCaptureToReportingEnum:
     """
     This meta-class represents the ability to define the behavior of the
@@ -31,11 +31,10 @@ class EnvironmentCaptureToReportingEnum:
     class Meta:
         name = "ENVIRONMENT-CAPTURE-TO-REPORTING-ENUM"
 
-    value: None | EnvironmentCaptureToReportingEnumSimple = field(
-        default=None,
+    value: EnvironmentCaptureToReportingEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

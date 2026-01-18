@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FigCount:
     """
     <div> <h3>Figure Count</h3> </div>.
@@ -15,12 +15,11 @@ class FigCount:
         name = "fig-count"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    count: None | str = field(
-        default=None,
+    count: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,

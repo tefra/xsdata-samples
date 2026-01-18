@@ -10,7 +10,7 @@ from travelport.models.type_vehicle_transmission import TypeVehicleTransmission
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleUpsellOfferSearchCriteria:
     """
     Search criteria for VehicleUpsellOffers.
@@ -31,13 +31,12 @@ class VehicleUpsellOfferSearchCriteria:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    vehicle_class: None | TypeVehicleClass = field(
-        default=None,
+    vehicle_class: TypeVehicleClass = field(
         metadata={
             "name": "VehicleClass",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     category: None | TypeVehicleCategory = field(
         default=None,

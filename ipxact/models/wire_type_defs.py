@@ -7,7 +7,7 @@ from ipxact.models.wire_type_def import WireTypeDef
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WireTypeDefs:
     """
     The group of wire type definitions.

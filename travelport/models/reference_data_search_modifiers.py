@@ -9,7 +9,7 @@ from travelport.models.rail_station_location_modifiers import (
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceDataSearchModifiers:
     """
     Modifiers to narrow the reference data search results.

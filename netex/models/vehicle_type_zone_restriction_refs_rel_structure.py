@@ -9,7 +9,7 @@ from .vehicle_type_zone_restriction_ref import VehicleTypeZoneRestrictionRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleTypeZoneRestrictionRefsRelStructure(
     OneToManyRelationshipStructure
 ):

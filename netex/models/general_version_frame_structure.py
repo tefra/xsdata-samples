@@ -664,7 +664,7 @@ from .zone_projection import ZoneProjection
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneralVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "General_VersionFrameStructure"
@@ -678,7 +678,7 @@ class GeneralVersionFrameStructure(CommonVersionFrameStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "entitiesInVersion_RelStructure"
@@ -4390,7 +4390,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FramesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "frames_RelStructure"
@@ -4484,7 +4484,7 @@ class FramesRelStructure(ContainmentAggregationStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompositeVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "Composite_VersionFrameStructure"
@@ -4498,18 +4498,17 @@ class CompositeVersionFrameStructure(CommonVersionFrameStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EntityEntityStructure(EntityStructure):
     class Meta:
         name = "Entity_EntityStructure"
 
-    versions: None | EntitiesInVersionRelStructure = field(
-        default=None,
+    versions: EntitiesInVersionRelStructure = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     created: None | XmlDateTime = field(
         default=None,
@@ -4525,26 +4524,26 @@ class EntityEntityStructure(EntityStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneralFrame(GeneralVersionFrameStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompositeFrame(CompositeVersionFrameStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EntityEntity(EntityEntityStructure):
     class Meta:
         name = "Entity_Entity"
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "generalFrameMembers_RelStructure"

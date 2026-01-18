@@ -35,7 +35,7 @@ from ..core.voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt020000Uv01ActAppointmentRequest:
     class Meta:
         name = "COCT_MT020000UV01.ActAppointmentRequest"
@@ -64,13 +64,12 @@ class CoctMt020000Uv01ActAppointmentRequest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -79,13 +78,12 @@ class CoctMt020000Uv01ActAppointmentRequest:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -98,7 +96,7 @@ class CoctMt020000Uv01ActAppointmentRequest:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt020000Uv01ActRequest:
     class Meta:
         name = "COCT_MT020000UV01.ActRequest"
@@ -127,13 +125,12 @@ class CoctMt020000Uv01ActRequest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -142,13 +139,12 @@ class CoctMt020000Uv01ActRequest:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -161,7 +157,7 @@ class CoctMt020000Uv01ActRequest:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt020000Uv01ReferencedOrder:
     class Meta:
         name = "COCT_MT020000UV01.ReferencedOrder"
@@ -191,13 +187,12 @@ class CoctMt020000Uv01ReferencedOrder:
         },
     )
     act_request: None | CoctMt020000Uv01ActRequest = field(
-        default=None,
         metadata={
             "name": "actRequest",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -238,7 +233,7 @@ class CoctMt020000Uv01ReferencedOrder:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt020000Uv01ScheduleRequest:
     class Meta:
         name = "COCT_MT020000UV01.ScheduleRequest"
@@ -269,13 +264,12 @@ class CoctMt020000Uv01ScheduleRequest:
     )
     act_appointment_request: None | CoctMt020000Uv01ActAppointmentRequest = (
         field(
-            default=None,
             metadata={
                 "name": "actAppointmentRequest",
                 "type": "Element",
                 "namespace": "urn:hl7-org:v3",
                 "nillable": True,
-            },
+            }
         )
     )
     null_flavor: None | NullFlavor = field(
@@ -317,7 +311,7 @@ class CoctMt020000Uv01ScheduleRequest:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt020000Uv01Appointment:
     class Meta:
         name = "COCT_MT020000UV01.Appointment"
@@ -346,13 +340,12 @@ class CoctMt020000Uv01Appointment:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     code: None | Cd = field(
         default=None,
@@ -394,13 +387,12 @@ class CoctMt020000Uv01Appointment:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,

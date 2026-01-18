@@ -7,7 +7,7 @@ from travelport.models.type_req_seat import TypeReqSeat
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AutoSeatAssignment:
     """
     Request object used to request seats automatically by seat type.
@@ -47,13 +47,12 @@ class AutoSeatAssignment:
             "type": "Attribute",
         },
     )
-    seat_type: None | TypeReqSeat = field(
-        default=None,
+    seat_type: TypeReqSeat = field(
         metadata={
             "name": "SeatType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     group: bool = field(
         default=False,

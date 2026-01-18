@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreditSummary:
     """
     Credit summary associated with the account.
@@ -23,19 +23,17 @@ class CreditSummary:
             "length": 3,
         },
     )
-    current_balance: None | Decimal = field(
-        default=None,
+    current_balance: Decimal = field(
         metadata={
             "name": "CurrentBalance",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    initial_credit: None | Decimal = field(
-        default=None,
+    initial_credit: Decimal = field(
         metadata={
             "name": "InitialCredit",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

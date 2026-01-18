@@ -7,7 +7,7 @@ from travelport.models.type_credit_card_type_5 import TypeCreditCardType5
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreditCard6(TypeCreditCardType5):
     """
     UProfile Specific Credit Card Element.

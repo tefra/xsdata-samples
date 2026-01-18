@@ -7,7 +7,7 @@ from .client_intent_enum_simple import ClientIntentEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientIntentEnum:
     """
     This meta-class represents the intent to specify how a given
@@ -29,11 +29,10 @@ class ClientIntentEnum:
     class Meta:
         name = "CLIENT-INTENT-ENUM"
 
-    value: None | ClientIntentEnumSimple = field(
-        default=None,
+    value: ClientIntentEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

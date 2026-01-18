@@ -9,7 +9,7 @@ from .diagnostic_test_result_update_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticTestResultUpdateEnum:
     """
     This meta-class represents the ability to define the update behavior of
@@ -31,11 +31,10 @@ class DiagnosticTestResultUpdateEnum:
     class Meta:
         name = "DIAGNOSTIC-TEST-RESULT-UPDATE-ENUM"
 
-    value: None | DiagnosticTestResultUpdateEnumSimple = field(
-        default=None,
+    value: DiagnosticTestResultUpdateEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

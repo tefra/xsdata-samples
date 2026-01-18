@@ -9,7 +9,7 @@ from .diagnostic_initial_event_status_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticInitialEventStatusEnum:
     """
     This represents the ability to define an initial status for the ROE
@@ -31,11 +31,10 @@ class DiagnosticInitialEventStatusEnum:
     class Meta:
         name = "DIAGNOSTIC-INITIAL-EVENT-STATUS-ENUM"
 
-    value: None | DiagnosticInitialEventStatusEnumSimple = field(
-        default=None,
+    value: DiagnosticInitialEventStatusEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

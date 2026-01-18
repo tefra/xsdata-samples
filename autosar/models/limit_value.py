@@ -7,7 +7,7 @@ from .interval_type_enum_simple import IntervalTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LimitValue:
     """
     This class represents the ability to express a numerical limit.

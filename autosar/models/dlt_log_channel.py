@@ -34,7 +34,7 @@ from .uri_string import UriString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DltLogChannel:
     """
     This element contains the settings for the log/trace message output for
@@ -139,14 +139,13 @@ class DltLogChannel:
     class Meta:
         name = "DLT-LOG-CHANNEL"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DltLogChannel.ShortNameFragments = field(
         default=None,
@@ -353,7 +352,7 @@ class DltLogChannel:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -364,7 +363,7 @@ class DltLogChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -375,18 +374,17 @@ class DltLogChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DltLogChannelDesignRef(Ref):
-        dest: None | DltLogChannelDesignSubtypesEnum = field(
-            default=None,
+        dest: DltLogChannelDesignSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DltMessageRefs:
         dlt_message_ref: list[DltLogChannel.DltMessageRefs.DltMessageRef] = (
             field(
@@ -399,31 +397,27 @@ class DltLogChannel:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DltMessageRef(Ref):
-            dest: None | DltMessageSubtypesEnum = field(
-                default=None,
+            dest: DltMessageSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EndpointConfigurationRef(Ref):
-        dest: (
-            None | PlatformModuleEthernetEndpointConfigurationSubtypesEnum
-        ) = field(
-            default=None,
+        dest: PlatformModuleEthernetEndpointConfigurationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LogTraceLogModes:
         """
         :ivar log_trace_log_mode: This attribute defines the destination
@@ -439,35 +433,32 @@ class DltLogChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RxPduTriggeringRef(Ref):
-        dest: None | PduTriggeringSubtypesEnum = field(
-            default=None,
+        dest: PduTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInstanceToPortPrototypeMappingRef(Ref):
-        dest: None | ServiceInstanceToPortPrototypeMappingSubtypesEnum = field(
-            default=None,
+        dest: ServiceInstanceToPortPrototypeMappingSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TxPduTriggeringRef(Ref):
-        dest: None | PduTriggeringSubtypesEnum = field(
-            default=None,
+        dest: PduTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

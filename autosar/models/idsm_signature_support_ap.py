@@ -9,7 +9,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IdsmSignatureSupportAp:
     """
     This meta-class defines, for the Adaptive Platform, the cryptographic
@@ -70,13 +70,12 @@ class IdsmSignatureSupportAp:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class KeySlotRef(Ref):
-        dest: None | CryptoKeySlotSubtypesEnum = field(
-            default=None,
+        dest: CryptoKeySlotSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

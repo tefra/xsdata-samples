@@ -9,7 +9,7 @@ from .execution_state_reporting_behavior_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExecutionStateReportingBehaviorEnum:
     """
     This enumeration provides options for controlling of how an Executable
@@ -31,11 +31,10 @@ class ExecutionStateReportingBehaviorEnum:
     class Meta:
         name = "EXECUTION-STATE-REPORTING-BEHAVIOR-ENUM"
 
-    value: None | ExecutionStateReportingBehaviorEnumSimple = field(
-        default=None,
+    value: ExecutionStateReportingBehaviorEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

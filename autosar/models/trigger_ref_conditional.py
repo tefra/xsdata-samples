@@ -9,7 +9,7 @@ from .trigger_subtypes_enum import TriggerSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TriggerRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -64,13 +64,12 @@ class TriggerRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TriggerRef(Ref):
-        dest: None | TriggerSubtypesEnum = field(
-            default=None,
+        dest: TriggerSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

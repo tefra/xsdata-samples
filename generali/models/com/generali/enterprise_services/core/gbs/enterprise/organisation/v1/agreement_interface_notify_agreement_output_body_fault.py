@@ -5,24 +5,22 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgreementInterfaceNotifyAgreementOutputBodyFault:
     class Meta:
         global_type = False
 
-    faultcode: None | str = field(
-        default=None,
+    faultcode: str = field(
         metadata={
             "type": "Element",
             "namespace": "",
-        },
+        }
     )
-    faultstring: None | str = field(
-        default=None,
+    faultstring: str = field(
         metadata={
             "type": "Element",
             "namespace": "",
-        },
+        }
     )
     faultactor: None | str = field(
         default=None,

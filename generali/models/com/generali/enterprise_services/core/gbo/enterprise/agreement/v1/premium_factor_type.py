@@ -20,32 +20,29 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PremiumFactorType(BaseComponentType):
-    amount: None | AmountType = field(
-        default=None,
+    amount: AmountType = field(
         metadata={
             "name": "Amount",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    description: None | TextType = field(
-        default=None,
+    description: TextType = field(
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    percentage: None | PercentType = field(
-        default=None,
+    percentage: PercentType = field(
         metadata={
             "name": "Percentage",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )

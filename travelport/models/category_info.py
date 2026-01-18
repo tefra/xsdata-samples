@@ -7,7 +7,7 @@ from travelport.models.date_range_info import DateRangeInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CategoryInfo:
     """
     The information related to a particular category.
@@ -44,27 +44,24 @@ class CategoryInfo:
             "type": "Attribute",
         },
     )
-    category: None | str = field(
-        default=None,
+    category: str = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    count: None | int = field(
-        default=None,
+    count: int = field(
         metadata={
             "name": "Count",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    total_count: None | int = field(
-        default=None,
+    total_count: int = field(
         metadata={
             "name": "TotalCount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

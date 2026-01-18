@@ -7,7 +7,7 @@ from travelport.models.pen_fee_type import PenFeeType
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Chgtype:
     """
     PenFee list will be populated.

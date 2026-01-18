@@ -29,7 +29,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BuildingType(SinglePointStructureType):
     floor_area_m2: None | NumericType = field(
         default=None,

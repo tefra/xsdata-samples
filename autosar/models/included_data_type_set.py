@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IncludedDataTypeSet:
     """
     An includedDataTypeSet declares that a set of AutosarDataType is used
@@ -76,7 +76,7 @@ class IncludedDataTypeSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataTypeRefs:
         data_type_ref: list[IncludedDataTypeSet.DataTypeRefs.DataTypeRef] = (
             field(
@@ -89,13 +89,12 @@ class IncludedDataTypeSet:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DataTypeRef(Ref):
-            dest: None | AutosarDataTypeSubtypesEnum = field(
-                default=None,
+            dest: AutosarDataTypeSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

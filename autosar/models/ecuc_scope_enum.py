@@ -7,7 +7,7 @@ from .ecuc_scope_enum_simple import EcucScopeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucScopeEnum:
     """
     Possible scope settings for a configuration element.
@@ -28,11 +28,10 @@ class EcucScopeEnum:
     class Meta:
         name = "ECUC-SCOPE-ENUM"
 
-    value: None | EcucScopeEnumSimple = field(
-        default=None,
+    value: EcucScopeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

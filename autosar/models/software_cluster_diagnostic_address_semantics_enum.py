@@ -9,7 +9,7 @@ from .software_cluster_diagnostic_address_semantics_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoftwareClusterDiagnosticAddressSemanticsEnum:
     """
     This meta-class defines a list of semantics for the interpretation of
@@ -31,11 +31,10 @@ class SoftwareClusterDiagnosticAddressSemanticsEnum:
     class Meta:
         name = "SOFTWARE-CLUSTER-DIAGNOSTIC-ADDRESS-SEMANTICS-ENUM"
 
-    value: None | SoftwareClusterDiagnosticAddressSemanticsEnumSimple = field(
-        default=None,
+    value: SoftwareClusterDiagnosticAddressSemanticsEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

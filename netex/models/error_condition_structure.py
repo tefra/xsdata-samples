@@ -19,7 +19,7 @@ from .unknown_extensions_error import UnknownExtensionsError
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ErrorConditionStructure:
     choice: (
         None

@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OccupancyChangeValue(DataValue):
     """
     A measured or calculated value of change of occupied parking spaces
@@ -20,14 +20,13 @@ class OccupancyChangeValue(DataValue):
     :ivar occupancy_change_value_extension:
     """
 
-    occupancy_change: None | int = field(
-        default=None,
+    occupancy_change: int = field(
         metadata={
             "name": "occupancyChange",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     occupancy_change_value_extension: None | ExtensionType = field(
         default=None,

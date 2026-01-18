@@ -7,7 +7,7 @@ from .field_access_enum_simple import FieldAccessEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FieldAccessEnum:
     """
     This meta-class provides values that qualify access to a field.
@@ -28,11 +28,10 @@ class FieldAccessEnum:
     class Meta:
         name = "FIELD-ACCESS-ENUM"
 
-    value: None | FieldAccessEnumSimple = field(
-        default=None,
+    value: FieldAccessEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

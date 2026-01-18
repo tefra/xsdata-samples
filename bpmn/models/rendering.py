@@ -7,7 +7,7 @@ from .t_rendering import TRendering
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Rendering(TRendering):
     class Meta:
         name = "rendering"

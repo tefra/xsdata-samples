@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributedUritype:
     class Meta:
         name = "AttributedURIType"

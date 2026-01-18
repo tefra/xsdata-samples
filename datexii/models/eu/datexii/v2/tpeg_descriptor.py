@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TpegDescriptor:
     """
     A collection of information providing descriptive references to
@@ -19,13 +19,12 @@ class TpegDescriptor:
     :ivar tpeg_descriptor_extension:
     """
 
-    descriptor: None | MultilingualString = field(
-        default=None,
+    descriptor: MultilingualString = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     tpeg_descriptor_extension: None | ExtensionType = field(
         default=None,

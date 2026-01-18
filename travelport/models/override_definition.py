@@ -9,7 +9,7 @@ from travelport.models.type_custom_field_or_group_type import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OverrideDefinition:
     """
     Element to override setting of fields defined in default template .Can
@@ -38,13 +38,12 @@ class OverrideDefinition:
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    template_field_id: None | str = field(
-        default=None,
+    template_field_id: str = field(
         metadata={
             "name": "TemplateFieldID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     hide: bool = field(
         default=False,

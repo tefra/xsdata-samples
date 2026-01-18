@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.vms_datex_supplemental_pictogram_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsSupplementaryPictogram:
     """
     An additional pictogram that is displayed in the panel which is

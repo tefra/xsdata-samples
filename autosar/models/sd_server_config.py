@@ -11,7 +11,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SdServerConfig:
     """
     Server configuration for Service-Discovery.
@@ -119,7 +119,7 @@ class SdServerConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CapabilityRecords:
         tag_with_optional_value: list[TagWithOptionalValue] = field(
             default_factory=list,

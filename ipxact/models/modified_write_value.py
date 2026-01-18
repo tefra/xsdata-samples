@@ -7,7 +7,7 @@ from ipxact.models.modified_write_value_type import ModifiedWriteValueType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModifiedWriteValue:
     """
     If present this element describes the modification of field data caused
@@ -33,11 +33,10 @@ class ModifiedWriteValue:
         name = "modifiedWriteValue"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: None | ModifiedWriteValueType = field(
-        default=None,
+    value: ModifiedWriteValueType = field(
         metadata={
             "required": True,
-        },
+        }
     )
     modify: None | str = field(
         default=None,

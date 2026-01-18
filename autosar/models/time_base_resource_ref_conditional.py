@@ -9,7 +9,7 @@ from .time_base_resource_subtypes_enum import TimeBaseResourceSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeBaseResourceRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -66,13 +66,12 @@ class TimeBaseResourceRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimeBaseResourceRef(Ref):
-        dest: None | TimeBaseResourceSubtypesEnum = field(
-            default=None,
+        dest: TimeBaseResourceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

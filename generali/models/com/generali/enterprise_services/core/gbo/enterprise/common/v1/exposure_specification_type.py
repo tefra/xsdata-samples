@@ -20,7 +20,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExposureSpecificationType(BaseGbotype):
     specification_base: None | SpecificationBaseType = field(
         default=None,

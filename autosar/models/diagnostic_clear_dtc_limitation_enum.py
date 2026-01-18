@@ -9,7 +9,7 @@ from .diagnostic_clear_dtc_limitation_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticClearDtcLimitationEnum:
     """
     Scope of the DEM_ClearDTC Api.
@@ -30,11 +30,10 @@ class DiagnosticClearDtcLimitationEnum:
     class Meta:
         name = "DIAGNOSTIC-CLEAR-DTC-LIMITATION-ENUM"
 
-    value: None | DiagnosticClearDtcLimitationEnumSimple = field(
-        default=None,
+    value: DiagnosticClearDtcLimitationEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Restriction6:
     """
     Which activities are supported for a particular element.
@@ -22,13 +22,12 @@ class Restriction6:
         name = "Restriction"
         namespace = "http://www.travelport.com/schema/common_v34_0"
 
-    operation: None | str = field(
-        default=None,
+    operation: str = field(
         metadata={
             "name": "Operation",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     reason: None | str = field(
         default=None,

@@ -10,7 +10,7 @@ from sdmx_ml.models.member_selection_type import MemberSelectionType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RegionType(AnnotableType):
     """
     RegionType is an abstract type which defines a generic constraint

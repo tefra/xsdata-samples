@@ -7,7 +7,7 @@ from .receiver_intent_enum_simple import ReceiverIntentEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReceiverIntentEnum:
     """
     This meta-class represents the intent to specify how a given
@@ -30,11 +30,10 @@ class ReceiverIntentEnum:
     class Meta:
         name = "RECEIVER-INTENT-ENUM"
 
-    value: None | ReceiverIntentEnumSimple = field(
-        default=None,
+    value: ReceiverIntentEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

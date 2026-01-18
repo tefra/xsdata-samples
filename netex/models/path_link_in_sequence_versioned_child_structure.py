@@ -14,21 +14,20 @@ from .transition_enumeration import TransitionEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PathLinkInSequenceVersionedChildStructure(
     LinkInLinkSequenceVersionedChildStructure
 ):
     class Meta:
         name = "PathLinkInSequence_VersionedChildStructure"
 
-    path_link_ref: None | PathLinkRef = field(
-        default=None,
+    path_link_ref: PathLinkRef = field(
         metadata={
             "name": "PathLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     reverse: None | bool = field(
         default=None,
@@ -78,14 +77,13 @@ class PathLinkInSequenceVersionedChildStructure(
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Views:
-        path_link_view: None | PathLinkView = field(
-            default=None,
+        path_link_view: PathLinkView = field(
             metadata={
                 "name": "PathLinkView",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
                 "required": True,
-            },
+            }
         )

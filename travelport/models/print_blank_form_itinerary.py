@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrintBlankFormItinerary:
     """
     Produce a customized itinerary/Invoice document in blank form format.
@@ -21,19 +21,17 @@ class PrintBlankFormItinerary:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    include_description: None | bool = field(
-        default=None,
+    include_description: bool = field(
         metadata={
             "name": "IncludeDescription",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    include_header: None | bool = field(
-        default=None,
+    include_header: bool = field(
         metadata={
             "name": "IncludeHeader",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

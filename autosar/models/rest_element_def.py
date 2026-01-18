@@ -26,7 +26,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RestElementDef:
     """
     This meta-class represents an element of a resource that in turn is
@@ -93,14 +93,13 @@ class RestElementDef:
     class Meta:
         name = "REST-ELEMENT-DEF"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | RestElementDef.ShortNameFragments = field(
         default=None,
@@ -197,7 +196,7 @@ class RestElementDef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -208,7 +207,7 @@ class RestElementDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -219,7 +218,7 @@ class RestElementDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Endpoints:
         rest_endpoint_delete: list[RestEndpointDelete] = field(
             default_factory=list,
@@ -254,7 +253,7 @@ class RestElementDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Propertys:
         rest_array_property_def: list[RestArrayPropertyDef] = field(
             default_factory=list,

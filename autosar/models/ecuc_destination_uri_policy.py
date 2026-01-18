@@ -28,7 +28,7 @@ from .ecuc_uri_reference_def import EcucUriReferenceDef
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucDestinationUriPolicy:
     """
     The EcucDestinationUriPolicy describes the EcucContainerDef that will
@@ -112,7 +112,7 @@ class EcucDestinationUriPolicy:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Containers:
         ecuc_choice_container_def: list[EcucChoiceContainerDef] = field(
             default_factory=list,
@@ -131,7 +131,7 @@ class EcucDestinationUriPolicy:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Parameters:
         ecuc_add_info_param_def: list[EcucAddInfoParamDef] = field(
             default_factory=list,
@@ -208,7 +208,7 @@ class EcucDestinationUriPolicy:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class References:
         ecuc_choice_reference_def: list[EcucChoiceReferenceDef] = field(
             default_factory=list,

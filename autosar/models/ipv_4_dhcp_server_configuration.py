@@ -14,7 +14,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ipv4DhcpServerConfiguration:
     """
     Defines the configuration of a IPv4 DHCP server that runs on the
@@ -158,7 +158,7 @@ class Ipv4DhcpServerConfiguration:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DnsServerAddresses:
         """
         :ivar dns_server_address: IP addresses of preconfigured DNS

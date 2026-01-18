@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.overall_period import OverallPeriod
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Contact:
     """
     Address and contact information about some person, service or the

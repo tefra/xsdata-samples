@@ -10,7 +10,7 @@ from .positive_integer import PositiveInteger
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ipv4Configuration:
     """
     Internet Protocol version 4 (IPv4) configuration.
@@ -127,7 +127,7 @@ class Ipv4Configuration:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DnsServerAddresses:
         """
         :ivar dns_server_address: IP addresses of preconfigured DNS

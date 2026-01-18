@@ -10,7 +10,7 @@ from travelport.models.provider_reservation_status import (
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordCancelRsp(BaseRsp1):
     """
     Return status for each provider reservation.

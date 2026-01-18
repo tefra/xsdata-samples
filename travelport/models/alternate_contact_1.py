@@ -12,7 +12,7 @@ from travelport.models.type_taggable_phone_1 import TypeTaggablePhone1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlternateContact1(TypeContact1):
     """
     Outside Contact information refering to relationships such as Emergency

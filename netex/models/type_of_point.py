@@ -7,7 +7,7 @@ from .type_of_point_value_structure import TypeOfPointValueStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfPoint(TypeOfPointValueStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

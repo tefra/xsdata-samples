@@ -25,7 +25,7 @@ from .transformation_technology_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SomeipTransformationISignalPropsConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -276,7 +276,7 @@ class SomeipTransformationISignalPropsConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataPrototypeTransformationPropss:
         data_prototype_transformation_props: list[
             DataPrototypeTransformationProps
@@ -289,18 +289,17 @@ class SomeipTransformationISignalPropsConditional:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransformerRef(Ref):
-        dest: None | TransformationTechnologySubtypesEnum = field(
-            default=None,
+        dest: TransformationTechnologySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TlvDataIds:
         tlv_data_id_definition: list[TlvDataIdDefinition] = field(
             default_factory=list,
@@ -311,7 +310,7 @@ class SomeipTransformationISignalPropsConditional:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TlvDataId0Refs:
         tlv_data_id_0_ref: list[
             SomeipTransformationISignalPropsConditional.TlvDataId0Refs.TlvDataId0Ref
@@ -324,18 +323,17 @@ class SomeipTransformationISignalPropsConditional:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TlvDataId0Ref(Ref):
-            dest: None | TlvDataIdDefinitionSetSubtypesEnum = field(
-                default=None,
+            dest: TlvDataIdDefinitionSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TlvDataIdDefinitionRefs:
         tlv_data_id_definition_ref: list[
             SomeipTransformationISignalPropsConditional.TlvDataIdDefinitionRefs.TlvDataIdDefinitionRef
@@ -348,13 +346,12 @@ class SomeipTransformationISignalPropsConditional:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TlvDataIdDefinitionRef(Ref):
-            dest: None | TlvDataIdDefinitionSetSubtypesEnum = field(
-                default=None,
+            dest: TlvDataIdDefinitionSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

@@ -10,7 +10,7 @@ from .price_unit_ref import PriceUnitRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AmountOfPriceUnitProductVersionStructure(FareProductVersionStructure):
     class Meta:
         name = "AmountOfPriceUnitProduct_VersionStructure"

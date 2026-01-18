@@ -9,7 +9,7 @@ from travelport.models.type_mct_connection import TypeMctConnection
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MctException:
     """
     MCT Exception details.
@@ -18,23 +18,21 @@ class MctException:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    time: None | int = field(
-        default=None,
+    time: int = field(
         metadata={
             "name": "Time",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    arrive_station: None | str = field(
-        default=None,
+    arrive_station: str = field(
         metadata={
             "name": "ArriveStation",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
     depart_station: None | str = field(
         default=None,
@@ -45,13 +43,12 @@ class MctException:
             "white_space": "collapse",
         },
     )
-    connection: None | TypeMctConnection = field(
-        default=None,
+    connection: TypeMctConnection = field(
         metadata={
             "name": "Connection",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     arrive_carrier: None | str = field(
         default=None,

@@ -7,7 +7,7 @@ from .tp_ack_type_simple import TpAckTypeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TpAckType:
     """
     Type of Acknowledgement.
@@ -28,11 +28,10 @@ class TpAckType:
     class Meta:
         name = "TP-ACK-TYPE"
 
-    value: None | TpAckTypeSimple = field(
-        default=None,
+    value: TpAckTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

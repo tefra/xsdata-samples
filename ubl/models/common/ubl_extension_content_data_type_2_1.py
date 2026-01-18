@@ -7,7 +7,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionContentType:
     other_element: None | object = field(
         default=None,

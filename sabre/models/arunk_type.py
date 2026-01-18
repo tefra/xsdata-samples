@@ -8,7 +8,7 @@ from sabre.models.side_trip_type import SideTripType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ArunkType:
     """
     Attributes:
@@ -17,23 +17,21 @@ class ArunkType:
         side_trip: Side trip information
     """
 
-    origin_location: None | RequestLocationType = field(
-        default=None,
+    origin_location: RequestLocationType = field(
         metadata={
             "name": "OriginLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    destination_location: None | RequestLocationType = field(
-        default=None,
+    destination_location: RequestLocationType = field(
         metadata={
             "name": "DestinationLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     side_trip: None | SideTripType = field(
         default=None,

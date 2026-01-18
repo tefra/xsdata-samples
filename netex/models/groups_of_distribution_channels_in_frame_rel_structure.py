@@ -9,7 +9,7 @@ from .group_of_distribution_channels import GroupOfDistributionChannels
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupsOfDistributionChannelsInFrameRelStructure(
     FrameContainmentStructure
 ):

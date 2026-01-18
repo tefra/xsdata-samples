@@ -8,7 +8,7 @@ from .site_entrance_version_structure import SiteEntranceVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingPassengerEntranceVersionStructure(SiteEntranceVersionStructure):
     class Meta:
         name = "ParkingPassengerEntrance_VersionStructure"

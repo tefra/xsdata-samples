@@ -9,21 +9,20 @@ from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceJourneyPatternInterchangeVersionStructure(
     InterchangeVersionStructure
 ):
     class Meta:
         name = "ServiceJourneyPatternInterchange_VersionStructure"
 
-    from_point_ref: None | ScheduledStopPointRefStructure = field(
-        default=None,
+    from_point_ref: ScheduledStopPointRefStructure = field(
         metadata={
             "name": "FromPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     from_visit_number: None | int = field(
         default=None,
@@ -33,14 +32,13 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_point_ref: None | ScheduledStopPointRefStructure = field(
-        default=None,
+    to_point_ref: ScheduledStopPointRefStructure = field(
         metadata={
             "name": "ToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     to_visit_number: None | int = field(
         default=None,
@@ -50,21 +48,19 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_journey_pattern_ref: None | JourneyPatternRefStructure = field(
-        default=None,
+    from_journey_pattern_ref: JourneyPatternRefStructure = field(
         metadata={
             "name": "FromJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    to_journey_pattern_ref: None | JourneyPatternRefStructure = field(
-        default=None,
+    to_journey_pattern_ref: JourneyPatternRefStructure = field(
         metadata={
             "name": "ToJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

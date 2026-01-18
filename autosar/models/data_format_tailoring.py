@@ -11,7 +11,7 @@ from .constraint_tailoring import ConstraintTailoring
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataFormatTailoring:
     """
     This class collects all rules that tailor the AUTOSAR templates for a
@@ -69,7 +69,7 @@ class DataFormatTailoring:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClassTailorings:
         abstract_class_tailoring: list[AbstractClassTailoring] = field(
             default_factory=list,
@@ -88,7 +88,7 @@ class DataFormatTailoring:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConstraintTailorings:
         constraint_tailoring: list[ConstraintTailoring] = field(
             default_factory=list,

@@ -9,7 +9,7 @@ from .crypto_certificate_algorithm_family_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CryptoCertificateAlgorithmFamilyEnum:
     """
     This meta-class defies possible cryptographic algorithm families used
@@ -31,11 +31,10 @@ class CryptoCertificateAlgorithmFamilyEnum:
     class Meta:
         name = "CRYPTO-CERTIFICATE-ALGORITHM-FAMILY-ENUM"
 
-    value: None | CryptoCertificateAlgorithmFamilyEnumSimple = field(
-        default=None,
+    value: CryptoCertificateAlgorithmFamilyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

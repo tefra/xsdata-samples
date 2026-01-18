@@ -11,14 +11,13 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailwayTrackType(ExpansiveStructureType):
-    electrified: None | bool = field(
-        default=None,
+    electrified: bool = field(
         metadata={
             "name": "Electrified",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
-        },
+        }
     )

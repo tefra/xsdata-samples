@@ -12,7 +12,7 @@ from .can_controller_configuration_requirements import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanCommunicationControllerConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -82,7 +82,7 @@ class CanCommunicationControllerConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CanControllerAttributes:
         can_controller_configuration: None | CanControllerConfiguration = (
             field(

@@ -5,27 +5,23 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CapabilityGeneralInteractionStructure:
-    interaction: None | CapabilityGeneralInteractionStructure.Interaction = (
-        field(
-            default=None,
-            metadata={
-                "name": "Interaction",
-                "type": "Element",
-                "namespace": "http://www.siri.org.uk/siri",
-                "required": True,
-            },
-        )
+    interaction: CapabilityGeneralInteractionStructure.Interaction = field(
+        metadata={
+            "name": "Interaction",
+            "type": "Element",
+            "namespace": "http://www.siri.org.uk/siri",
+            "required": True,
+        }
     )
-    delivery: None | CapabilityGeneralInteractionStructure.Delivery = field(
-        default=None,
+    delivery: CapabilityGeneralInteractionStructure.Delivery = field(
         metadata={
             "name": "Delivery",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        },
+        }
     )
     multipart_despatch: bool = field(
         default=True,
@@ -72,7 +68,7 @@ class CapabilityGeneralInteractionStructure:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Interaction:
         request_response: bool = field(
             default=True,
@@ -93,23 +89,21 @@ class CapabilityGeneralInteractionStructure:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Delivery:
-        direct_delivery: None | bool = field(
-            default=None,
+        direct_delivery: bool = field(
             metadata={
                 "name": "DirectDelivery",
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
                 "required": True,
-            },
+            }
         )
-        fetched_delivery: None | bool = field(
-            default=None,
+        fetched_delivery: bool = field(
             metadata={
                 "name": "FetchedDelivery",
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
                 "required": True,
-            },
+            }
         )

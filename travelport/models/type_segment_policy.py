@@ -7,7 +7,7 @@ from travelport.models.preference import Preference
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeSegmentPolicy:
     """
     Parameters
@@ -35,13 +35,12 @@ class TypeSegmentPolicy:
             "max_occurs": 999,
         },
     )
-    segment_ref: None | str = field(
-        default=None,
+    segment_ref: str = field(
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     in_policy: bool = field(
         default=True,

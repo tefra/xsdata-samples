@@ -9,7 +9,7 @@ from travelport.models.ssr_1 import Ssr1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailableSsr:
     """
     A wrapper for all the information regarding each of the available SSR.

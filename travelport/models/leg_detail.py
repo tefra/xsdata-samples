@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LegDetail:
     """
     Information about the journey Leg, Shared by Leg and LegPrice Elements.
@@ -28,42 +28,38 @@ class LegDetail:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    origin_airport: None | str = field(
-        default=None,
+    origin_airport: str = field(
         metadata={
             "name": "OriginAirport",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    destination_airport: None | str = field(
-        default=None,
+    destination_airport: str = field(
         metadata={
             "name": "DestinationAirport",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
     travel_date: None | str = field(
         default=None,

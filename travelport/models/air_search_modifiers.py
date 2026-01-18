@@ -25,7 +25,7 @@ from travelport.models.type_native_search_modifier import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirSearchModifiers:
     """
     Controls and switches for the Air Search request.
@@ -336,7 +336,7 @@ class AirSearchModifiers:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DisfavoredProviders:
         provider: list[Provider1] = field(
             default_factory=list,
@@ -349,7 +349,7 @@ class AirSearchModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PreferredProviders:
         provider: list[Provider1] = field(
             default_factory=list,
@@ -362,7 +362,7 @@ class AirSearchModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DisfavoredCarriers:
         carrier: list[Carrier1] = field(
             default_factory=list,
@@ -375,7 +375,7 @@ class AirSearchModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PreferredAlliances:
         alliance: list[Alliance] = field(
             default_factory=list,
@@ -387,7 +387,7 @@ class AirSearchModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DisfavoredAlliances:
         alliance: list[Alliance] = field(
             default_factory=list,
@@ -399,7 +399,7 @@ class AirSearchModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PermittedBookingCodes:
         booking_code: list[BookingCode] = field(
             default_factory=list,
@@ -411,7 +411,7 @@ class AirSearchModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProhibitedBookingCodes:
         booking_code: list[BookingCode] = field(
             default_factory=list,

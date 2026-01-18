@@ -9,7 +9,7 @@ from .diagnostic_denominator_condition_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticDenominatorConditionEnum:
     """
     This enumeration contains valid denominator types.
@@ -30,11 +30,10 @@ class DiagnosticDenominatorConditionEnum:
     class Meta:
         name = "DIAGNOSTIC-DENOMINATOR-CONDITION-ENUM"
 
-    value: None | DiagnosticDenominatorConditionEnumSimple = field(
-        default=None,
+    value: DiagnosticDenominatorConditionEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

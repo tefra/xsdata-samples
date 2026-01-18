@@ -9,7 +9,7 @@ from ipxact.models.unsigned_bit_vector_expression import (
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Reset:
     """
     Register value at reset.
@@ -26,12 +26,11 @@ class Reset:
         name = "reset"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: None | UnsignedBitVectorExpression = field(
-        default=None,
+    value: UnsignedBitVectorExpression = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     mask: None | UnsignedBitVectorExpression = field(
         default=None,

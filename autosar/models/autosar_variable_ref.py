@@ -16,7 +16,7 @@ from .variable_in_atomic_swc_type_instance_ref import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AutosarVariableRef:
     """
     This class represents a reference to a variable within AUTOSAR which
@@ -103,13 +103,12 @@ class AutosarVariableRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LocalVariableRef(Ref):
-        dest: None | VariableDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: VariableDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -7,7 +7,7 @@ from travelport.models.type_key_element_1 import TypeKeyElement1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExternalIdentifier1(TypeKeyElement1):
     """
     This is meant for external identification of a Profile.
@@ -26,15 +26,14 @@ class ExternalIdentifier1(TypeKeyElement1):
         name = "ExternalIdentifier"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    ext_id: None | str = field(
-        default=None,
+    ext_id: str = field(
         metadata={
             "name": "ExtID",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        },
+        }
     )
     source: None | str = field(
         default=None,

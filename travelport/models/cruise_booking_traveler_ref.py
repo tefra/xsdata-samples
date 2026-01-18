@@ -7,7 +7,7 @@ from travelport.models.loyalty_card_ref_1 import LoyaltyCardRef1
 __NAMESPACE__ = "http://www.travelport.com/schema/cruise_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CruiseBookingTravelerRef:
     """
     Reference Element for Booking Traveler and Loyalty cards.

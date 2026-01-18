@@ -7,7 +7,7 @@ from .couchette_facility_enumeration import CouchetteFacilityEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CouchetteFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

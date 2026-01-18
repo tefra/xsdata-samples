@@ -9,7 +9,7 @@ from travelport.models.base_vehicle_search_availability_rsp import (
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleUpsellSearchAvailabilityRsp(BaseVehicleSearchAvailabilityRsp):
     """
     Response of search Vehicle Upsell offer availability.

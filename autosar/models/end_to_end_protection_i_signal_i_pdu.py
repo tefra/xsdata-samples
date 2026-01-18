@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EndToEndProtectionISignalIPdu:
     """
     It is possible to protect the inter-ECU data exchange of safety-related
@@ -105,24 +105,22 @@ class EndToEndProtectionISignalIPdu:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalGroupRef(Ref):
-        dest: None | ISignalGroupSubtypesEnum = field(
-            default=None,
+        dest: ISignalGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalIPduRef(Ref):
-        dest: None | ISignalIPduSubtypesEnum = field(
-            default=None,
+        dest: ISignalIPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -14,7 +14,7 @@ from .time_range_type import TimeRangeType
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EventControlledTiming:
     """
     Specification of a event driven sending behavior.

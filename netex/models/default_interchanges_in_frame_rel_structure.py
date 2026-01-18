@@ -9,7 +9,7 @@ from .default_interchange import DefaultInterchange
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefaultInterchangesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "defaultInterchangesInFrame_RelStructure"

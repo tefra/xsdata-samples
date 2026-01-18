@@ -41,7 +41,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PremiumType:
     is_minimum: None | bool = field(
         default=None,
@@ -99,14 +99,13 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    number_of_installments: None | NumberType = field(
-        default=None,
+    number_of_installments: NumberType = field(
         metadata={
             "name": "NumberOfInstallments",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     description: None | TextType = field(
         default=None,

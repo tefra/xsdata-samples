@@ -30,7 +30,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinPhysicalChannel:
     """
     LIN specific attributes to the physicalChannel.
@@ -113,14 +113,13 @@ class LinPhysicalChannel:
     class Meta:
         name = "LIN-PHYSICAL-CHANNEL"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | LinPhysicalChannel.ShortNameFragments = field(
         default=None,
@@ -267,7 +266,7 @@ class LinPhysicalChannel:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -278,7 +277,7 @@ class LinPhysicalChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -289,7 +288,7 @@ class LinPhysicalChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommConnectors:
         communication_connector_ref_conditional: list[
             CommunicationConnectorRefConditional
@@ -302,7 +301,7 @@ class LinPhysicalChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FrameTriggerings:
         can_frame_triggering: list[CanFrameTriggering] = field(
             default_factory=list,
@@ -337,7 +336,7 @@ class LinPhysicalChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalTriggerings:
         i_signal_triggering: list[ISignalTriggering] = field(
             default_factory=list,
@@ -348,7 +347,7 @@ class LinPhysicalChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ManagedPhysicalChannelRefs:
         managed_physical_channel_ref: list[
             LinPhysicalChannel.ManagedPhysicalChannelRefs.ManagedPhysicalChannelRef
@@ -361,18 +360,17 @@ class LinPhysicalChannel:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ManagedPhysicalChannelRef(Ref):
-            dest: None | PhysicalChannelSubtypesEnum = field(
-                default=None,
+            dest: PhysicalChannelSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduTriggerings:
         pdu_triggering: list[PduTriggering] = field(
             default_factory=list,
@@ -383,7 +381,7 @@ class LinPhysicalChannel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ScheduleTables:
         lin_schedule_table: list[LinScheduleTable] = field(
             default_factory=list,

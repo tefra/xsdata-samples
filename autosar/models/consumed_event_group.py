@@ -30,7 +30,7 @@ from .someip_sd_client_event_group_timing_config_ref_conditional import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConsumedEventGroup:
     """
     This element represents an event-group to which the service consumer
@@ -141,14 +141,13 @@ class ConsumedEventGroup:
     class Meta:
         name = "CONSUMED-EVENT-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ConsumedEventGroup.ShortNameFragments = field(
         default=None,
@@ -325,7 +324,7 @@ class ConsumedEventGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -336,7 +335,7 @@ class ConsumedEventGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -347,18 +346,17 @@ class ConsumedEventGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ApplicationEndpointRef(Ref):
-        dest: None | ApplicationEndpointSubtypesEnum = field(
-            default=None,
+        dest: ApplicationEndpointSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventMulticastAddresss:
         application_endpoint_ref_conditional: list[
             ApplicationEndpointRefConditional
@@ -371,7 +369,7 @@ class ConsumedEventGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduActivationRoutingGroups:
         pdu_activation_routing_group: list[PduActivationRoutingGroup] = field(
             default_factory=list,
@@ -382,7 +380,7 @@ class ConsumedEventGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RoutingGroupRefs:
         routing_group_ref: list[
             ConsumedEventGroup.RoutingGroupRefs.RoutingGroupRef
@@ -395,18 +393,17 @@ class ConsumedEventGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RoutingGroupRef(Ref):
-            dest: None | SoAdRoutingGroupSubtypesEnum = field(
-                default=None,
+            dest: SoAdRoutingGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SdClientTimerConfigs:
         someip_sd_client_event_group_timing_config_ref_conditional: list[
             SomeipSdClientEventGroupTimingConfigRefConditional

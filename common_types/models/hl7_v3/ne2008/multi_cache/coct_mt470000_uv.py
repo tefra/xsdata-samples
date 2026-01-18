@@ -24,7 +24,7 @@ from .coct_mt090000_uv01 import CoctMt090000Uv01AssignedEntity
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt470000UvPerformer:
     class Meta:
         name = "COCT_MT470000UV.Performer"
@@ -93,13 +93,12 @@ class CoctMt470000UvPerformer:
         },
     )
     assigned_entity: None | CoctMt090000Uv01AssignedEntity = field(
-        default=None,
         metadata={
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -108,17 +107,16 @@ class CoctMt470000UvPerformer:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationPhysicalPerformer = field(
-        default=None,
+    type_code: ParticipationPhysicalPerformer = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt470000UvResponsibleParty:
     class Meta:
         name = "COCT_MT470000UV.ResponsibleParty"
@@ -187,13 +185,12 @@ class CoctMt470000UvResponsibleParty:
         },
     )
     responsible_party: None | CoctMt040200Uv01ResponsibleParty = field(
-        default=None,
         metadata={
             "name": "responsibleParty",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -213,7 +210,7 @@ class CoctMt470000UvResponsibleParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt470000UvConsent:
     class Meta:
         name = "COCT_MT470000UV.Consent"
@@ -256,13 +253,12 @@ class CoctMt470000UvConsent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: None | EdExplicit = field(
-        default=None,
+    text: EdExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     status_code: None | Cs = field(
         default=None,

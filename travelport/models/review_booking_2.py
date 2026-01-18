@@ -9,7 +9,7 @@ from travelport.models.type_element_status_3 import TypeElementStatus3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReviewBooking2:
     """
     Review Booking or Queue Minders is to add the reminders in the Provider
@@ -61,14 +61,13 @@ class ReviewBooking2:
             "type": "Attribute",
         },
     )
-    queue: None | int = field(
-        default=None,
+    queue: int = field(
         metadata={
             "name": "Queue",
             "type": "Attribute",
             "required": True,
             "max_inclusive": 99,
-        },
+        }
     )
     queue_category: None | str = field(
         default=None,
@@ -78,13 +77,12 @@ class ReviewBooking2:
             "max_length": 2,
         },
     )
-    date_time: None | XmlDateTime = field(
-        default=None,
+    date_time: XmlDateTime = field(
         metadata={
             "name": "DateTime",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -111,14 +109,13 @@ class ReviewBooking2:
             "type": "Attribute",
         },
     )
-    remarks: None | str = field(
-        default=None,
+    remarks: str = field(
         metadata={
             "name": "Remarks",
             "type": "Attribute",
             "required": True,
             "max_length": 300,
-        },
+        }
     )
     el_stat: None | TypeElementStatus3 = field(
         default=None,

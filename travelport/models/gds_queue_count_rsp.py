@@ -8,7 +8,7 @@ from travelport.models.queue_info import QueueInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GdsQueueCountRsp(BaseRsp1):
     """
     The response from the host for a queue count.

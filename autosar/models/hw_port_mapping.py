@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HwPortMapping:
     """
     HWPortMapping specifies the hwCommunicationPort (defined in the ECU
@@ -75,24 +75,22 @@ class HwPortMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommunicationConnectorRef(Ref):
-        dest: None | CommunicationConnectorSubtypesEnum = field(
-            default=None,
+        dest: CommunicationConnectorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HwCommunicationPortRef(Ref):
-        dest: None | HwPinGroupSubtypesEnum = field(
-            default=None,
+        dest: HwPinGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -18,7 +18,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModeDeclarationMapping:
     """
     This meta-class implements a concrete mapping of two ModeDeclarations.
@@ -86,14 +86,13 @@ class ModeDeclarationMapping:
     class Meta:
         name = "MODE-DECLARATION-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ModeDeclarationMapping.ShortNameFragments = (
         field(
@@ -192,7 +191,7 @@ class ModeDeclarationMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -203,7 +202,7 @@ class ModeDeclarationMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -214,7 +213,7 @@ class ModeDeclarationMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FirstModeRefs:
         first_mode_ref: list[
             ModeDeclarationMapping.FirstModeRefs.FirstModeRef
@@ -227,24 +226,22 @@ class ModeDeclarationMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FirstModeRef(Ref):
-            dest: None | ModeDeclarationSubtypesEnum = field(
-                default=None,
+            dest: ModeDeclarationSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecondModeRef(Ref):
-        dest: None | ModeDeclarationSubtypesEnum = field(
-            default=None,
+        dest: ModeDeclarationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

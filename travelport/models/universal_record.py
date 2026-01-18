@@ -40,7 +40,7 @@ from travelport.models.xmlremark_1 import Xmlremark1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecord:
     """
     Universal Record holds one or more provider reservations.
@@ -390,15 +390,14 @@ class UniversalRecord:
             "max_occurs": 999,
         },
     )
-    locator_code: None | str = field(
-        default=None,
+    locator_code: str = field(
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
     saved_trip_locator_code: None | str = field(
         default=None,
@@ -430,11 +429,10 @@ class UniversalRecord:
             "type": "Attribute",
         },
     )
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

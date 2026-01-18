@@ -21,7 +21,7 @@ from .topographic_place_type_enumeration import TopographicPlaceTypeEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TopographicPlaceVersionStructure(PlaceVersionStructure):
     class Meta:
         name = "TopographicPlace_VersionStructure"
@@ -34,16 +34,13 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    descriptor: None | TopographicPlaceDescriptorVersionedChildStructure = (
-        field(
-            default=None,
-            metadata={
-                "name": "Descriptor",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-                "required": True,
-            },
-        )
+    descriptor: TopographicPlaceDescriptorVersionedChildStructure = field(
+        metadata={
+            "name": "Descriptor",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
     )
     alternative_descriptors: None | TopographicPlaceDescriptorsRelStructure = (
         field(

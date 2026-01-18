@@ -13,7 +13,7 @@ from travelport.models.type_ticket_failure_info import TypeTicketFailureInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeRsp(BaseRsp1):
     """
     Parameters

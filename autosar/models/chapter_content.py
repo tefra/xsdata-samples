@@ -23,7 +23,7 @@ from .traceable_table import TraceableTable
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChapterContent:
     """
     This class represents the content which is directly in a chapter.

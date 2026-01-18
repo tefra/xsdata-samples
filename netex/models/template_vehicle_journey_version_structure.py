@@ -11,7 +11,7 @@ from .template_vehicle_journey_type_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TemplateVehicleJourneyVersionStructure(JourneyVersionStructure):
     class Meta:
         name = "TemplateVehicleJourney_VersionStructure"

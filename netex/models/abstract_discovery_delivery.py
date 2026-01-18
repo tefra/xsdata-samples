@@ -9,7 +9,7 @@ from .abstract_discovery_delivery_structure import (
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractDiscoveryDelivery(AbstractDiscoveryDeliveryStructure):
     class Meta:
         namespace = "http://www.siri.org.uk/siri"

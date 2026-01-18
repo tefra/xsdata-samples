@@ -29,7 +29,7 @@ from .vehicle_journey_ref import VehicleJourneyRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinkInLinkSequenceVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "LinkInLinkSequence_VersionedChildStructure"

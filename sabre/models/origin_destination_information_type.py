@@ -9,7 +9,7 @@ from sabre.models.travel_date_time_type import TravelDateTimeType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginDestinationInformationType(TravelDateTimeType):
     """
     Origin and Destination location, and time information for the request.
@@ -26,27 +26,21 @@ class OriginDestinationInformationType(TravelDateTimeType):
             air uses the IATA 3 letter code.
     """
 
-    origin_location: None | OriginDestinationInformationType.OriginLocation = (
-        field(
-            default=None,
-            metadata={
-                "name": "OriginLocation",
-                "type": "Element",
-                "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "required": True,
-            },
-        )
+    origin_location: OriginDestinationInformationType.OriginLocation = field(
+        metadata={
+            "name": "OriginLocation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
-    destination_location: (
-        None | OriginDestinationInformationType.DestinationLocation
-    ) = field(
-        default=None,
+    destination_location: OriginDestinationInformationType.DestinationLocation = field(
         metadata={
             "name": "DestinationLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     connection_locations: None | ConnectionType = field(
         default=None,
@@ -57,7 +51,7 @@ class OriginDestinationInformationType(TravelDateTimeType):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OriginLocation(RequestLocationType):
         """
         Attributes:
@@ -73,7 +67,7 @@ class OriginDestinationInformationType(TravelDateTimeType):
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DestinationLocation(RequestLocationType):
         """
         Attributes:

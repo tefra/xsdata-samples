@@ -24,7 +24,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
     """
     This meta-class represents the ability to associate a UDS trouble code
@@ -93,14 +93,13 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
     class Meta:
         name = "DIAGNOSTIC-TROUBLE-CODE-UDS-TO-TROUBLE-CODE-OBD-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None
@@ -216,7 +215,7 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -227,7 +226,7 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -238,24 +237,22 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TroubleCodeObdRef(Ref):
-        dest: None | DiagnosticTroubleCodeObdSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticTroubleCodeObdSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TroubleCodeUdsRef(Ref):
-        dest: None | DiagnosticTroubleCodeUdsSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticTroubleCodeUdsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -13,7 +13,7 @@ from .sw_systemconstant_value_set_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McSupportData:
     """
     Root element for all measurement and calibration support data related
@@ -118,7 +118,7 @@ class McSupportData:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EmulationSupports:
         mc_sw_emulation_method_support: list[McSwEmulationMethodSupport] = (
             field(
@@ -131,7 +131,7 @@ class McSupportData:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McParameterInstances:
         mc_data_instance: list[McDataInstance] = field(
             default_factory=list,
@@ -142,7 +142,7 @@ class McSupportData:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McVariableInstances:
         mc_data_instance: list[McDataInstance] = field(
             default_factory=list,
@@ -153,7 +153,7 @@ class McSupportData:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MeasurableSystemConstantValuesRefs:
         measurable_system_constant_values_ref: list[
             McSupportData.MeasurableSystemConstantValuesRefs.MeasurableSystemConstantValuesRef
@@ -166,13 +166,12 @@ class McSupportData:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MeasurableSystemConstantValuesRef(Ref):
-            dest: None | SwSystemconstantValueSetSubtypesEnum = field(
-                default=None,
+            dest: SwSystemconstantValueSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

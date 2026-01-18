@@ -10,7 +10,7 @@ from travelport.models.type_history_sub_element_2 import TypeHistorySubElement2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HistoryElement2:
     """
     The history of a particular element at a particular point in time.
@@ -58,47 +58,42 @@ class HistoryElement2:
             "type": "Element",
         },
     )
-    action: None | TypeAction2 = field(
-        default=None,
+    action: TypeAction2 = field(
         metadata={
             "name": "Action",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    modified_by_agent_id: None | int = field(
-        default=None,
+    modified_by_agent_id: int = field(
         metadata={
             "name": "ModifiedByAgentID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    modified_by_agent_user_name: None | str = field(
-        default=None,
+    modified_by_agent_user_name: str = field(
         metadata={
             "name": "ModifiedByAgentUserName",
             "type": "Attribute",
             "required": True,
             "pattern": r"[a-zA-Z0-9\-_\.@ ]{1,128}",
-        },
+        }
     )
-    modified_date: None | XmlDateTime = field(
-        default=None,
+    modified_date: XmlDateTime = field(
         metadata={
             "name": "ModifiedDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    component: None | str = field(
-        default=None,
+    component: str = field(
         metadata={
             "name": "Component",
             "type": "Attribute",
             "required": True,
             "max_length": 50,
-        },
+        }
     )
     correlation_element: None | str = field(
         default=None,

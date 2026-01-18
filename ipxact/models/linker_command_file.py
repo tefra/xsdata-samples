@@ -10,7 +10,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinkerCommandFile:
     """
     Specifies a linker command file.
@@ -29,27 +29,24 @@ class LinkerCommandFile:
         name = "linkerCommandFile"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: None | StringExpression = field(
-        default=None,
+    name: StringExpression = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    command_line_switch: None | StringExpression = field(
-        default=None,
+    command_line_switch: StringExpression = field(
         metadata={
             "name": "commandLineSwitch",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    enable: None | UnsignedBitExpression = field(
-        default=None,
+    enable: UnsignedBitExpression = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     generator_ref: list[GeneratorRef] = field(
         default_factory=list,

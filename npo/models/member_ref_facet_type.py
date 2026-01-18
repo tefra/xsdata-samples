@@ -8,7 +8,7 @@ from npo.models.member_ref_search_type import MemberRefSearchType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MemberRefFacetType(MediaFacetType):
     class Meta:
         name = "memberRefFacetType"

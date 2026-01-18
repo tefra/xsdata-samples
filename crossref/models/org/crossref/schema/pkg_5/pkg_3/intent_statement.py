@@ -15,7 +15,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.xref_faces import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IntentStatement:
     """
     Member's custom statement of intent to publish content for which a

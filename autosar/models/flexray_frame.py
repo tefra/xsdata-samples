@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlexrayFrame:
     """
     FlexRay specific Frame element.
@@ -90,14 +90,13 @@ class FlexrayFrame:
     class Meta:
         name = "FLEXRAY-FRAME"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | FlexrayFrame.ShortNameFragments = field(
         default=None,
@@ -202,7 +201,7 @@ class FlexrayFrame:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -213,7 +212,7 @@ class FlexrayFrame:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -224,7 +223,7 @@ class FlexrayFrame:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduToFrameMappings:
         pdu_to_frame_mapping: list[PduToFrameMapping] = field(
             default_factory=list,

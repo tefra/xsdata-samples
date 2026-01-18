@@ -9,7 +9,7 @@ from .diagnostic_periodic_rate_category_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticPeriodicRateCategoryEnum:
     """
     This meta-class provides possible values for the setting of the
@@ -31,11 +31,10 @@ class DiagnosticPeriodicRateCategoryEnum:
     class Meta:
         name = "DIAGNOSTIC-PERIODIC-RATE-CATEGORY-ENUM"
 
-    value: None | DiagnosticPeriodicRateCategoryEnumSimple = field(
-        default=None,
+    value: DiagnosticPeriodicRateCategoryEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

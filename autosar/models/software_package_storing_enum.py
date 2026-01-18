@@ -9,7 +9,7 @@ from .software_package_storing_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoftwarePackageStoringEnum:
     """
     :ivar value:
@@ -28,11 +28,10 @@ class SoftwarePackageStoringEnum:
     class Meta:
         name = "SOFTWARE-PACKAGE-STORING-ENUM"
 
-    value: None | SoftwarePackageStoringEnumSimple = field(
-        default=None,
+    value: SoftwarePackageStoringEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

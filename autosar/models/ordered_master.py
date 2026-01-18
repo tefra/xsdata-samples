@@ -11,7 +11,7 @@ from .time_sync_server_configuration_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderedMaster:
     """
     Element in the network endpoint list.
@@ -67,13 +67,12 @@ class OrderedMaster:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimeSyncServerRef(Ref):
-        dest: None | TimeSyncServerConfigurationSubtypesEnum = field(
-            default=None,
+        dest: TimeSyncServerConfigurationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

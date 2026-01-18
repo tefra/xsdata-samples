@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.time_period_of_day import TimePeriodOfDay
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimePeriodByHour(TimePeriodOfDay):
     """
     Specification of a continuous period within a 24 hour period by times.
@@ -20,23 +20,21 @@ class TimePeriodByHour(TimePeriodOfDay):
     :ivar time_period_by_hour_extension:
     """
 
-    start_time_of_period: None | XmlTime = field(
-        default=None,
+    start_time_of_period: XmlTime = field(
         metadata={
             "name": "startTimeOfPeriod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    end_time_of_period: None | XmlTime = field(
-        default=None,
+    end_time_of_period: XmlTime = field(
         metadata={
             "name": "endTimeOfPeriod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     time_period_by_hour_extension: None | ExtensionType = field(
         default=None,

@@ -14,7 +14,7 @@ from travelport.models.traveler_group_criteria_2 import TravelerGroupCriteria2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileTypeSearch2:
     """
     Specifies which type of profile to be searched on and includes

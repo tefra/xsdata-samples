@@ -12,7 +12,7 @@ from .mapping_scope_enum import MappingScopeEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ComponentClustering:
     """
     Constraint that forces the mapping of all referenced SW component
@@ -96,7 +96,7 @@ class ComponentClustering:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClusteredComponentIrefs:
         clustered_component_iref: list[ComponentInSystemInstanceRef] = field(
             default_factory=list,

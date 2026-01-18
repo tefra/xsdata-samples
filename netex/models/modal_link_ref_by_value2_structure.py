@@ -11,25 +11,23 @@ from .vehicle_mode import VehicleMode
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModalLinkRefByValue2Structure:
-    from_point_ref: None | PointRefStructure = field(
-        default=None,
+    from_point_ref: PointRefStructure = field(
         metadata={
             "name": "FromPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    to_point_ref: None | PointRefStructure = field(
-        default=None,
+    to_point_ref: PointRefStructure = field(
         metadata={
             "name": "ToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     type_of_link_ref: None | TypeOfLinkRef = field(
         default=None,

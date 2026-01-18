@@ -7,7 +7,7 @@ from travelport.models.type_hotel_location import TypeHotelLocation
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelLocation:
     """
     Date and Location information for the Hotel.

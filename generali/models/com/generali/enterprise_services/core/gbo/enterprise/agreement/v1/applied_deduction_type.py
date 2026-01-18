@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AppliedDeductionType:
     amount: None | AmountType = field(
         default=None,

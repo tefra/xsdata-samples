@@ -7,7 +7,7 @@ from travelport.models.type_result_message_type_2 import TypeResultMessageType2
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeResultMessage2:
     """
     Used to identify the results of a requests.
@@ -29,13 +29,12 @@ class TypeResultMessage2:
             "required": True,
         },
     )
-    code: None | int = field(
-        default=None,
+    code: int = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     type_value: None | TypeResultMessageType2 = field(
         default=None,

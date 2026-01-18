@@ -12,7 +12,7 @@ from travelport.models.type_transport_mode import TypeTransportMode
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailSegment(Segment1):
     """
     Rail Segment.
@@ -131,13 +131,12 @@ class RailSegment(Segment1):
             "white_space": "collapse",
         },
     )
-    departure_time: None | str = field(
-        default=None,
+    departure_time: str = field(
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     arrival_time: None | str = field(
         default=None,

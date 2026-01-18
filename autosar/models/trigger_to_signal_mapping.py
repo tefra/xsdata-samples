@@ -19,7 +19,7 @@ from .trigger_in_system_instance_ref import TriggerInSystemInstanceRef
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TriggerToSignalMapping:
     """
     This meta-class represents the ability to map a trigger to a
@@ -143,7 +143,7 @@ class TriggerToSignalMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventGroupRefs:
         event_group_ref: list[
             TriggerToSignalMapping.EventGroupRefs.EventGroupRef
@@ -156,18 +156,17 @@ class TriggerToSignalMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EventGroupRef(Ref):
-            dest: None | ConsumedEventGroupSubtypesEnum = field(
-                default=None,
+            dest: ConsumedEventGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventHandlerRefs:
         event_handler_ref: list[
             TriggerToSignalMapping.EventHandlerRefs.EventHandlerRef
@@ -180,18 +179,17 @@ class TriggerToSignalMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EventHandlerRef(Ref):
-            dest: None | EventHandlerSubtypesEnum = field(
-                default=None,
+            dest: EventHandlerSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInstanceRefs:
         service_instance_ref: list[
             TriggerToSignalMapping.ServiceInstanceRefs.ServiceInstanceRef
@@ -204,24 +202,22 @@ class TriggerToSignalMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ServiceInstanceRef(Ref):
-            dest: None | AbstractServiceInstanceSubtypesEnum = field(
-                default=None,
+            dest: AbstractServiceInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SystemSignalRef(Ref):
-        dest: None | SystemSignalSubtypesEnum = field(
-            default=None,
+        dest: SystemSignalSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

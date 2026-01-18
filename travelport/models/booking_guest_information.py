@@ -9,7 +9,7 @@ from travelport.models.type_guest_room_information import (
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingGuestInformation:
     """
     Information about requested rooms and guests allocation.

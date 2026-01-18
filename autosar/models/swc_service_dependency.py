@@ -106,7 +106,7 @@ from .warning_indicator_requested_bit_needs import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwcServiceDependency:
     """
     Specialization of ServiceDependency in the context of an
@@ -198,14 +198,13 @@ class SwcServiceDependency:
     class Meta:
         name = "SWC-SERVICE-DEPENDENCY"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SwcServiceDependency.ShortNameFragments = (
         field(
@@ -346,7 +345,7 @@ class SwcServiceDependency:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -357,7 +356,7 @@ class SwcServiceDependency:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -368,7 +367,7 @@ class SwcServiceDependency:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AssignedDataTypes:
         role_based_data_type_assignment: list[RoleBasedDataTypeAssignment] = (
             field(
@@ -381,7 +380,7 @@ class SwcServiceDependency:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AssignedDatas:
         role_based_data_assignment: list[RoleBasedDataAssignment] = field(
             default_factory=list,
@@ -392,7 +391,7 @@ class SwcServiceDependency:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AssignedPorts:
         role_based_port_assignment: list[RoleBasedPortAssignment] = field(
             default_factory=list,
@@ -403,18 +402,17 @@ class SwcServiceDependency:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RepresentedPortGroupRef(Ref):
-        dest: None | PortGroupSubtypesEnum = field(
-            default=None,
+        dest: PortGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceNeeds:
         bsw_mgr_needs: None | BswMgrNeeds = field(
             default=None,

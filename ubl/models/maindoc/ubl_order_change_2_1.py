@@ -57,7 +57,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:OrderChange-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class OrderChangeType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -131,14 +131,13 @@ class OrderChangeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -148,14 +147,13 @@ class OrderChangeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    sequence_number_id: None | SequenceNumberId = field(
-        default=None,
+    sequence_number_id: SequenceNumberId = field(
         metadata={
             "name": "SequenceNumberID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     note: tuple[Note, ...] = field(
         default_factory=tuple,
@@ -239,14 +237,13 @@ class OrderChangeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    order_reference: None | OrderReference = field(
-        default=None,
+    order_reference: OrderReference = field(
         metadata={
             "name": "OrderReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     quotation_document_reference: None | QuotationDocumentReference = field(
         default=None,
@@ -290,23 +287,21 @@ class OrderChangeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    buyer_customer_party: None | BuyerCustomerParty = field(
-        default=None,
+    buyer_customer_party: BuyerCustomerParty = field(
         metadata={
             "name": "BuyerCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    seller_supplier_party: None | SellerSupplierParty = field(
-        default=None,
+    seller_supplier_party: SellerSupplierParty = field(
         metadata={
             "name": "SellerSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     originator_customer_party: None | OriginatorCustomerParty = field(
         default=None,
@@ -447,7 +442,7 @@ class OrderChangeType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class OrderChange(OrderChangeType):
     class Meta:
         namespace = (

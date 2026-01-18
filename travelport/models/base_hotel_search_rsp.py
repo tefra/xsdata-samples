@@ -13,7 +13,7 @@ from travelport.models.type_hotel_reference_point import (
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseHotelSearchRsp(BaseSearchRsp1):
     """
     Base hotel Search Response.

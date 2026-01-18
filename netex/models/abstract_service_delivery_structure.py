@@ -18,7 +18,7 @@ from .subscription_qualifier_structure import SubscriptionQualifierStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractServiceDeliveryStructure(ResponseStructure):
     choice: Iterable[
         MessageQualifierStructure

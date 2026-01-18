@@ -31,7 +31,7 @@ from .td_event_operation_type_enum import TdEventOperationTypeEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventOperation:
     """
     This is used to describe timing events related to client-server
@@ -109,14 +109,13 @@ class TdEventOperation:
     class Meta:
         name = "TD-EVENT-OPERATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TdEventOperation.ShortNameFragments = field(
         default=None,
@@ -263,7 +262,7 @@ class TdEventOperation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -274,7 +273,7 @@ class TdEventOperation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -285,35 +284,32 @@ class TdEventOperation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortPrototypeBlueprintRef(Ref):
-        dest: None | PortPrototypeBlueprintSubtypesEnum = field(
-            default=None,
+        dest: PortPrototypeBlueprintSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortRef(Ref):
-        dest: None | PortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: PortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OperationRef(Ref):
-        dest: None | ClientServerOperationSubtypesEnum = field(
-            default=None,
+        dest: ClientServerOperationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

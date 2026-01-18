@@ -10,7 +10,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticPeriodicRate:
     """
     This represents the ability to define a periodic rate for the

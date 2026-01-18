@@ -9,7 +9,7 @@ from .whitelist import Whitelist
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WhitelistsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "whitelistsInFrame_RelStructure"

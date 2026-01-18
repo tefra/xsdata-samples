@@ -8,7 +8,7 @@ from sdmx_ml.models.region_type import RegionType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CubeRegionType(RegionType):
     """
     CubeRegionType defines the structure of a data cube region.

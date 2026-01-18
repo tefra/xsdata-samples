@@ -9,7 +9,7 @@ from .distance_matrix_element_derived_view_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DistanceMatrixElementView(DistanceMatrixElementDerivedViewStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucModuleConfigurationValuesRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -69,13 +69,12 @@ class EcucModuleConfigurationValuesRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucModuleConfigurationValuesRef(Ref):
-        dest: None | EcucModuleConfigurationValuesSubtypesEnum = field(
-            default=None,
+        dest: EcucModuleConfigurationValuesSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

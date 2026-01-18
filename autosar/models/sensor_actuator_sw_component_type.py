@@ -34,7 +34,7 @@ from .unit_group_subtypes_enum import UnitGroupSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SensorActuatorSwComponentType:
     """
     The SensorActuatorSwComponentType introduces the possibility to link
@@ -142,14 +142,13 @@ class SensorActuatorSwComponentType:
     class Meta:
         name = "SENSOR-ACTUATOR-SW-COMPONENT-TYPE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SensorActuatorSwComponentType.ShortNameFragments
@@ -332,7 +331,7 @@ class SensorActuatorSwComponentType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -343,7 +342,7 @@ class SensorActuatorSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -354,7 +353,7 @@ class SensorActuatorSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -383,7 +382,7 @@ class SensorActuatorSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwComponentDocumentations:
         sw_component_documentation: list[SwComponentDocumentation] = field(
             default_factory=list,
@@ -394,7 +393,7 @@ class SensorActuatorSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConsistencyNeedss:
         consistency_needs: list[ConsistencyNeeds] = field(
             default_factory=list,
@@ -405,7 +404,7 @@ class SensorActuatorSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ports:
         p_port_prototype: list[PPortPrototype] = field(
             default_factory=list,
@@ -432,7 +431,7 @@ class SensorActuatorSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortGroups:
         port_group: list[PortGroup] = field(
             default_factory=list,
@@ -443,7 +442,7 @@ class SensorActuatorSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnitGroupRefs:
         unit_group_ref: list[
             SensorActuatorSwComponentType.UnitGroupRefs.UnitGroupRef
@@ -456,18 +455,17 @@ class SensorActuatorSwComponentType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UnitGroupRef(Ref):
-            dest: None | UnitGroupSubtypesEnum = field(
-                default=None,
+            dest: UnitGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InternalBehaviors:
         swc_internal_behavior: list[SwcInternalBehavior] = field(
             default_factory=list,
@@ -478,13 +476,12 @@ class SensorActuatorSwComponentType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SensorActuatorRef(Ref):
-        dest: None | HwDescriptionEntitySubtypesEnum = field(
-            default=None,
+        dest: HwDescriptionEntitySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

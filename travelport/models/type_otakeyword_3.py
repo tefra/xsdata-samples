@@ -7,7 +7,7 @@ from travelport.models.type_otasub_key_3 import TypeOtasubKey3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOtakeyword3:
     """
     A complexType for keyword information.
@@ -47,14 +47,13 @@ class TypeOtakeyword3:
             "max_occurs": 999,
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        },
+        }
     )
     number: None | object = field(
         default=None,

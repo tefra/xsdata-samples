@@ -23,7 +23,7 @@ from .transformation_technology_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataTransformation:
     """
     A DataTransformation represents a transformer chain.
@@ -98,14 +98,13 @@ class DataTransformation:
     class Meta:
         name = "DATA-TRANSFORMATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DataTransformation.ShortNameFragments = field(
         default=None,
@@ -220,7 +219,7 @@ class DataTransformation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -231,7 +230,7 @@ class DataTransformation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -242,7 +241,7 @@ class DataTransformation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransformerChainRefs:
         transformer_chain_ref: list[
             DataTransformation.TransformerChainRefs.TransformerChainRef
@@ -255,13 +254,12 @@ class DataTransformation:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TransformerChainRef(Ref):
-            dest: None | TransformationTechnologySubtypesEnum = field(
-                default=None,
+            dest: TransformationTechnologySubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

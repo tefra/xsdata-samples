@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BusMirrorCanIdToCanIdMapping:
     """
     This element defines a rule for remapping a single CAN ID.
@@ -67,13 +67,12 @@ class BusMirrorCanIdToCanIdMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SouceCanIdRef(Ref):
-        dest: None | CanFrameTriggeringSubtypesEnum = field(
-            default=None,
+        dest: CanFrameTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

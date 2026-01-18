@@ -9,7 +9,7 @@ from .diagnostic_indicator_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticIndicatorTypeEnum:
     """
     Type of an indicator.
@@ -30,11 +30,10 @@ class DiagnosticIndicatorTypeEnum:
     class Meta:
         name = "DIAGNOSTIC-INDICATOR-TYPE-ENUM"
 
-    value: None | DiagnosticIndicatorTypeEnumSimple = field(
-        default=None,
+    value: DiagnosticIndicatorTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

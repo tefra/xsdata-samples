@@ -7,7 +7,7 @@ from datexii.models.eu.datexii.v2.special_day import SpecialDay
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PeriodExtended:
     """
     An extension point for Period offering the possibility to describe

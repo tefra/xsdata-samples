@@ -8,7 +8,7 @@ from .empty_type_1 import EmptyType1
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CapabilityRequestPolicyStructure:
     national_language: Iterable[str] = field(
         default_factory=list,

@@ -10,7 +10,7 @@ from sdmx_ml.models.metadata_target_region_type import MetadataTargetRegionType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataConstraintType(MetadataConstraintBaseType):
     """
     MetadataConstraintType defines the structure of a metadata constraint.

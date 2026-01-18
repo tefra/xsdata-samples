@@ -11,14 +11,13 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RiskType:
-    risk_element: None | RiskElementInvolvementType = field(
-        default=None,
+    risk_element: RiskElementInvolvementType = field(
         metadata={
             "name": "RiskElement",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )

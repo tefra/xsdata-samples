@@ -7,7 +7,7 @@ from npo.models.association_search_type import AssociationSearchType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PageAssociationSearchListType:
     class Meta:
         name = "pageAssociationSearchListType"

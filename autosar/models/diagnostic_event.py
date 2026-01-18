@@ -33,7 +33,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEvent:
     """
     This element is used to configure DiagnosticEvents.
@@ -152,14 +152,13 @@ class DiagnosticEvent:
     class Meta:
         name = "DIAGNOSTIC-EVENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DiagnosticEvent.ShortNameFragments = field(
         default=None,
@@ -348,7 +347,7 @@ class DiagnosticEvent:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -359,7 +358,7 @@ class DiagnosticEvent:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -370,7 +369,7 @@ class DiagnosticEvent:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConnectedIndicators:
         diagnostic_connected_indicator: list[DiagnosticConnectedIndicator] = (
             field(

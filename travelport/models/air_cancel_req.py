@@ -16,7 +16,7 @@ from travelport.models.file_finishing_info_1 import FileFinishingInfo1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirCancelReq(BaseReq1):
     """
     Air Cancel request is used to cancel all or part of an AirReservation.
@@ -52,14 +52,13 @@ class AirCancelReq(BaseReq1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    air_reservation_locator_code: None | AirReservationLocatorCode = field(
-        default=None,
+    air_reservation_locator_code: AirReservationLocatorCode = field(
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "required": True,
-        },
+        }
     )
     air_segment: list[AirSegment] = field(
         default_factory=list,
@@ -87,11 +86,10 @@ class AirCancelReq(BaseReq1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    version: None | int = field(
-        default=None,
+    version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

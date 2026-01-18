@@ -10,7 +10,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConstantSpecificationMapping:
     """
     This meta-class is used to create an association of two
@@ -78,24 +78,22 @@ class ConstantSpecificationMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ApplConstantRef(Ref):
-        dest: None | ConstantSpecificationSubtypesEnum = field(
-            default=None,
+        dest: ConstantSpecificationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplConstantRef(Ref):
-        dest: None | ConstantSpecificationSubtypesEnum = field(
-            default=None,
+        dest: ConstantSpecificationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -9,7 +9,7 @@ from .latency_constraint_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LatencyConstraintTypeEnum:
     """
     This is used to describe the type of the latency timing constraint.
@@ -30,11 +30,10 @@ class LatencyConstraintTypeEnum:
     class Meta:
         name = "LATENCY-CONSTRAINT-TYPE-ENUM"
 
-    value: None | LatencyConstraintTypeEnumSimple = field(
-        default=None,
+    value: LatencyConstraintTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

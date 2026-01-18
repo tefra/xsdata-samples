@@ -26,7 +26,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EventDesc:
     """
     <div> <h3>Event Description</h3> </div>.

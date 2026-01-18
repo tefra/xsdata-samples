@@ -21,7 +21,7 @@ from .vehicle_sharing_service_ref import VehicleSharingServiceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SingleJourneyVersionStructure(JourneyVersionStructure):
     class Meta:
         name = "SingleJourney_VersionStructure"

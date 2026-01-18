@@ -9,7 +9,7 @@ from travelport.models.type_base_preference_2 import TypeBasePreference2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehiclePreference2(TypeBasePreference2):
     """
     Defines a preference for a particular set of criteria for vehicle

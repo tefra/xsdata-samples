@@ -16,7 +16,7 @@ from travelport.models.tag_delete_1 import TagDelete1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileModifyCmd1:
     """
     Wrapper for a set of modification commands to be applied to this

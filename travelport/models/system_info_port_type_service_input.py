@@ -7,27 +7,25 @@ from travelport.models.system_info_req import SystemInfoReq
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SystemInfoPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | SystemInfoPortTypeServiceInput.Body = field(
-        default=None,
+    body: SystemInfoPortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        system_info_req: None | SystemInfoReq = field(
-            default=None,
+        system_info_req: SystemInfoReq = field(
             metadata={
                 "name": "SystemInfoReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/system_v32_0",
-            },
+            }
         )

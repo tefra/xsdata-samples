@@ -40,7 +40,7 @@ from .whitelists_in_frame_rel_structure import WhitelistsInFrameRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SalesTransactionFrameVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "SalesTransactionFrame_VersionFrameStructure"

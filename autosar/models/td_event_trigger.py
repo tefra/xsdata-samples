@@ -29,7 +29,7 @@ from .trigger_subtypes_enum import TriggerSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventTrigger:
     """
     This is used to describe timing events related to triggers at VFB
@@ -107,14 +107,13 @@ class TdEventTrigger:
     class Meta:
         name = "TD-EVENT-TRIGGER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TdEventTrigger.ShortNameFragments = field(
         default=None,
@@ -261,7 +260,7 @@ class TdEventTrigger:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -272,7 +271,7 @@ class TdEventTrigger:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -283,35 +282,32 @@ class TdEventTrigger:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortPrototypeBlueprintRef(Ref):
-        dest: None | PortPrototypeBlueprintSubtypesEnum = field(
-            default=None,
+        dest: PortPrototypeBlueprintSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortRef(Ref):
-        dest: None | PortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: PortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TriggerRef(Ref):
-        dest: None | TriggerSubtypesEnum = field(
-            default=None,
+        dest: TriggerSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

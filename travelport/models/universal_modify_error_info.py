@@ -11,7 +11,7 @@ from travelport.models.universal_modify_command_error import (
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalModifyErrorInfo(TypeErrorInfo1):
     """
     Container to return modify command errors.

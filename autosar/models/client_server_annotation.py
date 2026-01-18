@@ -13,7 +13,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientServerAnnotation:
     """
     Annotation to a port regarding a certain Operation.
@@ -89,13 +89,12 @@ class ClientServerAnnotation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OperationRef(Ref):
-        dest: None | ClientServerOperationSubtypesEnum = field(
-            default=None,
+        dest: ClientServerOperationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

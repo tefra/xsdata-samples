@@ -32,7 +32,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CertificateOfOriginType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -74,14 +74,13 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     uuid: None | Uuid = field(
         default=None,
@@ -163,25 +162,21 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    certificate_of_origin_application: (
-        None | CertificateOfOriginApplication
-    ) = field(
-        default=None,
+    certificate_of_origin_application: CertificateOfOriginApplication = field(
         metadata={
             "name": "CertificateOfOriginApplication",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    issuer_endorsement: None | IssuerEndorsement = field(
-        default=None,
+    issuer_endorsement: IssuerEndorsement = field(
         metadata={
             "name": "IssuerEndorsement",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     embassy_endorsement: None | EmbassyEndorsement = field(
         default=None,
@@ -201,7 +196,7 @@ class CertificateOfOriginType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CertificateOfOrigin(CertificateOfOriginType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CertificateOfOrigin-2"

@@ -17,7 +17,7 @@ from datexii.models.eu.datexii.v2.vehicle_type_enum import VehicleTypeEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelTimeData(BasicData):
     """
     Derived/computed travel time information relating to a linear section

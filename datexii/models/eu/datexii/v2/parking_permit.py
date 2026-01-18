@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.permit_type_enum import PermitTypeEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingPermit:
     """
     A permission for parking.
@@ -20,14 +20,13 @@ class ParkingPermit:
     :ivar parking_permit_extension:
     """
 
-    parking_permit_type: None | PermitTypeEnum = field(
-        default=None,
+    parking_permit_type: PermitTypeEnum = field(
         metadata={
             "name": "parkingPermitType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     parking_permit_scheme: None | str = field(
         default=None,

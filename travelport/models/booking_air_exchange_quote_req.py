@@ -13,7 +13,7 @@ from travelport.models.ticket_number_1 import TicketNumber1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingAirExchangeQuoteReq(BookingBaseReq):
     """
     Quotes the new exchange based on the new segments.
@@ -51,12 +51,11 @@ class BookingAirExchangeQuoteReq(BookingBaseReq):
             "max_occurs": 5,
         },
     )
-    original_itinerary_details: None | OriginalItineraryDetails = field(
-        default=None,
+    original_itinerary_details: OriginalItineraryDetails = field(
         metadata={
             "name": "OriginalItineraryDetails",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "required": True,
-        },
+        }
     )

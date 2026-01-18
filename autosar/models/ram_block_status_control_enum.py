@@ -9,7 +9,7 @@ from .ram_block_status_control_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RamBlockStatusControlEnum:
     """
     This enumeration type defines options for how the management of the
@@ -31,11 +31,10 @@ class RamBlockStatusControlEnum:
     class Meta:
         name = "RAM-BLOCK-STATUS-CONTROL-ENUM"
 
-    value: None | RamBlockStatusControlEnumSimple = field(
-        default=None,
+    value: RamBlockStatusControlEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

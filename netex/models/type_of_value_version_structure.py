@@ -9,7 +9,7 @@ from .private_code import PrivateCode
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfValueVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TypeOfValue_VersionStructure"

@@ -61,7 +61,7 @@ from .unit_subtypes_enum import UnitSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwDataDefProps:
     """
     This class is a collection of properties relevant for data objects
@@ -130,7 +130,7 @@ class SwDataDefProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwDataDefPropsVariants:
         sw_data_def_props_conditional: list[SwDataDefPropsConditional] = field(
             default_factory=list,
@@ -142,7 +142,7 @@ class SwDataDefProps:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwPointerTargetProps:
     """
     This element defines, that the data object (which is specified by the
@@ -221,19 +221,18 @@ class SwPointerTargetProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FunctionPointerSignatureRef(Ref):
-        dest: None | BswModuleEntrySubtypesEnum = field(
-            default=None,
+        dest: BswModuleEntrySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwDataDefPropsConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -658,7 +657,7 @@ class SwDataDefPropsConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwValueBlockSizeMults:
         numerical_value_variation_point: list[NumericalValueVariationPoint] = (
             field(
@@ -671,7 +670,7 @@ class SwDataDefPropsConditional:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -682,29 +681,27 @@ class SwDataDefPropsConditional:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwAddrMethodRef(Ref):
-        dest: None | SwAddrMethodSubtypesEnum = field(
-            default=None,
+        dest: SwAddrMethodSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BaseTypeRef(Ref):
-        dest: None | SwBaseTypeSubtypesEnum = field(
-            default=None,
+        dest: SwBaseTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwComparisonVariables:
         """
         :ivar autosar_variable: This represents the reference to a
@@ -739,51 +736,47 @@ class SwDataDefPropsConditional:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class McDataInstanceVarRef(Ref):
-            dest: None | McDataInstanceSubtypesEnum = field(
-                default=None,
+            dest: McDataInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CompuMethodRef(Ref):
-        dest: None | CompuMethodSubtypesEnum = field(
-            default=None,
+        dest: CompuMethodSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataConstrRef(Ref):
-        dest: None | DataConstrSubtypesEnum = field(
-            default=None,
+        dest: DataConstrSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplementationDataTypeRef(Ref):
-        dest: None | AbstractImplementationDataTypeSubtypesEnum = field(
-            default=None,
+        dest: AbstractImplementationDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InvalidValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification
@@ -898,35 +891,32 @@ class SwDataDefPropsConditional:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwRecordLayoutRef(Ref):
-        dest: None | SwRecordLayoutSubtypesEnum = field(
-            default=None,
+        dest: SwRecordLayoutSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnitRef(Ref):
-        dest: None | UnitSubtypesEnum = field(
-            default=None,
+        dest: UnitSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ValueAxisDataTypeRef(Ref):
-        dest: None | ApplicationPrimitiveDataTypeSubtypesEnum = field(
-            default=None,
+        dest: ApplicationPrimitiveDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

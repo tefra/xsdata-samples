@@ -9,7 +9,7 @@ from travelport.models.other_guarantee_info_type_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherGuaranteeInfo1:
     """
     Parameters
@@ -29,11 +29,10 @@ class OtherGuaranteeInfo1:
             "required": True,
         },
     )
-    type_value: None | OtherGuaranteeInfoType1 = field(
-        default=None,
+    type_value: OtherGuaranteeInfoType1 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

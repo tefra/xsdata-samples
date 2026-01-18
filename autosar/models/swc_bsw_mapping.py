@@ -29,7 +29,7 @@ from .swc_internal_behavior_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwcBswMapping:
     """
     Maps an SwcInternalBehavior to an BswInternalBehavior.
@@ -111,14 +111,13 @@ class SwcBswMapping:
     class Meta:
         name = "SWC-BSW-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SwcBswMapping.ShortNameFragments = field(
         default=None,
@@ -249,7 +248,7 @@ class SwcBswMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -260,7 +259,7 @@ class SwcBswMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -271,18 +270,17 @@ class SwcBswMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BswBehaviorRef(Ref):
-        dest: None | BswInternalBehaviorSubtypesEnum = field(
-            default=None,
+        dest: BswInternalBehaviorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RunnableMappings:
         swc_bsw_runnable_mapping: list[SwcBswRunnableMapping] = field(
             default_factory=list,
@@ -293,18 +291,17 @@ class SwcBswMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwcBehaviorRef(Ref):
-        dest: None | SwcInternalBehaviorSubtypesEnum = field(
-            default=None,
+        dest: SwcInternalBehaviorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SynchronizedModeGroups:
         swc_bsw_synchronized_mode_group_prototype: list[
             SwcBswSynchronizedModeGroupPrototype
@@ -317,7 +314,7 @@ class SwcBswMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SynchronizedTriggers:
         swc_bsw_synchronized_trigger: list[SwcBswSynchronizedTrigger] = field(
             default_factory=list,

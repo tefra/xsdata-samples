@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McGroup:
     """
     Represents a group element to be used as input to support measurement
@@ -98,14 +98,13 @@ class McGroup:
     class Meta:
         name = "MC-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | McGroup.ShortNameFragments = field(
         default=None,
@@ -226,7 +225,7 @@ class McGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -237,7 +236,7 @@ class McGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -248,7 +247,7 @@ class McGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SubGroupRefs:
         sub_group_ref: list[McGroup.SubGroupRefs.SubGroupRef] = field(
             default_factory=list,
@@ -259,18 +258,17 @@ class McGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SubGroupRef(Ref):
-            dest: None | McGroupSubtypesEnum = field(
-                default=None,
+            dest: McGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McFunctionRefs:
         mc_function_ref: list[McGroup.McFunctionRefs.McFunctionRef] = field(
             default_factory=list,
@@ -281,13 +279,12 @@ class McGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class McFunctionRef(Ref):
-            dest: None | McFunctionSubtypesEnum = field(
-                default=None,
+            dest: McFunctionSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

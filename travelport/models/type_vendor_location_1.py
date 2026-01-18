@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeVendorLocation1:
     """
     Parameters
@@ -28,25 +28,23 @@ class TypeVendorLocation1:
     class Meta:
         name = "typeVendorLocation"
 
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
-    vendor_code: None | str = field(
-        default=None,
+    vendor_code: str = field(
         metadata={
             "name": "VendorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        },
+        }
     )
     preferred_option: None | bool = field(
         default=None,

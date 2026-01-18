@@ -7,7 +7,7 @@ from .priceable_object_version_structure import PriceableObjectVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareIntervalVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "FareInterval_VersionStructure"

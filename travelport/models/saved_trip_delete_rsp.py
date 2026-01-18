@@ -7,7 +7,7 @@ from travelport.models.base_rsp_1 import BaseRsp1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SavedTripDeleteRsp(BaseRsp1):
     """
     Response to delete saved Trip.

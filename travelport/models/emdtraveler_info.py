@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EmdtravelerInfo:
     """
     EMD traveler information.
@@ -28,13 +28,12 @@ class EmdtravelerInfo:
         name = "EMDTravelerInfo"
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    name_info: None | EmdtravelerInfo.NameInfo = field(
-        default=None,
+    name_info: EmdtravelerInfo.NameInfo = field(
         metadata={
             "name": "NameInfo",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     traveler_type: None | str = field(
         default=None,
@@ -53,7 +52,7 @@ class EmdtravelerInfo:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NameInfo:
         """
         Parameters
@@ -79,15 +78,14 @@ class EmdtravelerInfo:
                 "max_length": 20,
             },
         )
-        first: None | str = field(
-            default=None,
+        first: str = field(
             metadata={
                 "name": "First",
                 "type": "Attribute",
                 "required": True,
                 "min_length": 1,
                 "max_length": 256,
-            },
+            }
         )
         middle: None | str = field(
             default=None,
@@ -98,15 +96,14 @@ class EmdtravelerInfo:
                 "max_length": 256,
             },
         )
-        last: None | str = field(
-            default=None,
+        last: str = field(
             metadata={
                 "name": "Last",
                 "type": "Attribute",
                 "required": True,
                 "min_length": 1,
                 "max_length": 256,
-            },
+            }
         )
         suffix: None | str = field(
             default=None,

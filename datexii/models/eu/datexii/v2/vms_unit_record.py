@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.vms_unit_record_vms_index_vms_record import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsUnitRecord:
     """
     A versioned single VMS unit entry/record in the VMS Unit table that
@@ -80,17 +80,15 @@ class VmsUnitRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

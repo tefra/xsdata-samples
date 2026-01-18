@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointOnLinkByValueStructure:
     distance_from_start: None | Decimal = field(
         default=None,

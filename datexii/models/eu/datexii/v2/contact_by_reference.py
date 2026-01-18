@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContactByReference(Contact):
     """
     Contact information that is addressed via a reference.
@@ -21,14 +21,13 @@ class ContactByReference(Contact):
     :ivar contact_by_reference_extension:
     """
 
-    contact_reference: None | ContactDetailsVersionedReference = field(
-        default=None,
+    contact_reference: ContactDetailsVersionedReference = field(
         metadata={
             "name": "contactReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     contact_by_reference_extension: None | ExtensionType = field(
         default=None,

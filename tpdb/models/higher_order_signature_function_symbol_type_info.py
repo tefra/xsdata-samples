@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from tpdb.models.func_declaration import FuncDeclaration
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HigherOrderSignatureFunctionSymbolTypeInfo:
     class Meta:
         global_type = False

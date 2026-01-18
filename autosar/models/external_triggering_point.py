@@ -11,7 +11,7 @@ from .p_trigger_in_atomic_swc_type_instance_ref import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExternalTriggeringPoint:
     """
     If a RunnableEntity owns an ExternalTriggeringPoint it is entitled to
@@ -83,7 +83,7 @@ class ExternalTriggeringPoint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TriggerIref:
         p_trigger_in_atomic_swc_type_instance_ref: (
             None | PTriggerInAtomicSwcTypeInstanceRef

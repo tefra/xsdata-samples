@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SinglePointStructureType(StructureType):
     geographic_location: None | GeographyType = field(
         default=None,

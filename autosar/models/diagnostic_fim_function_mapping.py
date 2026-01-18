@@ -30,7 +30,7 @@ from .swc_service_dependency_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticFimFunctionMapping:
     """
     This meta-class represents the ability to define a mapping between a
@@ -109,14 +109,13 @@ class DiagnosticFimFunctionMapping:
     class Meta:
         name = "DIAGNOSTIC-FIM-FUNCTION-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticFimFunctionMapping.ShortNameFragments
@@ -247,7 +246,7 @@ class DiagnosticFimFunctionMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -258,7 +257,7 @@ class DiagnosticFimFunctionMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -269,35 +268,32 @@ class DiagnosticFimFunctionMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MappedBswServiceDependencyRef(Ref):
-        dest: None | BswServiceDependencyIdentSubtypesEnum = field(
-            default=None,
+        dest: BswServiceDependencyIdentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MappedFlatSwcServiceDependencyRef(Ref):
-        dest: None | SwcServiceDependencySubtypesEnum = field(
-            default=None,
+        dest: SwcServiceDependencySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MappedFunctionRef(Ref):
-        dest: None | DiagnosticFunctionIdentifierSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticFunctionIdentifierSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -9,7 +9,7 @@ from travelport.models.phone_number_5 import PhoneNumber5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelerInformation4:
     """
     Traveler Information required for File Finishing.
@@ -49,16 +49,15 @@ class TravelerInformation4:
             "type": "Attribute",
         },
     )
-    booking_traveler_ref: None | str = field(
-        default=None,
+    booking_traveler_ref: str = field(
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EmergencyContact:
         """
         Parameters

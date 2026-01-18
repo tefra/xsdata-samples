@@ -7,7 +7,7 @@ from travelport.models.booking_code_info import BookingCodeInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirAvailInfo:
     """
     Matches class of service information with availability counts.
@@ -59,21 +59,19 @@ class AirAvailInfo:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FareTokenInfo:
-        fare_info_ref: None | str = field(
-            default=None,
+        fare_info_ref: str = field(
             metadata={
                 "name": "FareInfoRef",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
-        host_token_ref: None | str = field(
-            default=None,
+        host_token_ref: str = field(
             metadata={
                 "name": "HostTokenRef",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

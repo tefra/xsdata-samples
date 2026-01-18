@@ -12,7 +12,7 @@ from sabre.models.exchange_settings_type_request_type import (
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExchangeSettingsType:
     """
     Attributes:

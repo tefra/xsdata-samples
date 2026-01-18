@@ -9,7 +9,7 @@ from .journey_part import JourneyPart
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyPartsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeyPartsInFrame_RelStructure"

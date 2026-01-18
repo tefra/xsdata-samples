@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SponsoredFltInfo:
     """
     This describes whether the segment is determined to be a sponsored
@@ -27,28 +27,25 @@ class SponsoredFltInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    sponsored_lnb: None | int = field(
-        default=None,
+    sponsored_lnb: int = field(
         metadata={
             "name": "SponsoredLNB",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    neutral_lnb: None | int = field(
-        default=None,
+    neutral_lnb: int = field(
         metadata={
             "name": "NeutralLNB",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    flt_key: None | str = field(
-        default=None,
+    flt_key: str = field(
         metadata={
             "name": "FltKey",
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        },
+        }
     )

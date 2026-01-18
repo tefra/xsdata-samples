@@ -7,7 +7,7 @@ from travelport.models.media_item_4 import MediaItem4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceInfo4:
     """
     Parameters

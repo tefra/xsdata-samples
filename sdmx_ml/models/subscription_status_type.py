@@ -7,7 +7,7 @@ from sdmx_ml.models.status_message_type_2 import StatusMessageType2
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SubscriptionStatusType:
     """
     SubscriptionStatusType describes the structure a status for a single
@@ -41,12 +41,11 @@ class SubscriptionStatusType:
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    status_message: None | StatusMessageType2 = field(
-        default=None,
+    status_message: StatusMessageType2 = field(
         metadata={
             "name": "StatusMessage",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )

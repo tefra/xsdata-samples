@@ -8,7 +8,7 @@ from sdmx_ml.models.group_dimension import GroupDimension
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GroupType(GroupBaseType):
     """
     GroupType describes the structure of a group descriptor in a data

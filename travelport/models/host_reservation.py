@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HostReservation:
     """
     Defines a reservation that already exists in the host system (e.g an
@@ -36,43 +36,39 @@ class HostReservation:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
-    carrier_locator_code: None | str = field(
-        default=None,
+    carrier_locator_code: str = field(
         metadata={
             "name": "CarrierLocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
-    provider_locator_code: None | str = field(
-        default=None,
+    provider_locator_code: str = field(
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        },
+        }
     )
     universal_locator_code: None | str = field(
         default=None,

@@ -7,7 +7,7 @@ from travelport.models.category_info import CategoryInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QueueInfo:
     """
     Parameters
@@ -32,39 +32,35 @@ class QueueInfo:
             "max_occurs": 999,
         },
     )
-    queue: None | str = field(
-        default=None,
+    queue: str = field(
         metadata={
             "name": "Queue",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    pseudo_city_code: None | str = field(
-        default=None,
+    pseudo_city_code: str = field(
         metadata={
             "name": "PseudoCityCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 10,
-        },
+        }
     )
-    total_pnrcount: None | int = field(
-        default=None,
+    total_pnrcount: int = field(
         metadata={
             "name": "TotalPNRCount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    pnrcount: None | int = field(
-        default=None,
+    pnrcount: int = field(
         metadata={
             "name": "PNRCount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     title: None | str = field(
         default=None,

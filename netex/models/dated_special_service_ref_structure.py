@@ -7,6 +7,6 @@ from .special_service_ref_structure import SpecialServiceRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DatedSpecialServiceRefStructure(SpecialServiceRefStructure):
     pass

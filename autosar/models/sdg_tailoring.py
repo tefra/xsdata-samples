@@ -21,7 +21,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SdgTailoring:
     """
     Describes if the referenced Sdg may be attached to the current class.
@@ -93,14 +93,13 @@ class SdgTailoring:
     class Meta:
         name = "SDG-TAILORING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SdgTailoring.ShortNameFragments = field(
         default=None,
@@ -213,7 +212,7 @@ class SdgTailoring:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -224,7 +223,7 @@ class SdgTailoring:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -235,13 +234,12 @@ class SdgTailoring:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SdgClassRef(Ref):
-        dest: None | SdgClassSubtypesEnum = field(
-            default=None,
+        dest: SdgClassSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

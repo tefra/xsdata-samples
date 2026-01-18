@@ -33,7 +33,7 @@ from .traceable_table import TraceableTable
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Topic1:
     """
     This meta-class represents a topic of a documentation.
@@ -163,14 +163,13 @@ class Topic1:
     class Meta:
         name = "TOPIC-1"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | Topic1.ShortNameFragments = field(
         default=None,
@@ -408,7 +407,7 @@ class Topic1:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -419,7 +418,7 @@ class Topic1:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

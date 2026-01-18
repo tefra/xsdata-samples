@@ -7,7 +7,7 @@ from sabre.models.routing_leg_type import RoutingLegType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoutingDefinitionType:
     """
     Definition of a routing.

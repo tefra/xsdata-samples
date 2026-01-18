@@ -178,7 +178,7 @@ class XhtmlTrTypeValign(Enum):
     BASELINE = "baseline"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlBrType:
     class Meta:
         name = "xhtml.br.type"
@@ -212,7 +212,7 @@ class XhtmlBrType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlColType:
     class Meta:
         name = "xhtml.col.type"
@@ -298,7 +298,7 @@ class XhtmlColType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlHrType:
     class Meta:
         name = "xhtml.hr.type"
@@ -345,7 +345,7 @@ class XhtmlHrType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlParamType:
     class Meta:
         name = "xhtml.param.type"
@@ -356,12 +356,11 @@ class XhtmlParamType:
             "type": "Attribute",
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     value: None | str = field(
         default=None,
@@ -384,7 +383,7 @@ class XhtmlParamType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlInlPresType:
     class Meta:
         name = "xhtml.InlPres.type"
@@ -561,7 +560,7 @@ class XhtmlInlPresType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlAddressType:
     class Meta:
         name = "xhtml.address.type"
@@ -738,7 +737,7 @@ class XhtmlAddressType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlColgroupType:
     class Meta:
         name = "xhtml.colgroup.type"
@@ -831,49 +830,49 @@ class XhtmlColgroupType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class B(XhtmlInlPresType):
     class Meta:
         global_type = False
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Big(XhtmlInlPresType):
     class Meta:
         global_type = False
 
 
-@dataclass
+@dataclass(kw_only=True)
 class I(XhtmlInlPresType):
     class Meta:
         global_type = False
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Small(XhtmlInlPresType):
     class Meta:
         global_type = False
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Sub(XhtmlInlPresType):
     class Meta:
         global_type = False
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Sup(XhtmlInlPresType):
     class Meta:
         global_type = False
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Tt(XhtmlInlPresType):
     class Meta:
         global_type = False
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlEditType:
     class Meta:
         name = "xhtml.edit.type"
@@ -1141,48 +1140,48 @@ class XhtmlEditType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Del(XhtmlEditType):
     class Meta:
         global_type = False
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ins(XhtmlEditType):
     class Meta:
         global_type = False
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlAbbrType:
     class Meta:
         name = "xhtml.abbr.type"
@@ -1358,44 +1357,44 @@ class XhtmlAbbrType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlBlockquoteType:
     class Meta:
         name = "xhtml.blockquote.type"
@@ -1575,7 +1574,7 @@ class XhtmlBlockquoteType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlH1Type:
     class Meta:
         name = "xhtml.h1.type"
@@ -1751,44 +1750,44 @@ class XhtmlH1Type:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlH2Type:
     class Meta:
         name = "xhtml.h2.type"
@@ -1964,44 +1963,44 @@ class XhtmlH2Type:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlH3Type:
     class Meta:
         name = "xhtml.h3.type"
@@ -2177,44 +2176,44 @@ class XhtmlH3Type:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlH4Type:
     class Meta:
         name = "xhtml.h4.type"
@@ -2390,44 +2389,44 @@ class XhtmlH4Type:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlH5Type:
     class Meta:
         name = "xhtml.h5.type"
@@ -2603,44 +2602,44 @@ class XhtmlH5Type:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlH6Type:
     class Meta:
         name = "xhtml.h6.type"
@@ -2816,44 +2815,44 @@ class XhtmlH6Type:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlPType:
     class Meta:
         name = "xhtml.p.type"
@@ -3029,44 +3028,44 @@ class XhtmlPType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlPreType:
     class Meta:
         name = "xhtml.pre.type"
@@ -3217,28 +3216,28 @@ class XhtmlPreType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlAcronymType:
     class Meta:
         name = "xhtml.acronym.type"
@@ -3414,44 +3413,44 @@ class XhtmlAcronymType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlDivType:
     class Meta:
         name = "xhtml.div.type"
@@ -3707,44 +3706,44 @@ class XhtmlDivType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlCiteType:
     class Meta:
         name = "xhtml.cite.type"
@@ -3920,44 +3919,44 @@ class XhtmlCiteType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlCodeType:
     class Meta:
         name = "xhtml.code.type"
@@ -4133,44 +4132,44 @@ class XhtmlCodeType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlDfnType:
     class Meta:
         name = "xhtml.dfn.type"
@@ -4346,44 +4345,44 @@ class XhtmlDfnType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlEmType:
     class Meta:
         name = "xhtml.em.type"
@@ -4559,44 +4558,44 @@ class XhtmlEmType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlKbdType:
     class Meta:
         name = "xhtml.kbd.type"
@@ -4772,44 +4771,44 @@ class XhtmlKbdType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlSampType:
     class Meta:
         name = "xhtml.samp.type"
@@ -4985,44 +4984,44 @@ class XhtmlSampType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlStrongType:
     class Meta:
         name = "xhtml.strong.type"
@@ -5198,44 +5197,44 @@ class XhtmlStrongType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlVarType:
     class Meta:
         name = "xhtml.var.type"
@@ -5411,44 +5410,44 @@ class XhtmlVarType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlQType:
     class Meta:
         name = "xhtml.q.type"
@@ -5630,44 +5629,44 @@ class XhtmlQType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlSpanType:
     class Meta:
         name = "xhtml.span.type"
@@ -5843,44 +5842,44 @@ class XhtmlSpanType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlAType:
     class Meta:
         name = "xhtml.a.type"
@@ -6103,44 +6102,44 @@ class XhtmlAType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlDdType:
     class Meta:
         name = "xhtml.dd.type"
@@ -6396,44 +6395,44 @@ class XhtmlDdType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlDtType:
     class Meta:
         name = "xhtml.dt.type"
@@ -6609,44 +6608,44 @@ class XhtmlDtType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlDlType:
     class Meta:
         name = "xhtml.dl.type"
@@ -6707,7 +6706,7 @@ class XhtmlDlType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlLiType:
     class Meta:
         name = "xhtml.li.type"
@@ -6963,44 +6962,44 @@ class XhtmlLiType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlOlType:
     class Meta:
         name = "xhtml.ol.type"
@@ -7055,7 +7054,7 @@ class XhtmlOlType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlUlType:
     class Meta:
         name = "xhtml.ul.type"
@@ -7110,7 +7109,7 @@ class XhtmlUlType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlObjectType:
     class Meta:
         name = "xhtml.object.type"
@@ -7447,44 +7446,44 @@ class XhtmlObjectType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlCaptionType:
     class Meta:
         name = "xhtml.caption.type"
@@ -7660,44 +7659,44 @@ class XhtmlCaptionType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlHeadingType:
     class Meta:
         name = "xhtml.heading.type"
@@ -7873,44 +7872,44 @@ class XhtmlHeadingType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlTdType:
     class Meta:
         name = "xhtml.td.type"
@@ -8229,44 +8228,44 @@ class XhtmlTdType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlThType:
     class Meta:
         name = "xhtml.th.type"
@@ -8585,44 +8584,44 @@ class XhtmlThType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Big(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Small(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ins(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Del(XhtmlEditType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Tt(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class I(XhtmlInlPresType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class B(XhtmlInlPresType):
         pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlTrType:
     class Meta:
         name = "xhtml.tr.type"
@@ -8709,7 +8708,7 @@ class XhtmlTrType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlTbodyType:
     class Meta:
         name = "xhtml.tbody.type"
@@ -8790,7 +8789,7 @@ class XhtmlTbodyType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlTfootType:
     class Meta:
         name = "xhtml.tfoot.type"
@@ -8871,7 +8870,7 @@ class XhtmlTfootType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlTheadType:
     class Meta:
         name = "xhtml.thead.type"
@@ -8952,7 +8951,7 @@ class XhtmlTheadType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XhtmlTableType:
     class Meta:
         name = "xhtml.table.type"

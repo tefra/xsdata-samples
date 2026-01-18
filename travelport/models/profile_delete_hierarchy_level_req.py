@@ -10,7 +10,7 @@ from travelport.models.type_delete_hierarchy_lvl_profile_type import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileDeleteHierarchyLevelReq(BaseReq5):
     """
     Request to delete an existing Group level of an agency or account
@@ -32,19 +32,17 @@ class ProfileDeleteHierarchyLevelReq(BaseReq5):
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    hierarchy_level_id: None | str = field(
-        default=None,
+    hierarchy_level_id: str = field(
         metadata={
             "name": "HierarchyLevelID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_type: None | TypeDeleteHierarchyLvlProfileType = field(
-        default=None,
+    profile_type: TypeDeleteHierarchyLvlProfileType = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

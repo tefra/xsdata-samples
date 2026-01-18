@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestReferenceDataItem:
     """
     Limits the responses to the requested subcategories for a specific
@@ -30,7 +30,7 @@ class RequestReferenceDataItem:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequestAmenity:
         """
         Parameters
@@ -43,12 +43,11 @@ class RequestReferenceDataItem:
             all amenity types are returned.
         """
 
-        type_value: None | str = field(
-            default=None,
+        type_value: str = field(
             metadata={
                 "name": "Type",
                 "type": "Attribute",
                 "required": True,
                 "length": 2,
-            },
+            }
         )

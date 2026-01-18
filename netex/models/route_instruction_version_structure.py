@@ -14,7 +14,7 @@ from .transition_enumeration import TransitionEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RouteInstructionVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "RouteInstruction_VersionStructure"

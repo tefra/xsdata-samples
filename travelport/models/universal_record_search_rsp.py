@@ -10,7 +10,7 @@ from travelport.models.universal_record_search_result import (
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordSearchRsp(BaseRsp1):
     """
     Response containing summary information for reservations under a
@@ -28,11 +28,10 @@ class UniversalRecordSearchRsp(BaseRsp1):
             "max_occurs": 999,
         },
     )
-    more_results: None | bool = field(
-        default=None,
+    more_results: bool = field(
         metadata={
             "name": "MoreResults",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

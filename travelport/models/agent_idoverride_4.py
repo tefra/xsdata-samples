@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgentIdoverride4:
     """
     Vendor specific agent identifier overrides to be used to access vendor
@@ -25,33 +25,30 @@ class AgentIdoverride4:
         name = "AgentIDOverride"
         namespace = "http://www.travelport.com/schema/common_v33_0"
 
-    supplier_code: None | str = field(
-        default=None,
+    supplier_code: str = field(
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
-    agent_id: None | str = field(
-        default=None,
+    agent_id: str = field(
         metadata={
             "name": "AgentID",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 32,
-        },
+        }
     )

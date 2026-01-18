@@ -9,7 +9,7 @@ from .retail_service_enumeration import RetailServiceEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RetailServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "RetailService_VersionStructure"

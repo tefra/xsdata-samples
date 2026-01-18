@@ -9,7 +9,7 @@ from .software_cluster_dependency_logical_operator_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoftwareClusterDependencyLogicalOperatorEnum:
     """
     This enumeration provides a set of operators to be used in a
@@ -31,11 +31,10 @@ class SoftwareClusterDependencyLogicalOperatorEnum:
     class Meta:
         name = "SOFTWARE-CLUSTER-DEPENDENCY-LOGICAL-OPERATOR-ENUM"
 
-    value: None | SoftwareClusterDependencyLogicalOperatorEnumSimple = field(
-        default=None,
+    value: SoftwareClusterDependencyLogicalOperatorEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

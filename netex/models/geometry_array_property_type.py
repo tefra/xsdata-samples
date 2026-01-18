@@ -11,7 +11,7 @@ from .polygon import Polygon
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeometryArrayPropertyType:
     choice: Iterable[MultiSurface | Polygon | LineString | Point1] = field(
         default_factory=list,

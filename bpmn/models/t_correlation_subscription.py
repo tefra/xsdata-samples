@@ -9,7 +9,7 @@ from .t_base_element import TBaseElement
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TCorrelationSubscription(TBaseElement):
     class Meta:
         name = "tCorrelationSubscription"
@@ -22,11 +22,10 @@ class TCorrelationSubscription(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    correlation_key_ref: None | QName = field(
-        default=None,
+    correlation_key_ref: QName = field(
         metadata={
             "name": "correlationKeyRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

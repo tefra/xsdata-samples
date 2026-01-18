@@ -26,7 +26,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModuleParameterType:
     """
     Name value pair with data type information.
@@ -100,13 +100,12 @@ class ModuleParameterType:
     class Meta:
         name = "moduleParameterType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -145,13 +144,12 @@ class ModuleParameterType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    value: None | Value = field(
-        default=None,
+    value: Value = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     vendor_extensions: None | VendorExtensions = field(
         default=None,
@@ -281,7 +279,7 @@ class ModuleParameterType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Vectors:
         """
         :ivar vector: Left and right ranges of the vector.
@@ -296,23 +294,21 @@ class ModuleParameterType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Vector:
-            left: None | Left = field(
-                default=None,
+            left: Left = field(
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     "required": True,
-                },
+                }
             )
-            right: None | Right = field(
-                default=None,
+            right: Right = field(
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     "required": True,
-                },
+                }
             )
             vector_id: None | str = field(
                 default=None,

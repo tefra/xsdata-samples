@@ -10,7 +10,7 @@ from .t_flow_node import TFlowNode
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TChoreographyActivity(TFlowNode):
     class Meta:
         name = "tChoreographyActivity"
@@ -32,13 +32,12 @@ class TChoreographyActivity(TFlowNode):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    initiating_participant_ref: None | QName = field(
-        default=None,
+    initiating_participant_ref: QName = field(
         metadata={
             "name": "initiatingParticipantRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     loop_type: TChoreographyLoopType = field(
         default=TChoreographyLoopType.NONE,

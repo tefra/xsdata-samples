@@ -13,7 +13,7 @@ from .vehicle_sharing_service_ref import VehicleSharingServiceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CommonVehicleServiceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "commonVehicleServiceRefs_RelStructure"

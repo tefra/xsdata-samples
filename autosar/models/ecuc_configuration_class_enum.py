@@ -9,7 +9,7 @@ from .ecuc_configuration_class_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucConfigurationClassEnum:
     """
     Possible configuration classes for the AUTOSAR configuration
@@ -31,11 +31,10 @@ class EcucConfigurationClassEnum:
     class Meta:
         name = "ECUC-CONFIGURATION-CLASS-ENUM"
 
-    value: None | EcucConfigurationClassEnumSimple = field(
-        default=None,
+    value: EcucConfigurationClassEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

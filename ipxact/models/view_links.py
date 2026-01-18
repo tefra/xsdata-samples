@@ -7,7 +7,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ViewLinks:
     """
     A set of links between internal and external views defined in the
@@ -30,7 +30,7 @@ class ViewLinks:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ViewLink:
         """
         :ivar external_view_reference: Reference to a view defined in
@@ -40,23 +40,21 @@ class ViewLinks:
         :ivar id:
         """
 
-        external_view_reference: (
-            None | ViewLinks.ViewLink.ExternalViewReference
-        ) = field(
-            default=None,
-            metadata={
-                "name": "externalViewReference",
-                "type": "Element",
-                "required": True,
-            },
+        external_view_reference: ViewLinks.ViewLink.ExternalViewReference = (
+            field(
+                metadata={
+                    "name": "externalViewReference",
+                    "type": "Element",
+                    "required": True,
+                }
+            )
         )
-        view_reference: None | ViewLinks.ViewLink.ViewReference = field(
-            default=None,
+        view_reference: ViewLinks.ViewLink.ViewReference = field(
             metadata={
                 "name": "viewReference",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         vendor_extensions: None | VendorExtensions = field(
             default=None,
@@ -73,32 +71,30 @@ class ViewLinks:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExternalViewReference:
             """
             :ivar view_ref: Reference to a specific view.
             """
 
-            view_ref: None | str = field(
-                default=None,
+            view_ref: str = field(
                 metadata={
                     "name": "viewRef",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ViewReference:
             """
             :ivar view_ref: Reference to a specific view.
             """
 
-            view_ref: None | str = field(
-                default=None,
+            view_ref: str = field(
                 metadata={
                     "name": "viewRef",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

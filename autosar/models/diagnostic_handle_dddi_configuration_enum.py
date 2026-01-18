@@ -9,7 +9,7 @@ from .diagnostic_handle_dddi_configuration_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticHandleDddiConfigurationEnum:
     """
     This meta-class represents the options for controlling how the
@@ -32,11 +32,10 @@ class DiagnosticHandleDddiConfigurationEnum:
     class Meta:
         name = "DIAGNOSTIC-HANDLE-DDDI-CONFIGURATION-ENUM"
 
-    value: None | DiagnosticHandleDddiConfigurationEnumSimple = field(
-        default=None,
+    value: DiagnosticHandleDddiConfigurationEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

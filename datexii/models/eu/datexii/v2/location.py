@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.point_coordinates import PointCoordinates
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Location(GroupOfLocations):
     """
     The specification of a location either on a network (as a point or a

@@ -7,7 +7,7 @@ from .execution_time_type_enum_simple import ExecutionTimeTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExecutionTimeTypeEnum:
     """
     Specifies the type of the execution time constrained by
@@ -29,11 +29,10 @@ class ExecutionTimeTypeEnum:
     class Meta:
         name = "EXECUTION-TIME-TYPE-ENUM"
 
-    value: None | ExecutionTimeTypeEnumSimple = field(
-        default=None,
+    value: ExecutionTimeTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

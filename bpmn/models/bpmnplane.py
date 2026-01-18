@@ -8,7 +8,7 @@ from .plane import Plane
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/DI"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Bpmnplane(Plane):
     class Meta:
         name = "BPMNPlane"

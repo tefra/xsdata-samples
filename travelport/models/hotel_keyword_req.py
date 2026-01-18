@@ -9,7 +9,7 @@ from travelport.models.permitted_providers_1 import PermittedProviders1
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelKeywordReq(BaseReq1):
     """
     Request to retrieve the hotel keyword details of a hotel chain or
@@ -48,14 +48,13 @@ class HotelKeywordReq(BaseReq1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    hotel_chain: None | str = field(
-        default=None,
+    hotel_chain: str = field(
         metadata={
             "name": "HotelChain",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
     hotel_code: None | str = field(
         default=None,

@@ -12,7 +12,7 @@ from travelport.models.type_failure_info import TypeFailureInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirRetrieveDocumentRsp(BaseRsp1):
     """
     Parameters

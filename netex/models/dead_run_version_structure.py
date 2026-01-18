@@ -17,7 +17,7 @@ from .vehicle_journey_version_structure import VehicleJourneyVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeadRunVersionStructure(VehicleJourneyVersionStructure):
     class Meta:
         name = "DeadRun_VersionStructure"

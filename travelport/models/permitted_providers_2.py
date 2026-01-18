@@ -7,17 +7,16 @@ from travelport.models.provider_2 import Provider2
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PermittedProviders2:
     class Meta:
         name = "PermittedProviders"
         namespace = "http://www.travelport.com/schema/common_v32_0"
 
-    provider: None | Provider2 = field(
-        default=None,
+    provider: Provider2 = field(
         metadata={
             "name": "Provider",
             "type": "Element",
             "required": True,
-        },
+        }
     )

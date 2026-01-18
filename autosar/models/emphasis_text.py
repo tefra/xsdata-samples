@@ -11,7 +11,7 @@ from .tt import Tt
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EmphasisText:
     """
     This is an emphasized text.
@@ -104,10 +104,10 @@ class EmphasisText:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(Supscript):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(Supscript):
         pass

@@ -10,7 +10,7 @@ from .rental_availability import RentalAvailability
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingLogEntriesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingLogEntriesInFrame_RelStructure"

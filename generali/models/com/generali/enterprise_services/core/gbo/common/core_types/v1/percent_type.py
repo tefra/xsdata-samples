@@ -8,7 +8,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PercentType:
     """
     <ns1:DictionaryEntryName
@@ -23,9 +23,8 @@ class PercentType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">URI</ns1:PrimitiveType>.
     """
 
-    value: None | Decimal = field(
-        default=None,
+    value: Decimal = field(
         metadata={
             "required": True,
-        },
+        }
     )

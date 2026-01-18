@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Credentials5:
     """
     Container to send login id and password on each request.
@@ -21,12 +21,11 @@ class Credentials5:
         name = "Credentials"
         namespace = "http://www.travelport.com/schema/common_v34_0"
 
-    user_id: None | str = field(
-        default=None,
+    user_id: str = field(
         metadata={
             "name": "UserId",
             "type": "Attribute",
             "required": True,
             "max_length": 36,
-        },
+        }
     )

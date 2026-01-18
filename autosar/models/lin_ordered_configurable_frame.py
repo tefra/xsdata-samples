@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinOrderedConfigurableFrame:
     """
     With the assignment of the index to a frame a mapping of Pids to Frames
@@ -70,13 +70,12 @@ class LinOrderedConfigurableFrame:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FrameRef(Ref):
-        dest: None | LinFrameSubtypesEnum = field(
-            default=None,
+        dest: LinFrameSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

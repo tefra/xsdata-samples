@@ -47,7 +47,7 @@ from .trigger_ref_conditional import TriggerRefConditional
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswCalledEntity:
     """
     BSW module entity which is designed to be called from another BSW
@@ -184,14 +184,13 @@ class BswCalledEntity:
     class Meta:
         name = "BSW-CALLED-ENTITY"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | BswCalledEntity.ShortNameFragments = field(
         default=None,
@@ -424,7 +423,7 @@ class BswCalledEntity:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -435,7 +434,7 @@ class BswCalledEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -446,7 +445,7 @@ class BswCalledEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ActivationReasons:
         executable_entity_activation_reason: list[
             ExecutableEntityActivationReason
@@ -459,7 +458,7 @@ class BswCalledEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CanEnterExclusiveAreaRefs:
         can_enter_exclusive_area_ref: list[
             BswCalledEntity.CanEnterExclusiveAreaRefs.CanEnterExclusiveAreaRef
@@ -472,18 +471,17 @@ class BswCalledEntity:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CanEnterExclusiveAreaRef(Ref):
-            dest: None | ExclusiveAreaSubtypesEnum = field(
-                default=None,
+            dest: ExclusiveAreaSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExclusiveAreaNestingOrderRefs:
         exclusive_area_nesting_order_ref: list[
             BswCalledEntity.ExclusiveAreaNestingOrderRefs.ExclusiveAreaNestingOrderRef
@@ -496,18 +494,17 @@ class BswCalledEntity:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExclusiveAreaNestingOrderRef(Ref):
-            dest: None | ExclusiveAreaNestingOrderSubtypesEnum = field(
-                default=None,
+            dest: ExclusiveAreaNestingOrderSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RunsInsideExclusiveAreaRefs:
         runs_inside_exclusive_area_ref: list[
             BswCalledEntity.RunsInsideExclusiveAreaRefs.RunsInsideExclusiveAreaRef
@@ -520,29 +517,27 @@ class BswCalledEntity:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RunsInsideExclusiveAreaRef(Ref):
-            dest: None | ExclusiveAreaSubtypesEnum = field(
-                default=None,
+            dest: ExclusiveAreaSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwAddrMethodRef(Ref):
-        dest: None | SwAddrMethodSubtypesEnum = field(
-            default=None,
+        dest: SwAddrMethodSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessedModeGroups:
         mode_declaration_group_prototype_ref_conditional: list[
             ModeDeclarationGroupPrototypeRefConditional
@@ -555,7 +550,7 @@ class BswCalledEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ActivationPoints:
         bsw_internal_triggering_point_ref_conditional: list[
             BswInternalTriggeringPointRefConditional
@@ -568,7 +563,7 @@ class BswCalledEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CallPoints:
         bsw_asynchronous_server_call_point: list[
             BswAsynchronousServerCallPoint
@@ -609,7 +604,7 @@ class BswCalledEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CalledEntrys:
         bsw_module_entry_ref_conditional: list[
             BswModuleEntryRefConditional
@@ -622,7 +617,7 @@ class BswCalledEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataReceivePoints:
         bsw_variable_access: list[BswVariableAccess] = field(
             default_factory=list,
@@ -633,7 +628,7 @@ class BswCalledEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataSendPoints:
         bsw_variable_access: list[BswVariableAccess] = field(
             default_factory=list,
@@ -644,18 +639,17 @@ class BswCalledEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplementedEntryRef(Ref):
-        dest: None | BswModuleEntrySubtypesEnum = field(
-            default=None,
+        dest: BswModuleEntrySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IssuedTriggers:
         trigger_ref_conditional: list[TriggerRefConditional] = field(
             default_factory=list,
@@ -666,7 +660,7 @@ class BswCalledEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ManagedModeGroups:
         mode_declaration_group_prototype_ref_conditional: list[
             ModeDeclarationGroupPrototypeRefConditional
@@ -679,13 +673,12 @@ class BswCalledEntity:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SchedulerNamePrefixRef(Ref):
-        dest: None | BswSchedulerNamePrefixSubtypesEnum = field(
-            default=None,
+        dest: BswSchedulerNamePrefixSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

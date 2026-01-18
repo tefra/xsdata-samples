@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResponseLocationType:
     """
     Code and optional string to describe a location point.
@@ -23,15 +23,14 @@ class ResponseLocationType:
             "required": True,
         },
     )
-    location_code: None | str = field(
-        default=None,
+    location_code: str = field(
         metadata={
             "name": "LocationCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 8,
-        },
+        }
     )
     code_context: str = field(
         default="IATA",

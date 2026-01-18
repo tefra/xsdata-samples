@@ -7,7 +7,7 @@ from .td_event_operation_type_enum_simple import TdEventOperationTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventOperationTypeEnum:
     """
     This is used to describe the specific event type of a TDEventOperation.
@@ -28,11 +28,10 @@ class TdEventOperationTypeEnum:
     class Meta:
         name = "TD-EVENT-OPERATION-TYPE-ENUM"
 
-    value: None | TdEventOperationTypeEnumSimple = field(
-        default=None,
+    value: TdEventOperationTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

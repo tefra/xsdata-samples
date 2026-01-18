@@ -16,7 +16,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CacheType(BaseHeaderType):
     """
     <description xmlns="">Mandatory cache parameter supported by all
@@ -30,14 +30,13 @@ class CacheType(BaseHeaderType):
     :ivar last_modified_date_time:
     """
 
-    use_cache: None | CacheOptions = field(
-        default=None,
+    use_cache: CacheOptions = field(
         metadata={
             "name": "UseCache",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
             "required": True,
-        },
+        }
     )
     max_age_quantity: None | int = field(
         default=None,

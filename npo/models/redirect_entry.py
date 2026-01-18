@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RedirectEntry:
     class Meta:
         name = "redirectEntry"

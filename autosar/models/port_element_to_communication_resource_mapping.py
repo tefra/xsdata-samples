@@ -32,7 +32,7 @@ from .variable_data_prototype_in_system_instance_ref import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortElementToCommunicationResourceMapping:
     """
     This meta class maps a communication resource to CP Software Clusters.
@@ -112,14 +112,13 @@ class PortElementToCommunicationResourceMapping:
     class Meta:
         name = "PORT-ELEMENT-TO-COMMUNICATION-RESOURCE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | PortElementToCommunicationResourceMapping.ShortNameFragments
@@ -269,7 +268,7 @@ class PortElementToCommunicationResourceMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -280,7 +279,7 @@ class PortElementToCommunicationResourceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -291,15 +290,12 @@ class PortElementToCommunicationResourceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommunicationResourceRef(Ref):
-        dest: None | CpSoftwareClusterCommunicationResourceSubtypesEnum = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: CpSoftwareClusterCommunicationResourceSubtypesEnum = field(
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            }
         )

@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticPowertrainFreezeFrame:
     """
     This meta-class represents a powertrain-related freeze-frame.
@@ -91,14 +91,13 @@ class DiagnosticPowertrainFreezeFrame:
     class Meta:
         name = "DIAGNOSTIC-POWERTRAIN-FREEZE-FRAME"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticPowertrainFreezeFrame.ShortNameFragments
@@ -197,7 +196,7 @@ class DiagnosticPowertrainFreezeFrame:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -208,7 +207,7 @@ class DiagnosticPowertrainFreezeFrame:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -219,7 +218,7 @@ class DiagnosticPowertrainFreezeFrame:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PidRefs:
         pid_ref: list[DiagnosticPowertrainFreezeFrame.PidRefs.PidRef] = field(
             default_factory=list,
@@ -230,13 +229,12 @@ class DiagnosticPowertrainFreezeFrame:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PidRef(Ref):
-            dest: None | DiagnosticParameterIdentifierSubtypesEnum = field(
-                default=None,
+            dest: DiagnosticParameterIdentifierSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

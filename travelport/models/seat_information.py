@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SeatInformation:
     """
     Additional information about seats.
@@ -33,56 +33,50 @@ class SeatInformation:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    power: None | str = field(
-        default=None,
+    power: str = field(
         metadata={
             "name": "Power",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    video: None | str = field(
-        default=None,
+    video: str = field(
         metadata={
             "name": "Video",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "name": "Description",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    rating: None | SeatInformation.Rating = field(
-        default=None,
+    rating: SeatInformation.Rating = field(
         metadata={
             "name": "Rating",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Rating:
         """
         Parameters
@@ -99,11 +93,10 @@ class SeatInformation:
                 "required": True,
             },
         )
-        number: None | int = field(
-            default=None,
+        number: int = field(
             metadata={
                 "name": "Number",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

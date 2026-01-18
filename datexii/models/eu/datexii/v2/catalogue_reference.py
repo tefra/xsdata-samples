@@ -7,7 +7,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CatalogueReference:
     """
     Identification of the supplier's data catalogue in a data exchange
@@ -18,15 +18,14 @@ class CatalogueReference:
     :ivar catalogue_reference_extension:
     """
 
-    key_catalogue_reference: None | str = field(
-        default=None,
+    key_catalogue_reference: str = field(
         metadata={
             "name": "keyCatalogueReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
     catalogue_reference_extension: None | ExtensionType = field(
         default=None,

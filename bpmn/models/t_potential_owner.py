@@ -7,7 +7,7 @@ from .t_human_performer import THumanPerformer
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TPotentialOwner(THumanPerformer):
     class Meta:
         name = "tPotentialOwner"

@@ -10,19 +10,18 @@ from .transport_type_ref_structure import TransportTypeRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleTypeAtPointVersionStructure(NetworkRestrictionVersionStructure):
     class Meta:
         name = "VehicleTypeAtPoint_VersionStructure"
 
-    for_vehicle_type_ref: None | TransportTypeRefStructure = field(
-        default=None,
+    for_vehicle_type_ref: TransportTypeRefStructure = field(
         metadata={
             "name": "ForVehicleTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     capacity: None | int = field(
         default=None,

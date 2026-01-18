@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdditionalInfo:
     """
     Parameters
@@ -18,11 +18,10 @@ class AdditionalInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    category: None | str = field(
-        default=None,
+    category: str = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

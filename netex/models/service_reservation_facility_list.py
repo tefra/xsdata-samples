@@ -8,7 +8,7 @@ from .reservation_enumeration import ReservationEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceReservationFacilityList:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

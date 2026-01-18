@@ -18,7 +18,7 @@ from .timing_mode_instance_subtypes_enum import TimingModeInstanceSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventOccurrenceExpressionFormula:
     """
     This is an extension of the FormulaExpression for the AUTOSAR Timing
@@ -100,46 +100,42 @@ class TdEventOccurrenceExpressionFormula:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArgumentRef(Ref):
-        dest: None | AutosarOperationArgumentInstanceSubtypesEnum = field(
-            default=None,
+        dest: AutosarOperationArgumentInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventRef(Ref):
-        dest: None | TimingDescriptionEventSubtypesEnum = field(
-            default=None,
+        dest: TimingDescriptionEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeRef(Ref):
-        dest: None | TimingModeInstanceSubtypesEnum = field(
-            default=None,
+        dest: TimingModeInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VariableRef(Ref):
-        dest: None | AutosarVariableInstanceSubtypesEnum = field(
-            default=None,
+        dest: AutosarVariableInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

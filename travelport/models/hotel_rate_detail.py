@@ -20,7 +20,7 @@ from travelport.models.type_trinary import TypeTrinary
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelRateDetail:
     """
     Returns hotel rate details during the stay if rates are available for
@@ -214,13 +214,12 @@ class HotelRateDetail:
             "type": "Element",
         },
     )
-    rate_plan_type: None | str = field(
-        default=None,
+    rate_plan_type: str = field(
         metadata={
             "name": "RatePlanType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     base: None | str = field(
         default=None,
@@ -350,7 +349,7 @@ class HotelRateDetail:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RoomCapacity:
         """
         Parameters
@@ -377,7 +376,7 @@ class HotelRateDetail:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExtraCharges:
         """
         Parameters
@@ -432,7 +431,7 @@ class HotelRateDetail:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Inclusions:
         """
         Parameters
@@ -479,7 +478,7 @@ class HotelRateDetail:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class BedTypes:
             """
             Parameters
@@ -507,7 +506,7 @@ class HotelRateDetail:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MealPlans:
             """
             Parameters
@@ -563,7 +562,7 @@ class HotelRateDetail:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class MealPlan:
                 """
                 Parameters

@@ -10,7 +10,7 @@ from .booking_charge_type_enumeration import BookingChargeTypeEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceBookingArrangementsStructure(BookingArrangementsStructure):
     minimum_booking_duration: None | XmlDuration = field(
         default=None,

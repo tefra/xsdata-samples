@@ -8,7 +8,7 @@ from travelport.models.type_profile_type_2 import TypeProfileType2
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SingleProfileMigrationReq1(BaseReq2):
     """
     Request to initiate the migration process of a single Account or
@@ -33,43 +33,39 @@ class SingleProfileMigrationReq1(BaseReq2):
         name = "SingleProfileMigrationReq"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    external_system: None | str = field(
-        default=None,
+    external_system: str = field(
         metadata={
             "name": "ExternalSystem",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 10,
-        },
+        }
     )
-    profile_type: None | TypeProfileType2 = field(
-        default=None,
+    profile_type: TypeProfileType2 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    pcc: None | str = field(
-        default=None,
+    pcc: str = field(
         metadata={
             "name": "PCC",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 10,
-        },
+        }
     )
-    account_profile_title: None | str = field(
-        default=None,
+    account_profile_title: str = field(
         metadata={
             "name": "AccountProfileTitle",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        },
+        }
     )
     traveler_profile_title: None | str = field(
         default=None,

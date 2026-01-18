@@ -9,7 +9,7 @@ from .standard_fare_table_ref import StandardFareTableRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StandardFareTableRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "StandardFareTableRefs_RelStructure"

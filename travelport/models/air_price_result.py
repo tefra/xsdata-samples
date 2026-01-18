@@ -9,7 +9,7 @@ from travelport.models.type_result_message_1 import TypeResultMessage1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirPriceResult:
     """
     A solution will be returned if one exists.

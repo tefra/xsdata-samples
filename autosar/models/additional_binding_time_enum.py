@@ -9,7 +9,7 @@ from .additional_binding_time_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdditionalBindingTimeEnum:
     """
     This enumeration specifies the additional binding times applicable for
@@ -31,11 +31,10 @@ class AdditionalBindingTimeEnum:
     class Meta:
         name = "ADDITIONAL-BINDING-TIME-ENUM"
 
-    value: None | AdditionalBindingTimeEnumSimple = field(
-        default=None,
+    value: AdditionalBindingTimeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

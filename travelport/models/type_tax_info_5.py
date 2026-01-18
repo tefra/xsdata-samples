@@ -7,7 +7,7 @@ from travelport.models.tax_detail_5 import TaxDetail5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeTaxInfo5:
     """
     Parameters
@@ -59,13 +59,12 @@ class TypeTaxInfo5:
             "type": "Attribute",
         },
     )
-    category: None | str = field(
-        default=None,
+    category: str = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     carrier_defined_category: None | str = field(
         default=None,
@@ -95,13 +94,12 @@ class TypeTaxInfo5:
             "type": "Attribute",
         },
     )
-    amount: None | str = field(
-        default=None,
+    amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     origin_airport: None | str = field(
         default=None,

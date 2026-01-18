@@ -12,19 +12,18 @@ from .vehicle_access_credentials_assignment_ref import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceAccessCodeVersionStructure(TravelDocumentVersionStructure):
     class Meta:
         name = "ServiceAccessCode_VersionStructure"
 
-    access_code: None | str = field(
-        default=None,
+    access_code: str = field(
         metadata={
             "name": "AccessCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     expiry_date: None | XmlDateTime = field(
         default=None,

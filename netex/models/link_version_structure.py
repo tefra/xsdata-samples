@@ -13,7 +13,7 @@ from .projections_rel_structure import ProjectionsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinkVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Link_VersionStructure"

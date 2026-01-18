@@ -7,7 +7,7 @@ from travelport.models.type_location_5 import TypeLocation5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConnectionPoint5(TypeLocation5):
     """
     A connection point can be eith an IATA airport or cir city code.

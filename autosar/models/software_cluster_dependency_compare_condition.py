@@ -13,7 +13,7 @@ from .strong_revision_label_string import StrongRevisionLabelString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoftwareClusterDependencyCompareCondition:
     """
     This meta-class represents the ability to specify a concrete dependency
@@ -96,13 +96,12 @@ class SoftwareClusterDependencyCompareCondition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SoftwareClusterRef(Ref):
-        dest: None | SoftwareClusterSubtypesEnum = field(
-            default=None,
+        dest: SoftwareClusterSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

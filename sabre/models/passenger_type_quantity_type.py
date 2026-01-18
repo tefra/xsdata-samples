@@ -13,7 +13,7 @@ from sabre.models.voluntary_changes_match import VoluntaryChangesMatch
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassengerTypeQuantityType(TravelerCountType):
     """
     Specifies a PTC (Passenger Type Code) and the associated number of
@@ -50,7 +50,7 @@ class PassengerTypeQuantityType(TravelerCountType):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpaExtensions:
         """
         Attributes:
@@ -110,7 +110,7 @@ class PassengerTypeQuantityType(TravelerCountType):
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class BirthDate:
             date: None | XmlDate = field(
                 default=None,
@@ -120,40 +120,37 @@ class PassengerTypeQuantityType(TravelerCountType):
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Age:
-            years: None | int = field(
-                default=None,
+            years: int = field(
                 metadata={
                     "name": "Years",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class State:
-            code: None | str = field(
-                default=None,
+            code: str = field(
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TotalNumber:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class VoluntaryChanges:
             """
             Specifies charges and/or penalties associated with making
@@ -184,7 +181,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Penalty:
                 """
                 Attributes:

@@ -25,7 +25,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class End2EndEventProtectionProps:
     """
     This element allows to protect an event or a field notifier with an E2E
@@ -102,14 +102,13 @@ class End2EndEventProtectionProps:
     class Meta:
         name = "END-2-END-EVENT-PROTECTION-PROPS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | End2EndEventProtectionProps.ShortNameFragments
@@ -250,7 +249,7 @@ class End2EndEventProtectionProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -261,7 +260,7 @@ class End2EndEventProtectionProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -272,7 +271,7 @@ class End2EndEventProtectionProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataIds:
         """
         :ivar data_id: This represents a unique numerical identifier for
@@ -294,24 +293,22 @@ class End2EndEventProtectionProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class E2EProfileConfigurationRef(Ref):
-        dest: None | E2EProfileConfigurationSubtypesEnum = field(
-            default=None,
+        dest: E2EProfileConfigurationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventRef(Ref):
-        dest: None | ServiceEventDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceEventDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

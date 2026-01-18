@@ -9,7 +9,7 @@ from .vehicle_driver_notification_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleDriverNotificationEnum:
     """
     This meta-class provides available options for vehicle driver
@@ -31,11 +31,10 @@ class VehicleDriverNotificationEnum:
     class Meta:
         name = "VEHICLE-DRIVER-NOTIFICATION-ENUM"
 
-    value: None | VehicleDriverNotificationEnumSimple = field(
-        default=None,
+    value: VehicleDriverNotificationEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

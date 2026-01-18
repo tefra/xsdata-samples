@@ -9,7 +9,7 @@ from .handle_out_of_range_status_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HandleOutOfRangeStatusEnum:
     """
     This enumeration defines how the RTE handles values that are out of
@@ -31,11 +31,10 @@ class HandleOutOfRangeStatusEnum:
     class Meta:
         name = "HANDLE-OUT-OF-RANGE-STATUS-ENUM"
 
-    value: None | HandleOutOfRangeStatusEnumSimple = field(
-        default=None,
+    value: HandleOutOfRangeStatusEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

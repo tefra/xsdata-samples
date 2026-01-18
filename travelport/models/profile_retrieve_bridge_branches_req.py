@@ -7,7 +7,7 @@ from travelport.models.base_req_5 import BaseReq5
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileRetrieveBridgeBranchesReq(BaseReq5):
     """
     Request to retrieve an Agent's Bridge Branch Assignments.

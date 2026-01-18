@@ -21,7 +21,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RestEndpointDelete:
     """
     This meta-class represents the ability to model a REST endpoint with
@@ -96,14 +96,13 @@ class RestEndpointDelete:
     class Meta:
         name = "REST-ENDPOINT-DELETE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | RestEndpointDelete.ShortNameFragments = field(
         default=None,
@@ -208,7 +207,7 @@ class RestEndpointDelete:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -219,7 +218,7 @@ class RestEndpointDelete:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -230,7 +229,7 @@ class RestEndpointDelete:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -259,7 +258,7 @@ class RestEndpointDelete:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Arguments:
         rest_endpoint_argument: list[RestEndpointArgument] = field(
             default_factory=list,

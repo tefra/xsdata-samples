@@ -28,7 +28,7 @@ from .unassign_frame_id import UnassignFrameId
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinScheduleTable:
     """
     The master task (in the master node) transmits frame headers based on a
@@ -104,14 +104,13 @@ class LinScheduleTable:
     class Meta:
         name = "LIN-SCHEDULE-TABLE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | LinScheduleTable.ShortNameFragments = field(
         default=None,
@@ -224,7 +223,7 @@ class LinScheduleTable:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -235,7 +234,7 @@ class LinScheduleTable:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -246,7 +245,7 @@ class LinScheduleTable:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TableEntrys:
         application_entry: list[ApplicationEntry] = field(
             default_factory=list,

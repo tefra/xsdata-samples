@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.tpeg_point_descriptor import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TpegOtherPointDescriptor(TpegPointDescriptor):
     """
     General descriptor for describing a point.
@@ -24,16 +24,13 @@ class TpegOtherPointDescriptor(TpegPointDescriptor):
     :ivar tpeg_other_point_descriptor_extension:
     """
 
-    tpeg_other_point_descriptor_type: (
-        None | TpegLoc03OtherPointDescriptorSubtypeEnum
-    ) = field(
-        default=None,
+    tpeg_other_point_descriptor_type: TpegLoc03OtherPointDescriptorSubtypeEnum = field(
         metadata={
             "name": "tpegOtherPointDescriptorType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     tpeg_other_point_descriptor_extension: None | ExtensionType = field(
         default=None,

@@ -29,7 +29,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
     """
     This represents a mapping between one ClientServerInterface blueprint
@@ -124,14 +124,13 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
     class Meta:
         name = "CLIENT-SERVER-INTERFACE-TO-BSW-MODULE-ENTRY-BLUEPRINT-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None
@@ -278,7 +277,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -289,7 +288,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -300,7 +299,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -329,18 +328,17 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClientServerInterfaceRef(Ref):
-        dest: None | ClientServerInterfaceSubtypesEnum = field(
-            default=None,
+        dest: ClientServerInterfaceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OperationMappings:
         client_server_operation_blueprint_mapping: list[
             ClientServerOperationBlueprintMapping
@@ -353,7 +351,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortDefinedArgumentBlueprints:
         port_defined_argument_blueprint: list[PortDefinedArgumentBlueprint] = (
             field(

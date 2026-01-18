@@ -19,7 +19,7 @@ from datexii.models.eu.datexii.v2.vehicle_rate import VehicleRate
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleCountAndRate:
     """
     Vehicle rates can be assigned to a parking site or to assigned parking

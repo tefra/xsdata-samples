@@ -10,7 +10,7 @@ from travelport.models.type_applicable_segment import TypeApplicableSegment
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirMerchandisingDetailsRsp(BaseRsp1):
     """
     Response for retrieved brand details and optional services included in
@@ -53,7 +53,7 @@ class AirMerchandisingDetailsRsp(BaseRsp1):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UnassociatedBookingCodeList:
         applicable_segment: list[TypeApplicableSegment] = field(
             default_factory=list,

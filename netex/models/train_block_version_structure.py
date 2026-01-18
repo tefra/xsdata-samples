@@ -8,7 +8,7 @@ from .coupled_journeys_rel_structure import CoupledJourneysRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrainBlockVersionStructure(BlockVersionStructure):
     class Meta:
         name = "TrainBlock_VersionStructure"

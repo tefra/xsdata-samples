@@ -9,7 +9,7 @@ from .swc_to_ecu_mapping_constraint_type_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwcToEcuMappingConstraintType:
     """
     There are two different SwcToEcuMapping constraints: dedicated mapping
@@ -31,11 +31,10 @@ class SwcToEcuMappingConstraintType:
     class Meta:
         name = "SWC-TO-ECU-MAPPING-CONSTRAINT-TYPE"
 
-    value: None | SwcToEcuMappingConstraintTypeSimple = field(
-        default=None,
+    value: SwcToEcuMappingConstraintTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

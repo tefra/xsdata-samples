@@ -15,7 +15,7 @@ from sabre.models.segment_type_code import SegmentTypeCode
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExchangeOriginDestinationInformationType(
     OriginDestinationInformationType
 ):
@@ -173,7 +173,7 @@ class ExchangeOriginDestinationInformationType(
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DateFlexibility:
         """
         Attributes:
@@ -216,29 +216,27 @@ class ExchangeOriginDestinationInformationType(
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SisterDestinationMileage:
-        number: None | int = field(
-            default=None,
+        number: int = field(
             metadata={
                 "name": "Number",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SisterOriginMileage:
-        number: None | int = field(
-            default=None,
+        number: int = field(
             metadata={
                 "name": "Number",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SegmentType:
         """
         Attributes:
@@ -254,7 +252,7 @@ class ExchangeOriginDestinationInformationType(
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AlternateTime:
         """
         Attributes:
@@ -292,29 +290,27 @@ class ExchangeOriginDestinationInformationType(
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MaxOneWayOptions:
-        value: None | int = field(
-            default=None,
+        value: int = field(
             metadata={
                 "name": "Value",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NumOneWayOptions:
-        number: None | int = field(
-            default=None,
+        number: int = field(
             metadata={
                 "name": "Number",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConnectionTime:
         """
         Attributes:
@@ -366,7 +362,7 @@ class ExchangeOriginDestinationInformationType(
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TotalTravelTime:
         min: None | int = field(
             default=None,

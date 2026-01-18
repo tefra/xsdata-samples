@@ -7,7 +7,7 @@ from sdmx_ml.models.subscription_status_type import SubscriptionStatusType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SubmitSubscriptionsResponseType:
     """
     SubmitSubscriptionsResponseType describes the structure of the response

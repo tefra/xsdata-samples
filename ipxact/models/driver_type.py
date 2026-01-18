@@ -10,7 +10,7 @@ from ipxact.models.single_shot_driver import SingleShotDriver
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DriverType:
     """
     Wire port driver type.
@@ -74,7 +74,7 @@ class DriverType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ViewRef:
         value: str = field(
             default="",

@@ -7,7 +7,7 @@ from travelport.models.type_voucher_type_5 import TypeVoucherType5
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeVoucherInformationHistory2:
     """
     Information pertaining to the payment of a Vehicle Rental.

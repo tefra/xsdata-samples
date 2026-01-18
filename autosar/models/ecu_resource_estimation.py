@@ -14,7 +14,7 @@ from .swc_to_ecu_mapping_subtypes_enum import SwcToEcuMappingSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcuResourceEstimation:
     """
     Resource estimations for RTE and BSW of a single ECU instance.
@@ -115,18 +115,17 @@ class EcuResourceEstimation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuInstanceRef(Ref):
-        dest: None | EcuInstanceSubtypesEnum = field(
-            default=None,
+        dest: EcuInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwCompToEcuMappingRefs:
         sw_comp_to_ecu_mapping_ref: list[
             EcuResourceEstimation.SwCompToEcuMappingRefs.SwCompToEcuMappingRef
@@ -139,13 +138,12 @@ class EcuResourceEstimation:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SwCompToEcuMappingRef(Ref):
-            dest: None | SwcToEcuMappingSubtypesEnum = field(
-                default=None,
+            dest: SwcToEcuMappingSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

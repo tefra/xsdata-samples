@@ -9,7 +9,7 @@ from travelport.models.type_profile_entity_status_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileStatusUpdate2:
     """
     Change the status of the profile.
@@ -25,11 +25,10 @@ class ProfileStatusUpdate2:
         name = "ProfileStatusUpdate"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    status: None | TypeProfileEntityStatus2 = field(
-        default=None,
+    status: TypeProfileEntityStatus2 = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

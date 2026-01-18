@@ -14,14 +14,13 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RiskPartyInvolvement(RiskInvolvement):
-    insured_role: None | InsuredRoleType = field(
-        default=None,
+    insured_role: InsuredRoleType = field(
         metadata={
             "name": "InsuredRole",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )

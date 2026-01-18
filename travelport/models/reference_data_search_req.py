@@ -13,7 +13,7 @@ from travelport.models.reference_data_search_modifiers import (
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceDataSearchReq(BaseReq1):
     """
     Request to lookup a specific reference data item.

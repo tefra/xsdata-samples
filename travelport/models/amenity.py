@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Amenity:
     """
     Parameters
@@ -19,15 +19,14 @@ class Amenity:
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
-    code: None | int = field(
-        default=None,
+    code: int = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
             "min_inclusive": 1,
             "max_inclusive": 999,
-        },
+        }
     )
     amenity_type: None | str = field(
         default=None,

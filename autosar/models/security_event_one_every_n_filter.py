@@ -17,7 +17,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecurityEventOneEveryNFilter:
     """
     This meta-class represents the configuration of a sampling (i.e. every
@@ -84,14 +84,13 @@ class SecurityEventOneEveryNFilter:
     class Meta:
         name = "SECURITY-EVENT-ONE-EVERY-N-FILTER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SecurityEventOneEveryNFilter.ShortNameFragments
@@ -182,7 +181,7 @@ class SecurityEventOneEveryNFilter:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -193,7 +192,7 @@ class SecurityEventOneEveryNFilter:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

@@ -19,7 +19,7 @@ from .system_subtypes_enum import SystemSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ImplementationDataTypeElementInSystemRef:
     """
     This meta-class represents the ability to refer to the internal
@@ -153,18 +153,17 @@ class ImplementationDataTypeElementInSystemRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BaseRef(Ref):
-        dest: None | SystemSubtypesEnum = field(
-            default=None,
+        dest: SystemSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextSwcPrototypeRefs:
         context_swc_prototype_ref: list[
             ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs.ContextSwcPrototypeRef
@@ -177,40 +176,37 @@ class ImplementationDataTypeElementInSystemRef:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ContextSwcPrototypeRef(Ref):
-            dest: None | SwComponentPrototypeSubtypesEnum = field(
-                default=None,
+            dest: SwComponentPrototypeSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextPortPrototypeRef(Ref):
-        dest: None | PortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: PortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RootDataPrototypeRef(Ref):
-        dest: None | AutosarDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: AutosarDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextImplementationDataElementRefs:
         context_implementation_data_element_ref: list[
             ImplementationDataTypeElementInSystemRef.ContextImplementationDataElementRefs.ContextImplementationDataElementRef
@@ -223,24 +219,22 @@ class ImplementationDataTypeElementInSystemRef:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ContextImplementationDataElementRef(Ref):
-            dest: None | ImplementationDataTypeElementSubtypesEnum = field(
-                default=None,
+            dest: ImplementationDataTypeElementSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetImplementationDataTypeElementRef(Ref):
-        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
-            default=None,
+        dest: ImplementationDataTypeElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

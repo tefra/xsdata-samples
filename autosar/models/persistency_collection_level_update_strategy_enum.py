@@ -9,7 +9,7 @@ from .persistency_collection_level_update_strategy_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersistencyCollectionLevelUpdateStrategyEnum:
     """
     This enumeration provides possible values for the update strategy on
@@ -31,11 +31,10 @@ class PersistencyCollectionLevelUpdateStrategyEnum:
     class Meta:
         name = "PERSISTENCY-COLLECTION-LEVEL-UPDATE-STRATEGY-ENUM"
 
-    value: None | PersistencyCollectionLevelUpdateStrategyEnumSimple = field(
-        default=None,
+    value: PersistencyCollectionLevelUpdateStrategyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

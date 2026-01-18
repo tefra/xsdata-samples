@@ -24,7 +24,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_id
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseIdentifiedComponentType(BaseComponentType):
     """
     <description xmlns="">The base type for all business objects and

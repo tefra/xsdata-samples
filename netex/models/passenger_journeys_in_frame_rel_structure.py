@@ -12,7 +12,7 @@ from .template_service_journey import TemplateServiceJourney
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassengerJourneysInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "passengerJourneysInFrame_RelStructure"

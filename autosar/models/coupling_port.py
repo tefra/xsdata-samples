@@ -39,7 +39,7 @@ from .vlan_membership import VlanMembership
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CouplingPort:
     """
     A CouplingPort is used to connect a CouplingElement with an EcuInstance
@@ -149,14 +149,13 @@ class CouplingPort:
     class Meta:
         name = "COUPLING-PORT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | CouplingPort.ShortNameFragments = field(
         default=None,
@@ -363,7 +362,7 @@ class CouplingPort:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -374,7 +373,7 @@ class CouplingPort:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -385,18 +384,17 @@ class CouplingPort:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DefaultVlanRef(Ref):
-        dest: None | EthernetPhysicalChannelSubtypesEnum = field(
-            default=None,
+        dest: EthernetPhysicalChannelSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MacMulticastAddressRefs:
         mac_multicast_address_ref: list[
             CouplingPort.MacMulticastAddressRefs.MacMulticastAddressRef
@@ -409,18 +407,17 @@ class CouplingPort:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MacMulticastAddressRef(Ref):
-            dest: None | MacMulticastGroupSubtypesEnum = field(
-                default=None,
+            dest: MacMulticastGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PncMappingRefs:
         pnc_mapping_ref: list[CouplingPort.PncMappingRefs.PncMappingRef] = (
             field(
@@ -433,18 +430,17 @@ class CouplingPort:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PncMappingRef(Ref):
-            dest: None | PncMappingIdentSubtypesEnum = field(
-                default=None,
+            dest: PncMappingIdentSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VlanMemberships:
         vlan_membership: list[VlanMembership] = field(
             default_factory=list,
@@ -455,24 +451,22 @@ class CouplingPort:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VlanModifierRef(Ref):
-        dest: None | EthernetPhysicalChannelSubtypesEnum = field(
-            default=None,
+        dest: EthernetPhysicalChannelSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class WakeupSleepOnDatalineConfigRef(Ref):
-        dest: None | EthernetWakeupSleepOnDatalineConfigSubtypesEnum = field(
-            default=None,
+        dest: EthernetWakeupSleepOnDatalineConfigSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

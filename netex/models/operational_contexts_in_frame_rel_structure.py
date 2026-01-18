@@ -9,7 +9,7 @@ from .operational_context import OperationalContext
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OperationalContextsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operationalContextsInFrame_RelStructure"

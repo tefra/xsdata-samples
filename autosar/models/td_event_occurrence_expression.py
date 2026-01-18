@@ -14,7 +14,7 @@ from .timing_mode_instance import TimingModeInstance
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventOccurrenceExpression:
     """
     This is used to specify a filter on the occurrences of
@@ -104,7 +104,7 @@ class TdEventOccurrenceExpression:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Arguments:
         autosar_operation_argument_instance: list[
             AutosarOperationArgumentInstance
@@ -117,7 +117,7 @@ class TdEventOccurrenceExpression:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Modes:
         timing_mode_instance: list[TimingModeInstance] = field(
             default_factory=list,
@@ -128,7 +128,7 @@ class TdEventOccurrenceExpression:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Variables:
         autosar_variable_instance: list[AutosarVariableInstance] = field(
             default_factory=list,

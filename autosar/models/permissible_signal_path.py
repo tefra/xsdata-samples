@@ -14,7 +14,7 @@ from .swc_to_swc_signal import SwcToSwcSignal
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PermissibleSignalPath:
     """
     The PermissibleSignalPath describes the way a data element shall take
@@ -112,7 +112,7 @@ class PermissibleSignalPath:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Operations:
         swc_to_swc_operation_arguments: list[SwcToSwcOperationArguments] = (
             field(
@@ -125,7 +125,7 @@ class PermissibleSignalPath:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PhysicalChannelRefs:
         physical_channel_ref: list[
             PermissibleSignalPath.PhysicalChannelRefs.PhysicalChannelRef
@@ -138,18 +138,17 @@ class PermissibleSignalPath:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PhysicalChannelRef(Ref):
-            dest: None | PhysicalChannelSubtypesEnum = field(
-                default=None,
+            dest: PhysicalChannelSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Signals:
         swc_to_swc_signal: list[SwcToSwcSignal] = field(
             default_factory=list,

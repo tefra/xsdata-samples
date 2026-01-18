@@ -8,7 +8,7 @@ from .nil_reason_enumeration_value import NilReasonEnumerationValue
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MeasureOrNilReasonListType:
     value: Iterable[str | NilReasonEnumerationValue] = field(
         default_factory=list,
@@ -17,11 +17,10 @@ class MeasureOrNilReasonListType:
             "tokens": True,
         },
     )
-    uom: None | str = field(
-        default=None,
+    uom: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
             "pattern": r"[^: \n\r\t]+",
-        },
+        }
     )

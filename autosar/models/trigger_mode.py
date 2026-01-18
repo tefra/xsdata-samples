@@ -7,7 +7,7 @@ from .trigger_mode_simple import TriggerModeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TriggerMode:
     """
     IPduM can be configured to send a transmission request for the new
@@ -29,11 +29,10 @@ class TriggerMode:
     class Meta:
         name = "TRIGGER-MODE"
 
-    value: None | TriggerModeSimple = field(
-        default=None,
+    value: TriggerModeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

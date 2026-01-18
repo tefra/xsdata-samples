@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingInfo:
     """
     Links segments and fares together.
@@ -31,13 +31,12 @@ class BookingInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    booking_code: None | str = field(
-        default=None,
+    booking_code: str = field(
         metadata={
             "name": "BookingCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     booking_count: None | str = field(
         default=None,
@@ -53,13 +52,12 @@ class BookingInfo:
             "type": "Attribute",
         },
     )
-    fare_info_ref: None | str = field(
-        default=None,
+    fare_info_ref: str = field(
         metadata={
             "name": "FareInfoRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     segment_ref: None | str = field(
         default=None,

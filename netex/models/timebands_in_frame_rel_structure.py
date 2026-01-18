@@ -9,7 +9,7 @@ from .timeband import Timeband
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimebandsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timebandsInFrame_RelStructure"

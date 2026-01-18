@@ -20,7 +20,7 @@ from datexii.models.eu.datexii.v2.truck_parking_dynamic_management_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingUsageScenario:
     """
     A special type of usage available for the parking site or the group of
@@ -44,14 +44,13 @@ class ParkingUsageScenario:
     :ivar parking_usage_scenario_extension:
     """
 
-    parking_usage_scenario: None | ParkingUsageScenarioEnum = field(
-        default=None,
+    parking_usage_scenario: ParkingUsageScenarioEnum = field(
         metadata={
             "name": "parkingUsageScenario",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     truck_parking_dynamic_management: list[
         TruckParkingDynamicManagementEnum

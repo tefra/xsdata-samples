@@ -12,7 +12,7 @@ from sabre.models.telephone_type_share_synch_ind import (
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TelephoneType:
     """
     Construct for holding a telephone number.
@@ -83,15 +83,14 @@ class TelephoneType:
             "pattern": r"[0-9]{1,8}",
         },
     )
-    phone_number: None | str = field(
-        default=None,
+    phone_number: str = field(
         metadata={
             "name": "PhoneNumber",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 32,
-        },
+        }
     )
     extension: None | str = field(
         default=None,

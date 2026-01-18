@@ -11,7 +11,7 @@ from travelport.models.variance import Variance
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightInfoDetail:
     """
     Parameters
@@ -83,25 +83,23 @@ class FlightInfoDetail:
             "max_occurs": 999,
         },
     )
-    origin: None | str = field(
-        default=None,
+    origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    destination: None | str = field(
-        default=None,
+    destination: str = field(
         metadata={
             "name": "Destination",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
     scheduled_departure_time: None | str = field(
         default=None,

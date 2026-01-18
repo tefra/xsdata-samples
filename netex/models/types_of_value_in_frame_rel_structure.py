@@ -84,7 +84,7 @@ from .value_set import ValueSet
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypesOfValueInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfValueInFrame_RelStructure"

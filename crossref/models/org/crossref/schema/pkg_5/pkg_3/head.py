@@ -14,7 +14,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.timestamp import Timestamp
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Head:
     """
     Container for information related to the DOI batch submission.
@@ -28,31 +28,27 @@ class Head:
         name = "head"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    doi_batch_id: None | DoiBatchId = field(
-        default=None,
+    doi_batch_id: DoiBatchId = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    timestamp: None | Timestamp = field(
-        default=None,
+    timestamp: Timestamp = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    depositor: None | Depositor = field(
-        default=None,
+    depositor: Depositor = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    registrant: None | Registrant = field(
-        default=None,
+    registrant: Registrant = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )

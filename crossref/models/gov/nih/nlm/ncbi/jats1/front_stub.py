@@ -68,7 +68,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.volume_series import VolumeSeries
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FrontStub:
     """
     <div> <h3>Stub Front Metadata</h3> </div>.

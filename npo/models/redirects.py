@@ -7,7 +7,7 @@ from npo.models.redirect_list import RedirectList
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Redirects(RedirectList):
     class Meta:
         name = "redirects"

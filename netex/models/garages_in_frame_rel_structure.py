@@ -9,7 +9,7 @@ from .garage import Garage
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GaragesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "garagesInFrame_RelStructure"

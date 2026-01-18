@@ -10,7 +10,7 @@ from .udp_nm_cluster_subtypes_enum import UdpNmClusterSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UdpNmClusterCoupling:
     """
     Udp attributes that are valid for each of the referenced (coupled)
@@ -89,7 +89,7 @@ class UdpNmClusterCoupling:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CoupledClusterRefs:
         coupled_cluster_ref: list[
             UdpNmClusterCoupling.CoupledClusterRefs.CoupledClusterRef
@@ -102,13 +102,12 @@ class UdpNmClusterCoupling:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CoupledClusterRef(Ref):
-            dest: None | UdpNmClusterSubtypesEnum = field(
-                default=None,
+            dest: UdpNmClusterSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

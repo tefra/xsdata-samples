@@ -8,7 +8,7 @@ from travelport.models.upsell_search_criteria import UpsellSearchCriteria
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelUpsellQualifySearchCriteria(UpsellSearchCriteria):
     """
     Search criteria for HotelUpsellQualify.
@@ -34,14 +34,13 @@ class HotelUpsellQualifySearchCriteria(UpsellSearchCriteria):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    hotel_chain_code: None | str = field(
-        default=None,
+    hotel_chain_code: str = field(
         metadata={
             "name": "HotelChainCode",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
     hotel_code: None | str = field(
         default=None,

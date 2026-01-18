@@ -7,25 +7,23 @@ from datexii.models.eu.datexii.v2.vms_text_line import VmsTextLine
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsTextLineIndexVmsTextLine:
     class Meta:
         name = "_VmsTextLineIndexVmsTextLine"
 
-    vms_text_line: None | VmsTextLine = field(
-        default=None,
+    vms_text_line: VmsTextLine = field(
         metadata={
             "name": "vmsTextLine",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    line_index: None | int = field(
-        default=None,
+    line_index: int = field(
         metadata={
             "name": "lineIndex",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

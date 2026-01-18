@@ -7,7 +7,7 @@ from .global_time_crc_support_enum_simple import GlobalTimeCrcSupportEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GlobalTimeCrcSupportEnum:
     """
     This enumeration is used to define whether and how CRC on the TX side
@@ -29,11 +29,10 @@ class GlobalTimeCrcSupportEnum:
     class Meta:
         name = "GLOBAL-TIME-CRC-SUPPORT-ENUM"
 
-    value: None | GlobalTimeCrcSupportEnumSimple = field(
-        default=None,
+    value: GlobalTimeCrcSupportEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

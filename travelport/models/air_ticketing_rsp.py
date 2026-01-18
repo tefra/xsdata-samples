@@ -13,7 +13,7 @@ from travelport.models.ticket_failure_info import TicketFailureInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirTicketingRsp(BaseRsp1):
     """
     Response to ticket a previously stored reservation.

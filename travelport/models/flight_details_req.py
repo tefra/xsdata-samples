@@ -8,7 +8,7 @@ from travelport.models.base_req_1 import BaseReq1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FlightDetailsReq(BaseReq1):
     """
     Request for the Flight Details of segments.

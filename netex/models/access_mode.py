@@ -7,14 +7,13 @@ from .access_mode_enumeration import AccessModeEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessMode:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: None | AccessModeEnumeration = field(
-        default=None,
+    value: AccessModeEnumeration = field(
         metadata={
             "required": True,
-        },
+        }
     )

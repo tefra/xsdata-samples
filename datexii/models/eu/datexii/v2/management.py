@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.life_cycle_management import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Management:
     """
     Information relating to the management of the situation record.

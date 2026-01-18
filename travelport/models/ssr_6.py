@@ -7,7 +7,7 @@ from travelport.models.type_element_status_7 import TypeElementStatus7
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ssr6:
     """
     Special serivces like wheel chair, or pet carrier.
@@ -88,15 +88,14 @@ class Ssr6:
             "type": "Attribute",
         },
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
             "min_length": 4,
             "max_length": 4,
-        },
+        }
     )
     status: None | str = field(
         default=None,

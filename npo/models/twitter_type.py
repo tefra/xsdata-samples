@@ -7,7 +7,7 @@ from npo.models.twitter_type_type import TwitterTypeType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TwitterType:
     class Meta:
         name = "twitterType"

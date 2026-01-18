@@ -10,7 +10,7 @@ from travelport.models.fare_family_update import FareFamilyUpdate
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BrandedFareAdminReq(BaseReq1):
     """
     Admin request to add/update or delete Branded fare.

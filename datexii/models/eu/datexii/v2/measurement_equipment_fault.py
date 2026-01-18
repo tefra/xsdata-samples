@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.measurement_equipment_fault_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MeasurementEquipmentFault(Fault):
     """
     Details of a fault which is being reported for the related measurement
@@ -22,14 +22,13 @@ class MeasurementEquipmentFault(Fault):
     :ivar measurement_equipment_fault_extension:
     """
 
-    measurement_equipment_fault: None | MeasurementEquipmentFaultEnum = field(
-        default=None,
+    measurement_equipment_fault: MeasurementEquipmentFaultEnum = field(
         metadata={
             "name": "measurementEquipmentFault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     measurement_equipment_fault_extension: None | ExtensionType = field(
         default=None,

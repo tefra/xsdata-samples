@@ -9,7 +9,7 @@ from .ethernet_connection_negotiation_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthernetConnectionNegotiationEnum:
     """
     Specifies connection negotiation types of Ethernet transceiver links.
@@ -30,11 +30,10 @@ class EthernetConnectionNegotiationEnum:
     class Meta:
         name = "ETHERNET-CONNECTION-NEGOTIATION-ENUM"
 
-    value: None | EthernetConnectionNegotiationEnumSimple = field(
-        default=None,
+    value: EthernetConnectionNegotiationEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

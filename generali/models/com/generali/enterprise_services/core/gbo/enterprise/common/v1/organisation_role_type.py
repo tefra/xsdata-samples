@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganisationRoleType(BaseGborolesType):
     """
     :ivar legal_name: The legal name of the Organisation

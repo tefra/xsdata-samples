@@ -14,7 +14,7 @@ from datexii.models.eu.datexii.v2.vms_supplementary_panel import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsPictogram:
     """
     A main pictogram displayable on the VMS panel.
@@ -110,14 +110,13 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    presence_of_red_triangle: None | bool = field(
-        default=None,
+    presence_of_red_triangle: bool = field(
         metadata={
             "name": "presenceOfRedTriangle",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     vienna_convention_compliant: None | bool = field(
         default=None,

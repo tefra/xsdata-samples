@@ -41,7 +41,7 @@ from .text_value_specification import TextValueSpecification
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersistencyKeyValuePair:
     """
     This meta-class represents the ability to formally model a key-value
@@ -113,14 +113,13 @@ class PersistencyKeyValuePair:
     class Meta:
         name = "PERSISTENCY-KEY-VALUE-PAIR"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | PersistencyKeyValuePair.ShortNameFragments = (
         field(
@@ -229,7 +228,7 @@ class PersistencyKeyValuePair:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -240,7 +239,7 @@ class PersistencyKeyValuePair:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -251,7 +250,7 @@ class PersistencyKeyValuePair:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InitValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification
@@ -366,13 +365,12 @@ class PersistencyKeyValuePair:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ValueDataTypeRef(Ref):
-        dest: None | AbstractImplementationDataTypeSubtypesEnum = field(
-            default=None,
+        dest: AbstractImplementationDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

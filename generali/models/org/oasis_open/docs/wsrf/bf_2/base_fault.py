@@ -9,7 +9,7 @@ from generali.models.org.oasis_open.docs.wsrf.bf_2.base_fault_type import (
 __NAMESPACE__ = "http://docs.oasis-open.org/wsrf/bf-2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseFault(BaseFaultType):
     class Meta:
         namespace = "http://docs.oasis-open.org/wsrf/bf-2"

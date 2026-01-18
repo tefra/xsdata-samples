@@ -7,7 +7,7 @@ from travelport.models.type_date_spec import TypeDateSpec
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirReservationCriteria:
     """
     Criteria for searching the Air reservations.

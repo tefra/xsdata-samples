@@ -9,7 +9,7 @@ from .topographic_projection_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TopographicProjectionRef(TopographicProjectionRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

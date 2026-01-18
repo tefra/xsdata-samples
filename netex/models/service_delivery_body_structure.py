@@ -11,7 +11,7 @@ from .other_error import OtherError
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceDeliveryBodyStructure:
     status: None | bool = field(
         default=None,
@@ -55,7 +55,7 @@ class ServiceDeliveryBodyStructure:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ErrorCondition:
         capability_not_supported_error_or_other_error: (
             None | CapabilityNotSupportedError | OtherError

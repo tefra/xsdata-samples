@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DisturbanceActivity(Activity):
     """
     Deliberate human action of either a public disorder nature or of a
@@ -23,14 +23,13 @@ class DisturbanceActivity(Activity):
     :ivar disturbance_activity_extension:
     """
 
-    disturbance_activity_type: None | DisturbanceActivityTypeEnum = field(
-        default=None,
+    disturbance_activity_type: DisturbanceActivityTypeEnum = field(
         metadata={
             "name": "disturbanceActivityType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     disturbance_activity_extension: None | ExtensionType = field(
         default=None,

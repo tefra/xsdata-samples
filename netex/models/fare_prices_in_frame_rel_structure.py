@@ -9,7 +9,7 @@ from .priceable_object_version_structure import PriceGroup
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FarePricesInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "farePricesInFrame_RelStructure"

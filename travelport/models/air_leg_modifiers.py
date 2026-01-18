@@ -18,7 +18,7 @@ from travelport.models.type_anchor_flight_data import TypeAnchorFlightData
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirLegModifiers:
     """
     Parameters
@@ -251,7 +251,7 @@ class AirLegModifiers:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PermittedConnectionPoints:
         connection_point: list[ConnectionPoint1] = field(
             default_factory=list,
@@ -264,7 +264,7 @@ class AirLegModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProhibitedConnectionPoints:
         connection_point: list[ConnectionPoint1] = field(
             default_factory=list,
@@ -277,7 +277,7 @@ class AirLegModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PreferredConnectionPoints:
         connection_point: list[ConnectionPoint1] = field(
             default_factory=list,
@@ -290,7 +290,7 @@ class AirLegModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PermittedBookingCodes:
         booking_code: list[BookingCode] = field(
             default_factory=list,
@@ -302,7 +302,7 @@ class AirLegModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PreferredAlliances:
         alliance: list[Alliance] = field(
             default_factory=list,
@@ -314,7 +314,7 @@ class AirLegModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProhibitedBookingCodes:
         booking_code: list[BookingCode] = field(
             default_factory=list,
@@ -326,7 +326,7 @@ class AirLegModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DisfavoredAlliances:
         alliance: list[Alliance] = field(
             default_factory=list,

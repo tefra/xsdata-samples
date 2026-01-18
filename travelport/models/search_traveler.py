@@ -8,7 +8,7 @@ from travelport.models.type_passenger_type_1 import TypePassengerType1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SearchTraveler(TypePassengerType1):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

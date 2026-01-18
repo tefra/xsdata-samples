@@ -18,7 +18,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.telepho
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TelephoneNumberType:
     """
     <description xmlns="">A definition of a land line telephone number or
@@ -38,14 +38,13 @@ class TelephoneNumberType:
         digits.</description> </description>
     """
 
-    full_number_text: None | TextType = field(
-        default=None,
+    full_number_text: TextType = field(
         metadata={
             "name": "FullNumberText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )
     country_code_text: None | TelephoneNumberCountryCodeType = field(
         default=None,

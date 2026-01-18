@@ -7,7 +7,7 @@ from .graphic_fit_enum_simple import GraphicFitEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GraphicFitEnum:
     """
     This enumerator specifies the policy how to place and scale the figure
@@ -29,11 +29,10 @@ class GraphicFitEnum:
     class Meta:
         name = "GRAPHIC-FIT-ENUM"
 
-    value: None | GraphicFitEnumSimple = field(
-        default=None,
+    value: GraphicFitEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

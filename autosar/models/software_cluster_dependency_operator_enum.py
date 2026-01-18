@@ -9,7 +9,7 @@ from .software_cluster_dependency_operator_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoftwareClusterDependencyOperatorEnum:
     """
     This enumeration provides a choice of operators for comparison within a
@@ -31,11 +31,10 @@ class SoftwareClusterDependencyOperatorEnum:
     class Meta:
         name = "SOFTWARE-CLUSTER-DEPENDENCY-OPERATOR-ENUM"
 
-    value: None | SoftwareClusterDependencyOperatorEnumSimple = field(
-        default=None,
+    value: SoftwareClusterDependencyOperatorEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -8,7 +8,7 @@ from sabre.models.tax_code_type import TaxCodeType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExchangeTravelPreferencesTpaExtensionsType:
     """
     Attributes:
@@ -68,29 +68,27 @@ class ExchangeTravelPreferencesTpaExtensionsType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExemptAllTaxes:
-        value: None | bool = field(
-            default=None,
+        value: bool = field(
             metadata={
                 "name": "Value",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExemptAllTaxesAndFees:
-        value: None | bool = field(
-            default=None,
+        value: bool = field(
             metadata={
                 "name": "Value",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Taxes:
         """
         Attributes:

@@ -11,7 +11,7 @@ from .sw_generic_axis_param_type_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwGenericAxisParam:
     """
     This meta-class describes a specific parameter of a generic axis.
@@ -76,13 +76,12 @@ class SwGenericAxisParam:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwGenericAxisParamTypeRef(Ref):
-        dest: None | SwGenericAxisParamTypeSubtypesEnum = field(
-            default=None,
+        dest: SwGenericAxisParamTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

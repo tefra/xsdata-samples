@@ -9,7 +9,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TlsPskIdentity:
     """
     This element is used to describe the pre-shared key shared during the
@@ -77,13 +77,12 @@ class TlsPskIdentity:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PreSharedKeyRef(Ref):
-        dest: None | CryptoServiceKeySubtypesEnum = field(
-            default=None,
+        dest: CryptoServiceKeySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

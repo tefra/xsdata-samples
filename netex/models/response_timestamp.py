@@ -7,14 +7,13 @@ from xsdata.models.datatype import XmlDateTime
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResponseTimestamp:
     class Meta:
         namespace = "http://www.siri.org.uk/siri"
 
-    value: None | XmlDateTime = field(
-        default=None,
+    value: XmlDateTime = field(
         metadata={
             "required": True,
-        },
+        }
     )

@@ -30,7 +30,7 @@ from .variable_data_prototype import VariableDataPrototype
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswModuleDescription:
     """
     Root element for the description of a single BSW module or BSW cluster.
@@ -202,14 +202,13 @@ class BswModuleDescription:
     class Meta:
         name = "BSW-MODULE-DESCRIPTION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | BswModuleDescription.ShortNameFragments = (
         field(
@@ -456,7 +455,7 @@ class BswModuleDescription:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -467,7 +466,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -478,7 +477,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -507,7 +506,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExpectedEntrys:
         bsw_module_entry_ref_conditional: list[
             BswModuleEntryRefConditional
@@ -520,7 +519,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplementedEntrys:
         bsw_module_entry_ref_conditional: list[
             BswModuleEntryRefConditional
@@ -533,7 +532,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BswModuleDocumentations:
         sw_component_documentation: list[SwComponentDocumentation] = field(
             default_factory=list,
@@ -544,7 +543,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvidedEntrys:
         bsw_module_entry_ref_conditional: list[
             BswModuleEntryRefConditional
@@ -557,7 +556,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OutgoingCallbacks:
         bsw_module_entry_ref_conditional: list[
             BswModuleEntryRefConditional
@@ -570,7 +569,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BswModuleDependencys:
         bsw_module_dependency: list[BswModuleDependency] = field(
             default_factory=list,
@@ -581,7 +580,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvidedModeGroups:
         mode_declaration_group_prototype: list[
             ModeDeclarationGroupPrototype
@@ -594,7 +593,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredModeGroups:
         mode_declaration_group_prototype: list[
             ModeDeclarationGroupPrototype
@@ -607,7 +606,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReleasedTriggers:
         trigger: list[Trigger] = field(
             default_factory=list,
@@ -618,7 +617,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredTriggers:
         trigger: list[Trigger] = field(
             default_factory=list,
@@ -629,7 +628,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvidedClientServerEntrys:
         bsw_module_client_server_entry: list[BswModuleClientServerEntry] = (
             field(
@@ -642,7 +641,7 @@ class BswModuleDescription:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredClientServerEntrys:
         bsw_module_client_server_entry: list[BswModuleClientServerEntry] = (
             field(
@@ -655,7 +654,7 @@ class BswModuleDescription:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvidedDatas:
         variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
@@ -666,7 +665,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredDatas:
         variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
@@ -677,7 +676,7 @@ class BswModuleDescription:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InternalBehaviors:
         bsw_internal_behavior: list[BswInternalBehavior] = field(
             default_factory=list,

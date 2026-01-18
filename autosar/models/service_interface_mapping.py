@@ -18,7 +18,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceInterfaceMapping:
     """
     Specifies one ServiceInterfaceMapping that allows to define that a
@@ -85,14 +85,13 @@ class ServiceInterfaceMapping:
     class Meta:
         name = "SERVICE-INTERFACE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ServiceInterfaceMapping.ShortNameFragments = (
         field(
@@ -195,7 +194,7 @@ class ServiceInterfaceMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -206,7 +205,7 @@ class ServiceInterfaceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -217,18 +216,17 @@ class ServiceInterfaceMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CompositeServiceInterfaceRef(Ref):
-        dest: None | ServiceInterfaceSubtypesEnum = field(
-            default=None,
+        dest: ServiceInterfaceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SourceServiceInterfaceRefs:
         source_service_interface_ref: list[
             ServiceInterfaceMapping.SourceServiceInterfaceRefs.SourceServiceInterfaceRef
@@ -241,13 +239,12 @@ class ServiceInterfaceMapping:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SourceServiceInterfaceRef(Ref):
-            dest: None | ServiceInterfaceSubtypesEnum = field(
-                default=None,
+            dest: ServiceInterfaceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

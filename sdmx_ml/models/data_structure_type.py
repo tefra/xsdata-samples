@@ -7,7 +7,7 @@ from sdmx_ml.models.data_structure_base_type import DataStructureBaseType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataStructureType(DataStructureBaseType):
     """
     DataStructureType defines the structure for a data structure

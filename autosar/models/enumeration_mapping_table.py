@@ -18,7 +18,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnumerationMappingTable:
     """
     This class represents an attribute value variation point for
@@ -87,14 +87,13 @@ class EnumerationMappingTable:
     class Meta:
         name = "ENUMERATION-MAPPING-TABLE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EnumerationMappingTable.ShortNameFragments = (
         field(
@@ -193,7 +192,7 @@ class EnumerationMappingTable:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -204,7 +203,7 @@ class EnumerationMappingTable:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -215,7 +214,7 @@ class EnumerationMappingTable:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Entrys:
         entry: list[EnumerationMappingEntry] = field(
             default_factory=list,

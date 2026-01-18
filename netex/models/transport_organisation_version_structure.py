@@ -36,7 +36,7 @@ from .water_submode import WaterSubmode
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportOrganisationVersionStructure(OrganisationVersionStructure):
     class Meta:
         name = "TransportOrganisation_VersionStructure"
@@ -248,7 +248,7 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Address(PostalAddressVersionStructure):
         members: Any = field(
             init=False,

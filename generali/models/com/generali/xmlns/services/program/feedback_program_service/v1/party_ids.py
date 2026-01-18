@@ -11,17 +11,16 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PartyIds:
     class Meta:
         name = "PartyIDs"
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    party_id: None | PartyId = field(
-        default=None,
+    party_id: PartyId = field(
         metadata={
             "name": "PartyID",
             "type": "Element",
             "required": True,
-        },
+        }
     )

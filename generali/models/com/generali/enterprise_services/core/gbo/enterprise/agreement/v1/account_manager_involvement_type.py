@@ -14,27 +14,21 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccountManagerInvolvementType:
-    multinational_fronting_office_role: (
-        None | MultinationalFrontingOfficeRoleType
-    ) = field(
-        default=None,
+    multinational_fronting_office_role: MultinationalFrontingOfficeRoleType = field(
         metadata={
             "name": "MultinationalFrontingOfficeRole",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    account_manager_type: (
-        None | AccountManagerInvolvementTypeAccountManagerType
-    ) = field(
-        default=None,
+    account_manager_type: AccountManagerInvolvementTypeAccountManagerType = field(
         metadata={
             "name": "AccountManagerType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )

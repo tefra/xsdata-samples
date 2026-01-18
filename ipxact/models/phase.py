@@ -7,7 +7,7 @@ from ipxact.models.real_expression import RealExpression
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Phase(RealExpression):
     """
     This is an non-negative floating point number that is used to sequence

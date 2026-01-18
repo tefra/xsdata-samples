@@ -10,7 +10,7 @@ from travelport.models.type_element_status_1 import TypeElementStatus1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Coupon:
     """
     The flight coupon that resulted from the ticketing operation.
@@ -138,25 +138,23 @@ class Coupon:
             "max_length": 5,
         },
     )
-    origin: None | str = field(
-        default=None,
+    origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    destination: None | str = field(
-        default=None,
+    destination: str = field(
         metadata={
             "name": "Destination",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
     departure_time: None | str = field(
         default=None,
@@ -172,30 +170,27 @@ class Coupon:
             "type": "Attribute",
         },
     )
-    stopover_code: None | bool = field(
-        default=None,
+    stopover_code: bool = field(
         metadata={
             "name": "StopoverCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    booking_class: None | str = field(
-        default=None,
+    booking_class: str = field(
         metadata={
             "name": "BookingClass",
             "type": "Attribute",
             "required": True,
             "max_length": 2,
-        },
+        }
     )
-    fare_basis: None | str = field(
-        default=None,
+    fare_basis: str = field(
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     not_valid_before: None | XmlDate = field(
         default=None,
@@ -211,14 +206,13 @@ class Coupon:
             "type": "Attribute",
         },
     )
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
             "max_length": 1,
-        },
+        }
     )
     segment_group: None | int = field(
         default=None,

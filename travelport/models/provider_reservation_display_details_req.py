@@ -7,7 +7,7 @@ from travelport.models.base_req_1 import BaseReq1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProviderReservationDisplayDetailsReq(BaseReq1):
     """
     Request to display the addtional details of provider reservation
@@ -38,24 +38,22 @@ class ProviderReservationDisplayDetailsReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
-    provider_locator_code: None | str = field(
-        default=None,
+    provider_locator_code: str = field(
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        },
+        }
     )
     provider_reservation_detail: None | bool = field(
         default=None,

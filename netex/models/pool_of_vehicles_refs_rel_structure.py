@@ -9,7 +9,7 @@ from .pool_of_vehicles_ref import PoolOfVehiclesRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PoolOfVehiclesRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "PoolOfVehiclesRefs_RelStructure"

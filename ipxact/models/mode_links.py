@@ -7,7 +7,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModeLinks:
     """
     A set of links between internal and external modes defined in the
@@ -30,7 +30,7 @@ class ModeLinks:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeLink:
         """
         :ivar external_mode_reference: Reference to a mode defined in
@@ -40,23 +40,21 @@ class ModeLinks:
         :ivar id:
         """
 
-        external_mode_reference: (
-            None | ModeLinks.ModeLink.ExternalModeReference
-        ) = field(
-            default=None,
-            metadata={
-                "name": "externalModeReference",
-                "type": "Element",
-                "required": True,
-            },
+        external_mode_reference: ModeLinks.ModeLink.ExternalModeReference = (
+            field(
+                metadata={
+                    "name": "externalModeReference",
+                    "type": "Element",
+                    "required": True,
+                }
+            )
         )
-        mode_reference: None | ModeLinks.ModeLink.ModeReference = field(
-            default=None,
+        mode_reference: ModeLinks.ModeLink.ModeReference = field(
             metadata={
                 "name": "modeReference",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         vendor_extensions: None | VendorExtensions = field(
             default=None,
@@ -73,32 +71,30 @@ class ModeLinks:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ExternalModeReference:
             """
             :ivar mode_ref: Reference to a specific mode.
             """
 
-            mode_ref: None | str = field(
-                default=None,
+            mode_ref: str = field(
                 metadata={
                     "name": "modeRef",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ModeReference:
             """
             :ivar mode_ref: Reference to a specific mode.
             """
 
-            mode_ref: None | str = field(
-                default=None,
+            mode_ref: str = field(
                 metadata={
                     "name": "modeRef",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

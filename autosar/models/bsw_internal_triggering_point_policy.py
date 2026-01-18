@@ -12,7 +12,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswInternalTriggeringPointPolicy:
     """
     The internal triggering point for which the BSW Scheduler using this
@@ -82,13 +82,12 @@ class BswInternalTriggeringPointPolicy:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BswInternalTriggeringPointRef(Ref):
-        dest: None | BswInternalTriggeringPointSubtypesEnum = field(
-            default=None,
+        dest: BswInternalTriggeringPointSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

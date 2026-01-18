@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentAdvice5:
     """
     Contains other form of payment for Cruise Reservations.
@@ -33,41 +33,37 @@ class PaymentAdvice5:
         name = "PaymentAdvice"
         namespace = "http://www.travelport.com/schema/common_v37_0"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
             "max_length": 3,
-        },
+        }
     )
-    document_number: None | str = field(
-        default=None,
+    document_number: str = field(
         metadata={
             "name": "DocumentNumber",
             "type": "Attribute",
             "required": True,
             "max_length": 22,
-        },
+        }
     )
-    issue_date: None | XmlDate = field(
-        default=None,
+    issue_date: XmlDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    issue_city: None | str = field(
-        default=None,
+    issue_city: str = field(
         metadata={
             "name": "IssueCity",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
     original_fop: None | str = field(
         default=None,

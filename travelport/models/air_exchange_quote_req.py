@@ -9,7 +9,7 @@ from travelport.models.base_air_exchange_quote_req import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeQuoteReq(BaseAirExchangeQuoteReq):
     """
     Request to quote the exchange of an itinerary.

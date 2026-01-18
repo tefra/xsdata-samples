@@ -7,7 +7,7 @@ from .t_link_event_definition import TLinkEventDefinition
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinkEventDefinition(TLinkEventDefinition):
     class Meta:
         name = "linkEventDefinition"

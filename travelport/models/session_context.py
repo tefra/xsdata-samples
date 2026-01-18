@@ -7,7 +7,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SessionContext:
     """
     A XML payload that contains either the Session Context Token or the
@@ -42,7 +42,7 @@ class SessionContext:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SessTok:
         """
         Parameters
@@ -51,15 +51,14 @@ class SessionContext:
             ID of the Session Token
         """
 
-        id: None | str = field(
-            default=None,
+        id: str = field(
             metadata={
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SessProp:
         """
         Parameters
@@ -70,17 +69,15 @@ class SessionContext:
             Value of the Session Property
         """
 
-        nm: None | str = field(
-            default=None,
+        nm: str = field(
             metadata={
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
-        val: None | str = field(
-            default=None,
+        val: str = field(
             metadata={
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -45,7 +45,7 @@ from .timer_event_definition import TimerEventDefinition
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TDefinitions:
     class Meta:
         name = "tDefinitions"
@@ -362,13 +362,12 @@ class TDefinitions:
             "type": "Attribute",
         },
     )
-    target_namespace: None | str = field(
-        default=None,
+    target_namespace: str = field(
         metadata={
             "name": "targetNamespace",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     expression_language: str = field(
         default="http://www.w3.org/1999/XPath",

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersonName:
     """
     Customer name field.
@@ -32,15 +32,14 @@ class PersonName:
             "max_length": 64,
         },
     )
-    last: None | str = field(
-        default=None,
+    last: str = field(
         metadata={
             "name": "Last",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 64,
-        },
+        }
     )
     prefix: None | str = field(
         default=None,

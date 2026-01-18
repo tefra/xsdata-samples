@@ -7,7 +7,7 @@ from sabre.models.book_flight_segment_type import BookFlightSegmentType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginDestinationOptionType:
     """
     A container for flight segments.

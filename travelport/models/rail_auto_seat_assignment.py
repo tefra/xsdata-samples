@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailAutoSeatAssignment:
     """
     Request object used to request seats automatically by seat type.
@@ -28,25 +28,23 @@ class RailAutoSeatAssignment:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
-    seat_type: None | str = field(
-        default=None,
+    seat_type: str = field(
         metadata={
             "name": "SeatType",
             "type": "Attribute",
             "required": True,
             "min_length": 0,
             "max_length": 255,
-        },
+        }
     )
-    seat_value: None | str = field(
-        default=None,
+    seat_value: str = field(
         metadata={
             "name": "SeatValue",
             "type": "Attribute",
             "required": True,
             "min_length": 0,
             "max_length": 255,
-        },
+        }
     )
     rail_segment_ref: None | str = field(
         default=None,

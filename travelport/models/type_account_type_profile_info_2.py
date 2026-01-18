@@ -7,7 +7,7 @@ from travelport.models.type_profile_info_2 import TypeProfileInfo2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeAccountTypeProfileInfo2(TypeProfileInfo2):
     """
     History Element for Traveler Group.

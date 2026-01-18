@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucConditionFormula:
     """
     This formula shall yield a boolean expression depending on ecuc
@@ -72,24 +72,22 @@ class EcucConditionFormula:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucQueryRef(Ref):
-        dest: None | EcucQuerySubtypesEnum = field(
-            default=None,
+        dest: EcucQuerySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucQueryStringRef(Ref):
-        dest: None | EcucQuerySubtypesEnum = field(
-            default=None,
+        dest: EcucQuerySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

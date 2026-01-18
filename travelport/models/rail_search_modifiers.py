@@ -8,7 +8,7 @@ from travelport.models.type_rail_direction import TypeRailDirection
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailSearchModifiers:
     """
     Controls and switches for the Rail Availability Search request.
@@ -66,7 +66,7 @@ class RailSearchModifiers:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PreferredSuppliers:
         rail_supplier: list[RailSupplier] = field(
             default_factory=list,

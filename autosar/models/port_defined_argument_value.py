@@ -28,7 +28,7 @@ from .text_value_specification import TextValueSpecification
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortDefinedArgumentValue:
     """
     A PortDefinedArgumentValue is passed to a RunnableEntity dealing with
@@ -87,7 +87,7 @@ class PortDefinedArgumentValue:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Value:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification
@@ -202,13 +202,12 @@ class PortDefinedArgumentValue:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ValueTypeTref(Ref):
-        dest: None | ImplementationDataTypeSubtypesEnum = field(
-            default=None,
+        dest: ImplementationDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

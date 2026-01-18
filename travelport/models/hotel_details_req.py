@@ -9,7 +9,7 @@ from travelport.models.next_result_reference_1 import NextResultReference1
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelDetailsReq(BaseHotelDetailsReq):
     """
     Request to retrieve the details of a hotel property.

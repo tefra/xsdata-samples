@@ -10,7 +10,7 @@ from travelport.models.tax_info import TaxInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirExchangeBundle:
     """
     Bundle exchange, pricing, and penalty information for one ticket number
@@ -28,14 +28,13 @@ class AirExchangeBundle:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_exchange_info: None | AirExchangeInfo1 = field(
-        default=None,
+    air_exchange_info: AirExchangeInfo1 = field(
         metadata={
             "name": "AirExchangeInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        },
+        }
     )
     air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,

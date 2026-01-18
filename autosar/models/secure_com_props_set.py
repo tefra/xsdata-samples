@@ -19,7 +19,7 @@ from .tls_secure_com_props import TlsSecureComProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecureComPropsSet:
     """
     This meta-class represents the ability to aggregate a collection of
@@ -86,14 +86,13 @@ class SecureComPropsSet:
     class Meta:
         name = "SECURE-COM-PROPS-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SecureComPropsSet.ShortNameFragments = field(
         default=None,
@@ -190,7 +189,7 @@ class SecureComPropsSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -201,7 +200,7 @@ class SecureComPropsSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -212,7 +211,7 @@ class SecureComPropsSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecureComPropss:
         sec_oc_secure_com_props: list[SecOcSecureComProps] = field(
             default_factory=list,

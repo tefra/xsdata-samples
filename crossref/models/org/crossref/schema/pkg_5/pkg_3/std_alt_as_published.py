@@ -14,7 +14,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_designator_t import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StdAltAsPublished(StdDesignatorT):
     class Meta:
         name = "std_alt_as_published"
@@ -37,11 +37,10 @@ class StdAltAsPublished(StdDesignatorT):
             "total_digits": 2,
         },
     )
-    approved_year: None | XmlPeriod = field(
-        default=None,
+    approved_year: XmlPeriod = field(
         metadata={
             "name": "approvedYear",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

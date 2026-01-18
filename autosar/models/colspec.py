@@ -7,7 +7,7 @@ from .align_enum_simple import AlignEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Colspec:
     """
     This meta-class represents the ability to specify the properties of a

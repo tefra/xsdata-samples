@@ -14,7 +14,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndexedArrayElement:
     """
     This element represents exactly one indexed element in the array.
@@ -87,24 +87,22 @@ class IndexedArrayElement:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ApplicationArrayElementRef(Ref):
-        dest: None | ApplicationArrayElementSubtypesEnum = field(
-            default=None,
+        dest: ApplicationArrayElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplementationArrayElementRef(Ref):
-        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
-            default=None,
+        dest: ImplementationDataTypeElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

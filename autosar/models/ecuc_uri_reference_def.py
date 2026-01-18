@@ -38,7 +38,7 @@ from .traceable_subtypes_enum import TraceableSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucUriReferenceDef:
     """
     Definition of reference with a destination that is specified via a
@@ -169,14 +169,13 @@ class EcucUriReferenceDef:
     class Meta:
         name = "ECUC-URI-REFERENCE-DEF"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EcucUriReferenceDef.ShortNameFragments = (
         field(
@@ -407,7 +406,7 @@ class EcucUriReferenceDef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -418,7 +417,7 @@ class EcucUriReferenceDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -429,18 +428,17 @@ class EcucUriReferenceDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RelatedTraceItemRef(Ref):
-        dest: None | TraceableSubtypesEnum = field(
-            default=None,
+        dest: TraceableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucValidationConds:
         ecuc_validation_condition: list[EcucValidationCondition] = field(
             default_factory=list,
@@ -451,7 +449,7 @@ class EcucUriReferenceDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplementationConfigClasses:
         ecuc_implementation_configuration_class: list[
             EcucImplementationConfigurationClass
@@ -464,7 +462,7 @@ class EcucUriReferenceDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MultiplicityConfigClasses:
         ecuc_multiplicity_configuration_class: list[
             EcucMultiplicityConfigurationClass
@@ -477,7 +475,7 @@ class EcucUriReferenceDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ValueConfigClasses:
         ecuc_value_configuration_class: list[EcucValueConfigurationClass] = (
             field(
@@ -490,13 +488,12 @@ class EcucUriReferenceDef:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DestinationUriRef(Ref):
-        dest: None | EcucDestinationUriDefSubtypesEnum = field(
-            default=None,
+        dest: EcucDestinationUriDefSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

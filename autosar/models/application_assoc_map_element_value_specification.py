@@ -21,7 +21,7 @@ from .text_value_specification import TextValueSpecification
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationAssocMapElementValueSpecification:
     """
     This meta-class represents the ability to define the initialization of
@@ -78,7 +78,7 @@ class ApplicationAssocMapElementValueSpecification:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Key:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification
@@ -193,7 +193,7 @@ class ApplicationAssocMapElementValueSpecification:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Value:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification
@@ -309,7 +309,7 @@ class ApplicationAssocMapElementValueSpecification:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationAssocMapValueSpecification:
     """
     This meta-class represents the ability to define the initialization of
@@ -380,7 +380,7 @@ class ApplicationAssocMapValueSpecification:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MapElementTuples:
         application_assoc_map_element_value_specification: list[
             ApplicationAssocMapElementValueSpecification
@@ -394,7 +394,7 @@ class ApplicationAssocMapValueSpecification:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ArrayValueSpecification:
     """
     Specifies the values for an array.
@@ -478,7 +478,7 @@ class ArrayValueSpecification:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Elements:
         application_assoc_map_value_specification: list[
             ApplicationAssocMapValueSpecification
@@ -594,7 +594,7 @@ class ArrayValueSpecification:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompositeRuleBasedValueSpecification:
     """
     This meta-class represents rule based values for DataPrototypes typed
@@ -686,7 +686,7 @@ class CompositeRuleBasedValueSpecification:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Arguments:
         application_assoc_map_value_specification: list[
             ApplicationAssocMapValueSpecification
@@ -716,7 +716,7 @@ class CompositeRuleBasedValueSpecification:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RecordValueSpecification:
     """
     Specifies the values for a record.
@@ -790,7 +790,7 @@ class RecordValueSpecification:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Fields:
         application_assoc_map_value_specification: list[
             ApplicationAssocMapValueSpecification

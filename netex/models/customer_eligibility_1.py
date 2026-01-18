@@ -9,7 +9,7 @@ from .customer_eligibility_versioned_child_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerEligibility1(CustomerEligibilityVersionedChildStructure):
     class Meta:
         name = "CustomerEligibility"

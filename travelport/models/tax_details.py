@@ -7,7 +7,7 @@ from travelport.models.tax_2 import Tax2
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"

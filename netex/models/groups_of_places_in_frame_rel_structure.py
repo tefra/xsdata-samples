@@ -9,7 +9,7 @@ from .group_of_places import GroupOfPlaces
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupsOfPlacesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "groupsOfPlacesInFrame_RelStructure"

@@ -7,7 +7,7 @@ from .display_presentation_enum_simple import DisplayPresentationEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DisplayPresentationEnum:
     """
     This meta-class represents the ability to provide values for
@@ -30,11 +30,10 @@ class DisplayPresentationEnum:
     class Meta:
         name = "DISPLAY-PRESENTATION-ENUM"
 
-    value: None | DisplayPresentationEnumSimple = field(
-        default=None,
+    value: DisplayPresentationEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

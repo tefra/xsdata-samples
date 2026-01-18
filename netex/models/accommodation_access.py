@@ -7,14 +7,13 @@ from .accommodation_access_enumeration import AccommodationAccessEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccommodationAccess:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: None | AccommodationAccessEnumeration = field(
-        default=None,
+    value: AccommodationAccessEnumeration = field(
         metadata={
             "required": True,
-        },
+        }
     )

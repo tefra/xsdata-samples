@@ -9,7 +9,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.core_types
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UoMtimeCodeType(CodeType):
     """
     A codelist restricting a unit of measure for a time value.

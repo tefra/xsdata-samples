@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecOcJobMapping:
     """
     This meta-class allows to map a SecOcJobRequirement to a concrete
@@ -90,14 +90,13 @@ class SecOcJobMapping:
     class Meta:
         name = "SEC-OC-JOB-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SecOcJobMapping.ShortNameFragments = field(
         default=None,
@@ -188,7 +187,7 @@ class SecOcJobMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -199,7 +198,7 @@ class SecOcJobMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -210,13 +209,12 @@ class SecOcJobMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecOcJobRequirementRef(Ref):
-        dest: None | SecOcJobRequirementSubtypesEnum = field(
-            default=None,
+        dest: SecOcJobRequirementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

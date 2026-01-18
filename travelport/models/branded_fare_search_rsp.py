@@ -8,7 +8,7 @@ from travelport.models.fare_family import FareFamily
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BrandedFareSearchRsp(BaseRsp1):
     """
     Branded Fare search response.
@@ -26,11 +26,10 @@ class BrandedFareSearchRsp(BaseRsp1):
             "max_occurs": 999,
         },
     )
-    more_results: None | bool = field(
-        default=None,
+    more_results: bool = field(
         metadata={
             "name": "MoreResults",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

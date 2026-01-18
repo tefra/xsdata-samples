@@ -13,7 +13,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourceType(BaseSystemTraceabilityType):
     """
     <description xmlns="">The specification of the source country, locale,

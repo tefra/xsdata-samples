@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RptComponent:
     """
     Description of component instance for which rapid prototyping support
@@ -95,14 +95,13 @@ class RptComponent:
     class Meta:
         name = "RPT-COMPONENT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | RptComponent.ShortNameFragments = field(
         default=None,
@@ -215,7 +214,7 @@ class RptComponent:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -226,7 +225,7 @@ class RptComponent:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -237,7 +236,7 @@ class RptComponent:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McDataAssignments:
         role_based_mc_data_assignment: list[RoleBasedMcDataAssignment] = field(
             default_factory=list,
@@ -248,7 +247,7 @@ class RptComponent:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RptExecutableEntitys:
         rpt_executable_entity: list[RptExecutableEntity] = field(
             default_factory=list,

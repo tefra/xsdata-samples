@@ -12,7 +12,7 @@ from .reselling_version_structure import ResellingVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RefundingVersionStructure(ResellingVersionStructure):
     class Meta:
         name = "Refunding_VersionStructure"

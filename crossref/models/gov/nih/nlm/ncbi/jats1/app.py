@@ -51,7 +51,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class App:
     """
     <div> <h3>Appendix</h3> </div>.
@@ -72,14 +72,12 @@ class App:
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     title: list[Title] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
             "max_occurs": 2,
             "sequence": 1,
         },

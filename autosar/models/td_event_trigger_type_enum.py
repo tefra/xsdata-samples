@@ -7,7 +7,7 @@ from .td_event_trigger_type_enum_simple import TdEventTriggerTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventTriggerTypeEnum:
     """
     This is used to describe the specific event type of a TDEventTrigger.
@@ -28,11 +28,10 @@ class TdEventTriggerTypeEnum:
     class Meta:
         name = "TD-EVENT-TRIGGER-TYPE-ENUM"
 
-    value: None | TdEventTriggerTypeEnumSimple = field(
-        default=None,
+    value: TdEventTriggerTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

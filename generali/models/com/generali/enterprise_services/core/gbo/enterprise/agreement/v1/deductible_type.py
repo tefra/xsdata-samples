@@ -26,7 +26,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeductibleType(BaseIdentifiedComponentType):
     value: None | ValueType = field(
         default=None,

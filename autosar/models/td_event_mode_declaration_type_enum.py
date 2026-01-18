@@ -9,7 +9,7 @@ from .td_event_mode_declaration_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventModeDeclarationTypeEnum:
     """
     This is used to describe the specific event type of a
@@ -31,11 +31,10 @@ class TdEventModeDeclarationTypeEnum:
     class Meta:
         name = "TD-EVENT-MODE-DECLARATION-TYPE-ENUM"
 
-    value: None | TdEventModeDeclarationTypeEnumSimple = field(
-        default=None,
+    value: TdEventModeDeclarationTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

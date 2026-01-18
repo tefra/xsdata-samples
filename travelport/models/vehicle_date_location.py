@@ -11,7 +11,7 @@ from travelport.models.type_vehicle_vendor_location import (
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleDateLocation:
     """
     Parameters
@@ -52,13 +52,12 @@ class VehicleDateLocation:
             "max_occurs": 999,
         },
     )
-    pickup_date_time: None | str = field(
-        default=None,
+    pickup_date_time: str = field(
         metadata={
             "name": "PickupDateTime",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     pickup_location: None | str = field(
         default=None,
@@ -69,13 +68,12 @@ class VehicleDateLocation:
             "white_space": "collapse",
         },
     )
-    return_date_time: None | str = field(
-        default=None,
+    return_date_time: str = field(
         metadata={
             "name": "ReturnDateTime",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     return_location: None | str = field(
         default=None,
@@ -122,7 +120,7 @@ class VehicleDateLocation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VendorLocation(TypeVehicleVendorLocation):
         distance: None | Distance1 = field(
             default=None,

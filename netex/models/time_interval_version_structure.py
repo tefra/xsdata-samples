@@ -13,7 +13,7 @@ from .time_structure_factors_rel_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeIntervalVersionStructure(FareIntervalVersionStructure):
     class Meta:
         name = "TimeInterval_VersionStructure"

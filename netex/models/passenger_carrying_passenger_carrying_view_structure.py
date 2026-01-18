@@ -9,7 +9,7 @@ from .passenger_capacity import PassengerCapacity
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassengerCarryingPassengerCarryingViewStructure(DerivedViewStructure):
     class Meta:
         name = "PassengerCarryingPassengerCarrying_ViewStructure"

@@ -5,15 +5,14 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CrossmarkDomainExclusive:
     class Meta:
         name = "crossmark_domain_exclusive"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    value: None | bool = field(
-        default=None,
+    value: bool = field(
         metadata={
             "required": True,
-        },
+        }
     )

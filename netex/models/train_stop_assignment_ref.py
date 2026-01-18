@@ -9,7 +9,7 @@ from .train_stop_assignment_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrainStopAssignmentRef(TrainStopAssignmentRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

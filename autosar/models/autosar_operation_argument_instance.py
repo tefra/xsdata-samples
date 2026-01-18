@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AutosarOperationArgumentInstance:
     """
     This class represents a reference to an argument instance.
@@ -93,14 +93,13 @@ class AutosarOperationArgumentInstance:
     class Meta:
         name = "AUTOSAR-OPERATION-ARGUMENT-INSTANCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | AutosarOperationArgumentInstance.ShortNameFragments
@@ -201,7 +200,7 @@ class AutosarOperationArgumentInstance:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -212,7 +211,7 @@ class AutosarOperationArgumentInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

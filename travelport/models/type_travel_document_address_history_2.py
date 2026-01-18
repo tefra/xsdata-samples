@@ -7,7 +7,7 @@ from travelport.models.address_line_2 import AddressLine2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeTravelDocumentAddressHistory2:
     """
     Profile Address.

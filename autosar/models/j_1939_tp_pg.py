@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class J1939TpPg:
     """
     A J1939TpPg represents one J1939 message (parameter group, PG)
@@ -110,18 +110,17 @@ class J1939TpPg:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DirectPduRef(Ref):
-        dest: None | NPduSubtypesEnum = field(
-            default=None,
+        dest: NPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SduRefs:
         sdu_ref: list[J1939TpPg.SduRefs.SduRef] = field(
             default_factory=list,
@@ -132,24 +131,22 @@ class J1939TpPg:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SduRef(Ref):
-            dest: None | IPduSubtypesEnum = field(
-                default=None,
+            dest: IPduSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpSduRef(Ref):
-        dest: None | IPduSubtypesEnum = field(
-            default=None,
+        dest: IPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

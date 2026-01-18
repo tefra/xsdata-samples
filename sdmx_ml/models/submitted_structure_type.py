@@ -7,7 +7,7 @@ from sdmx_ml.models.action_type import ActionType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SubmittedStructureType:
     """
     SubmittedStructureType generally references a submitted structural
@@ -37,15 +37,14 @@ class SubmittedStructureType:
         structure is used in a submit structure response.
     """
 
-    maintainable_object: None | str = field(
-        default=None,
+    maintainable_object: str = field(
         metadata={
             "name": "MaintainableObject",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
             "pattern": r".+\)",
-        },
+        }
     )
     action: None | ActionType = field(
         default=None,

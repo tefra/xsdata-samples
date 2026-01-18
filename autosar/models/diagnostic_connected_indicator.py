@@ -28,7 +28,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticConnectedIndicator:
     """
     Description of indicators that are defined per DiagnosticEvent.
@@ -100,14 +100,13 @@ class DiagnosticConnectedIndicator:
     class Meta:
         name = "DIAGNOSTIC-CONNECTED-INDICATOR"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticConnectedIndicator.ShortNameFragments
@@ -234,7 +233,7 @@ class DiagnosticConnectedIndicator:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -245,7 +244,7 @@ class DiagnosticConnectedIndicator:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -256,24 +255,22 @@ class DiagnosticConnectedIndicator:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class HealingCycleRef(Ref):
-        dest: None | DiagnosticOperationCycleSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticOperationCycleSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IndicatorRef(Ref):
-        dest: None | DiagnosticIndicatorSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticIndicatorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

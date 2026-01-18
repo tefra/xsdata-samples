@@ -7,27 +7,25 @@ from travelport.models.air_pre_pay_req import AirPrePayReq
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirPrePayPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | AirPrePayPortTypeServiceInput.Body = field(
-        default=None,
+    body: AirPrePayPortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        air_pre_pay_req: None | AirPrePayReq = field(
-            default=None,
+        air_pre_pay_req: AirPrePayReq = field(
             metadata={
                 "name": "AirPrePayReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
-            },
+            }
         )

@@ -8,7 +8,7 @@ from .t_catch_event import TCatchEvent
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TBoundaryEvent(TCatchEvent):
     class Meta:
         name = "tBoundaryEvent"
@@ -20,11 +20,10 @@ class TBoundaryEvent(TCatchEvent):
             "type": "Attribute",
         },
     )
-    attached_to_ref: None | QName = field(
-        default=None,
+    attached_to_ref: QName = field(
         metadata={
             "name": "attachedToRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from .modification_enumeration import ModificationEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeltaValueStructure:
     delta_ref: None | str = field(
         default=None,

@@ -10,7 +10,7 @@ from .data_object_service_permission_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataObjectPermissions:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

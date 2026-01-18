@@ -7,7 +7,7 @@ from travelport.models.base_req_5 import BaseReq5
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileRetrieveTemplateReq(BaseReq5):
     """
     Request to retrieve a profile template.
@@ -42,13 +42,12 @@ class ProfileRetrieveTemplateReq(BaseReq5):
             "max_length": 128,
         },
     )
-    id: None | int = field(
-        default=None,
+    id: int = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     version: None | int = field(
         default=None,

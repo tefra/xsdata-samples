@@ -22,7 +22,7 @@ from .tcp_role_enum import TcpRoleEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StaticSocketConnection:
     """
     Definition of static SocketConnection between the Socket that is
@@ -96,14 +96,13 @@ class StaticSocketConnection:
     class Meta:
         name = "STATIC-SOCKET-CONNECTION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | StaticSocketConnection.ShortNameFragments = (
         field(
@@ -218,7 +217,7 @@ class StaticSocketConnection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -229,7 +228,7 @@ class StaticSocketConnection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -240,7 +239,7 @@ class StaticSocketConnection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IPduIdentifiers:
         so_con_i_pdu_identifier_ref_conditional: list[
             SoConIPduIdentifierRefConditional
@@ -253,7 +252,7 @@ class StaticSocketConnection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RemoteAddresss:
         socket_address_ref_conditional: list[SocketAddressRefConditional] = (
             field(

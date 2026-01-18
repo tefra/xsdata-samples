@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from tpdb.models.condition import Condition
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Conditions:
     class Meta:
         name = "conditions"

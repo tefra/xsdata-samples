@@ -7,7 +7,7 @@ from travelport.models.type_payment_card_2 import TypePaymentCard2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeCreditCardType2(TypePaymentCard2):
     """
     Parameters

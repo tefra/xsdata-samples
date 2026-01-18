@@ -7,16 +7,15 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReinsuranceAgreements:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    reinsurance_agreement_id: None | str = field(
-        default=None,
+    reinsurance_agreement_id: str = field(
         metadata={
             "name": "ReinsuranceAgreementID",
             "type": "Element",
             "required": True,
-        },
+        }
     )

@@ -11,7 +11,7 @@ from .time_demand_profile_member import TimeDemandProfileMember
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeDemandProfileMembersRelStructure(
     StrictContainmentAggregationStructure
 ):

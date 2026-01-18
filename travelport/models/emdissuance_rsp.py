@@ -9,7 +9,7 @@ from travelport.models.emdsummary_info import EmdsummaryInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EmdissuanceRsp(BaseRsp1):
     """
     Electronic Miscellaneous Document issuance response.Supported providers

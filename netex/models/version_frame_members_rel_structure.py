@@ -566,7 +566,7 @@ from .zone_projection import ZoneProjection
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "versionFrameMembers_RelStructure"

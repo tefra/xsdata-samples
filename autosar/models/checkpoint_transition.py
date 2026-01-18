@@ -20,7 +20,7 @@ from .supervision_checkpoint_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CheckpointTransition:
     """
     Defines one transition between two checkpoints.
@@ -86,14 +86,13 @@ class CheckpointTransition:
     class Meta:
         name = "CHECKPOINT-TRANSITION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | CheckpointTransition.ShortNameFragments = (
         field(
@@ -192,7 +191,7 @@ class CheckpointTransition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -203,7 +202,7 @@ class CheckpointTransition:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -214,24 +213,22 @@ class CheckpointTransition:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SourceRef(Ref):
-        dest: None | SupervisionCheckpointSubtypesEnum = field(
-            default=None,
+        dest: SupervisionCheckpointSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetRef(Ref):
-        dest: None | SupervisionCheckpointSubtypesEnum = field(
-            default=None,
+        dest: SupervisionCheckpointSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

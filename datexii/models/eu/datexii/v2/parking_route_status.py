@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.parking_route_details_versioned_reference impo
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingRouteStatus:
     """
     The status of a parking route (active/inactive) defined in the static
@@ -22,25 +22,21 @@ class ParkingRouteStatus:
     :ivar parking_route_status_extension:
     """
 
-    parking_route_reference: None | ParkingRouteDetailsVersionedReference = (
-        field(
-            default=None,
-            metadata={
-                "name": "parkingRouteReference",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
-            },
-        )
+    parking_route_reference: ParkingRouteDetailsVersionedReference = field(
+        metadata={
+            "name": "parkingRouteReference",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
+        }
     )
-    parking_route_active: None | bool = field(
-        default=None,
+    parking_route_active: bool = field(
         metadata={
             "name": "parkingRouteActive",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     parking_route_status_extension: None | ExtensionType = field(
         default=None,

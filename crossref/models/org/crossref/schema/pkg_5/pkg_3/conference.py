@@ -21,7 +21,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.proceedings_series_metadata
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Conference:
     """
     Container for all information about a single conference and its
@@ -41,12 +41,11 @@ class Conference:
             "type": "Element",
         },
     )
-    event_metadata: None | EventMetadata = field(
-        default=None,
+    event_metadata: EventMetadata = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     proceedings_series_metadata: None | ProceedingsSeriesMetadata = field(
         default=None,

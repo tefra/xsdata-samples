@@ -11,7 +11,7 @@ from .supervised_entity_checkpoint_needs_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SupervisedEntityCheckpointNeedsRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -69,13 +69,12 @@ class SupervisedEntityCheckpointNeedsRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SupervisedEntityCheckpointNeedsRef(Ref):
-        dest: None | SupervisedEntityCheckpointNeedsSubtypesEnum = field(
-            default=None,
+        dest: SupervisedEntityCheckpointNeedsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

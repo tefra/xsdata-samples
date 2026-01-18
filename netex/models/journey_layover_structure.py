@@ -27,16 +27,15 @@ from .wire_point_ref import WirePointRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
-    layover: None | XmlDuration = field(
-        default=None,
+    layover: XmlDuration = field(
         metadata={
             "name": "Layover",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     choice: (
         None

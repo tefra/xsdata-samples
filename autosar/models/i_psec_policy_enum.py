@@ -7,7 +7,7 @@ from .i_psec_policy_enum_simple import IPsecPolicyEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IPsecPolicyEnum:
     """
     :ivar value:
@@ -26,11 +26,10 @@ class IPsecPolicyEnum:
     class Meta:
         name = "I-PSEC-POLICY-ENUM"
 
-    value: None | IPsecPolicyEnumSimple = field(
-        default=None,
+    value: IPsecPolicyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

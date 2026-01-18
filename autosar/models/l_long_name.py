@@ -12,7 +12,7 @@ from .tt import Tt
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LLongName:
     """
     MixedContentForLongNames in one particular language.
@@ -58,13 +58,12 @@ class LLongName:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    l: None | LEnumSimple = field(
-        default=None,
+    l: LEnumSimple = field(
         metadata={
             "name": "L",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     blueprint_value: None | str = field(
         default=None,
@@ -109,10 +108,10 @@ class LLongName:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sup(Supscript):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Sub(Supscript):
         pass

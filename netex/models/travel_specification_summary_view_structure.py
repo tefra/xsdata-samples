@@ -99,7 +99,7 @@ from .wheelchair_vehicle_ref import WheelchairVehicleRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelSpecificationSummaryViewStructure:
     origin: None | TravelSpecificationSummaryEndpointStructure = field(
         default=None,

@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersistencyDeploymentToDltLogChannelMapping:
     """
     This meta-class represents the ability to define a mapping between the
@@ -91,14 +91,13 @@ class PersistencyDeploymentToDltLogChannelMapping:
     class Meta:
         name = "PERSISTENCY-DEPLOYMENT-TO-DLT-LOG-CHANNEL-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | PersistencyDeploymentToDltLogChannelMapping.ShortNameFragments
@@ -212,7 +211,7 @@ class PersistencyDeploymentToDltLogChannelMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -223,7 +222,7 @@ class PersistencyDeploymentToDltLogChannelMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -234,24 +233,22 @@ class PersistencyDeploymentToDltLogChannelMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DltLogChannelRef(Ref):
-        dest: None | DltLogChannelSubtypesEnum = field(
-            default=None,
+        dest: DltLogChannelSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PersistencyDeploymentRef(Ref):
-        dest: None | PersistencyDeploymentSubtypesEnum = field(
-            default=None,
+        dest: PersistencyDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

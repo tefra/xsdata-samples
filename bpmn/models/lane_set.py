@@ -7,7 +7,7 @@ from .t_lane import TLaneSet
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LaneSet(TLaneSet):
     class Meta:
         name = "laneSet"

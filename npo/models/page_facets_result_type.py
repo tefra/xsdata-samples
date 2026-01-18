@@ -14,7 +14,7 @@ from npo.models.term_facet_result_item_type import TermFacetResultItemType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PageFacetsResultType:
     class Meta:
         name = "pageFacetsResultType"

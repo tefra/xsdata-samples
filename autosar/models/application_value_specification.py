@@ -10,7 +10,7 @@ from .sw_value_cont import SwValueCont
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationValueSpecification:
     """
     This meta-class represents values for DataPrototypes typed by
@@ -107,7 +107,7 @@ class ApplicationValueSpecification:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwAxisConts:
         sw_axis_cont: list[SwAxisCont] = field(
             default_factory=list,

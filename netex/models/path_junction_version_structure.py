@@ -16,7 +16,7 @@ from .zone_ref_structure import ZoneRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PathJunctionVersionStructure(PointVersionStructure):
     class Meta:
         name = "PathJunction_VersionStructure"

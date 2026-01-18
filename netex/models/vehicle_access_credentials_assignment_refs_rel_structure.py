@@ -10,21 +10,18 @@ from .vehicle_access_credentials_assignment_ref import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleAccessCredentialsAssignmentRefsRelStructure(
     OneToManyRelationshipStructure
 ):
     class Meta:
         name = "vehicleAccessCredentialsAssignmentRefs_RelStructure"
 
-    vehicle_access_credentials_assignment_ref: (
-        None | VehicleAccessCredentialsAssignmentRef
-    ) = field(
-        default=None,
+    vehicle_access_credentials_assignment_ref: VehicleAccessCredentialsAssignmentRef = field(
         metadata={
             "name": "VehicleAccessCredentialsAssignmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

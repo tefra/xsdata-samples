@@ -12,7 +12,7 @@ from .vehicle_mode import VehicleMode
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyTimingVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "JourneyTiming_VersionedChildStructure"

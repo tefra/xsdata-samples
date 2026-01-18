@@ -7,7 +7,7 @@ from travelport.models.type_distance import TypeDistance
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeRateInfo:
     """
     Additional information for extra days or hours.

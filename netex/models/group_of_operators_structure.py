@@ -12,7 +12,7 @@ from .transport_organisation_refs_rel_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupOfOperatorsStructure(GroupOfEntitiesVersionStructure):
     use_to_exclude: None | bool = field(
         default=None,

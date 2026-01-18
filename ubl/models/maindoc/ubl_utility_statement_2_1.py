@@ -36,7 +36,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UtilityStatementType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -78,14 +78,13 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     copy_indicator: None | CopyIndicator = field(
         default=None,
@@ -103,14 +102,13 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -120,14 +118,13 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    utility_statement_type_code: None | UtilityStatementTypeCode = field(
-        default=None,
+    utility_statement_type_code: UtilityStatementTypeCode = field(
         metadata={
             "name": "UtilityStatementTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     note: tuple[Note, ...] = field(
         default_factory=tuple,
@@ -137,14 +134,13 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_currency_code: None | DocumentCurrencyCode = field(
-        default=None,
+    document_currency_code: DocumentCurrencyCode = field(
         metadata={
             "name": "DocumentCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     accounting_cost_code: None | AccountingCostCode = field(
         default=None,
@@ -162,14 +158,13 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    parent_document_reference: None | ParentDocumentReference = field(
-        default=None,
+    parent_document_reference: ParentDocumentReference = field(
         metadata={
             "name": "ParentDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     additional_document_reference: tuple[AdditionalDocumentReference, ...] = (
         field(
@@ -189,23 +184,21 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sender_party: None | SenderParty = field(
-        default=None,
+    sender_party: SenderParty = field(
         metadata={
             "name": "SenderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    receiver_party: None | ReceiverParty = field(
-        default=None,
+    receiver_party: ReceiverParty = field(
         metadata={
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     customer_party: None | CustomerParty = field(
         default=None,
@@ -241,7 +234,7 @@ class UtilityStatementType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UtilityStatement(UtilityStatementType):
     class Meta:
         namespace = (

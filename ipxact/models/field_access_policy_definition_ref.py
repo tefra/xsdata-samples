@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FieldAccessPolicyDefinitionRef:
     """
     Indicates the accessibility of the data in the field.
@@ -21,11 +21,10 @@ class FieldAccessPolicyDefinitionRef:
             "required": True,
         },
     )
-    type_definitions: None | str = field(
-        default=None,
+    type_definitions: str = field(
         metadata={
             "name": "typeDefinitions",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

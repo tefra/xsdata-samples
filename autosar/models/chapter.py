@@ -37,7 +37,7 @@ from .traceable_table import TraceableTable
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Chapter:
     """
     This meta-class represents a chapter of a document.
@@ -180,14 +180,13 @@ class Chapter:
     class Meta:
         name = "CHAPTER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | Chapter.ShortNameFragments = field(
         default=None,
@@ -465,7 +464,7 @@ class Chapter:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -476,7 +475,7 @@ class Chapter:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -488,7 +487,7 @@ class Chapter:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MsrQueryResultChapter:
     """
     This metaclass represents the result of an msrquery which is a set of
@@ -535,7 +534,7 @@ class MsrQueryResultChapter:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MsrQueryChapter:
     """
     This meta-class represents the ability to express a query which yields

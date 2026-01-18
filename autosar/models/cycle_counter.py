@@ -7,7 +7,7 @@ from .integer import Integer
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CycleCounter:
     """
     The communication cycle where the frame is send is described by the

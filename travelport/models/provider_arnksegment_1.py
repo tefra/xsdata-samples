@@ -10,7 +10,7 @@ from travelport.models.type_segment_ref_1 import TypeSegmentRef1
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProviderArnksegment1:
     """
     Represents host ARNK segments.
@@ -68,7 +68,7 @@ class ProviderArnksegment1:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PreviousSegment:
         """
         Parameters
@@ -112,7 +112,7 @@ class ProviderArnksegment1:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NextSegment:
         """
         Parameters

@@ -10,7 +10,7 @@ from .positive_integer import PositiveInteger
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersistencyRedundancyMOutOfN:
     """
     This meta-class provides the ability to describe redundancy via an "M

@@ -9,7 +9,7 @@ from sdmx_ml.models.queryable_data_source_type_2 import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataSourceType:
     """
     DataSourceType specifies the properties of a data or metadata source.

@@ -20,7 +20,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AircraftType(VehicleType):
     crew_seat_count: None | NumberType = field(
         default=None,

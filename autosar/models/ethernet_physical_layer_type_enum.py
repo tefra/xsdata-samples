@@ -9,7 +9,7 @@ from .ethernet_physical_layer_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthernetPhysicalLayerTypeEnum:
     """
     Specifies physical layer types of Ethernet transceiver links.
@@ -30,11 +30,10 @@ class EthernetPhysicalLayerTypeEnum:
     class Meta:
         name = "ETHERNET-PHYSICAL-LAYER-TYPE-ENUM"
 
-    value: None | EthernetPhysicalLayerTypeEnumSimple = field(
-        default=None,
+    value: EthernetPhysicalLayerTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

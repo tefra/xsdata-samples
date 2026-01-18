@@ -19,7 +19,7 @@ from .ucm_description_subtypes_enum import UcmDescriptionSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UcmStep:
     """
     This meta-class represents the ability to define a rollout-condition
@@ -87,14 +87,13 @@ class UcmStep:
     class Meta:
         name = "UCM-STEP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | UcmStep.ShortNameFragments = field(
         default=None,
@@ -191,7 +190,7 @@ class UcmStep:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -202,7 +201,7 @@ class UcmStep:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -213,7 +212,7 @@ class UcmStep:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SoftwarePackageSteps:
         software_package_step: list[SoftwarePackageStep] = field(
             default_factory=list,
@@ -224,13 +223,12 @@ class UcmStep:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UcmRef(Ref):
-        dest: None | UcmDescriptionSubtypesEnum = field(
-            default=None,
+        dest: UcmDescriptionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -9,7 +9,7 @@ from .response_structure import ResponseStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConsumerResponseEndpointStructure(ResponseStructure):
     consumer_ref: None | ParticipantRefStructure = field(
         default=None,

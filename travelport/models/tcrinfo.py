@@ -9,7 +9,7 @@ from travelport.models.type_tcrstatus import TypeTcrstatus
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Tcrinfo:
     """
     Parameters
@@ -26,13 +26,12 @@ class Tcrinfo:
         name = "TCRInfo"
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    status: None | TypeTcrstatus = field(
-        default=None,
+    status: TypeTcrstatus = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     date: None | XmlDateTime = field(
         default=None,
@@ -41,19 +40,17 @@ class Tcrinfo:
             "type": "Attribute",
         },
     )
-    tcrnumber: None | str = field(
-        default=None,
+    tcrnumber: str = field(
         metadata={
             "name": "TCRNumber",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    provider_reservation_info_ref: None | str = field(
-        default=None,
+    provider_reservation_info_ref: str = field(
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

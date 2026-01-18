@@ -21,7 +21,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.institution_place import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Institution:
     """
     Container element for information about an institution or organization
@@ -36,14 +36,12 @@ class Institution:
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     institution_id: list[InstitutionId] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
             "sequence": 1,
         },
     )

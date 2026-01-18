@@ -10,7 +10,7 @@ from .individual_traveller_ref import IndividualTravellerRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndividualTravellersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "individualTravellers_RelStructure"

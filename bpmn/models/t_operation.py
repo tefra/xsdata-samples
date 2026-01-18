@@ -8,19 +8,18 @@ from .t_base_element import TBaseElement
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TOperation(TBaseElement):
     class Meta:
         name = "tOperation"
 
-    in_message_ref: None | QName = field(
-        default=None,
+    in_message_ref: QName = field(
         metadata={
             "name": "inMessageRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "required": True,
-        },
+        }
     )
     out_message_ref: None | QName = field(
         default=None,
@@ -38,12 +37,11 @@ class TOperation(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     implementation_ref: None | QName = field(
         default=None,

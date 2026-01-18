@@ -10,7 +10,7 @@ from .rule_based_value_cont import RuleBasedValueCont
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationRuleBasedValueSpecification:
     """
     This meta-class represents rule based values for DataPrototypes typed
@@ -104,7 +104,7 @@ class ApplicationRuleBasedValueSpecification:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwAxisConts:
         rule_based_axis_cont: list[RuleBasedAxisCont] = field(
             default_factory=list,

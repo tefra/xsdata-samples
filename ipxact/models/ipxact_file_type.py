@@ -10,7 +10,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IpxactFileType:
     """
     :ivar vlnv: VLNV of the IP-XACT file being cataloged.
@@ -23,21 +23,19 @@ class IpxactFileType:
     class Meta:
         name = "ipxactFileType"
 
-    vlnv: None | LibraryRefType = field(
-        default=None,
+    vlnv: LibraryRefType = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
-    name: None | IpxactUri = field(
-        default=None,
+    name: IpxactUri = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     description: None | Description = field(
         default=None,

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelBedding:
     """
     Specify desired bedding.
@@ -26,14 +26,13 @@ class HotelBedding:
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        },
+        }
     )
     number_of_beds: None | int = field(
         default=None,

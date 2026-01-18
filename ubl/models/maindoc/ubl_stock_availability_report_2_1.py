@@ -31,7 +31,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class StockAvailabilityReportType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -73,14 +73,13 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     copy_indicator: None | CopyIndicator = field(
         default=None,
@@ -98,14 +97,13 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -155,14 +153,13 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: None | SellerSupplierParty = field(
-        default=None,
+    seller_supplier_party: SellerSupplierParty = field(
         metadata={
             "name": "SellerSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     retailer_customer_party: None | RetailerCustomerParty = field(
         default=None,
@@ -172,14 +169,13 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    inventory_reporting_party: None | InventoryReportingParty = field(
-        default=None,
+    inventory_reporting_party: InventoryReportingParty = field(
         metadata={
             "name": "InventoryReportingParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     stock_availability_report_line: tuple[StockAvailabilityReportLine, ...] = (
         field(
@@ -194,7 +190,7 @@ class StockAvailabilityReportType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class StockAvailabilityReport(StockAvailabilityReportType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:StockAvailabilityReport-2"

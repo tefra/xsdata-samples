@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.polygon_area_index_point_coordinates import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PolygonArea:
     """
     defines points for a closed polygon-shape describing the area.

@@ -12,7 +12,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.email_address import (
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Depositor:
     """
     Information about the organization submitting DOI metadata to Crossref.
@@ -22,17 +22,15 @@ class Depositor:
         name = "depositor"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    depositor_name: None | DepositorName = field(
-        default=None,
+    depositor_name: DepositorName = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    email_address: None | EmailAddress = field(
-        default=None,
+    email_address: EmailAddress = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )

@@ -7,14 +7,13 @@ from .boarding_permission_enumeration import BoardingPermissionEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BoardingPermission:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: None | BoardingPermissionEnumeration = field(
-        default=None,
+    value: BoardingPermissionEnumeration = field(
         metadata={
             "required": True,
-        },
+        }
     )

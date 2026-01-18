@@ -12,7 +12,7 @@ from .vehicle_sharing_parking_area_ref import VehicleSharingParkingAreaRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingAreaRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "parkingAreaRefs_RelStructure"

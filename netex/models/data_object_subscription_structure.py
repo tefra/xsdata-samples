@@ -12,16 +12,15 @@ from .network_frame_subscription_policy_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataObjectSubscriptionStructure(AbstractSubscriptionStructure):
-    data_object_request: None | DataObjectRequest = field(
-        default=None,
+    data_object_request: DataObjectRequest = field(
         metadata={
             "name": "DataObjectRequest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     subscription_policy: None | NetworkFrameSubscriptionPolicyStructure = (
         field(

@@ -13,7 +13,7 @@ from travelport.models.ticket_number_1 import TicketNumber1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EmdissuanceReq(BaseReq1):
     """
     Electronic Miscellaneous Document issuance request.Supported providers
@@ -46,14 +46,13 @@ class EmdissuanceReq(BaseReq1):
         name = "EMDIssuanceReq"
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    provider_reservation_detail: None | ProviderReservationDetail1 = field(
-        default=None,
+    provider_reservation_detail: ProviderReservationDetail1 = field(
         metadata={
             "name": "ProviderReservationDetail",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        },
+        }
     )
     ticket_number: None | TicketNumber1 = field(
         default=None,
@@ -77,15 +76,14 @@ class EmdissuanceReq(BaseReq1):
             "type": "Element",
         },
     )
-    universal_record_locator_code: None | str = field(
-        default=None,
+    universal_record_locator_code: str = field(
         metadata={
             "name": "UniversalRecordLocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
     show_details: bool = field(
         default=False,

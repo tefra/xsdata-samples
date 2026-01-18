@@ -7,7 +7,7 @@ from .t_inclusive_gateway import TInclusiveGateway
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InclusiveGateway(TInclusiveGateway):
     class Meta:
         name = "inclusiveGateway"

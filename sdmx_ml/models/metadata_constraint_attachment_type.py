@@ -10,7 +10,7 @@ from sdmx_ml.models.queryable_data_source_type_1 import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataConstraintAttachmentType:
     """
     MetadataConstraintAttachmentType restricts the base
@@ -92,61 +92,55 @@ class MetadataConstraintAttachmentType:
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class MetadataProvider:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.base\.MetadataProvider=.+:METADATA_PROVIDERS\(.+\).+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class MetadataSet:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.metadatastructure\.MetadataSet=.+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class SimpleDataSource:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class MetadataStructure:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.metadatastructure\.MetadataStructure=.+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Metadataflow:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.metadatastructure\.Metadataflow=.+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class MetadataProvisionAgreement:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.registry\.MetadataProvisionAgreement=.+",
-            },
+            }
         )

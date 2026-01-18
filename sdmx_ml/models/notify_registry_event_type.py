@@ -12,7 +12,7 @@ from sdmx_ml.models.structural_event_type import StructuralEventType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class NotifyRegistryEventType:
     """
     NotifyRegistryEventType describes the structure a registry
@@ -38,14 +38,13 @@ class NotifyRegistryEventType:
     :ivar structural_event_or_registration_event:
     """
 
-    event_time: None | XmlDateTime = field(
-        default=None,
+    event_time: XmlDateTime = field(
         metadata={
             "name": "EventTime",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )
     object_urn_or_registration_id: (
         None
@@ -71,23 +70,21 @@ class NotifyRegistryEventType:
             ),
         },
     )
-    subscription_urn: None | str = field(
-        default=None,
+    subscription_urn: str = field(
         metadata={
             "name": "SubscriptionURN",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )
-    event_action: None | ActionType = field(
-        default=None,
+    event_action: ActionType = field(
         metadata={
             "name": "EventAction",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )
     structural_event_or_registration_event: (
         None | StructuralEventType | RegistrationEventType
@@ -110,21 +107,19 @@ class NotifyRegistryEventType:
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class ObjectUrn:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class RegistrationId:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )

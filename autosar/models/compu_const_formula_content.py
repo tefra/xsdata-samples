@@ -7,7 +7,7 @@ from .numerical_value_variation_point import NumericalValueVariationPoint
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompuConstFormulaContent:
     """
     This meta-class represents the fact that the constant value of the

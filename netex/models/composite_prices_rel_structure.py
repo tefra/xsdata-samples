@@ -51,7 +51,7 @@ from .validable_element_price_ref import ValidableElementPriceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompositePricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "compositePrices_RelStructure"

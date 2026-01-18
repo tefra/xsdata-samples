@@ -7,7 +7,7 @@ from .api_principle_enum_simple import ApiPrincipleEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApiPrincipleEnum:
     """
     This enumeration represents the ability to control the granularity of
@@ -29,11 +29,10 @@ class ApiPrincipleEnum:
     class Meta:
         name = "API-PRINCIPLE-ENUM"
 
-    value: None | ApiPrincipleEnumSimple = field(
-        default=None,
+    value: ApiPrincipleEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

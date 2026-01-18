@@ -9,7 +9,7 @@ from sdmx_ml.models.metadata_attribute_usage import MetadataAttributeUsage
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AttributeListType(AttributeListBaseType):
     """
     AttributeListType describes the attribute descriptor for the data

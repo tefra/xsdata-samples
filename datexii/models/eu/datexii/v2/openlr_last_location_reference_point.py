@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.openlr_base_location_reference_point import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenlrLastLocationReferencePoint(OpenlrBaseLocationReferencePoint):
     """
     The sequence of location reference points is terminated by a last

@@ -19,7 +19,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DesignConfiguration:
     """
     Top level element for describing the current configuration of a design.
@@ -56,33 +56,29 @@ class DesignConfiguration:
         name = "designConfiguration"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    vendor: None | str = field(
-        default=None,
+    vendor: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    library: None | str = field(
-        default=None,
+    library: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     display_name: None | str = field(
         default=None,
@@ -167,7 +163,7 @@ class DesignConfiguration:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InterconnectionConfiguration:
         """
         :ivar interconnection_ref: Reference to the interconnection
@@ -183,13 +179,12 @@ class DesignConfiguration:
         :ivar id:
         """
 
-        interconnection_ref: None | str = field(
-            default=None,
+        interconnection_ref: str = field(
             metadata={
                 "name": "interconnectionRef",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         abstractor_instances: list[
             DesignConfiguration.InterconnectionConfiguration.AbstractorInstances
@@ -216,7 +211,7 @@ class DesignConfiguration:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AbstractorInstances:
             """
             :ivar interface_ref: Defines the broadcast endpoint to which
@@ -263,7 +258,7 @@ class DesignConfiguration:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class InterfaceRef:
                 """
                 :ivar vendor_extensions:
@@ -281,21 +276,19 @@ class DesignConfiguration:
                         "type": "Element",
                     },
                 )
-                component_ref: None | str = field(
-                    default=None,
+                component_ref: str = field(
                     metadata={
                         "name": "componentRef",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
-                bus_ref: None | str = field(
-                    default=None,
+                bus_ref: str = field(
                     metadata={
                         "name": "busRef",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
                 id: None | str = field(
                     default=None,
@@ -305,7 +298,7 @@ class DesignConfiguration:
                     },
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class AbstractorInstance:
                 """
                 :ivar instance_name: Instance name for the abstractor
@@ -318,13 +311,12 @@ class DesignConfiguration:
                 :ivar id:
                 """
 
-                instance_name: None | str = field(
-                    default=None,
+                instance_name: str = field(
                     metadata={
                         "name": "instanceName",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 display_name: None | DisplayName = field(
                     default=None,
@@ -346,21 +338,19 @@ class DesignConfiguration:
                         "type": "Element",
                     },
                 )
-                abstractor_ref: None | ConfigurableLibraryRefType = field(
-                    default=None,
+                abstractor_ref: ConfigurableLibraryRefType = field(
                     metadata={
                         "name": "abstractorRef",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
-                view_name: None | str = field(
-                    default=None,
+                view_name: str = field(
                     metadata={
                         "name": "viewName",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 id: None | str = field(
                     default=None,
@@ -370,7 +360,7 @@ class DesignConfiguration:
                     },
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ViewConfiguration:
         """
         :ivar instance_name:
@@ -379,20 +369,18 @@ class DesignConfiguration:
         :ivar id:
         """
 
-        instance_name: None | InstanceName = field(
-            default=None,
+        instance_name: InstanceName = field(
             metadata={
                 "name": "instanceName",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
-        view: None | DesignConfiguration.ViewConfiguration.View = field(
-            default=None,
+        view: DesignConfiguration.ViewConfiguration.View = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         vendor_extensions: None | VendorExtensions = field(
             default=None,
@@ -409,7 +397,7 @@ class DesignConfiguration:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class View:
             """
             :ivar configurable_element_values: Parameter values to set
@@ -426,11 +414,10 @@ class DesignConfiguration:
                     },
                 )
             )
-            view_ref: None | str = field(
-                default=None,
+            view_ref: str = field(
                 metadata={
                     "name": "viewRef",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

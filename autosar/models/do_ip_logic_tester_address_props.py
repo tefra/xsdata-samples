@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DoIpLogicTesterAddressProps:
     """
     This meta-class acts as a target for references to the
@@ -87,14 +87,13 @@ class DoIpLogicTesterAddressProps:
     class Meta:
         name = "DO-IP-LOGIC-TESTER-ADDRESS-PROPS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DoIpLogicTesterAddressProps.ShortNameFragments
@@ -187,7 +186,7 @@ class DoIpLogicTesterAddressProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -198,7 +197,7 @@ class DoIpLogicTesterAddressProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -209,7 +208,7 @@ class DoIpLogicTesterAddressProps:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DoIpTesterRoutingActivationRefs:
         do_ip_tester_routing_activation_ref: list[
             DoIpLogicTesterAddressProps.DoIpTesterRoutingActivationRefs.DoIpTesterRoutingActivationRef
@@ -222,13 +221,12 @@ class DoIpLogicTesterAddressProps:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DoIpTesterRoutingActivationRef(Ref):
-            dest: None | DoIpRoutingActivationSubtypesEnum = field(
-                default=None,
+            dest: DoIpRoutingActivationSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

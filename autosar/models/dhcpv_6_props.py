@@ -7,7 +7,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Dhcpv6Props:
     """
     This meta-class specifies the configuration options for DHCPv6.

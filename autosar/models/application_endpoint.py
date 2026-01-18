@@ -35,7 +35,7 @@ from .udp_tp import UdpTp
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationEndpoint:
     """
     An application endpoint is the endpoint on an Ecu in terms of
@@ -119,14 +119,13 @@ class ApplicationEndpoint:
     class Meta:
         name = "APPLICATION-ENDPOINT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ApplicationEndpoint.ShortNameFragments = (
         field(
@@ -299,7 +298,7 @@ class ApplicationEndpoint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -310,7 +309,7 @@ class ApplicationEndpoint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -321,7 +320,7 @@ class ApplicationEndpoint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConsumedServiceInstances:
         consumed_service_instance: list[ConsumedServiceInstance] = field(
             default_factory=list,
@@ -332,18 +331,17 @@ class ApplicationEndpoint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NetworkEndpointRef(Ref):
-        dest: None | NetworkEndpointSubtypesEnum = field(
-            default=None,
+        dest: NetworkEndpointSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvidedServiceInstances:
         provided_service_instance: list[ProvidedServiceInstance] = field(
             default_factory=list,
@@ -354,29 +352,27 @@ class ApplicationEndpoint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SerializationTechnologyRef(Ref):
-        dest: None | SerializationTechnologySubtypesEnum = field(
-            default=None,
+        dest: SerializationTechnologySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TlsCryptoMappingRef(Ref):
-        dest: None | TlsCryptoServiceMappingSubtypesEnum = field(
-            default=None,
+        dest: TlsCryptoServiceMappingSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpConfiguration:
         generic_tp: None | GenericTp = field(
             default=None,

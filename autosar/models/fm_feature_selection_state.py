@@ -7,7 +7,7 @@ from .fm_feature_selection_state_simple import FmFeatureSelectionStateSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FmFeatureSelectionState:
     """
     Defines how a particular FMFeature contributes to a FMFSelectionSet.
@@ -28,11 +28,10 @@ class FmFeatureSelectionState:
     class Meta:
         name = "FM-FEATURE-SELECTION-STATE"
 
-    value: None | FmFeatureSelectionStateSimple = field(
-        default=None,
+    value: FmFeatureSelectionStateSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

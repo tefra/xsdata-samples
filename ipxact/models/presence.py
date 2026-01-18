@@ -7,7 +7,7 @@ from ipxact.models.presence_type import PresenceType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Presence:
     """
     If this element is present, the existance of the port is controlled by

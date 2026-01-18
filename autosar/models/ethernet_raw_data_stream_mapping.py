@@ -31,7 +31,7 @@ from .tls_secure_com_props import TlsSecureComProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthernetRawDataStreamMapping:
     """
     This meta-class represents the ability to map a PortPrototype to a
@@ -116,14 +116,13 @@ class EthernetRawDataStreamMapping:
     class Meta:
         name = "ETHERNET-RAW-DATA-STREAM-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | EthernetRawDataStreamMapping.ShortNameFragments
@@ -288,7 +287,7 @@ class EthernetRawDataStreamMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -299,7 +298,7 @@ class EthernetRawDataStreamMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -310,40 +309,37 @@ class EthernetRawDataStreamMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DeploymentRef(Ref):
-        dest: None | RawDataStreamDeploymentSubtypesEnum = field(
-            default=None,
+        dest: RawDataStreamDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProcessRef(Ref):
-        dest: None | ProcessSubtypesEnum = field(
-            default=None,
+        dest: ProcessSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommunicationConnectorRef(Ref):
-        dest: None | EthernetCommunicationConnectorSubtypesEnum = field(
-            default=None,
+        dest: EthernetCommunicationConnectorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SocketOptions:
         """
         :ivar socket_option: This attribute represents the ability to

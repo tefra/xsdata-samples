@@ -8,7 +8,7 @@ from .symbol_string import SymbolString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BinaryManifestItemPointerValue:
     """
     This meta-class has the ability to provide a value for a pointer in the

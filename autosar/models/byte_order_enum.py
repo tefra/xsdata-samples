@@ -7,7 +7,7 @@ from .byte_order_enum_simple import ByteOrderEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ByteOrderEnum:
     """
     When more than one byte is stored in the memory the order of those
@@ -34,11 +34,10 @@ class ByteOrderEnum:
     class Meta:
         name = "BYTE-ORDER-ENUM"
 
-    value: None | ByteOrderEnumSimple = field(
-        default=None,
+    value: ByteOrderEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

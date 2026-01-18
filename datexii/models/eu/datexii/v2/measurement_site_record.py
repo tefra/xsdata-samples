@@ -18,7 +18,7 @@ from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MeasurementSiteRecord:
     """
     An identifiable single measurement site entry/record in the Measurement
@@ -131,14 +131,13 @@ class MeasurementSiteRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_site_location: None | GroupOfLocations = field(
-        default=None,
+    measurement_site_location: GroupOfLocations = field(
         metadata={
             "name": "measurementSiteLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     measurement_site_record_extension: None | ExtensionType = field(
         default=None,
@@ -148,17 +147,15 @@ class MeasurementSiteRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from .mode_of_operation_value_structure import ModeOfOperationValueStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModeOfOperation1(ModeOfOperationValueStructure):
     class Meta:
         name = "ModeOfOperation"

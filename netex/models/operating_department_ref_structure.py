@@ -7,6 +7,6 @@ from .department_ref_structure import DepartmentRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OperatingDepartmentRefStructure(DepartmentRefStructure):
     pass

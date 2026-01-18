@@ -13,7 +13,7 @@ from .user_profile_eligibility import UserProfileEligibility
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "customerEligibilities_RelStructure"

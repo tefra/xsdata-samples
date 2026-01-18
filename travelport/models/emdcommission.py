@@ -8,7 +8,7 @@ from travelport.models.type_adjustment_type import TypeAdjustmentType
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Emdcommission:
     """
     Commission information to be used for EMD issuance.
@@ -31,21 +31,19 @@ class Emdcommission:
         name = "EMDCommission"
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    type_value: None | TypeAdjustmentType = field(
-        default=None,
+    type_value: TypeAdjustmentType = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    value: None | Decimal = field(
-        default=None,
+    value: Decimal = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     currency_code: None | str = field(
         default=None,

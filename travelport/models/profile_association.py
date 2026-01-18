@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileAssociation:
     """
     Profile information associated with SavedTrip.
@@ -21,19 +21,17 @@ class ProfileAssociation:
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
-    traveler_id: None | str = field(
-        default=None,
+    traveler_id: str = field(
         metadata={
             "name": "TravelerID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    booking_traveler_ref: None | str = field(
-        default=None,
+    booking_traveler_ref: str = field(
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -15,7 +15,7 @@ from travelport.models.upsell_brand import UpsellBrand
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Brand:
     """
     Commercially recognized product offered by an airline.

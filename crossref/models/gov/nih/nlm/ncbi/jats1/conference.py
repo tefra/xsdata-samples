@@ -19,7 +19,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Conference:
     """
     <div> <h3>Conference Information</h3> </div>.
@@ -29,13 +29,12 @@ class Conference:
         name = "conference"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    conf_date: None | ConfDate = field(
-        default=None,
+    conf_date: ConfDate = field(
         metadata={
             "name": "conf-date",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     conf_name: list[ConfName] = field(
         default_factory=list,

@@ -38,16 +38,15 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReinsurerInvolvementType(OrganisationInvolvementType):
-    organisation_role: None | InsurerRoleType = field(
-        default=None,
+    organisation_role: InsurerRoleType = field(
         metadata={
             "name": "OrganisationRole",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     policy_identifier: None | Idtype = field(
         default=None,
@@ -57,14 +56,13 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    sequence_number: None | NumericType = field(
-        default=None,
+    sequence_number: NumericType = field(
         metadata={
             "name": "SequenceNumber",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     parent_sequence_number: None | NumericType = field(
         default=None,
@@ -74,32 +72,29 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    risk_share: None | PercentType = field(
-        default=None,
+    risk_share: PercentType = field(
         metadata={
             "name": "RiskShare",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    retained_risk_share: None | PercentType = field(
-        default=None,
+    retained_risk_share: PercentType = field(
         metadata={
             "name": "RetainedRiskShare",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    overrider_percentage: None | PercentType = field(
-        default=None,
+    overrider_percentage: PercentType = field(
         metadata={
             "name": "OverriderPercentage",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     cover_type: None | CoverTypeEnum = field(
         default=None,

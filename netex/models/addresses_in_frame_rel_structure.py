@@ -10,7 +10,7 @@ from .road_address import RoadAddress
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddressesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "addressesInFrame_RelStructure"

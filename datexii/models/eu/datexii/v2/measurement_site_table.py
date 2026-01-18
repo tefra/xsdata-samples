@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.measurement_site_record import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MeasurementSiteTable:
     """
     A Measurement Site Table comprising a number of sets of data, each
@@ -55,17 +55,15 @@ class MeasurementSiteTable:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

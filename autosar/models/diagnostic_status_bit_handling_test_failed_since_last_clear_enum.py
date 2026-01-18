@@ -9,7 +9,7 @@ from .diagnostic_status_bit_handling_test_failed_since_last_clear_enum_simple im
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum:
     """
     Aging and displacement has no impact on the "TestFailedSinceLastClear"
@@ -33,13 +33,12 @@ class DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum:
             "DIAGNOSTIC-STATUS-BIT-HANDLING-TEST-FAILED-SINCE-LAST-CLEAR-ENUM"
         )
 
-    value: (
-        None | DiagnosticStatusBitHandlingTestFailedSinceLastClearEnumSimple
-    ) = field(
-        default=None,
-        metadata={
-            "required": True,
-        },
+    value: DiagnosticStatusBitHandlingTestFailedSinceLastClearEnumSimple = (
+        field(
+            metadata={
+                "required": True,
+            }
+        )
     )
     s: None | str = field(
         default=None,

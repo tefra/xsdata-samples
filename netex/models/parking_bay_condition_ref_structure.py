@@ -7,6 +7,6 @@ from .log_entry_ref_structure import LogEntryRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingBayConditionRefStructure(LogEntryRefStructure):
     pass

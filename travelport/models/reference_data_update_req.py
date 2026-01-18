@@ -12,7 +12,7 @@ from travelport.models.type_reference_data import TypeReferenceData
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceDataUpdateReq(BaseReq1):
     """
     Request to update reference data.
@@ -37,26 +37,24 @@ class ReferenceDataUpdateReq(BaseReq1):
             "max_occurs": 999,
         },
     )
-    action: None | ReferenceDataUpdateReqAction = field(
-        default=None,
+    action: ReferenceDataUpdateReqAction = field(
         metadata={
             "name": "Action",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    type_code: None | str = field(
-        default=None,
+    type_code: str = field(
         metadata={
             "name": "TypeCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Item(TypeReferenceData):
         """
         Parameters

@@ -21,7 +21,7 @@ from ..core.voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030207UvLanguageCommunication:
     class Meta:
         name = "COCT_MT030207UV.LanguageCommunication"
@@ -50,14 +50,13 @@ class CoctMt030207UvLanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: None | Ce = field(
-        default=None,
+    language_code: Ce = field(
         metadata={
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     mode_code: None | Ce = field(
         default=None,
@@ -92,7 +91,7 @@ class CoctMt030207UvLanguageCommunication:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt030207UvPerson:
     class Meta:
         name = "COCT_MT030207UV.Person"

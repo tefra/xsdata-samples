@@ -10,7 +10,7 @@ from .time_unit_ref import TimeUnitRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeUnitsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timeUnits_RelStructure"

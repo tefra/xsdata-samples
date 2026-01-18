@@ -14,15 +14,14 @@ from .network_frame_topic import NetworkFrameTopic
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
-    topics: None | DataObjectRequestStructure.Topics = field(
-        default=None,
+    topics: DataObjectRequestStructure.Topics = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     policy: None | NetworkFrameRequestPolicyStructure = field(
         default=None,
@@ -41,14 +40,13 @@ class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Topics:
-        network_frame_topic: None | NetworkFrameTopic = field(
-            default=None,
+        network_frame_topic: NetworkFrameTopic = field(
             metadata={
                 "name": "NetworkFrameTopic",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
                 "required": True,
-            },
+            }
         )

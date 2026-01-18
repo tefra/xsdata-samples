@@ -11,7 +11,7 @@ from .taxi_stand_ref import TaxiStandRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "quays_RelStructure"

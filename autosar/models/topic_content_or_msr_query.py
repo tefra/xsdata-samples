@@ -22,7 +22,7 @@ from .traceable_table import TraceableTable
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TopicContentOrMsrQuery:
     """
     This meta-class represents a topic or a topic content which is

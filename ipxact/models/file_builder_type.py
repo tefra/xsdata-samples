@@ -9,7 +9,7 @@ from ipxact.models.unsigned_bit_expression import UnsignedBitExpression
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FileBuilderType:
     """
     :ivar file_type:
@@ -29,14 +29,13 @@ class FileBuilderType:
     class Meta:
         name = "fileBuilderType"
 
-    file_type: None | FileType = field(
-        default=None,
+    file_type: FileType = field(
         metadata={
             "name": "fileType",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     command: None | StringExpression = field(
         default=None,

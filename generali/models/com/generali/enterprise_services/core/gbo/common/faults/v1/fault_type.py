@@ -23,7 +23,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FaultType(BaseFaultType):
     """
     <description xmlns="">The fault object used to hold values for an error

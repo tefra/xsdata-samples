@@ -7,7 +7,7 @@ from travelport.models.commission_10 import Commission10
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassiveInfo6:
     """
     Used by CreateReservationReq for passing in elements normally found

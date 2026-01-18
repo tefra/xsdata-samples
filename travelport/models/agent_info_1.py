@@ -11,7 +11,7 @@ from travelport.models.type_profile_info_1 import TypeProfileInfo1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgentInfo1(TypeProfileInfo1):
     """
     Agent specific profile information.
@@ -83,15 +83,14 @@ class AgentInfo1(TypeProfileInfo1):
             "type": "Element",
         },
     )
-    user_name: None | str = field(
-        default=None,
+    user_name: str = field(
         metadata={
             "name": "UserName",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     occupational_title: None | str = field(
         default=None,
@@ -120,15 +119,14 @@ class AgentInfo1(TypeProfileInfo1):
             "max_length": 128,
         },
     )
-    given_name: None | str = field(
-        default=None,
+    given_name: str = field(
         metadata={
             "name": "GivenName",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     other_name: None | str = field(
         default=None,
@@ -139,15 +137,14 @@ class AgentInfo1(TypeProfileInfo1):
             "max_length": 128,
         },
     )
-    surname: None | str = field(
-        default=None,
+    surname: str = field(
         metadata={
             "name": "Surname",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     suffix: None | str = field(
         default=None,

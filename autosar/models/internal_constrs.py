@@ -10,7 +10,7 @@ from .scale_constr import ScaleConstr
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InternalConstrs:
     """
     This meta-class represents the ability to express internal constraints.
@@ -108,7 +108,7 @@ class InternalConstrs:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ScaleConstrs:
         scale_constr: list[ScaleConstr] = field(
             default_factory=list,

@@ -17,7 +17,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricingDeductionType(BaseIdentifiedComponentType):
     deduction_type: None | CodeDescriptionType = field(
         default=None,

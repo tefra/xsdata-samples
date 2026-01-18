@@ -24,7 +24,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinEventTriggeredFrame:
     """
     An event triggered frame is used as a placeholder to allow multiple
@@ -122,14 +122,13 @@ class LinEventTriggeredFrame:
     class Meta:
         name = "LIN-EVENT-TRIGGERED-FRAME"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | LinEventTriggeredFrame.ShortNameFragments = (
         field(
@@ -258,7 +257,7 @@ class LinEventTriggeredFrame:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -269,7 +268,7 @@ class LinEventTriggeredFrame:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -280,7 +279,7 @@ class LinEventTriggeredFrame:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PduToFrameMappings:
         pdu_to_frame_mapping: list[PduToFrameMapping] = field(
             default_factory=list,
@@ -291,18 +290,17 @@ class LinEventTriggeredFrame:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CollisionResolvingScheduleRef(Ref):
-        dest: None | LinScheduleTableSubtypesEnum = field(
-            default=None,
+        dest: LinScheduleTableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LinUnconditionalFrameRefs:
         lin_unconditional_frame_ref: list[
             LinEventTriggeredFrame.LinUnconditionalFrameRefs.LinUnconditionalFrameRef
@@ -315,13 +313,12 @@ class LinEventTriggeredFrame:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class LinUnconditionalFrameRef(Ref):
-            dest: None | LinUnconditionalFrameSubtypesEnum = field(
-                default=None,
+            dest: LinUnconditionalFrameSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

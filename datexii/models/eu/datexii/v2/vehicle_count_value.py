@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleCountValue(DataValue):
     """
     A measured or calculated value of absolute count of vehicles within a
@@ -20,14 +20,13 @@ class VehicleCountValue(DataValue):
     :ivar vehicle_count_value_extension:
     """
 
-    vehicle_count: None | int = field(
-        default=None,
+    vehicle_count: int = field(
         metadata={
             "name": "vehicleCount",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     vehicle_count_value_extension: None | ExtensionType = field(
         default=None,

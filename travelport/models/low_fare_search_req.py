@@ -7,7 +7,7 @@ from travelport.models.base_low_fare_search_req import BaseLowFareSearchReq
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LowFareSearchReq(BaseLowFareSearchReq):
     """
     Low Fare Search request.

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomerReceiptInfo:
     """
     Information about customer receipt via email.
@@ -23,19 +23,17 @@ class CustomerReceiptInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    booking_traveler_ref: None | str = field(
-        default=None,
+    booking_traveler_ref: str = field(
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    email_ref: None | str = field(
-        default=None,
+    email_ref: str = field(
         metadata={
             "name": "EmailRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -7,6 +7,6 @@ from .mode_of_operation_ref_structure import ModeOfOperationRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConventionalModeOfOperationRefStructure(ModeOfOperationRefStructure):
     pass

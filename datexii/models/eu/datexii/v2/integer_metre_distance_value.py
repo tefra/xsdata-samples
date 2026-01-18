@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IntegerMetreDistanceValue(DataValue):
     """
     A measured or calculated value of distance in whole metres.
@@ -18,14 +18,13 @@ class IntegerMetreDistanceValue(DataValue):
     :ivar integer_metre_distance_value_extension:
     """
 
-    integer_metre_distance: None | int = field(
-        default=None,
+    integer_metre_distance: int = field(
         metadata={
             "name": "integerMetreDistance",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     integer_metre_distance_value_extension: None | ExtensionType = field(
         default=None,

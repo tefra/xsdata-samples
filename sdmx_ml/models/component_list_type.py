@@ -14,7 +14,7 @@ from sdmx_ml.models.time_dimension import TimeDimension
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ComponentListType(IdentifiableType):
     """
     ComponentListType is an abstract base type for all component lists.

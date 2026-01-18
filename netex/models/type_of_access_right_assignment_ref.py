@@ -9,7 +9,7 @@ from .type_of_access_right_assignment_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfAccessRightAssignmentRef(TypeOfAccessRightAssignmentRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

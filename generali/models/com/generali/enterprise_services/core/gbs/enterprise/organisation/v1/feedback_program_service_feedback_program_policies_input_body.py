@@ -9,16 +9,15 @@ from generali.models.com.generali.xmlns.services.program.feedback_program_servic
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FeedbackProgramServiceFeedbackProgramPoliciesInputBody:
     class Meta:
         global_type = False
 
-    feedback_program_policies: None | FeedbackProgramPolicies = field(
-        default=None,
+    feedback_program_policies: FeedbackProgramPolicies = field(
         metadata={
             "name": "FeedbackProgramPolicies",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-        },
+        }
     )

@@ -7,7 +7,7 @@ from travelport.models.required_field_4 import RequiredField4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddressRestriction4:
     class Meta:
         name = "AddressRestriction"

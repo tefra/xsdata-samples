@@ -26,7 +26,7 @@ from ipxact.models.wire import Wire
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractionDefinition:
     """
     Define the ports and other information of a particular abstraction of
@@ -64,33 +64,29 @@ class AbstractionDefinition:
         name = "abstractionDefinition"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    vendor: None | str = field(
-        default=None,
+    vendor: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    library: None | str = field(
-        default=None,
+    library: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     display_name: None | str = field(
         default=None,
@@ -112,13 +108,12 @@ class AbstractionDefinition:
             "type": "Element",
         },
     )
-    bus_type: None | LibraryRefType = field(
-        default=None,
+    bus_type: LibraryRefType = field(
         metadata={
             "name": "busType",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     extends: None | LibraryRefType = field(
         default=None,
@@ -126,12 +121,11 @@ class AbstractionDefinition:
             "type": "Element",
         },
     )
-    ports: None | AbstractionDefinition.Ports = field(
-        default=None,
+    ports: AbstractionDefinition.Ports = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     choices: None | Choices = field(
         default=None,
@@ -166,7 +160,7 @@ class AbstractionDefinition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Ports:
         port: list[AbstractionDefinition.Ports.Port] = field(
             default_factory=list,
@@ -176,7 +170,7 @@ class AbstractionDefinition:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Port:
             """
             :ivar logical_name: The assigned name of this port in bus
@@ -195,13 +189,12 @@ class AbstractionDefinition:
             :ivar id:
             """
 
-            logical_name: None | str = field(
-                default=None,
+            logical_name: str = field(
                 metadata={
                     "name": "logicalName",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             display_name: None | DisplayName = field(
                 default=None,
@@ -264,7 +257,7 @@ class AbstractionDefinition:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Transactional:
                 """
                 :ivar qualifier: The type of information this port
@@ -315,7 +308,7 @@ class AbstractionDefinition:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class OnSystem:
                     """
                     :ivar group: Used to group system ports into
@@ -332,12 +325,11 @@ class AbstractionDefinition:
                     :ivar id:
                     """
 
-                    group: None | str = field(
-                        default=None,
+                    group: str = field(
                         metadata={
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
                     presence: None | Presence = field(
                         default=None,
@@ -378,7 +370,7 @@ class AbstractionDefinition:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class OnInitiator:
                     """
                     :ivar presence:
@@ -424,7 +416,7 @@ class AbstractionDefinition:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class OnTarget:
                     """
                     :ivar presence:

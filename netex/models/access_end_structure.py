@@ -9,7 +9,7 @@ from .point_ref_structure import PointRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessEndStructure:
     transport_mode: None | AllModesEnumeration = field(
         default=None,

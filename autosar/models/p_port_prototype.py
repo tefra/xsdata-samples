@@ -38,7 +38,7 @@ from .trigger_port_annotation import TriggerPortAnnotation
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PPortPrototype:
     """
     Component port providing a certain port interface.
@@ -121,14 +121,13 @@ class PPortPrototype:
     class Meta:
         name = "P-PORT-PROTOTYPE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | PPortPrototype.ShortNameFragments = field(
         default=None,
@@ -319,7 +318,7 @@ class PPortPrototype:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -330,7 +329,7 @@ class PPortPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -341,7 +340,7 @@ class PPortPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClientServerAnnotations:
         client_server_annotation: list[ClientServerAnnotation] = field(
             default_factory=list,
@@ -352,7 +351,7 @@ class PPortPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IoHwAbstractionServerAnnotations:
         io_hw_abstraction_server_annotation: list[
             IoHwAbstractionServerAnnotation
@@ -365,7 +364,7 @@ class PPortPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModePortAnnotations:
         mode_port_annotation: list[ModePortAnnotation] = field(
             default_factory=list,
@@ -376,7 +375,7 @@ class PPortPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NvDataPortAnnotations:
         nv_data_port_annotation: list[NvDataPortAnnotation] = field(
             default_factory=list,
@@ -387,7 +386,7 @@ class PPortPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ParameterPortAnnotations:
         parameter_port_annotation: list[ParameterPortAnnotation] = field(
             default_factory=list,
@@ -398,7 +397,7 @@ class PPortPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SenderReceiverAnnotations:
         receiver_annotation: list[ReceiverAnnotation] = field(
             default_factory=list,
@@ -417,7 +416,7 @@ class PPortPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TriggerPortAnnotations:
         trigger_port_annotation: list[TriggerPortAnnotation] = field(
             default_factory=list,
@@ -428,7 +427,7 @@ class PPortPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvidedComSpecs:
         field_sender_com_spec: list[FieldSenderComSpec] = field(
             default_factory=list,
@@ -487,13 +486,12 @@ class PPortPrototype:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvidedInterfaceTref(Ref):
-        dest: None | PortInterfaceSubtypesEnum = field(
-            default=None,
+        dest: PortInterfaceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

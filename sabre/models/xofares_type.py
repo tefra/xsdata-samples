@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class XofaresType:
     """
     XOFares indicator.
@@ -14,11 +14,10 @@ class XofaresType:
     class Meta:
         name = "XOFaresType"
 
-    value: None | bool = field(
-        default=None,
+    value: bool = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

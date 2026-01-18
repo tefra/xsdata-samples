@@ -10,7 +10,7 @@ from travelport.models.queue_pseudo_city_selector import (
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GdsNextOnQueueReq(BaseReq1):
     """
     Use this request to get the 'next' pnr on queue.
@@ -47,13 +47,12 @@ class GdsNextOnQueueReq(BaseReq1):
             "type": "Element",
         },
     )
-    remove_current: None | bool = field(
-        default=None,
+    remove_current: bool = field(
         metadata={
             "name": "RemoveCurrent",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -78,13 +77,12 @@ class GdsNextOnQueueReq(BaseReq1):
             "type": "Attribute",
         },
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )

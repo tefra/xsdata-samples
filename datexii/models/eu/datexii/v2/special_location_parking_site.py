@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.parking_special_location_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecialLocationParkingSite(ParkingSite):
     """
     A parking site which is located at a special location, often associated
@@ -25,14 +25,13 @@ class SpecialLocationParkingSite(ParkingSite):
     :ivar special_location_parking_site_extension:
     """
 
-    parking_special_location: None | ParkingSpecialLocationEnum = field(
-        default=None,
+    parking_special_location: ParkingSpecialLocationEnum = field(
         metadata={
             "name": "parkingSpecialLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     parking_other_special_location: None | MultilingualString = field(
         default=None,

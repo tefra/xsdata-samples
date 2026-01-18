@@ -11,7 +11,7 @@ from .trigger_subtypes_enum import TriggerSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PTriggerInAtomicSwcTypeInstanceRef:
     """
     :ivar context_p_port_ref:
@@ -67,24 +67,22 @@ class PTriggerInAtomicSwcTypeInstanceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextPPortRef(Ref):
-        dest: None | AbstractProvidedPortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: AbstractProvidedPortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetTriggerRef(Ref):
-        dest: None | TriggerSubtypesEnum = field(
-            default=None,
+        dest: TriggerSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

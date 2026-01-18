@@ -9,7 +9,7 @@ from generali.models.org.w3.pkg_2005.pkg_08.addressing.attributed_qname_type imp
 __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProblemHeaderQname(AttributedQnameType):
     class Meta:
         name = "ProblemHeaderQName"

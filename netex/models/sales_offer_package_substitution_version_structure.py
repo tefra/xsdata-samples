@@ -9,7 +9,7 @@ from .sales_offer_package_ref_structure import SalesOfferPackageRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SalesOfferPackageSubstitutionVersionStructure(
     AssignmentVersionStructure1
 ):
@@ -24,12 +24,11 @@ class SalesOfferPackageSubstitutionVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    with_sales_offer_package_ref: None | SalesOfferPackageRefStructure = field(
-        default=None,
+    with_sales_offer_package_ref: SalesOfferPackageRefStructure = field(
         metadata={
             "name": "WithSalesOfferPackageRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

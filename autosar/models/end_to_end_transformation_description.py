@@ -22,7 +22,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EndToEndTransformationDescription:
     """
     EndToEndTransformationDescription holds these attributes which are
@@ -369,13 +369,12 @@ class EndToEndTransformationDescription:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class E2EProfileCompatibilityPropsRef(Ref):
-        dest: None | E2EProfileCompatibilityPropsSubtypesEnum = field(
-            default=None,
+        dest: E2EProfileCompatibilityPropsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

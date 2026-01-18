@@ -211,7 +211,7 @@ from crossref.models.xml.space_value import SpaceValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompoundKwd:
     """
     <div> <h3>Compound Keyword</h3> </div>.
@@ -226,7 +226,6 @@ class CompoundKwd:
         metadata={
             "name": "compound-kwd-part",
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     assigning_authority: None | str = field(
@@ -285,7 +284,7 @@ class CompoundKwd:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompoundSubject:
     """
     <div> <h3>Compound Subject Name</h3> </div>.
@@ -300,7 +299,6 @@ class CompoundSubject:
         metadata={
             "name": "compound-subject-part",
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     assigning_authority: None | str = field(
@@ -359,7 +357,7 @@ class CompoundSubject:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Abbrev:
     """
     <div> <h3>Abbreviation or Acronym</h3> </div>.
@@ -476,7 +474,7 @@ class Abbrev:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Abstract:
     """
     <div> <h3>Abstract</h3> </div>.
@@ -553,7 +551,7 @@ class Abstract:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Alternatives:
     """
     <div> <h3>Alternatives For Processing</h3> </div>.
@@ -684,7 +682,7 @@ class Alternatives:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Annotation:
     """
     <div> <h3>Annotation in a Citation</h3> </div>.
@@ -698,7 +696,6 @@ class Annotation:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     content_type: None | str = field(
@@ -737,7 +734,7 @@ class Annotation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuthorComment:
     """
     <div> <h3>Author Comment</h3> </div>.
@@ -757,7 +754,6 @@ class AuthorComment:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     content_type: None | str = field(
@@ -796,7 +792,7 @@ class AuthorComment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BlockAlternatives:
     """
     <div> <h3>Block-Level Alternatives For Processing</h3> </div>.
@@ -862,7 +858,7 @@ class BlockAlternatives:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Caption:
     """
     <div> <h3>Caption of a Figure, Table, Etc.</h3> </div>.
@@ -926,7 +922,7 @@ class Caption:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CitationAlternatives:
     """
     <div> <h3>Citation Alternatives</h3> </div>.
@@ -979,7 +975,7 @@ class CitationAlternatives:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConfSponsor:
     """
     <div> <h3>Conference Sponsor</h3> </div>.
@@ -1043,7 +1039,7 @@ class ConfSponsor:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CopyrightHolder:
     """
     <div> <h3>Copyright Holder</h3> </div>.
@@ -1115,7 +1111,7 @@ class CopyrightHolder:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Def:
     """
     <div> <h3>Definition List: Definition</h3> </div>.
@@ -1129,7 +1125,6 @@ class Def:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     id: None | str = field(
@@ -1168,7 +1163,7 @@ class Def:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Edition:
     """
     <div> <h3>Edition Statement, Cited</h3> </div>.
@@ -1238,7 +1233,7 @@ class Edition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Fn:
     """
     <div> <h3>Footnote</h3> </div>.
@@ -1258,7 +1253,6 @@ class Fn:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     custom_type: None | str = field(
@@ -1310,7 +1304,7 @@ class Fn:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndexTerm:
     """
     <div> <h3>Index Term</h3> </div>.
@@ -1320,12 +1314,11 @@ class IndexTerm:
         name = "index-term"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    term: None | Term = field(
-        default=None,
+    term: Term = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     index_term: None | IndexTerm = field(
         default=None,
@@ -1418,7 +1411,7 @@ class IndexTerm:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Institution:
     """
     <div> <h3>Institution Name: in an Address</h3> </div>.
@@ -1533,7 +1526,7 @@ class Institution:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class License:
     """
     <div> <h3>License Information</h3> </div>.
@@ -1644,7 +1637,7 @@ class License:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenAccess:
     """
     <div> <h3>Open Access</h3> </div>.
@@ -1658,7 +1651,6 @@ class OpenAccess:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     id: None | str = field(
@@ -1690,7 +1682,7 @@ class OpenAccess:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddrLine:
     """
     <div> <h3>Address Line</h3> </div>.
@@ -1882,7 +1874,7 @@ class AddrLine:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AltTitle:
     """
     <div> <h3>Alternate Title</h3> </div>.
@@ -2091,7 +2083,7 @@ class AltTitle:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Array:
     """
     <div> <h3>Array (Simple Tabular Array)</h3> </div>.
@@ -2212,7 +2204,7 @@ class Array:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ArticleTitle:
     """
     <div> <h3>Article Title</h3> </div>.
@@ -2407,7 +2399,7 @@ class ArticleTitle:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Attrib:
     """
     <div> <h3>Attribution</h3> </div>.
@@ -2605,7 +2597,7 @@ class Attrib:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AwardId:
     """
     <div> <h3>Award Identifier</h3> </div>.
@@ -2837,7 +2829,7 @@ class AwardId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Bold:
     """
     <div> <h3>Bold</h3> </div>.
@@ -3034,7 +3026,7 @@ class Bold:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefItem:
     """
     <div> <h3>Definition List: Definition Item</h3> </div>.
@@ -3044,12 +3036,11 @@ class DefItem:
         name = "def-item"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    term: None | Term = field(
-        default=None,
+    term: Term = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     def_value: list[Def] = field(
         default_factory=list,
@@ -3087,7 +3078,7 @@ class DefItem:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FnGroup:
     """
     <div> <h3>Footnote Group</h3> </div>.
@@ -3113,7 +3104,6 @@ class FnGroup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     content_type: None | str = field(
@@ -3152,7 +3142,7 @@ class FnGroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InstitutionWrap:
     """
     <div> <h3>Institution Wrapper</h3> </div>.
@@ -3190,7 +3180,7 @@ class InstitutionWrap:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Speaker:
     """
     <div> <h3>Speaker</h3> </div>.
@@ -3278,7 +3268,7 @@ class Speaker:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Address:
     """
     <div> <h3>Address/Contact Information</h3> </div>.
@@ -3400,7 +3390,7 @@ class Address:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Aff:
     """
     <div> <h3>Affiliation</h3> </div>.
@@ -3595,7 +3585,7 @@ class Aff:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChapterTitle:
     """
     <div> <h3>Chapter Title in a Citation</h3> </div>.
@@ -3765,7 +3755,7 @@ class ChapterTitle:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChemStruct:
     """
     <div> <h3>Chemical Structure (Display)</h3> </div>.
@@ -4013,7 +4003,7 @@ class ChemStruct:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Code:
     """
     <div> <h3>Code Text</h3> </div>.
@@ -4237,7 +4227,7 @@ class Code:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConfLoc:
     """
     <div> <h3>Conference Location</h3> </div>.
@@ -4329,7 +4319,7 @@ class ConfLoc:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CopyrightStatement:
     """
     <div> <h3>Copyright Statement</h3> </div>.
@@ -4457,7 +4447,7 @@ class CopyrightStatement:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataTitle:
     """
     <div> <h3>Data Title in a Citation</h3> </div>.
@@ -4597,7 +4587,7 @@ class DataTitle:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExtLink:
     """
     <div> <h3>External Link</h3> </div>.
@@ -4771,7 +4761,7 @@ class ExtLink:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PublisherName:
     """
     <div> <h3>Publisher's Name</h3> </div>.
@@ -4828,7 +4818,7 @@ class PublisherName:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AffAlternatives:
     """
     <div> <h3>Affiliation Alternatives</h3> </div>.
@@ -4842,7 +4832,6 @@ class AffAlternatives:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     id: None | str = field(
@@ -4860,7 +4849,7 @@ class AffAlternatives:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Answer:
     """
     <div> <h3>Answer Elements</h3> </div>.
@@ -5196,7 +5185,7 @@ class Answer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChemStructWrap:
     """
     <div> <h3>Chemical Structure Wrapper</h3> </div>.
@@ -5382,7 +5371,7 @@ class ChemStructWrap:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Comment:
     """
     <div> <h3>Comment in a Citation</h3> </div>.
@@ -5587,7 +5576,7 @@ class Comment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefHead:
     """
     <div> <h3>Definition List: Definition Head</h3> </div>.
@@ -5771,7 +5760,7 @@ class DefHead:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DispFormula:
     """
     <div> <h3>Formula, Display</h3> </div>.
@@ -5988,7 +5977,7 @@ class DispFormula:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FixedCase:
     """
     <div> <h3>Fixed Case</h3> </div>.
@@ -6186,7 +6175,7 @@ class FixedCase:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Graphic:
     """
     <div> <h3>Graphic</h3> </div>.
@@ -6344,13 +6333,12 @@ class Graphic:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: None | str = field(
-        default=None,
+    href: str = field(
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "required": True,
-        },
+        }
     )
     role: None | str = field(
         default=None,
@@ -6399,7 +6387,7 @@ class Graphic:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Permissions:
     """
     <div> <h3>Permissions</h3> </div>.
@@ -6458,7 +6446,7 @@ class Permissions:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PublisherLoc:
     """
     <div> <h3>Publisher's Location</h3> </div>.
@@ -6555,7 +6543,7 @@ class PublisherLoc:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AnswerSet:
     """
     <div> <h3>Answer Set</h3> </div>.
@@ -6651,7 +6639,7 @@ class AnswerSet:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefList:
     """
     <div> <h3>Definition List</h3> </div>.
@@ -6758,7 +6746,7 @@ class DefList:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DispFormulaGroup:
     """
     <div> <h3>Formula, Display Group</h3> </div>.
@@ -6890,7 +6878,7 @@ class DispFormulaGroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FundingSource:
     """
     <div> <h3>Funding Source</h3> </div>.
@@ -7122,7 +7110,7 @@ class FundingSource:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Gov:
     """
     <div> <h3>Government Report, Cited</h3> </div>.
@@ -7238,7 +7226,7 @@ class Gov:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InlineFormula:
     """
     <div> <h3>Formula, Inline</h3> </div>.
@@ -7395,7 +7383,7 @@ class InlineFormula:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InlineMedia:
     """
     <div> <h3>Inline Media Object</h3> </div>.
@@ -7478,13 +7466,12 @@ class InlineMedia:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: None | str = field(
-        default=None,
+    href: str = field(
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "required": True,
-        },
+        }
     )
     role: None | str = field(
         default=None,
@@ -7623,7 +7610,7 @@ class InlineMedia:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InlineSupplementaryMaterial:
     """
     <div> <h3>Inline Supplementary Material</h3> </div>.
@@ -7823,7 +7810,7 @@ class InlineSupplementaryMaterial:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Bio:
     """
     <div> <h3>Biography</h3> </div>.
@@ -8197,7 +8184,7 @@ class Bio:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BoxedText:
     """
     <div> <h3>Boxed Text</h3> </div>.
@@ -8543,7 +8530,7 @@ class BoxedText:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Italic:
     """
     <div> <h3>Italic</h3> </div>.
@@ -8740,7 +8727,7 @@ class Italic:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Collab:
     """
     <div> <h3>Collaborative (Group) Author</h3> </div>.
@@ -9045,7 +9032,7 @@ class Collab:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DispQuote:
     """
     <div> <h3>Quote, Displayed</h3> </div>.
@@ -9339,7 +9326,7 @@ class DispQuote:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Kwd:
     """
     <div> <h3>Keyword</h3> </div>.
@@ -9475,7 +9462,7 @@ class Kwd:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Label:
     """
     <div> <h3>Label of a Figure, Reference, Etc.</h3> </div>.
@@ -9599,7 +9586,7 @@ class Label:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Monospace:
     """
     <div> <h3>Monospace Text (Typewriter Text)</h3> </div>.
@@ -9796,7 +9783,7 @@ class Monospace:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CollabAlternatives:
     """
     <div> <h3>Collaboration Alternatives</h3> </div>.
@@ -9810,7 +9797,6 @@ class CollabAlternatives:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     id: None | str = field(
@@ -9828,7 +9814,7 @@ class CollabAlternatives:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Explanation:
     """
     <div> <h3>Explanation</h3> </div>.
@@ -10158,7 +10144,7 @@ class Explanation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Fig:
     """
     <div> <h3>Figure</h3> </div>.
@@ -10416,7 +10402,7 @@ class Fig:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class List:
     """
     <div> <h3>List</h3> </div>.
@@ -10450,7 +10436,6 @@ class List:
         metadata={
             "name": "list-item",
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     continued_from: None | str = field(
@@ -10510,7 +10495,7 @@ class List:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NestedKwd:
     """
     <div> <h3>Nested Keyword</h3> </div>.
@@ -10596,7 +10581,7 @@ class NestedKwd:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NlmCitation:
     """
     <div> <h3>Nlm Citation Model</h3> </div>.
@@ -10894,7 +10879,7 @@ class NlmCitation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Note:
     """
     <div> <h3>Note in a Reference List</h3> </div>.
@@ -10958,7 +10943,7 @@ class Note:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Contrib:
     """
     <div> <h3>Contributor</h3> </div>.
@@ -11197,7 +11182,7 @@ class Contrib:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ElementCitation:
     """
     <div> <h3>Element Citation</h3> </div>.
@@ -11882,7 +11867,7 @@ class ElementCitation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FigGroup:
     """
     <div> <h3>Figure Group</h3> </div>.
@@ -12049,7 +12034,7 @@ class FigGroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class KwdGroup:
     """
     <div> <h3>Keyword Group</h3> </div>.
@@ -12147,7 +12132,7 @@ class KwdGroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MixedCitation:
     """
     <div> <h3>Mixed Citation</h3> </div>.
@@ -12623,7 +12608,7 @@ class MixedCitation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersonGroup:
     """
     <div> <h3>Person Group For a Cited Publication</h3> </div>.
@@ -12726,7 +12711,7 @@ class PersonGroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContribGroup:
     """
     <div> <h3>Contributor Group</h3> </div>.
@@ -12740,7 +12725,6 @@ class ContribGroup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     address: list[Address] = field(
@@ -12842,7 +12826,7 @@ class ContribGroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Glossary:
     """
     <div> <h3>Glossary Elements</h3> </div>.
@@ -13137,7 +13121,7 @@ class Glossary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Media:
     """
     <div> <h3>Media Object</h3> </div>.
@@ -13295,13 +13279,12 @@ class Media:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: None | str = field(
-        default=None,
+    href: str = field(
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "required": True,
-        },
+        }
     )
     role: None | str = field(
         default=None,
@@ -13350,7 +13333,7 @@ class Media:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ref:
     """
     <div> <h3>Reference Item</h3> </div>.
@@ -13436,7 +13419,7 @@ class Ref:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NamedContent:
     """
     <div> <h3>Named Special (Subject) Content</h3> </div>.
@@ -13452,13 +13435,12 @@ class NamedContent:
             "type": "Attribute",
         },
     )
-    content_type: None | str = field(
-        default=None,
+    content_type: str = field(
         metadata={
             "name": "content-type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     hreflang: None | str = field(
         default=None,
@@ -13845,7 +13827,7 @@ class NamedContent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Option:
     """
     <div> <h3>Option Elements</h3> </div>.
@@ -14179,7 +14161,7 @@ class Option:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Overline:
     """
     <div> <h3>Overline</h3> </div>.
@@ -14376,7 +14358,7 @@ class Overline:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class P:
     """
     <div> <h3>Paragraph</h3> </div>.
@@ -14721,7 +14703,7 @@ class P:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PartTitle:
     """
     <div> <h3>Part Title in a Citation</h3> </div>.
@@ -14891,7 +14873,7 @@ class PartTitle:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Preformat:
     """
     <div> <h3>Preformatted Text</h3> </div>.
@@ -15075,7 +15057,7 @@ class Preformat:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Rb:
     """
     <div> <h3>Ruby Base</h3> </div>.
@@ -15171,7 +15153,7 @@ class Rb:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Question:
     """
     <div> <h3>Question</h3> </div>.
@@ -15519,7 +15501,7 @@ class Question:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ruby:
     """
     <div> <h3>Ruby Wrapper</h3> </div>.
@@ -15529,19 +15511,17 @@ class Ruby:
         name = "ruby"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    rb: None | Rb = field(
-        default=None,
+    rb: Rb = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    rt: None | Rt = field(
-        default=None,
+    rt: Rt = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     content_type: None | str = field(
         default=None,
@@ -15572,7 +15552,7 @@ class Ruby:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Speech:
     """
     <div> <h3>Speech</h3> </div>.
@@ -15589,18 +15569,16 @@ class Speech:
             "type": "Element",
         },
     )
-    speaker: None | Speaker = field(
-        default=None,
+    speaker: Speaker = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     content_type: None | str = field(
@@ -15639,7 +15617,7 @@ class Speech:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Statement:
     """
     <div> <h3>Statement, Formal</h3> </div>.
@@ -15741,7 +15719,7 @@ class Statement:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuestionWrap:
     """
     <div> <h3>Question Wrap</h3> </div>.
@@ -15758,12 +15736,11 @@ class QuestionWrap:
             "type": "Element",
         },
     )
-    question: None | Question = field(
-        default=None,
+    question: Question = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     answer: None | Answer = field(
         default=None,
@@ -15826,7 +15803,7 @@ class QuestionWrap:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RelatedArticle:
     """
     <div> <h3>Related Article Information</h3> </div>.
@@ -15888,13 +15865,12 @@ class RelatedArticle:
             "type": "Attribute",
         },
     )
-    related_article_type: None | str = field(
-        default=None,
+    related_article_type: str = field(
         metadata={
             "name": "related-article-type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     specific_use: None | str = field(
         default=None,
@@ -16284,7 +16260,7 @@ class RelatedArticle:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RelatedObject:
     """
     <div> <h3>Related Object Information</h3> </div>.
@@ -16768,7 +16744,7 @@ class RelatedObject:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuestionPreamble:
     """
     <div> <h3>Question Preamble</h3> </div>.
@@ -17076,7 +17052,7 @@ class QuestionPreamble:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Roman:
     """
     <div> <h3>Roman</h3> </div>.
@@ -17273,7 +17249,7 @@ class Roman:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuestionWrapGroup:
     """
     <div> <h3>Question Wrap Group</h3> </div>.
@@ -17327,7 +17303,6 @@ class QuestionWrapGroup:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     audience: None | str = field(
@@ -17372,7 +17347,7 @@ class QuestionWrapGroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SansSerif:
     """
     <div> <h3>Sans Serif</h3> </div>.
@@ -17569,7 +17544,7 @@ class SansSerif:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Sc:
     """
     <div> <h3>Small Caps</h3> </div>.
@@ -17766,7 +17741,7 @@ class Sc:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Strike:
     """
     <div> <h3>Strike Through</h3> </div>.
@@ -17963,7 +17938,7 @@ class Strike:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StyledContent:
     """
     <div> <h3>Styled Special (Subject) Content</h3> </div>.
@@ -18305,7 +18280,7 @@ class StyledContent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Sub:
     """
     <div> <h3>Subscript</h3> </div>.
@@ -18502,7 +18477,7 @@ class Sub:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Sup:
     """
     <div> <h3>Superscript</h3> </div>.
@@ -18699,7 +18674,7 @@ class Sup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StdOrganization:
     """
     <div> <h3>Standards Organization</h3> </div>.
@@ -18771,7 +18746,7 @@ class StdOrganization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Target:
     """
     <div> <h3>Target of an Internal Link</h3> </div>.
@@ -18781,12 +18756,11 @@ class Target:
         name = "target"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     specific_use: None | str = field(
         default=None,
@@ -18888,7 +18862,7 @@ class Target:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Version:
     """
     <div> <h3>Version Statement, Cited</h3> </div>.
@@ -18958,7 +18932,7 @@ class Version:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Underline:
     """
     <div> <h3>Underline</h3> </div>.
@@ -19162,7 +19136,7 @@ class Underline:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompoundSubjectPart:
     """
     <div> <h3>Compound Subject Part Name</h3> </div>.
@@ -19288,7 +19262,7 @@ class CompoundSubjectPart:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Price:
     """
     <div> <h3>Price</h3> </div>.
@@ -19394,7 +19368,7 @@ class Price:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Role:
     """
     <div> <h3>Role or Function Title of Contributor</h3> </div>.
@@ -19551,7 +19525,7 @@ class Role:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Series:
     """
     <div> <h3>Series</h3> </div>.
@@ -19667,7 +19641,7 @@ class Series:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Subject:
     """
     <div> <h3>Subject Name</h3> </div>.
@@ -19827,7 +19801,7 @@ class Subject:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TextualForm:
     """
     <div> <h3>Textual Form</h3> </div>.
@@ -19957,7 +19931,7 @@ class TextualForm:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Xref:
     """
     <div> <h3>X(cross) Reference</h3> </div>.
@@ -20093,7 +20067,7 @@ class Xref:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompoundKwdPart:
     """
     <div> <h3>Compound Keyword Part</h3> </div>.
@@ -20231,7 +20205,7 @@ class CompoundKwdPart:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OnBehalfOf:
     """
     <div> <h3>On Behalf of</h3> </div>.
@@ -20360,7 +20334,7 @@ class OnBehalfOf:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class See:
     """
     <div> <h3>See</h3> </div>.
@@ -20600,7 +20574,7 @@ class See:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SeeAlso:
     """
     <div> <h3>See-Also Term</h3> </div>.
@@ -20867,7 +20841,7 @@ class SeeAlso:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Source:
     """
     <div> <h3>Source</h3> </div>.
@@ -21044,7 +21018,7 @@ class Source:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubjGroup:
     class Meta:
         name = "subj-group"
@@ -21126,7 +21100,7 @@ class SubjGroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Subtitle:
     """
     <div> <h3>Article Subtitle</h3> </div>.
@@ -21335,7 +21309,7 @@ class Subtitle:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Term:
     """
     <div> <h3>Definition List: Term</h3> </div>.
@@ -21609,7 +21583,7 @@ class Term:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TermHead:
     """
     <div> <h3>Definition List: Term Head</h3> </div>.
@@ -21793,7 +21767,7 @@ class TermHead:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Title:
     """
     <div> <h3>Title</h3> </div>.
@@ -22011,7 +21985,7 @@ class Title:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransSource:
     """
     <div> <h3>Translated Source</h3> </div>.
@@ -22188,7 +22162,7 @@ class TransSource:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransTitle:
     """
     <div> <h3>Translated Title</h3> </div>.
@@ -22397,7 +22371,7 @@ class TransTitle:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VerseLine:
     """
     <div> <h3>Line of a Verse</h3> </div>.
@@ -22596,7 +22570,7 @@ class VerseLine:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListItem:
     """
     <div> <h3>List Item</h3> </div>.
@@ -22667,7 +22641,7 @@ class ListItem:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecMeta:
     """
     <div> <h3>Section Metadata</h3> </div>.
@@ -22732,7 +22706,7 @@ class SecMeta:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Std:
     """
     <div> <h3>Standard, Cited</h3> </div>.
@@ -22884,7 +22858,7 @@ class Std:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Supplement:
     """
     <div> <h3>Supplement</h3> </div>.
@@ -23052,7 +23026,7 @@ class Supplement:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TableWrapFoot:
     """
     <div> <h3>Table Wrap Footer</h3> </div>.
@@ -23114,7 +23088,7 @@ class TableWrapFoot:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VerseGroup:
     """
     <div> <h3>Verse Form For Poetry</h3> </div>.
@@ -23224,7 +23198,7 @@ class VerseGroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Product:
     """
     <div> <h3>Product Information</h3> </div>.
@@ -23707,7 +23681,7 @@ class Product:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Td:
     class Meta:
         name = "td"
@@ -24065,7 +24039,7 @@ class Td:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Th:
     class Meta:
         name = "th"
@@ -24423,7 +24397,7 @@ class Th:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Tr:
     class Meta:
         name = "tr"
@@ -24493,7 +24467,7 @@ class Tr:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Tbody:
     class Meta:
         name = "tbody"
@@ -24503,7 +24477,6 @@ class Tbody:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     align: None | TbodyAlign = field(
@@ -24558,7 +24531,7 @@ class Tbody:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Tfoot:
     class Meta:
         name = "tfoot"
@@ -24568,7 +24541,6 @@ class Tfoot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     align: None | TfootAlign = field(
@@ -24623,7 +24595,7 @@ class Tfoot:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Thead:
     class Meta:
         name = "thead"
@@ -24633,7 +24605,6 @@ class Thead:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     align: None | TheadAlign = field(
@@ -24688,7 +24659,7 @@ class Thead:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Table:
     """
     <div> <h3>Table: Table Element ..............................</h3>
@@ -24812,7 +24783,7 @@ class Table:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TableWrap:
     """
     <div> <h3>Table Wrapper</h3> </div>.
@@ -25057,7 +25028,7 @@ class TableWrap:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SupplementaryMaterial:
     """
     <div> <h3>Supplementary Material</h3> </div>.
@@ -25379,7 +25350,7 @@ class SupplementaryMaterial:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TableWrapGroup:
     """
     <div> <h3>Table Wrapper Group</h3> </div>.
@@ -25522,7 +25493,7 @@ class TableWrapGroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LicenseP:
     """
     <div> <h3>License Paragraph</h3> </div>.
@@ -25864,7 +25835,7 @@ class LicenseP:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RefList:
     """
     <div> <h3>Reference List (Bibliographic Reference List)</h3> </div>.
@@ -26166,7 +26137,7 @@ class RefList:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Sec:
     """
     <div> <h3>Section</h3> </div>.
@@ -26187,14 +26158,12 @@ class Sec:
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     title: list[Title] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
             "max_occurs": 2,
             "sequence": 1,
         },

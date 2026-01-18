@@ -7,7 +7,7 @@ from .t_send_task import TSendTask
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SendTask(TSendTask):
     class Meta:
         name = "sendTask"

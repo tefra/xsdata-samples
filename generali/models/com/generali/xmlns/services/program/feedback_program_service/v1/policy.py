@@ -14,40 +14,36 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Policy:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    policy_id: None | str = field(
-        default=None,
+    policy_id: str = field(
         metadata={
             "name": "PolicyID",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    local_policies: None | LocalPolicies = field(
-        default=None,
+    local_policies: LocalPolicies = field(
         metadata={
             "name": "LocalPolicies",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    errors: None | Errors = field(
-        default=None,
+    errors: Errors = field(
         metadata={
             "name": "Errors",
             "type": "Element",
             "required": True,
-        },
+        }
     )

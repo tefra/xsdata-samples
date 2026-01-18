@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExchangeFareType:
     """
     Attributes:
@@ -21,14 +21,13 @@ class ExchangeFareType:
             same).
     """
 
-    base_fare_amount: None | Decimal = field(
-        default=None,
+    base_fare_amount: Decimal = field(
         metadata={
             "name": "BaseFareAmount",
             "type": "Attribute",
             "required": True,
             "fraction_digits": 3,
-        },
+        }
     )
     non_refundable_amount: None | Decimal = field(
         default=None,
@@ -38,23 +37,21 @@ class ExchangeFareType:
             "fraction_digits": 3,
         },
     )
-    base_fare_currency: None | str = field(
-        default=None,
+    base_fare_currency: str = field(
         metadata={
             "name": "BaseFareCurrency",
             "type": "Attribute",
             "required": True,
             "pattern": r"[a-zA-Z]{3}",
-        },
+        }
     )
-    fare_calc_currency: None | str = field(
-        default=None,
+    fare_calc_currency: str = field(
         metadata={
             "name": "FareCalcCurrency",
             "type": "Attribute",
             "required": True,
             "pattern": r"[a-zA-Z]{3}",
-        },
+        }
     )
     validating_carrier: None | str = field(
         default=None,

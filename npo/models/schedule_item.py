@@ -7,7 +7,7 @@ from npo.models.schedule_event_api_type import ScheduleEventApiType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduleItem(ScheduleEventApiType):
     class Meta:
         name = "scheduleItem"

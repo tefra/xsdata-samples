@@ -8,7 +8,7 @@ from npo.models.role_type import RoleType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NameType:
     class Meta:
         name = "nameType"
@@ -28,12 +28,11 @@ class NameType:
             "namespace": "urn:vpro:media:2009",
         },
     )
-    role: None | RoleType = field(
-        default=None,
+    role: RoleType = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     gtaa_uri: None | str = field(
         default=None,

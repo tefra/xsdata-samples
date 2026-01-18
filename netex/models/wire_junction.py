@@ -7,7 +7,7 @@ from .wire_junction_version_structure import WireJunctionVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WireJunction(WireJunctionVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModeErrorBehavior:
     """
     This represents the ability to define the error behavior in the context
@@ -68,13 +68,12 @@ class ModeErrorBehavior:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DefaultModeRef(Ref):
-        dest: None | ModeDeclarationSubtypesEnum = field(
-            default=None,
+        dest: ModeDeclarationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

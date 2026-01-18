@@ -7,7 +7,7 @@ from .timing_link_version_structure import TimingLinkVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimingLink(TimingLinkVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

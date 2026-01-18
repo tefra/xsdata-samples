@@ -8,7 +8,7 @@ from sdmx_ml.models.value_type import ValueType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DoubleValueType(ValueType):
     """
     DoubleValueType is a refinement of SimpleValueType limiting the content
@@ -24,4 +24,4 @@ class DoubleValueType(ValueType):
             "type": "Ignore",
         },
     )
-    value: None | float = field(default=None)
+    value: float = field()

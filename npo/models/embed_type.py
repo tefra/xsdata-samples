@@ -9,7 +9,7 @@ from npo.models.segment import Segment
 __NAMESPACE__ = "urn:vpro:pages:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EmbedType:
     class Meta:
         name = "embedType"

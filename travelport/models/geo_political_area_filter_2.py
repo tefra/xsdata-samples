@@ -12,7 +12,7 @@ from travelport.models.type_geo_political_area_type_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeoPoliticalAreaFilter2:
     """
     Retrieve part or parts of profile by a particular geographic location
@@ -26,28 +26,25 @@ class GeoPoliticalAreaFilter2:
         name = "GeoPoliticalAreaFilter"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    filter_type: None | TypeGeoPoliticalAreaFilterType2 = field(
-        default=None,
+    filter_type: TypeGeoPoliticalAreaFilterType2 = field(
         metadata={
             "name": "FilterType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    geo_political_area_type: None | TypeGeoPoliticalAreaType2 = field(
-        default=None,
+    geo_political_area_type: TypeGeoPoliticalAreaType2 = field(
         metadata={
             "name": "GeoPoliticalAreaType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    geo_political_area_code: None | str = field(
-        default=None,
+    geo_political_area_code: str = field(
         metadata={
             "name": "GeoPoliticalAreaCode",
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        },
+        }
     )

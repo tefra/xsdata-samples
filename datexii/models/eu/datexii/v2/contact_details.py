@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.ownership_type_enum import OwnershipTypeEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContactDetails(Contact):
     """
     Details for some person, service or the parking site itself, especially
@@ -250,17 +250,15 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

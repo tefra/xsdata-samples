@@ -10,7 +10,7 @@ from .multilanguage_long_name import MultilanguageLongName
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Prms:
     """
     This metaclass represents the ability to specify a parameter table.

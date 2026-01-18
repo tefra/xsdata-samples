@@ -8,7 +8,7 @@ from .t_flow_element import TFlowElement
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TSequenceFlow(TFlowElement):
     class Meta:
         name = "tSequenceFlow"
@@ -21,21 +21,19 @@ class TSequenceFlow(TFlowElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    source_ref: None | str = field(
-        default=None,
+    source_ref: str = field(
         metadata={
             "name": "sourceRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    target_ref: None | str = field(
-        default=None,
+    target_ref: str = field(
         metadata={
             "name": "targetRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     is_immediate: None | bool = field(
         default=None,

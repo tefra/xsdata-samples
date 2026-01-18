@@ -16,7 +16,7 @@ from ipxact.models.view_ref import ViewRef
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractionTypes:
     """
     :ivar abstraction_type: The abstraction type/level of this
@@ -39,7 +39,7 @@ class AbstractionTypes:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AbstractionType:
         """
         :ivar view_ref: A reference to a view name in the file for which
@@ -58,13 +58,12 @@ class AbstractionTypes:
                 "type": "Element",
             },
         )
-        abstraction_ref: None | ConfigurableLibraryRefType = field(
-            default=None,
+        abstraction_ref: ConfigurableLibraryRefType = field(
             metadata={
                 "name": "abstractionRef",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         port_maps: None | AbstractionTypes.AbstractionType.PortMaps = field(
             default=None,
@@ -81,7 +80,7 @@ class AbstractionTypes:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PortMaps:
             """
             :ivar port_map: Maps a component's port to a port in a bus
@@ -101,7 +100,7 @@ class AbstractionTypes:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class PortMap:
                 """
                 :ivar logical_port: Logical port from abstraction
@@ -118,16 +117,12 @@ class AbstractionTypes:
                     inversion.
                 """
 
-                logical_port: (
-                    None
-                    | AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort
-                ) = field(
-                    default=None,
+                logical_port: AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort = field(
                     metadata={
                         "name": "logicalPort",
                         "type": "Element",
                         "required": True,
-                    },
+                    }
                 )
                 physical_port: (
                     None
@@ -174,7 +169,7 @@ class AbstractionTypes:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class LogicalPort:
                     """
                     :ivar name: Bus port name as specified inside the
@@ -183,12 +178,11 @@ class AbstractionTypes:
                     :ivar id:
                     """
 
-                    name: None | str = field(
-                        default=None,
+                    name: str = field(
                         metadata={
                             "type": "Element",
                             "required": True,
-                        },
+                        }
                     )
                     range: None | Range = field(
                         default=None,
@@ -204,7 +198,7 @@ class AbstractionTypes:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class PhysicalPort:
                     """
                     :ivar name: Component port name as specified inside
@@ -214,14 +208,13 @@ class AbstractionTypes:
                     :ivar id:
                     """
 
-                    name: None | str = field(
-                        default=None,
+                    name: str = field(
                         metadata={
                             "type": "Element",
                             "required": True,
                             "white_space": "collapse",
                             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
-                        },
+                        }
                     )
                     part_select: None | PartSelect = field(
                         default=None,
@@ -247,7 +240,7 @@ class AbstractionTypes:
                         },
                     )
 
-                    @dataclass
+                    @dataclass(kw_only=True)
                     class SubPort:
                         """
                         :ivar name: Component port subPort name as
@@ -256,14 +249,13 @@ class AbstractionTypes:
                         :ivar id:
                         """
 
-                        name: None | str = field(
-                            default=None,
+                        name: str = field(
                             metadata={
                                 "type": "Element",
                                 "required": True,
                                 "white_space": "collapse",
                                 "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
-                            },
+                            }
                         )
                         part_select: None | PartSelect = field(
                             default=None,

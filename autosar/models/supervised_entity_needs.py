@@ -22,7 +22,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SupervisedEntityNeeds:
     """
     Specifies the abstract needs on the configuration of the Watchdog
@@ -106,14 +106,13 @@ class SupervisedEntityNeeds:
     class Meta:
         name = "SUPERVISED-ENTITY-NEEDS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SupervisedEntityNeeds.ShortNameFragments = (
         field(
@@ -252,7 +251,7 @@ class SupervisedEntityNeeds:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -263,7 +262,7 @@ class SupervisedEntityNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -274,7 +273,7 @@ class SupervisedEntityNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Checkpointss:
         supervised_entity_checkpoint_needs_ref_conditional: list[
             SupervisedEntityCheckpointNeedsRefConditional

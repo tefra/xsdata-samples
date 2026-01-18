@@ -14,7 +14,7 @@ from .variable_access_subtypes_enum import VariableAccessSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VariableAccessInEcuInstanceRef:
     """
     :ivar context_root_composition_ref:
@@ -81,35 +81,32 @@ class VariableAccessInEcuInstanceRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextRootCompositionRef(Ref):
-        dest: None | RootSwCompositionPrototypeSubtypesEnum = field(
-            default=None,
+        dest: RootSwCompositionPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContextAtomicComponentRef(Ref):
-        dest: None | SwComponentPrototypeSubtypesEnum = field(
-            default=None,
+        dest: SwComponentPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetVariableAccessRef(Ref):
-        dest: None | VariableAccessSubtypesEnum = field(
-            default=None,
+        dest: VariableAccessSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -8,7 +8,7 @@ from travelport.models.hotel_reservation import HotelReservation
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelRetrieveRsp(BaseRsp1):
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"

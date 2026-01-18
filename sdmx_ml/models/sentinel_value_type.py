@@ -8,7 +8,7 @@ from sdmx_ml.models.name import Name
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SentinelValueType:
     """
     SentinelValueType defines the structure of a sentinel value.
@@ -39,10 +39,9 @@ class SentinelValueType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    value: None | object = field(
-        default=None,
+    value: object = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

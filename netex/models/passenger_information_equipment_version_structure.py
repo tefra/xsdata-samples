@@ -54,7 +54,7 @@ from .vehicle_stopping_position_ref import VehicleStoppingPositionRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassengerInformationEquipmentVersionStructure(
     PassengerEquipmentVersionStructure
 ):

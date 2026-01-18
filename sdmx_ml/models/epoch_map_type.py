@@ -8,21 +8,19 @@ from sdmx_ml.models.epoch_period_type import EpochPeriodType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class EpochMapType(EpochMapBaseType):
-    base_period: None | str = field(
-        default=None,
+    base_period: str = field(
         metadata={
             "name": "basePeriod",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    epoch_period: None | EpochPeriodType = field(
-        default=None,
+    epoch_period: EpochPeriodType = field(
         metadata={
             "name": "epochPeriod",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

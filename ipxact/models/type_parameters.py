@@ -7,7 +7,7 @@ from ipxact.models.type_parameter import TypeParameter
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeParameters:
     """
     list of port type parameters (e.g. template or constructor parameters
@@ -34,7 +34,7 @@ class TypeParameters:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceTypeDef:
     """
     Definition of a single service type defintion.
@@ -54,13 +54,12 @@ class ServiceTypeDef:
         name = "serviceTypeDef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    type_name: None | ServiceTypeDef.TypeName = field(
-        default=None,
+    type_name: ServiceTypeDef.TypeName = field(
         metadata={
             "name": "typeName",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     type_definition: list[ServiceTypeDef.TypeDefinition] = field(
         default_factory=list,
@@ -84,7 +83,7 @@ class ServiceTypeDef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeName:
         """
         :ivar value:
@@ -106,7 +105,7 @@ class ServiceTypeDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TypeDefinition:
         value: str = field(
             default="",

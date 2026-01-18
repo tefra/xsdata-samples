@@ -9,31 +9,25 @@ from travelport.models.provider_reservation_display_details_req import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProviderReservationDisplayServicePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | ProviderReservationDisplayServicePortTypeServiceInput.Body = (
-        field(
-            default=None,
-            metadata={
-                "name": "Body",
-                "type": "Element",
-            },
-        )
+    body: ProviderReservationDisplayServicePortTypeServiceInput.Body = field(
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        provider_reservation_display_details_req: (
-            None | ProviderReservationDisplayDetailsReq
-        ) = field(
-            default=None,
+        provider_reservation_display_details_req: ProviderReservationDisplayDetailsReq = field(
             metadata={
                 "name": "ProviderReservationDisplayDetailsReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+            }
         )

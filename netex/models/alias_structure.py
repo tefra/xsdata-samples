@@ -7,16 +7,15 @@ from .private_code import PrivateCode
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AliasStructure:
-    private_code: None | PrivateCode = field(
-        default=None,
+    private_code: PrivateCode = field(
         metadata={
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     identifier_type: None | str = field(
         default=None,

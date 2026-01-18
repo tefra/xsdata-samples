@@ -7,7 +7,7 @@ from sdmx_ml.models.text_type import TextType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Text(TextType):
     """
     Text is a reusable element, used for providing a language specific text

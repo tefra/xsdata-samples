@@ -8,7 +8,7 @@ from .sanitary_facility_enumeration import SanitaryFacilityEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SanitaryFacilityList:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

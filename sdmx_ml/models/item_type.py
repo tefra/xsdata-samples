@@ -15,7 +15,7 @@ from sdmx_ml.models.to_vtl_mapping_type import ToVtlMappingType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ItemType(ItemBaseType):
     """
     ItemType is an abstract base type for all items with in an item scheme.
@@ -145,7 +145,7 @@ class ItemType(ItemBaseType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class BaseOrganisationType(ItemType):
     """
     BaseOrganisationType is an abstract base type the forms the basis for
@@ -161,7 +161,7 @@ class BaseOrganisationType(ItemType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CategoryType(ItemType):
     """
     CategoryType describes the details of a category.
@@ -180,7 +180,7 @@ class CategoryType(ItemType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CodeType(ItemType):
     """
     CodeType describes the structure of a code.
@@ -200,7 +200,7 @@ class CodeType(ItemType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ConceptBaseType(ItemType):
     """
     ConceptBaseType is an abstract base type the forms the basis of the
@@ -217,7 +217,7 @@ class ConceptBaseType(ItemType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ReportingCategoryBaseType(ItemType):
     """
     ReportingCategoryBaseType is an abstract base type that serves as the
@@ -233,7 +233,7 @@ class ReportingCategoryBaseType(ItemType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UnnestedItemType(ItemType):
     """
     UnnestedItemType is an abstract base type for all items with in an item
@@ -249,7 +249,7 @@ class UnnestedItemType(ItemType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Category(CategoryType):
     """
     Category represents a set of nested categories which describe a simple
@@ -262,7 +262,7 @@ class Category(CategoryType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Code(CodeType):
     """
     Code describes a code in a codelist.
@@ -278,7 +278,7 @@ class Code(CodeType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ConceptType(ConceptBaseType):
     """
     ConceptType describes the details of a concept.
@@ -312,7 +312,7 @@ class ConceptType(ConceptBaseType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CustomTypeBaseType(UnnestedItemType):
     """
     CustomTypeBaseType defines the base refinement of the CustomTypeType.
@@ -329,7 +329,7 @@ class CustomTypeBaseType(UnnestedItemType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GeoRefCodeType(CodeType):
     """
     GeoRefCodeType is the abstract base type defining the structure of
@@ -337,7 +337,7 @@ class GeoRefCodeType(CodeType):
     """
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class NamePersonalisationBaseType(UnnestedItemType):
     """
     NamePersonalisationBaseType defines the base refinement of the
@@ -355,7 +355,7 @@ class NamePersonalisationBaseType(UnnestedItemType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class OrganisationType(BaseOrganisationType):
     """
     OrganisationType in an abstract type which describes the structure of
@@ -377,7 +377,7 @@ class OrganisationType(BaseOrganisationType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ReportingCategoryType(ReportingCategoryBaseType):
     """
     ReportingCategoryType describes the structure of a reporting category,
@@ -414,28 +414,26 @@ class ReportingCategoryType(ReportingCategoryBaseType):
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class StructuralMetadata:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.datastructure\.DataStructure=.+|.+\.metadatastructure\.MetadataStructure=.+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class ProvisioningMetadata:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.datastructure\.Dataflow=.+|.+\.metadatastructure\.Metadataflow=.+",
-            },
+            }
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RulesetBaseType(UnnestedItemType):
     """
     RulesetBaseType defines the base refinement of the RulesetType.
@@ -452,7 +450,7 @@ class RulesetBaseType(UnnestedItemType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TransformationBaseType(UnnestedItemType):
     """
     TransformationBaseType defines the base refinement of the
@@ -470,7 +468,7 @@ class TransformationBaseType(UnnestedItemType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UserDefinedOperatorBaseType(UnnestedItemType):
     """
     UserDefinedOperatorBaseType defines the base refinement of the
@@ -488,7 +486,7 @@ class UserDefinedOperatorBaseType(UnnestedItemType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class VtlMappingBaseType(UnnestedItemType):
     """
     VtlMappingBaseType defines the base refinement of the VtlMappingType.
@@ -505,7 +503,7 @@ class VtlMappingBaseType(UnnestedItemType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class AgencyType(OrganisationType):
     """
     AgencyType defines the structure of an agency description.
@@ -523,7 +521,7 @@ class AgencyType(OrganisationType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Concept(ConceptType):
     """
     Concept describes the details of a concept within a concept scheme.
@@ -535,7 +533,7 @@ class Concept(ConceptType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CustomTypeType(CustomTypeBaseType):
     """
     CustomTypeType defines the structure of a custom type.
@@ -561,23 +559,21 @@ class CustomTypeType(CustomTypeBaseType):
         conversion when a component has a null value.
     """
 
-    vtl_scalar_type: None | str = field(
-        default=None,
+    vtl_scalar_type: str = field(
         metadata={
             "name": "VtlScalarType",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
-    data_type: None | SimpleDataType | str = field(
-        default=None,
+    data_type: SimpleDataType | str = field(
         metadata={
             "name": "DataType",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
     vtl_literal_format: None | str = field(
         default=None,
@@ -605,7 +601,7 @@ class CustomTypeType(CustomTypeBaseType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataConsumerType(OrganisationType):
     """
     DataConsumerType defines the structure of a data consumer description.
@@ -623,7 +619,7 @@ class DataConsumerType(OrganisationType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataProviderType(OrganisationType):
     """
     DataProviderType defines the structure of a data provider description.
@@ -641,7 +637,7 @@ class DataProviderType(OrganisationType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GeoFeatureSetCodeType(GeoRefCodeType):
     """
     GeoFeatureSetCodeType defines the structure of a geogrphic code.
@@ -651,16 +647,15 @@ class GeoFeatureSetCodeType(GeoRefCodeType):
         pattern (see section 6).
     """
 
-    value: None | str = field(
-        default=None,
+    value: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GeoGridCodeType(GeoRefCodeType):
     """
     GeoGridCodeType defines the structure of a geographic grid cell.
@@ -669,18 +664,17 @@ class GeoGridCodeType(GeoRefCodeType):
         grid.
     """
 
-    geo_cell: None | str = field(
-        default=None,
+    geo_cell: str = field(
         metadata={
             "name": "GeoCell",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataProviderType(OrganisationType):
     """
     MetadataProviderType defines the structure of a metadata provider
@@ -699,7 +693,7 @@ class MetadataProviderType(OrganisationType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class NamePersonalisationType(NamePersonalisationBaseType):
     """
     NamePersonalisationType defines the structure of a name
@@ -718,35 +712,32 @@ class NamePersonalisationType(NamePersonalisationBaseType):
         variable.
     """
 
-    vtl_default_name: None | str = field(
-        default=None,
+    vtl_default_name: str = field(
         metadata={
             "name": "VtlDefaultName",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
-    personalised_name: None | str = field(
-        default=None,
+    personalised_name: str = field(
         metadata={
             "name": "PersonalisedName",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
-    vtl_artefact: None | str = field(
-        default=None,
+    vtl_artefact: str = field(
         metadata={
             "name": "vtlArtefact",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class OrganisationUnitType(OrganisationType):
     """
     OrganisationUnitType defines the structure of an organisation unit
@@ -766,7 +757,7 @@ class OrganisationUnitType(OrganisationType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ReportingCategory(ReportingCategoryType):
     """
     ReportingCateogry defines a reporting category, which is used to group
@@ -779,7 +770,7 @@ class ReportingCategory(ReportingCategoryType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RulesetType(RulesetBaseType):
     """
     RulesetType defines the structure of a ruleset.
@@ -796,34 +787,31 @@ class RulesetType(RulesetBaseType):
         defined. In VTL 2.0, this is value domain or variable.
     """
 
-    ruleset_definition: None | str = field(
-        default=None,
+    ruleset_definition: str = field(
         metadata={
             "name": "RulesetDefinition",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
-    ruleset_type: None | str = field(
-        default=None,
+    ruleset_type: str = field(
         metadata={
             "name": "rulesetType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    ruleset_scope: None | str = field(
-        default=None,
+    ruleset_scope: str = field(
         metadata={
             "name": "rulesetScope",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class TransformationType(TransformationBaseType):
     """
     TransformationType defines the structure of a transformation.
@@ -849,35 +837,32 @@ class TransformationType(TransformationBaseType):
         transformations within the same transformation scheme.
     """
 
-    expression: None | str = field(
-        default=None,
+    expression: str = field(
         metadata={
             "name": "Expression",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
-    result: None | str = field(
-        default=None,
+    result: str = field(
         metadata={
             "name": "Result",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
-    is_persistent: None | bool = field(
-        default=None,
+    is_persistent: bool = field(
         metadata={
             "name": "isPersistent",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UserDefinedOperatorType(UserDefinedOperatorBaseType):
     """
     UserDefinedOperatorType defines the structure of a user defined
@@ -893,18 +878,17 @@ class UserDefinedOperatorType(UserDefinedOperatorBaseType):
         their data types, the VTL expression that defines its behaviour.
     """
 
-    operator_definition: None | str = field(
-        default=None,
+    operator_definition: str = field(
         metadata={
             "name": "OperatorDefinition",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class VtlMappingType(VtlMappingBaseType):
     """
     VtlMappingType defines the structure of a single mapping between the
@@ -976,46 +960,42 @@ class VtlMappingType(VtlMappingBaseType):
             "max_occurs": 3,
         },
     )
-    alias: None | str = field(
-        default=None,
+    alias: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Dataflow:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.datastructure\.Dataflow=.+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Codelist:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.codelist\.Codelist=.+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Concept:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.conceptscheme\.Concept=.+",
-            },
+            }
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Agency(AgencyType):
     """
     Agency is an organisation which maintains structural metadata such as
@@ -1028,7 +1008,7 @@ class Agency(AgencyType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CustomType(CustomTypeType):
     """
     CustomType details a custom type within a custom type scheme.
@@ -1040,7 +1020,7 @@ class CustomType(CustomTypeType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataConsumer(DataConsumerType):
     """
     DataConsumer describes an organisation using data as input for further
@@ -1053,7 +1033,7 @@ class DataConsumer(DataConsumerType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataProvider(DataProviderType):
     """
     DataProvider describes an organisation that produces data.
@@ -1065,7 +1045,7 @@ class DataProvider(DataProviderType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GeoFeatureSetCode(GeoFeatureSetCodeType):
     """
     Is a geographic code in a geographic codelist.
@@ -1080,7 +1060,7 @@ class GeoFeatureSetCode(GeoFeatureSetCodeType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class GeoGridCode(GeoGridCodeType):
     """
     GeoGridCode is a code the represents a geographic grid cell that
@@ -1093,7 +1073,7 @@ class GeoGridCode(GeoGridCodeType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataProvider(MetadataProviderType):
     """
     MetadataProvider describes an organisation that produces metadata .
@@ -1105,7 +1085,7 @@ class MetadataProvider(MetadataProviderType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class NamePersonalisation(NamePersonalisationType):
     """
     NamePersonalisation details a name personalisation that is used in a
@@ -1118,7 +1098,7 @@ class NamePersonalisation(NamePersonalisationType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class OrganisationUnit(OrganisationUnitType):
     """
     OrganisationUnit describes a generic organisation, which serves not
@@ -1131,7 +1111,7 @@ class OrganisationUnit(OrganisationUnitType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Ruleset(RulesetType):
     """
     Ruleset details a ruleset within a ruleset scheme.
@@ -1143,7 +1123,7 @@ class Ruleset(RulesetType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Transformation(TransformationType):
     """
     Transformation describes the details of a single transformation within
@@ -1156,7 +1136,7 @@ class Transformation(TransformationType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UserDefinedOperator(UserDefinedOperatorType):
     """
     UserDefinedOperator details a user defined operators within a user
@@ -1169,7 +1149,7 @@ class UserDefinedOperator(UserDefinedOperatorType):
         )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class VtlMapping(VtlMappingType):
     """
     VtlMapping details a mapping between SDMX and VTL transformation.

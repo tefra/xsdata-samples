@@ -9,7 +9,7 @@ from ipxact.models.unsigned_positive_longint_expression import (
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddressUnitBits(UnsignedPositiveLongintExpression):
     """
     The number of data bits in an addressable unit.

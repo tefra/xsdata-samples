@@ -9,7 +9,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BlueprintMapping:
     """
     This meta-class represents the ability to map two an object and its
@@ -65,24 +65,22 @@ class BlueprintMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintRef(Ref):
-        dest: None | AtpBlueprintSubtypesEnum = field(
-            default=None,
+        dest: AtpBlueprintSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DerivedObjectRef(Ref):
-        dest: None | AtpBlueprintableSubtypesEnum = field(
-            default=None,
+        dest: AtpBlueprintableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -7,7 +7,7 @@ from .t_global_conversation import TGlobalConversation
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GlobalConversation(TGlobalConversation):
     class Meta:
         name = "globalConversation"

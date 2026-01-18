@@ -15,7 +15,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwAxisGrouped:
     """
     An SwAxisGrouped is an axis which is shared between multiple
@@ -128,24 +128,22 @@ class SwAxisGrouped:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SharedAxisTypeRef(Ref):
-        dest: None | ApplicationPrimitiveDataTypeSubtypesEnum = field(
-            default=None,
+        dest: ApplicationPrimitiveDataTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McDataInstanceRef(Ref):
-        dest: None | McDataInstanceSubtypesEnum = field(
-            default=None,
+        dest: McDataInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

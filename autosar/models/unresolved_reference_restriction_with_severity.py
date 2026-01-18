@@ -7,7 +7,7 @@ from .severity_enum import SeverityEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UnresolvedReferenceRestrictionWithSeverity:
     """
     This restriction defines the severity level of unresolved references.

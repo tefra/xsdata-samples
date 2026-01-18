@@ -25,7 +25,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticInhibitSourceEventMapping:
     """
     This meta-class represents the ability to map a
@@ -102,14 +102,13 @@ class DiagnosticInhibitSourceEventMapping:
     class Meta:
         name = "DIAGNOSTIC-INHIBIT-SOURCE-EVENT-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticInhibitSourceEventMapping.ShortNameFragments
@@ -232,7 +231,7 @@ class DiagnosticInhibitSourceEventMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -243,7 +242,7 @@ class DiagnosticInhibitSourceEventMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -254,35 +253,32 @@ class DiagnosticInhibitSourceEventMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticEventRef(Ref):
-        dest: None | DiagnosticEventSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventGroupRef(Ref):
-        dest: None | DiagnosticFimEventGroupSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticFimEventGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InhibitionSourceRef(Ref):
-        dest: None | DiagnosticFunctionInhibitSourceSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticFunctionInhibitSourceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

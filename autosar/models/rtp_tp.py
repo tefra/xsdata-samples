@@ -9,7 +9,7 @@ from .udp_tp import UdpTp
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RtpTp:
     """
     RTP over UDP or over TCP as transport protocol.
@@ -65,7 +65,7 @@ class RtpTp:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TcpUdpConfig:
         tcp_tp: None | TcpTp = field(
             default=None,

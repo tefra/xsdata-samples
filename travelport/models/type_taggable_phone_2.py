@@ -9,7 +9,7 @@ from travelport.models.type_phone_2 import TypePhone2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeTaggablePhone2(TypePhone2):
     """
     Base type of a phone that is taggable.

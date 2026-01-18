@@ -9,7 +9,7 @@ from .sales_offer_package_substitution_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SalesOfferPackageSubstitutionRef(
     SalesOfferPackageSubstitutionRefStructure
 ):

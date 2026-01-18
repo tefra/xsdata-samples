@@ -19,7 +19,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HealthChannelSupervision:
     """
     This element defines a health channel representing the status of a
@@ -85,14 +85,13 @@ class HealthChannelSupervision:
     class Meta:
         name = "HEALTH-CHANNEL-SUPERVISION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | HealthChannelSupervision.ShortNameFragments
@@ -191,7 +190,7 @@ class HealthChannelSupervision:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -202,7 +201,7 @@ class HealthChannelSupervision:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -213,13 +212,12 @@ class HealthChannelSupervision:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SupervisionRef(Ref):
-        dest: None | GlobalSupervisionSubtypesEnum = field(
-            default=None,
+        dest: GlobalSupervisionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

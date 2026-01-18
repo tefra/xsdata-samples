@@ -7,7 +7,7 @@ from travelport.models.type_taggable_phone_2 import TypeTaggablePhone2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlternateContactPhone2(TypeTaggablePhone2):
     """
     Alternate contact phone.
@@ -22,11 +22,10 @@ class AlternateContactPhone2(TypeTaggablePhone2):
         name = "AlternateContactPhone"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    alternate_contact_ref: None | str = field(
-        default=None,
+    alternate_contact_ref: str = field(
         metadata={
             "name": "AlternateContactRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from typing import ForwardRef
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocBr:
     class Meta:
         name = "StrucDoc.Br"
@@ -48,7 +48,7 @@ class StrucDocContentRevised(Enum):
     DELETE = "delete"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocFootnoteRef:
     class Meta:
         name = "StrucDoc.FootnoteRef"
@@ -74,13 +74,12 @@ class StrucDocFootnoteRef:
             "tokens": True,
         },
     )
-    idref: None | str = field(
-        default=None,
+    idref: str = field(
         metadata={
             "name": "IDREF",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
@@ -89,7 +88,7 @@ class StrucDocListListType(Enum):
     UNORDERED = "unordered"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocSub:
     class Meta:
         name = "StrucDoc.Sub"
@@ -104,7 +103,7 @@ class StrucDocSub:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocSup:
     class Meta:
         name = "StrucDoc.Sup"
@@ -243,7 +242,7 @@ class StrucDocTrValign(Enum):
     BASELINE = "baseline"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocCaption:
     class Meta:
         name = "StrucDoc.Caption"
@@ -306,7 +305,7 @@ class StrucDocCaption:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocCol:
     class Meta:
         name = "StrucDoc.Col"
@@ -370,7 +369,7 @@ class StrucDocCol:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocTitleContent:
     class Meta:
         name = "StrucDoc.TitleContent"
@@ -438,7 +437,7 @@ class StrucDocTitleContent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocColgroup:
     class Meta:
         name = "StrucDoc.Colgroup"
@@ -509,7 +508,7 @@ class StrucDocColgroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocRenderMultiMedia:
     class Meta:
         name = "StrucDoc.RenderMultiMedia"
@@ -552,7 +551,7 @@ class StrucDocRenderMultiMedia:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocTitleFootnote:
     class Meta:
         name = "StrucDoc.TitleFootnote"
@@ -610,7 +609,7 @@ class StrucDocTitleFootnote:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocContent:
     class Meta:
         name = "StrucDoc.Content"
@@ -694,7 +693,7 @@ class StrucDocContent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocTitle:
     class Meta:
         name = "StrucDoc.Title"
@@ -770,7 +769,7 @@ class StrucDocTitle:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocFootnote:
     class Meta:
         name = "StrucDoc.Footnote"
@@ -853,7 +852,7 @@ class StrucDocFootnote:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocLinkHtml:
     class Meta:
         name = "StrucDoc.LinkHtml"
@@ -931,7 +930,7 @@ class StrucDocLinkHtml:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocParagraph:
     class Meta:
         name = "StrucDoc.Paragraph"
@@ -1014,7 +1013,7 @@ class StrucDocParagraph:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocTh:
     class Meta:
         name = "StrucDoc.Th"
@@ -1153,7 +1152,7 @@ class StrucDocTh:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocItem:
     class Meta:
         name = "StrucDoc.Item"
@@ -1251,7 +1250,7 @@ class StrucDocItem:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocList:
     class Meta:
         name = "StrucDoc.List"
@@ -1301,7 +1300,7 @@ class StrucDocList:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocTd:
     class Meta:
         name = "StrucDoc.Td"
@@ -1450,7 +1449,7 @@ class StrucDocTd:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocTr:
     class Meta:
         name = "StrucDoc.Tr"
@@ -1516,7 +1515,7 @@ class StrucDocTr:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocTbody:
     class Meta:
         name = "StrucDoc.Tbody"
@@ -1576,7 +1575,7 @@ class StrucDocTbody:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocTfoot:
     class Meta:
         name = "StrucDoc.Tfoot"
@@ -1636,7 +1635,7 @@ class StrucDocTfoot:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocThead:
     class Meta:
         name = "StrucDoc.Thead"
@@ -1696,7 +1695,7 @@ class StrucDocThead:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocTable:
     class Meta:
         name = "StrucDoc.Table"
@@ -1809,7 +1808,7 @@ class StrucDocTable:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StrucDocText:
     class Meta:
         name = "StrucDoc.Text"

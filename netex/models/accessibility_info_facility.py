@@ -9,14 +9,13 @@ from .accessibility_info_facility_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccessibilityInfoFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: None | AccessibilityInfoFacilityEnumeration = field(
-        default=None,
+    value: AccessibilityInfoFacilityEnumeration = field(
         metadata={
             "required": True,
-        },
+        }
     )

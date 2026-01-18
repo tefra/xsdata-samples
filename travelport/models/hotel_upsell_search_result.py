@@ -8,7 +8,7 @@ from travelport.models.hotel_upsell_qualify import HotelUpsellQualify
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelUpsellSearchResult:
     """
     Hotel upsell search criteria result having matching offer and
@@ -27,11 +27,10 @@ class HotelUpsellSearchResult:
             "max_occurs": 999,
         },
     )
-    hotel_upsell_offer: None | HotelUpsellOffer = field(
-        default=None,
+    hotel_upsell_offer: HotelUpsellOffer = field(
         metadata={
             "name": "HotelUpsellOffer",
             "type": "Element",
             "required": True,
-        },
+        }
     )

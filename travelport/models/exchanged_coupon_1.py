@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExchangedCoupon1:
     """
     The coupon numbers that were used in the exchange process to create the
@@ -23,14 +23,13 @@ class ExchangedCoupon1:
         name = "ExchangedCoupon"
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
-    ticket_number: None | str = field(
-        default=None,
+    ticket_number: str = field(
         metadata={
             "name": "TicketNumber",
             "type": "Attribute",
             "required": True,
             "length": 13,
-        },
+        }
     )
     coupon_number: None | str = field(
         default=None,

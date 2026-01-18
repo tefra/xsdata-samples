@@ -10,7 +10,7 @@ from travelport.models.update_air_segment import UpdateAirSegment
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingAirSegmentReq(BookingBaseReq):
     """
     Used for Air Segment Sell and modification.

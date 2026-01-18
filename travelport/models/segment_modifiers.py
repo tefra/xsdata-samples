@@ -9,7 +9,7 @@ from travelport.models.ticket_validity import TicketValidity
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SegmentModifiers:
     """
     To be used to modify the ticket modifiers for air segment.
@@ -26,13 +26,12 @@ class SegmentModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_segment_ref: None | AirSegmentRef = field(
-        default=None,
+    air_segment_ref: AirSegmentRef = field(
         metadata={
             "name": "AirSegmentRef",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     ticket_validity: None | TicketValidity = field(
         default=None,

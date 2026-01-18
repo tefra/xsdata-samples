@@ -25,7 +25,7 @@ from .trigger_mode import TriggerMode
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MultiplexedIPdu:
     """
     A MultiplexedPdu (i.e.
@@ -172,14 +172,13 @@ class MultiplexedIPdu:
     class Meta:
         name = "MULTIPLEXED-I-PDU"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | MultiplexedIPdu.ShortNameFragments = field(
         default=None,
@@ -356,7 +355,7 @@ class MultiplexedIPdu:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -367,7 +366,7 @@ class MultiplexedIPdu:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -378,7 +377,7 @@ class MultiplexedIPdu:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DynamicParts:
         dynamic_part: list[DynamicPart] = field(
             default_factory=list,
@@ -389,7 +388,7 @@ class MultiplexedIPdu:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StaticParts:
         static_part: list[StaticPart] = field(
             default_factory=list,

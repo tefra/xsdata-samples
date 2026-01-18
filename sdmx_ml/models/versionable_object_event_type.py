@@ -10,7 +10,7 @@ from sdmx_ml.models.wildcard_type import WildcardType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class VersionableObjectEventType:
     """
     VersionableObjectEventType describes the structure of a reference to a
@@ -56,31 +56,28 @@ class VersionableObjectEventType:
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Urn:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Id:
-        value: None | str | WildCardValueType = field(
-            default=None,
+        value: str | WildCardValueType = field(
             metadata={
                 "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Version:
-        value: None | str | WildcardType | WildCardValueType = field(
-            default=None,
+        value: str | WildcardType | WildCardValueType = field(
             metadata={
                 "required": True,
                 "pattern": r"(0|[1-9]\d*)(\.(0|[1-9]\d*))?",
-            },
+            }
         )

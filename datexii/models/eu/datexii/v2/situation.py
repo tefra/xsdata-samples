@@ -15,7 +15,7 @@ from datexii.models.eu.datexii.v2.situation_versioned_reference import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Situation:
     """
     An identifiable instance of a traffic/travel situation comprising one
@@ -65,14 +65,13 @@ class Situation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    header_information: None | HeaderInformation = field(
-        default=None,
+    header_information: HeaderInformation = field(
         metadata={
             "name": "headerInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     situation_record: list[SituationRecord] = field(
         default_factory=list,
@@ -91,17 +90,15 @@ class Situation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

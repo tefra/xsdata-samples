@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProcessDesignToMachineDesignMappingSet:
     """
     This meta-class acts as a bucket for collecting
@@ -88,14 +88,13 @@ class ProcessDesignToMachineDesignMappingSet:
     class Meta:
         name = "PROCESS-DESIGN-TO-MACHINE-DESIGN-MAPPING-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ProcessDesignToMachineDesignMappingSet.ShortNameFragments
@@ -199,7 +198,7 @@ class ProcessDesignToMachineDesignMappingSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -210,7 +209,7 @@ class ProcessDesignToMachineDesignMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -221,7 +220,7 @@ class ProcessDesignToMachineDesignMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProcessDesignToMachineDesignMappings:
         process_design_to_machine_design_mapping: list[
             ProcessDesignToMachineDesignMapping

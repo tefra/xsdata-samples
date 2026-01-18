@@ -9,7 +9,7 @@ from .type_of_machine_readability_ref import TypeOfMachineReadabilityRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypesOfMachineReadabilitiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfMachineReadabilities_RelStructure"

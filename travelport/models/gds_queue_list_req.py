@@ -9,7 +9,7 @@ from travelport.models.queue_selector_type import QueueSelectorType
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GdsQueueListReq(BaseReq1):
     """
     Use this request to list the pnrs on a queue.
@@ -42,23 +42,21 @@ class GdsQueueListReq(BaseReq1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    gds_queue_selector: None | QueueSelectorType = field(
-        default=None,
+    gds_queue_selector: QueueSelectorType = field(
         metadata={
             "name": "GdsQueueSelector",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    provider_code: None | str = field(
-        default=None,
+    provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        },
+        }
     )
     pseudo_city_code: None | str = field(
         default=None,

@@ -21,7 +21,7 @@ from travelport.models.type_fare_rule_type import TypeFareRuleType
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseAirPriceReq(BaseCoreReq1):
     """
     Parameters
@@ -90,14 +90,13 @@ class BaseAirPriceReq(BaseCoreReq1):
         "PriceIgnoreAvailability" and "PriceWithAvailability"
     """
 
-    air_itinerary: None | AirItinerary = field(
-        default=None,
+    air_itinerary: AirItinerary = field(
         metadata={
             "name": "AirItinerary",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "required": True,
-        },
+        }
     )
     air_pricing_modifiers: None | AirPricingModifiers = field(
         default=None,

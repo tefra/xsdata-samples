@@ -14,41 +14,37 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ErrorElementType:
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
             "required": True,
-        },
+        }
     )
-    description: None | str = field(
-        default=None,
+    description: str = field(
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
             "required": True,
-        },
+        }
     )
-    type_value: None | ErrorElementTypeType = field(
-        default=None,
+    type_value: ErrorElementTypeType = field(
         metadata={
             "name": "Type",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
             "required": True,
-        },
+        }
     )
-    level: None | ErrorElementTypeLevel = field(
-        default=None,
+    level: ErrorElementTypeLevel = field(
         metadata={
             "name": "Level",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
             "required": True,
-        },
+        }
     )

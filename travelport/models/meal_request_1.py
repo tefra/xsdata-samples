@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MealRequest1:
     """
     Special meal requests like Vegetarian.
@@ -15,12 +15,11 @@ class MealRequest1:
         name = "MealRequest"
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
             "length": 4,
-        },
+        }
     )

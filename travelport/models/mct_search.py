@@ -9,7 +9,7 @@ from travelport.models.type_mct_connection import TypeMctConnection
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MctSearch:
     """
     Search the MCT data for exceptions.
@@ -18,15 +18,14 @@ class MctSearch:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    arrive_station: None | str = field(
-        default=None,
+    arrive_station: str = field(
         metadata={
             "name": "ArriveStation",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
     depart_station: None | str = field(
         default=None,

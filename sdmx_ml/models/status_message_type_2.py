@@ -8,7 +8,7 @@ from sdmx_ml.models.status_type import StatusType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class StatusMessageType2:
     """
     StatusMessageType carries the text of error messages and/or warnings in
@@ -32,10 +32,9 @@ class StatusMessageType2:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
         },
     )
-    status: None | StatusType = field(
-        default=None,
+    status: StatusType = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

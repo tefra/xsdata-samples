@@ -9,7 +9,7 @@ from datexii.models.eu.datexii.v2.speed_value import SpeedValue
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpeedPercentile:
     """
     Details of percentage (from an observation set) of vehicles whose
@@ -23,23 +23,21 @@ class SpeedPercentile:
     :ivar speed_percentile_extension:
     """
 
-    vehicle_percentage: None | PercentageValue = field(
-        default=None,
+    vehicle_percentage: PercentageValue = field(
         metadata={
             "name": "vehiclePercentage",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    speed_percentile: None | SpeedValue = field(
-        default=None,
+    speed_percentile: SpeedValue = field(
         metadata={
             "name": "speedPercentile",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     speed_percentile_extension: None | ExtensionType = field(
         default=None,

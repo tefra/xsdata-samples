@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.rerouting_management_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReroutingManagement(NetworkManagement):
     """
     Rerouting management action that is issued by the network/road

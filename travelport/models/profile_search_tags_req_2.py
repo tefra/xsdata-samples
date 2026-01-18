@@ -7,7 +7,7 @@ from travelport.models.base_req_5 import BaseReq5
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileSearchTagsReq2(BaseReq5):
     """
     Request to retrieve tags for an agency.
@@ -22,11 +22,10 @@ class ProfileSearchTagsReq2(BaseReq5):
         name = "ProfileSearchTagsReq"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    agency_id: None | int = field(
-        default=None,
+    agency_id: int = field(
         metadata={
             "name": "AgencyID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

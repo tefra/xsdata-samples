@@ -7,7 +7,7 @@ from .i_signal_type_enum_simple import ISignalTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ISignalTypeEnum:
     """
     This enumeration defines ISignal types that are used for derivation of
@@ -29,11 +29,10 @@ class ISignalTypeEnum:
     class Meta:
         name = "I-SIGNAL-TYPE-ENUM"
 
-    value: None | ISignalTypeEnumSimple = field(
-        default=None,
+    value: ISignalTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

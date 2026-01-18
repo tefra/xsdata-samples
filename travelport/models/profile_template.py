@@ -10,7 +10,7 @@ from travelport.models.override_definition import OverrideDefinition
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileTemplate:
     """
     Template for a profile.
@@ -72,23 +72,21 @@ class ProfileTemplate:
             "max_occurs": 999,
         },
     )
-    id: None | int = field(
-        default=None,
+    id: int = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     description: None | str = field(
         default=None,
@@ -99,14 +97,13 @@ class ProfileTemplate:
             "max_length": 225,
         },
     )
-    version: None | int = field(
-        default=None,
+    version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        },
+        }
     )
     base_template_id: None | int = field(
         default=None,

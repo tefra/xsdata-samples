@@ -10,7 +10,7 @@ from .point_refs_rel_structure import PointRefsRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupOfPointsVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GroupOfPoints_VersionStructure"

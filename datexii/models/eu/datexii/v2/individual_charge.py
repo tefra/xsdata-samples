@@ -16,7 +16,7 @@ from datexii.models.eu.datexii.v2.used_payment_card import UsedPaymentCard
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndividualCharge:
     """
     Information on the individual charge for parking the specified vehicle.
@@ -44,8 +44,7 @@ class IndividualCharge:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    charge_paid: None | Decimal = field(
-        default=None,
+    charge_paid: Decimal = field(
         metadata={
             "name": "chargePaid",
             "type": "Element",
@@ -53,7 +52,7 @@ class IndividualCharge:
             "required": True,
             "total_digits": 8,
             "fraction_digits": 2,
-        },
+        }
     )
     charge_currency: None | CurrencyEnum = field(
         default=None,

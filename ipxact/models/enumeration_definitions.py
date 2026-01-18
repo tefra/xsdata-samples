@@ -14,7 +14,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnumerationDefinitions:
     class Meta:
         name = "enumerationDefinitions"
@@ -31,7 +31,7 @@ class EnumerationDefinitions:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EnumerationDefinition:
         """
         :ivar name: Unique name
@@ -46,12 +46,11 @@ class EnumerationDefinitions:
         :ivar id:
         """
 
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         display_name: None | DisplayName = field(
             default=None,
@@ -73,12 +72,11 @@ class EnumerationDefinitions:
                 "type": "Element",
             },
         )
-        width: None | UnsignedPositiveIntExpression = field(
-            default=None,
+        width: UnsignedPositiveIntExpression = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         enumerated_value: list[EnumeratedValueType] = field(
             default_factory=list,

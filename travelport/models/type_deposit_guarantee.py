@@ -16,7 +16,7 @@ from travelport.models.type_reserve_requirement import TypeReserveRequirement
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeDepositGuarantee:
     """
     The deposit and guarantee information for a vehicle rental.
@@ -52,13 +52,12 @@ class TypeDepositGuarantee:
     class Meta:
         name = "typeDepositGuarantee"
 
-    purpose: None | TypeReserveRequirement = field(
-        default=None,
+    purpose: TypeReserveRequirement = field(
         metadata={
             "name": "Purpose",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     type_value: None | TypeDepositGuaranteeType = field(
         default=None,

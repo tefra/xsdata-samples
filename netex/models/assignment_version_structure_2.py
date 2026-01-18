@@ -8,7 +8,7 @@ from .multilingual_string import MultilingualString
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AssignmentVersionStructure2(DataManagedObjectStructure):
     class Meta:
         name = "Assignment_VersionStructure_"

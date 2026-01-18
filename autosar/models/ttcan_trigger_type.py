@@ -7,7 +7,7 @@ from .ttcan_trigger_type_simple import TtcanTriggerTypeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TtcanTriggerType:
     """
     This type lists all trigger types for a time window.
@@ -28,11 +28,10 @@ class TtcanTriggerType:
     class Meta:
         name = "TTCAN-TRIGGER-TYPE"
 
-    value: None | TtcanTriggerTypeSimple = field(
-        default=None,
+    value: TtcanTriggerTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

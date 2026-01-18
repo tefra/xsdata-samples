@@ -7,7 +7,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CryptoKeySlotContentAllowedUsage:
     """
     This meta-class restricts the allowed usage of a key stored in the key

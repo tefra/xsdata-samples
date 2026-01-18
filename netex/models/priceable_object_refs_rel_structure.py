@@ -82,7 +82,7 @@ from .vehicle_pooler_profile_ref import VehiclePoolerProfileRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "priceableObjectRefs_RelStructure"

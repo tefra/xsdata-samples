@@ -11,7 +11,7 @@ from travelport.models.type_profile_info_1 import TypeProfileInfo1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgencyGroupInfo1(TypeProfileInfo1):
     """
     Information relating to Agency Group.
@@ -62,13 +62,12 @@ class AgencyGroupInfo1(TypeProfileInfo1):
             "type": "Element",
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from .t_script import TScript
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Script(TScript):
     class Meta:
         name = "script"

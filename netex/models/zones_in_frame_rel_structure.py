@@ -64,7 +64,7 @@ from .zone import Zone
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ZonesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "zonesInFrame_RelStructure"

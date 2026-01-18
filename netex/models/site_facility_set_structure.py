@@ -15,7 +15,7 @@ from .staffing import Staffing
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SiteFacilitySetStructure(FacilitySetVersionStructure):
     access_facility_list: None | AccessFacilityList = field(
         default=None,

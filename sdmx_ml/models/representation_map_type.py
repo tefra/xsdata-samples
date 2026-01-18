@@ -11,7 +11,7 @@ from sdmx_ml.models.value_mapping_type import ValueMappingType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RepresentationMapType(RepresentationMapBaseType):
     source_codelist_or_source_data_type: tuple[str | DataType, ...] = field(
         default_factory=tuple,

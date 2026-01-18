@@ -18,7 +18,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.standard_publication_type i
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Standard:
     """
     standard is the top level element for deposit of metadata about
@@ -34,7 +34,6 @@ class Standard:
         default=None,
         metadata={
             "type": "Element",
-            "required": True,
         },
     )
     content_item: list[ContentItem] = field(

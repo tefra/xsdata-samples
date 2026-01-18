@@ -9,16 +9,15 @@ from generali.models.com.generali.enterprise_services.core.gbs.enterprise.organi
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgreementInterfaceNotifyAgreementInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | AgreementInterfaceNotifyAgreementInputBody = field(
-        default=None,
+    body: AgreementInterfaceNotifyAgreementInputBody = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Endorsement2:
     """
     Restrictions or instructions about the fare or ticket.
@@ -15,13 +15,12 @@ class Endorsement2:
         name = "Endorsement"
         namespace = "http://www.travelport.com/schema/common_v32_0"
 
-    value: None | str = field(
-        default=None,
+    value: str = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 256,
-        },
+        }
     )

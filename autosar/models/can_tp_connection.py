@@ -19,7 +19,7 @@ from .tp_connection_ident import TpConnectionIdent
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanTpConnection:
     """
     A connection identifies the sender and the receiver of this particular
@@ -260,51 +260,47 @@ class CanTpConnection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CanTpChannelRef(Ref):
-        dest: None | CanTpChannelSubtypesEnum = field(
-            default=None,
+        dest: CanTpChannelSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataPduRef(Ref):
-        dest: None | NPduSubtypesEnum = field(
-            default=None,
+        dest: NPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlowControlPduRef(Ref):
-        dest: None | NPduSubtypesEnum = field(
-            default=None,
+        dest: NPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MulticastRef(Ref):
-        dest: None | CanTpAddressSubtypesEnum = field(
-            default=None,
+        dest: CanTpAddressSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReceiverRefs:
         receiver_ref: list[CanTpConnection.ReceiverRefs.ReceiverRef] = field(
             default_factory=list,
@@ -315,35 +311,32 @@ class CanTpConnection:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ReceiverRef(Ref):
-            dest: None | CanTpNodeSubtypesEnum = field(
-                default=None,
+            dest: CanTpNodeSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpSduRef(Ref):
-        dest: None | IPduSubtypesEnum = field(
-            default=None,
+        dest: IPduSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransmitterRef(Ref):
-        dest: None | CanTpNodeSubtypesEnum = field(
-            default=None,
+        dest: CanTpNodeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -9,7 +9,7 @@ from travelport.models.type_rental_period_rental_unit import (
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeRentalPeriod:
     """
     Rental period information concerning minimum and max rental periods.
@@ -27,21 +27,19 @@ class TypeRentalPeriod:
     class Meta:
         name = "typeRentalPeriod"
 
-    rental_unit: None | TypeRentalPeriodRentalUnit = field(
-        default=None,
+    rental_unit: TypeRentalPeriodRentalUnit = field(
         metadata={
             "name": "RentalUnit",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    length: None | int = field(
-        default=None,
+    length: int = field(
         metadata={
             "name": "Length",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     requirement_passed: None | bool = field(
         default=None,

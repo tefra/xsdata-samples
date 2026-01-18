@@ -7,7 +7,7 @@ from .type_of_congestion_value_structure import TypeOfCongestionValueStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfCongestion(TypeOfCongestionValueStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

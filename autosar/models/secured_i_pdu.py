@@ -31,7 +31,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecuredIPdu:
     """
     If useAsCryptographicPdu is not set or set to false this IPdu contains
@@ -137,14 +137,13 @@ class SecuredIPdu:
     class Meta:
         name = "SECURED-I-PDU"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SecuredIPdu.ShortNameFragments = field(
         default=None,
@@ -315,7 +314,7 @@ class SecuredIPdu:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -326,7 +325,7 @@ class SecuredIPdu:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -337,37 +336,32 @@ class SecuredIPdu:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AuthenticationPropsRef(Ref):
-        dest: None | SecureCommunicationAuthenticationPropsSubtypesEnum = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: SecureCommunicationAuthenticationPropsSubtypesEnum = field(
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FreshnessPropsRef(Ref):
-        dest: None | SecureCommunicationFreshnessPropsSubtypesEnum = field(
-            default=None,
+        dest: SecureCommunicationFreshnessPropsSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PayloadRef(Ref):
-        dest: None | PduTriggeringSubtypesEnum = field(
-            default=None,
+        dest: PduTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

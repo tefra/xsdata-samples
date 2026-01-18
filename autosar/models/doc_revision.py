@@ -11,7 +11,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DocRevision:
     """
     This meta-class represents the ability to maintain information which
@@ -122,7 +122,7 @@ class DocRevision:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Modifications:
         modification: list[Modification] = field(
             default_factory=list,

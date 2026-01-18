@@ -7,7 +7,7 @@ from travelport.models.base_req_1 import BaseReq1
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailRefundQuoteReq(BaseReq1):
     """
     Request to quote a refund for an itinerary.
@@ -21,13 +21,12 @@ class RailRefundQuoteReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
-    locator_code: None | str = field(
-        default=None,
+    locator_code: str = field(
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )

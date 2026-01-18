@@ -9,7 +9,7 @@ from .vehicle_sharing_place_assignment_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleSharingPlaceAssignment(
     VehicleSharingPlaceAssignmentVersionStructure
 ):

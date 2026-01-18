@@ -9,7 +9,7 @@ from .default_connection_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefaultConnection(DefaultConnectionVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

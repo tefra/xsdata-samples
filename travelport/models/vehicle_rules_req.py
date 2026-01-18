@@ -9,7 +9,7 @@ from travelport.models.vehicle_search_modifiers import VehicleSearchModifiers
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleRulesReq(BaseSearchReq1):
     """
     Used to request rules for a specific vehicle and rate.
@@ -43,21 +43,19 @@ class VehicleRulesReq(BaseSearchReq1):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VehicleRulesLookup:
-        vehicle_date_location: None | VehicleDateLocation = field(
-            default=None,
+        vehicle_date_location: VehicleDateLocation = field(
             metadata={
                 "name": "VehicleDateLocation",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
-        vehicle_search_modifiers: None | VehicleSearchModifiers = field(
-            default=None,
+        vehicle_search_modifiers: VehicleSearchModifiers = field(
             metadata={
                 "name": "VehicleSearchModifiers",
                 "type": "Element",
                 "required": True,
-            },
+            }
         )

@@ -33,7 +33,7 @@ from .udp_nm_node import UdpNmNode
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UdpNmCluster:
     """
     Udp specific NmCluster attributes.
@@ -172,14 +172,13 @@ class UdpNmCluster:
     class Meta:
         name = "UDP-NM-CLUSTER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | UdpNmCluster.ShortNameFragments = field(
         default=None,
@@ -462,7 +461,7 @@ class UdpNmCluster:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -473,7 +472,7 @@ class UdpNmCluster:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -484,18 +483,17 @@ class UdpNmCluster:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommunicationClusterRef(Ref):
-        dest: None | CommunicationClusterSubtypesEnum = field(
-            default=None,
+        dest: CommunicationClusterSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NmNodes:
         can_nm_node: list[CanNmNode] = field(
             default_factory=list,
@@ -530,13 +528,12 @@ class UdpNmCluster:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VlanRef(Ref):
-        dest: None | EthernetPhysicalChannelSubtypesEnum = field(
-            default=None,
+        dest: EthernetPhysicalChannelSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

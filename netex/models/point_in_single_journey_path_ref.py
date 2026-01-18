@@ -9,7 +9,7 @@ from .point_in_single_journey_path_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointInSingleJourneyPathRef(PointInSingleJourneyPathRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

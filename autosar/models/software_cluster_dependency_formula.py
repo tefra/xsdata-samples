@@ -13,7 +13,7 @@ from .software_cluster_dependency_logical_operator_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoftwareClusterDependencyFormula:
     """
     This meta-class represents the ability to define a dependency among
@@ -80,7 +80,7 @@ class SoftwareClusterDependencyFormula:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Parts:
         software_cluster_dependency_compare_condition: list[
             SoftwareClusterDependencyCompareCondition

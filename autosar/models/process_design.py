@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProcessDesign:
     """
     This meta-class has the ability to stand in for a Process at the time
@@ -95,14 +95,13 @@ class ProcessDesign:
     class Meta:
         name = "PROCESS-DESIGN"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ProcessDesign.ShortNameFragments = field(
         default=None,
@@ -209,7 +208,7 @@ class ProcessDesign:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -220,7 +219,7 @@ class ProcessDesign:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -231,7 +230,7 @@ class ProcessDesign:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DeterministicClientResourceNeedss:
         deterministic_client_resource_needs: list[
             DeterministicClientResourceNeeds
@@ -244,13 +243,12 @@ class ProcessDesign:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExecutableRef(Ref):
-        dest: None | ExecutableSubtypesEnum = field(
-            default=None,
+        dest: ExecutableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

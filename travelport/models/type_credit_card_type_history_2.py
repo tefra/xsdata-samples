@@ -9,7 +9,7 @@ from travelport.models.type_payment_card_history_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeCreditCardTypeHistory2(TypePaymentCardHistory2):
     """
     Parameters

@@ -7,7 +7,7 @@ from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Modification:
     """
     This meta-class represents the ability to record what has changed in a

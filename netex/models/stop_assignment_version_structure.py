@@ -11,7 +11,7 @@ from .scheduled_stop_point_ref import ScheduledStopPointRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StopAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "StopAssignment_VersionStructure"

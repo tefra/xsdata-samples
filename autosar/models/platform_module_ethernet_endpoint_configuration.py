@@ -24,7 +24,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PlatformModuleEthernetEndpointConfiguration:
     """
     This meta-class defines the attributes for the configuration of a port,
@@ -100,14 +100,13 @@ class PlatformModuleEthernetEndpointConfiguration:
     class Meta:
         name = "PLATFORM-MODULE-ETHERNET-ENDPOINT-CONFIGURATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | PlatformModuleEthernetEndpointConfiguration.ShortNameFragments
@@ -243,7 +242,7 @@ class PlatformModuleEthernetEndpointConfiguration:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -254,7 +253,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -265,13 +264,12 @@ class PlatformModuleEthernetEndpointConfiguration:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CommunicationConnectorRef(Ref):
-        dest: None | EthernetCommunicationConnectorSubtypesEnum = field(
-            default=None,
+        dest: EthernetCommunicationConnectorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

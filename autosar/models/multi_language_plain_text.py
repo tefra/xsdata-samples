@@ -7,7 +7,7 @@ from .l_plain_text import LPlainText
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MultiLanguagePlainText:
     """
     This is a multilingual plaint Text.It is intended to be rendered as a

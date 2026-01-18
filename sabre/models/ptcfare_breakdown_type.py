@@ -19,7 +19,7 @@ from sabre.models.rule_info_type import RuleInfoType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PtcfareBreakdownType:
     """
     Per passenger type code pricing for this itinerary.
@@ -46,32 +46,29 @@ class PtcfareBreakdownType:
     class Meta:
         name = "PTCFareBreakdownType"
 
-    passenger_type_quantity: None | PassengerTypeQuantityType = field(
-        default=None,
+    passenger_type_quantity: PassengerTypeQuantityType = field(
         metadata={
             "name": "PassengerTypeQuantity",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    fare_basis_codes: None | PtcfareBreakdownType.FareBasisCodes = field(
-        default=None,
+    fare_basis_codes: PtcfareBreakdownType.FareBasisCodes = field(
         metadata={
             "name": "FareBasisCodes",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
-    passenger_fare: None | FareType = field(
-        default=None,
+    passenger_fare: FareType = field(
         metadata={
             "name": "PassengerFare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     endorsements: None | PtcfareBreakdownType.Endorsements = field(
         default=None,
@@ -135,7 +132,7 @@ class PtcfareBreakdownType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FareBasisCodes:
         """
         Attributes:
@@ -155,7 +152,7 @@ class PtcfareBreakdownType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareBasisCode:
             """
             Attributes:
@@ -289,7 +286,7 @@ class PtcfareBreakdownType:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Endorsements:
         """
         Attributes:
@@ -333,7 +330,7 @@ class PtcfareBreakdownType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpaExtensions:
         """
         Attributes:
@@ -358,7 +355,7 @@ class PtcfareBreakdownType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareType:
             value: str = field(
                 default="",
@@ -374,7 +371,7 @@ class PtcfareBreakdownType:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FareInfos:
         """
         Attributes:
@@ -392,7 +389,7 @@ class PtcfareBreakdownType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareInfo:
             """
             Attributes:
@@ -418,8 +415,7 @@ class PtcfareBreakdownType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            fare_reference: None | str = field(
-                default=None,
+            fare_reference: str = field(
                 metadata={
                     "name": "FareReference",
                     "type": "Element",
@@ -427,7 +423,7 @@ class PtcfareBreakdownType:
                     "required": True,
                     "min_length": 1,
                     "max_length": 8,
-                },
+                }
             )
             rule_info: None | RuleInfoType = field(
                 default=None,
@@ -486,7 +482,7 @@ class PtcfareBreakdownType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TpaExtensions:
                 seats_remaining: (
                     None
@@ -542,7 +538,7 @@ class PtcfareBreakdownType:
                     },
                 )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class SeatsRemaining:
                     number: None | int = field(
                         default=None,
@@ -559,7 +555,7 @@ class PtcfareBreakdownType:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class Cabin:
                     cabin: str = field(
                         default="Economy",
@@ -569,7 +565,7 @@ class PtcfareBreakdownType:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class FareNote:
                     fare_type_name: None | str = field(
                         default=None,
@@ -593,7 +589,7 @@ class PtcfareBreakdownType:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class Meal:
                     code: None | str = field(
                         default=None,
@@ -603,7 +599,7 @@ class PtcfareBreakdownType:
                         },
                     )
 
-                @dataclass
+                @dataclass(kw_only=True)
                 class Rule:
                     type_value: None | str = field(
                         default=None,

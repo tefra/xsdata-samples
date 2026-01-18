@@ -9,7 +9,7 @@ from .severity_enum import SeverityEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MultiplicityRestrictionWithSeverity:
     """
     Restriction that specifies the valid number of occurrences of an

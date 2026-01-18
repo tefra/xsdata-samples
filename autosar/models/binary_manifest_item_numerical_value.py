@@ -7,7 +7,7 @@ from .numerical_value import NumericalValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BinaryManifestItemNumericalValue:
     """
     This meta-class has the ability to provide a numerical value for a

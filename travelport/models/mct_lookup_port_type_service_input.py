@@ -7,27 +7,25 @@ from travelport.models.mct_lookup_req import MctLookupReq
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MctLookupPortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | MctLookupPortTypeServiceInput.Body = field(
-        default=None,
+    body: MctLookupPortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        mct_lookup_req: None | MctLookupReq = field(
-            default=None,
+        mct_lookup_req: MctLookupReq = field(
             metadata={
                 "name": "MctLookupReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/util_v52_0",
-            },
+            }
         )

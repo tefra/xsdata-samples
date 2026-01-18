@@ -15,7 +15,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.sort_ex
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QueryType:
     """
     <description xmlns="">A data object that allows simple and complex

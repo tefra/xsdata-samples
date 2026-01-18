@@ -7,7 +7,7 @@ from npo.models.image import Image
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ImagesType:
     class Meta:
         name = "imagesType"

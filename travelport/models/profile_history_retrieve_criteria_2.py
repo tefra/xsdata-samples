@@ -11,7 +11,7 @@ from travelport.models.type_profile_component_type_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileHistoryRetrieveCriteria2:
     """
     Specify one or more criteria used to filter the history data.

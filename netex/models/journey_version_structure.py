@@ -19,7 +19,7 @@ from .type_of_service_ref import TypeOfServiceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "Journey_VersionStructure"

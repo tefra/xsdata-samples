@@ -14,7 +14,7 @@ from .swc_to_ecu_mapping_constraint_type import SwcToEcuMappingConstraintType
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwcToEcuMappingConstraint:
     """
     The System Constraint Description has to describe dedicated and
@@ -112,7 +112,7 @@ class SwcToEcuMappingConstraint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuInstanceRefs:
         ecu_instance_ref: list[
             SwcToEcuMappingConstraint.EcuInstanceRefs.EcuInstanceRef
@@ -125,13 +125,12 @@ class SwcToEcuMappingConstraint:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EcuInstanceRef(Ref):
-            dest: None | EcuInstanceSubtypesEnum = field(
-                default=None,
+            dest: EcuInstanceSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

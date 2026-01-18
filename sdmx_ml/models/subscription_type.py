@@ -9,7 +9,7 @@ from sdmx_ml.models.validity_period_type import ValidityPeriodType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SubscriptionType:
     """
     SubscriptionType describes the details of a subscription to a
@@ -44,15 +44,14 @@ class SubscriptionType:
         the subscription.
     """
 
-    organisation: None | str = field(
-        default=None,
+    organisation: str = field(
         metadata={
             "name": "Organisation",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
             "pattern": r".+\.base\.Agency=.+:AGENCIES\(.+\).+|.+\.base\.DataConsumer=.+:DATA_CONSUMERS\(.+\).+|.+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+|.+\.base\.MetadataProvider=.+:METADATA_PROVIDERS\(.+\).+|.+\.base\.OrganisationUnit=.+",
-        },
+        }
     )
     registry_urn: None | str = field(
         default=None,
@@ -87,21 +86,19 @@ class SubscriptionType:
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    validity_period: None | ValidityPeriodType = field(
-        default=None,
+    validity_period: ValidityPeriodType = field(
         metadata={
             "name": "ValidityPeriod",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )
-    event_selector: None | EventSelectorType = field(
-        default=None,
+    event_selector: EventSelectorType = field(
         metadata={
             "name": "EventSelector",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )

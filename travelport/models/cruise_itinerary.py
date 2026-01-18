@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate, XmlTime
 __NAMESPACE__ = "http://www.travelport.com/schema/cruise_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CruiseItinerary:
     """
     Contains one day's journey Record.

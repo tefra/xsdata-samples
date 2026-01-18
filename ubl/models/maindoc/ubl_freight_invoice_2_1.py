@@ -56,7 +56,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:FreightInvoice-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class FreightInvoiceType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -98,14 +98,13 @@ class FreightInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     copy_indicator: None | CopyIndicator = field(
         default=None,
@@ -123,14 +122,13 @@ class FreightInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -315,23 +313,21 @@ class FreightInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    accounting_supplier_party: None | AccountingSupplierParty = field(
-        default=None,
+    accounting_supplier_party: AccountingSupplierParty = field(
         metadata={
             "name": "AccountingSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    accounting_customer_party: None | AccountingCustomerParty = field(
-        default=None,
+    accounting_customer_party: AccountingCustomerParty = field(
         metadata={
             "name": "AccountingCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     payee_party: None | PayeeParty = field(
         default=None,
@@ -423,14 +419,13 @@ class FreightInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    legal_monetary_total: None | LegalMonetaryTotal = field(
-        default=None,
+    legal_monetary_total: LegalMonetaryTotal = field(
         metadata={
             "name": "LegalMonetaryTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     invoice_line: tuple[InvoiceLine, ...] = field(
         default_factory=tuple,
@@ -443,7 +438,7 @@ class FreightInvoiceType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class FreightInvoice(FreightInvoiceType):
     class Meta:
         namespace = (

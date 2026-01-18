@@ -50,21 +50,20 @@ from .vehicle_stopping_position_ref import VehicleStoppingPositionRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleMeetingPointAssignmentVersionStructure(
     AssignmentVersionStructure1
 ):
     class Meta:
         name = "VehicleMeetingPointAssignment_VersionStructure"
 
-    vehicle_meeting_point_ref: None | VehicleMeetingPointRef = field(
-        default=None,
+    vehicle_meeting_point_ref: VehicleMeetingPointRef = field(
         metadata={
             "name": "VehicleMeetingPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     choice: (
         None

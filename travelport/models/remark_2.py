@@ -10,7 +10,7 @@ from travelport.models.type_supplier_type_1 import TypeSupplierType1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Remark2(TypeKeyTaggedElement1):
     """
     Remark given to a profile.
@@ -47,23 +47,21 @@ class Remark2(TypeKeyTaggedElement1):
         name = "Remark"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    remark_text: None | str = field(
-        default=None,
+    remark_text: str = field(
         metadata={
             "name": "RemarkText",
             "type": "Element",
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        },
+        }
     )
-    type_value: None | TypeRemarkType1 = field(
-        default=None,
+    type_value: TypeRemarkType1 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     accounting_remark_type: None | str = field(
         default=None,

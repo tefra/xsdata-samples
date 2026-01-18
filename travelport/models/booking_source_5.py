@@ -7,7 +7,7 @@ from travelport.models.booking_source_type_5 import BookingSourceType5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingSource5:
     """
     Parameters
@@ -26,20 +26,18 @@ class BookingSource5:
         name = "BookingSource"
         namespace = "http://www.travelport.com/schema/common_v34_0"
 
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
-        },
+        }
     )
-    type_value: None | BookingSourceType5 = field(
-        default=None,
+    type_value: BookingSourceType5 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

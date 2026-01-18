@@ -10,7 +10,7 @@ from .customer_ref import CustomerRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "customers_RelStructure"

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceFeeTaxInfo2:
     """
     The taxes associated to a particular Service Fee.
@@ -21,19 +21,17 @@ class ServiceFeeTaxInfo2:
         name = "ServiceFeeTaxInfo"
         namespace = "http://www.travelport.com/schema/common_v32_0"
 
-    category: None | str = field(
-        default=None,
+    category: str = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    amount: None | str = field(
-        default=None,
+    amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

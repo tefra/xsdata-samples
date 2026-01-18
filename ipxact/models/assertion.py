@@ -10,7 +10,7 @@ from ipxact.models.unsigned_bit_expression import UnsignedBitExpression
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Assertion:
     """
     Provides an expression for describing valid parameter value settings.
@@ -30,12 +30,11 @@ class Assertion:
         name = "assertion"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -57,13 +56,12 @@ class Assertion:
             "type": "Element",
         },
     )
-    assert_value: None | UnsignedBitExpression = field(
-        default=None,
+    assert_value: UnsignedBitExpression = field(
         metadata={
             "name": "assert",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,

@@ -21,7 +21,7 @@ from .td_cp_software_cluster_resource_mapping import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdCpSoftwareClusterMappingSet:
     """
     This is used to gather of classic platform software cluster mappings.
@@ -94,14 +94,13 @@ class TdCpSoftwareClusterMappingSet:
     class Meta:
         name = "TD-CP-SOFTWARE-CLUSTER-MAPPING-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | TdCpSoftwareClusterMappingSet.ShortNameFragments
@@ -213,7 +212,7 @@ class TdCpSoftwareClusterMappingSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -224,7 +223,7 @@ class TdCpSoftwareClusterMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -235,7 +234,7 @@ class TdCpSoftwareClusterMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TdCpSoftwareClusterResourceToTdMappings:
         td_cp_software_cluster_resource_mapping: list[
             TdCpSoftwareClusterResourceMapping
@@ -248,7 +247,7 @@ class TdCpSoftwareClusterMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TdCpSoftwareClusterToTdMappings:
         td_cp_software_cluster_mapping: list[TdCpSoftwareClusterMapping] = (
             field(

@@ -7,7 +7,7 @@ from .cycle_repetition_type_simple import CycleRepetitionTypeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CycleRepetitionType:
     """
     The number of communication cycles (after the first cycle) whenever the
@@ -31,11 +31,10 @@ class CycleRepetitionType:
     class Meta:
         name = "CYCLE-REPETITION-TYPE"
 
-    value: None | CycleRepetitionTypeSimple = field(
-        default=None,
+    value: CycleRepetitionTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

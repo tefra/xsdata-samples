@@ -9,7 +9,7 @@ from .language_usage_structure import LanguageUsageStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocaleStructure:
     time_zone_offset: None | Decimal = field(
         default=None,
@@ -59,7 +59,7 @@ class LocaleStructure:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Languages:
         language_usage: Iterable[LanguageUsageStructure] = field(
             default_factory=list,

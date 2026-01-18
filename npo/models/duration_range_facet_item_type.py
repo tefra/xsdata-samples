@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDuration
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DurationRangeFacetItemType:
     class Meta:
         name = "durationRangeFacetItemType"

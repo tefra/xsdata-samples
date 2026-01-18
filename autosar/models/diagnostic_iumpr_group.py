@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticIumprGroup:
     """
     This meta-class represents the ability to model a IUMPR groups.
@@ -96,14 +96,13 @@ class DiagnosticIumprGroup:
     class Meta:
         name = "DIAGNOSTIC-IUMPR-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DiagnosticIumprGroup.ShortNameFragments = (
         field(
@@ -220,7 +219,7 @@ class DiagnosticIumprGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -231,7 +230,7 @@ class DiagnosticIumprGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -242,7 +241,7 @@ class DiagnosticIumprGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IumprGroupIdentifiers:
         diagnostic_iumpr_group_identifier: list[
             DiagnosticIumprGroupIdentifier
@@ -255,7 +254,7 @@ class DiagnosticIumprGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IumprRefs:
         iumpr_ref: list[DiagnosticIumprGroup.IumprRefs.IumprRef] = field(
             default_factory=list,
@@ -266,13 +265,12 @@ class DiagnosticIumprGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class IumprRef(Ref):
-            dest: None | DiagnosticIumprSubtypesEnum = field(
-                default=None,
+            dest: DiagnosticIumprSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

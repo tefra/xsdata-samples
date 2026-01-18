@@ -12,7 +12,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswModeReceiverPolicy:
     """
     Specifies the details for the reception of a mode switch for the
@@ -94,13 +94,12 @@ class BswModeReceiverPolicy:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredModeGroupRef(Ref):
-        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
-            default=None,
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

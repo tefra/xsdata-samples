@@ -11,7 +11,7 @@ from .usage_parameter_prices_rel_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UsageParameterVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "UsageParameter_VersionStructure"

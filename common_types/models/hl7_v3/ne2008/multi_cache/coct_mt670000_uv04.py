@@ -39,7 +39,7 @@ from ..core.voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt670000Uv04Account:
     class Meta:
         name = "COCT_MT670000UV04.Account"
@@ -102,7 +102,7 @@ class CoctMt670000Uv04Account:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt670000Uv04GuarantorLanguage:
     class Meta:
         name = "COCT_MT670000UV04.GuarantorLanguage"
@@ -131,23 +131,21 @@ class CoctMt670000Uv04GuarantorLanguage:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: None | Cs = field(
-        default=None,
+    language_code: Cs = field(
         metadata={
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    mode_code: None | Cs = field(
-        default=None,
+    mode_code: Cs = field(
         metadata={
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     preference_ind: None | Cs = field(
         default=None,
@@ -166,7 +164,7 @@ class CoctMt670000Uv04GuarantorLanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt670000Uv04GuarantorOrganization:
     class Meta:
         name = "COCT_MT670000UV04.GuarantorOrganization"
@@ -223,13 +221,12 @@ class CoctMt670000Uv04GuarantorOrganization:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassOrganization = field(
-        default=None,
+    class_code: EntityClassOrganization = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -242,7 +239,7 @@ class CoctMt670000Uv04GuarantorOrganization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt670000Uv04PersonalRelationship:
     class Meta:
         name = "COCT_MT670000UV04.PersonalRelationship"
@@ -313,7 +310,7 @@ class CoctMt670000Uv04PersonalRelationship:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt670000Uv04GuarantorPerson:
     class Meta:
         name = "COCT_MT670000UV04.GuarantorPerson"
@@ -359,13 +356,12 @@ class CoctMt670000Uv04GuarantorPerson:
     )
     as_personal_relationship: None | CoctMt670000Uv04PersonalRelationship = (
         field(
-            default=None,
             metadata={
                 "name": "asPersonalRelationship",
                 "type": "Element",
                 "namespace": "urn:hl7-org:v3",
                 "nillable": True,
-            },
+            }
         )
     )
     guarantor_language: list[CoctMt670000Uv04GuarantorLanguage] = field(
@@ -404,7 +400,7 @@ class CoctMt670000Uv04GuarantorPerson:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt670000Uv04Holder:
     class Meta:
         name = "COCT_MT670000UV04.Holder"
@@ -441,12 +437,11 @@ class CoctMt670000Uv04Holder:
         },
     )
     account: None | CoctMt670000Uv04Account = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -466,7 +461,7 @@ class CoctMt670000Uv04Holder:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt670000Uv04GuarantorRole:
     class Meta:
         name = "COCT_MT670000UV04.GuarantorRole"

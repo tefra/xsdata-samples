@@ -20,7 +20,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticStorageConditionGroup:
     """
     Storage condition group which includes one or several storage
@@ -88,14 +88,13 @@ class DiagnosticStorageConditionGroup:
     class Meta:
         name = "DIAGNOSTIC-STORAGE-CONDITION-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticStorageConditionGroup.ShortNameFragments
@@ -196,7 +195,7 @@ class DiagnosticStorageConditionGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -207,7 +206,7 @@ class DiagnosticStorageConditionGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -218,7 +217,7 @@ class DiagnosticStorageConditionGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StorageConditions:
         diagnostic_storage_condition_ref_conditional: list[
             DiagnosticStorageConditionRefConditional

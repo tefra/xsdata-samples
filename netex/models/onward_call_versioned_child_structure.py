@@ -9,7 +9,7 @@ from .target_passing_time_view import TargetPassingTimeView
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OnwardCallVersionedChildStructure(CallVersionedChildStructure):
     class Meta:
         name = "OnwardCall_VersionedChildStructure"

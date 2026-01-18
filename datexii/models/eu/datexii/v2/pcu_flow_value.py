@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PcuFlowValue(DataValue):
     """
     A measured or calculated value of the flow rate of passenger car units.
@@ -18,14 +18,13 @@ class PcuFlowValue(DataValue):
     :ivar pcu_flow_value_extension:
     """
 
-    pcu_flow_rate: None | int = field(
-        default=None,
+    pcu_flow_rate: int = field(
         metadata={
             "name": "pcuFlowRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     pcu_flow_value_extension: None | ExtensionType = field(
         default=None,

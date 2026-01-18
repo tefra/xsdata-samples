@@ -7,7 +7,7 @@ from .processing_kind_enum_simple import ProcessingKindEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProcessingKindEnum:
     """
     Kind of processing which has been applied to a data element.
@@ -28,11 +28,10 @@ class ProcessingKindEnum:
     class Meta:
         name = "PROCESSING-KIND-ENUM"
 
-    value: None | ProcessingKindEnumSimple = field(
-        default=None,
+    value: ProcessingKindEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

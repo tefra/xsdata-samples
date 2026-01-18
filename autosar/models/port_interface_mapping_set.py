@@ -27,7 +27,7 @@ from .variable_and_parameter_interface_mapping import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortInterfaceMappingSet:
     """
     Specifies a set of (one or more) PortInterfaceMappings.
@@ -108,14 +108,13 @@ class PortInterfaceMappingSet:
     class Meta:
         name = "PORT-INTERFACE-MAPPING-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | PortInterfaceMappingSet.ShortNameFragments = (
         field(
@@ -232,7 +231,7 @@ class PortInterfaceMappingSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -243,7 +242,7 @@ class PortInterfaceMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -254,7 +253,7 @@ class PortInterfaceMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -283,7 +282,7 @@ class PortInterfaceMappingSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortInterfaceMappings:
         client_server_interface_mapping: list[ClientServerInterfaceMapping] = (
             field(

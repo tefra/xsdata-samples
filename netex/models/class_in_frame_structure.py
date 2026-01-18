@@ -12,7 +12,7 @@ from .type_of_frame_ref import TypeOfFrameRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClassInFrameStructure:
     class_ref_type: None | ClassRefTypeEnumeration = field(
         default=None,
@@ -60,7 +60,7 @@ class ClassInFrameStructure:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Attributes:
         class_attribute_in_frame: Iterable[ClassAttributeInFrame] = field(
             default_factory=list,
@@ -72,7 +72,7 @@ class ClassInFrameStructure:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Relationships:
         class_relationship_in_frame: Iterable[ClassRelationshipInFrame] = (
             field(

@@ -287,7 +287,7 @@ from .wheelchair_vehicle_ref import WheelchairVehicleRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceableObjectVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "PriceableObject_VersionStructure"
@@ -391,7 +391,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FarePricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "farePrices_RelStructure"
@@ -623,7 +623,7 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareTablesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareTables_RelStructure"
@@ -669,7 +669,7 @@ class FareTablesRelStructure(StrictContainmentAggregationStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareStructureFactorVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "FareStructureFactor_VersionStructure"
@@ -702,7 +702,7 @@ class FareStructureFactorVersionStructure(PriceableObjectVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "PriceGroup_VersionStructure"
@@ -858,13 +858,13 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceGroup(PriceGroupVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
     class Meta:
         name = "TimeStructureFactor_VersionStructure"
@@ -933,7 +933,7 @@ class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
     class Meta:
         name = "ParkingChargeBand_VersionStructure"
@@ -1011,7 +1011,7 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "priceGroups_RelStructure"
@@ -1038,13 +1038,13 @@ class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingChargeBand(ParkingChargeBandVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingPriceVersionedChildStructure(FarePriceVersionedChildStructure):
     class Meta:
         name = "ParkingPrice_VersionedChildStructure"
@@ -1071,13 +1071,13 @@ class ParkingPriceVersionedChildStructure(FarePriceVersionedChildStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingPrice(ParkingPriceVersionedChildStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CellVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "Cell_VersionedChildStructure"
@@ -2566,7 +2566,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Cell(CellVersionedChildStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
@@ -2587,7 +2587,7 @@ class Cell(CellVersionedChildStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CellsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "cells_RelStructure"
@@ -2830,7 +2830,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CellInContext(CellVersionedChildStructure):
         validity_conditions_or_valid_between: Any = field(
             init=False,
@@ -2848,7 +2848,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "FareTable_VersionStructure"
@@ -3038,13 +3038,13 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareTable(FareTableVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareTableInContext(FareTableVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

@@ -7,6 +7,6 @@ from .user_profile_ref_structure import UserProfileRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehiclePoolerProfileRefStructure(UserProfileRefStructure):
     pass

@@ -9,7 +9,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FreeFormat:
     """
     Representing freely defined data.
@@ -84,7 +84,7 @@ class FreeFormat:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ByteValues:
         """
         :ivar byte_value: The integer Value of a freely defined data

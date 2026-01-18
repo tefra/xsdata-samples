@@ -7,7 +7,7 @@ from travelport.models.ssr_4 import Ssr4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ssrinfo4:
     """
     Bundle SSR with BookingTraveler reference in order to add SSR post
@@ -24,13 +24,12 @@ class Ssrinfo4:
         name = "SSRInfo"
         namespace = "http://www.travelport.com/schema/common_v37_0"
 
-    ssr: None | Ssr4 = field(
-        default=None,
+    ssr: Ssr4 = field(
         metadata={
             "name": "SSR",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     booking_traveler_ref: list[str] = field(
         default_factory=list,

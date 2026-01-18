@@ -9,7 +9,7 @@ from .t_formal_expression import TFormalExpression
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TDataAssociation(TBaseElement):
     class Meta:
         name = "tDataAssociation"
@@ -22,14 +22,13 @@ class TDataAssociation(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    target_ref: None | str = field(
-        default=None,
+    target_ref: str = field(
         metadata={
             "name": "targetRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "required": True,
-        },
+        }
     )
     transformation: None | TFormalExpression = field(
         default=None,

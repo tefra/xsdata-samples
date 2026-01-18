@@ -12,7 +12,7 @@ from .luggage_service_facility_enumeration import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LuggageServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "LuggageService_VersionStructure"

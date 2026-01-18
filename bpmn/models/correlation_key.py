@@ -7,7 +7,7 @@ from .t_correlation_key import TCorrelationKey
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CorrelationKey(TCorrelationKey):
     class Meta:
         name = "correlationKey"

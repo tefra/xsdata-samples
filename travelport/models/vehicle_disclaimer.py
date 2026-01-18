@@ -7,7 +7,7 @@ from travelport.models.type_vehicle_disclaimer import TypeVehicleDisclaimer
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleDisclaimer:
     """
     Textual information related to this rental location.
@@ -32,13 +32,12 @@ class VehicleDisclaimer:
             "required": True,
         },
     )
-    type_value: None | TypeVehicleDisclaimer = field(
-        default=None,
+    type_value: TypeVehicleDisclaimer = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     sub_type: None | str = field(
         default=None,

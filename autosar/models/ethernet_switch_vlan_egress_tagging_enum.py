@@ -9,7 +9,7 @@ from .ethernet_switch_vlan_egress_tagging_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EthernetSwitchVlanEgressTaggingEnum:
     """
     Defines the VLAN tag sending behavior.
@@ -30,11 +30,10 @@ class EthernetSwitchVlanEgressTaggingEnum:
     class Meta:
         name = "ETHERNET-SWITCH-VLAN-EGRESS-TAGGING-ENUM"
 
-    value: None | EthernetSwitchVlanEgressTaggingEnumSimple = field(
-        default=None,
+    value: EthernetSwitchVlanEgressTaggingEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

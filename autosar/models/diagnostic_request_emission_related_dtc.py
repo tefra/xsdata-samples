@@ -24,7 +24,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticRequestEmissionRelatedDtc:
     """
     This meta-class represents the ability to model an instance of the OBD
@@ -97,14 +97,13 @@ class DiagnosticRequestEmissionRelatedDtc:
     class Meta:
         name = "DIAGNOSTIC-REQUEST-EMISSION-RELATED-DTC"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticRequestEmissionRelatedDtc.ShortNameFragments
@@ -218,7 +217,7 @@ class DiagnosticRequestEmissionRelatedDtc:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -229,7 +228,7 @@ class DiagnosticRequestEmissionRelatedDtc:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -240,26 +239,22 @@ class DiagnosticRequestEmissionRelatedDtc:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessPermissionRef(Ref):
-        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticAccessPermissionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequestEmissionRelatedDtcClassRef(Ref):
-        dest: None | DiagnosticRequestEmissionRelatedDtcClassSubtypesEnum = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: DiagnosticRequestEmissionRelatedDtcClassSubtypesEnum = field(
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            }
         )

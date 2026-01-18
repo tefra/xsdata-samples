@@ -10,7 +10,7 @@ from travelport.models.vendor import Vendor
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleLocationDetailReq(BaseReq1):
     """
     Parameters
@@ -27,21 +27,19 @@ class VehicleLocationDetailReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    vendor: None | Vendor = field(
-        default=None,
+    vendor: Vendor = field(
         metadata={
             "name": "Vendor",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    vehicle_date_location: None | VehicleDateLocation = field(
-        default=None,
+    vehicle_date_location: VehicleDateLocation = field(
         metadata={
             "name": "VehicleDateLocation",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     point_of_sale: None | PointOfSale1 = field(
         default=None,

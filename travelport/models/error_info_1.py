@@ -7,7 +7,7 @@ from travelport.models.type_error_info_1 import TypeErrorInfo1
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ErrorInfo1(TypeErrorInfo1):
     """
     Container for error data when there is an application error.

@@ -7,7 +7,7 @@ from travelport.models.fare_ticket_designator import FareTicketDesignator
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareDetails:
     """
     Information about this fare component.
@@ -33,28 +33,25 @@ class FareDetails:
             "type": "Element",
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    passenger_detail_ref: None | str = field(
-        default=None,
+    passenger_detail_ref: str = field(
         metadata={
             "name": "PassengerDetailRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    fare_basis: None | str = field(
-        default=None,
+    fare_basis: str = field(
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
             "required": True,
             "max_length": 20,
-        },
+        }
     )

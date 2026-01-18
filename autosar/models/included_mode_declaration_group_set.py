@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IncludedModeDeclarationGroupSet:
     """
     An IncludedModeDeclarationGroupSet declares that a set of
@@ -74,7 +74,7 @@ class IncludedModeDeclarationGroupSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeDeclarationGroupRefs:
         mode_declaration_group_ref: list[
             IncludedModeDeclarationGroupSet.ModeDeclarationGroupRefs.ModeDeclarationGroupRef
@@ -87,13 +87,12 @@ class IncludedModeDeclarationGroupSet:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ModeDeclarationGroupRef(Ref):
-            dest: None | ModeDeclarationGroupSubtypesEnum = field(
-                default=None,
+            dest: ModeDeclarationGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

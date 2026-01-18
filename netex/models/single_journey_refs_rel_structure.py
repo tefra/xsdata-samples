@@ -8,17 +8,16 @@ from .single_journey_ref import SingleJourneyRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SingleJourneyRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "singleJourneyRefs_RelStructure"
 
-    single_journey_ref: None | SingleJourneyRef = field(
-        default=None,
+    single_journey_ref: SingleJourneyRef = field(
         metadata={
             "name": "SingleJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

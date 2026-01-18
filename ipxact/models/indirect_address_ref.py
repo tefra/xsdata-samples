@@ -13,7 +13,7 @@ from ipxact.models.register_ref import RegisterRef
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndirectAddressRef:
     """
     A reference to a field used for addressing the indirectly accessible
@@ -80,33 +80,30 @@ class IndirectAddressRef:
             "type": "Element",
         },
     )
-    field_ref: None | FieldRef = field(
-        default=None,
+    field_ref: FieldRef = field(
         metadata={
             "name": "fieldRef",
             "type": "Element",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AddressSpaceRef:
-        address_space_ref: None | str = field(
-            default=None,
+        address_space_ref: str = field(
             metadata={
                 "name": "addressSpaceRef",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MemoryMapRef:
-        memory_map_ref: None | str = field(
-            default=None,
+        memory_map_ref: str = field(
             metadata={
                 "name": "memoryMapRef",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -7,7 +7,7 @@ from .event_occurrence_kind_enum_simple import EventOccurrenceKindEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EventOccurrenceKindEnum:
     """
     This is used to describe the type of the occurrence of an event within
@@ -29,11 +29,10 @@ class EventOccurrenceKindEnum:
     class Meta:
         name = "EVENT-OCCURRENCE-KIND-ENUM"
 
-    value: None | EventOccurrenceKindEnumSimple = field(
-        default=None,
+    value: EventOccurrenceKindEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

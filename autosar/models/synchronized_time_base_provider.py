@@ -19,7 +19,7 @@ from .time_sync_correction import TimeSyncCorrection
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SynchronizedTimeBaseProvider:
     """
     This meta-class represents a Synchronized Time Base Provider.
@@ -85,14 +85,13 @@ class SynchronizedTimeBaseProvider:
     class Meta:
         name = "SYNCHRONIZED-TIME-BASE-PROVIDER"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SynchronizedTimeBaseProvider.ShortNameFragments
@@ -193,7 +192,7 @@ class SynchronizedTimeBaseProvider:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -204,7 +203,7 @@ class SynchronizedTimeBaseProvider:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -215,13 +214,12 @@ class SynchronizedTimeBaseProvider:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NetworkTimeProviderRef(Ref):
-        dest: None | GlobalTimeMasterSubtypesEnum = field(
-            default=None,
+        dest: GlobalTimeMasterSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

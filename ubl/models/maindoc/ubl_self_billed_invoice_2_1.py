@@ -62,7 +62,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SelfBilledInvoiceType:
     ublextensions: None | Ublextensions = field(
         default=None,
@@ -104,14 +104,13 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: None | Id = field(
-        default=None,
+    id: Id = field(
         metadata={
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     copy_indicator: None | CopyIndicator = field(
         default=None,
@@ -129,14 +128,13 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: None | IssueDate = field(
-        default=None,
+    issue_date: IssueDate = field(
         metadata={
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        },
+        }
     )
     issue_time: None | IssueTime = field(
         default=None,
@@ -322,23 +320,21 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    accounting_customer_party: None | AccountingCustomerParty = field(
-        default=None,
+    accounting_customer_party: AccountingCustomerParty = field(
         metadata={
             "name": "AccountingCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
-    accounting_supplier_party: None | AccountingSupplierParty = field(
-        default=None,
+    accounting_supplier_party: AccountingSupplierParty = field(
         metadata={
             "name": "AccountingSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     buyer_customer_party: None | BuyerCustomerParty = field(
         default=None,
@@ -462,14 +458,13 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    legal_monetary_total: None | LegalMonetaryTotal = field(
-        default=None,
+    legal_monetary_total: LegalMonetaryTotal = field(
         metadata={
             "name": "LegalMonetaryTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        },
+        }
     )
     invoice_line: tuple[InvoiceLine, ...] = field(
         default_factory=tuple,
@@ -482,7 +477,7 @@ class SelfBilledInvoiceType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SelfBilledInvoice(SelfBilledInvoiceType):
     class Meta:
         namespace = (

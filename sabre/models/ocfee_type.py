@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OcfeeType:
     """
     OC Fee details.
@@ -26,14 +26,13 @@ class OcfeeType:
     class Meta:
         name = "OCFeeType"
 
-    amount: None | Decimal = field(
-        default=None,
+    amount: Decimal = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
             "required": True,
             "fraction_digits": 3,
-        },
+        }
     )
     description: None | str = field(
         default=None,
@@ -42,44 +41,40 @@ class OcfeeType:
             "type": "Attribute",
         },
     )
-    origin_airport: None | str = field(
-        default=None,
+    origin_airport: str = field(
         metadata={
             "name": "OriginAirport",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 8,
-        },
+        }
     )
-    destination_airport: None | str = field(
-        default=None,
+    destination_airport: str = field(
         metadata={
             "name": "DestinationAirport",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 8,
-        },
+        }
     )
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 8,
-        },
+        }
     )
-    passenger_code: None | str = field(
-        default=None,
+    passenger_code: str = field(
         metadata={
             "name": "PassengerCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[A-Za-z0-9]{2,3}",
-        },
+        }
     )
     date: None | str = field(
         default=None,
@@ -88,19 +83,17 @@ class OcfeeType:
             "type": "Attribute",
         },
     )
-    start_segment: None | object = field(
-        default=None,
+    start_segment: object = field(
         metadata={
             "name": "StartSegment",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    end_segment: None | object = field(
-        default=None,
+    end_segment: object = field(
         metadata={
             "name": "EndSegment",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -21,7 +21,7 @@ from .single_language_unit_names import SingleLanguageUnitNames
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Unit:
     """
     This is a physical measurement unit.
@@ -107,14 +107,13 @@ class Unit:
     class Meta:
         name = "UNIT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | Unit.ShortNameFragments = field(
         default=None,
@@ -235,7 +234,7 @@ class Unit:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -246,7 +245,7 @@ class Unit:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -257,13 +256,12 @@ class Unit:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PhysicalDimensionRef(Ref):
-        dest: None | PhysicalDimensionSubtypesEnum = field(
-            default=None,
+        dest: PhysicalDimensionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

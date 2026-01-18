@@ -9,7 +9,7 @@ from .diagnostic_processing_style_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticProcessingStyleEnum:
     """
     This meta-class represents the ability to define the processing style
@@ -31,11 +31,10 @@ class DiagnosticProcessingStyleEnum:
     class Meta:
         name = "DIAGNOSTIC-PROCESSING-STYLE-ENUM"
 
-    value: None | DiagnosticProcessingStyleEnumSimple = field(
-        default=None,
+    value: DiagnosticProcessingStyleEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

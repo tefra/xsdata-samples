@@ -27,7 +27,7 @@ from .coct_mt070000_uv01 import CoctMt070000Uv01LocatedEntity
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt150000Uv02Person:
     class Meta:
         name = "COCT_MT150000UV02.Person"
@@ -99,7 +99,7 @@ class CoctMt150000Uv02Person:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt150000Uv02ContactParty:
     class Meta:
         name = "COCT_MT150000UV02.ContactParty"
@@ -172,17 +172,16 @@ class CoctMt150000Uv02ContactParty:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassContact = field(
-        default=None,
+    class_code: RoleClassContact = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt150000Uv02Organization:
     class Meta:
         name = "COCT_MT150000UV02.Organization"
@@ -304,13 +303,12 @@ class CoctMt150000Uv02Organization:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassOrganization = field(
-        default=None,
+    class_code: EntityClassOrganization = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -323,7 +321,7 @@ class CoctMt150000Uv02Organization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt150000Uv02OrganizationContains:
     class Meta:
         name = "COCT_MT150000UV02.OrganizationContains"
@@ -398,17 +396,16 @@ class CoctMt150000Uv02OrganizationContains:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassPartitivePartByBot = field(
-        default=None,
+    class_code: RoleClassPartitivePartByBot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt150000Uv02OrganizationPartOf:
     class Meta:
         name = "COCT_MT150000UV02.OrganizationPartOf"
@@ -483,11 +480,10 @@ class CoctMt150000Uv02OrganizationPartOf:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassPartitivePartByBot = field(
-        default=None,
+    class_code: RoleClassPartitivePartByBot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

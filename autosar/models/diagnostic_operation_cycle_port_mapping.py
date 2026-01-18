@@ -34,7 +34,7 @@ from .swc_service_dependency_subtypes_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticOperationCyclePortMapping:
     """
     Defines to which SWC service ports with DiagnosticOperationCycleNeeds
@@ -117,14 +117,13 @@ class DiagnosticOperationCyclePortMapping:
     class Meta:
         name = "DIAGNOSTIC-OPERATION-CYCLE-PORT-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticOperationCyclePortMapping.ShortNameFragments
@@ -275,7 +274,7 @@ class DiagnosticOperationCyclePortMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -286,7 +285,7 @@ class DiagnosticOperationCyclePortMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -297,35 +296,32 @@ class DiagnosticOperationCyclePortMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OperationCycleRef(Ref):
-        dest: None | DiagnosticOperationCycleSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticOperationCycleSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProcessRef(Ref):
-        dest: None | ProcessDesignSubtypesEnum = field(
-            default=None,
+        dest: ProcessDesignSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SwcFlatServiceDependencyRef(Ref):
-        dest: None | SwcServiceDependencySubtypesEnum = field(
-            default=None,
+        dest: SwcServiceDependencySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

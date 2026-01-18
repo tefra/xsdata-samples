@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeRemarkWithTravelerRef6:
     """
     Parameters
@@ -24,14 +24,13 @@ class TypeRemarkWithTravelerRef6:
     class Meta:
         name = "typeRemarkWithTravelerRef"
 
-    remark_data: None | str = field(
-        default=None,
+    remark_data: str = field(
         metadata={
             "name": "RemarkData",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v38_0",
             "required": True,
-        },
+        }
     )
     booking_traveler_ref: list[str] = field(
         default_factory=list,

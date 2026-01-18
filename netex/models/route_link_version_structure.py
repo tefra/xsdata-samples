@@ -12,28 +12,26 @@ from .route_point_ref_structure import RoutePointRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RouteLinkVersionStructure(LinkVersionStructure):
     class Meta:
         name = "RouteLink_VersionStructure"
 
-    from_point_ref: None | RoutePointRefStructure = field(
-        default=None,
+    from_point_ref: RoutePointRefStructure = field(
         metadata={
             "name": "FromPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    to_point_ref: None | RoutePointRefStructure = field(
-        default=None,
+    to_point_ref: RoutePointRefStructure = field(
         metadata={
             "name": "ToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     operational_context_ref: None | OperationalContextRef = field(
         default=None,

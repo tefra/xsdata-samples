@@ -7,7 +7,7 @@ from travelport.models.co2_emission import Co2Emission
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Co2Emissions:
     """
     The carbon emissions produced by the journey.

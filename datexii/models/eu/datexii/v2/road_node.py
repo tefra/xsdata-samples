@@ -9,7 +9,7 @@ from datexii.models.eu.datexii.v2.road import Road
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoadNode(Road):
     """
     A road node as part of the specialised road identified by the name of a
@@ -19,14 +19,13 @@ class RoadNode(Road):
     :ivar road_node_extension:
     """
 
-    junction_name: None | MultilingualString = field(
-        default=None,
+    junction_name: MultilingualString = field(
         metadata={
             "name": "junctionName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     road_node_extension: None | ExtensionType = field(
         default=None,

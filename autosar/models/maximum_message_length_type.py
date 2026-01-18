@@ -7,7 +7,7 @@ from .maximum_message_length_type_simple import MaximumMessageLengthTypeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MaximumMessageLengthType:
     """
     Type of Acknowledgement.
@@ -28,11 +28,10 @@ class MaximumMessageLengthType:
     class Meta:
         name = "MAXIMUM-MESSAGE-LENGTH-TYPE"
 
-    value: None | MaximumMessageLengthTypeSimple = field(
-        default=None,
+    value: MaximumMessageLengthTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

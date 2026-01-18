@@ -16,7 +16,7 @@ from .train_number_ref import TrainNumberRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "JourneyPartCouple_VersionStructure"
@@ -29,14 +29,13 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_time: None | XmlTime = field(
-        default=None,
+    start_time: XmlTime = field(
         metadata={
             "name": "StartTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     start_time_day_offset: None | int = field(
         default=None,
@@ -46,14 +45,13 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_time: None | XmlTime = field(
-        default=None,
+    end_time: XmlTime = field(
         metadata={
             "name": "EndTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     end_time_day_offset: None | int = field(
         default=None,
@@ -63,32 +61,29 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_stop_point_ref: None | ScheduledStopPointRefStructure = field(
-        default=None,
+    from_stop_point_ref: ScheduledStopPointRefStructure = field(
         metadata={
             "name": "FromStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    to_stop_point_ref: None | ScheduledStopPointRefStructure = field(
-        default=None,
+    to_stop_point_ref: ScheduledStopPointRefStructure = field(
         metadata={
             "name": "ToStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    main_part_ref: None | JourneyPartRefStructure = field(
-        default=None,
+    main_part_ref: JourneyPartRefStructure = field(
         metadata={
             "name": "MainPartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     block_ref: None | TrainBlockRef | BlockRef = field(
         default=None,
@@ -124,10 +119,9 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: None | int = field(
-        default=None,
+    order: int = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

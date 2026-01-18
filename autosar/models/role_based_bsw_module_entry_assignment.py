@@ -10,7 +10,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoleBasedBswModuleEntryAssignment:
     """
     This class specifies an assignment of a role to a particular
@@ -90,13 +90,12 @@ class RoleBasedBswModuleEntryAssignment:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AssignedEntryRef(Ref):
-        dest: None | BswModuleEntrySubtypesEnum = field(
-            default=None,
+        dest: BswModuleEntrySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

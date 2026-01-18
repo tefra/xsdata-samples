@@ -12,18 +12,17 @@ from npo.models.workflow_enum_type import WorkflowEnumType
 __NAMESPACE__ = "urn:vpro:shared:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ImageType1:
     class Meta:
         name = "imageType"
 
-    title: None | str = field(
-        default=None,
+    title: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:shared:2009",
             "required": True,
-        },
+        }
     )
     description: None | str = field(
         default=None,
@@ -104,12 +103,11 @@ class ImageType1:
             "type": "Attribute",
         },
     )
-    owner: None | OwnerTypeEnum = field(
-        default=None,
+    owner: OwnerTypeEnum = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     highlighted: bool = field(
         default=False,

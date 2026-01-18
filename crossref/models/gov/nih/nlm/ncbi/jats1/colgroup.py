@@ -11,7 +11,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.colgroup_valign import (
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Colgroup:
     class Meta:
         name = "colgroup"

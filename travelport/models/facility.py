@@ -15,7 +15,7 @@ from travelport.models.type_seat_availability import TypeSeatAvailability
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Facility:
     """
     The facility definition for a part of a row or a seat map.
@@ -139,13 +139,12 @@ class Facility:
             "type": "Element",
         },
     )
-    type_value: None | TypeFacility = field(
-        default=None,
+    type_value: TypeFacility = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     seat_code: None | str = field(
         default=None,

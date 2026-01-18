@@ -9,7 +9,7 @@ from .addressable_place_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleMeetingPlace2(AddressablePlaceVersionStructure):
     class Meta:
         name = "VehicleMeetingPlace_"

@@ -10,7 +10,7 @@ from .passenger_carrying_requirement_ref import PassengerCarryingRequirementRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PassengerCarryingRequirementsRelStructure(
     ContainmentAggregationStructure
 ):

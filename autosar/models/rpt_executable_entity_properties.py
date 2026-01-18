@@ -9,7 +9,7 @@ from .rpt_service_point_enum import RptServicePointEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RptExecutableEntityProperties:
     """
     Describes the code preparation for rapid prototyping at

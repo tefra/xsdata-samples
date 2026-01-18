@@ -11,7 +11,7 @@ from .special_service_ref import SpecialServiceRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecialServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "specialServices_RelStructure"

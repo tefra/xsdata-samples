@@ -28,7 +28,7 @@ from travelport.models.third_party_information_1 import ThirdPartyInformation1
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
     """
     Request to create a hotel reservation.
@@ -109,14 +109,13 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "max_occurs": 99,
         },
     )
-    hotel_property: None | HotelProperty = field(
-        default=None,
+    hotel_property: HotelProperty = field(
         metadata={
             "name": "HotelProperty",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        },
+        }
     )
     third_party_information: None | ThirdPartyInformation1 = field(
         default=None,
@@ -126,14 +125,13 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    hotel_stay: None | HotelStay = field(
-        default=None,
+    hotel_stay: HotelStay = field(
         metadata={
             "name": "HotelStay",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        },
+        }
     )
     guarantee: None | Guarantee1 = field(
         default=None,

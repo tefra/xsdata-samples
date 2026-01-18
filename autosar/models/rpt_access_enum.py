@@ -7,7 +7,7 @@ from .rpt_access_enum_simple import RptAccessEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RptAccessEnum:
     """
     Determines the access rights to a data object with respect to rapid
@@ -29,11 +29,10 @@ class RptAccessEnum:
     class Meta:
         name = "RPT-ACCESS-ENUM"
 
-    value: None | RptAccessEnumSimple = field(
-        default=None,
+    value: RptAccessEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

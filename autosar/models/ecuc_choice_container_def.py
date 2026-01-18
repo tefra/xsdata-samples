@@ -47,7 +47,7 @@ from .traceable_subtypes_enum import TraceableSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucChoiceContainerDef:
     """
     Used to define configuration containers that provide a choice between
@@ -166,14 +166,13 @@ class EcucChoiceContainerDef:
     class Meta:
         name = "ECUC-CHOICE-CONTAINER-DEF"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EcucChoiceContainerDef.ShortNameFragments = (
         field(
@@ -368,7 +367,7 @@ class EcucChoiceContainerDef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -379,7 +378,7 @@ class EcucChoiceContainerDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -390,18 +389,17 @@ class EcucChoiceContainerDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RelatedTraceItemRef(Ref):
-        dest: None | TraceableSubtypesEnum = field(
-            default=None,
+        dest: TraceableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucValidationConds:
         ecuc_validation_condition: list[EcucValidationCondition] = field(
             default_factory=list,
@@ -412,7 +410,7 @@ class EcucChoiceContainerDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DestinationUriRefs:
         destination_uri_ref: list[
             EcucChoiceContainerDef.DestinationUriRefs.DestinationUriRef
@@ -425,18 +423,17 @@ class EcucChoiceContainerDef:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DestinationUriRef(Ref):
-            dest: None | EcucDestinationUriDefSubtypesEnum = field(
-                default=None,
+            dest: EcucDestinationUriDefSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MultiplicityConfigClasses:
         ecuc_multiplicity_configuration_class: list[
             EcucMultiplicityConfigurationClass
@@ -449,7 +446,7 @@ class EcucChoiceContainerDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Choices:
         ecuc_param_conf_container_def: list[EcucParamConfContainerDef] = field(
             default_factory=list,
@@ -461,7 +458,7 @@ class EcucChoiceContainerDef:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EcucParamConfContainerDef:
     """
     Used to define configuration containers that can hierarchically contain
@@ -586,14 +583,13 @@ class EcucParamConfContainerDef:
     class Meta:
         name = "ECUC-PARAM-CONF-CONTAINER-DEF"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | EcucParamConfContainerDef.ShortNameFragments
@@ -812,7 +808,7 @@ class EcucParamConfContainerDef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -823,7 +819,7 @@ class EcucParamConfContainerDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -834,18 +830,17 @@ class EcucParamConfContainerDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RelatedTraceItemRef(Ref):
-        dest: None | TraceableSubtypesEnum = field(
-            default=None,
+        dest: TraceableSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcucValidationConds:
         ecuc_validation_condition: list[EcucValidationCondition] = field(
             default_factory=list,
@@ -856,7 +851,7 @@ class EcucParamConfContainerDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DestinationUriRefs:
         destination_uri_ref: list[
             EcucParamConfContainerDef.DestinationUriRefs.DestinationUriRef
@@ -869,18 +864,17 @@ class EcucParamConfContainerDef:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DestinationUriRef(Ref):
-            dest: None | EcucDestinationUriDefSubtypesEnum = field(
-                default=None,
+            dest: EcucDestinationUriDefSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MultiplicityConfigClasses:
         ecuc_multiplicity_configuration_class: list[
             EcucMultiplicityConfigurationClass
@@ -893,7 +887,7 @@ class EcucParamConfContainerDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Parameters:
         ecuc_add_info_param_def: list[EcucAddInfoParamDef] = field(
             default_factory=list,
@@ -970,7 +964,7 @@ class EcucParamConfContainerDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class References:
         ecuc_choice_reference_def: list[EcucChoiceReferenceDef] = field(
             default_factory=list,
@@ -1023,7 +1017,7 @@ class EcucParamConfContainerDef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SubContainers:
         ecuc_choice_container_def: list[EcucChoiceContainerDef] = field(
             default_factory=list,

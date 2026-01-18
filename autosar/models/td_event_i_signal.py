@@ -23,7 +23,7 @@ from .td_event_occurrence_expression import TdEventOccurrenceExpression
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventISignal:
     """
     This is used to describe timing events related to the exchange of
@@ -97,14 +97,13 @@ class TdEventISignal:
     class Meta:
         name = "TD-EVENT-I-SIGNAL"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TdEventISignal.ShortNameFragments = field(
         default=None,
@@ -233,7 +232,7 @@ class TdEventISignal:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -244,7 +243,7 @@ class TdEventISignal:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -255,35 +254,32 @@ class TdEventISignal:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuInstanceRef(Ref):
-        dest: None | EcuInstanceSubtypesEnum = field(
-            default=None,
+        dest: EcuInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalRef(Ref):
-        dest: None | ISignalSubtypesEnum = field(
-            default=None,
+        dest: ISignalSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PhysicalChannelRef(Ref):
-        dest: None | PhysicalChannelSubtypesEnum = field(
-            default=None,
+        dest: PhysicalChannelSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

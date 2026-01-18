@@ -7,7 +7,7 @@ from ipxact.models.file_set import FileSet
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FileSets:
     """
     List of file sets associated with component.

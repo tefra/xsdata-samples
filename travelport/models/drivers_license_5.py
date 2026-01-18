@@ -7,7 +7,7 @@ from travelport.models.type_element_status_6 import TypeElementStatus6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DriversLicense5:
     """
     Details of drivers license.
@@ -38,13 +38,12 @@ class DriversLicense5:
             "type": "Attribute",
         },
     )
-    license_number: None | str = field(
-        default=None,
+    license_number: str = field(
         metadata={
             "name": "LicenseNumber",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     el_stat: None | TypeElementStatus6 = field(
         default=None,

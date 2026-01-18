@@ -29,7 +29,7 @@ from .td_header_id_range import TdHeaderIdRange
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventFrameEthernet:
     """
     This is used to describe timing description events related to the
@@ -114,14 +114,13 @@ class TdEventFrameEthernet:
     class Meta:
         name = "TD-EVENT-FRAME-ETHERNET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TdEventFrameEthernet.ShortNameFragments = (
         field(
@@ -276,7 +275,7 @@ class TdEventFrameEthernet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -287,7 +286,7 @@ class TdEventFrameEthernet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -298,40 +297,37 @@ class TdEventFrameEthernet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EcuInstanceRef(Ref):
-        dest: None | EcuInstanceSubtypesEnum = field(
-            default=None,
+        dest: EcuInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SocketConnectionBundleRef(Ref):
-        dest: None | SocketConnectionBundleSubtypesEnum = field(
-            default=None,
+        dest: SocketConnectionBundleSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StaticSocketConnectionRef(Ref):
-        dest: None | StaticSocketConnectionSubtypesEnum = field(
-            default=None,
+        dest: StaticSocketConnectionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TdHeaderIdFilters:
         td_header_id_range: list[TdHeaderIdRange] = field(
             default_factory=list,
@@ -342,7 +338,7 @@ class TdEventFrameEthernet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TdPduTriggeringFilterRefs:
         td_pdu_triggering_filter_ref: list[
             TdEventFrameEthernet.TdPduTriggeringFilterRefs.TdPduTriggeringFilterRef
@@ -355,13 +351,12 @@ class TdEventFrameEthernet:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TdPduTriggeringFilterRef(Ref):
-            dest: None | PduTriggeringSubtypesEnum = field(
-                default=None,
+            dest: PduTriggeringSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.vehicle_usage2_enum import VehicleUsage2Enum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleCharacteristicsExtended:
     """
     Extension point for 'VehicleCharacteristics' to support additional

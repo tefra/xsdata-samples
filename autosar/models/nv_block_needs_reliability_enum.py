@@ -9,7 +9,7 @@ from .nv_block_needs_reliability_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NvBlockNeedsReliabilityEnum:
     """
     Reliability against data loss on the non-volatile medium.
@@ -35,11 +35,10 @@ class NvBlockNeedsReliabilityEnum:
     class Meta:
         name = "NV-BLOCK-NEEDS-RELIABILITY-ENUM"
 
-    value: None | NvBlockNeedsReliabilityEnumSimple = field(
-        default=None,
+    value: NvBlockNeedsReliabilityEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -20,7 +20,7 @@ from .transmission_com_spec_props import TransmissionComSpecProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QueuedSenderComSpec:
     """
     Communication attributes specific to distribution of events
@@ -159,7 +159,7 @@ class QueuedSenderComSpec:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CompositeNetworkRepresentations:
         composite_network_representation: list[
             CompositeNetworkRepresentation
@@ -172,13 +172,12 @@ class QueuedSenderComSpec:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataElementRef(Ref):
-        dest: None | AutosarDataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: AutosarDataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

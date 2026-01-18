@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FmFeatureSelection:
     """
     A FMFeatureSelection represents the state of a particular FMFeature
@@ -101,14 +101,13 @@ class FmFeatureSelection:
     class Meta:
         name = "FM-FEATURE-SELECTION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | FmFeatureSelection.ShortNameFragments = field(
         default=None,
@@ -229,7 +228,7 @@ class FmFeatureSelection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -240,7 +239,7 @@ class FmFeatureSelection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -251,18 +250,17 @@ class FmFeatureSelection:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FeatureRef(Ref):
-        dest: None | FmFeatureSubtypesEnum = field(
-            default=None,
+        dest: FmFeatureSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AttributeValues:
         fm_attribute_value: list[FmAttributeValue] = field(
             default_factory=list,

@@ -5,17 +5,16 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplyResidentDiscountType:
     """
     Apply resident discount in CLFE.
     """
 
-    ind: None | bool = field(
-        default=None,
+    ind: bool = field(
         metadata={
             "name": "Ind",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -8,17 +8,16 @@ from .node import Node
 __NAMESPACE__ = "http://www.omg.org/spec/DD/20100524/DI"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Shape(Node):
     class Meta:
         namespace = "http://www.omg.org/spec/DD/20100524/DI"
 
-    bounds: None | Bounds = field(
-        default=None,
+    bounds: Bounds = field(
         metadata={
             "name": "Bounds",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/DD/20100524/DC",
             "required": True,
-        },
+        }
     )

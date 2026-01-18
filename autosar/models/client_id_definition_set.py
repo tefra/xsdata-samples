@@ -18,7 +18,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClientIdDefinitionSet:
     """
     Set of Client Identifiers that are used for inter-ECU client-server
@@ -86,14 +86,13 @@ class ClientIdDefinitionSet:
     class Meta:
         name = "CLIENT-ID-DEFINITION-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ClientIdDefinitionSet.ShortNameFragments = (
         field(
@@ -194,7 +193,7 @@ class ClientIdDefinitionSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -205,7 +204,7 @@ class ClientIdDefinitionSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -216,7 +215,7 @@ class ClientIdDefinitionSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClientIdDefinitions:
         client_id_definition: list[ClientIdDefinition] = field(
             default_factory=list,

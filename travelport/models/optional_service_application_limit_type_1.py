@@ -9,7 +9,7 @@ from travelport.models.optional_service_applicability_type_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OptionalServiceApplicationLimitType1:
     """
     The optional service application limit.
@@ -30,13 +30,12 @@ class OptionalServiceApplicationLimitType1:
     class Meta:
         name = "OptionalServiceApplicationLimitType"
 
-    applicable_level: None | OptionalServiceApplicabilityType1 = field(
-        default=None,
+    applicable_level: OptionalServiceApplicabilityType1 = field(
         metadata={
             "name": "ApplicableLevel",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     provider_defined_applicable_levels: None | str = field(
         default=None,
@@ -45,13 +44,12 @@ class OptionalServiceApplicationLimitType1:
             "type": "Attribute",
         },
     )
-    maximum_quantity: None | int = field(
-        default=None,
+    maximum_quantity: int = field(
         metadata={
             "name": "MaximumQuantity",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     minimum_quantity: None | int = field(
         default=None,

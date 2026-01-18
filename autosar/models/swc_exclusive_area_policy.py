@@ -10,7 +10,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwcExclusiveAreaPolicy:
     """
     Options how to generate the ExclusiveArea related APIs.
@@ -82,13 +82,12 @@ class SwcExclusiveAreaPolicy:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExclusiveAreaRef(Ref):
-        dest: None | ExclusiveAreaSubtypesEnum = field(
-            default=None,
+        dest: ExclusiveAreaSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -7,7 +7,7 @@ from npo.models.segment_type import SegmentType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Segment(SegmentType):
     """
     A program can contain a number of segments.

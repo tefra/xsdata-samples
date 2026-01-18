@@ -13,7 +13,7 @@ from .group_of_distance_matrix_elements_ref import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DistanceMatrixElementPriceVersionedChildStructure(
     FarePriceVersionedChildStructure
 ):

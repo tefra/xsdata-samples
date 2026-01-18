@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from tpdb.models.bound_value import BoundValue
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Yes:
     class Meta:
         name = "yes"

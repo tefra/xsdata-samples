@@ -7,7 +7,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnterExitTimeout:
     """
     This meta-class represents the ability to specify a pair of timeouts,

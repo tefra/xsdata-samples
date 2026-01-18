@@ -18,7 +18,7 @@ from .ucm_step import UcmStep
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleRolloutStep:
     """
     This meta-class represents the ability to define a rollout-condition
@@ -85,14 +85,13 @@ class VehicleRolloutStep:
     class Meta:
         name = "VEHICLE-ROLLOUT-STEP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | VehicleRolloutStep.ShortNameFragments = field(
         default=None,
@@ -189,7 +188,7 @@ class VehicleRolloutStep:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -200,7 +199,7 @@ class VehicleRolloutStep:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -211,7 +210,7 @@ class VehicleRolloutStep:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UcmProcessings:
         ucm_step: list[UcmStep] = field(
             default_factory=list,

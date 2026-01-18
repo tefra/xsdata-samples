@@ -29,7 +29,7 @@ from travelport.models.type_retain_reservation import TypeRetainReservation
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
     """
     Request to store an air itinerary and create initial PNR.

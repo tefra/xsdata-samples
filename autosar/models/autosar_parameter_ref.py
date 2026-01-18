@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AutosarParameterRef:
     """
     This class represents a reference to a parameter within AUTOSAR which
@@ -89,13 +89,12 @@ class AutosarParameterRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LocalParameterRef(Ref):
-        dest: None | DataPrototypeSubtypesEnum = field(
-            default=None,
+        dest: DataPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

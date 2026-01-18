@@ -10,21 +10,20 @@ from .vehicle_pooling_ref import VehiclePoolingRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehiclePoolingServiceVersionStructure(
     CommonVehicleServiceVersionStructure
 ):
     class Meta:
         name = "VehiclePoolingService_VersionStructure"
 
-    vehicle_pooling_ref: None | VehiclePoolingRef = field(
-        default=None,
+    vehicle_pooling_ref: VehiclePoolingRef = field(
         metadata={
             "name": "VehiclePoolingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     pooling_policy_url: None | str = field(
         default=None,

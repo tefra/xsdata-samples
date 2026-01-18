@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ObdRatioDenominatorNeeds:
     """
     This meta-class shall be used to indicate that a software-component
@@ -96,14 +96,13 @@ class ObdRatioDenominatorNeeds:
     class Meta:
         name = "OBD-RATIO-DENOMINATOR-NEEDS"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ObdRatioDenominatorNeeds.ShortNameFragments
@@ -218,7 +217,7 @@ class ObdRatioDenominatorNeeds:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -229,7 +228,7 @@ class ObdRatioDenominatorNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -240,7 +239,7 @@ class ObdRatioDenominatorNeeds:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Audiences:
         """
         :ivar audience: This specifies the intended audience for the

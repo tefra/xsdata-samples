@@ -9,7 +9,7 @@ from .trusted_platform_executable_launch_behavior_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrustedPlatformExecutableLaunchBehaviorEnum:
     """
     This enumeration provides options for controlling the behavior of how
@@ -31,11 +31,10 @@ class TrustedPlatformExecutableLaunchBehaviorEnum:
     class Meta:
         name = "TRUSTED-PLATFORM-EXECUTABLE-LAUNCH-BEHAVIOR-ENUM"
 
-    value: None | TrustedPlatformExecutableLaunchBehaviorEnumSimple = field(
-        default=None,
+    value: TrustedPlatformExecutableLaunchBehaviorEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

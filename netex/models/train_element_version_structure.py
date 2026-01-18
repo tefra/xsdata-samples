@@ -18,7 +18,7 @@ from .train_size import TrainSize
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrainElementVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TrainElement_VersionStructure"

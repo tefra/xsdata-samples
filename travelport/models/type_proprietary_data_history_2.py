@@ -10,7 +10,7 @@ from travelport.models.type_proprietary_data_history_proprietary_data_type_2 imp
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeProprietaryDataHistory2(TypeKeyElement2):
     """
     History Element for Proprietary Data.

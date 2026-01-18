@@ -7,7 +7,7 @@ from travelport.models.type_rail_segment_info import TypeRailSegmentInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailSegmentInfo:
     """
     A textual remark container to hold any printable text. (max 512 chars)
@@ -38,11 +38,10 @@ class RailSegmentInfo:
             "type": "Attribute",
         },
     )
-    type_value: None | TypeRailSegmentInfo = field(
-        default=None,
+    type_value: TypeRailSegmentInfo = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

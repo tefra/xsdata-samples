@@ -8,7 +8,7 @@ from travelport.models.cabin_class_1 import CabinClass1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExchangeAirSegment:
     """
     A container to define segment and cabin class in order to process an
@@ -25,22 +25,20 @@ class ExchangeAirSegment:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_segment: None | AirSegment = field(
-        default=None,
+    air_segment: AirSegment = field(
         metadata={
             "name": "AirSegment",
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    cabin_class: None | CabinClass1 = field(
-        default=None,
+    cabin_class: CabinClass1 = field(
         metadata={
             "name": "CabinClass",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        },
+        }
     )
     fare_basis_code: None | str = field(
         default=None,

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RatesAndDates:
     """
     Contains the rates that apply over a date range, all with the same
@@ -17,45 +17,40 @@ class RatesAndDates:
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    start: None | str = field(
-        default=None,
+    start: str = field(
         metadata={
             "name": "Start",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        },
+        }
     )
-    end: None | str = field(
-        default=None,
+    end: str = field(
         metadata={
             "name": "End",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        },
+        }
     )
-    low: None | str = field(
-        default=None,
+    low: str = field(
         metadata={
             "name": "Low",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    high: None | str = field(
-        default=None,
+    high: str = field(
         metadata={
             "name": "High",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

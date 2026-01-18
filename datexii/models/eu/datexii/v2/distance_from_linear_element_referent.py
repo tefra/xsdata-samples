@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.referent import Referent
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DistanceFromLinearElementReferent(DistanceAlongLinearElement):
     """
     Distance of a point along a linear element measured from a "from
@@ -29,23 +29,21 @@ class DistanceFromLinearElementReferent(DistanceAlongLinearElement):
     :ivar distance_from_linear_element_referent_extension:
     """
 
-    distance_along: None | float = field(
-        default=None,
+    distance_along: float = field(
         metadata={
             "name": "distanceAlong",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    from_referent: None | Referent = field(
-        default=None,
+    from_referent: Referent = field(
         metadata={
             "name": "fromReferent",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     towards_referent: None | Referent = field(
         default=None,

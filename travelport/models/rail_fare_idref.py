@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailFareIdref:
     """
     Reference to a complete FareID from a shared list.
@@ -15,11 +15,10 @@ class RailFareIdref:
         name = "RailFareIDRef"
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

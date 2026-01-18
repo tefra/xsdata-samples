@@ -7,7 +7,7 @@ from .td_event_i_pdu_type_enum_simple import TdEventIPduTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TdEventIPduTypeEnum:
     """
     This is used to describe the specific event type of a TDEventIPdu.
@@ -28,11 +28,10 @@ class TdEventIPduTypeEnum:
     class Meta:
         name = "TD-EVENT-I-PDU-TYPE-ENUM"
 
-    value: None | TdEventIPduTypeEnumSimple = field(
-        default=None,
+    value: TdEventIPduTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

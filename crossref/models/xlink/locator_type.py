@@ -7,7 +7,7 @@ from crossref.models.xlink.type_type import TypeType
 __NAMESPACE__ = "http://www.w3.org/1999/xlink"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocatorType:
     """
     :ivar type_value:
@@ -31,13 +31,12 @@ class LocatorType:
             "required": True,
         },
     )
-    href: None | str = field(
-        default=None,
+    href: str = field(
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "required": True,
-        },
+        }
     )
     role: None | str = field(
         default=None,

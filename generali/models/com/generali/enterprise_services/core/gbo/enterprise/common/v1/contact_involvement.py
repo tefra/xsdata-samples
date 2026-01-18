@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContactInvolvement:
     """
     :ivar contact_person: A contact person for the organisation.

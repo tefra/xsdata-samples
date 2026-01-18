@@ -38,7 +38,7 @@ from .version_of_object_ref_structure import VersionOfObjectRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EntityInVersionStructure(EntityStructure):
     validity_conditions_or_valid_between: Iterable[
         ValidityConditionsRelStructure | ValidBetween
@@ -129,7 +129,7 @@ class EntityInVersionStructure(EntityStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataManagedObjectStructure(EntityInVersionStructure):
     key_list: None | KeyList = field(
         default=None,
@@ -164,7 +164,7 @@ class DataManagedObjectStructure(EntityInVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VersionedChildStructure(EntityInVersionStructure):
     extensions: None | Extensions2 = field(
         default=None,
@@ -176,7 +176,7 @@ class VersionedChildStructure(EntityInVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlternativeTextVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "AlternativeText_VersionedChildStructure"
@@ -189,14 +189,13 @@ class AlternativeTextVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    text: None | MultilingualString = field(
-        default=None,
+    text: MultilingualString = field(
         metadata={
             "name": "Text",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     attribute_name: None | str = field(
         default=None,
@@ -220,19 +219,18 @@ class AlternativeTextVersionedChildStructure(VersionedChildStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OperatingDayVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "OperatingDay_VersionStructure"
 
-    calendar_date: None | XmlDate = field(
-        default=None,
+    calendar_date: XmlDate = field(
         metadata={
             "name": "CalendarDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     service_calendar_ref: None | ServiceCalendarRef = field(
         default=None,
@@ -292,7 +290,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimebandVersionedChildStructure(DataManagedObjectStructure):
     class Meta:
         name = "Timeband_VersionedChildStructure"
@@ -356,7 +354,7 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidityConditionVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "ValidityCondition_VersionStructure"
@@ -395,7 +393,7 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlternativeText(AlternativeTextVersionedChildStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
@@ -423,13 +421,13 @@ class AlternativeText(AlternativeTextVersionedChildStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OperatingDay(OperatingDayVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidBetweenVersionStructure(ValidityConditionVersionStructure):
     class Meta:
         name = "ValidBetween_VersionStructure"
@@ -452,7 +450,7 @@ class ValidBetweenVersionStructure(ValidityConditionVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidityCondition(ValidityConditionVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
@@ -473,7 +471,7 @@ class ValidityCondition(ValidityConditionVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
     class Meta:
         name = "ValidityRuleParameter_VersionStructure"
@@ -531,30 +529,28 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AttributeValue:
         content: None | object = field(
             default=None,
             metadata={
                 "type": "Wildcard",
                 "namespace": "http://www.netex.org.uk/netex",
-                "required": True,
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Method:
         content: None | object = field(
             default=None,
             metadata={
                 "type": "Wildcard",
                 "namespace": "http://www.netex.org.uk/netex",
-                "required": True,
             },
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidityTriggerVersionStructure(ValidityConditionVersionStructure):
     class Meta:
         name = "ValidityTrigger_VersionStructure"
@@ -577,7 +573,7 @@ class ValidityTriggerVersionStructure(ValidityConditionVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimebandsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timebands_RelStructure"
@@ -604,7 +600,7 @@ class TimebandsRelStructure(ContainmentAggregationStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DayTypeVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "DayType_VersionStructure"
@@ -673,7 +669,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidBetween(ValidBetweenVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
@@ -743,7 +739,7 @@ class ValidBetween(ValidBetweenVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidDuringVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "ValidDuring_VersionStructure"
@@ -796,7 +792,7 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidityRuleParameter(ValidityRuleParameterVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
@@ -817,7 +813,7 @@ class ValidityRuleParameter(ValidityRuleParameterVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidityTrigger(ValidityTriggerVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
@@ -838,7 +834,7 @@ class ValidityTrigger(ValidityTriggerVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlternativeTextsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "alternativeTexts_RelStructure"
@@ -854,7 +850,7 @@ class AlternativeTextsRelStructure(StrictContainmentAggregationStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OperatingDaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operatingDays_RelStructure"
@@ -881,19 +877,19 @@ class OperatingDaysRelStructure(ContainmentAggregationStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DayType(DayTypeVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareDayTypeVersionedStructure(DayTypeVersionStructure):
     class Meta:
         name = "FareDayType_VersionedStructure"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganisationDayTypeVersionStructure(DayTypeVersionStructure):
     class Meta:
         name = "OrganisationDayType_VersionStructure"
@@ -916,13 +912,13 @@ class OrganisationDayTypeVersionStructure(DayTypeVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SimpleAvailabilityCondition(ValidDuringVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidDuring(ValidDuringVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
@@ -964,19 +960,19 @@ class ValidDuring(ValidDuringVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareDayType(FareDayTypeVersionedStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganisationDayType(OrganisationDayTypeVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DayTypesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypes_RelStructure"
@@ -1022,7 +1018,7 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "AvailabilityCondition_VersionStructure"
@@ -1068,7 +1064,7 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCondition(AvailabilityConditionVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
@@ -1089,7 +1085,7 @@ class AvailabilityCondition(AvailabilityConditionVersionStructure):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidityConditionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "validityConditions_RelStructure"

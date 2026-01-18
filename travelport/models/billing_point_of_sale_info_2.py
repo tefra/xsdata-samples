@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BillingPointOfSaleInfo2:
     """
     Point of Sale information for Billing.
@@ -24,13 +24,12 @@ class BillingPointOfSaleInfo2:
         name = "BillingPointOfSaleInfo"
         namespace = "http://www.travelport.com/schema/uprofileCommon_v30_0"
 
-    origin_application: None | str = field(
-        default=None,
+    origin_application: str = field(
         metadata={
             "name": "OriginApplication",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     cidbnumber: None | str = field(
         default=None,

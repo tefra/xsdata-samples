@@ -61,7 +61,7 @@ from .zones_in_frame_rel_structure import ZonesInFrameRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "ResourceFrame_VersionFrameStructure"

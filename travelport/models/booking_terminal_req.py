@@ -8,7 +8,7 @@ from travelport.models.command import Command
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingTerminalReq(BookingBaseReq):
     """
     Allow terminal commands to be run in the session.
@@ -17,11 +17,10 @@ class BookingTerminalReq(BookingBaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
-    command: None | Command = field(
-        default=None,
+    command: Command = field(
         metadata={
             "name": "Command",
             "type": "Element",
             "required": True,
-        },
+        }
     )

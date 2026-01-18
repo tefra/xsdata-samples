@@ -8,7 +8,7 @@ from sdmx_ml.models.subscription_type import SubscriptionType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SubscriptionRequestType:
     """
     SubscriptionRequestType describes the structure of a single
@@ -25,19 +25,17 @@ class SubscriptionRequestType:
         addition, a modification, or a deletion of a subscription.
     """
 
-    subscription: None | SubscriptionType = field(
-        default=None,
+    subscription: SubscriptionType = field(
         metadata={
             "name": "Subscription",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )
-    action: None | ActionType = field(
-        default=None,
+    action: ActionType = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

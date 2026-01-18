@@ -7,26 +7,24 @@ from .location_structure_2 import LocationStructure2
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BoundingBoxStructure2:
     class Meta:
         name = "BoundingBoxStructure"
 
-    upper_left: None | LocationStructure2 = field(
-        default=None,
+    upper_left: LocationStructure2 = field(
         metadata={
             "name": "UpperLeft",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    lower_right: None | LocationStructure2 = field(
-        default=None,
+    lower_right: LocationStructure2 = field(
         metadata={
             "name": "LowerRight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

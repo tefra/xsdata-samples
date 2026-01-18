@@ -7,7 +7,7 @@ from .http_accept_encoding_enum_simple import HttpAcceptEncodingEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HttpAcceptEncodingEnum:
     """
     This enumeration defines the value for the accept-encoding field of the
@@ -29,11 +29,10 @@ class HttpAcceptEncodingEnum:
     class Meta:
         name = "HTTP-ACCEPT-ENCODING-ENUM"
 
-    value: None | HttpAcceptEncodingEnumSimple = field(
-        default=None,
+    value: HttpAcceptEncodingEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

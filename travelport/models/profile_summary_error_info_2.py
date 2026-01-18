@@ -8,7 +8,7 @@ from travelport.models.type_profile_type_7 import TypeProfileType7
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileSummaryErrorInfo2(TypeErrorInfo5):
     """
     Error information when a profile service fails and profile information
@@ -47,7 +47,7 @@ class ProfileSummaryErrorInfo2(TypeErrorInfo5):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProfileSummary:
         """
         Parameters
@@ -68,29 +68,26 @@ class ProfileSummaryErrorInfo2(TypeErrorInfo5):
             Provisioning code given to the profile if applicable.
         """
 
-        profile_id: None | int = field(
-            default=None,
+        profile_id: int = field(
             metadata={
                 "name": "ProfileID",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
-        profile_type: None | TypeProfileType7 = field(
-            default=None,
+        profile_type: TypeProfileType7 = field(
             metadata={
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "name": "Name",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
         description: None | str = field(
             default=None,

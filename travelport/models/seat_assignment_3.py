@@ -7,7 +7,7 @@ from travelport.models.type_element_status_4 import TypeElementStatus4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SeatAssignment3:
     """
     Parameters
@@ -41,23 +41,21 @@ class SeatAssignment3:
             "type": "Attribute",
         },
     )
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
             "length": 2,
             "white_space": "collapse",
-        },
+        }
     )
-    seat: None | str = field(
-        default=None,
+    seat: str = field(
         metadata={
             "name": "Seat",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     seat_type_code: None | str = field(
         default=None,

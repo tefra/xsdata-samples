@@ -7,7 +7,7 @@ from travelport.models.air_pricing_info import AirPricingInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirPricingInfoList:
     """
     The shared object list of AirSegments.

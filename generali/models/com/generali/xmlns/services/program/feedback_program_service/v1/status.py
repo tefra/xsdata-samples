@@ -11,9 +11,9 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Status:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    value: None | StatusValue = field(default=None)
+    value: StatusValue = field()

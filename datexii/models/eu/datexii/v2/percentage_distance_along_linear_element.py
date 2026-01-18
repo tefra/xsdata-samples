@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PercentageDistanceAlongLinearElement(DistanceAlongLinearElement):
     """
     Distance of a point along a linear element measured from the start node
@@ -24,14 +24,13 @@ class PercentageDistanceAlongLinearElement(DistanceAlongLinearElement):
     :ivar percentage_distance_along_linear_element_extension:
     """
 
-    percentage_distance_along: None | float = field(
-        default=None,
+    percentage_distance_along: float = field(
         metadata={
             "name": "percentageDistanceAlong",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     percentage_distance_along_linear_element_extension: (
         None | ExtensionType

@@ -7,7 +7,7 @@ from .pgwide_enum_simple import PgwideEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PgwideEnum:
     """
     This enumerator specifies, if the table shall be rendered across the
@@ -29,11 +29,10 @@ class PgwideEnum:
     class Meta:
         name = "PGWIDE-ENUM"
 
-    value: None | PgwideEnumSimple = field(
-        default=None,
+    value: PgwideEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

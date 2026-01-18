@@ -7,7 +7,7 @@ from sdmx_ml.models.representation_type import RepresentationType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ConceptRepresentation(RepresentationType):
     """
     ConceptRepresentation defines the core representation that are allowed

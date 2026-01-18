@@ -12,7 +12,7 @@ from .text_table_value_pair import TextTableValuePair
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TextTableMapping:
     """
     Defines the mapping of two DataPrototypes typed by AutosarDataTypes
@@ -109,7 +109,7 @@ class TextTableMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ValuePairs:
         text_table_value_pair: list[TextTableValuePair] = field(
             default_factory=list,

@@ -9,7 +9,7 @@ from sabre.models.processing_message_type import ProcessingMessageType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OneWayProcessingMessageType(ProcessingMessageType):
     """
     Attributes:

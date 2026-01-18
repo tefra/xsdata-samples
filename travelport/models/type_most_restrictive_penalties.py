@@ -7,7 +7,7 @@ from travelport.models.type_restriction_data import TypeRestrictionData
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeMostRestrictivePenalties:
     """
     Most Restrictive Penalties.

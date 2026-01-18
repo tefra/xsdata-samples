@@ -7,7 +7,7 @@ from npo.models.image_type_2 import ImageType2
 __NAMESPACE__ = "urn:vpro:pages:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParagraphType:
     class Meta:
         name = "paragraphType"

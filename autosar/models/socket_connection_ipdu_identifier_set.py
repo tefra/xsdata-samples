@@ -18,7 +18,7 @@ from .so_con_i_pdu_identifier import SoConIPduIdentifier
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SocketConnectionIpduIdentifierSet:
     """
     Collection of PduIdentifiers used for transmission over a Socket
@@ -85,14 +85,13 @@ class SocketConnectionIpduIdentifierSet:
     class Meta:
         name = "SOCKET-CONNECTION-IPDU-IDENTIFIER-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SocketConnectionIpduIdentifierSet.ShortNameFragments
@@ -193,7 +192,7 @@ class SocketConnectionIpduIdentifierSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -204,7 +203,7 @@ class SocketConnectionIpduIdentifierSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -215,7 +214,7 @@ class SocketConnectionIpduIdentifierSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IPduIdentifiers:
         so_con_i_pdu_identifier: list[SoConIPduIdentifier] = field(
             default_factory=list,

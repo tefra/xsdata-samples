@@ -10,7 +10,7 @@ from travelport.models.type_element_status_1 import TypeElementStatus1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ElectronicMiscDocument:
     """
     Electronic miscellaneous document.
@@ -62,14 +62,13 @@ class ElectronicMiscDocument:
             "max_occurs": 999,
         },
     )
-    number: None | str = field(
-        default=None,
+    number: str = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
             "length": 13,
-        },
+        }
     )
     primary_document_indicator: None | bool = field(
         default=None,

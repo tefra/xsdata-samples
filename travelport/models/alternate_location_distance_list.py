@@ -9,7 +9,7 @@ from travelport.models.alternate_location_distance import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlternateLocationDistanceList:
     """
     Provides the Distance Information between Original Search Airports or

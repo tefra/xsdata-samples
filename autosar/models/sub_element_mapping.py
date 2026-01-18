@@ -13,7 +13,7 @@ from .text_table_mapping import TextTableMapping
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubElementMapping:
     """
     This meta-class allows for the definition of mappings of elements of a
@@ -84,7 +84,7 @@ class SubElementMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FirstElements:
         application_composite_data_type_sub_element_ref: list[
             ApplicationCompositeDataTypeSubElementRef
@@ -107,7 +107,7 @@ class SubElementMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecondElements:
         application_composite_data_type_sub_element_ref: list[
             ApplicationCompositeDataTypeSubElementRef
@@ -130,7 +130,7 @@ class SubElementMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TextTableMappings:
         text_table_mapping: list[TextTableMapping] = field(
             default_factory=list,

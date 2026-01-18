@@ -8,7 +8,7 @@ from travelport.models.type_fare_status_code import TypeFareStatusCode
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareStatus:
     """
     Denotes the status of a particular fare.
@@ -30,11 +30,10 @@ class FareStatus:
             "type": "Element",
         },
     )
-    code: None | TypeFareStatusCode = field(
-        default=None,
+    code: TypeFareStatusCode = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

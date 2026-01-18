@@ -7,7 +7,7 @@ from .t_message_event_definition import TMessageEventDefinition
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MessageEventDefinition(TMessageEventDefinition):
     class Meta:
         name = "messageEventDefinition"

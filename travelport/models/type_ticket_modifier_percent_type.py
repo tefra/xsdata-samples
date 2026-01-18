@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeTicketModifierPercentType:
     """
     Ticketing Modifier used to alter a fare percentage before or during the
@@ -20,12 +20,11 @@ class TypeTicketModifierPercentType:
     class Meta:
         name = "typeTicketModifierPercentType"
 
-    percent: None | str = field(
-        default=None,
+    percent: str = field(
         metadata={
             "name": "Percent",
             "type": "Attribute",
             "required": True,
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-        },
+        }
     )

@@ -9,7 +9,7 @@ from .rounding import Rounding
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RoundingsRelStructure(FrameContainmentStructure):
     class Meta:
         name = "roundings_RelStructure"

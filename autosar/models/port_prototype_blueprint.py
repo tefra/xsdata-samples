@@ -41,7 +41,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortPrototypeBlueprint:
     """
     This meta-class represents the ability to express a blueprint of a
@@ -132,14 +132,13 @@ class PortPrototypeBlueprint:
     class Meta:
         name = "PORT-PROTOTYPE-BLUEPRINT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | PortPrototypeBlueprint.ShortNameFragments = (
         field(
@@ -278,7 +277,7 @@ class PortPrototypeBlueprint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -289,7 +288,7 @@ class PortPrototypeBlueprint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -300,7 +299,7 @@ class PortPrototypeBlueprint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -329,7 +328,7 @@ class PortPrototypeBlueprint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InitValues:
         port_prototype_blueprint_init_value: list[
             PortPrototypeBlueprintInitValue
@@ -342,18 +341,17 @@ class PortPrototypeBlueprint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InterfaceRef(Ref):
-        dest: None | PortInterfaceSubtypesEnum = field(
-            default=None,
+        dest: PortInterfaceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvidedComSpecs:
         field_sender_com_spec: list[FieldSenderComSpec] = field(
             default_factory=list,
@@ -412,7 +410,7 @@ class PortPrototypeBlueprint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RequiredComSpecs:
         client_com_spec: list[ClientComSpec] = field(
             default_factory=list,

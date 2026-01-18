@@ -8,16 +8,15 @@ from npo.models.page_sort_type_enum import PageSortTypeEnum
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PageSortType:
     class Meta:
         name = "pageSortType"
 
-    value: None | PageSortTypeEnum = field(
-        default=None,
+    value: PageSortTypeEnum = field(
         metadata={
             "required": True,
-        },
+        }
     )
     order: None | OrderTypeEnum = field(
         default=None,

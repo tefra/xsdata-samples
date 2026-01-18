@@ -19,7 +19,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticSecurityLevel:
     """
     This meta-class represents the ability to define a security level
@@ -95,14 +95,13 @@ class DiagnosticSecurityLevel:
     class Meta:
         name = "DIAGNOSTIC-SECURITY-LEVEL"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DiagnosticSecurityLevel.ShortNameFragments = (
         field(
@@ -233,7 +232,7 @@ class DiagnosticSecurityLevel:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -244,7 +243,7 @@ class DiagnosticSecurityLevel:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,

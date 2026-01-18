@@ -7,7 +7,7 @@ from .scale_constr_validity_enum_simple import ScaleConstrValidityEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScaleConstrValidityEnum:
     """
     This enumerator specifies the possible values of a scale.
@@ -28,11 +28,10 @@ class ScaleConstrValidityEnum:
     class Meta:
         name = "SCALE-CONSTR-VALIDITY-ENUM"
 
-    value: None | ScaleConstrValidityEnumSimple = field(
-        default=None,
+    value: ScaleConstrValidityEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

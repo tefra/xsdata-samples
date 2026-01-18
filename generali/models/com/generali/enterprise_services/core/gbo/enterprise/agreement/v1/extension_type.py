@@ -32,7 +32,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExtensionType:
     effective_date: None | DateTimeType = field(
         default=None,
@@ -106,14 +106,13 @@ class ExtensionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    extension_code: None | CodeDescriptionType = field(
-        default=None,
+    extension_code: CodeDescriptionType = field(
         metadata={
             "name": "ExtensionCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     geographical_scope: None | GeographicalScope = field(
         default=None,

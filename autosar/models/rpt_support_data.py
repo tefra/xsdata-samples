@@ -9,7 +9,7 @@ from .rpt_service_point import RptServicePoint
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RptSupportData:
     """
     Root element for rapid prototyping support data related to one
@@ -84,7 +84,7 @@ class RptSupportData:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExecutionContexts:
         rpt_execution_context: list[RptExecutionContext] = field(
             default_factory=list,
@@ -95,7 +95,7 @@ class RptSupportData:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RptComponents:
         rpt_component: list[RptComponent] = field(
             default_factory=list,
@@ -106,7 +106,7 @@ class RptSupportData:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RptServicePoints:
         rpt_service_point: list[RptServicePoint] = field(
             default_factory=list,

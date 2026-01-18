@@ -26,7 +26,7 @@ class BinaryDataEncoding(Enum):
     TXT = "TXT"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicit:
     """
     A character string that may have a type-tag signifying its role in the
@@ -65,7 +65,7 @@ class AdxpExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AnyType:
     """
     Defines the basic properties of every data value.
@@ -91,7 +91,7 @@ class AnyType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnxpExplicit:
     """
     A character string token representing a part of a name.
@@ -137,7 +137,7 @@ class EnxpExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvxbTsExplicit:
     """
     :ivar null_flavor: An exceptional value expressing missing
@@ -175,7 +175,7 @@ class IvxbTsExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SxcmTsExplicit:
     """
     :ivar null_flavor: An exceptional value expressing missing
@@ -214,7 +214,7 @@ class SxcmTsExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TsExplicit:
     """
     A quantity specifying a point on the axis of natural time.
@@ -246,7 +246,7 @@ class TsExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AnynonNull(AnyType):
     """
     The BooleanNonNull type is used where a Boolean cannot have a null
@@ -267,7 +267,7 @@ class AnynonNull(AnyType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Bin(AnyType):
     """
     Binary data is a raw block of bits.
@@ -299,7 +299,7 @@ class Bin(AnyType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Bl(AnyType):
     """
     The Boolean type stands for the values of two-valued logic.
@@ -320,7 +320,7 @@ class Bl(AnyType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ii(AnyType):
     """
     An identifier that uniquely identifies a thing or object.
@@ -380,7 +380,7 @@ class Ii(AnyType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Qty(AnyType):
     """
     is an abstract generalization for all data types (1) whose value set
@@ -395,7 +395,7 @@ class Qty(AnyType):
         name = "QTY"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TelExplicit:
     """
     A telephone number (voice or fax), e-mail address, or other locator for
@@ -454,7 +454,7 @@ class TelExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Url(AnyType):
     """
     A telecommunications address specified according to Internet standard
@@ -477,7 +477,7 @@ class Url(AnyType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitAdditionalLocator(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.additionalLocator"
@@ -492,7 +492,7 @@ class AdxpExplicitAdditionalLocator(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitBuildingNumberSuffix(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.buildingNumberSuffix"
@@ -507,7 +507,7 @@ class AdxpExplicitBuildingNumberSuffix(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitCareOf(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.careOf"
@@ -522,7 +522,7 @@ class AdxpExplicitCareOf(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitCensusTract(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.censusTract"
@@ -537,7 +537,7 @@ class AdxpExplicitCensusTract(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitCity(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.city"
@@ -552,7 +552,7 @@ class AdxpExplicitCity(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitCountry(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.country"
@@ -567,7 +567,7 @@ class AdxpExplicitCountry(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitCounty(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.county"
@@ -582,7 +582,7 @@ class AdxpExplicitCounty(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitDelimiter(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.delimiter"
@@ -597,7 +597,7 @@ class AdxpExplicitDelimiter(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitDeliveryAddressLine(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.deliveryAddressLine"
@@ -612,7 +612,7 @@ class AdxpExplicitDeliveryAddressLine(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitDeliveryInstallationArea(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.deliveryInstallationArea"
@@ -627,7 +627,7 @@ class AdxpExplicitDeliveryInstallationArea(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitDeliveryInstallationQualifier(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.deliveryInstallationQualifier"
@@ -642,7 +642,7 @@ class AdxpExplicitDeliveryInstallationQualifier(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitDeliveryInstallationType(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.deliveryInstallationType"
@@ -657,7 +657,7 @@ class AdxpExplicitDeliveryInstallationType(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitDeliveryMode(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.deliveryMode"
@@ -672,7 +672,7 @@ class AdxpExplicitDeliveryMode(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitDeliveryModeIdentifier(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.deliveryModeIdentifier"
@@ -687,7 +687,7 @@ class AdxpExplicitDeliveryModeIdentifier(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitDirection(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.direction"
@@ -702,7 +702,7 @@ class AdxpExplicitDirection(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitHouseNumber(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.houseNumber"
@@ -717,7 +717,7 @@ class AdxpExplicitHouseNumber(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitHouseNumberNumeric(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.houseNumberNumeric"
@@ -732,7 +732,7 @@ class AdxpExplicitHouseNumberNumeric(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitPostBox(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.postBox"
@@ -747,7 +747,7 @@ class AdxpExplicitPostBox(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitPostalCode(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.postalCode"
@@ -762,7 +762,7 @@ class AdxpExplicitPostalCode(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitPrecinct(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.precinct"
@@ -777,7 +777,7 @@ class AdxpExplicitPrecinct(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitState(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.state"
@@ -792,7 +792,7 @@ class AdxpExplicitState(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitStreetAddressLine(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.streetAddressLine"
@@ -807,7 +807,7 @@ class AdxpExplicitStreetAddressLine(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitStreetName(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.streetName"
@@ -822,7 +822,7 @@ class AdxpExplicitStreetName(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitStreetNameBase(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.streetNameBase"
@@ -837,7 +837,7 @@ class AdxpExplicitStreetNameBase(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitStreetNameType1(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.streetNameType1"
@@ -852,7 +852,7 @@ class AdxpExplicitStreetNameType1(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitUnitId(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.unitID"
@@ -867,7 +867,7 @@ class AdxpExplicitUnitId(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpExplicitUnitType(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.unitType"
@@ -882,7 +882,7 @@ class AdxpExplicitUnitType(AdxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnExplicitDelimiter(EnxpExplicit):
     class Meta:
         name = "en_explicit.delimiter"
@@ -897,7 +897,7 @@ class EnExplicitDelimiter(EnxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnExplicitFamily(EnxpExplicit):
     class Meta:
         name = "en_explicit.family"
@@ -912,7 +912,7 @@ class EnExplicitFamily(EnxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnExplicitGiven(EnxpExplicit):
     class Meta:
         name = "en_explicit.given"
@@ -927,7 +927,7 @@ class EnExplicitGiven(EnxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnExplicitPrefix(EnxpExplicit):
     class Meta:
         name = "en_explicit.prefix"
@@ -942,7 +942,7 @@ class EnExplicitPrefix(EnxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnExplicitSuffix(EnxpExplicit):
     class Meta:
         name = "en_explicit.suffix"
@@ -957,7 +957,7 @@ class EnExplicitSuffix(EnxpExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdExplicit:
     """
     Mailing and home or office addresses.
@@ -1155,7 +1155,7 @@ class AdExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Bn(AnynonNull):
     """
     The BooleanNonNull type is used where a Boolean cannot have a null
@@ -1176,7 +1176,7 @@ class Bn(AnynonNull):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ed(Bin):
     """
     Data that is primarily intended for human interpretation or for further
@@ -1246,7 +1246,7 @@ class Ed(Bin):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Int(Qty):
     """
     Integer numbers (-1,0,1,2, 100, 3398129, etc.) are precise numbers that
@@ -1269,7 +1269,7 @@ class Int(Qty):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mo(Qty):
     """
     A monetary amount is a quantity expressing the amount of money in some
@@ -1305,7 +1305,7 @@ class Mo(Qty):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Real(Qty):
     """
     Fractional numbers.
@@ -1331,7 +1331,7 @@ class Real(Qty):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RtoQtyQty(Qty):
     """
     :ivar numerator: The quantity that is being divided in the ratio.
@@ -1344,25 +1344,23 @@ class RtoQtyQty(Qty):
     class Meta:
         name = "RTO_QTY_QTY"
 
-    numerator: None | Qty = field(
-        default=None,
+    numerator: Qty = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    denominator: None | Qty = field(
-        default=None,
+    denominator: Qty = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ts(Qty):
     """
     A quantity specifying a point on the axis of natural time.
@@ -1382,7 +1380,7 @@ class Ts(Qty):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ThumbnailExplicit:
     """
     A thumbnail is an abbreviated rendition of the full data.
@@ -1485,7 +1483,7 @@ class ThumbnailExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Cd(AnyType):
     """
     A concept descriptor represents any kind of concept usually by giving a
@@ -1602,7 +1600,7 @@ class Cd(AnyType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EdExplicit:
     """
     Data that is primarily intended for human interpretation or for further
@@ -1711,7 +1709,7 @@ class EdExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvxbTs(Ts):
     """
     :ivar inclusive: Specifies whether the limit is included in the
@@ -1731,7 +1729,7 @@ class IvxbTs(Ts):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Rto(RtoQtyQty):
     """
     A quantity constructed as the quotient of a numerator quantity divided
@@ -1749,7 +1747,7 @@ class Rto(RtoQtyQty):
         name = "RTO"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScExplicit:
     """
     An ST that optionally may have a code attached.
@@ -1902,7 +1900,7 @@ class ScExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class St(Ed):
     """
     The character string data type stands for text data, primarily intended
@@ -1952,7 +1950,7 @@ class St(Ed):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StExplicit:
     """
     The character string data type stands for text data, primarily intended
@@ -2046,7 +2044,7 @@ class StExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SxcmTs(Ts):
     """
     :ivar operator: A code specifying whether the set component is
@@ -2067,7 +2065,7 @@ class SxcmTs(Ts):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Thumbnail(Ed):
     """
     A thumbnail is an abbreviated rendition of the full data.
@@ -2083,7 +2081,7 @@ class Thumbnail(Ed):
         name = "thumbnail"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Adxp(St):
     """
     A character string that may have a type-tag signifying its role in the
@@ -2113,7 +2111,7 @@ class Adxp(St):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ce(Cd):
     """
     Coded data, consists of a coded value (CV) and, optionally, coded
@@ -2134,7 +2132,7 @@ class Ce(Cd):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Enxp(St):
     """
     A character string token representing a part of a name.
@@ -2171,7 +2169,7 @@ class Enxp(St):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PqrExplicit:
     """
     A representation of a physical quantity in a unit from any code system.
@@ -2261,7 +2259,7 @@ class PqrExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Sc(St):
     """
     An ST that optionally may have a code attached.
@@ -2324,7 +2322,7 @@ class Sc(St):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Tel(Url):
     """
     A telephone number (voice or fax), e-mail address, or other locator for
@@ -2366,7 +2364,7 @@ class Tel(Url):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Cv(Ce):
     """
     Coded data, consists of a code, display name, code system, and original
@@ -2394,7 +2392,7 @@ class Cv(Ce):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EivlEvent(Ce):
     """
     A code for a common (periodical) activity of daily living based on
@@ -2453,7 +2451,7 @@ class EivlEvent(Ce):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PqExplicit:
     """
     A dimensioned quantity expressing the result of a measurement act.
@@ -2502,7 +2500,7 @@ class PqExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpAdditionalLocator(Adxp):
     class Meta:
         name = "adxp.additionalLocator"
@@ -2517,7 +2515,7 @@ class AdxpAdditionalLocator(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpBuildingNumberSuffix(Adxp):
     class Meta:
         name = "adxp.buildingNumberSuffix"
@@ -2532,7 +2530,7 @@ class AdxpBuildingNumberSuffix(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpCareOf(Adxp):
     class Meta:
         name = "adxp.careOf"
@@ -2547,7 +2545,7 @@ class AdxpCareOf(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpCensusTract(Adxp):
     class Meta:
         name = "adxp.censusTract"
@@ -2562,7 +2560,7 @@ class AdxpCensusTract(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpCity(Adxp):
     class Meta:
         name = "adxp.city"
@@ -2577,7 +2575,7 @@ class AdxpCity(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpCountry(Adxp):
     class Meta:
         name = "adxp.country"
@@ -2592,7 +2590,7 @@ class AdxpCountry(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpCounty(Adxp):
     class Meta:
         name = "adxp.county"
@@ -2607,7 +2605,7 @@ class AdxpCounty(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpDelimiter(Adxp):
     class Meta:
         name = "adxp.delimiter"
@@ -2622,7 +2620,7 @@ class AdxpDelimiter(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpDeliveryAddressLine(Adxp):
     class Meta:
         name = "adxp.deliveryAddressLine"
@@ -2637,7 +2635,7 @@ class AdxpDeliveryAddressLine(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpDeliveryInstallationArea(Adxp):
     class Meta:
         name = "adxp.deliveryInstallationArea"
@@ -2652,7 +2650,7 @@ class AdxpDeliveryInstallationArea(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpDeliveryInstallationQualifier(Adxp):
     class Meta:
         name = "adxp.deliveryInstallationQualifier"
@@ -2667,7 +2665,7 @@ class AdxpDeliveryInstallationQualifier(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpDeliveryInstallationType(Adxp):
     class Meta:
         name = "adxp.deliveryInstallationType"
@@ -2682,7 +2680,7 @@ class AdxpDeliveryInstallationType(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpDeliveryMode(Adxp):
     class Meta:
         name = "adxp.deliveryMode"
@@ -2697,7 +2695,7 @@ class AdxpDeliveryMode(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpDeliveryModeIdentifier(Adxp):
     class Meta:
         name = "adxp.deliveryModeIdentifier"
@@ -2712,7 +2710,7 @@ class AdxpDeliveryModeIdentifier(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpDirection(Adxp):
     class Meta:
         name = "adxp.direction"
@@ -2727,7 +2725,7 @@ class AdxpDirection(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpHouseNumber(Adxp):
     class Meta:
         name = "adxp.houseNumber"
@@ -2742,7 +2740,7 @@ class AdxpHouseNumber(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpHouseNumberNumeric(Adxp):
     class Meta:
         name = "adxp.houseNumberNumeric"
@@ -2757,7 +2755,7 @@ class AdxpHouseNumberNumeric(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpPostBox(Adxp):
     class Meta:
         name = "adxp.postBox"
@@ -2772,7 +2770,7 @@ class AdxpPostBox(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpPostalCode(Adxp):
     class Meta:
         name = "adxp.postalCode"
@@ -2787,7 +2785,7 @@ class AdxpPostalCode(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpPrecinct(Adxp):
     class Meta:
         name = "adxp.precinct"
@@ -2802,7 +2800,7 @@ class AdxpPrecinct(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpState(Adxp):
     class Meta:
         name = "adxp.state"
@@ -2817,7 +2815,7 @@ class AdxpState(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpStreetAddressLine(Adxp):
     class Meta:
         name = "adxp.streetAddressLine"
@@ -2832,7 +2830,7 @@ class AdxpStreetAddressLine(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpStreetName(Adxp):
     class Meta:
         name = "adxp.streetName"
@@ -2847,7 +2845,7 @@ class AdxpStreetName(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpStreetNameBase(Adxp):
     class Meta:
         name = "adxp.streetNameBase"
@@ -2862,7 +2860,7 @@ class AdxpStreetNameBase(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpStreetNameType(Adxp):
     class Meta:
         name = "adxp.streetNameType"
@@ -2877,7 +2875,7 @@ class AdxpStreetNameType(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpUnitId(Adxp):
     class Meta:
         name = "adxp.unitID"
@@ -2892,7 +2890,7 @@ class AdxpUnitId(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdxpUnitType(Adxp):
     class Meta:
         name = "adxp.unitType"
@@ -2907,7 +2905,7 @@ class AdxpUnitType(Adxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnDelimiter(Enxp):
     class Meta:
         name = "en.delimiter"
@@ -2922,7 +2920,7 @@ class EnDelimiter(Enxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnFamily(Enxp):
     class Meta:
         name = "en.family"
@@ -2937,7 +2935,7 @@ class EnFamily(Enxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnGiven(Enxp):
     class Meta:
         name = "en.given"
@@ -2952,7 +2950,7 @@ class EnGiven(Enxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnPrefix(Enxp):
     class Meta:
         name = "en.prefix"
@@ -2967,7 +2965,7 @@ class EnPrefix(Enxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnSuffix(Enxp):
     class Meta:
         name = "en.suffix"
@@ -2982,7 +2980,7 @@ class EnSuffix(Enxp):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ad(AnyType):
     """
     Mailing and home or office addresses.
@@ -3170,7 +3168,7 @@ class Ad(AnyType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Co(Cv):
     """
     Coded data, where the domain from which the codeset comes is ordered.
@@ -3184,7 +3182,7 @@ class Co(Cv):
         name = "CO"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Cr(AnyType):
     """
     A concept qualifier code with optionally named role.
@@ -3240,7 +3238,7 @@ class Cr(AnyType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Cs(Cv):
     """
     Coded data, consists of a code, display name, code system, and original
@@ -3312,7 +3310,7 @@ class Cs(Cv):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvlTsExplicit:
     """
     :ivar low: The low limit of the interval.
@@ -3392,7 +3390,7 @@ class IvlTsExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Pqr(Cv):
     """
     A representation of a physical quantity in a unit from any code system.
@@ -3414,7 +3412,7 @@ class Pqr(Cv):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CdExplicit(AnyType):
     """
     A concept descriptor represents any kind of concept usually by giving a
@@ -3531,7 +3529,7 @@ class CdExplicit(AnyType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnExplicit:
     """
     A name for a person.
@@ -3610,7 +3608,7 @@ class EnExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OnExplicit:
     """
     A name for a person.
@@ -3679,7 +3677,7 @@ class OnExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PnExplicit:
     """
     A name for a person.
@@ -3758,7 +3756,7 @@ class PnExplicit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Pq(Qty):
     """
     A dimensioned quantity expressing the result of a measurement act.
@@ -3797,7 +3795,7 @@ class Pq(Qty):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CeExplicit(CdExplicit):
     """
     Coded data, consists of a coded value (CV) and, optionally, coded
@@ -3818,7 +3816,7 @@ class CeExplicit(CdExplicit):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IvlTs(SxcmTs):
     """
     :ivar low: The low limit of the interval.
@@ -3869,7 +3867,7 @@ class IvlTs(SxcmTs):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class En(AnyType):
     """
     A name for a person, organization, place or thing.
@@ -3941,7 +3939,7 @@ class En(AnyType):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class On(En):
     """
     A name for an organization.
@@ -3953,7 +3951,7 @@ class On(En):
         name = "ON"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Pn(En):
     """
     A name for a person.
@@ -3967,7 +3965,7 @@ class Pn(En):
         name = "PN"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Tn(En):
     """
     A restriction of entity name that is effectively a simple string used

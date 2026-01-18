@@ -7,7 +7,7 @@ from .t_text import TText
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Text(TText):
     class Meta:
         name = "text"

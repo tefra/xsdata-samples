@@ -9,7 +9,7 @@ from .end_to_end_profile_behavior_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EndToEndProfileBehaviorEnum:
     """
     Behavior of the check functionality.
@@ -30,11 +30,10 @@ class EndToEndProfileBehaviorEnum:
     class Meta:
         name = "END-TO-END-PROFILE-BEHAVIOR-ENUM"
 
-    value: None | EndToEndProfileBehaviorEnumSimple = field(
-        default=None,
+    value: EndToEndProfileBehaviorEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

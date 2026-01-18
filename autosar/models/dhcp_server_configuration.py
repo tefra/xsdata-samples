@@ -8,7 +8,7 @@ from .ipv_6_dhcp_server_configuration import Ipv6DhcpServerConfiguration
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DhcpServerConfiguration:
     """
     Defines the configuration of DHCP servers that are running on the

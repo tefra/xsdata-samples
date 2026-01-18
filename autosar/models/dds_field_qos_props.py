@@ -11,7 +11,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DdsFieldQosProps:
     """
     Configuration properties of the Field interaction when using DDS as the
@@ -68,13 +68,12 @@ class DdsFieldQosProps:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FieldRef(Ref):
-        dest: None | ServiceFieldDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceFieldDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

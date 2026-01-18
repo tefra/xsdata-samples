@@ -7,7 +7,7 @@ from .array_size_handling_enum_simple import ArraySizeHandlingEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ArraySizeHandlingEnum:
     """
     This enumeration defines different ways to handle the sizes of variable
@@ -29,11 +29,10 @@ class ArraySizeHandlingEnum:
     class Meta:
         name = "ARRAY-SIZE-HANDLING-ENUM"
 
-    value: None | ArraySizeHandlingEnumSimple = field(
-        default=None,
+    value: ArraySizeHandlingEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

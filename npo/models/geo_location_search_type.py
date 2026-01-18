@@ -9,7 +9,7 @@ from npo.models.owner_type_enum import OwnerTypeEnum
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GeoLocationSearchType:
     class Meta:
         name = "geoLocationSearchType"

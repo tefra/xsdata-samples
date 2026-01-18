@@ -12,7 +12,7 @@ from .quality_structure_factor_prices_rel_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QualityStructureFactorVersionStructure(
     FareStructureFactorVersionStructure
 ):

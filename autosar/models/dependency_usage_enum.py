@@ -7,7 +7,7 @@ from .dependency_usage_enum_simple import DependencyUsageEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DependencyUsageEnum:
     """
     Enumeration describing the process steps a dependency is valid in.
@@ -28,11 +28,10 @@ class DependencyUsageEnum:
     class Meta:
         name = "DEPENDENCY-USAGE-ENUM"
 
-    value: None | DependencyUsageEnumSimple = field(
-        default=None,
+    value: DependencyUsageEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

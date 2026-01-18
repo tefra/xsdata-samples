@@ -14,7 +14,7 @@ from datexii.models.eu.datexii.v2.non_road_event_information import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CarParks(NonRoadEventInformation):
     """
     Provides information on the status of one or more car parks.
@@ -48,15 +48,14 @@ class CarParks(NonRoadEventInformation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    car_park_identity: None | str = field(
-        default=None,
+    car_park_identity: str = field(
         metadata={
             "name": "carParkIdentity",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        },
+        }
     )
     car_park_occupancy: None | float = field(
         default=None,

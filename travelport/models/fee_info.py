@@ -7,7 +7,7 @@ from travelport.models.type_fee_info_1 import TypeFeeInfo1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FeeInfo(TypeFeeInfo1):
     """
     A generic type of fee for those charges which are incurred by the

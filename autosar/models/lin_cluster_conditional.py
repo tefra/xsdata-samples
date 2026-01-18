@@ -16,7 +16,7 @@ from .user_defined_physical_channel import UserDefinedPhysicalChannel
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinClusterConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -113,7 +113,7 @@ class LinClusterConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PhysicalChannels:
         can_physical_channel: list[CanPhysicalChannel] = field(
             default_factory=list,

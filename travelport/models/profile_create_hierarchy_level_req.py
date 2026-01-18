@@ -10,7 +10,7 @@ from travelport.models.type_create_hierarchy_level import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileCreateHierarchyLevelReq(BaseReq5):
     """
     Request to create a new level within an existing agency or account
@@ -42,23 +42,21 @@ class ProfileCreateHierarchyLevelReq(BaseReq5):
             "type": "Attribute",
         },
     )
-    profile_type: None | TypeCreateHierarchyLevel = field(
-        default=None,
+    profile_type: TypeCreateHierarchyLevel = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 64,
-        },
+        }
     )
     description: None | str = field(
         default=None,

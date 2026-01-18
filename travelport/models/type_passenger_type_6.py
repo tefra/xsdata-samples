@@ -13,7 +13,7 @@ from travelport.models.type_residency_6 import TypeResidency6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypePassengerType6:
     """
     Passenger type code with optional age information.
@@ -84,15 +84,14 @@ class TypePassengerType6:
             "namespace": "http://www.travelport.com/schema/common_v38_0",
         },
     )
-    code: None | str = field(
-        default=None,
+    code: str = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
             "min_length": 3,
             "max_length": 5,
-        },
+        }
     )
     age: None | int = field(
         default=None,

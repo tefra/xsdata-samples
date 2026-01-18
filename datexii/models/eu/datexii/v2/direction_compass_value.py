@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DirectionCompassValue(DataValue):
     """
     A measured or calculated value of direction as a point of the compass.
@@ -21,14 +21,13 @@ class DirectionCompassValue(DataValue):
     :ivar direction_compass_value_extension:
     """
 
-    direction_compass: None | DirectionCompassEnum = field(
-        default=None,
+    direction_compass: DirectionCompassEnum = field(
         metadata={
             "name": "directionCompass",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     direction_compass_value_extension: None | ExtensionType = field(
         default=None,

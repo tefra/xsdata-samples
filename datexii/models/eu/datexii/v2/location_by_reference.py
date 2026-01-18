@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.predefined_location_versioned_reference import
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationByReference(Location):
     """
     A location defined by reference to a predefined location.
@@ -21,16 +21,15 @@ class LocationByReference(Location):
     :ivar location_by_reference_extension:
     """
 
-    predefined_location_reference: (
-        None | PredefinedLocationVersionedReference
-    ) = field(
-        default=None,
-        metadata={
-            "name": "predefinedLocationReference",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    predefined_location_reference: PredefinedLocationVersionedReference = (
+        field(
+            metadata={
+                "name": "predefinedLocationReference",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            }
+        )
     )
     location_by_reference_extension: None | ExtensionType = field(
         default=None,

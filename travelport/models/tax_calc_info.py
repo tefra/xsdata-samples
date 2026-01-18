@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxCalcInfo:
     """
     Container for a single segment for tax calculation purposes.
@@ -14,33 +14,30 @@ class TaxCalcInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    origin: None | str = field(
-        default=None,
+    origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    destination: None | str = field(
-        default=None,
+    destination: str = field(
         metadata={
             "name": "Destination",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    base_fare: None | str = field(
-        default=None,
+    base_fare: str = field(
         metadata={
             "name": "BaseFare",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     qsurcharge: None | str = field(
         default=None,

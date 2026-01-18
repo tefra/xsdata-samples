@@ -8,7 +8,7 @@ from travelport.models.type_phone_type_2 import TypePhoneType2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypePhone2(TypeKeyElement2):
     """
     Profile Phone Number.
@@ -35,13 +35,12 @@ class TypePhone2(TypeKeyElement2):
     class Meta:
         name = "typePhone"
 
-    type_value: None | TypePhoneType2 = field(
-        default=None,
+    type_value: TypePhoneType2 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     country: None | str = field(
         default=None,
@@ -59,14 +58,13 @@ class TypePhone2(TypeKeyElement2):
             "max_length": 5,
         },
     )
-    local_number: None | str = field(
-        default=None,
+    local_number: str = field(
         metadata={
             "name": "LocalNumber",
             "type": "Attribute",
             "required": True,
             "max_length": 50,
-        },
+        }
     )
     extension: None | str = field(
         default=None,

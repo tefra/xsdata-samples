@@ -9,7 +9,7 @@ from travelport.models.vehicle import Vehicle
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleWithMediaItems:
     """
     A container for displaying vehicle details,media urls and errors.
@@ -27,13 +27,12 @@ class VehicleWithMediaItems:
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    vehicle: None | Vehicle = field(
-        default=None,
+    vehicle: Vehicle = field(
         metadata={
             "name": "Vehicle",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     media_item: list[MediaItem1] = field(
         default_factory=list,

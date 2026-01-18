@@ -10,7 +10,7 @@ from .mode_restriction_assessment_ref import ModeRestrictionAssessmentRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModeRestrictionAssessmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "modeRestrictionAssessments_RelStructure"

@@ -7,7 +7,7 @@ from .run_mode_simple import RunModeSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RunMode:
     """
     The schedule table can be executed in two different modes.
@@ -28,11 +28,10 @@ class RunMode:
     class Meta:
         name = "RUN-MODE"
 
-    value: None | RunModeSimple = field(
-        default=None,
+    value: RunModeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -9,7 +9,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanControllerFdConfiguration:
     """
     Bit timing related configuration of a CAN controller for payload and

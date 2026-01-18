@@ -9,7 +9,7 @@ from .diagnostic_access_permission_validity_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticAccessPermissionValidityEnum:
     """
     This meta-class provides settings for how the accessPermission shall be
@@ -31,11 +31,10 @@ class DiagnosticAccessPermissionValidityEnum:
     class Meta:
         name = "DIAGNOSTIC-ACCESS-PERMISSION-VALIDITY-ENUM"
 
-    value: None | DiagnosticAccessPermissionValidityEnumSimple = field(
-        default=None,
+    value: DiagnosticAccessPermissionValidityEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

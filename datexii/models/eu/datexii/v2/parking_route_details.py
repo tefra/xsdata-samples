@@ -17,7 +17,7 @@ from datexii.models.eu.datexii.v2.parking_route_type_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingRouteDetails(ParkingRoute):
     """
     Urban context: Defining parking routes leading to the parking site.
@@ -113,17 +113,15 @@ class ParkingRouteDetails(ParkingRoute):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

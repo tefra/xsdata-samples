@@ -11,7 +11,7 @@ from travelport.models.type_payment_type_2 import TypePaymentType2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypePaymentDetailsHistory2(TypeKeyElement2):
     """
     History Element for Payment Details.

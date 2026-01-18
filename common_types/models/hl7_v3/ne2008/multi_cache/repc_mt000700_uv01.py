@@ -41,7 +41,7 @@ from .coct_mt710000_uv01 import CoctMt710000Uv01Place
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000700Uv01LocatedEntity:
     class Meta:
         name = "REPC_MT000700UV01.LocatedEntity"
@@ -100,17 +100,16 @@ class RepcMt000700Uv01LocatedEntity:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassLocatedEntity = field(
-        default=None,
+    class_code: RoleClassLocatedEntity = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000700Uv01Organization:
     class Meta:
         name = "REPC_MT000700UV01.Organization"
@@ -174,13 +173,12 @@ class RepcMt000700Uv01Organization:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassOrganization = field(
-        default=None,
+    class_code: EntityClassOrganization = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -193,7 +191,7 @@ class RepcMt000700Uv01Organization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000700Uv01Device:
     class Meta:
         name = "REPC_MT000700UV01.Device"
@@ -260,13 +258,12 @@ class RepcMt000700Uv01Device:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassDevice = field(
-        default=None,
+    class_code: EntityClassDevice = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -279,7 +276,7 @@ class RepcMt000700Uv01Device:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RepcMt000700Uv01MaintainedEntity:
     class Meta:
         name = "REPC_MT000700UV01.MaintainedEntity"

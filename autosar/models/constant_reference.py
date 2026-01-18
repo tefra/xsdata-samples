@@ -12,7 +12,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConstantReference:
     """
     Instead of defining this value inline, a constant is referenced.
@@ -78,13 +78,12 @@ class ConstantReference:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConstantRef(Ref):
-        dest: None | ConstantSpecificationSubtypesEnum = field(
-            default=None,
+        dest: ConstantSpecificationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -7,7 +7,7 @@ from .bsw_entry_kind_enum_simple import BswEntryKindEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswEntryKindEnum:
     """
     Denotes the mechanism by which the entry into the Bsw module shall be
@@ -29,11 +29,10 @@ class BswEntryKindEnum:
     class Meta:
         name = "BSW-ENTRY-KIND-ENUM"
 
-    value: None | BswEntryKindEnumSimple = field(
-        default=None,
+    value: BswEntryKindEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -10,7 +10,7 @@ from .vehicle_equipment_profile_ref import VehicleEquipmentProfileRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleEquipmentProfileRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "vehicleEquipmentProfileRefs_RelStructure"

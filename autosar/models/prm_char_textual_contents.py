@@ -7,7 +7,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrmCharTextualContents:
     """
     This metaclass represents the fact that it is a textual parameter.

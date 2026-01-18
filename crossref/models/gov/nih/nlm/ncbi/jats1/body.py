@@ -44,7 +44,7 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.math import Math
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Body:
     """
     <div> <h3>Body of the Article</h3> </div>.

@@ -9,7 +9,7 @@ from datexii.models.eu.datexii.v2.offset_distance import OffsetDistance
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlertCMethod4PrimaryPointLocation:
     """
     The point (called Primary point) which is either a single point or at
@@ -19,23 +19,21 @@ class AlertCMethod4PrimaryPointLocation:
     ALERT-C location table plus a non-negative offset distance.
     """
 
-    alert_clocation: None | AlertCLocation = field(
-        default=None,
+    alert_clocation: AlertCLocation = field(
         metadata={
             "name": "alertCLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    offset_distance: None | OffsetDistance = field(
-        default=None,
+    offset_distance: OffsetDistance = field(
         metadata={
             "name": "offsetDistance",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     alert_cmethod4_primary_point_location_extension: None | ExtensionType = (
         field(

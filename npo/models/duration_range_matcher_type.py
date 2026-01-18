@@ -9,7 +9,7 @@ from npo.models.range_matcher_type import RangeMatcherType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DurationRangeMatcherType(RangeMatcherType):
     class Meta:
         name = "durationRangeMatcherType"

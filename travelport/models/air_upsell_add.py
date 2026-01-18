@@ -8,18 +8,17 @@ from travelport.models.air_upsell_qualify import AirUpsellQualify
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirUpsellAdd:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    air_upsell_qualify: None | AirUpsellQualify = field(
-        default=None,
+    air_upsell_qualify: AirUpsellQualify = field(
         metadata={
             "name": "AirUpsellQualify",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     air_upsell_offer: None | AirUpsellOffer = field(
         default=None,

@@ -13,7 +13,7 @@ from .time_structure_factor_ref import TimeStructureFactorRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeStructureFactorsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "timeStructureFactors_RelStructure"

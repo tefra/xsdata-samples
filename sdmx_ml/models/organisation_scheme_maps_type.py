@@ -9,7 +9,7 @@ from sdmx_ml.models.organisation_scheme_map_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class OrganisationSchemeMapsType:
     """
     OrganisationSchemeMapsType describes the structure of the organisation

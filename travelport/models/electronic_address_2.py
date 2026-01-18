@@ -9,7 +9,7 @@ from travelport.models.type_taggable_electronic_address_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ElectronicAddress2(TypeTaggableElectronicAddress2):
     """
     Electronic address or account such as Email, Twitter, etc.

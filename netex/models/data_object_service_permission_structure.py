@@ -5,11 +5,10 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataObjectServicePermissionStructure:
-    value: None | float = field(
-        default=None,
+    value: float = field(
         metadata={
             "required": True,
-        },
+        }
     )

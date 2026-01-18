@@ -16,7 +16,7 @@ from travelport.models.type_string_restriction_2 import TypeStringRestriction2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ModifyField2:
     """
     Details of a root-level field to be updated.
@@ -144,15 +144,14 @@ class ModifyField2:
             "type": "Attribute",
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     description: None | str = field(
         default=None,
@@ -163,13 +162,12 @@ class ModifyField2:
             "max_length": 255,
         },
     )
-    type_value: None | TypeCustomFieldDataFormat2 = field(
-        default=None,
+    type_value: TypeCustomFieldDataFormat2 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     encrypted: bool = field(
         default=False,
@@ -229,13 +227,12 @@ class ModifyField2:
             "type": "Attribute",
         },
     )
-    action: None | TypeAction2 = field(
-        default=None,
+    action: TypeAction2 = field(
         metadata={
             "name": "Action",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     force: bool = field(
         default=False,
@@ -245,7 +242,7 @@ class ModifyField2:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FreeformTextRestriction(TypeStringRestriction2):
         """
         Parameters
@@ -254,16 +251,15 @@ class ModifyField2:
             Indicate the action to be executed (update or delete)
         """
 
-        action: None | TypeAction2 = field(
-            default=None,
+        action: TypeAction2 = field(
             metadata={
                 "name": "Action",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class WholeNumberRestriction(TypeIntegerRestriction2):
         """
         Parameters
@@ -272,16 +268,15 @@ class ModifyField2:
             Indicate the action to be executed (update or delete)
         """
 
-        action: None | TypeAction2 = field(
-            default=None,
+        action: TypeAction2 = field(
             metadata={
                 "name": "Action",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DecimalRestriction(TypeFloatRestriction2):
         """
         Parameters
@@ -290,16 +285,15 @@ class ModifyField2:
             Indicate the action to be executed (update or delete)
         """
 
-        action: None | TypeAction2 = field(
-            default=None,
+        action: TypeAction2 = field(
             metadata={
                 "name": "Action",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TextRestriction(TypeStringRestriction2):
         """
         Parameters
@@ -308,16 +302,15 @@ class ModifyField2:
             Indicate the action to be executed (add, update or delete)
         """
 
-        action: None | TypeAction2 = field(
-            default=None,
+        action: TypeAction2 = field(
             metadata={
                 "name": "Action",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AlphaNumericRestriction(TypeStringRestriction2):
         """
         Parameters
@@ -326,16 +319,15 @@ class ModifyField2:
             Indicate the action to be executed (add, update or delete)
         """
 
-        action: None | TypeAction2 = field(
-            default=None,
+        action: TypeAction2 = field(
             metadata={
                 "name": "Action",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PercentageRestriction(TypeFloatRestriction2):
         """
         Parameters
@@ -344,11 +336,10 @@ class ModifyField2:
             Indicate the action to be executed (add, update or delete)
         """
 
-        action: None | TypeAction2 = field(
-            default=None,
+        action: TypeAction2 = field(
             metadata={
                 "name": "Action",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

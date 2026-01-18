@@ -9,25 +9,23 @@ from .t_formal_expression import TFormalExpression
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TCorrelationPropertyRetrievalExpression(TBaseElement):
     class Meta:
         name = "tCorrelationPropertyRetrievalExpression"
 
-    message_path: None | TFormalExpression = field(
-        default=None,
+    message_path: TFormalExpression = field(
         metadata={
             "name": "messagePath",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "required": True,
-        },
+        }
     )
-    message_ref: None | QName = field(
-        default=None,
+    message_ref: QName = field(
         metadata={
             "name": "messageRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.predefined_non_ordered_location_group_versione
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrafficView:
     """
     An identifiable instance of a traffic view at a single point in time
@@ -31,25 +31,21 @@ class TrafficView:
     :ivar id:
     """
 
-    traffic_view_time: None | XmlDateTime = field(
-        default=None,
+    traffic_view_time: XmlDateTime = field(
         metadata={
             "name": "trafficViewTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    predefined_non_ordered_location_group_reference: (
-        None | PredefinedNonOrderedLocationGroupVersionedReference
-    ) = field(
-        default=None,
+    predefined_non_ordered_location_group_reference: PredefinedNonOrderedLocationGroupVersionedReference = field(
         metadata={
             "name": "predefinedNonOrderedLocationGroupReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     linear_traffic_view: list[LinearTrafficView] = field(
         default_factory=list,
@@ -68,10 +64,9 @@ class TrafficView:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

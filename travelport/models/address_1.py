@@ -7,7 +7,7 @@ from travelport.models.type_taggable_address_1 import TypeTaggableAddress1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Address1(TypeTaggableAddress1):
     """
     Profile Address.

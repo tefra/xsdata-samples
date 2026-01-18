@@ -10,7 +10,7 @@ from .tp_port import TpPort
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TcpTp:
     """
     Content Model for TCP configuration.

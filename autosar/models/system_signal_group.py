@@ -19,7 +19,7 @@ from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SystemSignalGroup:
     """
     A signal group refers to a set of signals that shall always be kept
@@ -93,14 +93,13 @@ class SystemSignalGroup:
     class Meta:
         name = "SYSTEM-SIGNAL-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | SystemSignalGroup.ShortNameFragments = field(
         default=None,
@@ -207,7 +206,7 @@ class SystemSignalGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -218,7 +217,7 @@ class SystemSignalGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -229,7 +228,7 @@ class SystemSignalGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SystemSignalRefs:
         system_signal_ref: list[
             SystemSignalGroup.SystemSignalRefs.SystemSignalRef
@@ -242,24 +241,22 @@ class SystemSignalGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SystemSignalRef(Ref):
-            dest: None | SystemSignalSubtypesEnum = field(
-                default=None,
+            dest: SystemSignalSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransformingSystemSignalRef(Ref):
-        dest: None | SystemSignalSubtypesEnum = field(
-            default=None,
+        dest: SystemSignalSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

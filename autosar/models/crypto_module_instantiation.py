@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CryptoModuleInstantiation:
     """
     This meta-class defines the configuration for the Crypto stack on a
@@ -91,14 +91,13 @@ class CryptoModuleInstantiation:
     class Meta:
         name = "CRYPTO-MODULE-INSTANTIATION"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | CryptoModuleInstantiation.ShortNameFragments
@@ -209,7 +208,7 @@ class CryptoModuleInstantiation:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -220,7 +219,7 @@ class CryptoModuleInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -231,7 +230,7 @@ class CryptoModuleInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CertificateToKeySlotMappings:
         crypto_certificate_to_crypto_key_slot_mapping: list[
             CryptoCertificateToCryptoKeySlotMapping
@@ -244,7 +243,7 @@ class CryptoModuleInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CryptoCertificates:
         crypto_certificate: list[CryptoCertificate] = field(
             default_factory=list,
@@ -255,7 +254,7 @@ class CryptoModuleInstantiation:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CryptoProviders:
         crypto_provider: list[CryptoProvider] = field(
             default_factory=list,

@@ -26,7 +26,7 @@ from .validity_parameter_assignments_rel_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidableElementVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "ValidableElement_VersionStructure"

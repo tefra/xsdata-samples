@@ -14,7 +14,7 @@ from .target_i_pdu_ref import TargetIPduRef
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IPduMapping:
     """
     Arranges those IPdus that are transferred by the gateway from one
@@ -111,13 +111,12 @@ class IPduMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SourceIPduRef(Ref):
-        dest: None | PduTriggeringSubtypesEnum = field(
-            default=None,
+        dest: PduTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

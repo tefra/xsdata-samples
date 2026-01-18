@@ -30,7 +30,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.time_pe
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseReferenceComponentOptionalType(BaseComponentType):
     """
     <description xmlns="">The base type for all components with an

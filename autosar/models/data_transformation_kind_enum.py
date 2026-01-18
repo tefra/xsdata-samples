@@ -9,7 +9,7 @@ from .data_transformation_kind_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataTransformationKindEnum:
     """
     This enumeration contributes to the definition of the scope of the
@@ -31,11 +31,10 @@ class DataTransformationKindEnum:
     class Meta:
         name = "DATA-TRANSFORMATION-KIND-ENUM"
 
-    value: None | DataTransformationKindEnumSimple = field(
-        default=None,
+    value: DataTransformationKindEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

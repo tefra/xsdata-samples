@@ -23,16 +23,15 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CedantInvolvementType(OrganisationInvolvementType):
-    organisation_role: None | InsurerRoleType = field(
-        default=None,
+    organisation_role: InsurerRoleType = field(
         metadata={
             "name": "OrganisationRole",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     policy_identifier: None | Idtype = field(
         default=None,

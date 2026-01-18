@@ -7,7 +7,7 @@ from .resume_position_simple import ResumePositionSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResumePosition:
     """
     Defines, where a schedule table shall be proceeded in case if it has
@@ -29,11 +29,10 @@ class ResumePosition:
     class Meta:
         name = "RESUME-POSITION"
 
-    value: None | ResumePositionSimple = field(
-        default=None,
+    value: ResumePositionSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

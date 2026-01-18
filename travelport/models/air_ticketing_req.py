@@ -24,7 +24,7 @@ from travelport.models.waiver_code import WaiverCode
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirTicketingReq(AirBaseReq):
     """
     Request to ticket a previously stored reservation.
@@ -64,13 +64,12 @@ class AirTicketingReq(AirBaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_reservation_locator_code: None | AirReservationLocatorCode = field(
-        default=None,
+    air_reservation_locator_code: AirReservationLocatorCode = field(
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     air_pricing_info_ref: list[AirTicketingReq.AirPricingInfoRef] = field(
         default_factory=list,
@@ -159,7 +158,7 @@ class AirTicketingReq(AirBaseReq):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AirPricingInfoRef:
         booking_traveler_ref: list[BookingTravelerRef1] = field(
             default_factory=list,
@@ -170,11 +169,10 @@ class AirTicketingReq(AirBaseReq):
                 "max_occurs": 9,
             },
         )
-        key: None | str = field(
-            default=None,
+        key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

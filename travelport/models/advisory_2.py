@@ -13,7 +13,7 @@ from travelport.models.type_key_element_2 import TypeKeyElement2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Advisory2(TypeKeyElement2):
     """
     A categorization of travel documents and other identification, or other
@@ -50,21 +50,19 @@ class Advisory2(TypeKeyElement2):
         name = "Advisory"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    type_value: None | TypeAdvisoryType2 = field(
-        default=None,
+    type_value: TypeAdvisoryType2 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    start_date: None | XmlDate = field(
-        default=None,
+    start_date: XmlDate = field(
         metadata={
             "name": "StartDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     end_date: None | XmlDate = field(
         default=None,
@@ -100,20 +98,18 @@ class Advisory2(TypeKeyElement2):
             "max_inclusive": 99,
         },
     )
-    geo_political_area_type: None | TypeGeoPoliticalAreaType2 = field(
-        default=None,
+    geo_political_area_type: TypeGeoPoliticalAreaType2 = field(
         metadata={
             "name": "GeoPoliticalAreaType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    geo_political_area_code: None | str = field(
-        default=None,
+    geo_political_area_code: str = field(
         metadata={
             "name": "GeoPoliticalAreaCode",
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        },
+        }
     )

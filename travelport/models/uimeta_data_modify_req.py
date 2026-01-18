@@ -8,7 +8,7 @@ from travelport.models.meta_data_modify_cmd import MetaDataModifyCmd
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UimetaDataModifyReq(BaseReq2):
     """
     Service for Request to modify the entry in action by Admin in Admin
@@ -41,22 +41,20 @@ class UimetaDataModifyReq(BaseReq2):
             "min_occurs": 1,
         },
     )
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    meta_data_version: None | int = field(
-        default=None,
+    meta_data_version: int = field(
         metadata={
             "name": "MetaDataVersion",
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        },
+        }
     )
     description: None | str = field(
         default=None,

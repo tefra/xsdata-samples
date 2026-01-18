@@ -7,6 +7,6 @@ from .link_ref_structure import LinkRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LineLinkRefStructure(LinkRefStructure):
     pass

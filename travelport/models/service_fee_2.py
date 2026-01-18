@@ -11,7 +11,7 @@ from travelport.models.type_supplier_type_2 import TypeSupplierType2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceFee2(TypeKeyElement2):
     """
     A representation of the Service Fee given to an Agent or Agency within
@@ -36,29 +36,26 @@ class ServiceFee2(TypeKeyElement2):
         name = "ServiceFee"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    type_value: None | TypeServiceFeeType2 = field(
-        default=None,
+    type_value: TypeServiceFeeType2 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    start_date: None | XmlDate = field(
-        default=None,
+    start_date: XmlDate = field(
         metadata={
             "name": "StartDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    supplier_type: None | TypeSupplierType2 = field(
-        default=None,
+    supplier_type: TypeSupplierType2 = field(
         metadata={
             "name": "SupplierType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     amount: None | str = field(
         default=None,

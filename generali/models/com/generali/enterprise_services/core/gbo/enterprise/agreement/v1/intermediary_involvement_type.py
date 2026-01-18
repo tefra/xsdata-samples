@@ -17,23 +17,21 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IntermediaryInvolvementType(OrganisationInvolvementType):
-    organisation_role: None | IntermediaryRoleType = field(
-        default=None,
+    organisation_role: IntermediaryRoleType = field(
         metadata={
             "name": "OrganisationRole",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    intermediary_type: None | IntermediaryTypeEnum = field(
-        default=None,
+    intermediary_type: IntermediaryTypeEnum = field(
         metadata={
             "name": "IntermediaryType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )

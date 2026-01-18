@@ -7,7 +7,7 @@ from sdmx_ml.models.exclude_root_type import ExcludeRootType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MemberValueType:
     """
     Allows for a ditinct reference or a wildcard expression for selecting

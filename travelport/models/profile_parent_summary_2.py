@@ -10,7 +10,7 @@ from travelport.models.type_profile_type_7 import TypeProfileType7
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileParentSummary2:
     """
     A quick summary of a profile's parent.
@@ -49,21 +49,19 @@ class ProfileParentSummary2:
             "type": "Element",
         },
     )
-    profile_id: None | int = field(
-        default=None,
+    profile_id: int = field(
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    profile_type: None | TypeProfileType7 = field(
-        default=None,
+    profile_type: TypeProfileType7 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     provisioning_code: None | str = field(
         default=None,
@@ -74,24 +72,22 @@ class ProfileParentSummary2:
             "max_length": 25,
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
-    version: None | int = field(
-        default=None,
+    version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        },
+        }
     )
     hierarchy_level_id: None | str = field(
         default=None,
@@ -100,13 +96,12 @@ class ProfileParentSummary2:
             "type": "Attribute",
         },
     )
-    status: None | TypeProfileEntityStatus2 = field(
-        default=None,
+    status: TypeProfileEntityStatus2 = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     description: None | str = field(
         default=None,

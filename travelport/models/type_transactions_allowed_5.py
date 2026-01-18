@@ -9,7 +9,7 @@ from travelport.models.type_booking_transactions_allowed_5 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeTransactionsAllowed5(TypeBookingTransactionsAllowed5):
     """
     Parameters

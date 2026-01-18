@@ -7,7 +7,7 @@ from travelport.models.leg_detail import LegDetail
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LegPrice:
     """
     Information about the journey Leg Price.
@@ -34,21 +34,19 @@ class LegPrice:
             "max_occurs": 999,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    total_price: None | str = field(
-        default=None,
+    total_price: str = field(
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     approximate_total_price: None | str = field(
         default=None,

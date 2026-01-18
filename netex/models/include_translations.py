@@ -5,14 +5,13 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IncludeTranslations:
     class Meta:
         namespace = "http://www.siri.org.uk/siri"
 
-    value: None | bool = field(
-        default=None,
+    value: bool = field(
         metadata={
             "required": True,
-        },
+        }
     )

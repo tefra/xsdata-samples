@@ -9,7 +9,7 @@ from travelport.models.phone_number_1 import PhoneNumber1
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationInfo:
     """
     Parameters
@@ -62,13 +62,12 @@ class LocationInfo:
             "type": "Element",
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     counter_location: None | str = field(
         default=None,

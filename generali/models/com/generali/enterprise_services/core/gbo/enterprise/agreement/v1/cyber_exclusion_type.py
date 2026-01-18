@@ -11,7 +11,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CyberExclusionType:
     excluded: None | bool = field(
         default=None,

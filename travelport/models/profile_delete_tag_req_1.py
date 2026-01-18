@@ -8,7 +8,7 @@ from travelport.models.tag_ref_1 import TagRef1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileDeleteTagReq1(BaseReq2):
     """
     Request to delete tags.
@@ -26,13 +26,12 @@ class ProfileDeleteTagReq1(BaseReq2):
         name = "ProfileDeleteTagReq"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    tag_ref: None | TagRef1 = field(
-        default=None,
+    tag_ref: TagRef1 = field(
         metadata={
             "name": "TagRef",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     override: bool = field(
         default=False,

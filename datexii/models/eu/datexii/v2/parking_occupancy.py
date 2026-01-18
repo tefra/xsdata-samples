@@ -19,7 +19,7 @@ from datexii.models.eu.datexii.v2.vehicle_count_and_rate import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingOccupancy:
     """
     Parking capacity information for the parking site as well as for

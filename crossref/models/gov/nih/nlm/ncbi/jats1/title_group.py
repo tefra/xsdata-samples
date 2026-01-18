@@ -15,7 +15,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.trans_title_group import (
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TitleGroup:
     """
     <div> <h3>Title Group</h3> </div>.
@@ -25,13 +25,12 @@ class TitleGroup:
         name = "title-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    article_title: None | ArticleTitle = field(
-        default=None,
+    article_title: ArticleTitle = field(
         metadata={
             "name": "article-title",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     subtitle: list[Subtitle] = field(
         default_factory=list,

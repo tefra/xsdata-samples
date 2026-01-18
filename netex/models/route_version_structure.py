@@ -13,7 +13,7 @@ from .sections_in_sequence_rel_structure import LinkSequenceVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RouteVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "Route_VersionStructure"

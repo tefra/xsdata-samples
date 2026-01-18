@@ -23,7 +23,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConsumedProvidedServiceInstanceGroup:
     """
     The AUTOSAR ServiceDiscovery is able to start and to stop
@@ -99,14 +99,13 @@ class ConsumedProvidedServiceInstanceGroup:
     class Meta:
         name = "CONSUMED-PROVIDED-SERVICE-INSTANCE-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ConsumedProvidedServiceInstanceGroup.ShortNameFragments
@@ -219,7 +218,7 @@ class ConsumedProvidedServiceInstanceGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -230,7 +229,7 @@ class ConsumedProvidedServiceInstanceGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -241,7 +240,7 @@ class ConsumedProvidedServiceInstanceGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConsumedServiceInstances:
         consumed_service_instance_ref_conditional: list[
             ConsumedServiceInstanceRefConditional
@@ -254,7 +253,7 @@ class ConsumedProvidedServiceInstanceGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProvidedServiceInstances:
         provided_service_instance_ref_conditional: list[
             ProvidedServiceInstanceRefConditional

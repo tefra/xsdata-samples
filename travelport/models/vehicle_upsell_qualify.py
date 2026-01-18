@@ -13,7 +13,7 @@ from travelport.models.type_vehicle_transmission import TypeVehicleTransmission
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleUpsellQualify:
     """
     Qualify data of Vehicle against which Vehicle Availability search is
@@ -65,33 +65,30 @@ class VehicleUpsellQualify:
             "type": "Attribute",
         },
     )
-    vendor_code: None | str = field(
-        default=None,
+    vendor_code: str = field(
         metadata={
             "name": "VendorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        },
+        }
     )
-    effective_date: None | str = field(
-        default=None,
+    effective_date: str = field(
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        },
+        }
     )
-    expiration_date: None | str = field(
-        default=None,
+    expiration_date: str = field(
         metadata={
             "name": "ExpirationDate",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        },
+        }
     )
     provider_code: None | str = field(
         default=None,

@@ -25,7 +25,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticSessionControl:
     """
     This represents an instance of the "Session Control" diagnostic
@@ -100,14 +100,13 @@ class DiagnosticSessionControl:
     class Meta:
         name = "DIAGNOSTIC-SESSION-CONTROL"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticSessionControl.ShortNameFragments
@@ -228,7 +227,7 @@ class DiagnosticSessionControl:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -239,7 +238,7 @@ class DiagnosticSessionControl:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -250,35 +249,32 @@ class DiagnosticSessionControl:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessPermissionRef(Ref):
-        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticAccessPermissionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticSessionRef(Ref):
-        dest: None | DiagnosticSessionSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticSessionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SessionControlClassRef(Ref):
-        dest: None | DiagnosticSessionControlClassSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticSessionControlClassSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

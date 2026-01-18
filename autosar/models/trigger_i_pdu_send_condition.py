@@ -8,7 +8,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TriggerIPduSendCondition:
     """
     The condition defined by this class evaluates to true if one of the
@@ -60,7 +60,7 @@ class TriggerIPduSendCondition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeDeclarationRefs:
         mode_declaration_ref: list[
             TriggerIPduSendCondition.ModeDeclarationRefs.ModeDeclarationRef
@@ -73,13 +73,12 @@ class TriggerIPduSendCondition:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ModeDeclarationRef(Ref):
-            dest: None | ModeDeclarationSubtypesEnum = field(
-                default=None,
+            dest: ModeDeclarationSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

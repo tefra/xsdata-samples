@@ -7,7 +7,7 @@ from .area_enum_nohref_simple import AreaEnumNohrefSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AreaEnumNohref:
     """
     This enumerator specifies the fact that the area has no reference.
@@ -28,11 +28,10 @@ class AreaEnumNohref:
     class Meta:
         name = "AREA-ENUM-NOHREF"
 
-    value: None | AreaEnumNohrefSimple = field(
-        default=None,
+    value: AreaEnumNohrefSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

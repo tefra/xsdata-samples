@@ -8,21 +8,18 @@ from .taxi_service_place_assignment_ref import TaxiServicePlaceAssignmentRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxiServicePlaceAssignmentRefsRelStructure(
     OneToManyRelationshipStructure
 ):
     class Meta:
         name = "TaxiServicePlaceAssignmentRefs_RelStructure"
 
-    taxi_service_place_assignment_ref: None | TaxiServicePlaceAssignmentRef = (
-        field(
-            default=None,
-            metadata={
-                "name": "TaxiServicePlaceAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-                "required": True,
-            },
-        )
+    taxi_service_place_assignment_ref: TaxiServicePlaceAssignmentRef = field(
+        metadata={
+            "name": "TaxiServicePlaceAssignmentRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
     )

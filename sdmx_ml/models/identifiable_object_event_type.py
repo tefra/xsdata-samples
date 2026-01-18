@@ -9,7 +9,7 @@ from sdmx_ml.models.wild_card_value_type import WildCardValueType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class IdentifiableObjectEventType:
     """
     IdentifiableObjectEventType describes the structure of a reference to
@@ -48,21 +48,19 @@ class IdentifiableObjectEventType:
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Urn:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Id:
-        value: None | str | WildCardValueType = field(
-            default=None,
+        value: str | WildCardValueType = field(
             metadata={
                 "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )

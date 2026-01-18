@@ -9,7 +9,7 @@ from .version import Version
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VersionsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "versionsInFrame_RelStructure"

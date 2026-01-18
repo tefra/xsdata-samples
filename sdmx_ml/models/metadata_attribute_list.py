@@ -9,7 +9,7 @@ from sdmx_ml.models.metadata_attribute_list_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataAttributeList(MetadataAttributeListType):
     """
     MetadataAttributeList defines the set of metadata attributes that can

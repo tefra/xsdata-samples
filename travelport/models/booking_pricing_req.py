@@ -9,7 +9,7 @@ from travelport.models.delete_pricing import DeletePricing
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingPricingReq(BookingBaseReq):
     """
     Stores/Modifies pricing.

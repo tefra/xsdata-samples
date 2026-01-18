@@ -8,24 +8,22 @@ from tpdb.models.replacementmap import Replacementmap
 from tpdb.models.theory import Theory
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Funcsym:
     class Meta:
         name = "funcsym"
 
-    name: None | Name = field(
-        default=None,
+    name: Name = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
-    arity: None | Arity = field(
-        default=None,
+    arity: Arity = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     theory: None | Theory = field(
         default=None,

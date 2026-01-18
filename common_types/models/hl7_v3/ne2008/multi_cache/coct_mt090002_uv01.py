@@ -23,7 +23,7 @@ from .coct_mt150002_uv01 import CoctMt150002Uv01Organization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090002Uv01Device:
     class Meta:
         name = "COCT_MT090002UV01.Device"
@@ -82,13 +82,12 @@ class CoctMt090002Uv01Device:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassDevice = field(
-        default=None,
+    class_code: EntityClassDevice = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -101,7 +100,7 @@ class CoctMt090002Uv01Device:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090002Uv01Organization:
     class Meta:
         name = "COCT_MT090002UV01.Organization"
@@ -145,13 +144,12 @@ class CoctMt090002Uv01Organization:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassOrganization = field(
-        default=None,
+    class_code: EntityClassOrganization = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -164,7 +162,7 @@ class CoctMt090002Uv01Organization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090002Uv01Person:
     class Meta:
         name = "COCT_MT090002UV01.Person"
@@ -228,7 +226,7 @@ class CoctMt090002Uv01Person:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090002Uv01AssignedEntity:
     class Meta:
         name = "COCT_MT090002UV01.AssignedEntity"
@@ -307,13 +305,12 @@ class CoctMt090002Uv01AssignedEntity:
         },
     )
     represented_organization: None | CoctMt150002Uv01Organization = field(
-        default=None,
         metadata={
             "name": "representedOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -322,11 +319,10 @@ class CoctMt090002Uv01AssignedEntity:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassAssignedEntity = field(
-        default=None,
+    class_code: RoleClassAssignedEntity = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

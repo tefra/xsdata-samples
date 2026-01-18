@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PostBuildVariantCondition:
     """
     This class specifies the value which shall be assigned to a particular
@@ -75,13 +75,12 @@ class PostBuildVariantCondition:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MatchingCriterionRef(Ref):
-        dest: None | PostBuildVariantCriterionSubtypesEnum = field(
-            default=None,
+        dest: PostBuildVariantCriterionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

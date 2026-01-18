@@ -8,7 +8,7 @@ from .t_base_element import TBaseElement
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TLane(TBaseElement):
     class Meta:
         name = "tLane"
@@ -52,14 +52,14 @@ class TLane(TBaseElement):
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Lane(TLane):
     class Meta:
         name = "lane"
         namespace = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TLaneSet(TBaseElement):
     class Meta:
         name = "tLaneSet"

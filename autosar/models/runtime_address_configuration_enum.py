@@ -9,7 +9,7 @@ from .runtime_address_configuration_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RuntimeAddressConfigurationEnum:
     """
     This enumeration defines the protocol to be used to obtain the address
@@ -31,11 +31,10 @@ class RuntimeAddressConfigurationEnum:
     class Meta:
         name = "RUNTIME-ADDRESS-CONFIGURATION-ENUM"
 
-    value: None | RuntimeAddressConfigurationEnumSimple = field(
-        default=None,
+    value: RuntimeAddressConfigurationEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

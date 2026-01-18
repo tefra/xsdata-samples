@@ -8,7 +8,7 @@ from .message_qualifier_structure import MessageQualifierStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AbstractServiceRequestStructure(AbstractRequestStructure):
     message_identifier: None | MessageQualifierStructure = field(
         default=None,

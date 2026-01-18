@@ -9,7 +9,7 @@ from travelport.models.search_passenger_1 import SearchPassenger1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilitySearchReq(AirSearchReq):
     """
     Availability Search request.

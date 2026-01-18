@@ -9,7 +9,7 @@ from sdmx_ml.models.data_source_type import DataSourceType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class RegistrationType:
     """
     Registration provides the information needed for data and reference
@@ -64,24 +64,22 @@ class RegistrationType:
         the provision agreement references a metadata flow.
     """
 
-    provision_agreement: None | str = field(
-        default=None,
+    provision_agreement: str = field(
         metadata={
             "name": "ProvisionAgreement",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
             "pattern": r".+\.registry\.ProvisionAgreement=.+",
-        },
+        }
     )
-    datasource: None | DataSourceType = field(
-        default=None,
+    datasource: DataSourceType = field(
         metadata={
             "name": "Datasource",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
             "required": True,
-        },
+        }
     )
     id: None | str = field(
         default=None,

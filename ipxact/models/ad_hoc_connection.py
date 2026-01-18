@@ -16,7 +16,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdHocConnection:
     """
     Represents an ad-hoc connection between component ports.
@@ -38,14 +38,13 @@ class AdHocConnection:
         name = "adHocConnection"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "required": True,
             "white_space": "collapse",
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -74,13 +73,12 @@ class AdHocConnection:
             "type": "Element",
         },
     )
-    port_references: None | AdHocConnection.PortReferences = field(
-        default=None,
+    port_references: AdHocConnection.PortReferences = field(
         metadata={
             "name": "portReferences",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     vendor_extensions: None | VendorExtensions = field(
         default=None,
@@ -97,7 +95,7 @@ class AdHocConnection:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortReferences:
         """
         :ivar internal_port_reference: Defines a reference to a port on
@@ -112,7 +110,6 @@ class AdHocConnection:
             metadata={
                 "name": "internalPortReference",
                 "type": "Element",
-                "min_occurs": 1,
             },
         )
         external_port_reference: list[ExternalPortReference] = field(
@@ -120,12 +117,11 @@ class AdHocConnection:
             metadata={
                 "name": "externalPortReference",
                 "type": "Element",
-                "min_occurs": 1,
                 "sequence": 1,
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class InternalPortReference:
             """
             :ivar sub_port_reference:
@@ -159,23 +155,21 @@ class AdHocConnection:
                     "type": "Element",
                 },
             )
-            port_ref: None | str = field(
-                default=None,
+            port_ref: str = field(
                 metadata={
                     "name": "portRef",
                     "type": "Attribute",
                     "required": True,
                     "white_space": "collapse",
                     "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
-                },
+                }
             )
-            component_instance_ref: None | str = field(
-                default=None,
+            component_instance_ref: str = field(
                 metadata={
                     "name": "componentInstanceRef",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
             id: None | str = field(
                 default=None,

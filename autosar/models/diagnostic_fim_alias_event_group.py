@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticFimAliasEventGroup:
     """
     This meta-class represents the ability to define an alias for a Fim
@@ -92,14 +92,13 @@ class DiagnosticFimAliasEventGroup:
     class Meta:
         name = "DIAGNOSTIC-FIM-ALIAS-EVENT-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticFimAliasEventGroup.ShortNameFragments
@@ -200,7 +199,7 @@ class DiagnosticFimAliasEventGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -211,7 +210,7 @@ class DiagnosticFimAliasEventGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -222,7 +221,7 @@ class DiagnosticFimAliasEventGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class GroupedAliasEventRefs:
         grouped_alias_event_ref: list[
             DiagnosticFimAliasEventGroup.GroupedAliasEventRefs.GroupedAliasEventRef
@@ -235,13 +234,12 @@ class DiagnosticFimAliasEventGroup:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class GroupedAliasEventRef(Ref):
-            dest: None | DiagnosticFimAliasEventSubtypesEnum = field(
-                default=None,
+            dest: DiagnosticFimAliasEventSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

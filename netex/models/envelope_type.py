@@ -10,7 +10,7 @@ from .pos import Pos
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EnvelopeType:
     lower_corner_or_upper_corner_or_pos: Iterable[
         EnvelopeType.LowerCorner | EnvelopeType.UpperCorner | Pos
@@ -54,10 +54,10 @@ class EnvelopeType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LowerCorner(DirectPositionType):
         pass
 
-    @dataclass
+    @dataclass(kw_only=True)
     class UpperCorner(DirectPositionType):
         pass

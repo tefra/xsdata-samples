@@ -12,7 +12,7 @@ from .site_connection_ref import SiteConnectionRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransferRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "transferRefs_RelStructure"

@@ -10,7 +10,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwDataDependencyArgs:
     """
     This element specifies the elements used in a SwDataDependency.
@@ -101,24 +101,22 @@ class SwDataDependencyArgs:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McDataInstanceRef(Ref):
-        dest: None | McDataInstanceSubtypesEnum = field(
-            default=None,
+        dest: McDataInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McDataInstanceVarRef(Ref):
-        dest: None | McDataInstanceSubtypesEnum = field(
-            default=None,
+        dest: McDataInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

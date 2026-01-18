@@ -7,7 +7,7 @@ from .tls_version_enum_simple import TlsVersionEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TlsVersionEnum:
     """
     This meta-class has the ability to identify a specific version of the
@@ -29,11 +29,10 @@ class TlsVersionEnum:
     class Meta:
         name = "TLS-VERSION-ENUM"
 
-    value: None | TlsVersionEnumSimple = field(
-        default=None,
+    value: TlsVersionEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

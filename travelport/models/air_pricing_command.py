@@ -10,7 +10,7 @@ from travelport.models.air_segment_pricing_modifiers import (
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirPricingCommand:
     """
     A containter to identify individual pricing events.

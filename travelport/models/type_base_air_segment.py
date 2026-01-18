@@ -21,7 +21,7 @@ from travelport.models.type_eticketability import TypeEticketability
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeBaseAirSegment(Segment1):
     """
     Parameters
@@ -233,13 +233,12 @@ class TypeBaseAirSegment(Segment1):
             "type": "Attribute",
         },
     )
-    group: None | int = field(
-        default=None,
+    group: int = field(
         metadata={
             "name": "Group",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     carrier: None | str = field(
         default=None,
@@ -264,25 +263,23 @@ class TypeBaseAirSegment(Segment1):
             "max_length": 5,
         },
     )
-    origin: None | str = field(
-        default=None,
+    origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
-    destination: None | str = field(
-        default=None,
+    destination: str = field(
         metadata={
             "name": "Destination",
             "type": "Attribute",
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        },
+        }
     )
     departure_time: None | str = field(
         default=None,

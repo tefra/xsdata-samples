@@ -21,7 +21,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.self_uri import SelfUri
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JournalMeta:
     """
     <div> <h3>Journal Metadata</h3> </div>.

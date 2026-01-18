@@ -9,16 +9,15 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.country
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddressType:
-    address_line1: None | str = field(
-        default=None,
+    address_line1: str = field(
         metadata={
             "name": "AddressLine1",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )
     address_line2: None | str = field(
         default=None,
@@ -52,12 +51,11 @@ class AddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    country: None | CountryGbotype = field(
-        default=None,
+    country: CountryGbotype = field(
         metadata={
             "name": "Country",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )

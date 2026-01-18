@@ -8,7 +8,7 @@ from travelport.models.response_message_1 import ResponseMessage1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceAssociations:
     """
     Parameters
@@ -30,7 +30,7 @@ class ServiceAssociations:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ApplicableSegment:
         """
         Parameters

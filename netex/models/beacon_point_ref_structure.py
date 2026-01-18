@@ -7,6 +7,6 @@ from .activation_point_ref_structure import ActivationPointRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BeaconPointRefStructure(ActivationPointRefStructure):
     pass

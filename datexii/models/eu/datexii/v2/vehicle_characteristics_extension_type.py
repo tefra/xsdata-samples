@@ -9,7 +9,7 @@ from datexii.models.eu.datexii.v2.vehicle_characteristics_extended import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleCharacteristicsExtensionType:
     class Meta:
         name = "_VehicleCharacteristicsExtensionType"

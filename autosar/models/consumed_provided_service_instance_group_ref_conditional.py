@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConsumedProvidedServiceInstanceGroupRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -69,13 +69,12 @@ class ConsumedProvidedServiceInstanceGroupRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConsumedProvidedServiceInstanceGroupRef(Ref):
-        dest: None | ConsumedProvidedServiceInstanceGroupSubtypesEnum = field(
-            default=None,
+        dest: ConsumedProvidedServiceInstanceGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

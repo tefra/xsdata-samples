@@ -9,19 +9,18 @@ from datexii.models.eu.datexii.v2.wind import Wind
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WindInformation(WeatherData):
     """
     Measurements of wind conditions.
     """
 
-    wind: None | Wind = field(
-        default=None,
+    wind: Wind = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     wind_information_extension: None | ExtensionType = field(
         default=None,

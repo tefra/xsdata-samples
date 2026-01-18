@@ -7,7 +7,7 @@ from travelport.models.create_field_1 import CreateField1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreateFieldGroup1:
     """
     Defines the structure of a new field group, which can be based on
@@ -47,15 +47,14 @@ class CreateFieldGroup1:
             "type": "Element",
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     description: None | str = field(
         default=None,

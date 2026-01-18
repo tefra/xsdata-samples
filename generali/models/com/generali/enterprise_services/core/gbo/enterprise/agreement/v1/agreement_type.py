@@ -65,7 +65,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgreementType(BaseGbotype):
     """
     :ivar expiry_date:
@@ -103,23 +103,21 @@ class AgreementType(BaseGbotype):
         for local data tab.
     """
 
-    expiry_date: None | DateTimeType = field(
-        default=None,
+    expiry_date: DateTimeType = field(
         metadata={
             "name": "ExpiryDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    inception_date: None | DateTimeType = field(
-        default=None,
+    inception_date: DateTimeType = field(
         metadata={
             "name": "InceptionDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     renewable: None | bool = field(
         default=None,
@@ -169,14 +167,13 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    status: None | str = field(
-        default=None,
+    status: str = field(
         metadata={
             "name": "Status",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     status_date: None | DateTimeType = field(
         default=None,
@@ -218,23 +215,21 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    underwriting_year: None | int = field(
-        default=None,
+    underwriting_year: int = field(
         metadata={
             "name": "UnderwritingYear",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    version: None | int = field(
-        default=None,
+    version: int = field(
         metadata={
             "name": "Version",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     account_managers: None | AgreementTypeAccountManagers = field(
         default=None,
@@ -300,23 +295,21 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    layer_type: None | LayerTypeEnum = field(
-        default=None,
+    layer_type: LayerTypeEnum = field(
         metadata={
             "name": "LayerType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    line_of_business: None | LineOfBusinessType = field(
-        default=None,
+    line_of_business: LineOfBusinessType = field(
         metadata={
             "name": "LineOfBusiness",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     payout_benefits: None | AgreementTypePayoutBenefits = field(
         default=None,
@@ -326,23 +319,21 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    local_currency: None | CodeType = field(
-        default=None,
+    local_currency: CodeType = field(
         metadata={
             "name": "LocalCurrency",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    remittance_currency: None | CodeType = field(
-        default=None,
+    remittance_currency: CodeType = field(
         metadata={
             "name": "RemittanceCurrency",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
     local_data: None | LocalDataType = field(
         default=None,

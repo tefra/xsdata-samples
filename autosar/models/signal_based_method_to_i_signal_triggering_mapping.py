@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SignalBasedMethodToISignalTriggeringMapping:
     """
     This meta-class defines the mapping of a ServiceInterface method to a
@@ -92,14 +92,13 @@ class SignalBasedMethodToISignalTriggeringMapping:
     class Meta:
         name = "SIGNAL-BASED-METHOD-TO-I-SIGNAL-TRIGGERING-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SignalBasedMethodToISignalTriggeringMapping.ShortNameFragments
@@ -216,7 +215,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -227,7 +226,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -238,35 +237,32 @@ class SignalBasedMethodToISignalTriggeringMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CallSignalTriggeringRef(Ref):
-        dest: None | ISignalTriggeringSubtypesEnum = field(
-            default=None,
+        dest: ISignalTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MethodRef(Ref):
-        dest: None | ClientServerOperationSubtypesEnum = field(
-            default=None,
+        dest: ClientServerOperationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReturnSignalTriggeringRef(Ref):
-        dest: None | ISignalTriggeringSubtypesEnum = field(
-            default=None,
+        dest: ISignalTriggeringSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

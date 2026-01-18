@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SvcSegment:
     """
     Service segment added to collect additional fee. 1P only.
@@ -48,13 +48,12 @@ class SvcSegment:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     carrier: None | str = field(
         default=None,

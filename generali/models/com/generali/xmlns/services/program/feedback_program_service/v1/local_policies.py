@@ -11,16 +11,15 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocalPolicies:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    local_policy: None | LocalPolicy = field(
-        default=None,
+    local_policy: LocalPolicy = field(
         metadata={
             "name": "LocalPolicy",
             "type": "Element",
             "required": True,
-        },
+        }
     )

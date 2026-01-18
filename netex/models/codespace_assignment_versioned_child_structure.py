@@ -16,7 +16,7 @@ from .type_of_codespace_assignment_ref import TypeOfCodespaceAssignmentRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "CodespaceAssignment_VersionedChildStructure"
@@ -132,20 +132,18 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
         )
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StartValue:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EndValue:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
-            },
+            }
         )

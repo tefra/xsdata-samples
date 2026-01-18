@@ -7,7 +7,7 @@ from sabre.models.company_name_type import CompanyNameType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniqueIdType:
     """
     An identifier used to uniquely reference an object in a system (e.g. an
@@ -52,13 +52,12 @@ class UniqueIdType:
             "type": "Attribute",
         },
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     instance: None | str = field(
         default=None,
@@ -69,15 +68,14 @@ class UniqueIdType:
             "max_length": 32,
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "name": "ID",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 32,
-        },
+        }
     )
     id_context: None | str = field(
         default=None,

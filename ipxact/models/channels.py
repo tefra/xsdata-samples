@@ -10,7 +10,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Channels:
     """
     Lists all channel connections between mirror interfaces of this
@@ -32,7 +32,7 @@ class Channels:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Channel:
         """
         :ivar name: Unique name
@@ -46,12 +46,11 @@ class Channels:
         :ivar id:
         """
 
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         display_name: None | DisplayName = field(
             default=None,
@@ -96,15 +95,14 @@ class Channels:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class BusInterfaceRef:
-            local_name: None | str = field(
-                default=None,
+            local_name: str = field(
                 metadata={
                     "name": "localName",
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             vendor_extensions: None | VendorExtensions = field(
                 default=None,

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RelationType1:
     class Meta:
         name = "relationType"
@@ -16,21 +16,19 @@ class RelationType1:
             "required": True,
         },
     )
-    type_value: None | str = field(
-        default=None,
+    type_value: str = field(
         metadata={
             "name": "type",
             "type": "Attribute",
             "required": True,
             "pattern": r"[A-Z0-9_-]{4,}",
-        },
+        }
     )
-    broadcaster: None | str = field(
-        default=None,
+    broadcaster: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     uri_ref: None | str = field(
         default=None,

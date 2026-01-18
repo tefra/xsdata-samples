@@ -9,7 +9,7 @@ from .fleet import Fleet
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FleetsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fleets_RelStructure"

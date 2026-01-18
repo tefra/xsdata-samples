@@ -9,7 +9,7 @@ from generali.models.org.w3.pkg_2005.pkg_08.addressing.metadata_type import (
 __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Metadata(MetadataType):
     class Meta:
         namespace = "http://www.w3.org/2005/08/addressing"

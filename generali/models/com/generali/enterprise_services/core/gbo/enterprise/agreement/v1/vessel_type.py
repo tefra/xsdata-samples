@@ -20,7 +20,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VesselType(BaseIdentifiedComponentType):
     imo_number: None | str = field(
         default=None,

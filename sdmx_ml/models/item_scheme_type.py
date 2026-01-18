@@ -26,7 +26,7 @@ from sdmx_ml.models.maintainable_type import MaintainableType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ItemSchemeType(MaintainableType):
     """
     ItemSchemeType is an abstract base type for all item scheme objects.

@@ -37,7 +37,7 @@ from .vehicle_schedule_frame_ref import VehicleScheduleFrameRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NetworkFrameTopicStructure(TopicStructure):
     choice: (
         None
@@ -191,7 +191,7 @@ class NetworkFrameTopicStructure(TopicStructure):
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SelectionValidityConditions:
         validity_condition: Iterable[
             SimpleAvailabilityCondition
@@ -239,20 +239,18 @@ class NetworkFrameTopicStructure(TopicStructure):
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ChangedSince:
-        value: None | XmlDateTime = field(
-            default=None,
+        value: XmlDateTime = field(
             metadata={
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CurrentAt:
-        value: None | XmlDateTime = field(
-            default=None,
+        value: XmlDateTime = field(
             metadata={
                 "required": True,
-            },
+            }
         )

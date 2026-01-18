@@ -9,7 +9,7 @@ from .nv_block_needs_writing_priority_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NvBlockNeedsWritingPriorityEnum:
     """
     Specifies the priority of writing this block in case of concurrent
@@ -31,11 +31,10 @@ class NvBlockNeedsWritingPriorityEnum:
     class Meta:
         name = "NV-BLOCK-NEEDS-WRITING-PRIORITY-ENUM"
 
-    value: None | NvBlockNeedsWritingPriorityEnumSimple = field(
-        default=None,
+    value: NvBlockNeedsWritingPriorityEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

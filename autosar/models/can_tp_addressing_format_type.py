@@ -9,7 +9,7 @@ from .can_tp_addressing_format_type_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CanTpAddressingFormatType:
     """
     Declares which communication addressing mode is supported.
@@ -30,11 +30,10 @@ class CanTpAddressingFormatType:
     class Meta:
         name = "CAN-TP-ADDRESSING-FORMAT-TYPE"
 
-    value: None | CanTpAddressingFormatTypeSimple = field(
-        default=None,
+    value: CanTpAddressingFormatTypeSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

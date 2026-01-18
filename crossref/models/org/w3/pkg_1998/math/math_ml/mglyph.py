@@ -18,7 +18,7 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.mglyph_value import (
 __NAMESPACE__ = "http://www.w3.org/1998/Math/MathML"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mglyph:
     class Meta:
         name = "mglyph"

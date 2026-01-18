@@ -9,7 +9,7 @@ from .verbatim_string import VerbatimString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompuConst:
     """
     This meta-class represents the fact that the value of a computation

@@ -7,7 +7,7 @@ from .float_enum_simple import FloatEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FloatEnum:
     """
     This enumerator specifies the policy how an objects floats on a page.
@@ -28,11 +28,10 @@ class FloatEnum:
     class Meta:
         name = "FLOAT-ENUM"
 
-    value: None | FloatEnumSimple = field(
-        default=None,
+    value: FloatEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

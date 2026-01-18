@@ -7,7 +7,7 @@ from ipxact.models.ipxact_uri import IpxactUri
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Dependency(IpxactUri):
     """
     Specifies a location on which files or fileSets may be dependent.

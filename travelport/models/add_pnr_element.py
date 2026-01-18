@@ -12,7 +12,7 @@ from travelport.models.unassociated_remark_1 import UnassociatedRemark1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddPnrElement:
     """
     Container for PNR elements to be added.

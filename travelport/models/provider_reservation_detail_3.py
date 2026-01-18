@@ -9,7 +9,7 @@ from travelport.models.type_provider_reservation_detail_3 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProviderReservationDetail3(TypeProviderReservationDetail3):
     """
     common element for mentioning provider reservation locator (PNR)

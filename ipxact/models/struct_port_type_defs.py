@@ -7,7 +7,7 @@ from ipxact.models.type_parameter import TypeParameter
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StructPortTypeDefs:
     class Meta:
         name = "structPortTypeDefs"
@@ -22,7 +22,7 @@ class StructPortTypeDefs:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StructPortTypeDef:
         """
         :ivar type_name:
@@ -40,15 +40,12 @@ class StructPortTypeDefs:
         :ivar id:
         """
 
-        type_name: None | StructPortTypeDefs.StructPortTypeDef.TypeName = (
-            field(
-                default=None,
-                metadata={
-                    "name": "typeName",
-                    "type": "Element",
-                    "required": True,
-                },
-            )
+        type_name: StructPortTypeDefs.StructPortTypeDef.TypeName = field(
+            metadata={
+                "name": "typeName",
+                "type": "Element",
+                "required": True,
+            }
         )
         type_definition: list[
             StructPortTypeDefs.StructPortTypeDef.TypeDefinition
@@ -89,7 +86,7 @@ class StructPortTypeDefs:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TypeName:
             """
             :ivar value:
@@ -111,7 +108,7 @@ class StructPortTypeDefs:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TypeDefinition:
             value: str = field(
                 default="",
@@ -127,7 +124,7 @@ class StructPortTypeDefs:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TypeParameters:
             type_parameter: list[TypeParameter] = field(
                 default_factory=list,
@@ -138,7 +135,7 @@ class StructPortTypeDefs:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ViewRef:
             value: str = field(
                 default="",

@@ -9,7 +9,7 @@ from sdmx_ml.models.data_structure_components_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class DataStructureComponents(DataStructureComponentsType):
     """
     DataStructureComponents defines the grouping of the sets of metadata

@@ -21,7 +21,7 @@ from .coct_mt150003_uv03 import CoctMt150003Uv03Organization
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090303Uv01Device:
     class Meta:
         name = "COCT_MT090303UV01.Device"
@@ -80,13 +80,12 @@ class CoctMt090303Uv01Device:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassDevice = field(
-        default=None,
+    class_code: EntityClassDevice = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -99,7 +98,7 @@ class CoctMt090303Uv01Device:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CoctMt090303Uv01AssignedDevice:
     class Meta:
         name = "COCT_MT090303UV01.AssignedDevice"
@@ -182,11 +181,10 @@ class CoctMt090303Uv01AssignedDevice:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassAssignedEntity = field(
-        default=None,
+    class_code: RoleClassAssignedEntity = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

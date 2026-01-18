@@ -34,7 +34,7 @@ from travelport.models.vehicle_preference_1 import VehiclePreference1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileData1:
     """
     Agency-defined data.

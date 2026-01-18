@@ -54,7 +54,7 @@ from .user_defined_transformation_i_signal_props import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ISignal:
     """
     Signal of the Interaction Layer.
@@ -189,14 +189,13 @@ class ISignal:
     class Meta:
         name = "I-SIGNAL"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ISignal.ShortNameFragments = field(
         default=None,
@@ -369,7 +368,7 @@ class ISignal:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -380,7 +379,7 @@ class ISignal:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -391,7 +390,7 @@ class ISignal:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataTransformations:
         data_transformation_ref_conditional: list[
             DataTransformationRefConditional
@@ -404,7 +403,7 @@ class ISignal:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InitValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification
@@ -519,18 +518,17 @@ class ISignal:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SystemSignalRef(Ref):
-        dest: None | SystemSignalSubtypesEnum = field(
-            default=None,
+        dest: SystemSignalSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimeoutSubstitutionValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification
@@ -645,7 +643,7 @@ class ISignal:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransformationISignalPropss:
         end_to_end_transformation_i_signal_props: list[
             EndToEndTransformationISignalProps

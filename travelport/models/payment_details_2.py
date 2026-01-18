@@ -11,7 +11,7 @@ from travelport.models.type_payment_type_2 import TypePaymentType2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentDetails2(TypeKeyTaggedElement2):
     """
     Profile Payment.
@@ -77,13 +77,12 @@ class PaymentDetails2(TypeKeyTaggedElement2):
             "type": "Element",
         },
     )
-    type_value: None | TypePaymentType2 = field(
-        default=None,
+    type_value: TypePaymentType2 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     issued_to_name: None | str = field(
         default=None,
@@ -101,24 +100,22 @@ class PaymentDetails2(TypeKeyTaggedElement2):
             "type": "Attribute",
         },
     )
-    payment_supplier: None | str = field(
-        default=None,
+    payment_supplier: str = field(
         metadata={
             "name": "PaymentSupplier",
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        },
+        }
     )
-    account_number: None | str = field(
-        default=None,
+    account_number: str = field(
         metadata={
             "name": "AccountNumber",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     description: None | str = field(
         default=None,

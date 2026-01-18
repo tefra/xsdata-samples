@@ -10,7 +10,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Publisher:
     """
     <div> <h3>Publisher</h3> </div>.

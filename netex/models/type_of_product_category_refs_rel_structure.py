@@ -9,7 +9,7 @@ from .type_of_product_category_ref import TypeOfProductCategoryRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfProductCategoryRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfProductCategoryRefs_RelStructure"

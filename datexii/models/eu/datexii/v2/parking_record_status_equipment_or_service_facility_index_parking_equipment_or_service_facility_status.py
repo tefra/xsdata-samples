@@ -9,27 +9,23 @@ from datexii.models.eu.datexii.v2.parking_equipment_or_service_facility_status i
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus:
     class Meta:
         name = "_ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus"
 
-    parking_equipment_or_service_facility_status: (
-        None | ParkingEquipmentOrServiceFacilityStatus
-    ) = field(
-        default=None,
+    parking_equipment_or_service_facility_status: ParkingEquipmentOrServiceFacilityStatus = field(
         metadata={
             "name": "parkingEquipmentOrServiceFacilityStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    equipment_or_service_facility_index: None | int = field(
-        default=None,
+    equipment_or_service_facility_index: int = field(
         metadata={
             "name": "equipmentOrServiceFacilityIndex",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReissueInfoType:
     """
     Defines the data fields available for the reissue info type.
@@ -77,19 +77,18 @@ class ReissueInfoType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ChangeFees:
-        change_fee: None | ReissueInfoType.ChangeFees.ChangeFee = field(
-            default=None,
+        change_fee: ReissueInfoType.ChangeFees.ChangeFee = field(
             metadata={
                 "name": "ChangeFee",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
                 "required": True,
-            },
+            }
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ChangeFee:
             """
             Attributes:

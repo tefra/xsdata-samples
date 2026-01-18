@@ -20,98 +20,98 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionAgencyIdtype(IdentifierType):
     class Meta:
         name = "ExtensionAgencyIDType"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionAgencyNameType(TextType):
     pass
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionAgencyUritype(IdentifierType):
     class Meta:
         name = "ExtensionAgencyURIType"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionContent(ExtensionContentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionReasonCodeType(CodeType):
     pass
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionReasonType(TextType):
     pass
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionUritype(IdentifierType):
     class Meta:
         name = "ExtensionURIType"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionVersionIdtype(IdentifierType):
     class Meta:
         name = "ExtensionVersionIDType"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionAgencyId(ExtensionAgencyIdtype):
     class Meta:
         name = "ExtensionAgencyID"
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionAgencyName(ExtensionAgencyNameType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionAgencyUri(ExtensionAgencyUritype):
     class Meta:
         name = "ExtensionAgencyURI"
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionReason(ExtensionReasonType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionReasonCode(ExtensionReasonCodeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionUri(ExtensionUritype):
     class Meta:
         name = "ExtensionURI"
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ExtensionVersionId(ExtensionVersionIdtype):
     class Meta:
         name = "ExtensionVersionID"
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UblextensionType:
     class Meta:
         name = "UBLExtensionType"
@@ -188,25 +188,24 @@ class UblextensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    extension_content: None | ExtensionContent = field(
-        default=None,
+    extension_content: ExtensionContent = field(
         metadata={
             "name": "ExtensionContent",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Ublextension(UblextensionType):
     class Meta:
         name = "UBLExtension"
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class UblextensionsType:
     class Meta:
         name = "UBLExtensionsType"
@@ -222,7 +221,7 @@ class UblextensionsType:
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Ublextensions(UblextensionsType):
     class Meta:
         name = "UBLExtensions"

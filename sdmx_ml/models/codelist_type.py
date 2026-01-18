@@ -8,7 +8,7 @@ from sdmx_ml.models.codelist_extension_type import CodelistExtensionType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CodelistType(CodelistBaseType):
     """
     :ivar codelist_extension: CodelistExtension allows for the extension

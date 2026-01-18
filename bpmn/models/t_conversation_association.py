@@ -8,24 +8,22 @@ from .t_base_element import TBaseElement
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TConversationAssociation(TBaseElement):
     class Meta:
         name = "tConversationAssociation"
 
-    inner_conversation_node_ref: None | QName = field(
-        default=None,
+    inner_conversation_node_ref: QName = field(
         metadata={
             "name": "innerConversationNodeRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    outer_conversation_node_ref: None | QName = field(
-        default=None,
+    outer_conversation_node_ref: QName = field(
         metadata={
             "name": "outerConversationNodeRef",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

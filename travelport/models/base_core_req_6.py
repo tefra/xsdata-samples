@@ -12,7 +12,7 @@ from travelport.models.type_logging_level_6 import TypeLoggingLevel6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseCoreReq6:
     """
     Parameters
@@ -43,14 +43,13 @@ class BaseCoreReq6:
     class Meta:
         name = "BaseCoreReq"
 
-    billing_point_of_sale_info: None | BillingPointOfSaleInfo6 = field(
-        default=None,
+    billing_point_of_sale_info: BillingPointOfSaleInfo6 = field(
         metadata={
             "name": "BillingPointOfSaleInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
             "required": True,
-        },
+        }
     )
     agent_idoverride: list[AgentIdoverride6] = field(
         default_factory=list,

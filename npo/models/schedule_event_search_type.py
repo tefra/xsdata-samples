@@ -10,7 +10,7 @@ from npo.models.range_matcher_type import RangeMatcherType
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduleEventSearchType(RangeMatcherType):
     class Meta:
         name = "scheduleEventSearchType"

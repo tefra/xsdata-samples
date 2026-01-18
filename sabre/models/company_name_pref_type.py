@@ -9,7 +9,7 @@ from sabre.models.prefer_level_type import PreferLevelType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompanyNamePrefType(CompanyNameType):
     """
     Identifies a preferred company by name.

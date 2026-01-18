@@ -12,7 +12,7 @@ from travelport.models.type_guarantee_information_type_2 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeGuaranteeInformation2:
     """
     Information pertaining to the payment of type Guarantee.
@@ -30,29 +30,26 @@ class TypeGuaranteeInformation2:
     class Meta:
         name = "typeGuaranteeInformation"
 
-    type_value: None | TypeGuaranteeInformationType2 = field(
-        default=None,
+    type_value: TypeGuaranteeInformationType2 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    agency_type: None | TypeGuaranteeInformationAgencyType2 = field(
-        default=None,
+    agency_type: TypeGuaranteeInformationAgencyType2 = field(
         metadata={
             "name": "AgencyType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    iatanumber: None | str = field(
-        default=None,
+    iatanumber: str = field(
         metadata={
             "name": "IATANumber",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )

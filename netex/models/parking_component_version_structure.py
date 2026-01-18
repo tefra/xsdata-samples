@@ -9,7 +9,7 @@ from .site_component_version_structure import SiteComponentVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingComponentVersionStructure(SiteComponentVersionStructure):
     class Meta:
         name = "ParkingComponent_VersionStructure"

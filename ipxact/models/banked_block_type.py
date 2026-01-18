@@ -27,7 +27,7 @@ from ipxact.models.volatile import Volatile
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BankedBlockType:
     """
     Address blocks inside a bank do not specify address.
@@ -61,13 +61,12 @@ class BankedBlockType:
     class Meta:
         name = "bankedBlockType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -100,21 +99,19 @@ class BankedBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    range: None | UnsignedPositiveLongintExpression = field(
-        default=None,
+    range: UnsignedPositiveLongintExpression = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
-    width: None | UnsignedPositiveIntExpression = field(
-        default=None,
+    width: UnsignedPositiveIntExpression = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     usage: None | UsageType = field(
         default=None,
@@ -176,7 +173,7 @@ class BankedBlockType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessHandles:
         access_handle: list[SlicedAccessHandle] = field(
             default_factory=list,
@@ -188,7 +185,7 @@ class BankedBlockType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Register:
         """
         :ivar name: Unique name
@@ -216,13 +213,12 @@ class BankedBlockType:
         :ivar id:
         """
 
-        name: None | str = field(
-            default=None,
+        name: str = field(
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 "required": True,
-            },
+            }
         )
         display_name: None | DisplayName = field(
             default=None,
@@ -262,14 +258,13 @@ class BankedBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        address_offset: None | UnsignedLongintExpression = field(
-            default=None,
+        address_offset: UnsignedLongintExpression = field(
             metadata={
                 "name": "addressOffset",
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 "required": True,
-            },
+            }
         )
         register_definition_ref: (
             None | BankedBlockType.Register.RegisterDefinitionRef
@@ -350,7 +345,7 @@ class BankedBlockType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class AccessHandles:
             access_handle: list[SimpleAccessHandle] = field(
                 default_factory=list,
@@ -362,7 +357,7 @@ class BankedBlockType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RegisterDefinitionRef:
             value: str = field(
                 default="",
@@ -370,11 +365,10 @@ class BankedBlockType:
                     "required": True,
                 },
             )
-            type_definitions: None | str = field(
-                default=None,
+            type_definitions: str = field(
                 metadata={
                     "name": "typeDefinitions",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

@@ -10,7 +10,7 @@ from travelport.models.restriction_4 import Restriction4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseReservation3:
     """
     Parameters
@@ -68,31 +68,28 @@ class BaseReservation3:
             "namespace": "http://www.travelport.com/schema/common_v33_0",
         },
     )
-    locator_code: None | str = field(
-        default=None,
+    locator_code: str = field(
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        },
+        }
     )
-    create_date: None | str = field(
-        default=None,
+    create_date: str = field(
         metadata={
             "name": "CreateDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    modified_date: None | str = field(
-        default=None,
+    modified_date: str = field(
         metadata={
             "name": "ModifiedDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     customer_number: None | str = field(
         default=None,

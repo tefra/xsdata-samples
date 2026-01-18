@@ -17,7 +17,7 @@ from sabre.models.request_pricing_source_type import RequestPricingSourceType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceRequestInformationType:
     """
     Identify pricing source, if negotiated fares are requested and if it is
@@ -139,7 +139,7 @@ class PriceRequestInformationType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpaExtensions:
         """
         Attributes:
@@ -378,7 +378,7 @@ class PriceRequestInformationType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PublicFare:
             ind: bool = field(
                 default=False,
@@ -388,7 +388,7 @@ class PriceRequestInformationType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PrivateFare:
             ind: bool = field(
                 default=False,
@@ -398,7 +398,7 @@ class PriceRequestInformationType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Iatafare:
             ind: bool = field(
                 default=False,
@@ -408,7 +408,7 @@ class PriceRequestInformationType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class WebFare:
             """
             Attributes:
@@ -423,108 +423,94 @@ class PriceRequestInformationType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Priority:
-            price: (
-                None | PriceRequestInformationType.TpaExtensions.Priority.Price
-            ) = field(
-                default=None,
-                metadata={
-                    "name": "Price",
-                    "type": "Element",
-                    "namespace": "http://www.opentravel.org/OTA/2003/05",
-                    "required": True,
-                },
+            price: PriceRequestInformationType.TpaExtensions.Priority.Price = (
+                field(
+                    metadata={
+                        "name": "Price",
+                        "type": "Element",
+                        "namespace": "http://www.opentravel.org/OTA/2003/05",
+                        "required": True,
+                    }
+                )
             )
-            direct_flights: (
-                None
-                | PriceRequestInformationType.TpaExtensions.Priority.DirectFlights
-            ) = field(
-                default=None,
+            direct_flights: PriceRequestInformationType.TpaExtensions.Priority.DirectFlights = field(
                 metadata={
                     "name": "DirectFlights",
                     "type": "Element",
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                     "required": True,
-                },
+                }
             )
-            time: (
-                None | PriceRequestInformationType.TpaExtensions.Priority.Time
-            ) = field(
-                default=None,
-                metadata={
-                    "name": "Time",
-                    "type": "Element",
-                    "namespace": "http://www.opentravel.org/OTA/2003/05",
-                    "required": True,
-                },
+            time: PriceRequestInformationType.TpaExtensions.Priority.Time = (
+                field(
+                    metadata={
+                        "name": "Time",
+                        "type": "Element",
+                        "namespace": "http://www.opentravel.org/OTA/2003/05",
+                        "required": True,
+                    }
+                )
             )
-            vendor: (
-                None
-                | PriceRequestInformationType.TpaExtensions.Priority.Vendor
-            ) = field(
-                default=None,
+            vendor: PriceRequestInformationType.TpaExtensions.Priority.Vendor = field(
                 metadata={
                     "name": "Vendor",
                     "type": "Element",
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                     "required": True,
-                },
+                }
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Price:
-                priority: None | int = field(
-                    default=None,
+                priority: int = field(
                     metadata={
                         "name": "Priority",
                         "type": "Attribute",
                         "required": True,
                         "min_inclusive": 1,
                         "max_inclusive": 4,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class DirectFlights:
-                priority: None | int = field(
-                    default=None,
+                priority: int = field(
                     metadata={
                         "name": "Priority",
                         "type": "Attribute",
                         "required": True,
                         "min_inclusive": 1,
                         "max_inclusive": 4,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Time:
-                priority: None | int = field(
-                    default=None,
+                priority: int = field(
                     metadata={
                         "name": "Priority",
                         "type": "Attribute",
                         "required": True,
                         "min_inclusive": 1,
                         "max_inclusive": 4,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class Vendor:
-                priority: None | int = field(
-                    default=None,
+                priority: int = field(
                     metadata={
                         "name": "Priority",
                         "type": "Attribute",
                         "required": True,
                         "min_inclusive": 1,
                         "max_inclusive": 4,
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Indicators:
             """
             Attributes:
@@ -602,73 +588,67 @@ class PriceRequestInformationType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class RetainFare:
-                ind: None | bool = field(
-                    default=None,
+                ind: bool = field(
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class MinMaxStay:
-                ind: None | bool = field(
-                    default=None,
+                ind: bool = field(
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class RefundPenalty:
-                ind: None | bool = field(
-                    default=None,
+                ind: bool = field(
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ResTicketing:
-                ind: None | bool = field(
-                    default=None,
+                ind: bool = field(
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class TravelPolicy:
-                ind: None | bool = field(
-                    default=None,
+                ind: bool = field(
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class CustomerType:
-            value: None | CustomerTypeValue = field(
-                default=None,
+            value: CustomerTypeValue = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class MultipleTravelerGroups:
             """
             Attributes:
@@ -687,7 +667,7 @@ class PriceRequestInformationType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class BrandedFareIndicators:
             """
             Attributes:
@@ -723,7 +703,7 @@ class PriceRequestInformationType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class ReturnCheapestUnbrandedFare:
                 """
                 Attributes:
@@ -733,16 +713,15 @@ class PriceRequestInformationType:
                         service.
                 """
 
-                ind: None | bool = field(
-                    default=None,
+                ind: bool = field(
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class PassengerStatus:
             state_code: None | str = field(
                 default=None,
@@ -772,16 +751,15 @@ class PriceRequestInformationType:
                     "pattern": r"[a-zA-Z]{3}",
                 },
             )
-            type_value: None | PassengerStatusType = field(
-                default=None,
+            type_value: PassengerStatusType = field(
                 metadata={
                     "name": "Type",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class EticketableOverride:
             """
             Attributes:
@@ -796,7 +774,7 @@ class PriceRequestInformationType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Currency:
             """
             Attributes:
@@ -820,7 +798,7 @@ class PriceRequestInformationType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class UseReducedConstructions:
             ind: None | bool = field(
                 default=None,
@@ -830,7 +808,7 @@ class PriceRequestInformationType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Obfees:
             """
             Attributes:
@@ -853,7 +831,7 @@ class PriceRequestInformationType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareBreaksAtLegs:
             ind: None | bool = field(
                 default=None,
@@ -863,7 +841,7 @@ class PriceRequestInformationType:
                 },
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FareAdjustment:
             """
             Attributes:
@@ -872,14 +850,13 @@ class PriceRequestInformationType:
                 currency: Currency of Adjustment's Value
             """
 
-            value: None | str = field(
-                default=None,
+            value: str = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)%?",
-                },
+                }
             )
             currency: None | str = field(
                 default=None,
@@ -890,7 +867,7 @@ class PriceRequestInformationType:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NegotiatedFareCode:
         """
         Attributes:
@@ -981,15 +958,14 @@ class PriceRequestInformationType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccountCode:
-        code: None | str = field(
-            default=None,
+        code: str = field(
             metadata={
                 "name": "Code",
                 "type": "Attribute",
                 "required": True,
                 "min_length": 1,
                 "max_length": 20,
-            },
+            }
         )

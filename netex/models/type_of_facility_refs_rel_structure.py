@@ -9,7 +9,7 @@ from .type_of_facility_ref import TypeOfFacilityRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfFacilityRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfFacilityRefs_RelStructure"

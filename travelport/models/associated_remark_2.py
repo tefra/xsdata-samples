@@ -7,7 +7,7 @@ from travelport.models.type_associated_remark_1 import TypeAssociatedRemark1
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AssociatedRemark2(TypeAssociatedRemark1):
     class Meta:
         name = "AssociatedRemark"

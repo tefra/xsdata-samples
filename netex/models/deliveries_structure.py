@@ -8,7 +8,7 @@ from .data_object_delivery import DataObjectDelivery
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeliveriesStructure:
     data_object_delivery: Iterable[DataObjectDelivery] = field(
         default_factory=list,

@@ -8,7 +8,7 @@ from travelport.models.tax_detail_4 import TaxDetail4
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeTaxInfo4:
     """
     Parameters
@@ -71,13 +71,12 @@ class TypeTaxInfo4:
             "type": "Attribute",
         },
     )
-    category: None | str = field(
-        default=None,
+    category: str = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     carrier_defined_category: None | str = field(
         default=None,
@@ -107,13 +106,12 @@ class TypeTaxInfo4:
             "type": "Attribute",
         },
     )
-    amount: None | str = field(
-        default=None,
+    amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     origin_airport: None | str = field(
         default=None,

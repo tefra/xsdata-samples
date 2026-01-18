@@ -10,7 +10,7 @@ from .site_path_link import SitePathLink
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SitePathLinksRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "sitePathLinks_RelStructure"

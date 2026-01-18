@@ -15,7 +15,7 @@ from sdmx_ml.models.structural_repository_events_type import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class EventSelectorType:
     """
     EventSelectorType describes the details of the events for a

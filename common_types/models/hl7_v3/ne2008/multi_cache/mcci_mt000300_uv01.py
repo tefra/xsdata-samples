@@ -32,7 +32,7 @@ from .coct_mt040203_uv01 import CoctMt040203Uv01NotificationParty
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McciMt000300Uv01AcknowledgementDetail:
     class Meta:
         name = "MCCI_MT000300UV01.AcknowledgementDetail"
@@ -98,7 +98,7 @@ class McciMt000300Uv01AcknowledgementDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McciMt000300Uv01AttentionLine:
     class Meta:
         name = "MCCI_MT000300UV01.AttentionLine"
@@ -151,7 +151,7 @@ class McciMt000300Uv01AttentionLine:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McciMt000300Uv01EntityRsp:
     class Meta:
         name = "MCCI_MT000300UV01.EntityRsp"
@@ -180,13 +180,12 @@ class McciMt000300Uv01EntityRsp:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     name: list[EnExplicit] = field(
         default_factory=list,
@@ -209,13 +208,12 @@ class McciMt000300Uv01EntityRsp:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassRoot = field(
-        default=None,
+    class_code: EntityClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -228,7 +226,7 @@ class McciMt000300Uv01EntityRsp:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McciMt000300Uv01Organization:
     class Meta:
         name = "MCCI_MT000300UV01.Organization"
@@ -295,13 +293,12 @@ class McciMt000300Uv01Organization:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassOrganization = field(
-        default=None,
+    class_code: EntityClassOrganization = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -314,7 +311,7 @@ class McciMt000300Uv01Organization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McciMt000300Uv01Place:
     class Meta:
         name = "MCCI_MT000300UV01.Place"
@@ -372,13 +369,12 @@ class McciMt000300Uv01Place:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassPlace = field(
-        default=None,
+    class_code: EntityClassPlace = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -391,7 +387,7 @@ class McciMt000300Uv01Place:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McciMt000300Uv01TargetMessage:
     class Meta:
         name = "MCCI_MT000300UV01.TargetMessage"
@@ -420,13 +416,12 @@ class McciMt000300Uv01TargetMessage:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: None | Ii = field(
-        default=None,
+    id: Ii = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -437,7 +432,7 @@ class McciMt000300Uv01TargetMessage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McciMt000300Uv01Acknowledgement:
     class Meta:
         name = "MCCI_MT000300UV01.Acknowledgement"
@@ -466,14 +461,13 @@ class McciMt000300Uv01Acknowledgement:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_code: None | Cs = field(
-        default=None,
+    type_code: Cs = field(
         metadata={
             "name": "typeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     message_waiting_number: None | Int = field(
         default=None,
@@ -492,13 +486,12 @@ class McciMt000300Uv01Acknowledgement:
         },
     )
     target_message: None | McciMt000300Uv01TargetMessage = field(
-        default=None,
         metadata={
             "name": "targetMessage",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     acknowledgement_detail: list[McciMt000300Uv01AcknowledgementDetail] = (
         field(
@@ -520,7 +513,7 @@ class McciMt000300Uv01Acknowledgement:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McciMt000300Uv01Agent:
     class Meta:
         name = "MCCI_MT000300UV01.Agent"
@@ -565,17 +558,16 @@ class McciMt000300Uv01Agent:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassAgent = field(
-        default=None,
+    class_code: RoleClassAgent = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McciMt000300Uv01LocatedEntity:
     class Meta:
         name = "MCCI_MT000300UV01.LocatedEntity"
@@ -619,17 +611,16 @@ class McciMt000300Uv01LocatedEntity:
             "type": "Attribute",
         },
     )
-    class_code: None | RoleClassLocatedEntity = field(
-        default=None,
+    class_code: RoleClassLocatedEntity = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McciMt000300Uv01RespondTo:
     class Meta:
         name = "MCCI_MT000300UV01.RespondTo"
@@ -682,17 +673,16 @@ class McciMt000300Uv01RespondTo:
             "type": "Attribute",
         },
     )
-    type_code: None | CommunicationFunctionType = field(
-        default=None,
+    type_code: CommunicationFunctionType = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McciMt000300Uv01Device:
     class Meta:
         name = "MCCI_MT000300UV01.Device"
@@ -799,13 +789,12 @@ class McciMt000300Uv01Device:
             "type": "Attribute",
         },
     )
-    class_code: None | EntityClassDevice = field(
-        default=None,
+    class_code: EntityClassDevice = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -818,7 +807,7 @@ class McciMt000300Uv01Device:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McciMt000300Uv01Receiver:
     class Meta:
         name = "MCCI_MT000300UV01.Receiver"
@@ -854,13 +843,12 @@ class McciMt000300Uv01Receiver:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    device: None | McciMt000300Uv01Device = field(
-        default=None,
+    device: McciMt000300Uv01Device = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -869,17 +857,16 @@ class McciMt000300Uv01Receiver:
             "type": "Attribute",
         },
     )
-    type_code: None | CommunicationFunctionType = field(
-        default=None,
+    type_code: CommunicationFunctionType = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McciMt000300Uv01Sender:
     class Meta:
         name = "MCCI_MT000300UV01.Sender"
@@ -915,13 +902,12 @@ class McciMt000300Uv01Sender:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    device: None | McciMt000300Uv01Device = field(
-        default=None,
+    device: McciMt000300Uv01Device = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -930,11 +916,10 @@ class McciMt000300Uv01Sender:
             "type": "Attribute",
         },
     )
-    type_code: None | CommunicationFunctionType = field(
-        default=None,
+    type_code: CommunicationFunctionType = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

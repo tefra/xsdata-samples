@@ -8,7 +8,7 @@ from travelport.models.profile_template import ProfileTemplate
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileModifyTemplateRsp(BaseRsp5):
     """
     Response with profile template data.
@@ -17,11 +17,10 @@ class ProfileModifyTemplateRsp(BaseRsp5):
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    profile_template: None | ProfileTemplate = field(
-        default=None,
+    profile_template: ProfileTemplate = field(
         metadata={
             "name": "ProfileTemplate",
             "type": "Element",
             "required": True,
-        },
+        }
     )

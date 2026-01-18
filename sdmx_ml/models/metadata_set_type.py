@@ -14,7 +14,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataSetType(MetadataSetBaseType):
     """
     MetadataSetType describes the structure for a metadata set, which
@@ -129,22 +129,20 @@ class MetadataSetType(MetadataSetBaseType):
         },
     )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class MetadataProvisionAgreement:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.registry\.MetadataProvisionAgreement=.+",
-            },
+            }
         )
 
-    @dataclass(frozen=True)
+    @dataclass(frozen=True, kw_only=True)
     class Metadataflow:
-        value: None | str = field(
-            default=None,
+        value: str = field(
             metadata={
                 "required": True,
                 "pattern": r".+\.metadatastructure\.Metadataflow=.+",
-            },
+            }
         )

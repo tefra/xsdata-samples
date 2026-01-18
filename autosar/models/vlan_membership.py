@@ -15,7 +15,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VlanMembership:
     """
     Static logical channel or VLAN binding to a switch-port.
@@ -102,13 +102,12 @@ class VlanMembership:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VlanRef(Ref):
-        dest: None | EthernetPhysicalChannelSubtypesEnum = field(
-            default=None,
+        dest: EthernetPhysicalChannelSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

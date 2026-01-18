@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.predefined_location_container import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PredefinedNonOrderedLocationGroup(PredefinedLocationContainer):
     """
     An identifiable versioned instance of a predefined group of non ordered
@@ -55,17 +55,15 @@ class PredefinedNonOrderedLocationGroup(PredefinedLocationContainer):
             },
         )
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

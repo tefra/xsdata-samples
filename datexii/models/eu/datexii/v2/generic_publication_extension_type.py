@@ -15,7 +15,7 @@ from datexii.models.eu.datexii.v2.parking_vehicles_publication import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GenericPublicationExtensionType:
     class Meta:
         name = "_GenericPublicationExtensionType"

@@ -8,7 +8,7 @@ from .request_type_enum import RequestTypeEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DoIpRequestConfiguration:
     """
     This meta-class specifies a range of target addresses and its

@@ -7,7 +7,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AxleWeight:
     """
     The weight details of a specific axle on the vehicle.
@@ -24,14 +24,13 @@ class AxleWeight:
     :ivar axle_weight_extension:
     """
 
-    axle_position_identifier: None | int = field(
-        default=None,
+    axle_position_identifier: int = field(
         metadata={
             "name": "axlePositionIdentifier",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     axle_weight: None | float = field(
         default=None,

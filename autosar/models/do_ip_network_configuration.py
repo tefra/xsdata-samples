@@ -13,7 +13,7 @@ from .time_value import TimeValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DoIpNetworkConfiguration:
     """
     This element collects DoIP properties that are network interface
@@ -189,15 +189,12 @@ class DoIpNetworkConfiguration:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class NetworkConfigurationRef(Ref):
-        dest: (
-            None | PlatformModuleEthernetEndpointConfigurationSubtypesEnum
-        ) = field(
-            default=None,
+        dest: PlatformModuleEthernetEndpointConfigurationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

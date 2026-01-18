@@ -9,7 +9,7 @@ from travelport.models.type_common_editable_field_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeCommonEditableGroup1(TypeCommonEditableField1):
     """
     Base type of common attributes that can be edited for a field group

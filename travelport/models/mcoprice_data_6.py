@@ -7,7 +7,7 @@ from travelport.models.type_tax_info_6 import TypeTaxInfo6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McopriceData6:
     """
     Parameters
@@ -41,13 +41,12 @@ class McopriceData6:
             "type": "Element",
         },
     )
-    mcoamount: None | str = field(
-        default=None,
+    mcoamount: str = field(
         metadata={
             "name": "MCOAmount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mcoequivalent_fare: None | str = field(
         default=None,
@@ -64,7 +63,7 @@ class McopriceData6:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Commission:
         """
         Parameters

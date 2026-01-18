@@ -12,7 +12,7 @@ from .train_block_ref import TrainBlockRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReliefOpportunityVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "ReliefOpportunity_VersionStructure"
@@ -33,14 +33,13 @@ class ReliefOpportunityVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time: None | XmlTime = field(
-        default=None,
+    time: XmlTime = field(
         metadata={
             "name": "Time",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     day_offset: None | int = field(
         default=None,

@@ -12,7 +12,7 @@ from travelport.models.vehicle_upsell_qualify_search_criteria import (
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleUpsellSearchCriteria:
     """
     Search criteria for VehicleUpsell.
@@ -30,13 +30,10 @@ class VehicleUpsellSearchCriteria:
             "type": "Element",
         },
     )
-    vehicle_upsell_qualify_search_criteria: (
-        None | VehicleUpsellQualifySearchCriteria
-    ) = field(
-        default=None,
+    vehicle_upsell_qualify_search_criteria: VehicleUpsellQualifySearchCriteria = field(
         metadata={
             "name": "VehicleUpsellQualifySearchCriteria",
             "type": "Element",
             "required": True,
-        },
+        }
     )

@@ -18,7 +18,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_si
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NoteType(BaseSimpleComponentType):
     """
     <description xmlns="">Notes related to the entity</description>.
@@ -31,14 +31,13 @@ class NoteType(BaseSimpleComponentType):
         created the notes</description>
     """
 
-    text: None | TextType = field(
-        default=None,
+    text: TextType = field(
         metadata={
             "name": "Text",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        },
+        }
     )
     last_modified_date_time: None | DateTimeType = field(
         default=None,

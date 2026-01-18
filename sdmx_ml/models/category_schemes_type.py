@@ -7,7 +7,7 @@ from sdmx_ml.models.category_scheme_type import CategorySchemeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class CategorySchemesType:
     """
     CategorySchemesType describes the structure of the category schemes

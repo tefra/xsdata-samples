@@ -7,7 +7,7 @@ from .sw_service_impl_policy_enum_simple import SwServiceImplPolicyEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SwServiceImplPolicyEnum:
     """
     This specifies the legal values for the implementation policies for
@@ -29,11 +29,10 @@ class SwServiceImplPolicyEnum:
     class Meta:
         name = "SW-SERVICE-IMPL-POLICY-ENUM"
 
-    value: None | SwServiceImplPolicyEnumSimple = field(
-        default=None,
+    value: SwServiceImplPolicyEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

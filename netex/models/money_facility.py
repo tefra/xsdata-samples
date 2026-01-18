@@ -7,14 +7,13 @@ from .money_facility_enumeration import MoneyFacilityEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MoneyFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: None | MoneyFacilityEnumeration = field(
-        default=None,
+    value: MoneyFacilityEnumeration = field(
         metadata={
             "required": True,
-        },
+        }
     )

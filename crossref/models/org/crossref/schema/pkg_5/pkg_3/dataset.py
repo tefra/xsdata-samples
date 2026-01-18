@@ -43,7 +43,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.titles import Titles
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Dataset:
     """
     dataset is used to capture information about one or more database
@@ -126,12 +126,11 @@ class Dataset:
             "type": "Element",
         },
     )
-    doi_data: None | DoiData = field(
-        default=None,
+    doi_data: DoiData = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     citation_list: None | CitationList = field(
         default=None,

@@ -14,7 +14,7 @@ from .type_of_pricing_rule_ref import TypeOfPricingRuleRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricingRuleVersionedStructure(DataManagedObjectStructure):
     class Meta:
         name = "PricingRule_VersionedStructure"

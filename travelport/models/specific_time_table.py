@@ -7,7 +7,7 @@ from travelport.models.airport_1 import Airport1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecificTimeTable:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -26,53 +26,48 @@ class SpecificTimeTable:
             "type": "Element",
         },
     )
-    start_date: None | str = field(
-        default=None,
+    start_date: str = field(
         metadata={
             "name": "StartDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    carrier: None | str = field(
-        default=None,
+    carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
             "required": True,
             "length": 2,
-        },
+        }
     )
-    flight_number: None | str = field(
-        default=None,
+    flight_number: str = field(
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlightOrigin:
-        airport: None | Airport1 = field(
-            default=None,
+        airport: Airport1 = field(
             metadata={
                 "name": "Airport",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class FlightDestination:
-        airport: None | Airport1 = field(
-            default=None,
+        airport: Airport1 = field(
             metadata={
                 "name": "Airport",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "required": True,
-            },
+            }
         )

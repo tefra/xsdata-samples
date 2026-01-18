@@ -7,7 +7,7 @@ from npo.models.schedule_type import ScheduleType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Schedule(ScheduleType):
     """
     Programs of type 'BROADCAST' can contain schedule events.

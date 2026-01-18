@@ -24,7 +24,7 @@ from .traceable_subtypes_enum import TraceableSubtypesEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SynchronizationPointConstraint:
     """
     This constraint is used to specify a synchronization point either
@@ -109,14 +109,13 @@ class SynchronizationPointConstraint:
     class Meta:
         name = "SYNCHRONIZATION-POINT-CONSTRAINT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SynchronizationPointConstraint.ShortNameFragments
@@ -265,7 +264,7 @@ class SynchronizationPointConstraint:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -276,7 +275,7 @@ class SynchronizationPointConstraint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -287,7 +286,7 @@ class SynchronizationPointConstraint:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TraceRefs:
         trace_ref: list[SynchronizationPointConstraint.TraceRefs.TraceRef] = (
             field(
@@ -300,29 +299,27 @@ class SynchronizationPointConstraint:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TraceRef(Ref):
-            dest: None | TraceableSubtypesEnum = field(
-                default=None,
+            dest: TraceableSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingConditionRef(Ref):
-        dest: None | TimingConditionSubtypesEnum = field(
-            default=None,
+        dest: TimingConditionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SourceEecRefs:
         source_eec_ref: list[
             SynchronizationPointConstraint.SourceEecRefs.SourceEecRef
@@ -335,18 +332,17 @@ class SynchronizationPointConstraint:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SourceEecRef(Ref):
-            dest: None | EocExecutableEntityRefGroupSubtypesEnum = field(
-                default=None,
+            dest: EocExecutableEntityRefGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SourceEventRefs:
         source_event_ref: list[
             SynchronizationPointConstraint.SourceEventRefs.SourceEventRef
@@ -359,18 +355,17 @@ class SynchronizationPointConstraint:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SourceEventRef(Ref):
-            dest: None | AbstractEventSubtypesEnum = field(
-                default=None,
+            dest: AbstractEventSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetEecRefs:
         target_eec_ref: list[
             SynchronizationPointConstraint.TargetEecRefs.TargetEecRef
@@ -383,18 +378,17 @@ class SynchronizationPointConstraint:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TargetEecRef(Ref):
-            dest: None | EocExecutableEntityRefGroupSubtypesEnum = field(
-                default=None,
+            dest: EocExecutableEntityRefGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetEventRefs:
         target_event_ref: list[
             SynchronizationPointConstraint.TargetEventRefs.TargetEventRef
@@ -407,13 +401,12 @@ class SynchronizationPointConstraint:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class TargetEventRef(Ref):
-            dest: None | AbstractEventSubtypesEnum = field(
-                default=None,
+            dest: AbstractEventSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

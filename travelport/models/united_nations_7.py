@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UnitedNations7:
     """
     United Nations Form of Payments.
@@ -15,11 +15,10 @@ class UnitedNations7:
         name = "UnitedNations"
         namespace = "http://www.travelport.com/schema/common_v38_0"
 
-    number: None | str = field(
-        default=None,
+    number: str = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

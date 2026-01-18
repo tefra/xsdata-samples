@@ -7,7 +7,7 @@ from .entity_in_version_structure import DataManagedObjectStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QualityStructureFactorAbstract(DataManagedObjectStructure):
     class Meta:
         name = "QualityStructureFactor_"

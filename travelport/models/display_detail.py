@@ -7,7 +7,7 @@ from travelport.models.type_display_detail_name import TypeDisplayDetailName
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DisplayDetail:
     """
     Display the contents for requested MCO,Cruise etc. details.
@@ -16,19 +16,17 @@ class DisplayDetail:
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
-    name: None | TypeDisplayDetailName = field(
-        default=None,
+    name: TypeDisplayDetailName = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    value: None | str = field(
-        default=None,
+    value: str = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

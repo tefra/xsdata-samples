@@ -7,7 +7,7 @@ from npo.models.media_type_enum import MediaTypeEnum
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DescendantRefType:
     class Meta:
         name = "descendantRefType"
@@ -29,11 +29,10 @@ class DescendantRefType:
             "type": "Attribute",
         },
     )
-    type_value: None | MediaTypeEnum = field(
-        default=None,
+    type_value: MediaTypeEnum = field(
         metadata={
             "name": "type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

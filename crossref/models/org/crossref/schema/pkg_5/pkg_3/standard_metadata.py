@@ -54,7 +54,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.titles import Titles
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StandardMetadata:
     """
     Container for the metadata related to a Standard that is not part of a
@@ -71,12 +71,11 @@ class StandardMetadata:
             "type": "Element",
         },
     )
-    titles: None | Titles = field(
-        default=None,
+    titles: Titles = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     abstract: list[Abstract] = field(
         default_factory=list,
@@ -85,12 +84,11 @@ class StandardMetadata:
             "namespace": "http://www.ncbi.nlm.nih.gov/JATS1",
         },
     )
-    designators: None | Designators = field(
-        default=None,
+    designators: Designators = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     edition_number: None | EditionNumber = field(
         default=None,
@@ -117,12 +115,11 @@ class StandardMetadata:
             "type": "Element",
         },
     )
-    standards_body: None | StandardsBody = field(
-        default=None,
+    standards_body: StandardsBody = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     publisher_item: None | PublisherItem = field(
         default=None,
@@ -165,12 +162,11 @@ class StandardMetadata:
             "type": "Element",
         },
     )
-    doi_data: None | DoiData = field(
-        default=None,
+    doi_data: DoiData = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     citation_list: None | CitationList = field(
         default=None,

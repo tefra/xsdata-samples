@@ -9,7 +9,7 @@ from .transmission_mode_definition_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransmissionModeDefinitionEnum:
     """
     This meta-class defines possible settings for the transmission mode.
@@ -30,11 +30,10 @@ class TransmissionModeDefinitionEnum:
     class Meta:
         name = "TRANSMISSION-MODE-DEFINITION-ENUM"
 
-    value: None | TransmissionModeDefinitionEnumSimple = field(
-        default=None,
+    value: TransmissionModeDefinitionEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

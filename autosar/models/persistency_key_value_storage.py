@@ -27,7 +27,7 @@ from .uri_string import UriString
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersistencyKeyValueStorage:
     """
     This meta-class represents the ability to model a key-value storage on
@@ -107,14 +107,13 @@ class PersistencyKeyValueStorage:
     class Meta:
         name = "PERSISTENCY-KEY-VALUE-STORAGE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | PersistencyKeyValueStorage.ShortNameFragments
@@ -257,7 +256,7 @@ class PersistencyKeyValueStorage:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -268,7 +267,7 @@ class PersistencyKeyValueStorage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -279,7 +278,7 @@ class PersistencyKeyValueStorage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RedundancyHandlings:
         persistency_redundancy_crc: list[PersistencyRedundancyCrc] = field(
             default_factory=list,
@@ -308,7 +307,7 @@ class PersistencyKeyValueStorage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class KeyValuePairs:
         persistency_key_value_pair: list[PersistencyKeyValuePair] = field(
             default_factory=list,

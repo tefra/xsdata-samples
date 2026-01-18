@@ -8,7 +8,7 @@ from travelport.models.auto_pricing_info import AutoPricingInfo
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddPricing:
     """
     Container for Pricing to be added.

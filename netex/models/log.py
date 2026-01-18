@@ -7,7 +7,7 @@ from .log_version_structure import LogVersionStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Log(LogVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

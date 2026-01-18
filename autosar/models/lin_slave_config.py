@@ -13,7 +13,7 @@ from .string import String
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinSlaveConfig:
     """
     Node attributes of LIN slaves that are handled by the LinMaster.
@@ -143,13 +143,12 @@ class LinSlaveConfig:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LinSlaveEcuRef(Ref):
-        dest: None | LinSlaveSubtypesEnum = field(
-            default=None,
+        dest: LinSlaveSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

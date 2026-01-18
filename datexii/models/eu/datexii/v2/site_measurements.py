@@ -15,7 +15,7 @@ from datexii.models.eu.datexii.v2.site_measurements_index_measured_value import 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SiteMeasurements:
     """
     A measurement data set derived from a specific measurement site.
@@ -32,25 +32,23 @@ class SiteMeasurements:
     :ivar site_measurements_extension:
     """
 
-    measurement_site_reference: (
-        None | MeasurementSiteRecordVersionedReference
-    ) = field(
-        default=None,
-        metadata={
-            "name": "measurementSiteReference",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    measurement_site_reference: MeasurementSiteRecordVersionedReference = (
+        field(
+            metadata={
+                "name": "measurementSiteReference",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            }
+        )
     )
-    measurement_time_default: None | XmlDateTime = field(
-        default=None,
+    measurement_time_default: XmlDateTime = field(
         metadata={
             "name": "measurementTimeDefault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     measured_value: list[SiteMeasurementsIndexMeasuredValue] = field(
         default_factory=list,

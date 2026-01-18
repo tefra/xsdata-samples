@@ -24,7 +24,7 @@ from travelport.models.waiver_code import WaiverCode
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Etr:
     """
     Result of ticketing request.
@@ -127,14 +127,13 @@ class Etr:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    booking_traveler: None | BookingTraveler1 = field(
-        default=None,
+    booking_traveler: BookingTraveler1 = field(
         metadata={
             "name": "BookingTraveler",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        },
+        }
     )
     form_of_payment: list[FormOfPayment1] = field(
         default_factory=list,
@@ -172,13 +171,12 @@ class Etr:
             "max_occurs": 999,
         },
     )
-    fare_calc: None | FareCalc = field(
-        default=None,
+    fare_calc: FareCalc = field(
         metadata={
             "name": "FareCalc",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     ticket: list[Ticket] = field(
         default_factory=list,
@@ -334,13 +332,12 @@ class Etr:
             "max_length": 15,
         },
     )
-    issued_date: None | str = field(
-        default=None,
+    issued_date: str = field(
         metadata={
             "name": "IssuedDate",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     bulk_ticket: None | bool = field(
         default=None,

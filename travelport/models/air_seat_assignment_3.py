@@ -7,7 +7,7 @@ from travelport.models.seat_assignment_3 import SeatAssignment3
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirSeatAssignment3(SeatAssignment3):
     """
     Identifies the seat assignment for a passenger.

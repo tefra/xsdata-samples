@@ -8,7 +8,7 @@ from sdmx_ml.models.component_type import ComponentType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataAttributeUsageBaseType(ComponentType):
     """
     MetadataAttributeUsageBaseType is the abstract base refinement of a

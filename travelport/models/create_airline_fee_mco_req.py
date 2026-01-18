@@ -13,7 +13,7 @@ from travelport.models.name_1 import Name1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreateAirlineFeeMcoReq(BaseReq1):
     """
     Manually create an Airline Fee MCO.
@@ -42,14 +42,13 @@ class CreateAirlineFeeMcoReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    name: None | Name1 = field(
-        default=None,
+    name: Name1 = field(
         metadata={
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        },
+        }
     )
     form_of_payment: None | FormOfPayment1 = field(
         default=None,
@@ -94,31 +93,28 @@ class CreateAirlineFeeMcoReq(BaseReq1):
             "max_occurs": 999,
         },
     )
-    amount: None | str = field(
-        default=None,
+    amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    location_code: None | str = field(
-        default=None,
+    location_code: str = field(
         metadata={
             "name": "LocationCode",
             "type": "Attribute",
             "required": True,
             "length": 3,
-        },
+        }
     )
-    locator_code: None | str = field(
-        default=None,
+    locator_code: str = field(
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
             "required": True,
             "max_length": 8,
-        },
+        }
     )
     ticket_number: None | str = field(
         default=None,

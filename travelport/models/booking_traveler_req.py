@@ -10,7 +10,7 @@ from travelport.models.update_traveler import UpdateTraveler
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingTravelerReq(BookingBaseReq):
     """
     Used to add update delete booking traveler and its contents.

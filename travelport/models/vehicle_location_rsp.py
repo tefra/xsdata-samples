@@ -8,7 +8,7 @@ from travelport.models.vehicle_location import VehicleLocation
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleLocationRsp(BaseRsp1):
     """
     Returns a list of vendors and their locations for an airport or city

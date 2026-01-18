@@ -31,7 +31,7 @@ from .tag_with_optional_value import TagWithOptionalValue
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProvidedServiceInstance:
     """
     Service instances that are provided by the ECU that is connected via
@@ -144,14 +144,13 @@ class ProvidedServiceInstance:
     class Meta:
         name = "PROVIDED-SERVICE-INSTANCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ProvidedServiceInstance.ShortNameFragments = (
         field(
@@ -382,7 +381,7 @@ class ProvidedServiceInstance:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -393,7 +392,7 @@ class ProvidedServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -404,7 +403,7 @@ class ProvidedServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CapabilityRecords:
         tag_with_optional_value: list[TagWithOptionalValue] = field(
             default_factory=list,
@@ -415,7 +414,7 @@ class ProvidedServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MethodActivationRoutingGroups:
         pdu_activation_routing_group: list[PduActivationRoutingGroup] = field(
             default_factory=list,
@@ -426,7 +425,7 @@ class ProvidedServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RoutingGroupRefs:
         routing_group_ref: list[
             ProvidedServiceInstance.RoutingGroupRefs.RoutingGroupRef
@@ -439,18 +438,17 @@ class ProvidedServiceInstance:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RoutingGroupRef(Ref):
-            dest: None | SoAdRoutingGroupSubtypesEnum = field(
-                default=None,
+            dest: SoAdRoutingGroupSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventHandlers:
         event_handler: list[EventHandler] = field(
             default_factory=list,
@@ -461,7 +459,7 @@ class ProvidedServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class LocalUnicastAddresss:
         application_endpoint_ref_conditional: list[
             ApplicationEndpointRefConditional
@@ -474,7 +472,7 @@ class ProvidedServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RemoteUnicastAddresss:
         application_endpoint_ref_conditional: list[
             ApplicationEndpointRefConditional
@@ -487,7 +485,7 @@ class ProvidedServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SdServerTimerConfigs:
         someip_sd_server_service_instance_config_ref_conditional: list[
             SomeipSdServerServiceInstanceConfigRefConditional

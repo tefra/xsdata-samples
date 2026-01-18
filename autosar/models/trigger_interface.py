@@ -25,7 +25,7 @@ from .trigger import Trigger
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TriggerInterface:
     """
     A trigger interface declares a number of triggers that can be sent by
@@ -116,14 +116,13 @@ class TriggerInterface:
     class Meta:
         name = "TRIGGER-INTERFACE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | TriggerInterface.ShortNameFragments = field(
         default=None,
@@ -260,7 +259,7 @@ class TriggerInterface:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -271,7 +270,7 @@ class TriggerInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -282,7 +281,7 @@ class TriggerInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -311,7 +310,7 @@ class TriggerInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Namespaces:
         symbol_props: list[SymbolProps] = field(
             default_factory=list,
@@ -322,7 +321,7 @@ class TriggerInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Triggers:
         trigger: list[Trigger] = field(
             default_factory=list,

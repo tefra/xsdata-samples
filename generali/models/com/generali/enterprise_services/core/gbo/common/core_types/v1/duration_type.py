@@ -9,7 +9,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DurationType:
     """
     <ns1:DictionaryEntryName
@@ -24,9 +24,8 @@ class DurationType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Duration</ns1:PrimitiveType>.
     """
 
-    value: None | XmlDuration = field(
-        default=None,
+    value: XmlDuration = field(
         metadata={
             "required": True,
-        },
+        }
     )

@@ -10,7 +10,7 @@ from travelport.models.hotel_type import HotelType
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelRulesRsp(BaseRsp1):
     """
     Response showing rule details of a given hotel property and room rate

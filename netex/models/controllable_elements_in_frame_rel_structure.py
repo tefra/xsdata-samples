@@ -9,7 +9,7 @@ from .frame_containment_structure import FrameContainmentStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ControllableElementsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "controllableElementsInFrame_RelStructure"

@@ -21,19 +21,18 @@ from .water_submode import WaterSubmode
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenTransportModeValueStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "OpenTransportMode_ValueStructure"
 
-    transport_mode: None | AllModesEnumeration = field(
-        default=None,
+    transport_mode: AllModesEnumeration = field(
         metadata={
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     choice: (
         None

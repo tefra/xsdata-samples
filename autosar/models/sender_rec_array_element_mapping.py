@@ -16,7 +16,7 @@ from .text_table_mapping import TextTableMapping
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SenderRecArrayElementMapping:
     """
     The SenderRecArrayElement may be a primitive one or a composite one.
@@ -100,7 +100,7 @@ class SenderRecArrayElementMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ComplexTypeMapping:
         sender_rec_array_type_mapping: None | SenderRecArrayTypeMapping = (
             field(
@@ -123,19 +123,18 @@ class SenderRecArrayElementMapping:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SystemSignalRef(Ref):
-        dest: None | SystemSignalSubtypesEnum = field(
-            default=None,
+        dest: SystemSignalSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SenderRecArrayTypeMapping:
     """
     If the ApplicationCompositeDataType is an Array, the "ArrayTypeMapping"
@@ -208,7 +207,7 @@ class SenderRecArrayTypeMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArrayElementMappings:
         sender_rec_array_element_mapping: list[
             SenderRecArrayElementMapping
@@ -222,7 +221,7 @@ class SenderRecArrayTypeMapping:
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SenderRecRecordElementMapping:
     """
     Mapping of a primitive record element to a SystemSignal.
@@ -343,18 +342,17 @@ class SenderRecRecordElementMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ApplicationRecordElementRef(Ref):
-        dest: None | ApplicationRecordElementSubtypesEnum = field(
-            default=None,
+        dest: ApplicationRecordElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ComplexTypeMapping:
         sender_rec_array_type_mapping: None | SenderRecArrayTypeMapping = (
             field(
@@ -377,30 +375,28 @@ class SenderRecRecordElementMapping:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplementationRecordElementRef(Ref):
-        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
-            default=None,
+        dest: ImplementationDataTypeElementSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SystemSignalRef(Ref):
-        dest: None | SystemSignalSubtypesEnum = field(
-            default=None,
+        dest: SystemSignalSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SenderRecRecordTypeMapping:
     """
     If the ApplicationCompositeDataType is a Record, the
@@ -449,7 +445,7 @@ class SenderRecRecordTypeMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RecordElementMappings:
         sender_rec_record_element_mapping: list[
             SenderRecRecordElementMapping

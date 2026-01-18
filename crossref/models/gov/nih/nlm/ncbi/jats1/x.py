@@ -8,7 +8,7 @@ from crossref.models.xml.space_value import SpaceValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class X:
     """
     <div> <h3>X - Generated Text and Punctuation</h3> </div>.

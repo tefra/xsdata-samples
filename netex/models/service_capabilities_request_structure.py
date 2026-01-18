@@ -8,7 +8,7 @@ from .extensions_1 import Extensions1
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceCapabilitiesRequestStructure(AbstractServiceRequestStructure):
     participant_permissions: None | bool = field(
         default=None,

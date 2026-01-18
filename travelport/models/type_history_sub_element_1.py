@@ -95,7 +95,7 @@ from travelport.models.type_vehicle_preference_history_1 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeHistorySubElement1:
     """
     A choice of all fields that have changed in the course of a add,
@@ -434,7 +434,7 @@ class TypeHistorySubElement1:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AlternateContactAddress(TypeAddressHistory1):
         """
         Parameters
@@ -452,7 +452,7 @@ class TypeHistorySubElement1:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AlternateContactPhone(TypePhoneHistory1):
         """
         Parameters
@@ -470,7 +470,7 @@ class TypeHistorySubElement1:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AlternateContactElectronicAddress(TypeElectronicAddressHistory1):
         """
         Parameters

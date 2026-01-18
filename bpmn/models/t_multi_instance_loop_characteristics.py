@@ -13,7 +13,7 @@ from .t_multi_instance_flow_condition import TMultiInstanceFlowCondition
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
     class Meta:
         name = "tMultiInstanceLoopCharacteristics"

@@ -14,23 +14,21 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PremiumBasisType:
-    value: None | AmountType = field(
-        default=None,
+    value: AmountType = field(
         metadata={
             "name": "Value",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
-        },
+        }
     )
-    basis: None | PremiumBasisTypeBasis = field(
-        default=None,
+    basis: PremiumBasisTypeBasis = field(
         metadata={
             "name": "Basis",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
-        },
+        }
     )

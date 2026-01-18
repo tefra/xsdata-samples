@@ -19,7 +19,7 @@ from datexii.models.eu.datexii.v2.openlr_side_of_road_enum import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenlrBasePointLocation:
     """
     Holds common data that are used both in OpenlrPointAccessPoint and
@@ -34,23 +34,21 @@ class OpenlrBasePointLocation:
     :ivar openlr_base_point_location_extension:
     """
 
-    openlr_side_of_road: None | OpenlrSideOfRoadEnum = field(
-        default=None,
+    openlr_side_of_road: OpenlrSideOfRoadEnum = field(
         metadata={
             "name": "openlrSideOfRoad",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    openlr_orientation: None | OpenlrOrientationEnum = field(
-        default=None,
+    openlr_orientation: OpenlrOrientationEnum = field(
         metadata={
             "name": "openlrOrientation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     openlr_positive_offset: None | int = field(
         default=None,
@@ -60,27 +58,23 @@ class OpenlrBasePointLocation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    openlr_location_reference_point: None | OpenlrLocationReferencePoint = (
-        field(
-            default=None,
-            metadata={
-                "name": "openlrLocationReferencePoint",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
-            },
-        )
-    )
-    openlr_last_location_reference_point: (
-        None | OpenlrLastLocationReferencePoint
-    ) = field(
-        default=None,
+    openlr_location_reference_point: OpenlrLocationReferencePoint = field(
         metadata={
-            "name": "openlrLastLocationReferencePoint",
+            "name": "openlrLocationReferencePoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
+    )
+    openlr_last_location_reference_point: OpenlrLastLocationReferencePoint = (
+        field(
+            metadata={
+                "name": "openlrLastLocationReferencePoint",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            }
+        )
     )
     openlr_base_point_location_extension: None | ExtensionType = field(
         default=None,

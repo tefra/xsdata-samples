@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TravelerInfoSummaryTpaExtensionsType:
     """
     Attributes:
@@ -28,7 +28,7 @@ class TravelerInfoSummaryTpaExtensionsType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TravelerRating:
         score: list[
             TravelerInfoSummaryTpaExtensionsType.TravelerRating.Score
@@ -51,40 +51,36 @@ class TravelerInfoSummaryTpaExtensionsType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Score:
-            value: None | int = field(
-                default=None,
+            value: int = field(
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
-            carrier: None | str = field(
-                default=None,
+            carrier: str = field(
                 metadata={
                     "name": "Carrier",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class FrequentFlyer:
-            tier: None | int = field(
-                default=None,
+            tier: int = field(
                 metadata={
                     "name": "Tier",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
-            carrier: None | str = field(
-                default=None,
+            carrier: str = field(
                 metadata={
                     "name": "Carrier",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

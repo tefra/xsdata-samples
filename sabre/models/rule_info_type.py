@@ -8,7 +8,7 @@ from sabre.models.stay_restrictions_type import StayRestrictionsType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RuleInfoType:
     """
     Contains summary fare rule information as well as detailed Rule
@@ -41,7 +41,7 @@ class RuleInfoType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResTicketingRules:
         """
         Attributes:

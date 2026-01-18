@@ -9,7 +9,7 @@ from .unlimited_integer import UnlimitedInteger
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataFilter:
     """
     Base class for data filters.

@@ -7,7 +7,7 @@ from sabre.models.cache_partition_type import CachePartitionType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CachePartitionGroupType:
     partition: list[CachePartitionType] = field(
         default_factory=list,

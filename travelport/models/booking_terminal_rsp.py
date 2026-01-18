@@ -8,7 +8,7 @@ from travelport.models.command_response import CommandResponse
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BookingTerminalRsp(BookingBaseRsp):
     """
     Returns the terminal response and UR with the changes based on the

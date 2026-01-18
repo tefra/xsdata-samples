@@ -13,21 +13,20 @@ from datexii.models.eu.datexii.v2.openlr_polygon_corners import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenlrPolygonLocationReference(OpenlrAreaLocationReference):
     """
     the openLR method of areadefinition by providing points that bound the
     area.
     """
 
-    openlr_polygon_corners: None | OpenlrPolygonCorners = field(
-        default=None,
+    openlr_polygon_corners: OpenlrPolygonCorners = field(
         metadata={
             "name": "openlrPolygonCorners",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     openlr_polygon_location_reference_extension: None | ExtensionType = field(
         default=None,

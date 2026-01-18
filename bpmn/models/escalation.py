@@ -7,7 +7,7 @@ from .t_escalation import TEscalation
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Escalation(TEscalation):
     class Meta:
         name = "escalation"

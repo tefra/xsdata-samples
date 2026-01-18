@@ -12,7 +12,7 @@ from sabre.models.ticketing_info_rs_type import TicketingInfoRsType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TicketPricingType:
     """
     Pricing Information for Single Ticket.
@@ -28,25 +28,23 @@ class TicketPricingType:
         number: Ticket position related to entire itinerary
     """
 
-    origin_destination_options: (
-        None | TicketPricingType.OriginDestinationOptions
-    ) = field(
-        default=None,
-        metadata={
-            "name": "OriginDestinationOptions",
-            "type": "Element",
-            "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
-        },
+    origin_destination_options: TicketPricingType.OriginDestinationOptions = (
+        field(
+            metadata={
+                "name": "OriginDestinationOptions",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "required": True,
+            }
+        )
     )
-    air_itinerary_pricing_info: None | AirItineraryPricingInfoType = field(
-        default=None,
+    air_itinerary_pricing_info: AirItineraryPricingInfoType = field(
         metadata={
             "name": "AirItineraryPricingInfo",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "required": True,
-        },
+        }
     )
     notes: list[FreeTextType] = field(
         default_factory=list,
@@ -73,16 +71,15 @@ class TicketPricingType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    number: None | int = field(
-        default=None,
+    number: int = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OriginDestinationOptions:
         """
         Indicates which flights are covered by this ticket.
@@ -101,7 +98,7 @@ class TicketPricingType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class OriginDestinationOption:
             flight_segment: list[
                 TicketPricingType.OriginDestinationOptions.OriginDestinationOption.FlightSegment
@@ -116,7 +113,7 @@ class TicketPricingType:
                 },
             )
 
-            @dataclass
+            @dataclass(kw_only=True)
             class FlightSegment:
                 """
                 Attributes:
@@ -126,34 +123,31 @@ class TicketPricingType:
                     departure_date_time:
                 """
 
-                departure_airport: None | ResponseLocationType = field(
-                    default=None,
+                departure_airport: ResponseLocationType = field(
                     metadata={
                         "name": "DepartureAirport",
                         "type": "Element",
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                         "required": True,
-                    },
+                    }
                 )
-                arrival_airport: None | ResponseLocationType = field(
-                    default=None,
+                arrival_airport: ResponseLocationType = field(
                     metadata={
                         "name": "ArrivalAirport",
                         "type": "Element",
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                         "required": True,
-                    },
+                    }
                 )
-                departure_date_time: None | str = field(
-                    default=None,
+                departure_date_time: str = field(
                     metadata={
                         "name": "DepartureDateTime",
                         "type": "Attribute",
                         "required": True,
-                    },
+                    }
                 )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TpaExtensions:
         """
         Attributes:
@@ -175,20 +169,19 @@ class TicketPricingType:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ValidatingCarrier:
             """
             Attributes:
                 code: Identifies a company by the company code.
             """
 
-            code: None | str = field(
-                default=None,
+            code: str = field(
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
                     "required": True,
                     "min_length": 1,
                     "max_length": 8,
-                },
+                }
             )

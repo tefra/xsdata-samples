@@ -7,7 +7,7 @@ from travelport.models.corporate_discount_id_1 import CorporateDiscountId1
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HotelUpsellOfferSearchCriteria:
     """
     Search criteria for HotelUpsellOffer.
@@ -24,11 +24,10 @@ class HotelUpsellOfferSearchCriteria:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    rate_plan_type: None | str = field(
-        default=None,
+    rate_plan_type: str = field(
         metadata={
             "name": "RatePlanType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

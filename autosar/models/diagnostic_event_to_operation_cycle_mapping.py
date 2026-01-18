@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEventToOperationCycleMapping:
     """
     Defines which OperationCycle is applicable for a DiagnosticEvent.
@@ -90,14 +90,13 @@ class DiagnosticEventToOperationCycleMapping:
     class Meta:
         name = "DIAGNOSTIC-EVENT-TO-OPERATION-CYCLE-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticEventToOperationCycleMapping.ShortNameFragments
@@ -210,7 +209,7 @@ class DiagnosticEventToOperationCycleMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -221,7 +220,7 @@ class DiagnosticEventToOperationCycleMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -232,24 +231,22 @@ class DiagnosticEventToOperationCycleMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticEventRef(Ref):
-        dest: None | DiagnosticEventSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OperationCycleRef(Ref):
-        dest: None | DiagnosticOperationCycleSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticOperationCycleSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -7,7 +7,7 @@ from travelport.models.type_vehicle_location import TypeVehicleLocation
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VehicleReturnDateLocation:
     """
     Used to update Return Location and Return Date of existing Vehicle

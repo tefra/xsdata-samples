@@ -7,7 +7,7 @@ from sdmx_ml.models.concept_scheme_type import ConceptSchemeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ConceptSchemesType:
     """
     ConceptSchemesType describes the structure of the concept schemes

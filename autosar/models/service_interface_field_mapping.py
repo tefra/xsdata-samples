@@ -18,7 +18,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceInterfaceFieldMapping:
     """
     This meta-class allows to define a mapping between fields of
@@ -86,14 +86,13 @@ class ServiceInterfaceFieldMapping:
     class Meta:
         name = "SERVICE-INTERFACE-FIELD-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | ServiceInterfaceFieldMapping.ShortNameFragments
@@ -196,7 +195,7 @@ class ServiceInterfaceFieldMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -207,7 +206,7 @@ class ServiceInterfaceFieldMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -218,24 +217,22 @@ class ServiceInterfaceFieldMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SourceFieldRef(Ref):
-        dest: None | FieldSubtypesEnum = field(
-            default=None,
+        dest: FieldSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TargetFieldRef(Ref):
-        dest: None | FieldSubtypesEnum = field(
-            default=None,
+        dest: FieldSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

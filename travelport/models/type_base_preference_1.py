@@ -13,7 +13,7 @@ from travelport.models.type_preference_purpose_1 import TypePreferencePurpose1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeBasePreference1(TypeKeyTaggedElement1):
     """
     Parameters

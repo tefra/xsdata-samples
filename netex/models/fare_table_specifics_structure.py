@@ -109,7 +109,7 @@ from .wheelchair_vehicle_ref import WheelchairVehicleRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FareTableSpecificsStructure:
     transport_organisation_ref: None | AuthorityRef | OperatorRef = field(
         default=None,

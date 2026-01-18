@@ -18,7 +18,7 @@ from datexii.models.eu.datexii.v2.vms_unit_vms_index_vms import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsUnit(VmsSetting):
     """
     Status of a VMS unit which may control one or more variable message
@@ -34,23 +34,21 @@ class VmsUnit(VmsSetting):
     :ivar vms_unit_extension:
     """
 
-    vms_unit_table_reference: None | VmsUnitTableVersionedReference = field(
-        default=None,
+    vms_unit_table_reference: VmsUnitTableVersionedReference = field(
         metadata={
             "name": "vmsUnitTableReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    vms_unit_reference: None | VmsUnitRecordVersionedReference = field(
-        default=None,
+    vms_unit_reference: VmsUnitRecordVersionedReference = field(
         metadata={
             "name": "vmsUnitReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     vms: list[VmsUnitVmsIndexVms] = field(
         default_factory=list,

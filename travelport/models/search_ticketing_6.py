@@ -14,7 +14,7 @@ from travelport.models.search_ticketing_ticket_status_6 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SearchTicketing6:
     """
     Search restriction by Agent.

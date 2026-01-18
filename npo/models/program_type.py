@@ -11,7 +11,7 @@ from npo.models.segments_type import SegmentsType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProgramType(BaseMediaType):
     class Meta:
         name = "programType"
@@ -43,12 +43,11 @@ class ProgramType(BaseMediaType):
             "namespace": "urn:vpro:media:2009",
         },
     )
-    type_value: None | ProgramTypeEnum = field(
-        default=None,
+    type_value: ProgramTypeEnum = field(
         metadata={
             "name": "type",
             "type": "Attribute",
             "required": True,
             "doc": "The type of this program (e.g. BROADCAST, TRACK, CLIP)",
-        },
+        }
     )

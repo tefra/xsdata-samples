@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompositionSwComponentTypeRefConditional:
     """
     This element was generated/modified due to an atpVariation stereotype.
@@ -69,13 +69,12 @@ class CompositionSwComponentTypeRefConditional:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class CompositionSwComponentTypeRef(Ref):
-        dest: None | CompositionSwComponentTypeSubtypesEnum = field(
-            default=None,
+        dest: CompositionSwComponentTypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

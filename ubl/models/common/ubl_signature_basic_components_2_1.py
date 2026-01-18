@@ -9,13 +9,13 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ReferencedSignatureIdtype(IdentifierType):
     class Meta:
         name = "ReferencedSignatureIDType"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ReferencedSignatureId(ReferencedSignatureIdtype):
     class Meta:
         name = "ReferencedSignatureID"

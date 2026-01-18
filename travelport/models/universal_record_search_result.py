@@ -11,7 +11,7 @@ from travelport.models.urticket_status import UrticketStatus
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordSearchResult:
     """
     Container for reservations that match the search criteria.
@@ -98,7 +98,7 @@ class UniversalRecordSearchResult:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProductInfo(TypeProductInfo):
         name: list[Name1] = field(
             default_factory=list,

@@ -9,7 +9,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.institution_id_type import 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InstitutionId:
     """
     Identifier for an institution or organization (currently supported:
@@ -29,11 +29,10 @@ class InstitutionId:
             "pattern": r"[hH][tT][tT][pP][sS]://.{1,50}",
         },
     )
-    type_value: None | InstitutionIdType = field(
-        default=None,
+    type_value: InstitutionIdType = field(
         metadata={
             "name": "type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

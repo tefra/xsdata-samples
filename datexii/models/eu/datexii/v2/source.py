@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.source_type_enum import SourceTypeEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Source:
     """
     Details of the source from which the information was obtained.

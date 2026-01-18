@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ConcentrationOfVehiclesValue(DataValue):
     """
     A measured or calculated value of the concentration of vehicles on a
@@ -19,14 +19,13 @@ class ConcentrationOfVehiclesValue(DataValue):
     :ivar concentration_of_vehicles_value_extension:
     """
 
-    concentration_of_vehicles: None | int = field(
-        default=None,
+    concentration_of_vehicles: int = field(
         metadata={
             "name": "concentrationOfVehicles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     concentration_of_vehicles_value_extension: None | ExtensionType = field(
         default=None,

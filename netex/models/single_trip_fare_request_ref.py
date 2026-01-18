@@ -9,7 +9,7 @@ from .single_trip_fare_request_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SingleTripFareRequestRef(SingleTripFareRequestRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

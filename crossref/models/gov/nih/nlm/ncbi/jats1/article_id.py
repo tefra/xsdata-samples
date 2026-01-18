@@ -9,7 +9,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.article_id_pub_id_type import (
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ArticleId:
     """
     <div> <h3>Article Identifier</h3> </div>.

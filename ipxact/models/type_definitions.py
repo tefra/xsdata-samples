@@ -25,7 +25,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeDefinitions:
     """
     :ivar vendor: Name of the vendor who supplies this file.
@@ -230,7 +230,7 @@ class TypeDefinitions:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Modes:
         mode: list[TypeDefinitions.Modes.Mode] = field(
             default_factory=list,
@@ -240,7 +240,7 @@ class TypeDefinitions:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Mode:
             """
             :ivar name: Unique name
@@ -251,12 +251,11 @@ class TypeDefinitions:
             :ivar id:
             """
 
-            name: None | str = field(
-                default=None,
+            name: str = field(
                 metadata={
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             display_name: None | DisplayName = field(
                 default=None,
@@ -293,7 +292,7 @@ class TypeDefinitions:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Views:
         view: list[TypeDefinitions.Views.View] = field(
             default_factory=list,
@@ -303,7 +302,7 @@ class TypeDefinitions:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class View:
             """
             :ivar name: Unique name
@@ -314,12 +313,11 @@ class TypeDefinitions:
             :ivar id:
             """
 
-            name: None | str = field(
-                default=None,
+            name: str = field(
                 metadata={
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             display_name: None | DisplayName = field(
                 default=None,
@@ -356,7 +354,7 @@ class TypeDefinitions:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ResetTypes:
         """
         :ivar reset_type: A user defined reset policy
@@ -371,7 +369,7 @@ class TypeDefinitions:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ResetType:
             """
             :ivar name: Unique name
@@ -382,12 +380,11 @@ class TypeDefinitions:
             :ivar id:
             """
 
-            name: None | str = field(
-                default=None,
+            name: str = field(
                 metadata={
                     "type": "Element",
                     "required": True,
-                },
+                }
             )
             display_name: None | DisplayName = field(
                 default=None,

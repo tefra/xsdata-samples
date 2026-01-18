@@ -8,7 +8,7 @@ from travelport.models.ticket_number_1 import TicketNumber1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RefundFailureInfo:
     """
     Will be optionally returned as part of AirRefunTicketingRsp if one or
@@ -60,13 +60,12 @@ class RefundFailureInfo:
             "max_occurs": 999,
         },
     )
-    code: None | int = field(
-        default=None,
+    code: int = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     message: None | str = field(
         default=None,

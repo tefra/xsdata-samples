@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MetaDataDelete:
     """
     Delete element of given type identified by its key.
@@ -20,11 +20,10 @@ class MetaDataDelete:
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    key: None | int = field(
-        default=None,
+    key: int = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

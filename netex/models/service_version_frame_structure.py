@@ -93,7 +93,7 @@ from .transfers_in_frame_rel_structure import TransfersInFrameRelStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "Service_VersionFrameStructure"

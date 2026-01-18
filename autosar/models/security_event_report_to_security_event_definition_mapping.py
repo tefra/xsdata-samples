@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecurityEventReportToSecurityEventDefinitionMapping:
     """
     This meta-class represents the ability to map a PortPrototype for
@@ -92,14 +92,13 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
     class Meta:
         name = "SECURITY-EVENT-REPORT-TO-SECURITY-EVENT-DEFINITION-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None
@@ -212,7 +211,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -223,7 +222,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -234,13 +233,12 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecurityEventDefinitionRef(Ref):
-        dest: None | SecurityEventDefinitionSubtypesEnum = field(
-            default=None,
+        dest: SecurityEventDefinitionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

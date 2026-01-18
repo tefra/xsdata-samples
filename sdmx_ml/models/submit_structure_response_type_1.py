@@ -7,7 +7,7 @@ from sdmx_ml.models.submission_result_type import SubmissionResultType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class SubmitStructureResponseType1:
     """
     SubmitStructureResponseType describes the structure of a response to a

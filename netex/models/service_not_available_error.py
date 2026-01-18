@@ -9,7 +9,7 @@ from .service_not_available_error_structure import (
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceNotAvailableError(ServiceNotAvailableErrorStructure):
     class Meta:
         namespace = "http://www.siri.org.uk/siri"

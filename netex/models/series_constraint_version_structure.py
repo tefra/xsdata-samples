@@ -25,7 +25,7 @@ from .series_type_enumeration import SeriesTypeEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "SeriesConstraint_VersionStructure"

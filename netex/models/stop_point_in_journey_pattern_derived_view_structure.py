@@ -23,7 +23,7 @@ from .timing_point_status_enumeration import TimingPointStatusEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "StopPointInJourneyPattern_DerivedViewStructure"

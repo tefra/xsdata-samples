@@ -9,27 +9,25 @@ from travelport.models.universal_record_search_req import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordSearchServicePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | UniversalRecordSearchServicePortTypeServiceInput.Body = field(
-        default=None,
+    body: UniversalRecordSearchServicePortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        universal_record_search_req: None | UniversalRecordSearchReq = field(
-            default=None,
+        universal_record_search_req: UniversalRecordSearchReq = field(
             metadata={
                 "name": "UniversalRecordSearchReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+            }
         )

@@ -13,21 +13,20 @@ from .template_service_journey_ref import TemplateServiceJourneyRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefaultServiceJourneyRunTimeVersionedChildStructure(
     JourneyTimingVersionedChildStructure
 ):
     class Meta:
         name = "DefaultServiceJourneyRunTime_VersionedChildStructure"
 
-    run_time: None | XmlDuration = field(
-        default=None,
+    run_time: XmlDuration = field(
         metadata={
             "name": "RunTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     service_journey_ref: (
         None | TemplateServiceJourneyRef | ServiceJourneyRef

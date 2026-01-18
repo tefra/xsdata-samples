@@ -68,7 +68,7 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.volume_series import VolumeSeries
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ArticleMeta:
     """
     <div> <h3>Article Metadata</h3> </div>.
@@ -106,13 +106,12 @@ class ArticleMeta:
             "type": "Element",
         },
     )
-    title_group: None | TitleGroup = field(
-        default=None,
+    title_group: TitleGroup = field(
         metadata={
             "name": "title-group",
             "type": "Element",
             "required": True,
-        },
+        }
     )
     contrib_group: list[ContribGroup] = field(
         default_factory=list,

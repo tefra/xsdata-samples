@@ -10,7 +10,7 @@ from .software_cluster_diagnostic_address_semantics_enum import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoftwareClusterDoipDiagnosticAddress:
     """
     This meta-class represents the ability to define a diagnostic address

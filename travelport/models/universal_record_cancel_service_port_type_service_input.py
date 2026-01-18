@@ -9,27 +9,25 @@ from travelport.models.universal_record_cancel_req import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordCancelServicePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | UniversalRecordCancelServicePortTypeServiceInput.Body = field(
-        default=None,
+    body: UniversalRecordCancelServicePortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        universal_record_cancel_req: None | UniversalRecordCancelReq = field(
-            default=None,
+        universal_record_cancel_req: UniversalRecordCancelReq = field(
             metadata={
                 "name": "UniversalRecordCancelReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+            }
         )

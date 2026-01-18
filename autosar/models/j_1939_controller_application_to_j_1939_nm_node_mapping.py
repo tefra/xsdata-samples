@@ -11,7 +11,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class J1939ControllerApplicationToJ1939NmNodeMapping:
     """
     This meta-class represents the ability to map a
@@ -78,24 +78,22 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class J1939ControllerApplicationRef(Ref):
-        dest: None | J1939ControllerApplicationSubtypesEnum = field(
-            default=None,
+        dest: J1939ControllerApplicationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class J1939NmNodeRef(Ref):
-        dest: None | J1939NmNodeSubtypesEnum = field(
-            default=None,
+        dest: J1939NmNodeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

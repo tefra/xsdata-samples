@@ -8,7 +8,7 @@ from sdmx_ml.models.footer import Footer
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MessageType:
     """
     MessageType is an abstract type which is used by all of the messages,
@@ -20,14 +20,13 @@ class MessageType:
     messages.
     """
 
-    header: None | BaseHeaderType = field(
-        default=None,
+    header: BaseHeaderType = field(
         metadata={
             "name": "Header",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
             "required": True,
-        },
+        }
     )
     target_namespace_element: tuple[object, ...] = field(
         default_factory=tuple,

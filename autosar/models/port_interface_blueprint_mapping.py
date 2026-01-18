@@ -8,7 +8,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortInterfaceBlueprintMapping:
     """
     This meta-class represents the ability to map two PortInterfaces of
@@ -70,24 +70,22 @@ class PortInterfaceBlueprintMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortInterfaceBlueprintRef(Ref):
-        dest: None | PortInterfaceSubtypesEnum = field(
-            default=None,
+        dest: PortInterfaceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DerivedPortInterfaceRef(Ref):
-        dest: None | PortInterfaceSubtypesEnum = field(
-            default=None,
+        dest: PortInterfaceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -18,7 +18,7 @@ from .travel_agent_ref import TravelAgentRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricingServiceVersionedStructure(DataManagedObjectStructure):
     class Meta:
         name = "PricingService_VersionedStructure"

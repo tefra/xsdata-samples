@@ -8,7 +8,7 @@ from travelport.models.profile_2 import Profile2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileCreateRsp2(BaseRsp5):
     """
     Response with the newly created profile.
@@ -18,11 +18,10 @@ class ProfileCreateRsp2(BaseRsp5):
         name = "ProfileCreateRsp"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    profile: None | Profile2 = field(
-        default=None,
+    profile: Profile2 = field(
         metadata={
             "name": "Profile",
             "type": "Element",
             "required": True,
-        },
+        }
     )

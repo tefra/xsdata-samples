@@ -9,7 +9,7 @@ from .group_of_customer_purchase_packages_ref_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GroupOfCustomerPurchasePackagesRef(
     GroupOfCustomerPurchasePackagesRefStructure
 ):

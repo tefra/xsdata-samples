@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from tpdb.models.rule import Rule
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Relrules:
     class Meta:
         name = "relrules"

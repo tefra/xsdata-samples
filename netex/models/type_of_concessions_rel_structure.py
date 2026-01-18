@@ -10,7 +10,7 @@ from .type_of_concession_ref import TypeOfConcessionRef
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeOfConcessionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typeOfConcessions_RelStructure"

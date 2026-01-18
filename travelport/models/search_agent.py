@@ -7,7 +7,7 @@ from travelport.models.branch_id import BranchId
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SearchAgent:
     """
     Search restriction by Agent.

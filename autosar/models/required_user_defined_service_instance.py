@@ -26,7 +26,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequiredUserDefinedServiceInstance:
     """
     This meta-class represents the ability to describe the existence and
@@ -105,14 +105,13 @@ class RequiredUserDefinedServiceInstance:
     class Meta:
         name = "REQUIRED-USER-DEFINED-SERVICE-INSTANCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | RequiredUserDefinedServiceInstance.ShortNameFragments
@@ -243,7 +242,7 @@ class RequiredUserDefinedServiceInstance:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -254,7 +253,7 @@ class RequiredUserDefinedServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -265,7 +264,7 @@ class RequiredUserDefinedServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class E2EEventProtectionPropss:
         end_2_end_event_protection_props: list[End2EndEventProtectionProps] = (
             field(
@@ -278,7 +277,7 @@ class RequiredUserDefinedServiceInstance:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class E2EMethodProtectionPropss:
         end_2_end_method_protection_props: list[
             End2EndMethodProtectionProps
@@ -291,7 +290,7 @@ class RequiredUserDefinedServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SecureComConfigs:
         service_interface_element_secure_com_config: list[
             ServiceInterfaceElementSecureComConfig
@@ -304,13 +303,12 @@ class RequiredUserDefinedServiceInstance:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInterfaceDeploymentRef(Ref):
-        dest: None | ServiceInterfaceDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceInterfaceDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

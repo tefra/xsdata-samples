@@ -6,7 +6,7 @@ from decimal import Decimal
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PenFeeType:
     """
     Parameters

@@ -7,7 +7,7 @@ from ipxact.models.module_parameter_type import ModuleParameterType
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeParameter(ModuleParameterType):
     """
     A typed parameter name value pair.

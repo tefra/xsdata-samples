@@ -7,7 +7,7 @@ from .data_id_mode_enum_simple import DataIdModeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataIdModeEnum:
     """
     Supported inclusion modes to include the implicit two-byte Data ID in
@@ -29,11 +29,10 @@ class DataIdModeEnum:
     class Meta:
         name = "DATA-ID-MODE-ENUM"
 
-    value: None | DataIdModeEnumSimple = field(
-        default=None,
+    value: DataIdModeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

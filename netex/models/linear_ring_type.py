@@ -11,7 +11,7 @@ from .pos_list import PosList
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinearRingType(AbstractRingType):
     pos_or_point_property_or_pos_list: Iterable[
         Pos | PointProperty | PosList

@@ -7,7 +7,7 @@ from travelport.models.type_key_element_1 import TypeKeyElement1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CommissionReference1(TypeKeyElement1):
     """
     Data refering to an external or internal Agent who receives commission

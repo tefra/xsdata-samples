@@ -7,7 +7,7 @@ from travelport.models.air_segment import AirSegment
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MctQuery:
     """
     Lookup the particular MCT time between two segments.

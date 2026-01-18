@@ -12,7 +12,7 @@ from .point_ref_structure import PointRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HailAndRideAreaVersionStructure(FlexibleQuayVersionStructure):
     class Meta:
         name = "HailAndRideArea_VersionStructure"
@@ -40,21 +40,19 @@ class HailAndRideAreaVersionStructure(FlexibleQuayVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_point_ref: None | PointRefStructure = field(
-        default=None,
+    start_point_ref: PointRefStructure = field(
         metadata={
             "name": "StartPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
-    end_point_ref: None | PointRefStructure = field(
-        default=None,
+    end_point_ref: PointRefStructure = field(
         metadata={
             "name": "EndPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )

@@ -7,7 +7,7 @@ from sabre.models.date_time_type import DateTimeType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OverrideDateTimeType(DateTimeType):
     """
     Attributes:

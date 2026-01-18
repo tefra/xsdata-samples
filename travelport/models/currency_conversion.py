@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CurrencyConversion:
     """
     Parameters
@@ -25,23 +25,21 @@ class CurrencyConversion:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    from_value: None | str = field(
-        default=None,
+    from_value: str = field(
         metadata={
             "name": "From",
             "type": "Attribute",
             "required": True,
             "length": 3,
-        },
+        }
     )
-    to: None | str = field(
-        default=None,
+    to: str = field(
         metadata={
             "name": "To",
             "type": "Attribute",
             "required": True,
             "length": 3,
-        },
+        }
     )
     original_amount: None | float = field(
         default=None,

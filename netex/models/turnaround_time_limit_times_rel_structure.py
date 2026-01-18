@@ -11,7 +11,7 @@ from .turnaround_time_limit_time import TurnaroundTimeLimitTime
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TurnaroundTimeLimitTimesRelStructure(
     StrictContainmentAggregationStructure
 ):

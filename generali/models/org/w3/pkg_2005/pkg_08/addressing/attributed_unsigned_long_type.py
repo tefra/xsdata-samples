@@ -5,13 +5,12 @@ from dataclasses import dataclass, field
 __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributedUnsignedLongType:
-    value: None | int = field(
-        default=None,
+    value: int = field(
         metadata={
             "required": True,
-        },
+        }
     )
     other_attributes: dict[str, str] = field(
         default_factory=dict,

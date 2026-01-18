@@ -59,7 +59,7 @@ from .timing_extension_resource import TimingExtensionResource
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MachineTiming:
     """
     This meta-class represents the timing view for a machine.
@@ -142,14 +142,13 @@ class MachineTiming:
     class Meta:
         name = "MACHINE-TIMING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | MachineTiming.ShortNameFragments = field(
         default=None,
@@ -286,7 +285,7 @@ class MachineTiming:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -297,7 +296,7 @@ class MachineTiming:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -308,7 +307,7 @@ class MachineTiming:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingConditions:
         timing_condition: list[TimingCondition] = field(
             default_factory=list,
@@ -319,7 +318,7 @@ class MachineTiming:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingDescriptions:
         td_event_bsw_internal_behavior: list[TdEventBswInternalBehavior] = (
             field(
@@ -518,7 +517,7 @@ class MachineTiming:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingGuarantees:
         age_constraint: list[AgeConstraint] = field(
             default_factory=list,
@@ -625,7 +624,7 @@ class MachineTiming:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TimingRequirements:
         age_constraint: list[AgeConstraint] = field(
             default_factory=list,
@@ -732,13 +731,12 @@ class MachineTiming:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class MachineRef(Ref):
-        dest: None | MachineSubtypesEnum = field(
-            default=None,
+        dest: MachineSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

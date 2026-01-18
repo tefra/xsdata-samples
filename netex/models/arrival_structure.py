@@ -29,7 +29,7 @@ from .vehicle_journey_stop_assignment_ref import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ArrivalStructure:
     time: None | XmlTime = field(
         default=None,

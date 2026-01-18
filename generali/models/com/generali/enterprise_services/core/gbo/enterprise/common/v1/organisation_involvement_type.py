@@ -7,6 +7,6 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganisationInvolvementType:
     pass

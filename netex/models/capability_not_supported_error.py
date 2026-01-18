@@ -9,7 +9,7 @@ from .capability_not_supported_error_structure import (
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CapabilityNotSupportedError(CapabilityNotSupportedErrorStructure):
     class Meta:
         namespace = "http://www.siri.org.uk/siri"

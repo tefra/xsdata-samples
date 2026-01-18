@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from tpdb.models.entry import Entry
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Replacementmap:
     class Meta:
         name = "replacementmap"

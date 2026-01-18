@@ -19,7 +19,7 @@ from npo.models.relation_type_2 import RelationType2
 __NAMESPACE__ = "urn:vpro:pages:2013"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PageType:
     class Meta:
         name = "pageType"
@@ -54,13 +54,12 @@ class PageType:
             "namespace": "urn:vpro:pages:2013",
         },
     )
-    title: None | str = field(
-        default=None,
+    title: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
             "required": True,
-        },
+        }
     )
     sub_title: None | str = field(
         default=None,
@@ -148,20 +147,18 @@ class PageType:
             "namespace": "urn:vpro:pages:2013",
         },
     )
-    url: None | str = field(
-        default=None,
+    url: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    type_value: None | PageTypeEnum = field(
-        default=None,
+    type_value: PageTypeEnum = field(
         metadata={
             "name": "type",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     creation_date: None | XmlDateTime = field(
         default=None,
@@ -219,7 +216,7 @@ class PageType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Paragraphs:
         paragraph: list[ParagraphType] = field(
             default_factory=list,
@@ -229,7 +226,7 @@ class PageType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Images:
         image: list[ImageType2] = field(
             default_factory=list,

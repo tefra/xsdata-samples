@@ -19,7 +19,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Article:
     """
     <div> <h3>Article</h3> </div>.
@@ -36,12 +36,11 @@ class Article:
             "type": "Element",
         },
     )
-    front: None | Front = field(
-        default=None,
+    front: Front = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     body: None | Body = field(
         default=None,

@@ -23,7 +23,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ClauseType(BaseIdentifiedComponentType):
     code: None | CodeType = field(
         default=None,

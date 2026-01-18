@@ -7,7 +7,7 @@ from travelport.models.agent_action_6 import AgentAction6
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AgencyInfo8:
     """
     Tracks the various agent/agency information.

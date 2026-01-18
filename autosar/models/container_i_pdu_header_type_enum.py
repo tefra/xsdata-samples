@@ -9,7 +9,7 @@ from .container_i_pdu_header_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContainerIPduHeaderTypeEnum:
     """
     Is used to define the header type and size of ContainerIPdus.
@@ -32,11 +32,10 @@ class ContainerIPduHeaderTypeEnum:
     class Meta:
         name = "CONTAINER-I-PDU-HEADER-TYPE-ENUM"
 
-    value: None | ContainerIPduHeaderTypeEnumSimple = field(
-        default=None,
+    value: ContainerIPduHeaderTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

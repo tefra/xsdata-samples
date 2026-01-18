@@ -33,7 +33,7 @@ from datexii.models.eu.datexii.v2.tariffs_and_payment import TariffsAndPayment
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParkingRecord:
     """
     A container for static parking information.
@@ -146,14 +146,13 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_record_version_time: None | XmlDateTime = field(
-        default=None,
+    parking_record_version_time: XmlDateTime = field(
         metadata={
             "name": "parkingRecordVersionTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     parking_number_of_spaces: None | int = field(
         default=None,
@@ -257,14 +256,13 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_location: None | GroupOfLocations = field(
-        default=None,
+    parking_location: GroupOfLocations = field(
         metadata={
             "name": "parkingLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     parking_route: list[ParkingRoute] = field(
         default_factory=list,
@@ -388,17 +386,15 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

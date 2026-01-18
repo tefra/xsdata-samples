@@ -12,7 +12,7 @@ from .service_journey_pattern_interchange import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class JourneyInterchangesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeyInterchangesInFrame_RelStructure"

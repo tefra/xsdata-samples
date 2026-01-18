@@ -16,7 +16,7 @@ from datexii.models.eu.datexii.v2.vehicle_characteristics import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChargeBand:
     """
     A charge band in accordance with the specified conditions, possibly up
@@ -41,14 +41,13 @@ class ChargeBand:
     :ivar version:
     """
 
-    charge_currency: None | CurrencyEnum = field(
-        default=None,
+    charge_currency: CurrencyEnum = field(
         metadata={
             "name": "chargeCurrency",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     maximum_duration: None | float = field(
         default=None,
@@ -114,17 +113,15 @@ class ChargeBand:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: None | str = field(
-        default=None,
+    id: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    version: None | str = field(
-        default=None,
+    version: str = field(
         metadata={
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

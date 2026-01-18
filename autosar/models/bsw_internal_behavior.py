@@ -64,7 +64,7 @@ from .variation_point_proxy import VariationPointProxy
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BswInternalBehavior:
     """
     Specifies the behavior of a BSW module or a BSW cluster w.r.t. the code
@@ -277,14 +277,13 @@ class BswInternalBehavior:
     class Meta:
         name = "BSW-INTERNAL-BEHAVIOR"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | BswInternalBehavior.ShortNameFragments = (
         field(
@@ -615,7 +614,7 @@ class BswInternalBehavior:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -626,7 +625,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -637,7 +636,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConstantMemorys:
         parameter_data_prototype: list[ParameterDataPrototype] = field(
             default_factory=list,
@@ -648,7 +647,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ConstantValueMappingRefs:
         constant_value_mapping_ref: list[
             BswInternalBehavior.ConstantValueMappingRefs.ConstantValueMappingRef
@@ -661,18 +660,17 @@ class BswInternalBehavior:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class ConstantValueMappingRef(Ref):
-            dest: None | ConstantSpecificationMappingSetSubtypesEnum = field(
-                default=None,
+            dest: ConstantSpecificationMappingSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataTypeMappingRefs:
         data_type_mapping_ref: list[
             BswInternalBehavior.DataTypeMappingRefs.DataTypeMappingRef
@@ -685,18 +683,17 @@ class BswInternalBehavior:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DataTypeMappingRef(Ref):
-            dest: None | DataTypeMappingSetSubtypesEnum = field(
-                default=None,
+            dest: DataTypeMappingSetSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExclusiveAreas:
         exclusive_area: list[ExclusiveArea] = field(
             default_factory=list,
@@ -707,7 +704,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExclusiveAreaNestingOrders:
         exclusive_area_nesting_order: list[ExclusiveAreaNestingOrder] = field(
             default_factory=list,
@@ -718,7 +715,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StaticMemorys:
         variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
@@ -729,7 +726,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArTypedPerInstanceMemorys:
         variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,
@@ -740,7 +737,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BswPerInstanceMemoryPolicys:
         bsw_per_instance_memory_policy: list[BswPerInstanceMemoryPolicy] = (
             field(
@@ -753,7 +750,7 @@ class BswInternalBehavior:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClientPolicys:
         bsw_client_policy: list[BswClientPolicy] = field(
             default_factory=list,
@@ -764,7 +761,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExclusiveAreaPolicys:
         bsw_exclusive_area_policy: list[BswExclusiveAreaPolicy] = field(
             default_factory=list,
@@ -775,7 +772,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class IncludedDataTypeSets:
         included_data_type_set: list[IncludedDataTypeSet] = field(
             default_factory=list,
@@ -786,7 +783,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InternalTriggeringPointPolicys:
         bsw_internal_triggering_point_policy: list[
             BswInternalTriggeringPointPolicy
@@ -799,7 +796,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ParameterPolicys:
         bsw_parameter_policy: list[BswParameterPolicy] = field(
             default_factory=list,
@@ -810,7 +807,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReleasedTriggerPolicys:
         bsw_released_trigger_policy: list[BswReleasedTriggerPolicy] = field(
             default_factory=list,
@@ -821,7 +818,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SendPolicys:
         bsw_data_send_policy: list[BswDataSendPolicy] = field(
             default_factory=list,
@@ -832,7 +829,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class VariationPointProxys:
         variation_point_proxy: list[VariationPointProxy] = field(
             default_factory=list,
@@ -843,7 +840,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InternalTriggeringPoints:
         bsw_internal_triggering_point: list[BswInternalTriggeringPoint] = (
             field(
@@ -856,7 +853,7 @@ class BswInternalBehavior:
             )
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Entitys:
         bsw_called_entity: list[BswCalledEntity] = field(
             default_factory=list,
@@ -883,7 +880,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Events:
         bsw_asynchronous_server_call_returns_event: list[
             BswAsynchronousServerCallReturnsEvent
@@ -980,7 +977,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TriggerDirectImplementations:
         bsw_trigger_direct_implementation: list[
             BswTriggerDirectImplementation
@@ -993,7 +990,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeSenderPolicys:
         bsw_mode_sender_policy: list[BswModeSenderPolicy] = field(
             default_factory=list,
@@ -1004,7 +1001,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModeReceiverPolicys:
         bsw_mode_receiver_policy: list[BswModeReceiverPolicy] = field(
             default_factory=list,
@@ -1015,7 +1012,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceDependencys:
         bsw_service_dependency: list[BswServiceDependency] = field(
             default_factory=list,
@@ -1026,7 +1023,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PerInstanceParameters:
         parameter_data_prototype: list[ParameterDataPrototype] = field(
             default_factory=list,
@@ -1037,7 +1034,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SchedulerNamePrefixs:
         bsw_scheduler_name_prefix: list[BswSchedulerNamePrefix] = field(
             default_factory=list,
@@ -1048,7 +1045,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReceptionPolicys:
         bsw_queued_data_reception_policy: list[
             BswQueuedDataReceptionPolicy
@@ -1061,7 +1058,7 @@ class BswInternalBehavior:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DistinguishedPartitions:
         bsw_distinguished_partition: list[BswDistinguishedPartition] = field(
             default_factory=list,

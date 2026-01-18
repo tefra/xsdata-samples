@@ -7,7 +7,7 @@ from sabre.models.award_shopping_type import AwardShoppingType
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExchangeTpaExtensionsType:
     class Meta:
         name = "ExchangeTPA_ExtensionsType"

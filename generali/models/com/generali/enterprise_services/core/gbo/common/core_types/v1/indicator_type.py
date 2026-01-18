@@ -7,7 +7,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndicatorType:
     """
     <ns1:UniqueID
@@ -26,9 +26,8 @@ class IndicatorType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">boolean</ns1:PrimitiveType>.
     """
 
-    value: None | bool = field(
-        default=None,
+    value: bool = field(
         metadata={
             "required": True,
-        },
+        }
     )

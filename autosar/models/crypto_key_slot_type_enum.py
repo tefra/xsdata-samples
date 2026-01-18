@@ -7,7 +7,7 @@ from .crypto_key_slot_type_enum_simple import CryptoKeySlotTypeEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CryptoKeySlotTypeEnum:
     """
     This enumeration defines the options for the usage of a Key Slot in the
@@ -29,11 +29,10 @@ class CryptoKeySlotTypeEnum:
     class Meta:
         name = "CRYPTO-KEY-SLOT-TYPE-ENUM"
 
-    value: None | CryptoKeySlotTypeEnumSimple = field(
-        default=None,
+    value: CryptoKeySlotTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

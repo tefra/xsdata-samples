@@ -7,7 +7,7 @@ from .mc_group_data_ref_set_conditional import McGroupDataRefSetConditional
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McGroupDataRefSet:
     """
     Refers to a set of data assigned to an McGroup in a particular role.
@@ -62,7 +62,7 @@ class McGroupDataRefSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class McGroupDataRefSetVariants:
         mc_group_data_ref_set_conditional: list[
             McGroupDataRefSetConditional

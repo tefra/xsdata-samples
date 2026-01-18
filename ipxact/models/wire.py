@@ -19,7 +19,7 @@ from ipxact.models.unsigned_positive_int_expression import (
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Wire:
     """
     A port that carries logic or an array of logic values.
@@ -83,7 +83,7 @@ class Wire:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OnSystem:
         """
         :ivar group: Used to group system ports into different groups
@@ -109,12 +109,11 @@ class Wire:
         :ivar id:
         """
 
-        group: None | str = field(
-            default=None,
+        group: str = field(
             metadata={
                 "type": "Element",
                 "required": True,
-            },
+            }
         )
         presence: None | Presence = field(
             default=None,
@@ -158,7 +157,7 @@ class Wire:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Width(UnsignedPositiveIntExpression):
             """
             :ivar all_bits: false: mapping is optional, any number of
@@ -174,7 +173,7 @@ class Wire:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OnInitiator:
         """
         :ivar presence:
@@ -232,7 +231,7 @@ class Wire:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Width(UnsignedPositiveIntExpression):
             """
             :ivar all_bits: false: mapping is optional, any number of
@@ -248,7 +247,7 @@ class Wire:
                 },
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OnTarget:
         """
         :ivar presence:
@@ -306,7 +305,7 @@ class Wire:
             )
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class Width(UnsignedPositiveIntExpression):
             """
             :ivar all_bits: false: mapping is optional, any number of

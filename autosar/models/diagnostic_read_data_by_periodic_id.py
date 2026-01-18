@@ -27,7 +27,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticReadDataByPeriodicId:
     """
     This represents an instance of the "Read Data by periodic Identifier"
@@ -102,14 +102,13 @@ class DiagnosticReadDataByPeriodicId:
     class Meta:
         name = "DIAGNOSTIC-READ-DATA-BY-PERIODIC-ID"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticReadDataByPeriodicId.ShortNameFragments
@@ -230,7 +229,7 @@ class DiagnosticReadDataByPeriodicId:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -241,7 +240,7 @@ class DiagnosticReadDataByPeriodicId:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -252,35 +251,32 @@ class DiagnosticReadDataByPeriodicId:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccessPermissionRef(Ref):
-        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticAccessPermissionSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataIdentifierRef(Ref):
-        dest: None | DiagnosticAbstractDataIdentifierSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticAbstractDataIdentifierSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReadDataClassRef(Ref):
-        dest: None | DiagnosticReadDataByPeriodicIdClassSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticReadDataByPeriodicIdClassSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateTimeValue(DataValue):
     """
     A measured or calculated value of an instance in time.
@@ -19,14 +19,13 @@ class DateTimeValue(DataValue):
     :ivar date_time_value_extension:
     """
 
-    date_time: None | XmlDateTime = field(
-        default=None,
+    date_time: XmlDateTime = field(
         metadata={
             "name": "dateTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     date_time_value_extension: None | ExtensionType = field(
         default=None,

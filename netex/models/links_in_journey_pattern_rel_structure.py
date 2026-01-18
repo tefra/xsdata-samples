@@ -12,7 +12,7 @@ from .timing_link_in_journey_pattern import TimingLinkInJourneyPattern
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LinksInJourneyPatternRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "linksInJourneyPattern_RelStructure"

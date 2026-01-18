@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.parking_access_reference import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DedicatedAccess:
     """
     Reference to an access of any type (vehicles, pedestrian, ...).
@@ -25,14 +25,13 @@ class DedicatedAccess:
     :ivar dedicated_access_extension:
     """
 
-    dedicated_access: None | ParkingAccessReference = field(
-        default=None,
+    dedicated_access: ParkingAccessReference = field(
         metadata={
             "name": "dedicatedAccess",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     distance_from_parking_space: None | int = field(
         default=None,

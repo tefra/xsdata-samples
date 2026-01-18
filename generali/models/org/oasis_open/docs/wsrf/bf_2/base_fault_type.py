@@ -20,7 +20,7 @@ from generali.models.org.w3.pkg_2005.pkg_08.addressing.endpoint_reference_type i
 __NAMESPACE__ = "http://docs.oasis-open.org/wsrf/bf-2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseFaultType:
     other_element: list[object] = field(
         default_factory=list,
@@ -29,14 +29,13 @@ class BaseFaultType:
             "namespace": "##other",
         },
     )
-    timestamp: None | XmlDateTime = field(
-        default=None,
+    timestamp: XmlDateTime = field(
         metadata={
             "name": "Timestamp",
             "type": "Element",
             "namespace": "http://docs.oasis-open.org/wsrf/bf-2",
             "required": True,
-        },
+        }
     )
     originator: None | EndpointReferenceType = field(
         default=None,

@@ -8,7 +8,7 @@ from travelport.models.form_of_payment_5 import FormOfPayment5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McoexchangeInfo4:
     """
     Information related to the exchange tickets available for the MCO.

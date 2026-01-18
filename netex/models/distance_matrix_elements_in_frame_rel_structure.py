@@ -9,7 +9,7 @@ from .frame_containment_structure import FrameContainmentStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DistanceMatrixElementsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "distanceMatrixElementsInFrame_RelStructure"

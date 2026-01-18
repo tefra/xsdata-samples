@@ -9,7 +9,7 @@ from .diagnostic_data_capture_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticDataCaptureEnum:
     """
     Data triggering types.
@@ -30,11 +30,10 @@ class DiagnosticDataCaptureEnum:
     class Meta:
         name = "DIAGNOSTIC-DATA-CAPTURE-ENUM"
 
-    value: None | DiagnosticDataCaptureEnumSimple = field(
-        default=None,
+    value: DiagnosticDataCaptureEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

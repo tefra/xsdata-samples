@@ -10,7 +10,7 @@ from sdmx_ml.models.unbounded_code_type import UnboundedCodeType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataAttributeType(MetadataAttributeBaseType):
     """
     MetadataAttributeType describes the structure of a metadata attribute.
@@ -80,7 +80,7 @@ class MetadataAttributeType(MetadataAttributeBaseType):
     )
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class MetadataAttribute(MetadataAttributeType):
     """
     MetadataAttribute defines the a metadata attribute, which is the value

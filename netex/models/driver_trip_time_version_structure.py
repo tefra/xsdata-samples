@@ -12,7 +12,7 @@ from .multilingual_string import MultilingualString
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DriverTripTimeVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "DriverTripTime_VersionStructure"

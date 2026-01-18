@@ -7,7 +7,7 @@ from travelport.models.row import Row
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Rows:
     """
     A wrapper for all the information regarding each of the rows.

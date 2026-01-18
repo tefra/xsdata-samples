@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.fault import Fault
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ElaboratedDataFault(Fault):
     """
     Details of a fault which is being reported for the related elaborated
@@ -22,14 +22,13 @@ class ElaboratedDataFault(Fault):
     :ivar elaborated_data_fault_extension:
     """
 
-    elaborated_data_fault: None | ElaboratedDataFaultEnum = field(
-        default=None,
+    elaborated_data_fault: ElaboratedDataFaultEnum = field(
         metadata={
             "name": "elaboratedDataFault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     elaborated_data_fault_extension: None | ExtensionType = field(
         default=None,

@@ -8,7 +8,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CustomMetaGroup:
     """
     <div> <h3>Custom Metadata Group</h3> </div>.
@@ -23,7 +23,6 @@ class CustomMetaGroup:
         metadata={
             "name": "custom-meta",
             "type": "Element",
-            "min_occurs": 1,
         },
     )
     content_type: None | str = field(

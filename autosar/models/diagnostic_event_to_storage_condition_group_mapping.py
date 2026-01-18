@@ -22,7 +22,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticEventToStorageConditionGroupMapping:
     """
     Defines which StorageConditionGroup is applicable for a
@@ -91,14 +91,13 @@ class DiagnosticEventToStorageConditionGroupMapping:
     class Meta:
         name = "DIAGNOSTIC-EVENT-TO-STORAGE-CONDITION-GROUP-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticEventToStorageConditionGroupMapping.ShortNameFragments
@@ -212,7 +211,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -223,7 +222,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -234,24 +233,22 @@ class DiagnosticEventToStorageConditionGroupMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DiagnosticEventRef(Ref):
-        dest: None | DiagnosticEventSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class StorageConditionGroupRef(Ref):
-        dest: None | DiagnosticStorageConditionGroupSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticStorageConditionGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

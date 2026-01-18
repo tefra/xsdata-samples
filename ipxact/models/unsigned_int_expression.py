@@ -7,7 +7,7 @@ from ipxact.models.complex_base_expression import ComplexBaseExpression
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UnsignedIntExpression(ComplexBaseExpression):
     """
     An unsigned int which supports an expression value.

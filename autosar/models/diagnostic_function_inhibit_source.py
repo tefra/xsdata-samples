@@ -23,7 +23,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticFunctionInhibitSource:
     """
     This meta-class represents the ability to define an inhibition source
@@ -90,14 +90,13 @@ class DiagnosticFunctionInhibitSource:
     class Meta:
         name = "DIAGNOSTIC-FUNCTION-INHIBIT-SOURCE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | DiagnosticFunctionInhibitSource.ShortNameFragments
@@ -198,7 +197,7 @@ class DiagnosticFunctionInhibitSource:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -209,7 +208,7 @@ class DiagnosticFunctionInhibitSource:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -220,24 +219,22 @@ class DiagnosticFunctionInhibitSource:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventGroupRef(Ref):
-        dest: None | DiagnosticFimAliasEventGroupSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticFimAliasEventGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class EventRef(Ref):
-        dest: None | DiagnosticFimAliasEventSubtypesEnum = field(
-            default=None,
+        dest: DiagnosticFimAliasEventSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

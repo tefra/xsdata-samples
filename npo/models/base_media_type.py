@@ -36,7 +36,7 @@ from npo.models.workflow_enum_type import WorkflowEnumType
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseMediaType:
     """
     This is the abstract base entity for programs, groups and segments.
@@ -368,13 +368,12 @@ class BaseMediaType:
             "pattern": r"[ \.a-zA-Z0-9_-]+",
         },
     )
-    av_type: None | AvTypeEnum = field(
-        default=None,
+    av_type: AvTypeEnum = field(
         metadata={
             "name": "avType",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     sort_date: None | XmlDateTime = field(
         default=None,

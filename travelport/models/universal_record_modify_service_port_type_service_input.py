@@ -11,55 +11,48 @@ from travelport.models.universal_record_modify_req import (
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UniversalRecordModifyServicePortTypeServiceInput:
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: None | UniversalRecordModifyServicePortTypeServiceInput.Header = (
-        field(
-            default=None,
-            metadata={
-                "name": "Header",
-                "type": "Element",
-            },
-        )
+    header: UniversalRecordModifyServicePortTypeServiceInput.Header = field(
+        metadata={
+            "name": "Header",
+            "type": "Element",
+        }
     )
-    body: None | UniversalRecordModifyServicePortTypeServiceInput.Body = field(
-        default=None,
+    body: UniversalRecordModifyServicePortTypeServiceInput.Body = field(
         metadata={
             "name": "Body",
             "type": "Element",
-        },
+        }
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Header:
-        session_context: None | SessionContext = field(
-            default=None,
+        session_context: SessionContext = field(
             metadata={
                 "name": "SessionContext",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
-            },
+            }
         )
-        supported_versions: None | SupportedVersions = field(
-            default=None,
+        supported_versions: SupportedVersions = field(
             metadata={
                 "name": "SupportedVersions",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Body:
-        universal_record_modify_req: None | UniversalRecordModifyReq = field(
-            default=None,
+        universal_record_modify_req: UniversalRecordModifyReq = field(
             metadata={
                 "name": "UniversalRecordModifyReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+            }
         )

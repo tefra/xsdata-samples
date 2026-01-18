@@ -18,7 +18,7 @@ from .ref import Ref
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortApiOption:
     """
     Options how to generate the signatures of calls for an
@@ -148,7 +148,7 @@ class PortApiOption:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortArgValues:
         port_defined_argument_value: list[PortDefinedArgumentValue] = field(
             default_factory=list,
@@ -159,18 +159,17 @@ class PortApiOption:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PortRef(Ref):
-        dest: None | PortPrototypeSubtypesEnum = field(
-            default=None,
+        dest: PortPrototypeSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SupportedFeatures:
         communication_buffer_locking: list[CommunicationBufferLocking] = field(
             default_factory=list,

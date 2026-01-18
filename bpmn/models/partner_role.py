@@ -7,7 +7,7 @@ from .t_partner_role import TPartnerRole
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PartnerRole(TPartnerRole):
     class Meta:
         name = "partnerRole"

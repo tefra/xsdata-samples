@@ -13,7 +13,7 @@ from datexii.models.eu.datexii.v2.openlr_geo_coordinate import (
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OpenlrCircleLocationReference(OpenlrAreaLocationReference):
     """
     the openLR method of areadefinition by providing a center position and
@@ -24,22 +24,20 @@ class OpenlrCircleLocationReference(OpenlrAreaLocationReference):
     :ivar openlr_circle_location_reference_extension:
     """
 
-    radius: None | int = field(
-        default=None,
+    radius: int = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
-    openlr_geo_coordinate: None | OpenlrGeoCoordinate = field(
-        default=None,
+    openlr_geo_coordinate: OpenlrGeoCoordinate = field(
         metadata={
             "name": "openlrGeoCoordinate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     openlr_circle_location_reference_extension: None | ExtensionType = field(
         default=None,

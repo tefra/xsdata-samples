@@ -29,7 +29,7 @@ from .text_value_specification import TextValueSpecification
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CalibrationParameterValue:
     """
     Specifies instance specific calibration parameter values used to
@@ -121,7 +121,7 @@ class CalibrationParameterValue:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ApplInitValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification
@@ -236,7 +236,7 @@ class CalibrationParameterValue:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ImplInitValue:
         application_assoc_map_value_specification: (
             None | ApplicationAssocMapValueSpecification
@@ -351,13 +351,12 @@ class CalibrationParameterValue:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InitializedParameterRef(Ref):
-        dest: None | FlatInstanceDescriptorSubtypesEnum = field(
-            default=None,
+        dest: FlatInstanceDescriptorSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

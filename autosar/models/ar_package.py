@@ -750,7 +750,7 @@ from .xcp_pdu import XcpPdu
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ArPackage:
     """
     AUTOSAR package, allowing to create top level packages to structure the
@@ -841,14 +841,13 @@ class ArPackage:
     class Meta:
         name = "AR-PACKAGE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ArPackage.ShortNameFragments = field(
         default=None,
@@ -977,7 +976,7 @@ class ArPackage:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -988,7 +987,7 @@ class ArPackage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -999,7 +998,7 @@ class ArPackage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -1028,7 +1027,7 @@ class ArPackage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ReferenceBases:
         reference_base: list[ReferenceBase] = field(
             default_factory=list,
@@ -1039,7 +1038,7 @@ class ArPackage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Elements:
         acl_object_set: list[AclObjectSet] = field(
             default_factory=list,
@@ -5272,7 +5271,7 @@ class ArPackage:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ArPackages:
         ar_package: list[ArPackage] = field(
             default_factory=list,

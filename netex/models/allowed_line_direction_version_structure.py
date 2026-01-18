@@ -11,7 +11,7 @@ from .presentation_structure import PresentationStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AllowedLineDirectionVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "AllowedLineDirection_VersionStructure"
@@ -34,14 +34,13 @@ class AllowedLineDirectionVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    direction_ref: None | DirectionRef = field(
-        default=None,
+    direction_ref: DirectionRef = field(
         metadata={
             "name": "DirectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     presentation: None | PresentationStructure = field(
         default=None,

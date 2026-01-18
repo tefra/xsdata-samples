@@ -18,7 +18,7 @@ from .signal_service_translation_props import SignalServiceTranslationProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SignalServiceTranslationPropsSet:
     """
     Collection of SignalServiceTranslationProps.
@@ -84,14 +84,13 @@ class SignalServiceTranslationPropsSet:
     class Meta:
         name = "SIGNAL-SERVICE-TRANSLATION-PROPS-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | SignalServiceTranslationPropsSet.ShortNameFragments
@@ -192,7 +191,7 @@ class SignalServiceTranslationPropsSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -203,7 +202,7 @@ class SignalServiceTranslationPropsSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -214,7 +213,7 @@ class SignalServiceTranslationPropsSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SignalServiceTranslationPropss:
         signal_service_translation_props: list[
             SignalServiceTranslationProps

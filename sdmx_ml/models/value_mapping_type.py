@@ -10,7 +10,7 @@ from sdmx_ml.models.mapped_value_type import MappedValueType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class ValueMappingType(AnnotableType):
     """
     ValueMappingType defines a mapping of multiple sources to multiple

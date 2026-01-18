@@ -22,7 +22,7 @@ from travelport.models.type_inventory_request import TypeInventoryRequest
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirPricingModifiers:
     """
     Controls and switches for a Air Search request that contains Pricing
@@ -399,7 +399,7 @@ class AirPricingModifiers:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ProhibitedRuleCategories:
         fare_rule_category: list[FareRuleCategory] = field(
             default_factory=list,
@@ -411,7 +411,7 @@ class AirPricingModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class AccountCodes:
         """
         Parameters
@@ -431,7 +431,7 @@ class AirPricingModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ContractCodes:
         contract_code: list[ContractCode] = field(
             default_factory=list,
@@ -443,7 +443,7 @@ class AirPricingModifiers:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class PromoCodes:
         promo_code: list[PromoCode] = field(
             default_factory=list,

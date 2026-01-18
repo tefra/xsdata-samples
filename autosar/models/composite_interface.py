@@ -26,7 +26,7 @@ from .variable_data_prototype import VariableDataPrototype
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CompositeInterface:
     """
     This represents the ability to define a PortInterface that consists of
@@ -122,14 +122,13 @@ class CompositeInterface:
     class Meta:
         name = "COMPOSITE-INTERFACE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | CompositeInterface.ShortNameFragments = field(
         default=None,
@@ -274,7 +273,7 @@ class CompositeInterface:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -285,7 +284,7 @@ class CompositeInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -296,7 +295,7 @@ class CompositeInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -325,7 +324,7 @@ class CompositeInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Namespaces:
         symbol_props: list[SymbolProps] = field(
             default_factory=list,
@@ -336,7 +335,7 @@ class CompositeInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Commands:
         client_server_operation: list[ClientServerOperation] = field(
             default_factory=list,
@@ -347,7 +346,7 @@ class CompositeInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Indications:
         variable_data_prototype: list[VariableDataPrototype] = field(
             default_factory=list,

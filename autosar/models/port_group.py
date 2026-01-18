@@ -21,7 +21,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PortGroup:
     """
     Group of ports which share a common functionality
@@ -104,14 +104,13 @@ class PortGroup:
     class Meta:
         name = "PORT-GROUP"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | PortGroup.ShortNameFragments = field(
         default=None,
@@ -216,7 +215,7 @@ class PortGroup:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -227,7 +226,7 @@ class PortGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -238,7 +237,7 @@ class PortGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class InnerGroupIrefs:
         inner_group_iref: list[InnerPortGroupInCompositionInstanceRef] = field(
             default_factory=list,
@@ -249,7 +248,7 @@ class PortGroup:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class OuterPorts:
         port_prototype_ref_conditional: list[PortPrototypeRefConditional] = (
             field(

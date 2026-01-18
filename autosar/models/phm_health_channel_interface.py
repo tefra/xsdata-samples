@@ -25,7 +25,7 @@ from .symbol_props import SymbolProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PhmHealthChannelInterface:
     """
     This meta-class provides the ability to implement a PortInterface for
@@ -117,14 +117,13 @@ class PhmHealthChannelInterface:
     class Meta:
         name = "PHM-HEALTH-CHANNEL-INTERFACE"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: (
         None | PhmHealthChannelInterface.ShortNameFragments
@@ -265,7 +264,7 @@ class PhmHealthChannelInterface:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -276,7 +275,7 @@ class PhmHealthChannelInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -287,7 +286,7 @@ class PhmHealthChannelInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BlueprintPolicys:
         blueprint_policy_list: list[BlueprintPolicyList] = field(
             default_factory=list,
@@ -316,7 +315,7 @@ class PhmHealthChannelInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Namespaces:
         symbol_props: list[SymbolProps] = field(
             default_factory=list,
@@ -327,7 +326,7 @@ class PhmHealthChannelInterface:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Statuss:
         phm_health_channel_status: list[PhmHealthChannelStatus] = field(
             default_factory=list,

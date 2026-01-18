@@ -7,7 +7,7 @@ from .i_psec_dpd_action_enum_simple import IPsecDpdActionEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IPsecDpdActionEnum:
     """
     Potential Dead Peer Detection (Dpd) Actions.
@@ -28,11 +28,10 @@ class IPsecDpdActionEnum:
     class Meta:
         name = "I-PSEC-DPD-ACTION-ENUM"
 
-    value: None | IPsecDpdActionEnumSimple = field(
-        default=None,
+    value: IPsecDpdActionEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

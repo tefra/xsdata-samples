@@ -25,7 +25,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EocExecutableEntityRef:
     """
     This is used to define a reference to an ExecutableEntity If the
@@ -101,14 +101,13 @@ class EocExecutableEntityRef:
     class Meta:
         name = "EOC-EXECUTABLE-ENTITY-REF"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | EocExecutableEntityRef.ShortNameFragments = (
         field(
@@ -235,7 +234,7 @@ class EocExecutableEntityRef:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -246,7 +245,7 @@ class EocExecutableEntityRef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -257,7 +256,7 @@ class EocExecutableEntityRef:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DirectSuccessorRefs:
         direct_successor_ref: list[
             EocExecutableEntityRef.DirectSuccessorRefs.DirectSuccessorRef
@@ -270,40 +269,37 @@ class EocExecutableEntityRef:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class DirectSuccessorRef(Ref):
-            dest: None | EocExecutableEntityRefAbstractSubtypesEnum = field(
-                default=None,
+            dest: EocExecutableEntityRefAbstractSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class BswModuleInstanceRef(Ref):
-        dest: None | BswImplementationSubtypesEnum = field(
-            default=None,
+        dest: BswImplementationSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ExecutableRef(Ref):
-        dest: None | ExecutableEntitySubtypesEnum = field(
-            default=None,
+        dest: ExecutableEntitySubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class SuccessorRefs:
         successor_ref: list[
             EocExecutableEntityRef.SuccessorRefs.SuccessorRef
@@ -316,13 +312,12 @@ class EocExecutableEntityRef:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class SuccessorRef(Ref):
-            dest: None | EocExecutableEntityRefAbstractSubtypesEnum = field(
-                default=None,
+            dest: EocExecutableEntityRefAbstractSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )

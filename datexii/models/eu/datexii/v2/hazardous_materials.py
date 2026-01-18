@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class HazardousMaterials:
     """
     Details of hazardous materials.
@@ -42,14 +42,13 @@ class HazardousMaterials:
     :ivar hazardous_materials_extension:
     """
 
-    chemical_name: None | MultilingualString = field(
-        default=None,
+    chemical_name: MultilingualString = field(
         metadata={
             "name": "chemicalName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     dangerous_goods_flash_point: None | float = field(
         default=None,

@@ -10,7 +10,7 @@ from travelport.models.type_remark_with_traveler_ref_6 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UnassociatedRemark6(TypeRemarkWithTravelerRef6):
     """
     A textual remark container to hold non-associated itinerary remarks.

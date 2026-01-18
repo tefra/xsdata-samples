@@ -9,7 +9,7 @@ from .diagnostic_compare_type_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticCompareTypeEnum:
     """
     Enumeration for the type of a comparison of values usually expressed by
@@ -31,11 +31,10 @@ class DiagnosticCompareTypeEnum:
     class Meta:
         name = "DIAGNOSTIC-COMPARE-TYPE-ENUM"
 
-    value: None | DiagnosticCompareTypeEnumSimple = field(
-        default=None,
+    value: DiagnosticCompareTypeEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

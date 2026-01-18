@@ -12,7 +12,7 @@ from crossref.models.xml.lang_value import LangValue
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PubDate:
     """
     <div> <h3>Publication Date</h3> </div>.
@@ -40,12 +40,11 @@ class PubDate:
             "type": "Element",
         },
     )
-    year: None | Year = field(
-        default=None,
+    year: Year = field(
         metadata={
             "type": "Element",
             "required": True,
-        },
+        }
     )
     era: None | Era = field(
         default=None,

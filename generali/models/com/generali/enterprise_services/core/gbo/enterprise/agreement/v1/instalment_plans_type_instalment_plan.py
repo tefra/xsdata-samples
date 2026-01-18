@@ -20,7 +20,7 @@ __NAMESPACE__ = (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InstalmentPlansTypeInstalmentPlan:
     class Meta:
         global_type = False
@@ -41,30 +41,27 @@ class InstalmentPlansTypeInstalmentPlan:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    number_of_instalment: None | NumericType = field(
-        default=None,
+    number_of_instalment: NumericType = field(
         metadata={
             "name": "NumberOfInstalment",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    instalment_basis: None | InstalmentBasisEnum = field(
-        default=None,
+    instalment_basis: InstalmentBasisEnum = field(
         metadata={
             "name": "InstalmentBasis",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )
-    instalment_date: None | InstalmentDateEnum = field(
-        default=None,
+    instalment_date: InstalmentDateEnum = field(
         metadata={
             "name": "InstalmentDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        },
+        }
     )

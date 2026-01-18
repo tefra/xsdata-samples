@@ -8,7 +8,7 @@ from travelport.models.profile_1 import Profile1
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProfileModifyRsp1(BaseRsp2):
     """
     Response with the newly modified profile.

@@ -9,7 +9,7 @@ from travelport.models.type_guest_child_information import (
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TypeAdaptedRoomGuestAllocation:
     """
     The allocation of guests per room assigned by the aggregator or

@@ -28,7 +28,7 @@ from travelport.models.xmlremark_5 import Xmlremark5
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseCreateReservationReq5(BaseReq6):
     """
     Parameters

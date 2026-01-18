@@ -9,7 +9,7 @@ from .ipv_6_ndp_props import Ipv6NdpProps
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ipv6Props:
     """
     This meta-class specifies the configuration options for IPv6.

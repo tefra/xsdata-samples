@@ -14,7 +14,7 @@ from travelport.models.vehicle_upsell_search_result import (
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UpsellSearchRsp(BaseRsp1):
     """
     Response containing qualify and offer for the matching search criteria.
@@ -47,11 +47,10 @@ class UpsellSearchRsp(BaseRsp1):
             "max_occurs": 999,
         },
     )
-    more_results: None | bool = field(
-        default=None,
+    more_results: bool = field(
         metadata={
             "name": "MoreResults",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )

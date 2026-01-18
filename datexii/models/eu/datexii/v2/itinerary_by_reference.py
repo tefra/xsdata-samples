@@ -11,7 +11,7 @@ from datexii.models.eu.datexii.v2.predefined_itinerary_versioned_reference impor
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItineraryByReference(Itinerary):
     """
     Multiple (i.e. more than one) physically separate locations which are
@@ -24,16 +24,15 @@ class ItineraryByReference(Itinerary):
     :ivar itinerary_by_reference_extension:
     """
 
-    predefined_itinerary_reference: (
-        None | PredefinedItineraryVersionedReference
-    ) = field(
-        default=None,
-        metadata={
-            "name": "predefinedItineraryReference",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    predefined_itinerary_reference: PredefinedItineraryVersionedReference = (
+        field(
+            metadata={
+                "name": "predefinedItineraryReference",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            }
+        )
     )
     itinerary_by_reference_extension: None | ExtensionType = field(
         default=None,

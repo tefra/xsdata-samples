@@ -10,7 +10,7 @@ from datexii.models.eu.datexii.v2.fault_severity_enum import FaultSeverityEnum
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Fault:
     """
     Information about a fault relating to a specific piece of equipment or
@@ -54,14 +54,13 @@ class Fault:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    fault_last_update_time: None | XmlDateTime = field(
-        default=None,
+    fault_last_update_time: XmlDateTime = field(
         metadata={
             "name": "faultLastUpdateTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     fault_severity: None | FaultSeverityEnum = field(
         default=None,

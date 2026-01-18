@@ -13,7 +13,7 @@ from travelport.models.type_element_status_1 import TypeElementStatus1
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AutoPricingInfo:
     """
     Auto Pricing based on Segment and Traveler Association.
@@ -75,13 +75,12 @@ class AutoPricingInfo:
             "max_occurs": 100,
         },
     )
-    key: None | str = field(
-        default=None,
+    key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     pricing_type: None | str = field(
         default=None,

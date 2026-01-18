@@ -17,7 +17,7 @@ from ipxact.models.vendor_extensions import VendorExtensions
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ComponentInstantiationType:
     """
     Component instantiation type.
@@ -69,13 +69,12 @@ class ComponentInstantiationType:
     class Meta:
         name = "componentInstantiationType"
 
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             "required": True,
-        },
+        }
     )
     display_name: None | DisplayName = field(
         default=None,
@@ -222,7 +221,7 @@ class ComponentInstantiationType:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ModuleParameters:
         """
         :ivar module_parameter: A module parameter name value pair. The
@@ -244,7 +243,7 @@ class ComponentInstantiationType:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ClearboxElementRefs:
         """
         :ivar clearbox_element_ref: Reference to a clear box element

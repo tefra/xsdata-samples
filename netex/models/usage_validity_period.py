@@ -9,7 +9,7 @@ from .usage_validity_period_version_structure import (
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UsageValidityPeriod(UsageValidityPeriodVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

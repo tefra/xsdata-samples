@@ -9,7 +9,7 @@ from .data_transformation_error_handling_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataTransformationErrorHandlingEnum:
     """
     This enumeration defines different ways how a RunnableEntity shall
@@ -31,11 +31,10 @@ class DataTransformationErrorHandlingEnum:
     class Meta:
         name = "DATA-TRANSFORMATION-ERROR-HANDLING-ENUM"
 
-    value: None | DataTransformationErrorHandlingEnumSimple = field(
-        default=None,
+    value: DataTransformationErrorHandlingEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

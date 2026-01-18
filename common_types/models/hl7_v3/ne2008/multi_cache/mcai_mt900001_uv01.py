@@ -47,7 +47,7 @@ from ..core.voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McaiMt900001Uv01DetectedIssueManagement:
     class Meta:
         name = "MCAI_MT900001UV01.DetectedIssueManagement"
@@ -97,25 +97,23 @@ class McaiMt900001Uv01DetectedIssueManagement:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
-    mood_code: None | XActMoodDefEvn = field(
-        default=None,
+    mood_code: XActMoodDefEvn = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McaiMt900001Uv01Role:
     class Meta:
         name = "MCAI_MT900001UV01.Role"
@@ -159,25 +157,23 @@ class McaiMt900001Uv01Role:
         },
     )
     class_code: (
-        None
-        | RoleClassMutualRelationship
+        RoleClassMutualRelationship
         | RoleClassPassive
         | str
         | RoleClassOntological
         | RoleClassPartitive
         | RoleClassRootValue
     ) = field(
-        default=None,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McaiMt900001Uv01SourceOf:
     class Meta:
         name = "MCAI_MT900001UV01.SourceOf"
@@ -209,13 +205,12 @@ class McaiMt900001Uv01SourceOf:
     detected_issue_management: (
         None | McaiMt900001Uv01DetectedIssueManagement
     ) = field(
-        default=None,
         metadata={
             "name": "detectedIssueManagement",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -224,13 +219,12 @@ class McaiMt900001Uv01SourceOf:
             "type": "Attribute",
         },
     )
-    type_code: None | ActRelationshipMitigates = field(
-        default=None,
+    type_code: ActRelationshipMitigates = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     context_conduction_ind: str = field(
         default="false",
@@ -242,7 +236,7 @@ class McaiMt900001Uv01SourceOf:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McaiMt900001Uv01Subject:
     class Meta:
         name = "MCAI_MT900001UV01.Subject"
@@ -272,12 +266,11 @@ class McaiMt900001Uv01Subject:
         },
     )
     role: None | McaiMt900001Uv01Role = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -286,17 +279,16 @@ class McaiMt900001Uv01Subject:
             "type": "Attribute",
         },
     )
-    type_code: None | ParticipationTargetSubject = field(
-        default=None,
+    type_code: ParticipationTargetSubject = field(
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McaiMt900001Uv01ActOrderRequired:
     class Meta:
         name = "MCAI_MT900001UV01.ActOrderRequired"
@@ -355,13 +347,12 @@ class McaiMt900001Uv01ActOrderRequired:
             "type": "Attribute",
         },
     )
-    class_code: None | ActClassRoot = field(
-        default=None,
+    class_code: ActClassRoot = field(
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        },
+        }
     )
     mood_code: ActMood = field(
         init=False,
@@ -374,7 +365,7 @@ class McaiMt900001Uv01ActOrderRequired:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McaiMt900001Uv01Requires:
     class Meta:
         name = "MCAI_MT900001UV01.Requires"
@@ -404,13 +395,12 @@ class McaiMt900001Uv01Requires:
         },
     )
     act_order_required: None | McaiMt900001Uv01ActOrderRequired = field(
-        default=None,
         metadata={
             "name": "actOrderRequired",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -467,7 +457,7 @@ class McaiMt900001Uv01Requires:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class McaiMt900001Uv01DetectedIssueEvent:
     class Meta:
         name = "MCAI_MT900001UV01.DetectedIssueEvent"
@@ -503,13 +493,12 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: None | Cd = field(
-        default=None,
+    code: Cd = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     text: None | EdExplicit = field(
         default=None,

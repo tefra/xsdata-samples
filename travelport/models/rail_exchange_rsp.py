@@ -7,7 +7,7 @@ from travelport.models.type_rail_reservation_rsp import TypeRailReservationRsp
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RailExchangeRsp(TypeRailReservationRsp):
     """
     Returns rail exchange reservation information with ticketing/refund

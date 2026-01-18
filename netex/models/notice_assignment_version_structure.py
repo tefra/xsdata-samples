@@ -40,7 +40,7 @@ from .version_of_object_ref_structure import VersionOfObjectRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "NoticeAssignment_VersionStructure"

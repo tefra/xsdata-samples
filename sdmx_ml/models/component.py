@@ -7,7 +7,7 @@ from sdmx_ml.models.component_type import ComponentType
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class Component(ComponentType):
     """
     Component is an abstract element that serves as a substitution head for

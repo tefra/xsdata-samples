@@ -8,7 +8,7 @@ from datexii.models.eu.datexii.v2.point_coordinates import PointCoordinates
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PointByCoordinates:
     """
     A single point defined only by a coordinate set with an optional
@@ -28,14 +28,13 @@ class PointByCoordinates:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    point_coordinates: None | PointCoordinates = field(
-        default=None,
+    point_coordinates: PointCoordinates = field(
         metadata={
             "name": "pointCoordinates",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        },
+        }
     )
     point_by_coordinates_extension: None | ExtensionType = field(
         default=None,

@@ -9,7 +9,7 @@ from .diagnostic_wwh_obd_dtc_class_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DiagnosticWwhObdDtcClassEnum:
     """
     This meta-class represents the ability to model severity classes of an
@@ -31,11 +31,10 @@ class DiagnosticWwhObdDtcClassEnum:
     class Meta:
         name = "DIAGNOSTIC-WWH-OBD-DTC-CLASS-ENUM"
 
-    value: None | DiagnosticWwhObdDtcClassEnumSimple = field(
-        default=None,
+    value: DiagnosticWwhObdDtcClassEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

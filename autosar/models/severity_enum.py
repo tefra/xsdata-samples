@@ -7,7 +7,7 @@ from .severity_enum_simple import SeverityEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SeverityEnum:
     """
     Definition of severity levels.
@@ -28,11 +28,10 @@ class SeverityEnum:
     class Meta:
         name = "SEVERITY-ENUM"
 
-    value: None | SeverityEnumSimple = field(
-        default=None,
+    value: SeverityEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

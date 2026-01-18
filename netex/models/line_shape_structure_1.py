@@ -8,7 +8,7 @@ from .location_structure_1 import LocationStructure1
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LineShapeStructure1:
     class Meta:
         name = "LineShapeStructure"

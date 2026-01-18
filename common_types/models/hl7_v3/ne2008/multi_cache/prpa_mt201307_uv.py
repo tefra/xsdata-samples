@@ -13,7 +13,7 @@ from ..core.voc import NullFlavor
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201307UvDataSource:
     class Meta:
         name = "PRPA_MT201307UV.DataSource"
@@ -50,14 +50,13 @@ class PrpaMt201307UvDataSource:
             "min_occurs": 1,
         },
     )
-    semantics_text: None | St = field(
-        default=None,
+    semantics_text: St = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -68,7 +67,7 @@ class PrpaMt201307UvDataSource:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201307UvPatientIdentifier:
     class Meta:
         name = "PRPA_MT201307UV.PatientIdentifier"
@@ -105,14 +104,13 @@ class PrpaMt201307UvPatientIdentifier:
             "min_occurs": 1,
         },
     )
-    semantics_text: None | St = field(
-        default=None,
+    semantics_text: St = field(
         metadata={
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -123,7 +121,7 @@ class PrpaMt201307UvPatientIdentifier:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201307UvParameterList:
     class Meta:
         name = "PRPA_MT201307UV.ParameterList"
@@ -186,7 +184,7 @@ class PrpaMt201307UvParameterList:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrpaMt201307UvQueryByParameter:
     class Meta:
         name = "PRPA_MT201307UV.QueryByParameter"
@@ -215,23 +213,21 @@ class PrpaMt201307UvQueryByParameter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    query_id: None | Ii = field(
-        default=None,
+    query_id: Ii = field(
         metadata={
             "name": "queryId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
-    status_code: None | Cs = field(
-        default=None,
+    status_code: Cs = field(
         metadata={
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     modify_code: None | Cs = field(
         default=None,
@@ -265,14 +261,13 @@ class PrpaMt201307UvQueryByParameter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    parameter_list: None | PrpaMt201307UvParameterList = field(
-        default=None,
+    parameter_list: PrpaMt201307UvParameterList = field(
         metadata={
             "name": "parameterList",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        },
+        }
     )
     null_flavor: None | NullFlavor = field(
         default=None,

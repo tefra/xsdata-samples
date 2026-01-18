@@ -19,7 +19,7 @@ from .transformation_technology import TransformationTechnology
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DataTransformationSet:
     """
     This element is the system wide container of DataTransformations which
@@ -91,14 +91,13 @@ class DataTransformationSet:
     class Meta:
         name = "DATA-TRANSFORMATION-SET"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | DataTransformationSet.ShortNameFragments = (
         field(
@@ -209,7 +208,7 @@ class DataTransformationSet:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -220,7 +219,7 @@ class DataTransformationSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -231,7 +230,7 @@ class DataTransformationSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DataTransformations:
         data_transformation: list[DataTransformation] = field(
             default_factory=list,
@@ -242,7 +241,7 @@ class DataTransformationSet:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class TransformationTechnologys:
         transformation_technology: list[TransformationTechnology] = field(
             default_factory=list,

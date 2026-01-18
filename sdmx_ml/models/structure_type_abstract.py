@@ -11,7 +11,7 @@ from sdmx_ml.models.metadata_structure_components import (
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, kw_only=True)
 class StructureTypeAbstract(MaintainableType):
     """
     StructureType is an abstract base type for all structure objects.

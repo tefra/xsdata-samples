@@ -7,7 +7,7 @@ from travelport.models.type_free_form_text_1 import TypeFreeFormText1
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mcotext1(TypeFreeFormText1):
     """
     All type of free format text messages related to MCO like - Command

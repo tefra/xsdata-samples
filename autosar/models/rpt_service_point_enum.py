@@ -7,7 +7,7 @@ from .rpt_service_point_enum_simple import RptServicePointEnumSimple
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RptServicePointEnum:
     """
     Specifies whether the invocation of ExecutableEntitys due to activation
@@ -30,11 +30,10 @@ class RptServicePointEnum:
     class Meta:
         name = "RPT-SERVICE-POINT-ENUM"
 
-    value: None | RptServicePointEnumSimple = field(
-        default=None,
+    value: RptServicePointEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

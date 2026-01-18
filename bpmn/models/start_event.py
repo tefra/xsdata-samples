@@ -7,7 +7,7 @@ from .t_start_event import TStartEvent
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StartEvent(TStartEvent):
     class Meta:
         name = "startEvent"

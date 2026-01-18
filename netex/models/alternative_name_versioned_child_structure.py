@@ -10,7 +10,7 @@ from .version_of_object_ref_structure import VersionOfObjectRefStructure
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AlternativeNameVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "AlternativeName_VersionedChildStructure"
@@ -47,14 +47,13 @@ class AlternativeNameVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: None | MultilingualString = field(
-        default=None,
+    name: MultilingualString = field(
         metadata={
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        },
+        }
     )
     short_name: None | MultilingualString = field(
         default=None,

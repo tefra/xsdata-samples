@@ -7,7 +7,7 @@ from travelport.models.create_field_2 import CreateField2
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CreateFieldGroup2:
     """
     Defines the structure of a new field group, which can be based on
@@ -48,15 +48,14 @@ class CreateFieldGroup2:
             "max_occurs": 999,
         },
     )
-    name: None | str = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )
     description: None | str = field(
         default=None,

@@ -10,7 +10,7 @@ from .surface_members import SurfaceMembers
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MultiSurfaceType(AbstractGeometricAggregateType):
     surface_member: Iterable[SurfaceMember] = field(
         default_factory=list,

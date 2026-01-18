@@ -10,7 +10,7 @@ from .coordinates_structure import CoordinatesStructure
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationStructure1:
     class Meta:
         name = "LocationStructure"
@@ -65,24 +65,22 @@ class LocationStructure1:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Longitude:
-        value: None | Decimal = field(
-            default=None,
+        value: Decimal = field(
             metadata={
                 "required": True,
                 "min_inclusive": Decimal("-180"),
                 "max_inclusive": Decimal("180"),
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Latitude:
-        value: None | Decimal = field(
-            default=None,
+        value: Decimal = field(
             metadata={
                 "required": True,
                 "min_inclusive": Decimal("-90"),
                 "max_inclusive": Decimal("90"),
-            },
+            }
         )

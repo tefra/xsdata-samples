@@ -9,7 +9,7 @@ from .storage_condition_status_enum_simple import (
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StorageConditionStatusEnum:
     """
     This enumeration specifies the initial status for enable or disable of
@@ -31,11 +31,10 @@ class StorageConditionStatusEnum:
     class Meta:
         name = "STORAGE-CONDITION-STATUS-ENUM"
 
-    value: None | StorageConditionStatusEnumSimple = field(
-        default=None,
+    value: StorageConditionStatusEnumSimple = field(
         metadata={
             "required": True,
-        },
+        }
     )
     s: None | str = field(
         default=None,

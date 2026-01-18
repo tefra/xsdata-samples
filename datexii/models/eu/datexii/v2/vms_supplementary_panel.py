@@ -12,7 +12,7 @@ from datexii.models.eu.datexii.v2.vms_text_line import VmsTextLine
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VmsSupplementaryPanel:
     """
     A panel which may display information or a regulatory instruction which

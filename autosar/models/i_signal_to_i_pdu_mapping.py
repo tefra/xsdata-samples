@@ -23,7 +23,7 @@ from .transfer_property_enum import TransferPropertyEnum
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ISignalToIPduMapping:
     """
     An ISignalToIPduMapping describes the mapping of ISignals to
@@ -148,14 +148,13 @@ class ISignalToIPduMapping:
     class Meta:
         name = "I-SIGNAL-TO-I-PDU-MAPPING"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ISignalToIPduMapping.ShortNameFragments = (
         field(
@@ -294,7 +293,7 @@ class ISignalToIPduMapping:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -305,7 +304,7 @@ class ISignalToIPduMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -316,24 +315,22 @@ class ISignalToIPduMapping:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalGroupRef(Ref):
-        dest: None | ISignalGroupSubtypesEnum = field(
-            default=None,
+        dest: ISignalGroupSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ISignalRef(Ref):
-        dest: None | ISignalSubtypesEnum = field(
-            default=None,
+        dest: ISignalSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )

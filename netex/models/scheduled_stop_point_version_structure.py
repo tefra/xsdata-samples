@@ -21,7 +21,7 @@ from .vehicle_mode_enumeration import VehicleModeEnumeration
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
     class Meta:
         name = "ScheduledStopPoint_VersionStructure"

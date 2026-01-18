@@ -13,7 +13,7 @@ from travelport.models.type_transactions_allowed_4 import (
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransactionType4:
     """
     Configuration for products by type.
@@ -79,7 +79,7 @@ class TransactionType4:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Air(TypeTransactionsAllowed4):
         """
         Parameters

@@ -10,7 +10,7 @@ from sabre.models.fare_component_breakdown_type import (
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VccinformationType:
     """
     Validating Carrier Commission Information.
@@ -45,14 +45,13 @@ class VccinformationType:
             "pattern": r"[0-9A-Z]{2,3}",
         },
     )
-    commission_amount: None | Decimal = field(
-        default=None,
+    commission_amount: Decimal = field(
         metadata={
             "name": "CommissionAmount",
             "type": "Attribute",
             "required": True,
             "fraction_digits": 3,
-        },
+        }
     )
     total_amount_including_mark_up: None | Decimal = field(
         default=None,

@@ -30,7 +30,7 @@ from .short_name_fragment import ShortNameFragment
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ComEventGrant:
     """
     This meta-class represents the ability to grant access to a
@@ -105,14 +105,13 @@ class ComEventGrant:
     class Meta:
         name = "COM-EVENT-GRANT"
 
-    short_name: None | Identifier = field(
-        default=None,
+    short_name: Identifier = field(
         metadata={
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        },
+        }
     )
     short_name_fragments: None | ComEventGrant.ShortNameFragments = field(
         default=None,
@@ -233,7 +232,7 @@ class ComEventGrant:
         },
     )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ShortNameFragments:
         short_name_fragment: list[ShortNameFragment] = field(
             default_factory=list,
@@ -244,7 +243,7 @@ class ComEventGrant:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class Annotations:
         annotation: list[Annotation] = field(
             default_factory=list,
@@ -255,7 +254,7 @@ class ComEventGrant:
             },
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class RemoteSubjectRefs:
         remote_subject_ref: list[
             ComEventGrant.RemoteSubjectRefs.RemoteSubjectRef
@@ -268,46 +267,42 @@ class ComEventGrant:
             },
         )
 
-        @dataclass
+        @dataclass(kw_only=True)
         class RemoteSubjectRef(Ref):
-            dest: None | AbstractIamRemoteSubjectSubtypesEnum = field(
-                default=None,
+            dest: AbstractIamRemoteSubjectSubtypesEnum = field(
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                },
+                }
             )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceInstanceRef(Ref):
-        dest: None | AdaptivePlatformServiceInstanceSubtypesEnum = field(
-            default=None,
+        dest: AdaptivePlatformServiceInstanceSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class DesignRef(Ref):
-        dest: None | ComEventGrantDesignSubtypesEnum = field(
-            default=None,
+        dest: ComEventGrantDesignSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
 
-    @dataclass
+    @dataclass(kw_only=True)
     class ServiceDeploymentRef(Ref):
-        dest: None | ServiceEventDeploymentSubtypesEnum = field(
-            default=None,
+        dest: ServiceEventDeploymentSubtypesEnum = field(
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            },
+            }
         )
