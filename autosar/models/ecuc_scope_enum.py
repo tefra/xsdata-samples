@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .ecuc_scope_enum_simple import EcucScopeEnumSimple

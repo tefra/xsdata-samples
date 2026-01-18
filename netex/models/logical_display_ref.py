@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .logical_display_ref_structure import LogicalDisplayRefStructure

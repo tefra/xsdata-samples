@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .path_link_version_structure import PathLinkVersionStructure

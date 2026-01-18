@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .suspending_version_structure import SuspendingVersionStructure

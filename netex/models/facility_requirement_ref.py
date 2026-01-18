@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .facility_requirement_ref_structure import FacilityRequirementRefStructure

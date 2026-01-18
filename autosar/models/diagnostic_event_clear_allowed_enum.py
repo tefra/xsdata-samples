@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .diagnostic_event_clear_allowed_enum_simple import (

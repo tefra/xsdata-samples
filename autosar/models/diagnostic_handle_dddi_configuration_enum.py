@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .diagnostic_handle_dddi_configuration_enum_simple import (

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .software_cluster_dependency_logical_operator_enum_simple import (

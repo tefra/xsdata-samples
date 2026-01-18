@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .general_sign_ref_structure import GeneralSignRefStructure

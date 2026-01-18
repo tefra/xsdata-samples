@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .sw_service_reentrance_enum_simple import SwServiceReentranceEnumSimple

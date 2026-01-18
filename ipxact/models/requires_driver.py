@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from ipxact.models.requires_driver_driver_type import RequiresDriverDriverType

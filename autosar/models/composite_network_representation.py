@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .application_composite_element_in_port_interface_instance_ref import (

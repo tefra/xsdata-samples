@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .show_resource_category_enum_simple import ShowResourceCategoryEnumSimple

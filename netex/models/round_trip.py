@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .round_trip_version_structure import RoundTripVersionStructure

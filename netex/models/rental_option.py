@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .rental_option_version_structure import RentalOptionVersionStructure

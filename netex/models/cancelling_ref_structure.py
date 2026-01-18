@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .booking_policy_ref_structure import BookingPolicyRefStructure

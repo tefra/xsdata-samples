@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .diagnostic_response_to_ecu_reset_enum_simple import (

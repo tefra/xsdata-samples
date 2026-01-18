@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .group_of_lines_version_structure import GroupOfLinesVersionStructure

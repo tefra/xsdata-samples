@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .entitlement_required_ref_structure import EntitlementRequiredRefStructure

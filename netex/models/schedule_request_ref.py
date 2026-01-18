@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .schedule_request_ref_structure import ScheduleRequestRefStructure

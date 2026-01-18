@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .zone_projection_ref_structure import ZoneProjectionRefStructure

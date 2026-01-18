@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .access_zone_ref_structure import AccessZoneRefStructure

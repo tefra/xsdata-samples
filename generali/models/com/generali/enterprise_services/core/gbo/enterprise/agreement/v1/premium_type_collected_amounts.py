@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.payment_transaction_type import (

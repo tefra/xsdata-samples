@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .fulfilment_method_price_versioned_child_structure import (

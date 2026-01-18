@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .transfer_property_enum_simple import TransferPropertyEnumSimple

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .vehicle_pooling_driver_info_version_structure import (

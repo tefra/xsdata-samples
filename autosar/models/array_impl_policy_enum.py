@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .array_impl_policy_enum_simple import ArrayImplPolicyEnumSimple

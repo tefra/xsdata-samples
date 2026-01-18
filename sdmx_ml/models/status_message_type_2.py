@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from sdmx_ml.models.status_message_type_1 import StatusMessageType1

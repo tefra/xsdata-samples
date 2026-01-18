@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .purpose_of_grouping_ref_structure import PurposeOfGroupingRefStructure

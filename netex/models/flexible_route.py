@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .flexible_route_version_structure import FlexibleRouteVersionStructure

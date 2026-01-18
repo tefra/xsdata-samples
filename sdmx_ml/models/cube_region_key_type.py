@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from sdmx_ml.models.cube_key_value_type import CubeKeyValueType

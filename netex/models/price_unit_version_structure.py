@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .type_of_value_version_structure import TypeOfValueVersionStructure

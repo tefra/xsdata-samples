@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .equipment_positions_rel_structure import EquipmentPositionsRelStructure

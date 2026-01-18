@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .beacon_point_version_structure import BeaconPointVersionStructure

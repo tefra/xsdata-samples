@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .ipv_4_arp_props import Ipv4ArpProps

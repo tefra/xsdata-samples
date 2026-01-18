@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .topographic_place_ref_structure import TopographicPlaceRefStructure

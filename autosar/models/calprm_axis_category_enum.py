@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .calprm_axis_category_enum_simple import CalprmAxisCategoryEnumSimple

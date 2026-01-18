@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .t_terminate_event_definition import TTerminateEventDefinition

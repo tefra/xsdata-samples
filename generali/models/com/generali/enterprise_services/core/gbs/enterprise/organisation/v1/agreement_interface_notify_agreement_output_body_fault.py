@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1"

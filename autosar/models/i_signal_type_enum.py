@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .i_signal_type_enum_simple import ISignalTypeEnumSimple

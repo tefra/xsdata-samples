@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from sdmx_ml.models.maintainable_query_type import MaintainableQueryType

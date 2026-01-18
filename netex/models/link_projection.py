@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .link_projection_version_structure import LinkProjectionVersionStructure

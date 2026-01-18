@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .coupled_journey_ref_structure import CoupledJourneyRefStructure

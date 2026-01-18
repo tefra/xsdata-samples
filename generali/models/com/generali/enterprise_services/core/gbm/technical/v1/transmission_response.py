@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from generali.models.com.generali.enterprise_services.core.gbm.technical.v1.transmission_response_type import (

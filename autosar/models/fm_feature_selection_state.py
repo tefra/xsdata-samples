@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .fm_feature_selection_state_simple import FmFeatureSelectionStateSimple

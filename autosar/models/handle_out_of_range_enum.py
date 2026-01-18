@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .handle_out_of_range_enum_simple import HandleOutOfRangeEnumSimple

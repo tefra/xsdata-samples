@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .type_of_version_ref_structure import TypeOfVersionRefStructure

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .point_on_route_ref_structure import PointOnRouteRefStructure

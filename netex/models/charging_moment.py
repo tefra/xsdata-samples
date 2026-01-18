@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .charging_moment_value_structure import ChargingMomentValueStructure

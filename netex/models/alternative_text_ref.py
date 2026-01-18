@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .alternative_text_ref_structure import AlternativeTextRefStructure

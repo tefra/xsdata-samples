@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .driver_trip_time_version_structure import DriverTripTimeVersionStructure

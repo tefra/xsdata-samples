@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .ttcan_trigger_type_simple import TtcanTriggerTypeSimple

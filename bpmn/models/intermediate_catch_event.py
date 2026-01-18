@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .t_intermediate_catch_event import TIntermediateCatchEvent

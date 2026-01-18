@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .all_operators_ref_structure import AllOperatorsRefStructure

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .udp_collection_trigger_enum_simple import UdpCollectionTriggerEnumSimple

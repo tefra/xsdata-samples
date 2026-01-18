@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .hail_and_ride_area_ref_structure import HailAndRideAreaRefStructure

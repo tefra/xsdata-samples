@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .supplement_product_ref_structure import SupplementProductRefStructure

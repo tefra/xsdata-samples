@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from sdmx_ml.models.attribute_list_type import AttributeListType

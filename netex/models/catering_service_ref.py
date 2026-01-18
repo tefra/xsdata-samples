@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .catering_service_ref_structure import CateringServiceRefStructure

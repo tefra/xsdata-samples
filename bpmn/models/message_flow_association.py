@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .t_message_flow_association import TMessageFlowAssociation

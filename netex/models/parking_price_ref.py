@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .parking_price_ref_structure import ParkingPriceRefStructure

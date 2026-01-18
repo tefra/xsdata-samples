@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .uic_rate_type_enumeration import UicRateTypeEnumeration

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .handle_timeout_enum_simple import HandleTimeoutEnumSimple

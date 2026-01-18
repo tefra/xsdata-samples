@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .class_attribute_in_frame_structure import ClassAttributeInFrameStructure

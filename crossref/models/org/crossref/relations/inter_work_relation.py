@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from crossref.models.org.crossref.relations.inter_work_relation_identifier_type import (

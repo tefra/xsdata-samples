@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from generali.models.org.w3.pkg_2005.pkg_08.addressing.relationship_type import (

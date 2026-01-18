@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .site_entrance_version_structure import SiteEntranceVersionStructure

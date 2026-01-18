@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .delivery_variants_rel_structure import DeliveryVariantsRelStructure

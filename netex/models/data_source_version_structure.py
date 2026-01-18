@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .external_object_ref_structure import ExternalObjectRefStructure

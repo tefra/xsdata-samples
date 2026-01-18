@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .argument_direction_enum_simple import ArgumentDirectionEnumSimple

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .persistency_redundancy_handling_scope_enum_simple import (

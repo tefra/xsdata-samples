@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from xcbl.models.payment_request_acknowledgment import (

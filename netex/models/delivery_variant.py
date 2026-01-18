@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .delivery_variant_version_structure import DeliveryVariantVersionStructure

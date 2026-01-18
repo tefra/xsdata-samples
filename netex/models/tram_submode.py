@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .tram_submode_enumeration import TramSubmodeEnumeration

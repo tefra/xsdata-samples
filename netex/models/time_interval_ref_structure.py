@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .fare_interval_ref_structure import FareIntervalRefStructure

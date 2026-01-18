@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .class_in_frame_ref_structure import ClassInFrameRefStructure

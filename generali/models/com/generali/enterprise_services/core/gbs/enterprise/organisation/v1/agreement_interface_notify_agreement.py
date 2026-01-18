@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from generali.models.com.generali.enterprise_services.core.gbs.enterprise.organisation.v1.agreement_interface_notify_agreement_input import (
     AgreementInterfaceNotifyAgreementInput,
 )

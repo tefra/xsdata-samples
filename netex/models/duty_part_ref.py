@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .duty_part_ref_structure import DutyPartRefStructure

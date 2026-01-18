@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .transfer_restriction_ref_structure import TransferRestrictionRefStructure

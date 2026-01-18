@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .t_implicit_throw_event import TImplicitThrowEvent

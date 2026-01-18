@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .pool_of_vehicles_ref_structure import PoolOfVehiclesRefStructure

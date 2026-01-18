@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from ubl.models.common.ubl_signature_aggregate_components_2_1 import (

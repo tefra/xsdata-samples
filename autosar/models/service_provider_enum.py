@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .service_provider_enum_simple import ServiceProviderEnumSimple

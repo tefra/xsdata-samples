@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .group_of_entities_ref_structure_2 import GroupOfEntitiesRefStructure2

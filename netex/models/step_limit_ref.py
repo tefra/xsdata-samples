@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .step_limit_ref_structure import StepLimitRefStructure

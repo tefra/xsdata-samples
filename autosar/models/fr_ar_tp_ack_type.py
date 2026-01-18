@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .fr_ar_tp_ack_type_simple import FrArTpAckTypeSimple

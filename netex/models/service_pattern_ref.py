@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .service_pattern_ref_structure import ServicePatternRefStructure

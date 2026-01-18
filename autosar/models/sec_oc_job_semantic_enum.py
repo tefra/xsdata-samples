@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .sec_oc_job_semantic_enum_simple import SecOcJobSemanticEnumSimple

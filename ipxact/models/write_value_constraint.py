@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from ipxact.models.write_value_constraint_type import WriteValueConstraintType

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .vehicle_type_preference_versioned_child_structure import (

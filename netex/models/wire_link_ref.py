@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .wire_link_ref_structure import WireLinkRefStructure

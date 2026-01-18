@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .authenticated_request_structure import AuthenticatedRequestStructure

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from sdmx_ml.models.geo_codelist_base_type import GeoCodelistBaseType

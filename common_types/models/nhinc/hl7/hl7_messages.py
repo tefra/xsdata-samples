@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from ...hl7_v3.ne2008.core.datatypes_base import Ii

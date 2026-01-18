@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .chapter_enum_break_simple import ChapterEnumBreakSimple

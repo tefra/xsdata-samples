@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .car_service_facility_enumeration import CarServiceFacilityEnumeration

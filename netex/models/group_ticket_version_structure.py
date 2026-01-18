@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .companion_profiles_rel_structure import CompanionProfilesRelStructure

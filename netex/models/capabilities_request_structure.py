@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .data_object_capabilities_request import DataObjectCapabilitiesRequest

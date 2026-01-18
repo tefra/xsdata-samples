@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .organisational_unit_ref_structure import OrganisationalUnitRefStructure

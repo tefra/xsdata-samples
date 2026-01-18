@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .diagnostic_dynamically_define_data_identifier_subfunction_enum_simple import (

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .parking_capacity_ref_structure import ParkingCapacityRefStructure

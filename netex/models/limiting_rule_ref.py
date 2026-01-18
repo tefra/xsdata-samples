@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .limiting_rule_ref_structure import LimitingRuleRefStructure

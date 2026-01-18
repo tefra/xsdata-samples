@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .penalty_policy_version_structure import PenaltyPolicyVersionStructure

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .ipv_4_address_source_enum_simple import Ipv4AddressSourceEnumSimple

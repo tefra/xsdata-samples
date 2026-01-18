@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .pdu_collection_trigger_enum_simple import PduCollectionTriggerEnumSimple

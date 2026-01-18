@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .staircase_equipment_ref_structure import StaircaseEquipmentRefStructure

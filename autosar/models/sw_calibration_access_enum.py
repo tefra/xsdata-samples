@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .sw_calibration_access_enum_simple import SwCalibrationAccessEnumSimple

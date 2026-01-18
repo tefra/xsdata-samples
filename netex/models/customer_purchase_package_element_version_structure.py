@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .customer_purchase_package_element_accesses_rel_structure import (

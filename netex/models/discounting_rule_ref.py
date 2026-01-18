@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .discounting_rule_ref_structure import DiscountingRuleRefStructure

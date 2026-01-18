@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .line_section_ref_structure import LineSectionRefStructure

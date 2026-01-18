@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .group_ticket_version_structure import GroupTicketVersionStructure

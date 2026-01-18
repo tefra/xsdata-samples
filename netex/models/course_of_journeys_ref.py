@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .course_of_journeys_ref_structure import CourseOfJourneysRefStructure

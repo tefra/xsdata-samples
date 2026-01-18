@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from sdmx_ml.models.vtl_mapping_scheme_type import VtlMappingSchemeType

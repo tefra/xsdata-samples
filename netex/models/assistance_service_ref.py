@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .assistance_service_ref_structure import AssistanceServiceRefStructure

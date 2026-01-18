@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .fare_request_ref_structure import FareRequestRefStructure

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .security_list_ref_structure import SecurityListRefStructure

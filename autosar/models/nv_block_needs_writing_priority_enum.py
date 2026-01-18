@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .nv_block_needs_writing_priority_enum_simple import (

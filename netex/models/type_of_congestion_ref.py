@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .type_of_congestion_ref_structure import TypeOfCongestionRefStructure

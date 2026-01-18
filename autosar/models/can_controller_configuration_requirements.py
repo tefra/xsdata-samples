@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .can_controller_fd_configuration import CanControllerFdConfiguration

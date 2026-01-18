@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .rx_accept_contained_i_pdu_enum_simple import (

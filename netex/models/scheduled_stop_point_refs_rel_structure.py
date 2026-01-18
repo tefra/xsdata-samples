@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef

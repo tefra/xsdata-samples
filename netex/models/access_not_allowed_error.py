@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .access_not_allowed_error_structure import AccessNotAllowedErrorStructure

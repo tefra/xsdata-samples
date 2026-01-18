@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .transferability_ref_structure import TransferabilityRefStructure

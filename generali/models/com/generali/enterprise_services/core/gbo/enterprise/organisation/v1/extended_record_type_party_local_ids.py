@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.party_local_id_type import (

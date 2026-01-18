@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .report_behavior_enum_simple import ReportBehaviorEnumSimple

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .booking_process_enumeration import BookingProcessEnumeration

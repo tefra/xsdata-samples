@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .data_exchange_point_kind_simple import DataExchangePointKindSimple

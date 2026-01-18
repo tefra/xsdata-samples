@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from generali.models.com.generali.enterprise_services.core.gbm.enterprise.organisation.v2.get_organisation_gbmresponse_type import (

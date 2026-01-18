@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .common_section_ref_structure import CommonSectionRefStructure

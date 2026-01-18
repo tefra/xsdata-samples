@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .user_profile_version_structure import UserProfileVersionStructure

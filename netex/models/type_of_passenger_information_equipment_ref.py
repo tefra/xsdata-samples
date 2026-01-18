@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .type_of_passenger_information_equipment_ref_structure import (

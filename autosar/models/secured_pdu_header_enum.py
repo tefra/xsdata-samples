@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .secured_pdu_header_enum_simple import SecuredPduHeaderEnumSimple

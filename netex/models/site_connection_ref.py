@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .site_connection_ref_structure import SiteConnectionRefStructure

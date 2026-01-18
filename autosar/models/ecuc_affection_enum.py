@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .ecuc_affection_enum_simple import EcucAffectionEnumSimple

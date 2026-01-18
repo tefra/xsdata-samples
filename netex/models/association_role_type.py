@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .nil_reason_enumeration_value import NilReasonEnumerationValue

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .container_i_pdu_trigger_enum_simple import ContainerIPduTriggerEnumSimple

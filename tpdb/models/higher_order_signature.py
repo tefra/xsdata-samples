@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from tpdb.models.higher_order_signature_function_symbol_type_info import (

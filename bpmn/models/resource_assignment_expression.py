@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .t_resource_assignment_expression import TResourceAssignmentExpression

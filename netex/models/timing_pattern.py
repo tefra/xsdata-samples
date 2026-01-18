@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .timing_pattern_version_structure import TimingPatternVersionStructure

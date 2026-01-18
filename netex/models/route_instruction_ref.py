@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .route_instruction_ref_structure import RouteInstructionRefStructure

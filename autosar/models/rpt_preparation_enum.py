@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .rpt_preparation_enum_simple import RptPreparationEnumSimple

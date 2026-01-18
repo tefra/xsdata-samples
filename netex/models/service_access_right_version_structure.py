@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .info_links_rel_structure import InfoLinksRelStructure

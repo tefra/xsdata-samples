@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from generali.models.org.w3.pkg_2006.pkg_02.addressing.wsdl.anonymous_type import (

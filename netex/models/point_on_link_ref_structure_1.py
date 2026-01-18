@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .point_on_link_ref_structure_2 import PointOnLinkRefStructure2

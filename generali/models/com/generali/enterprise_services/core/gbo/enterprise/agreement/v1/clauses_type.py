@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.clause_type import (

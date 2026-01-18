@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .extensions_structure_2 import ExtensionsStructure2

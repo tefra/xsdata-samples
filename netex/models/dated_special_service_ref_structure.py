@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .special_service_ref_structure import SpecialServiceRefStructure

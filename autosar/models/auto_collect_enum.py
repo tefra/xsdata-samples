@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .auto_collect_enum_simple import AutoCollectEnumSimple

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_designator_t import (

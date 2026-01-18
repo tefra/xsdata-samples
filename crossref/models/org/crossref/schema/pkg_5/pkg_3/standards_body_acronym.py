@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"

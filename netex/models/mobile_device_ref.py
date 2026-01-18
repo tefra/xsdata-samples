@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .mobile_device_ref_structure import MobileDeviceRefStructure

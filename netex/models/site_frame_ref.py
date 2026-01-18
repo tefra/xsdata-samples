@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .site_frame_ref_structure import SiteFrameRefStructure

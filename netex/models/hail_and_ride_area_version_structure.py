@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .compass_bearing16_enumeration import CompassBearing16Enumeration

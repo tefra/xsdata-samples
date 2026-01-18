@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .global_time_crc_support_enum_simple import GlobalTimeCrcSupportEnumSimple

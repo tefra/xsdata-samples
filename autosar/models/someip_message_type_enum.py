@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .someip_message_type_enum_simple import SomeipMessageTypeEnumSimple

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .dynamic_vehicle_meeting_point_assignment_ref import (

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .memory_section_type_simple import MemorySectionTypeSimple

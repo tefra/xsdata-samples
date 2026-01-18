@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .version_of_object_ref_structure import VersionOfObjectRefStructure

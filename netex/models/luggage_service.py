@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .luggage_service_version_structure import LuggageServiceVersionStructure

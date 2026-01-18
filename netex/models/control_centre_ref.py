@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .control_centre_ref_structure import ControlCentreRefStructure

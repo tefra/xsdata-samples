@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from crossref.models.xlink.title_elt_type import TitleEltType

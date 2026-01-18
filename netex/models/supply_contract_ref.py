@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .supply_contract_ref_structure import SupplyContractRefStructure

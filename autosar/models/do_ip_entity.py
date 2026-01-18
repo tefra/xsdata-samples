@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .do_ip_entity_role_enum import DoIpEntityRoleEnum

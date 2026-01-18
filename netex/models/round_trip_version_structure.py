@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .round_trip_type_enumeration import RoundTripTypeEnumeration

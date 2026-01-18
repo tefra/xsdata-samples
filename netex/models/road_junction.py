@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .road_junction_version_structure import RoadJunctionVersionStructure

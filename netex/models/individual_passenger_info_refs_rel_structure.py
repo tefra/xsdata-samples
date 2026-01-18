@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .individual_passenger_info_ref import IndividualPassengerInfoRef

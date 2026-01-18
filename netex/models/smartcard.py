@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .smartcard_version_structure import SmartcardVersionStructure

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .operating_period_ref_structure import OperatingPeriodRefStructure

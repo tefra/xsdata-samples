@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .tax_category_enumeration import TaxCategoryEnumeration

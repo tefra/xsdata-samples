@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .check_status_response_structure import CheckStatusResponseStructure

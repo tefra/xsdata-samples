@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .emv_card_ref_structure import EmvCardRefStructure

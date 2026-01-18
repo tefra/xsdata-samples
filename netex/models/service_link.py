@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .service_link_version_structure import ServiceLinkVersionStructure

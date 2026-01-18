@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from ipxact.models.module_parameter_type import ModuleParameterType

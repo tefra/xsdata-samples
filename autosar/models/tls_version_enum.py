@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .tls_version_enum_simple import TlsVersionEnumSimple

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .customer_account_ref_structure import CustomerAccountRefStructure

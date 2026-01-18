@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .bsw_interrupt_category_simple import BswInterruptCategorySimple

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from datexii.models.eu.datexii.v2.charge_band_versioned_reference import (

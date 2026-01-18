@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .can_addressing_mode_type_simple import CanAddressingModeTypeSimple

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .operation_cycle_type_enum_simple import OperationCycleTypeEnumSimple

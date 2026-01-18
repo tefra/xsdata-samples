@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .unknown_subscriber_error_structure import UnknownSubscriberErrorStructure

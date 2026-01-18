@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .ethernet_switch_vlan_ingress_tag_enum_simple import (

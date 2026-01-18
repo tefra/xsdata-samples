@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .monitored_vehicle_sharing_parking_bay_ref_structure import (

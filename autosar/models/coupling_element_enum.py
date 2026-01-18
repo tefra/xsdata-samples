@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .coupling_element_enum_simple import CouplingElementEnumSimple

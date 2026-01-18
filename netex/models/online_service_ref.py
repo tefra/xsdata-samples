@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .online_service_ref_structure import OnlineServiceRefStructure

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .snow_and_ice_submode_enumeration import SnowAndIceSubmodeEnumeration

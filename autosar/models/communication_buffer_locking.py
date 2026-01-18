@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .support_buffer_locking_enum import SupportBufferLockingEnum

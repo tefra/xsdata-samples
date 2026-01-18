@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.contrib_id_authenticated import (

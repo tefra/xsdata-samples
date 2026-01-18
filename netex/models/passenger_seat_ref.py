@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .passenger_seat_ref_structure import PassengerSeatRefStructure

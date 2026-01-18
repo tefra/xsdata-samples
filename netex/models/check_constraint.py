@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .check_constraint_version_structure import CheckConstraintVersionStructure

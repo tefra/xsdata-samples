@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from datexii.models.eu.datexii.v2.equipment_or_system_fault_type_enum import (

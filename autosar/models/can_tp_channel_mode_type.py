@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .can_tp_channel_mode_type_simple import CanTpChannelModeTypeSimple

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .flexray_channel_name_simple import FlexrayChannelNameSimple

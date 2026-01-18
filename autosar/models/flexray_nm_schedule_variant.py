@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .flexray_nm_schedule_variant_simple import FlexrayNmScheduleVariantSimple

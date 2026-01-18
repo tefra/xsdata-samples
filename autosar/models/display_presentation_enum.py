@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .display_presentation_enum_simple import DisplayPresentationEnumSimple

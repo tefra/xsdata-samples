@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .fare_table_row_ref_structure import FareTableRowRefStructure

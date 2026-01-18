@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .target_passing_time_view_structure import TargetPassingTimeViewStructure

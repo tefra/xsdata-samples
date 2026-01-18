@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .round_trip_ref_structure import RoundTripRefStructure

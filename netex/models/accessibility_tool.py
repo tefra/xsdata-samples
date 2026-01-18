@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .accessibility_tool_enumeration import AccessibilityToolEnumeration

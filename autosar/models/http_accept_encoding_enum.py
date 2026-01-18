@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .http_accept_encoding_enum_simple import HttpAcceptEncodingEnumSimple

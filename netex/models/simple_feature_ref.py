@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .simple_feature_ref_structure import SimpleFeatureRefStructure

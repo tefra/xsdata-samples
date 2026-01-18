@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .timing_link_ref_by_value_structure import TimingLinkRefByValueStructure

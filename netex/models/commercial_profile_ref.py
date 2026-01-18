@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .commercial_profile_ref_structure import CommercialProfileRefStructure

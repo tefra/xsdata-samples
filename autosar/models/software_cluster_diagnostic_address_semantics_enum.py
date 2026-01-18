@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .software_cluster_diagnostic_address_semantics_enum_simple import (

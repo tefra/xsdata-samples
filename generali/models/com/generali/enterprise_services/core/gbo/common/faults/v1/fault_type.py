@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.faults.v1.fault_type_failures import (

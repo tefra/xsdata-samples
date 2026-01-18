@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .send_indication_enum_simple import SendIndicationEnumSimple

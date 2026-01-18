@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .series_constraint_ref_structure_1 import SeriesConstraintRefStructure1

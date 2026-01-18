@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .travel_document_ref_structure import TravelDocumentRefStructure

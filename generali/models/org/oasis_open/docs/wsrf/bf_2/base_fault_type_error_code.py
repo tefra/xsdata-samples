@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 __NAMESPACE__ = "http://docs.oasis-open.org/wsrf/bf-2"

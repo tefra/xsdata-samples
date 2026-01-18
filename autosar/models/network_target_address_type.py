@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .network_target_address_type_simple import NetworkTargetAddressTypeSimple

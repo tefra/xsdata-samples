@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .log_trace_log_mode_enum_simple import LogTraceLogModeEnumSimple

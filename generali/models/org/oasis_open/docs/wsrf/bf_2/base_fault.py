@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from generali.models.org.oasis_open.docs.wsrf.bf_2.base_fault_type import (

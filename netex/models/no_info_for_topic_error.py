@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .no_info_for_topic_error_structure import NoInfoForTopicErrorStructure

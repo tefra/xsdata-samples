@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .unapproved_key_access_structure import UnapprovedKeyAccessStructure

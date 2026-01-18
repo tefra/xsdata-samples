@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from crossref.models.org.crossref.clinicaltrials.clinical_trial_number_type import (

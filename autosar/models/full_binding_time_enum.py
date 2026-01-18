@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .full_binding_time_enum_simple import FullBindingTimeEnumSimple

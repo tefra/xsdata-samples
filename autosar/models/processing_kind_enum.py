@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .processing_kind_enum_simple import ProcessingKindEnumSimple

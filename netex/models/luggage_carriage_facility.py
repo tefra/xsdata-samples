@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .luggage_carriage_enumeration import LuggageCarriageEnumeration

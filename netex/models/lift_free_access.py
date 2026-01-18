@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .limitation_status_enumeration import LimitationStatusEnumeration

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .parking_tariff_version_structure import ParkingTariffVersionStructure

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .i_pdu_signal_processing_enum_simple import IPduSignalProcessingEnumSimple

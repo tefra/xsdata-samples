@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .open_transport_mode_ref_structure import OpenTransportModeRefStructure

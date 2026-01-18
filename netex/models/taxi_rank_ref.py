@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .taxi_rank_ref_structure import TaxiRankRefStructure

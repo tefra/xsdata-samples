@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 __NAMESPACE__ = "http://www.niso.org/schemas/ali/1.0/"

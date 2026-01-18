@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .activation_link_ref_structure import ActivationLinkRefStructure

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .navigation_paths_rel_structure import NavigationPathsRelStructure

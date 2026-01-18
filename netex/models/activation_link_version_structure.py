@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .activation_point_ref_structure import ActivationPointRefStructure

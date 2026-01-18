@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .type_of_fleet_value_structure import TypeOfFleetValueStructure

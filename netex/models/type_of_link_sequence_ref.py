@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .type_of_link_sequence_ref_structure import TypeOfLinkSequenceRefStructure

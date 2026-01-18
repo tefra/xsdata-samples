@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .control_centre_version_structure import ControlCentreVersionStructure

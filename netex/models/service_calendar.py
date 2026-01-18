@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .service_calendar_version_structure import ServiceCalendarVersionStructure

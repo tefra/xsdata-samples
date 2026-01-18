@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .meeting_restriction_ref_structure import MeetingRestrictionRefStructure

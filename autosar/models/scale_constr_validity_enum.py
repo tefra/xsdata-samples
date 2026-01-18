@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .scale_constr_validity_enum_simple import ScaleConstrValidityEnumSimple

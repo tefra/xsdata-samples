@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .complex_feature_version_structure import ComplexFeatureVersionStructure

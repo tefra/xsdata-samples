@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .crew_base_version_structure import CrewBaseVersionStructure

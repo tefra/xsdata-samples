@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .access_space_version_structure import AccessSpaceVersionStructure

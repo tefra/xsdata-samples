@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (

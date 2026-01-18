@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .data_object_subscription_structure import DataObjectSubscriptionStructure

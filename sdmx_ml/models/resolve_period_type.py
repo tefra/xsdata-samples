@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from enum import Enum
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"

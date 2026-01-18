@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .mode_of_operation_ref_structure import ModeOfOperationRefStructure

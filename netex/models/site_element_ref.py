@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .site_element_ref_structure import SiteElementRefStructure

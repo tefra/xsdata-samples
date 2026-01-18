@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .v_2_x_support_enum_simple import V2XSupportEnumSimple

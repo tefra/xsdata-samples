@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .place_in_sequence_ref_structure import PlaceInSequenceRefStructure

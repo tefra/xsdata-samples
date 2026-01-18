@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .bsw_call_type_simple import BswCallTypeSimple

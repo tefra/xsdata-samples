@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .pulse_test_enum_simple import PulseTestEnumSimple

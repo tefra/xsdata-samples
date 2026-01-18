@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .sections_in_sequence_rel_structure import SectionVersionStructure

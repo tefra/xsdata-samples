@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .block_part_version_structure import BlockPartVersionStructure

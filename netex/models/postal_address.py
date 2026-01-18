@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .postal_address_version_structure import PostalAddressVersionStructure

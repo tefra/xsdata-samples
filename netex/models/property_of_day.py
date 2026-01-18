@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .property_of_day_structure import PropertyOfDayStructure

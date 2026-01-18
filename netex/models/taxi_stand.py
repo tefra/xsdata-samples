@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .taxi_stand_version_structure import TaxiStandVersionStructure

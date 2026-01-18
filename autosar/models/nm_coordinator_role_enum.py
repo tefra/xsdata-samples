@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .nm_coordinator_role_enum_simple import NmCoordinatorRoleEnumSimple

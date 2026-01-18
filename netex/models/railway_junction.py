@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .railway_junction_version_structure import RailwayJunctionVersionStructure

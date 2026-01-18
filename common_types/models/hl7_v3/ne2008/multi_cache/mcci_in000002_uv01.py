@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .mcci_mt000200_uv01 import McciMt000200Uv01Message

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .journey_pattern_run_time_versioned_child_structure import (

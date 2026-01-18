@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .all_countries_ref_structure import AllCountriesRefStructure

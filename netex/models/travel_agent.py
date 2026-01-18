@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .travel_agent_version_structure import TravelAgentVersionStructure

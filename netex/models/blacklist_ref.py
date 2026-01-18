@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .blacklist_ref_structure import BlacklistRefStructure

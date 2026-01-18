@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .journey_run_times_rel_structure import JourneyRunTimesRelStructure

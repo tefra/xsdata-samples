@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from datexii.models.eu.datexii.v2.application_rate_value import (

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .dead_run_ref_structure import DeadRunRefStructure

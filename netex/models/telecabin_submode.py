@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .telecabin_submode_enumeration import TelecabinSubmodeEnumeration

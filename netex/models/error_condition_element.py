@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .error_condition_element_structure import ErrorConditionElementStructure

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .vehicle_type_at_point_ref_structure import VehicleTypeAtPointRefStructure

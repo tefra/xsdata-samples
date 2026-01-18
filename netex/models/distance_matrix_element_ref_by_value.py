@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .distance_matrix_element_ref_by_value_structure import (

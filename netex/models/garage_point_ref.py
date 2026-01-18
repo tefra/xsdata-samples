@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .garage_point_ref_structure import GaragePointRefStructure

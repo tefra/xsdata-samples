@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from ...hl7_v3.ne2008.multi_cache.prpa_in201301_uv02 import PrpaIn201301Uv02

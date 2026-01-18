@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .unknown_extensions_error_structure import UnknownExtensionsErrorStructure

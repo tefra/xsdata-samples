@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .i_psec_header_type_enum_simple import IPsecHeaderTypeEnumSimple

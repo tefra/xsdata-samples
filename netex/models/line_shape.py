@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .line_shape_structure_2 import LineShapeStructure2

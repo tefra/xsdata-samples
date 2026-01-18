@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .compound_block_ref_structure import CompoundBlockRefStructure

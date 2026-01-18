@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .class_refs_rel_structure import ClassRefsRelStructure

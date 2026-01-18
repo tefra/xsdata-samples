@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .transport_submode_structure import TransportSubmodeStructure

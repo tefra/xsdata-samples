@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from tpdb.models.conditiontype_value import ConditiontypeValue

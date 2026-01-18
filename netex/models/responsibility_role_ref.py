@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .responsibility_role_ref_structure import ResponsibilityRoleRefStructure

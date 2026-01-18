@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .destination_display_ref_structure import DestinationDisplayRefStructure

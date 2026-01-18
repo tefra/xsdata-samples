@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .on_becoming_enumeration import OnBecomingEnumeration

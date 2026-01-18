@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .onward_vehicle_meeting_link_ref import OnwardVehicleMeetingLinkRef

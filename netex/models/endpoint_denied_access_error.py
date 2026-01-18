@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .endpoint_denied_access_structure import EndpointDeniedAccessStructure

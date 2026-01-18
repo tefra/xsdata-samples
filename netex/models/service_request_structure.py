@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .contextualised_request_structure import ContextualisedRequestStructure

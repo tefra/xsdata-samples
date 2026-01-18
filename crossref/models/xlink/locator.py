@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from crossref.models.xlink.locator_type import LocatorType

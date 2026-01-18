@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .dated_special_service_ref import DatedSpecialServiceRef

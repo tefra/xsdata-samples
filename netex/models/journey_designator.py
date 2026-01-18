@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .journey_designator_structure import JourneyDesignatorStructure

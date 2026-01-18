@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph

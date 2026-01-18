@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .code_with_authority_type import CodeWithAuthorityType

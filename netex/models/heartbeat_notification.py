@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .heartbeat_notification_structure import HeartbeatNotificationStructure

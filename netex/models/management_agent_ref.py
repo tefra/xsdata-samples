@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .management_agent_ref_structure import ManagementAgentRefStructure

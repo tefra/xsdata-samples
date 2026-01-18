@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .access_equipment_version_structure import AccessEquipmentVersionStructure

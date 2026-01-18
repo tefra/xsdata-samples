@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .responsibility_role_assignment_versioned_child_structure import (

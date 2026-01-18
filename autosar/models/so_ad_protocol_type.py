@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .so_ad_protocol_type_simple import SoAdProtocolTypeSimple

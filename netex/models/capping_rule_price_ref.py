@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .capping_rule_price_ref_structure import CappingRulePriceRefStructure

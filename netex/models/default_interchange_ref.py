@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .default_interchange_ref_structure import DefaultInterchangeRefStructure

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .default_connection_ref_structure import DefaultConnectionRefStructure

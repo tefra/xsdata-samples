@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .accepted_driver_permit_ref import AcceptedDriverPermitRef

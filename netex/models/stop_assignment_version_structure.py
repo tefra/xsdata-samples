@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .assignment_version_structure_1 import AssignmentVersionStructure1

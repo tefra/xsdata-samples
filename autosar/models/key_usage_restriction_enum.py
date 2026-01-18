@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .key_usage_restriction_enum_simple import KeyUsageRestrictionEnumSimple

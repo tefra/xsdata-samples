@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .standard_name_enum_simple import StandardNameEnumSimple

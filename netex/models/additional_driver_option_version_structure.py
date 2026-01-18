@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .additional_driver_type_enumeration import AdditionalDriverTypeEnumeration

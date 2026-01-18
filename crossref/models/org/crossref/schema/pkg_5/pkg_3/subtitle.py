@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.xref_faces import (

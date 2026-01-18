@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .diagnostic_trouble_code_j_1939_dtc_kind_enum_simple import (

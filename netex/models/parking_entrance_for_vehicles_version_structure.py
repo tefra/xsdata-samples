@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .flexible_mode_of_operation_ref import FlexibleModeOfOperationRef

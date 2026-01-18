@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .mobility_facility_enumeration import MobilityFacilityEnumeration

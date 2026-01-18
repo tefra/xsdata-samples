@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .single_journey_version_structure import SingleJourneyVersionStructure

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .access_right_in_product_ref import AccessRightInProductRef

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .td_event_bsw_internal_behavior_type_enum_simple import (

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .swc_to_ecu_mapping_constraint_type_simple import (

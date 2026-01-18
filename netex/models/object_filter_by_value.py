@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .object_filter_by_value_structure import ObjectFilterByValueStructure

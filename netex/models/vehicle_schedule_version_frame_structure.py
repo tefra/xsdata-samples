@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .blocks_in_frame_rel_structure import BlocksInFrameRelStructure

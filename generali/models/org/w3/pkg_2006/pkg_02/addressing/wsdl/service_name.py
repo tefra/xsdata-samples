@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from generali.models.org.w3.pkg_2006.pkg_02.addressing.wsdl.service_name_type import (

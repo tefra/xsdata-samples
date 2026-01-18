@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .chauffeured_vehicle_service_ref_structure import (

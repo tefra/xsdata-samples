@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from tpdb.models.var_declaration import VarDeclaration

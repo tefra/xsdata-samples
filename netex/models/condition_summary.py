@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .condition_summary_structure import ConditionSummaryStructure

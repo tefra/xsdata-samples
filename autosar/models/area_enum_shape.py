@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .area_enum_shape_simple import AreaEnumShapeSimple

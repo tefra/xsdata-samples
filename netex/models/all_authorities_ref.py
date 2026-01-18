@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .all_authorities_ref_structure import AllAuthoritiesRefStructure

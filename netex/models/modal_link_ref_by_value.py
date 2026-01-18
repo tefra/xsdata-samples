@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .modal_link_ref_by_value_structure import ModalLinkRefByValueStructure

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .t_base_element_with_mixed_content import TBaseElementWithMixedContent

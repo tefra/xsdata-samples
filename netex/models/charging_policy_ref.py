@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .charging_policy_ref_structure import ChargingPolicyRefStructure

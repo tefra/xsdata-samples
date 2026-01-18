@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"

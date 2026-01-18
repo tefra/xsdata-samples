@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .trusted_platform_executable_launch_behavior_enum_simple import (

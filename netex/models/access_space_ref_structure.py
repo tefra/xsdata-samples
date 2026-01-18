@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .stop_place_space_ref_structure import StopPlaceSpaceRefStructure

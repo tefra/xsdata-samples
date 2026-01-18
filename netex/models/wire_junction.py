@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .wire_junction_version_structure import WireJunctionVersionStructure

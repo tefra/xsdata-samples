@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .replacing_ref_structure import ReplacingRefStructure

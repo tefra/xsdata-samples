@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .schematic_map_member_ref_structure import SchematicMapMemberRefStructure

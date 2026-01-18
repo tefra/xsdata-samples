@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 from .operating_day_ref_structure import OperatingDayRefStructure
